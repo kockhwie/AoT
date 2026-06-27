@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 <!-- 区域 1：顶部核心巨幕区 -->
 <div class="aot-hero">
@@ -22,7 +22,7 @@
 
 <!-- 區域 2：調查兵團精銳作戰檔案 (完全符合 DRY 原則，iPhone自适应堆叠，iPad/PC自适应双列) -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>⚔️</span> @GetText("SectionTitle")
     </h3>
 
@@ -33,16 +33,16 @@
                 <div class="aot-card-body">
                     <div class="flex justify-between items-start gap-2 mb-2">
                         <div>
-                            <h4 class="font-black text-lg md:text-xl text-white">@GetText(member.NameKey)</h4>
-                            <span class="text-[11px] text-secondary">@GetText(member.TitleKey)</span>
+                            <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@GetText(member.NameKey)</h4>
+                            <span class="text-[10px] md:text-[11px] text-secondary">@GetText(member.TitleKey)</span>
                         </div>
-                        <div class="badge badge-sm badge-outline badge-error font-bold">@member.Rank</div>
+                        <div class="badge badge-xs md:badge-sm badge-outline badge-error font-bold">@member.Rank</div>
                     </div>
-                    <p class="text-xs opacity-75 min-h-[54px] leading-relaxed">
+                    <p class="text-[11px] md:text-xs lg:text-sm opacity-75 min-h-[54px] leading-relaxed">
                         @GetText(member.BioKey)
                     </p>
                     <div class="divider my-2.5 opacity-5"></div>
-                    <div class="flex justify-between items-center text-[12px]">
+                    <div class="flex justify-between items-center text-[11px] md:text-[12px]">
                         <div><span class="opacity-70">@GetText("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
                         <div><span class="opacity-70">@GetText("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
                     </div>
@@ -54,7 +54,7 @@
 
 <!-- 新增区域 3：九大巨人能力图谱面板 (完全遵循 DRY 原则，通过数据循环渲染) -->
 <div class="flex flex-col gap-2">
-    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-secondary flex items-center gap-2">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-secondary flex items-center gap-2">
         <span>🧬</span> @GetText("TitanSectionTitle")
     </h3>
     
@@ -66,21 +66,21 @@
                 <!-- 头部基本信息 -->
                 <div class="flex justify-between items-start mb-3">
                     <div>
-                        <h4 class="font-black text-xl text-white">@GetText(titan.NameKey)</h4>
-                        <span class="text-[11px] text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
+                        <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@GetText(titan.NameKey)</h4>
+                        <span class="text-[10px] md:text-[11px] text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
                     </div>
-                    <div class="badge badge-sm badge-neutral font-bold opacity-80">@titan.TypeBadge</div>
+                    <div class="badge badge-xs md:badge-sm badge-neutral font-bold opacity-80">@titan.TypeBadge</div>
                 </div>
 
                 <!-- 描述文本 -->
-                <p class="text-xs opacity-75 leading-relaxed min-h-[50px] mb-4">
+                <p class="text-[11px] md:text-xs lg:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
                     @GetText(titan.DescKey)
                 </p>
 
                 <div class="divider my-2 opacity-5"></div>
 
                 <!-- 量化三维能力雷达进度条 (使用 daisyUI 原生 Progress 组件) -->
-                <div class="flex flex-col gap-2.5 text-[11px]">
+                <div class="flex flex-col gap-2.5 text-[10px] md:text-[11px]">
                     <!-- 力量指标 -->
                     <div>
                         <div class="flex justify-between mb-1">
@@ -114,7 +114,7 @@
 </div>
 <!-- 區域 4：兵團戰術裝備與牆外調查資產 (完全符合 DRY 原則，三端完美自適應) -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-accent flex items-center gap-2">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-accent flex items-center gap-2">
         <span>⚙️</span> @GetText("GearSectionTitle")
     </h3>
 
@@ -123,23 +123,25 @@
         {
             <div class="aot-gear-card">
                 <!-- 裝備頭部 -->
-                <div class="flex justify-between items-start mb-3">
-                    <div>
-                        <h4 class="font-black text-lg text-white">@GetText(gear.NameKey)</h4>
-                        <span class="text-[11px] text-secondary uppercase tracking-wider">@GetText(gear.TechKey)</span>
-                    </div>
-                    <div class="badge badge-sm badge-outline badge-accent font-bold">@gear.ClassBadge</div>
+                <div class="flex justify-between items-center mb-2">
+                    <h4 class="font-black text-sm md:text-base lg:text-lg text-white">@GetText(gear.NameKey)</h4>
+                    <div class="badge badge-xs md:badge-sm badge-outline badge-accent font-bold shrink-0">@gear.ClassBadge</div>
+                </div>
+                
+                <!-- 技術分類 (全寬展示，防止折行) -->
+                <div class="text-[11px] md:text-xs text-secondary uppercase tracking-wider mb-3">
+                    @GetText(gear.TechKey)
                 </div>
 
                 <!-- 裝備描述 -->
-                <p class="text-xs opacity-75 leading-relaxed min-h-[50px] mb-4">
+                <p class="text-xs md:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
                     @GetText(gear.DescKey)
                 </p>
 
                 <div class="divider my-2 opacity-5"></div>
 
                 <!-- 戰術規格參數 -->
-                <div class="flex justify-between items-center text-[11px] opacity-85">
+                <div class="flex justify-between items-center text-[11px] md:text-xs opacity-85">
                     <div><span class="">@GetText("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
                     <div><span class="">@GetText("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
                 </div>
@@ -150,16 +152,16 @@
 
 <!-- 区域 5：编年史时间轴区 -->
 <div class="aot-timeline-card">
-    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-warning mb-6">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-warning mb-6">
         <span>⏳</span> @GetText("TimelineHeader")
     </h3>
     
     <ul class="timeline timeline-vertical timeline-compact">
         <li>
             <div class="timeline-middle text-error">📍</div>
-            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-xs mb-4 w-full">
-                <time class="font-mono font-black text-secondary">845 年</time>
-                <div class="font-bold text-white mt-1">@GetText("Time1Title")</div>
+            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs mb-4 w-full">
+                <time class="font-mono font-black text-secondary text-xs md:text-sm">845 年</time>
+                <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time1Title")</div>
                 <p class="opacity-70 mt-1">@GetText("Time1Desc")</p>
             </div>
             <hr class="bg-primary/30" />
@@ -167,9 +169,9 @@
         <li>
             <hr class="bg-primary/30" />
             <div class="timeline-middle text-warning">📍</div>
-            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-xs w-full">
-                <time class="font-mono font-black text-secondary">854 年</time>
-                <div class="font-bold text-white mt-1">@GetText("Time2Title")</div>
+            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs w-full">
+                <time class="font-mono font-black text-secondary text-xs md:text-sm">854 年</time>
+                <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time2Title")</div>
                 <p class="opacity-70 mt-1">@GetText("Time2Desc")</p>
             </div>
         </li>
