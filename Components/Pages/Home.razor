@@ -1,0 +1,579 @@
+﻿@page "/"
+
+<!-- 区域 1：顶部核心巨幕区 -->
+<div class="aot-hero">
+    <div class="aot-hero-glow"></div>
+    <div>
+        <span class="badge badge-error font-mono text-[10px] md:text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
+            @GetText("HeroTag")
+        </span>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white leading-tight mb-3">
+            @GetText("HeroTitle")
+        </h1>
+        <p class="text-xs md:text-sm opacity-80 leading-relaxed max-w-2xl mb-6">
+            @GetText("HeroDesc")
+        </p>
+        <div class="flex flex-wrap gap-2">
+            <button class="btn btn-xs md:btn-sm btn-primary font-bold px-5">@GetText("BtnIntel")</button>
+            <button class="btn btn-xs md:btn-sm btn-outline btn-neutral">@GetText("BtnGallery")</button>
+        </div>
+    </div>
+</div>
+
+<!-- 區域 2：調查兵團精銳作戰檔案 (完全符合 DRY 原則，iPhone自适应堆叠，iPad/PC自适应双列) -->
+<div class="flex flex-col gap-4 mb-8">
+    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+        <span>⚔️</span> @GetText("SectionTitle")
+    </h3>
+
+    <div class="aot-card-grid">
+        @foreach (var member in _characterDatabase)
+        {
+            <div class="aot-card">
+                <div class="aot-card-body">
+                    <div class="flex justify-between items-start gap-2 mb-2">
+                        <div>
+                            <h4 class="font-black text-lg md:text-xl text-white">@GetText(member.NameKey)</h4>
+                            <span class="text-[10px] font-mono text-secondary">@GetText(member.TitleKey)</span>
+                        </div>
+                        <div class="badge badge-sm badge-outline badge-error font-mono font-bold">@member.Rank</div>
+                    </div>
+                    <p class="text-xs opacity-75 min-h-[54px] leading-relaxed">
+                        @GetText(member.BioKey)
+                    </p>
+                    <div class="divider my-2.5 opacity-5"></div>
+                    <div class="flex justify-between items-center text-[11px] font-mono">
+                        <div><span class="opacity-50">@GetText("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
+                        <div><span class="opacity-50">@GetText("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- 新增区域 3：九大巨人能力图谱面板 (完全遵循 DRY 原则，通过数据循环渲染) -->
+<div class="flex flex-col gap-2 mb-8">
+    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-secondary flex items-center gap-2">
+        <span>🧬</span> @GetText("TitanSectionTitle")
+    </h3>
+    
+    <!-- 三端自适应网格容器 (手机1列，平板2列，台式PC3列) -->
+    <div class="aot-titan-grid">
+        @foreach (var titan in _titanDatabase)
+        {
+            <div class="aot-titan-card">
+                <!-- 头部基本信息 -->
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="font-black text-xl text-white">@GetText(titan.NameKey)</h4>
+                        <span class="text-[10px] font-mono text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
+                    </div>
+                    <div class="badge badge-sm badge-neutral font-mono font-bold opacity-80">@titan.TypeBadge</div>
+                </div>
+
+                <!-- 描述文本 -->
+                <p class="text-xs opacity-75 leading-relaxed min-h-[50px] mb-4">
+                    @GetText(titan.DescKey)
+                </p>
+
+                <div class="divider my-2 opacity-5"></div>
+
+                <!-- 量化三维能力雷达进度条 (使用 daisyUI 原生 Progress 组件) -->
+                <div class="flex flex-col gap-2.5 text-[11px]">
+                    <!-- 力量指标 -->
+                    <div>
+                        <div class="flex justify-between font-mono mb-1">
+                            <span class="opacity-50">@GetText("ParamPower")</span>
+                            <span class="text-primary font-bold">@titan.Power%</span>
+                        </div>
+                        <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
+                    </div>
+
+                    <!-- 速度指标 -->
+                    <div>
+                        <div class="flex justify-between font-mono mb-1">
+                            <span class="opacity-50">@GetText("ParamSpeed")</span>
+                            <span class="text-secondary font-bold">@titan.Speed%</span>
+                        </div>
+                        <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
+                    </div>
+
+                    <!-- 硬度/特殊能力指标 -->
+                    <div>
+                        <div class="flex justify-between font-mono mb-1">
+                            <span class="opacity-50">@GetText("ParamArmor")</span>
+                            <span class="text-accent font-bold">@titan.Armor%</span>
+                        </div>
+                        <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!-- 區域 4：兵團戰術裝備與牆外調查資產 (完全符合 DRY 原則，三端完美自適應) -->
+<div class="flex flex-col gap-2 mb-8">
+    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-accent flex items-center gap-2">
+        <span>⚙️</span> @GetText("GearSectionTitle")
+    </h3>
+
+    <div class="aot-gear-grid">
+        @foreach (var gear in _gearDatabase)
+        {
+            <div class="aot-gear-card">
+                <!-- 裝備頭部 -->
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="font-black text-lg text-white">@GetText(gear.NameKey)</h4>
+                        <span class="text-[10px] font-mono text-secondary uppercase tracking-wider">@GetText(gear.TechKey)</span>
+                    </div>
+                    <div class="badge badge-sm badge-outline badge-accent font-mono font-bold">@gear.ClassBadge</div>
+                </div>
+
+                <!-- 裝備描述 -->
+                <p class="text-xs opacity-75 leading-relaxed min-h-[50px] mb-4">
+                    @GetText(gear.DescKey)
+                </p>
+
+                <div class="divider my-2 opacity-5"></div>
+
+                <!-- 戰術規格參數 -->
+                <div class="flex justify-between items-center text-[11px] font-mono opacity-80">
+                    <div><span class="opacity-50">@GetText("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
+                    <div><span class="opacity-50">@GetText("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- 区域 5：编年史时间轴区 -->
+<div class="aot-timeline-card">
+    <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-warning mb-6">
+        <span>⏳</span> @GetText("TimelineHeader")
+    </h3>
+    
+    <ul class="timeline timeline-vertical timeline-compact">
+        <li>
+            <div class="timeline-middle text-error">📍</div>
+            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-xs mb-4 w-full">
+                <time class="font-mono font-black text-secondary">845 年</time>
+                <div class="font-bold text-white mt-1">@GetText("Time1Title")</div>
+                <p class="opacity-70 mt-1">@GetText("Time1Desc")</p>
+            </div>
+            <hr class="bg-primary/30" />
+        </li>
+        <li>
+            <hr class="bg-primary/30" />
+            <div class="timeline-middle text-warning">📍</div>
+            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-xs w-full">
+                <time class="font-mono font-black text-secondary">854 年</time>
+                <div class="font-bold text-white mt-1">@GetText("Time2Title")</div>
+                <p class="opacity-70 mt-1">@GetText("Time2Desc")</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+@code {
+    [CascadingParameter] public string CurrentLang { get; set; } = "zh";
+
+    // DRY 核心：定义轻量级数据模型以供组件循环复用
+    private sealed class TitanModel
+    {
+        public string NameKey { get; init; } = "";
+        public string HeightKey { get; init; } = "";
+        public string DescKey { get; init; } = "";
+        public string TypeBadge { get; init; } = "";
+        public int Power { get; init; }
+        public int Speed { get; init; }
+        public int Armor { get; init; }
+    }
+
+    // 严谨提取自维基百科设定集的【全九大巨人】完整核心数据矩阵
+    private readonly List<TitanModel> _titanDatabase = new()
+    {
+        new TitanModel {
+            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "FOUNDER",
+            Power = 100, Speed = 60, Armor = 100
+        },
+        new TitanModel {
+            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "ASSAULT",
+            Power = 85, Speed = 95, Armor = 80
+        },
+        new TitanModel {
+            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "BEAST",
+            Power = 90, Speed = 55, Armor = 70
+        },
+        new TitanModel {
+            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "COLOSSAL",
+            Power = 100, Speed = 20, Armor = 90
+        },
+        new TitanModel {
+            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "ARMORED",
+            Power = 90, Speed = 65, Armor = 95
+        },
+        new TitanModel {
+            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "JAW",
+            Power = 75, Speed = 100, Armor = 75
+        },
+        new TitanModel {
+            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "CART",
+            Power = 50, Speed = 85, Armor = 60
+        },
+        new TitanModel {
+            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "WAR_HAMMER",
+            Power = 95, Speed = 75, Armor = 95
+        },
+        new TitanModel {
+            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "ATTACK",
+            Power = 85, Speed = 85, Armor = 80
+        }
+    };
+
+    private string GetText(string key) => (key, CurrentLang) switch
+    {
+        // 核心原配文字
+        ("HeroTag", "zh") => "關鍵研究樣本",
+        ("HeroTag", "en") => "CRITICAL SPECIMEN PROFILE",
+        ("HeroTag", "jp") => "重要研究対象生命体",
+
+        ("HeroTitle", "zh") => "進擊的巨人",
+        ("HeroTitle", "en") => "The Attack Titan",
+        ("HeroTitle", "jp") => "進撃の巨人",
+
+        ("HeroDesc", "zh") => "由艾連·葉卡繼承。與牆內其執他的九大巨人截然不同，它擁有能窺探未來繼承者記憶的獨特時間能力，在漫長的歷史中跨越世代，始終為了追求絕對的自由而持續戰鬥。",
+        ("HeroDesc", "en") => "Inherited by Eren Yeager. Unlike other titans, it possesses the unique temporal ability to glimpse into the memories of its future inheritors, continuously fighting for absolute freedom across generations.",
+        ("HeroDesc", "jp") => "エレン・イェーガーが継承。他の巨人とは異なり、未来の継承者の記憶を覗き見る独自の時間能力を持ち、世代を超えて絶対的な自由のために戦い続ける。",
+
+        ("BtnIntel", "zh") => "分析巨人能力",
+        ("BtnIntel", "en") => "Analyze Abilities",
+        ("BtnIntel", "jp") => "能力特性分析",
+
+        ("BtnGallery", "zh") => "查閱繼承歷史",
+        ("BtnGallery", "en") => "Inheritance History",
+        ("BtnGallery", "jp") => "継承の歴史を紐解く",
+
+        ("SectionTitle", "zh") => "調查兵團精銳作戰人員",
+        ("SectionTitle", "en") => "Active Combat Personnel",
+        ("SectionTitle", "jp") => "現在防衛戦闘員一覧",    
+        ("LeviName", "zh") => "里維·阿卡曼",
+        ("LeviName", "en") => "Levi Ackerman",
+        ("LeviName", "jp") => "リヴァイ・アッカーマン",
+        ("LeviTitle", "zh") => "調查兵團 特別作戰班兵長",
+        ("LeviTitle", "en") => "Special Operations Captain",
+        ("LeviTitle", "jp") => "調査兵団 特別作戦班士長",
+        ("LeviBio", "zh") => "因覺醒了阿卡曼一族的血統而擁有近乎超人類的身體反射神經。戰鬥力極強，操縱立體機動裝置的技术堪稱全人類最高壁壘。",
+        ("LeviBio", "en") => "Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Lethal with vertical maneuvering equipment.",
+        ("LeviBio", "jp") => "覚醒したアッカーマンの血統により、人類最強の身体能力を持つ。立体機動装置の扱いは一線を画す。",
+        ("MikasaName", "zh") => "米卡莎·阿卡曼",
+        ("MikasaName", "en") => "Mikasa Ackerman",
+        ("MikasaName", "jp") => "ミカサ・アッカーマン",
+        ("MikasaTitle", "zh") => "調查兵團 精銳核心士官",
+        ("MikasaTitle", "en") => "Elite Scout Officer",
+        ("MikasaTitle", "jp") => "調査兵団 精鋭兵士",
+        ("MikasaBio", "zh") => "在戰鬥中一人實力可匹敵一百名精銳普通士兵。內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡的安危。",
+        ("MikasaBio", "en") => "Equal to a hundred ordinary soldiers in combat. Driven by an absolute, singular drive to protect Eren Yeager at all costs.",
+        ("MikasaBio", "jp") => "一人の戦闘力は通常の兵士100人分に匹敵する。何があってもエレン・イェーガーを守るという絶対的な一念で動く。",
+        ("StatKills", "zh") => "單獨擊殺巨人數",
+        ("StatKills", "en") => "Solo Kills",
+        ("StatKills", "jp") => "単独撃破数",
+        ("StatWits", "zh") => "戰術頭腦指標",
+        ("StatWits", "en") => "Wits Value",
+        ("StatWits", "jp") => "頭脳戦術値",
+        ("TimelineHeader", "zh") => "帕拉迪島防衛戰史年表",
+        ("TimelineHeader", "en") => "Historical War Chronicle",
+        ("TimelineHeader", "jp") => "防衛戦史クロニクル",
+        ("Time1Title", "zh") => "希干希納區的淪陷",
+        ("Time1Title", "en") => "Fall of Shiganshina District",
+        ("Time1Title", "jp") => "シガンシナ区陥落",
+        ("Time1Desc", "zh") => "超大型巨人和盔甲巨人突然現身並摧毀了瑪利亞之牆外門，殘酷吞噬無數人類，人類維持了整整一個世纪的虛假和平宣告終結。",
+        ("Time1Desc", "en") => "The Colossal and Armored Titans breached Wall Maria, ending a century of fragile human peace.",
+        ("Time1Desc", "jp") => "超大型巨人と鎧の巨人がウォール・マリアを突破し、人类の100年に及ぶ平和が終わりを迎えた。",
+        ("Time2Title", "zh") => "突襲馬雷與雷貝里欧宣戰布告",
+        ("Time2Title", "en") => "The Declaration of War",
+        ("Time2Title", "jp") => "マーレ強襲と宣戦布告",
+        ("Time2Desc", "zh") => "艾連·葉卡密謀突襲馬雷首都雷貝里歐收容區，強行吞噬戰槌巨人，彻底打破國際地緣政治僵局，將全球戰爭拖入地鳴終局階段。",
+        ("Time2Desc", "en") => "Eren Yeager launched a surprise raid on Liberio, shifting the global war into its endgame.",
+        ("Time2Desc", "jp") => "エレン・イェーガーがレベリオ収容区を急襲。世界を巻き込む最終決戦の火蓋が切られた。",
+        // ==========================================// 新增：九大巨人专属多语言本地化矩阵数据// ==========================================
+        ("TitanSectionTitle", "zh") => "始祖九大巨人能力圖譜",
+        ("TitanSectionTitle", "en") => "The Nine Titans Registry",
+        ("TitanSectionTitle", "jp") => "九つの巨人能力系譜図",
+        ("ParamPower", "zh") => "破壞力 / 規模",
+        ("ParamPower", "en") => "Destructive Power",
+        ("ParamPower", "jp") => "破壊力・スケール",
+        ("ParamSpeed", "zh") => "機動力 / 速度",
+        ("ParamSpeed", "en") => "Agility & Speed",
+        ("ParamSpeed", "jp") => "機動力・スピード",
+        ("ParamArmor", "zh") => "硬質化 / 秘術",
+        ("ParamArmor", "en") => "Hardening & Magic",
+        ("ParamArmor", "jp") => "硬質化・特殊能力",
+        // 1. 始祖巨人
+        ("T1Name", "zh") => "始祖巨人",("T1Name", "en") => "The Founding Titan",("T1Name", "jp") => "始祖の巨人",
+        ("T1H", "zh") => "身高: 13米 (初始型態)",("T1H", "en") => "Height: 13m (Base Form)",("T1H", "jp") => "全長: 13m (通常時)",
+        ("T1Desc", "zh") => "所有巨人之源。擁有至高無上的「座標」秘術，能隔空篡改尤米爾子民的集體記憶，並能操控城牆內千萬名超大型巨人發動「地鳴」摧毀世界。",("T1Desc", "en") => "The nexus of all titans. Wields the ultimate 'Coordinate' ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic 'Rumbling'.",("T1Desc", "jp") => "すべての巨人の頂点。「座標」を通じてユミルの民の記憶を改変し、無数の超大型巨人を操り世界を崩壊させる「地鳴らし」を発動できる。",
+        // 2. 女型巨人
+        ("T2Name", "zh") => "女型巨人",("T2Name", "en") => "The Female Titan",("T2Name", "jp") => "女型の巨人",
+        ("T2H", "zh") => "身高: 14米",("T2H", "en") => "Height: 14m",("T2H", "jp") => "全長: 14m",
+        ("T2Desc", "zh") => "亞妮·雷恩哈特持有。具備極高的全能機动適應力，能局部實行高強度硬質化結晶防禦，並能發出尖叫大範圍吸引並引導無垢巨人。",("T2Desc", "en") => "Possessed by Annie Leonhart. Exhibits high all-around agility, specialized localized crystalline hardening defenses, and a vocal call that summons pure titans.",("T2Desc", "jp") => "アニ・レオンハートが保持。高い汎用性と機動力を持ち、体の一部を局所的に硬質化結晶できるほか、叫び声で無垢の巨人を呼び集める。",
+        // 3. 兽之巨人
+        ("T3Name", "zh") => "獸之巨人",("T3Name", "en") => "The Beast Titan",("T3Name", "jp") => "獣の巨人",
+        ("T3H", "zh") => "身高: 17米",("T3H", "en") => "Height: 17m",("T3H", "jp") => "全長: 17m",
+        ("T3Desc", "zh") => "吉克·葉卡持有。外表呈現猿猴般的野獸形態，具備極其恐怖的遠程碎石投擲殺傷力。因具備王血，其脊髓液能強制將人類巨人化。",("T3Desc", "en") => "Held by Zeke Yeager. Resembles an ape-like beast capable of devastating long-range bombardment. Due to royal blood, his spinal fluid instantly transforms targets.",("T3Desc", "jp") => "ジーク・イェーガーが保持。獣のような姿を持ち、恐るべき遠距離投擲による破壊力を誇る。王血の力で、自身の脊髄液を介し民を巨人化できる。",
+        // 4. 超大型巨人
+        ("T4Name", "zh") => "超大型巨人",
+        ("T4Name", "en") => "The Colossal Titan",
+        ("T4Name", "jp") => "超大型の巨人",
+        ("T4H", "zh") => "身高: 60米",
+        ("T4H", "en") => "Height: 60m",
+        ("T4H", "jp") => "全長: 60m",
+        ("T4Desc", "zh") => "先後由貝爾托特、阿爾敏持有。體型如移動的高山，變身時能引發如同戰術核武器般的毀滅性熱能爆炸，可蒸發大範圍內的一切生命，並能隨意釋放高壓高溫蒸气障壁。",
+        ("T4Desc", "en") => "Held by Bertholdt, then Armin. Possesses a mountainous structure. Transformation triggers a pseudo-nuclear thermal blast, alongside a tactical high-pressure burning steam defensive barrier.",
+        ("T4Desc", "jp") => "ベルトルト、後にアルミンが保持。圧倒的な巨大さを誇り、出現時には戦術核に匹敵する熱風爆発を巻き起こす。肉体から超高温の蒸気を放出し、敵を寄せ付けない。",
+
+        // 5. 盔甲巨人
+        ("T5Name", "zh") => "盔甲巨人",
+        ("T5Name", "en") => "The Armored Titan",
+        ("T5Name", "jp") => "鎧の巨人",
+        ("T5H", "zh") => "身高: 15米",
+        ("T5H", "en") => "Height: 15m",
+        ("T5H", "jp") => "全長: 15m",
+        ("T5Desc", "zh") => "萊納·布朗持有。全身覆蓋硬質化極高的重型骨骼外殼，猶如一台鋼鐵戰車，防禦力驚人。常利用驚人的體重配合衝刺，直接撞碎城牆甕城的大門。",
+        ("T5Desc", "en") => "Held by Reiner Braun. Encased in a heavy hardened skeletal armor plating that provides fortress-grade defensive metrics. Functions as an organic battering ram against fortified structures.",
+        ("T5Desc", "jp") => "ライナー・ブラウンが保持。全身を強固な硬質化の皮膚で覆われた、まさに生きる戦車。その驚異的な防御力と体重を活かした突撃で、外門を一撃で破壊する。",
+
+        // 6. 颚型巨人
+        ("T6Name", "zh") => "顎型巨人",
+        ("T6Name", "en") => "The Jaw Titan",
+        ("T6Name", "jp") => "顎の巨人",
+        ("T6H", "zh") => "身高: 5米",
+        ("T6H", "en") => "Height: 5m",
+        ("T6H", "jp") => "全長: 5m",
+        ("T6Desc", "zh") => "先後由尤米爾、法爾可等人持有。體型最小但速度位居九大巨人首位。其爪與顎部具備九大巨人中最強的撕裂與破壞力，甚至能輕易咬碎女型巨人的超硬質化結晶。",
+        ("T6Desc", "en") => "Held by Ymir, Falco, and others. The smallest form but unmatched in top-tier agility. Features powerful claws and jaws that can crush even the densest crystalline hardening.",
+        ("T6Desc", "jp") => "ユミル、ファルコらが保持。小柄ながら全巨人一の俊敏性を誇る。その強靭な顎と爪の破壊力は、女型の超硬質化結晶さえも容易に噛み砕き、引き裂くことができる。",
+
+        // 7. 车力巨人
+        ("T7Name", "zh") => "車力巨人",
+        ("T7Name", "en") => "The Cart Titan",
+        ("T7Name", "jp") => "車力の巨人",
+        ("T7H", "zh") => "身高: 4米 (四足步行)",
+        ("T7H", "en") => "Height: 4m (Quadrupedal)",
+        ("T7H", "jp") => "全長: 4m (四足歩行)",
+        ("T7Desc", "zh") => "皮克·芬格爾持有。採用獨特的四足步行模式，擁有九大巨人中最強的恐怖續航耐力，能連續數月保持巨人化型態。背部能搭載重型機槍塔或重砲要塞等現代化軍事裝備。",
+        ("T7Desc", "en") => "Held by Pieck Finger. Utilizes a quadrupedal stance with unparalleled physiological endurance, allowing months of sustained transformation. Can be equipped with customized heavy military artillery.",
+        ("T7Desc", "jp") => "ピーク・フィンガーが保持。四足歩行型で、数ヶ月間も巨人化を維持できる驚異的な持続力を誇る。背中にガトリング砲や対巨人砲などの近代兵器を搭載し運用される。",
+
+        // 8. 战槌巨人
+        ("T8Name", "zh") => "戰槌巨人",
+        ("T8Name", "en") => "The War Hammer Titan",
+        ("T8Name", "jp") => "戦鎚の巨人",
+        ("T8H", "zh") => "身高: 15米",
+        ("T8H", "en") => "Height: 15m",
+        ("T8H", "jp") => "全長: 15m",
+        ("T8Desc", "zh") => "曾由戴巴家族持有，後被艾連吞噬。能將硬質化能力運用到極致，隨心所欲地製造出巨槌、地刺、甚至弓弩等各類致命兵器。本體可隱藏在地下並通過線纜遠程操控巨人。",
+        ("T8Desc", "en") => "Originally held by the Tybur family. Features absolute weapon materialization via dense structural hardening. The host can safely remain underground while managing the titan puppet remotely via a cable connection.",
+        ("T8Desc", "jp") => "タイバー家、後にエレンが保持。硬質化能力を極限まで高め、戦鎚や地刺、ボウガンなどあらゆる武器を自在に生成する。本体は地中に隠れ、コードを介して巨人を遠隔操作する。",
+
+        // 9. 进击的巨人 (即主Hero卡所指)
+        ("T9Name", "zh") => "進擊的巨人 (本體)",
+        ("T9Name", "en") => "The Attack Titan (Host)",
+        ("T9Name", "jp") => "進撃の巨人 (本体)",
+        ("T9H", "zh") => "身高: 15米",
+        ("T9H", "en") => "Height: 15m",
+        ("T9H", "jp") => "全長: 15m",
+        ("T9Desc", "zh") => "艾連·葉卡当前持有的作戰主體。具備卓越的近身格鬥術、平衡的三維作戰指標、不屈的戰鬥意志，以及能越過時間長河窺探「未來繼承者記憶」的至高宿命異能。",
+        ("T9Desc", "en") => "The core combat avatar managed by Eren Yeager. Features balanced combat stats, flawless tactical grit, and the unique cross-temporal memory foresight capability.",
+        ("T9Desc", "jp") => "エレン・イェーガーが運用する戦闘主体。優れた格闘術とバランスの取れた身体能力、そして時間をも超越して「未来の継承者の記憶」を覗き見る固有の能力を持つ。",
+
+
+        
+        // ==========================================
+        // 調查兵團精銳作戰人員多語言本地化矩陣
+        // ==========================================
+
+        // 1. 里維兵長
+        ("C1Name", "zh") => "里維·阿卡曼",
+        ("C1Name", "en") => "Levi Ackerman",
+        ("C1Name", "jp") => "リヴァイ・アッカーマン",
+        ("C1Title", "zh") => "調查兵團 特別作戰班兵長",
+        ("C1Title", "en") => "Special Operations Captain",
+        ("C1Title", "jp") => "調査兵団 特別作戦班士長",
+        ("C1Bio", "zh") => "因覺醒了阿卡曼一族的血統而擁有近乎超人類的身體反射神經。戰鬥力極強，操縱立體機動裝置的技術堪稱全人類最高壁壘，被公認為「人類最強士兵」。",
+        ("C1Bio", "en") => "Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Unmatched with vertical maneuvering equipment, universally hailed as Humanity's Strongest.",
+        ("C1Bio", "jp") => "覚醒したアッカーマンの血統により、人類最強の身体能力を持つ。立体機動装置の扱いは一線を画し、「人類最強の兵士」と目される。",
+
+        // 2. 米卡莎
+        ("C2Name", "zh") => "米卡莎·阿卡曼",
+        ("C2Name", "en") => "Mikasa Ackerman",
+        ("C2Name", "jp") => "ミカサ・アッカーマン",
+        ("C2Title", "zh") => "調查兵團 精銳核心士官",
+        ("C2Title", "en") => "Elite Scout Officer",
+        ("C2Title", "jp") => "調査兵団 精鋭兵士",
+        ("C2Bio", "zh") => "在戰鬥中一人實力可匹敵一百名精銳普通士兵。與艾連同樣隸屬第104期訓練兵團畢業，內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡。",
+        ("C2Bio", "en") => "Equal to a hundred ordinary soldiers in combat. Graduated from the 104th Training Corps alongside Eren, driven by an absolute, singular drive to protect him at all costs.",
+        ("C2Bio", "jp") => "一人の戦闘力は通常の兵士100人分に匹敵する首席卒業生。何があってもエレン・イェーガーを守るという絶対的な一念で動く。",
+
+        // 3. 阿爾敏
+        ("C3Name", "zh") => "阿爾敏·亞魯雷特",
+        ("C3Name", "en") => "Armin Arlert",
+        ("C3Name", "jp") => "アルミン・アルレルト",
+        ("C3Title", "zh") => "調查兵團 第15代團長 / 超大型巨人持有者",
+        ("C3Title", "en") => "15th Scout Commander / Colossal Titan",
+        ("C3Title", "jp") => "調査兵団 第15代団長 / 超大型の巨人",
+        ("C3Bio", "zh") => "艾連與米卡莎的童年玩伴。具備無可匹敵的戰略頭腦與大局觀，多次在絕境中制定關鍵戰術逆轉戰局，並在瑪利亞之牆奪還戰後繼承了超大型巨人的能力。",
+        ("C3Bio", "en") => "Eren and Mikasa's childhood friend. Possesses an extraordinary tactical mind, devising brilliant counter-strategies in dire situations. Inherited the Colossal Titan.",
+        ("C3Bio", "jp") => "エレンとミカサの幼馴染。非凡な発想力と優れた知略を持ち、数々の窮地を救う作戦を立案。マリアの壁奪還戦後に超大型の巨人を引き継いだ。",
+
+        // 4. 漢吉
+        ("C4Name", "zh") => "漢吉·佐伊",
+        ("C4Name", "en") => "Hange Zoë",
+        ("C4Name", "jp") => "ハンジ・ゾエ",
+        ("C4Title", "zh") => "調查兵團 第14代團長",
+        ("C4Title", "en") => "14th Scout Commander",
+        ("C4Title", "jp") => "調査兵団 第14代団長",
+        ("C4Bio", "zh") => "對巨人有著近乎狂熱的探求心，主持了兵團內所有關巨人的科學實驗與武器開發（如雷槍）。在艾爾文犧牲後接任第14代團長，展現出極高的責任感與智慧。",
+        ("C4Bio", "en") => "Led the Scout Corps' scientific research and weapon development, notably creating the Thunder Spears. Succeeded Erwin as the 14th Commander with high integrity.",
+        ("C4Bio", "jp") => "巨人の生体研究に異様な情熱を注ぐ科学者。新兵器「雷槍」などの開発を主導し、エルヴィン亡き後は第14代団長として兵団を率いた。",
+
+        // 5. 艾爾文
+        ("C5Name", "zh") => "艾爾文·史密斯",
+        ("C5Name", "en") => "Erwin Smith",
+        ("C5Name", "jp") => "エルヴィン・スミス",
+        ("C5Title", "zh") => "調查兵團 前任第13代團長",
+        ("C5Title", "en") => "Former 13th Scout Commander",
+        ("C5Title", "jp") => "調査兵団 元第13代団長",
+        ("C5Bio", "zh") => "擁有卓越的領導力、冷酷的決斷力與無與倫比的煽動力。開創「長距離索敵陣形」大幅降低兵團死亡率。為了探尋地下室的歷史真相，甘願化身帶領士兵赴死的惡魔。",
+        ("C5Bio", "en") => "A legendary leader with frozen resolve and hypnotic charisma. Developed the Long-Distance Scouting Formation. Sacrificed himself to historical truth.",
+        ("C5Bio", "jp") => "卓越したリーダーシップと冷徹な決断力を併せ持つ第13代団長。「長距離索敵陣形」を考案。地下室の真実を追い求め、兵士を率いて散った。",
+
+        // 6. 約翰
+        ("C6Name", "zh") => "約翰·基爾斯坦",
+        ("C6Name", "en") => "Jean Kirstein",
+        ("C6Name", "jp") => "ジャン・キルシュタイン",
+        ("C6Title", "zh") => "調查兵團 現場前線指揮官",
+        ("C6Title", "en") => "Frontline Field Commander",
+        ("C6Title", "jp") => "調査兵団 前線指揮官",
+        ("C6Bio", "zh") => "性格現實且認清自身軟弱，但也正因如此，他能站在普通士兵的角度冷靜看清現狀。具備極佳的現場局勢判斷力，深得同伴信賴，逐漸成長為優秀的指揮官。",
+        ("C6Bio", "en") => "A grounded realist who understands weakness, enabling him to assess battlefields accurately from a soldier's view. Became a highly trusted field commander.",
+        ("C6Bio", "jp") => "現状を正しく認識できる現実主義者。それゆえに兵士の視点から冷静に戦局を判断でき、仲間から強い信頼を寄せられる指揮官へと成長した。",
+
+
+
+
+        // ==========================================
+        // 兵團戰術裝備多語言本地化矩陣
+        // ==========================================
+        ("GearSectionTitle", "zh") => "調查兵團戰術裝備與軍需資產",
+        ("GearSectionTitle", "en") => "Tactical Gear & Scout Ordnance",
+        ("GearSectionTitle", "jp") => "調査兵団戦術装備・技術資産",
+
+        ("SpecWeight", "zh") => "全作戰重量",
+        ("SpecWeight", "en") => "Combat Weight",
+        ("SpecWeight", "jp") => "総戦闘重量",
+
+        ("SpecRisk", "zh") => "操作危險級別",
+        ("SpecRisk", "en") => "Operational Risk",
+        ("SpecRisk", "jp") => "運用危険度",
+
+        // 1. 立體機動裝置
+        ("G1Name", "zh") => "立體機動裝置",
+        ("G1Name", "en") => "Omni-directional Mobility Gear",
+        ("G1Name", "jp") => "立体機動装置",
+        ("G1Tech", "zh") => "技術分類: 高壓瓦斯氣動風錨複合驅動",
+        ("G1Tech", "en") => "Tech: Gas-Powered Pneumatic Winch System",
+        ("G1Tech", "jp") => "技術分類: 高圧ガス駆動ワイヤーアンカー",
+        ("G1Desc", "zh") => "人類對抗巨人的革命性發明。由瓦斯鋼瓶、操作手把、高強度鋼索捲筒與錨鉤組成，使士兵能擺脫重力束縛，在巨木或建築間進行三維空間的高速立體移動，精準切下巨人後頸肉。",
+        ("G1Desc", "en") => "A revolutionary invention enabling humanity to fight titans. Utilizes high-pressure gas cylinders and steel wire anchors to allow high-speed 3D mobility through trees and urban structures.",
+        ("G1Desc", "jp") => "対巨人用に開発された人類の英知。高圧ガスボンベとワイヤーアンカーを組み合わせ、三次元空間での超高速移動を可能にすることで、巨人のうなじを狙う機動力を生み出す。",
+
+        // 2. 超硬質鋼刃
+        ("G2Name", "zh") => "超硬質鋼刃",
+        ("G2Name", "en") => "Ultrahard Steel Blades",
+        ("G2Name", "jp") => "超硬質スチール材薄刃",
+        ("G2Tech", "zh") => "技術分類: 黑金竹冶煉高韌性特殊合金",
+        ("G2Tech", "en") => "Tech: Industrial Black-Bamboo Alloy",
+        ("G2Tech", "jp") => "技術分類: 黒金竹製高靭性特殊合金",
+        ("G2Desc", "zh") => "兵團制式近戰兵器。採用帕拉迪島特產的黑金竹融合鋼材冶煉而成，兼具驚人的強韌度與鋒利度，能切開巨人的硬化組織。刀刃採用可更換的夾式設計，折斷後可即時卸下並替換新刃。",
+        ("G2Desc", "en") => "Standard-issue melee cutlery forged from industrial black-bamboo alloy. Engineered for high flexibility and razor sharpness to slice titan flesh. Features an instant segment-reload design.",
+        ("G2Desc", "jp") => "兵団の制式近接武器。島特産の黒金竹を鋼に練り込むことで、巨人の肉を断つ強靭さと鋭利さを両立。刀身は交換可能なカッターナイフのようなスナップ式を採用している。",
+
+        // 3. 雷槍
+        ("G3Name", "zh") => "雷槍",
+        ("G3Name", "en") => "Thunder Spears",
+        ("G3Name", "jp") => "雷槍",
+        ("G3Tech", "zh") => "技術分類: 推進式高爆破甲外掛火箭兵器",
+        ("G3Tech", "en") => "Tech: Jet-Propelled High-Explosive Ordnance",
+        ("G3Tech", "jp") => "技術分類: 推進式高爆徹甲ロケット兵器",
+        ("G3Desc", "zh") => "為對抗「盔甲巨人」而由漢吉主導開發的秘密重型裝備。外形如金屬長槍，固定於前臂，發射後利用火箭推進刺入巨人體內，拉動引線會引爆高爆炸藥，其威力足以炸碎最堅硬的巨人鎧甲。",
+        ("G3Desc", "en") => "A specialized heavy anti-titan armor-piercing rocket weapon developed by Hange. Anchors directly into target frameworks and detonates via a tethered cord, strong enough to shatter hardened skin armor.",
+        ("G3Desc", "jp") => "鎧の巨人に対抗すべくハンジが開発した新兵器。腕部に装着するロケット推進式の徹甲爆弾で、突き刺した後に紐を引くことで炸裂し、強固な鎧の皮膚をも粉砕する破壊力を持つ。",
+
+        _ => ""
+    };
+
+    //核心：定義兵團角色輕量級數據模型
+    private sealed class CharacterModel
+    {
+        public string NameKey { get; init; } = "";
+        public string TitleKey { get; init; } = "";
+        public string BioKey { get; init; } = "";
+        public string Rank { get; init; } = "A";
+        public string Kills { get; init; } = "0";
+        public int Wits { get; init; }
+    }
+
+    // 依據維基百科與官方設定集建立的調查兵團核心精銳矩陣
+    private readonly List<CharacterModel> _characterDatabase = new()
+    {
+        new CharacterModel {
+            NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", Rank = "S-Rank", Kills = "58 (單獨)", Wits = 8
+        },
+        new CharacterModel {
+            NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", Rank = "A+ Rank", Kills = "39 (單獨)", Wits = 7
+        },
+        new CharacterModel {
+            NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", Rank = "A-Rank", Kills = "0 (單獨)", Wits = 10
+        },
+        new CharacterModel {
+            NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", Rank = "A-Rank", Kills = "5 (輔助)", Wits = 9
+        },
+        new CharacterModel {
+            NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", Rank = "S-Rank", Kills = "未知", Wits = 10
+        },
+        new CharacterModel {
+            NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", Rank = "A-Rank", Kills = "7 (單獨)", Wits = 7
+        }
+    };
+
+
+    // DRY 核心：定義戰術裝備數據模型
+    private sealed class GearModel
+    {
+        public string NameKey { get; init; } = "";
+        public string TechKey { get; init; } = "";
+        public string DescKey { get; init; } = "";
+        public string ClassBadge { get; init; } = "";
+        public string WeightSpec { get; init; } = "";
+        public string RiskLevel { get; init; } = "";
+    }
+
+    // 調查兵團核心戰術裝備資料庫
+    private readonly List<GearModel> _gearDatabase = new()
+    {
+        new GearModel {
+            NameKey = "G1Name", TechKey = "G1Tech", DescKey = "G1Desc", ClassBadge = "MOBILITY",
+            WeightSpec = "12.5 kg", RiskLevel = "HIGH"
+        },
+        new GearModel {
+            NameKey = "G2Name", TechKey = "G2Tech", DescKey = "G2Desc", ClassBadge = "WEAPON",
+            WeightSpec = "1.8 kg (單刃)", RiskLevel = "LOW"
+        },
+        new GearModel {
+            NameKey = "G3Name", TechKey = "G3Tech", DescKey = "G3Desc", ClassBadge = "HEAVY_WEAPON",
+            WeightSpec = "4.5 kg (單發)", RiskLevel = "CRITICAL"
+        }
+    };
+}

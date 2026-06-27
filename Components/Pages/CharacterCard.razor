@@ -1,0 +1,30 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<CharacterCard> Loc
+
+<div class="aot-card-base hover:border-secondary/40">
+    <div class="card-body p-5">
+        <div class="flex justify-between items-start mb-2">
+            <div>
+                <!-- Clean, descriptive HTML. Zero inline layout strings! -->
+                <h4 class="character-name">@Name</h4>
+                <span class="character-title">@Title</span>
+            </div>
+            <div class="badge badge-outline badge-error font-mono font-bold">@Rank</div>
+        </div>
+        <p class="character-bio">@Bio</p>
+        <div class="divider my-2 opacity-10"></div>
+        <div class="flex justify-between items-center text-xs">
+            <div><span class="opacity-50">@Loc["SoloKills"]:</span> <span class="text-error font-bold">@Kills</span></div>
+            <div><span class="opacity-50">@Loc["Wits"]:</span> <span class="text-success font-bold">@Wits/10</span></div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Name { get; set; } = "";
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string Bio { get; set; } = "";
+    [Parameter] public string Rank { get; set; } = "B";
+    [Parameter] public int Kills { get; set; }
+    [Parameter] public int Wits { get; set; }
+}

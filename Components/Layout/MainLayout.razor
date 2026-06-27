@@ -1,0 +1,169 @@
+﻿@inherits LayoutComponentBase
+
+
+<!DOCTYPE html>
+<!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
+<div data-theme="dracula" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
+    
+    <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
+    <header class="navbar bg-base-100 shadow-xl border-b border-primary sticky top-0 z-50 px-4 md:px-8 flex justify-between items-center">
+        
+        
+        <div class="flex-1 md:flex-initial">
+            <a class="text-xl md:text-2xl font-black tracking-widest text-error uppercase cursor-pointer">Attack on Titan 進撃の巨人</a>
+        </div>
+
+        <!-- Central Layout Directory Links (Hidden on iPhone width; reveals neatly on iPad and Desktop screens) -->
+        <nav class="hidden md:flex gap-2 flex-1 justify-center">
+            <a class="btn btn-ghost btn-sm text-primary font-bold">@GetText("NavDossiers")</a>
+            <a class="btn btn-ghost btn-sm">@GetText("NavTimeline")</a>
+            <a class="btn btn-ghost btn-sm">@GetText("NavSpecies")</a>
+        </nav>
+        
+        <!-- 2. IMAGE LANGUAGE SWITCHER BUTTON SELECTION MATRIX -->
+        <div class="flex gap-1.5 bg-black/40 p-1 rounded-xl border border-neutral-content/10 scale-90 md:scale-100">
+            <!-- EN Button Trigger -->
+            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
+                           @(_activeLang == "en" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
+                    @onclick='() => ChangeLanguage("en")'>
+                EN
+            </button>
+            
+            <!-- JP Button Trigger -->
+            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
+                           @(_activeLang == "jp" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
+                    @onclick='() => ChangeLanguage("jp")'>
+                JP
+            </button>
+            
+            <!-- CN Button Trigger (ZH Localization Variable Mapping) -->
+            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
+                           @(_activeLang == "zh" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
+                    @onclick='() => ChangeLanguage("zh")'>
+                CN
+            </button>
+        </div>
+    </header>
+
+    <!-- 3. MAIN CONTENT LAYOUT ENGINE -->
+    <!-- 
+      Responsive Rules Engine:
+      - iPhone/Mobile: Arranges elements inside a singular column vertical feed channel.
+      - Desktop/iPad Landscape: Automatically expands into a side-by-side split grid configuration.
+    -->
+    <div class="container mx-auto p-4 md:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 flex-grow">
+        
+        <!-- TACTICAL SIDEBAR BOARD -->
+        <aside class="lg:col-span-1 flex flex-col gap-6">
+            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
+                <h2 class="card-title text-sm uppercase tracking-widest text-secondary flex items-center gap-2">
+                    <span>🛡️</span> @GetText("SidebarTitle")
+                </h2>
+                <div class="divider my-2 opacity-10"></div>
+                <p class="text-xs opacity-70 leading-relaxed">
+                    @GetText("SidebarDesc")
+                </p>
+                <div class="card-actions justify-end mt-4">
+                    <button class="btn btn-xs btn-outline btn-neutral w-full">@GetText("SidebarBtn")</button>
+                </div>
+            </div>
+            
+            <!-- Faction Selection Control Framework -->
+            <div class="card bg-gradient-to-br from-neutral to-base-100 p-5 shadow-xl border border-error/10">
+                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@GetText("FactionTitle")</h3>
+                <p class="text-xs opacity-80 mb-4">@GetText("FactionDesc")</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <button class="btn btn-xs btn-error font-bold">@GetText("FactionBtn1")</button>
+                    <button class="btn btn-xs btn-outline btn-secondary font-bold">@GetText("FactionBtn2")</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CHILD ROUTE RENDERING INTERFACE LAYER -->
+        <main class="lg:col-span-3 flex flex-col gap-8">
+            <CascadingValue Value="@_activeLang">
+                @Body
+            </CascadingValue>
+        </main>
+
+    </div>
+
+    <!-- 4. SYSTEM FOOTER WRAPPER -->
+    <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs font-mono border-t border-neutral">
+        <aside class="flex flex-col gap-1.5">
+            <p class="opacity-60 font-sans tracking-wide">「什麼都無法捨棄的人，什麼也改變不了。」</p>
+            <p class="text-primary font-bold">@GetText("FooterCredit")</p>
+        </aside>
+    </footer>
+
+</div>
+
+@code {
+    // FIXED DEFAULT LOCALIZATION VALUE: Alter this key variable string parameter to switch fallback profiles natively.
+    private string _activeLang = "zh";
+
+    private void ChangeLanguage(string targetLang)
+    {
+        _activeLang = targetLang;
+        StateHasChanged(); 
+    }
+
+    private string GetText(string key) => (key, _activeLang) switch
+    {
+        ("NavDossiers", "en") => "Personnel Dossiers",
+        ("NavDossiers", "jp") => "兵士調書列表",
+        ("NavDossiers", "zh") => "登場人物檔案",
+
+        ("NavTimeline", "en") => "Tactical Timeline",
+        ("NavTimeline", "jp") => "歷史戰術年表",
+        ("NavTimeline", "zh") => "戰史事件年表",
+
+        ("NavSpecies", "en") => "Titan Lore",
+        ("NavSpecies", "jp") => "九大巨人傳承",
+        ("NavSpecies", "zh") => "巨人設定研究",
+
+        ("SidebarTitle", "en") => "System Terminal",
+        ("SidebarTitle", "jp") => "作戰本部軍事終端",
+        ("SidebarTitle", "zh") => "帕拉迪島防衛終端",
+
+        ("SidebarDesc", "en") => "Authorized connection online. Accessing cryptographic communication records and wall structural safety data paths.",
+        ("SidebarDesc", "jp") => "認証接続完了。暗号化された通信記録および壁内の構造安全データパスにアクセスしています。",
+        ("SidebarDesc", "zh") => "認證連線已建立。正在調閱牆內調查兵團加密戰術通訊紀錄以及城牆防禦安全數據通道。",
+
+        ("SidebarBtn", "en") => "Sync Database",
+        ("SidebarBtn", "jp") => "同期資料庫",
+        ("SidebarBtn", "zh") => "同步中央數據庫",
+
+        ("FactionTitle", "en") => "Loyalty Alignment",
+        ("FactionTitle", "jp") => "派閥の忠誠選択",
+        ("FactionTitle", "zh") => "陣營派系抉擇",
+
+        ("FactionDesc", "en") => "Where do your priorities reside in the final conflict?",
+        ("FactionDesc", "jp") => "最終決戦において、あなたの忠誠はどこにありますか？",
+        ("FactionDesc", "zh") => "當終局地鳴與滅世之戰爆發，你的內心將歸屬於哪一方的正義？",
+
+        ("FactionBtn1", "en") => "Jaegerists",
+        ("FactionBtn1", "jp") => "イェーガー派",
+        ("FactionBtn1", "zh") => "葉卡派",
+
+        ("FactionBtn2", "en") => "Alliance",
+        ("FactionBtn2", "jp") => "救世連合軍",
+        ("FactionBtn2", "zh") => "救世聯軍",
+
+        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Dracula Theme.",
+        ("FooterCredit", "jp") => "Blazor、Tailwind、およびDaisyUIドラキュラテーマで構築。",
+        ("FooterCredit", "zh") => "基於 Blazor、Tailwind CSS 及 DaisyUI Dracula 主題純前端構建。",
+
+        _ => ""
+    };
+}
+
+
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+ 
