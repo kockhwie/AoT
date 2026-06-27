@@ -18,3 +18,14 @@
     right: 0.75rem;
     top: 0.5rem;
 }
+.brand-mark {
+    display: block;
+    height: 2.65rem;
+    width: auto;
+    object-fit: contain;
+}
+@media (min-width: 1200px) {
+    .navbar-start {
+        margin-left: 10px;
+    }
+}

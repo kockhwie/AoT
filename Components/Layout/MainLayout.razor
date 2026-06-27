@@ -5,47 +5,111 @@
 <div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
     
     <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
-    <header class="navbar bg-base-100 shadow-xl border-b border-primary sticky top-0 z-50 px-4 md:px-8 flex justify-between items-center">
-        
-        
-        <div class="flex-1 md:flex-initial">
-            <a class="text-xl md:text-2xl font-black tracking-widest text-error uppercase cursor-pointer">             
-                <img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" style="height: 3.5rem;" />
-            </a>
-        </div>
-
+ 
         <!-- Central Layout Directory Links (Hidden on iPhone width; reveals neatly on iPad and Desktop screens) -->
-        <nav class="hidden md:flex gap-2 flex-1 justify-center">
-            <a class="btn btn-ghost btn-sm text-primary font-bold">@GetText("NavDossiers")</a>
-            <a class="btn btn-ghost btn-sm">@GetText("NavTimeline")</a>
-            <a class="btn btn-ghost btn-sm">@GetText("NavSpecies")</a>
-            <a class="btn btn-ghost btn-sm">@GetText("NavNews")</a>
-        </nav>
-        
-        <!-- 2. IMAGE LANGUAGE SWITCHER BUTTON SELECTION MATRIX -->
-        <div class="flex gap-1.5 bg-black/40 p-1 rounded-xl border border-neutral-content/10 scale-90 md:scale-100">
-            <!-- EN Button Trigger -->
-            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
-                           @(_activeLang == "en" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
-                    @onclick='() => ChangeLanguage("en")'>
-                EN
-            </button>
-            
-            <!-- JP Button Trigger -->
-            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
-                           @(_activeLang == "jp" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
-                    @onclick='() => ChangeLanguage("jp")'>
-                JP
-            </button>
-            
-            <!-- CN Button Trigger (ZH Localization Variable Mapping) -->
-            <button class="btn btn-xs md:btn-sm font-black tracking-wide rounded-lg px-3 transition-all duration-200 
-                           @(_activeLang == "zh" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")" 
-                    @onclick='() => ChangeLanguage("zh")'>
-                CN
-            </button>
+
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>@GetText("NavCharacters")</a>
+                            <ul class="p-2 bg-base-100 w-40 z-1">
+                                <li><a>Titans</a></li>
+                                <li><a>Armies</a></li>
+                                <li><a>Quotes</a></li>
+                                <li><a>Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a>@GetText("NavTimeline")</a></li>
+                        <li><a>@GetText("NavSpecies")</a></li>
+                        <li><a>@GetText("NavMedia")</a>
+                            <ul class="p-2 bg-base-100 w-40 z-1">
+                            <li><a>Manga</a></li>
+                            <li><a>Anime</a></li>
+                            <li><a>Games</a></li>
+                            <li><a>Comics</a></li>
+                            <li><a>Movies</a></li>
+                            <li><a>Fan arts</a></li>
+                            <li><a>Books</a></li>
+                            <li><a>Magazines</a></li>
+                            <li><a>Other</a></li>
+                            </ul>
+                        </li>                       
+                        <li><a>@GetText("NavNews")</a></li>
+                        <li><a>@GetText("NavFanZone")</a></li>
+                    </ul>
+                </div>
+                <a class="text-sm"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li>
+                        <details>
+                            <summary>@GetText("NavCharacters")</summary>
+                            <ul class="p-2 bg-base-100 w-40 z-1">
+                                <li><a>Titans</a></li>
+                                <li><a>Armies</a></li>
+                                <li><a>Quotes</a></li>
+                                <li><a>Other</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a>@GetText("NavTimeline")</a></li>
+                    <li><a>@GetText("NavSpecies")</a></li>
+                    <li>
+                        <details>
+                            <summary>@GetText("NavMedia")</summary>
+                            <ul class="p-2 bg-base-100 w-40 z-1">
+                                <li><a>Manga</a></li>
+                                <li><a>Anime</a></li>
+                                <li><a>Games</a></li>
+                                <li><a>Comics</a></li>
+                                <li><a>Movies</a></li>
+                                <li><a>Fan arts</a></li>
+                                <li><a>Books</a></li>
+                                <li><a>Magazines</a></li>                             
+                                <li><a>Other</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li><a>@GetText("NavNews")</a></li>
+                    <li><a>@GetText("NavFanZone")</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <!-- 2. IMAGE LANGUAGE SWITCHER BUTTON SELECTION MATRIX -->
+                <div class="flex gap-1.5 p-1 rounded-xl scale-90 md:scale-100">
+                    <!-- EN Button Trigger -->
+                    <button class="btn btn-xs tracking-wide rounded-lg px-2 transition-all duration-200
+                        @(_activeLang == "en" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")"
+                            @onclick='() => ChangeLanguage("en")'>
+                        EN
+                    </button>
+
+                    <!-- JP Button Trigger -->
+                    <button class="btn btn-xs tracking-wide rounded-lg px-2 transition-all duration-200
+                        @(_activeLang == "jp" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")"
+                            @onclick='() => ChangeLanguage("jp")'>
+                        JP
+                    </button>
+
+                    <!-- CN Button Trigger (ZH Localization Variable Mapping) -->
+                    <button class="btn btn-xs tracking-wide rounded-lg px-2 transition-all duration-200
+                        @(_activeLang == "zh" ? "btn-error text-white shadow-lg shadow-error/30" : "btn-outline border-neutral-content/20 opacity-60")"
+                            @onclick='() => ChangeLanguage("zh")'>
+                        CN
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
+        
+        
+ 
 
     <!-- 3. MAIN CONTENT LAYOUT ENGINE -->
     <!-- 
@@ -112,9 +176,9 @@
 
     private string GetText(string key) => (key, _activeLang) switch
     {
-        ("NavDossiers", "en") => "Personnel Dossiers",
-        ("NavDossiers", "jp") => "兵士調書列表",
-        ("NavDossiers", "zh") => "登場人物檔案",
+        ("NavCharacters", "en") => "Characters",
+        ("NavCharacters", "jp") => "キャラクター",
+        ("NavCharacters", "zh") => "角色設定",
 
         ("NavTimeline", "en") => "Tactical Timeline",
         ("NavTimeline", "jp") => "歷史戰術年表",
@@ -123,12 +187,18 @@
         ("NavSpecies", "en") => "Titan Lore",
         ("NavSpecies", "jp") => "九大巨人傳承",
         ("NavSpecies", "zh") => "巨人設定研究",
-
-        
+            
         ("NavNews", "en") => "News",
-        ("NavNews", "jp") => "News",
+        ("NavNews", "jp") => "ニュース",
         ("NavNews", "zh") => "新聞",
+    
+        ("NavMedia", "en") => "Media",
+        ("NavMedia", "jp") => "メディア",
+        ("NavMedia", "zh") => "媒體",
 
+        ("NavFanZone", "en") => "Fan Zone",
+        ("NavFanZone", "jp") => "ファンゾーン",
+        ("NavFanZone", "zh") => "粉絲專區",
 
         ("SidebarTitle", "en") => "System Terminal",
         ("SidebarTitle", "jp") => "作戰本部軍事終端",
