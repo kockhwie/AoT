@@ -25,7 +25,6 @@ html:lang(jp) {
     padding: 1.5rem;
     position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {

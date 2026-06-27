@@ -1,16 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
 
-<!DOCTYPE html>
 <!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
-<div data-theme="dracula" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
+<div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
     
     <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
     <header class="navbar bg-base-100 shadow-xl border-b border-primary sticky top-0 z-50 px-4 md:px-8 flex justify-between items-center">
         
         
         <div class="flex-1 md:flex-initial">
-            <a class="text-xl md:text-2xl font-black tracking-widest text-error uppercase cursor-pointer">Attack on Titan 進撃の巨人</a>
+            <a class="text-xl md:text-2xl font-black tracking-widest text-error uppercase cursor-pointer">             
+                <img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" style="height: 3.5rem;" />
+            </a>
         </div>
 
         <!-- Central Layout Directory Links (Hidden on iPhone width; reveals neatly on iPad and Desktop screens) -->
@@ -18,6 +19,7 @@
             <a class="btn btn-ghost btn-sm text-primary font-bold">@GetText("NavDossiers")</a>
             <a class="btn btn-ghost btn-sm">@GetText("NavTimeline")</a>
             <a class="btn btn-ghost btn-sm">@GetText("NavSpecies")</a>
+            <a class="btn btn-ghost btn-sm">@GetText("NavNews")</a>
         </nav>
         
         <!-- 2. IMAGE LANGUAGE SWITCHER BUTTON SELECTION MATRIX -->
@@ -64,12 +66,12 @@
                     @GetText("SidebarDesc")
                 </p>
                 <div class="card-actions justify-end mt-4">
-                    <button class="btn btn-xs btn-outline btn-neutral w-full">@GetText("SidebarBtn")</button>
+                    <button class="btn btn-xs btn-outline btn-error w-full">@GetText("SidebarBtn")</button>
                 </div>
             </div>
             
             <!-- Faction Selection Control Framework -->
-            <div class="card bg-gradient-to-br from-neutral to-base-100 p-5 shadow-xl border border-error/10">
+            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
                 <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@GetText("FactionTitle")</h3>
                 <p class="text-xs opacity-80 mb-4">@GetText("FactionDesc")</p>
                 <div class="grid grid-cols-2 gap-2">
@@ -80,7 +82,7 @@
         </aside>
 
         <!-- CHILD ROUTE RENDERING INTERFACE LAYER -->
-        <main class="lg:col-span-3 flex flex-col gap-8">
+        <main class="lg:col-span-3 flex flex-col gap-2">
             <CascadingValue Value="@_activeLang">
                 @Body
             </CascadingValue>
@@ -89,7 +91,7 @@
     </div>
 
     <!-- 4. SYSTEM FOOTER WRAPPER -->
-    <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs font-mono border-t border-neutral">
+    <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs border-t border-neutral">
         <aside class="flex flex-col gap-1.5">
             <p class="opacity-60 font-sans tracking-wide">「什麼都無法捨棄的人，什麼也改變不了。」</p>
             <p class="text-primary font-bold">@GetText("FooterCredit")</p>
@@ -122,6 +124,12 @@
         ("NavSpecies", "jp") => "九大巨人傳承",
         ("NavSpecies", "zh") => "巨人設定研究",
 
+        
+        ("NavNews", "en") => "News",
+        ("NavNews", "jp") => "News",
+        ("NavNews", "zh") => "新聞",
+
+
         ("SidebarTitle", "en") => "System Terminal",
         ("SidebarTitle", "jp") => "作戰本部軍事終端",
         ("SidebarTitle", "zh") => "帕拉迪島防衛終端",
@@ -150,9 +158,9 @@
         ("FactionBtn2", "jp") => "救世連合軍",
         ("FactionBtn2", "zh") => "救世聯軍",
 
-        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Dracula Theme.",
-        ("FooterCredit", "jp") => "Blazor、Tailwind、およびDaisyUIドラキュラテーマで構築。",
-        ("FooterCredit", "zh") => "基於 Blazor、Tailwind CSS 及 DaisyUI Dracula 主題純前端構建。",
+        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Sunset Theme.",
+        ("FooterCredit", "jp") => "Blazor、Tailwind、およびDaisyUIサンセットテーマで構築。",
+        ("FooterCredit", "zh") => "基於 Blazor、Tailwind CSS 及 DaisyUI Sunset 主題純前端構建。",
 
         _ => ""
     };

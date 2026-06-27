@@ -4,7 +4,7 @@
 <div class="aot-hero">
     <div class="aot-hero-glow"></div>
     <div>
-        <span class="badge badge-error font-mono text-[10px] md:text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
+        <span class="badge badge-error text-[11px] md:text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
             @GetText("HeroTag")
         </span>
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white leading-tight mb-3">
@@ -15,13 +15,13 @@
         </p>
         <div class="flex flex-wrap gap-2">
             <button class="btn btn-xs md:btn-sm btn-primary font-bold px-5">@GetText("BtnIntel")</button>
-            <button class="btn btn-xs md:btn-sm btn-outline btn-neutral">@GetText("BtnGallery")</button>
+            <button class="btn btn-xs md:btn-sm btn-outline btn-secondary ">@GetText("BtnGallery")</button>
         </div>
     </div>
 </div>
 
 <!-- 區域 2：調查兵團精銳作戰檔案 (完全符合 DRY 原則，iPhone自适应堆叠，iPad/PC自适应双列) -->
-<div class="flex flex-col gap-4 mb-8">
+<div class="flex flex-col gap-2 mt-6">
     <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>⚔️</span> @GetText("SectionTitle")
     </h3>
@@ -34,17 +34,17 @@
                     <div class="flex justify-between items-start gap-2 mb-2">
                         <div>
                             <h4 class="font-black text-lg md:text-xl text-white">@GetText(member.NameKey)</h4>
-                            <span class="text-[10px] font-mono text-secondary">@GetText(member.TitleKey)</span>
+                            <span class="text-[11px] text-secondary">@GetText(member.TitleKey)</span>
                         </div>
-                        <div class="badge badge-sm badge-outline badge-error font-mono font-bold">@member.Rank</div>
+                        <div class="badge badge-sm badge-outline badge-error font-bold">@member.Rank</div>
                     </div>
                     <p class="text-xs opacity-75 min-h-[54px] leading-relaxed">
                         @GetText(member.BioKey)
                     </p>
                     <div class="divider my-2.5 opacity-5"></div>
-                    <div class="flex justify-between items-center text-[11px] font-mono">
-                        <div><span class="opacity-50">@GetText("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
-                        <div><span class="opacity-50">@GetText("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
+                    <div class="flex justify-between items-center text-[12px]">
+                        <div><span class="opacity-70">@GetText("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
+                        <div><span class="opacity-70">@GetText("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
 </div>
 
 <!-- 新增区域 3：九大巨人能力图谱面板 (完全遵循 DRY 原则，通过数据循环渲染) -->
-<div class="flex flex-col gap-2 mb-8">
+<div class="flex flex-col gap-2">
     <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-secondary flex items-center gap-2">
         <span>🧬</span> @GetText("TitanSectionTitle")
     </h3>
@@ -67,9 +67,9 @@
                 <div class="flex justify-between items-start mb-3">
                     <div>
                         <h4 class="font-black text-xl text-white">@GetText(titan.NameKey)</h4>
-                        <span class="text-[10px] font-mono text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
+                        <span class="text-[11px] text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
                     </div>
-                    <div class="badge badge-sm badge-neutral font-mono font-bold opacity-80">@titan.TypeBadge</div>
+                    <div class="badge badge-sm badge-neutral font-bold opacity-80">@titan.TypeBadge</div>
                 </div>
 
                 <!-- 描述文本 -->
@@ -83,8 +83,8 @@
                 <div class="flex flex-col gap-2.5 text-[11px]">
                     <!-- 力量指标 -->
                     <div>
-                        <div class="flex justify-between font-mono mb-1">
-                            <span class="opacity-50">@GetText("ParamPower")</span>
+                        <div class="flex justify-between mb-1">
+                            <span class="">@GetText("ParamPower")</span>
                             <span class="text-primary font-bold">@titan.Power%</span>
                         </div>
                         <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
@@ -92,8 +92,8 @@
 
                     <!-- 速度指标 -->
                     <div>
-                        <div class="flex justify-between font-mono mb-1">
-                            <span class="opacity-50">@GetText("ParamSpeed")</span>
+                        <div class="flex justify-between mb-1">
+                            <span class="">@GetText("ParamSpeed")</span>
                             <span class="text-secondary font-bold">@titan.Speed%</span>
                         </div>
                         <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
@@ -101,8 +101,8 @@
 
                     <!-- 硬度/特殊能力指标 -->
                     <div>
-                        <div class="flex justify-between font-mono mb-1">
-                            <span class="opacity-50">@GetText("ParamArmor")</span>
+                        <div class="flex justify-between  mb-1">
+                            <span class="">@GetText("ParamArmor")</span>
                             <span class="text-accent font-bold">@titan.Armor%</span>
                         </div>
                         <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
@@ -113,7 +113,7 @@
     </div>
 </div>
 <!-- 區域 4：兵團戰術裝備與牆外調查資產 (完全符合 DRY 原則，三端完美自適應) -->
-<div class="flex flex-col gap-2 mb-8">
+<div class="flex flex-col gap-2 mt-6">
     <h3 class="text-md md:text-lg font-black uppercase tracking-widest text-accent flex items-center gap-2">
         <span>⚙️</span> @GetText("GearSectionTitle")
     </h3>
@@ -126,9 +126,9 @@
                 <div class="flex justify-between items-start mb-3">
                     <div>
                         <h4 class="font-black text-lg text-white">@GetText(gear.NameKey)</h4>
-                        <span class="text-[10px] font-mono text-secondary uppercase tracking-wider">@GetText(gear.TechKey)</span>
+                        <span class="text-[11px] text-secondary uppercase tracking-wider">@GetText(gear.TechKey)</span>
                     </div>
-                    <div class="badge badge-sm badge-outline badge-accent font-mono font-bold">@gear.ClassBadge</div>
+                    <div class="badge badge-sm badge-outline badge-accent font-bold">@gear.ClassBadge</div>
                 </div>
 
                 <!-- 裝備描述 -->
@@ -139,9 +139,9 @@
                 <div class="divider my-2 opacity-5"></div>
 
                 <!-- 戰術規格參數 -->
-                <div class="flex justify-between items-center text-[11px] font-mono opacity-80">
-                    <div><span class="opacity-50">@GetText("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
-                    <div><span class="opacity-50">@GetText("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
+                <div class="flex justify-between items-center text-[11px] opacity-85">
+                    <div><span class="">@GetText("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
+                    <div><span class="">@GetText("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
                 </div>
             </div>
         }
