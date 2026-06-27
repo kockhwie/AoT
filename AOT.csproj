@@ -7,10 +7,6 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
  
-  <Target Name="TailwindBuild" BeforeTargets="Compile">
-    <!-- Specifying the direct local path ensures Windows executes the builder cleanly -->
-    <Exec Command=".\node_modules\.bin\tailwindcss -i ./wwwroot/app.css -o ./wwwroot/css/site.css" />
-  </Target>
  
   <ItemGroup>
     <None Include="wwwroot\favicon.ico" />
