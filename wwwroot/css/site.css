@@ -1,4 +1,4 @@
-﻿/* ==========================================
+/* ==========================================
    1. 全局基础与语言字体配置 (DRY 核心)
    ========================================== */
 html:lang(en) {
@@ -138,19 +138,70 @@ html:lang(jp) {
 
 /* 巨人卡片专属样式 */
 .aot-titan-card {
+    position: relative;                        /* badge 的定位錨點 */
     background-color: var(--color-base-100);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.25rem;
     padding: 1.5rem;
+    padding-top: 2rem;                         /* 為 badge 留頂部空間 */
     box-shadow: var(--shadow-2xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;                         /* 允許 badge 超出邊界 */
 }
 
     .aot-titan-card:hover {
         transform: translateY(-4px);
-        border-color: rgba(255, 87, 87, 0.4); /* 触碰时放射德古拉警戒红光 */
+        border-color: rgba(255, 87, 87, 0.4); /* 觸碰時放射德古拉警戒紅光 */
         box-shadow: 0 20px 25px -5px rgba(255, 87, 87, 0.1);
     }
+
+/* 徽章容器：絕對定位在卡片右上角，flex 橫排 */
+.aot-titan-badges {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    display: flex;
+    flex-direction: row-reverse;  /* 新徽章從右往左疊加 */
+    gap: 0;
+    z-index: 10;
+}
+
+/* 每枚徽章：普通 flex item，不再自己定位 */
+.aot-titan-badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    margin-left: -1rem;           /* 第二枚向左重疊，形成硬幣疊加感 */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s ease;
+}
+
+/* 第一枚（最右）不需要負 margin */
+.aot-titan-badge:last-child {
+    margin-left: 0;
+}
+
+.aot-titan-card:hover .aot-titan-badge {
+    transform: scale(1.08) rotate(-3deg);
+    box-shadow: 0 8px 24px rgba(255, 87, 87, 0.35);
+}
+
+/* 平板 (768px+) */
+@media (min-width: 768px) {
+    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }
+    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
+
+/* 桌面 (1280px+) */
+@media (min-width: 1280px) {
+    .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
+    .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
 /* ==========================================
    6. 兵團戰術裝備網格 (Gear Grid) - 完美適配三端
    ========================================== */

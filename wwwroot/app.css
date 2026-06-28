@@ -1,4 +1,18 @@
-﻿/* ==========================================
+/* Remove browser default, replace with consistent visible ring */
+h1:focus {
+    outline: none;
+}
+
+.text-xxs {
+    font-size: 11px;
+}
+
+body {
+    font-size: 0.6875rem; /* 11px equivalent */
+}
+
+
+/* ==========================================
    1. 全局基础与语言字体配置 (DRY 核心)
    ========================================== */
 html:lang(en) {
@@ -19,7 +33,7 @@ html:lang(jp) {
    2. 巨幕组件 (Hero Section) - 自适应各端
    ========================================== */
 .aot-hero {
-    background-color: var(--color-base-100);
+    background-color:  rgb(181 226 226 / 0.15);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
     padding: 1.5rem;
@@ -32,18 +46,7 @@ html:lang(jp) {
         padding: 2rem;
     }
 }
-
-.aot-hero-glow {
-    position: absolute;
-    right: -2.5rem;
-    bottom: -2.5rem;
-    width: 11.25rem;
-    height: 11.25rem;
-    background-color: rgba(255, 87, 87, 0.1);
-    border-radius: 50%;
-    filter: blur(3xl);
-}
-
+ 
 /* ==========================================
    3. 角色卡片组件网格 (Character Grid)
    ========================================== */
@@ -63,17 +66,17 @@ html:lang(jp) {
 
 /* 独立卡片结构 */
 .aot-card {
-    background-color: var(--color-base-100);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(0 0 0 / 0.70);
+    border: 1px solid rgba(255, 255, 255, 0.20);
     border-radius: 1rem;
     box-shadow: var(--shadow-xl);
     transition: all 0.3s ease;
     overflow: hidden;
 }
 
-    .aot-card:hover {
-        border-color: rgba(255, 121, 198, 0.3); /* 德古拉粉色边缘高亮 */
-    }
+.aot-card:hover {
+    border-color: rgba(255, 121, 198, 0.3); /* 德古拉粉色边缘高亮 */
+}
 
 .aot-card-body {
     padding: 1.25rem;
@@ -119,7 +122,7 @@ html:lang(jp) {
     display: grid;
     grid-template-columns: 1fr; /* iPhone 默认单列 */
     gap: 1.25rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
 }
 
 @media (min-width: 768px) {
@@ -137,19 +140,71 @@ html:lang(jp) {
 
 /* 巨人卡片专属样式 */
 .aot-titan-card {
-    background-color: var(--color-base-100);
+    position: relative;                        /* badge 的定位錨點 */
+    background-color: rgb(116, 154, 222, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.25rem;
     padding: 1.5rem;
+    padding-top: 2rem;                         /* 為 badge 留頂部空間 */
     box-shadow: var(--shadow-2xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;                         /* 允許 badge 超出邊界 */
 }
 
-    .aot-titan-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(255, 87, 87, 0.4); /* 触碰时放射德古拉警戒红光 */
-        box-shadow: 0 20px 25px -5px rgba(255, 87, 87, 0.1);
-    }
+.aot-titan-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 87, 87, 0.4); /* 触碰时放射德古拉警戒红光 */
+    box-shadow: 0 20px 25px -5px rgba(255, 87, 87, 0.1);
+}
+
+/* 徽章容器：絕對定位在卡片右上角，flex 橫排 */
+.aot-titan-badges {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    display: flex;
+    flex-direction: row-reverse;  /* 新徽章從右往左疊加 */
+    gap: 0;
+    z-index: 10;
+}
+
+/* 每枚徽章：普通 flex item，不再自己定位 */
+.aot-titan-badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    margin-left: -1rem;           /* 第二枚向左重疊，形成硬幣疊加感 */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s ease;
+}
+
+/* 第一枚（最右）不需要負 margin */
+.aot-titan-badge:last-child {
+    margin-left: 0;
+}
+
+.aot-titan-card:hover .aot-titan-badge {
+    transform: scale(1.08) rotate(-3deg);
+    box-shadow: 0 8px 24px rgba(255, 87, 87, 0.35);
+}
+
+/* 平板 (768px+) */
+@media (min-width: 768px) {
+    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }
+    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
+
+/* 桌面 (1280px+) */
+@media (min-width: 1280px) {
+    .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
+    .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
+
 /* ==========================================
    6. 兵團戰術裝備網格 (Gear Grid) - 完美適配三端
    ========================================== */
@@ -157,7 +212,7 @@ html:lang(jp) {
     display: grid;
     grid-template-columns: 1fr; /* iPhone 預設單列 */
     gap: 1.25rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
 }
 
 @media (min-width: 768px) {
@@ -175,15 +230,15 @@ html:lang(jp) {
 
 /* 戰術裝備卡片專屬樣式 */
 .aot-gear-card {
-    background-color: var(--color-base-100);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgb(70, 67, 67, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 1.25rem;
     padding: 1.5rem;
     box-shadow: var(--shadow-xl);
     transition: all 0.25s ease-in-out;
 }
 
-    .aot-gear-card:hover {
-        border-color: rgba(189, 147, 249, 0.4); /* 觸碰时放射德古拉紫色高亮 */
-        box-shadow: 0 15px 25px -5px rgba(189, 147, 249, 0.1);
-    }
+.aot-gear-card:hover {
+    border-color: rgba(189, 147, 249, 0.4); /* 觸碰时放射德古拉紫色高亮 */
+    box-shadow: 0 15px 25px -5px rgba(189, 147, 249, 0.1);
+}

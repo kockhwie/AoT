@@ -2,15 +2,14 @@
 
 <!-- 区域 1：顶部核心巨幕区 -->
 <div class="aot-hero">
-    <div class="aot-hero-glow"></div>
     <div>
-        <span class="badge badge-error text-[11px] md:text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
+        <span class="badge badge-error text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
             @GetText("HeroTag")
         </span>
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white leading-tight mb-3">
+        <h1 class="text-3xl  lg:text-5xl font-black uppercase text-white leading-tight mb-3">
             @GetText("HeroTitle")
         </h1>
-        <p class="text-xs md:text-sm opacity-80 leading-relaxed max-w-2xl mb-6">
+        <p class="text-xs opacity-80 leading-relaxed max-w-2xl mb-6">
             @GetText("HeroDesc")
         </p>
         <div class="flex flex-wrap gap-2">
@@ -20,7 +19,7 @@
     </div>
 </div>
 
-<!-- 區域 2：調查兵團精銳作戰檔案 (完全符合 DRY 原則，iPhone自适应堆叠，iPad/PC自适应双列) -->
+<!-- 區域 2：調查兵團精銳作戰檔案  -->
 <div class="flex flex-col gap-2 mt-6">
     <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>⚔️</span> @GetText("SectionTitle")
@@ -34,15 +33,15 @@
                     <div class="flex justify-between items-start gap-2 mb-2">
                         <div>
                             <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@GetText(member.NameKey)</h4>
-                            <span class="text-[10px] md:text-[11px] text-secondary">@GetText(member.TitleKey)</span>
+                            <span class="text-xs text-secondary">@GetText(member.TitleKey)</span>
                         </div>
                         <div class="badge badge-xs md:badge-sm badge-outline badge-error font-bold">@member.Rank</div>
                     </div>
-                    <p class="text-[11px] md:text-xs lg:text-sm opacity-75 min-h-[54px] leading-relaxed">
+                    <p class="text-xs md:text-xs lg:text-sm opacity-75 min-h-[54px] leading-relaxed">
                         @GetText(member.BioKey)
                     </p>
                     <div class="divider my-2.5 opacity-5"></div>
-                    <div class="flex justify-between items-center text-[11px] md:text-[12px]">
+                    <div class="flex justify-between items-center text-xxs">
                         <div><span class="opacity-70">@GetText("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
                         <div><span class="opacity-70">@GetText("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
                     </div>
@@ -52,9 +51,9 @@
     </div>
 </div>
 
-<!-- 新增区域 3：九大巨人能力图谱面板 (完全遵循 DRY 原则，通过数据循环渲染) -->
+<!-- 新增区域 3：九大巨人能力图谱面板   -->
 <div class="flex flex-col gap-2">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-secondary flex items-center gap-2">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>🧬</span> @GetText("TitanSectionTitle")
     </h3>
     
@@ -63,24 +62,35 @@
         @foreach (var titan in _titanDatabase)
         {
             <div class="aot-titan-card">
+                <div class="aot-titan-badges">
+                    <img src="/img/titans/@titan.TypeBadge"
+                         class="aot-titan-badge"
+                         alt="@titan.TypeBadge" />
+                    @* Add a second badge here when needed:
+                    <img src="/img/titans/@titan.SecondBadge"
+                         class="aot-titan-badge"
+                         alt="@titan.SecondBadge" />
+                    *@
+                </div>
+
                 <!-- 头部基本信息 -->
-                <div class="flex justify-between items-start mb-3">
-                    <div>
+                <div class="flex justify-between items-start mb-3" style="position: relative; border: 0px solid red">
+                    <div style ="position: relative; border: 0px solid blue">
                         <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@GetText(titan.NameKey)</h4>
-                        <span class="text-[10px] md:text-[11px] text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
+                        <span class="text-xs text-error uppercase tracking-wider">@GetText(titan.HeightKey)</span>
                     </div>
-                    <div class="badge badge-xs md:badge-sm badge-neutral font-bold opacity-80">@titan.TypeBadge</div>
+
                 </div>
 
                 <!-- 描述文本 -->
-                <p class="text-[11px] md:text-xs lg:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
+                <p class="text-xs lg:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
                     @GetText(titan.DescKey)
                 </p>
 
                 <div class="divider my-2 opacity-5"></div>
 
                 <!-- 量化三维能力雷达进度条 (使用 daisyUI 原生 Progress 组件) -->
-                <div class="flex flex-col gap-2.5 text-[10px] md:text-[11px]">
+                <div class="flex flex-col gap-2.5 text-xs">
                     <!-- 力量指标 -->
                     <div>
                         <div class="flex justify-between mb-1">
@@ -112,9 +122,9 @@
         }
     </div>
 </div>
-<!-- 區域 4：兵團戰術裝備與牆外調查資產 (完全符合 DRY 原則，三端完美自適應) -->
+<!-- 區域 4：兵團戰術裝備與牆外調查資產 -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-accent flex items-center gap-2">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>⚙️</span> @GetText("GearSectionTitle")
     </h3>
 
@@ -129,7 +139,7 @@
                 </div>
                 
                 <!-- 技術分類 (全寬展示，防止折行) -->
-                <div class="text-[11px] md:text-xs text-secondary uppercase tracking-wider mb-3">
+                <div class="text-xs text-secondary uppercase tracking-wider mb-3">
                     @GetText(gear.TechKey)
                 </div>
 
@@ -141,7 +151,7 @@
                 <div class="divider my-2 opacity-5"></div>
 
                 <!-- 戰術規格參數 -->
-                <div class="flex justify-between items-center text-[11px] md:text-xs opacity-85">
+                <div class="flex justify-between items-center text-xxs opacity-85">
                     <div><span class="">@GetText("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
                     <div><span class="">@GetText("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
                 </div>
@@ -151,32 +161,34 @@
 </div>
 
 <!-- 区域 5：编年史时间轴区 -->
-<div class="aot-timeline-card">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-warning mb-6">
+<div class="flex flex-col gap-2 mt-6">
+    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
         <span>⏳</span> @GetText("TimelineHeader")
     </h3>
-    
-    <ul class="timeline timeline-vertical timeline-compact">
-        <li>
-            <div class="timeline-middle text-error">📍</div>
-            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs mb-4 w-full">
-                <time class="font-mono font-black text-secondary text-xs md:text-sm">845 年</time>
-                <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time1Title")</div>
-                <p class="opacity-70 mt-1">@GetText("Time1Desc")</p>
-            </div>
-            <hr class="bg-primary/30" />
-        </li>
-        <li>
-            <hr class="bg-primary/30" />
-            <div class="timeline-middle text-warning">📍</div>
-            <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs w-full">
-                <time class="font-mono font-black text-secondary text-xs md:text-sm">854 年</time>
-                <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time2Title")</div>
-                <p class="opacity-70 mt-1">@GetText("Time2Desc")</p>
-            </div>
-        </li>
-    </ul>
+    <div class="aot-timeline-card">
+        <ul class="timeline timeline-vertical timeline-compact">
+            <li>
+                <div class="timeline-middle text-error">📍</div>
+                <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs mb-4 w-full">
+                    <time class="font-mono font-black text-secondary text-xs md:text-sm">845 年</time>
+                    <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time1Title")</div>
+                    <p class="opacity-70 mt-1">@GetText("Time1Desc")</p>
+                </div>
+                <hr class="bg-primary/30" />
+            </li>
+            <li>
+                <hr class="bg-primary/30" />
+                <div class="timeline-middle text-warning">📍</div>
+                <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs w-full">
+                    <time class="font-mono font-black text-secondary text-xs md:text-sm">854 年</time>
+                    <div class="font-bold text-white mt-1 text-xs md:text-sm">@GetText("Time2Title")</div>
+                    <p class="opacity-70 mt-1">@GetText("Time2Desc")</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
+
 
 @code {
     [CascadingParameter] public string CurrentLang { get; set; } = "zh";
@@ -197,39 +209,39 @@
     private readonly List<TitanModel> _titanDatabase = new()
     {
         new TitanModel {
-            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "FOUNDER",
+            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "soon-titan-badge.png",
             Power = 100, Speed = 60, Armor = 100
         },
         new TitanModel {
-            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "ASSAULT",
+            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "female-titan-badge.png",
             Power = 85, Speed = 95, Armor = 80
         },
         new TitanModel {
-            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "BEAST",
+            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "soon-titan-badge.png",
             Power = 90, Speed = 55, Armor = 70
         },
         new TitanModel {
-            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "COLOSSAL",
+            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "soon-titan-badge.png",
             Power = 100, Speed = 20, Armor = 90
         },
         new TitanModel {
-            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "ARMORED",
+            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "soon-titan-badge.png",
             Power = 90, Speed = 65, Armor = 95
         },
         new TitanModel {
-            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "JAW",
+            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "soon-titan-badge.png",
             Power = 75, Speed = 100, Armor = 75
         },
         new TitanModel {
-            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "CART",
+            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "soon-titan-badge.png",
             Power = 50, Speed = 85, Armor = 60
         },
         new TitanModel {
-            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "WAR_HAMMER",
+            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "soon-titan-badge.png",
             Power = 95, Speed = 75, Armor = 95
         },
         new TitanModel {
-            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "ATTACK",
+            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "soon-titan-badge.png",
             Power = 85, Speed = 85, Armor = 80
         }
     };
@@ -313,20 +325,22 @@
         ("ParamArmor", "en") => "Hardening & Magic",
         ("ParamArmor", "jp") => "硬質化・特殊能力",
         // 1. 始祖巨人
-        ("T1Name", "zh") => "始祖巨人",("T1Name", "en") => "The Founding Titan",("T1Name", "jp") => "始祖の巨人",
+        ("T1Name", "zh") => "始祖巨人",("T1Name", "en") => "Founding Titan",("T1Name", "jp") => "始祖の巨人",
         ("T1H", "zh") => "身高: 13米 (初始型態)",("T1H", "en") => "Height: 13m (Base Form)",("T1H", "jp") => "全長: 13m (通常時)",
         ("T1Desc", "zh") => "所有巨人之源。擁有至高無上的「座標」秘術，能隔空篡改尤米爾子民的集體記憶，並能操控城牆內千萬名超大型巨人發動「地鳴」摧毀世界。",("T1Desc", "en") => "The nexus of all titans. Wields the ultimate 'Coordinate' ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic 'Rumbling'.",("T1Desc", "jp") => "すべての巨人の頂点。「座標」を通じてユミルの民の記憶を改変し、無数の超大型巨人を操り世界を崩壊させる「地鳴らし」を発動できる。",
         // 2. 女型巨人
-        ("T2Name", "zh") => "女型巨人",("T2Name", "en") => "The Female Titan",("T2Name", "jp") => "女型の巨人",
+        ("T2Name", "zh") => "女巨人",("T2Name", "en") => "Female Titan",("T2Name", "jp") => "女型の巨人",
         ("T2H", "zh") => "身高: 14米",("T2H", "en") => "Height: 14m",("T2H", "jp") => "全長: 14m",
         ("T2Desc", "zh") => "亞妮·雷恩哈特持有。具備極高的全能機动適應力，能局部實行高強度硬質化結晶防禦，並能發出尖叫大範圍吸引並引導無垢巨人。",("T2Desc", "en") => "Possessed by Annie Leonhart. Exhibits high all-around agility, specialized localized crystalline hardening defenses, and a vocal call that summons pure titans.",("T2Desc", "jp") => "アニ・レオンハートが保持。高い汎用性と機動力を持ち、体の一部を局所的に硬質化結晶できるほか、叫び声で無垢の巨人を呼び集める。",
         // 3. 兽之巨人
-        ("T3Name", "zh") => "獸之巨人",("T3Name", "en") => "The Beast Titan",("T3Name", "jp") => "獣の巨人",
+        ("T3Name", "zh") => "野獸巨人",
+        ("T3Name", "en") => "Beast Titan",
+        ("T3Name", "jp") => "獣の巨人",
         ("T3H", "zh") => "身高: 17米",("T3H", "en") => "Height: 17m",("T3H", "jp") => "全長: 17m",
         ("T3Desc", "zh") => "吉克·葉卡持有。外表呈現猿猴般的野獸形態，具備極其恐怖的遠程碎石投擲殺傷力。因具備王血，其脊髓液能強制將人類巨人化。",("T3Desc", "en") => "Held by Zeke Yeager. Resembles an ape-like beast capable of devastating long-range bombardment. Due to royal blood, his spinal fluid instantly transforms targets.",("T3Desc", "jp") => "ジーク・イェーガーが保持。獣のような姿を持ち、恐るべき遠距離投擲による破壊力を誇る。王血の力で、自身の脊髄液を介し民を巨人化できる。",
         // 4. 超大型巨人
         ("T4Name", "zh") => "超大型巨人",
-        ("T4Name", "en") => "The Colossal Titan",
+        ("T4Name", "en") => "Colossal Titan",
         ("T4Name", "jp") => "超大型の巨人",
         ("T4H", "zh") => "身高: 60米",
         ("T4H", "en") => "Height: 60m",
@@ -337,7 +351,7 @@
 
         // 5. 盔甲巨人
         ("T5Name", "zh") => "盔甲巨人",
-        ("T5Name", "en") => "The Armored Titan",
+        ("T5Name", "en") => "Armored Titan",
         ("T5Name", "jp") => "鎧の巨人",
         ("T5H", "zh") => "身高: 15米",
         ("T5H", "en") => "Height: 15m",
@@ -346,9 +360,9 @@
         ("T5Desc", "en") => "Held by Reiner Braun. Encased in a heavy hardened skeletal armor plating that provides fortress-grade defensive metrics. Functions as an organic battering ram against fortified structures.",
         ("T5Desc", "jp") => "ライナー・ブラウンが保持。全身を強固な硬質化の皮膚で覆われた、まさに生きる戦車。その驚異的な防御力と体重を活かした突撃で、外門を一撃で破壊する。",
 
-        // 6. 颚型巨人
-        ("T6Name", "zh") => "顎型巨人",
-        ("T6Name", "en") => "The Jaw Titan",
+        // 6. 颚巨人
+        ("T6Name", "zh") => "顎巨人",
+        ("T6Name", "en") => "Jaw Titan",
         ("T6Name", "jp") => "顎の巨人",
         ("T6H", "zh") => "身高: 5米",
         ("T6H", "en") => "Height: 5m",
@@ -359,7 +373,7 @@
 
         // 7. 车力巨人
         ("T7Name", "zh") => "車力巨人",
-        ("T7Name", "en") => "The Cart Titan",
+        ("T7Name", "en") => "Cart Titan",
         ("T7Name", "jp") => "車力の巨人",
         ("T7H", "zh") => "身高: 4米 (四足步行)",
         ("T7H", "en") => "Height: 4m (Quadrupedal)",
@@ -370,7 +384,7 @@
 
         // 8. 战槌巨人
         ("T8Name", "zh") => "戰槌巨人",
-        ("T8Name", "en") => "The War Hammer Titan",
+        ("T8Name", "en") => "War Hammer Titan",
         ("T8Name", "jp") => "戦鎚の巨人",
         ("T8H", "zh") => "身高: 15米",
         ("T8H", "en") => "Height: 15m",
@@ -379,7 +393,7 @@
         ("T8Desc", "en") => "Originally held by the Tybur family. Features absolute weapon materialization via dense structural hardening. The host can safely remain underground while managing the titan puppet remotely via a cable connection.",
         ("T8Desc", "jp") => "タイバー家、後にエレンが保持。硬質化能力を極限まで高め、戦鎚や地刺、ボウガンなどあらゆる武器を自在に生成する。本体は地中に隠れ、コードを介して巨人を遠隔操作する。",
 
-        // 9. 进击的巨人 (即主Hero卡所指)
+        // 9. 进击巨人 (即主Hero卡所指)
         ("T9Name", "zh") => "進擊的巨人 (本體)",
         ("T9Name", "en") => "The Attack Titan (Host)",
         ("T9Name", "jp") => "進撃の巨人 (本体)",

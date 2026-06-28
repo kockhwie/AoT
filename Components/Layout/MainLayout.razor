@@ -3,67 +3,447 @@
 
 <!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
 <div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
-    
-    <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
- 
-        <!-- Central Layout Directory Links (Hidden on iPhone width; reveals neatly on iPad and Desktop screens) -->
+     
 
-        <div class="navbar bg-base-100 shadow-sm">
+    <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
+    <div class="navbar bg-base-100 shadow-sm">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
                     <ul tabindex="-1"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>@GetText("NavCharacters")</a>
-                            <ul class="p-2 bg-base-100 w-40 z-1">
-                                <li><a>Titans</a></li>
-                                <li><a>Armies</a></li>
-                                <li><a>Quotes</a></li>
-                                <li><a>Other</a></li>
-                            </ul>
+                    class="menu menu-sm dropdown-content z-50 mt-2 w-56 rounded-box nav-menu p-2 shadow-2xl">
+                        <li>
+                            <details>
+                            <summary class="dropdown">@GetText("NavCharacters")</summary>          
+                            <ul class="rounded-box nav-menu p-2 bg-base-100  z-1 shadow-2xl dropdown-content">
+                                    <li>
+                                        <details>
+                                            <summary>Main</summary>
+                                            <ul>
+                                                <li><a>Eren</a></li>
+                                                <li><a>Mikasa</a></li>
+                                                <li><a>Armin</a></li>
+                                                <li><a>Levi</a></li>
+                                                <li><a>Historia</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Titans</summary>
+                                            <ul>
+                                                <li><a>- 9 Titans (9体の巨人) -</a></li>
+                                                <li><a>Founding Titan (始祖の巨人)</a></li>
+                                                <li><a>Attack Titan (進撃の巨人)</a></li>
+                                                <li><a>Armored Titan (鎧の巨人)</a></li>
+                                                <li><a>Beast Titan (獣の巨人)</a></li>
+                                                <li><a>Cart Titan (車力の巨人)</a></li>
+                                                <li><a>Colossal Titan (超大型巨人)</a></li>
+                                                <li><a>Female Titan (女型の巨人)</a></li>
+                                                <li><a>Jaw Titan (顎の巨人)</a></li>
+                                                <li><a>War Hammer Titan (戦槌の巨人)</a></li>
+                                                <li><a>- Others -</a></li>
+                                                <li><a>Sonny and Bean (ソニーとビーン)</a></li>
+                                                <li><a>Wall Titans (壁の巨人)</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>Survey Corps</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Commanders</a></li>
+                                                <li><a>Captains</a></li>
+                                                <li><a>Captains - Erwin Smith</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>The Survey Corps Special Operations Squad</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Levi Ackerman</a></li>
+                                                <li><a>Eld Jinn</a></li>
+                                                <li><a>Oluo Bozado</a></li>
+                                                <li><a>Petra Ral</a></li>
+                                                <li><a>Günther Schultz</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                
+                                    <li>
+                                        <details>
+                                            <summary>Garrison Regiment</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Hannes</a></li>
+                                                <li><a>Dot Pixis</a></li>
+                                                <li><a>Rico Brzenska</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>Military Police Brigade</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Nile Dok</a></li>
+                                                <li><a>Marlowe Freudenberg</a></li>
+                                                <li><a>Hitch Dreyse</a></li>
+                                                <li><a>Boris Feulner</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>The First Interior Squad</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Kenny Ackerman</a></li>
+                                                <li><a>Traute Carven</a></li>
+                                                <li><a>Djel Sanes</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>Ruling Family</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Fritz</a></li>
+                                                <li><a>Rod Reiss</a></li>
+                                                <li><a>Frieda Reiss</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>The Royal Government</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Aurille</a></li>
+                                                <li><a>Deltoff </a></li>
+                                                <li><a>Gerald </a></li>
+                                                <li><a>Roderich </a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>Civilians</summary>
+                                            <ul>
+                                                <li><a>- All Members - </a></li>
+                                                <li><a>Grisha Yeager</a></li>
+                                                <li><a>Carla Yeager </a></li>
+                                                <li><a>Minister Nick </a></li>
+                                                <li><a>Dimo Reeves </a></li>
+                                                <li><a>Kaya </a></li>                                      
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>Marley</summary>
+                                            <ul>
+                                                <li><a>Calvi - The Marshal (元帥)</a></li>
+                                                <li><a>Theo Magath - A commander (隊長)</a></li>  
+                                                <li><a>- Warrior Unit (戦士隊) -</a></li>
+                                                <li><a>Reiner Braun</a></li>
+                                                <li><a>Zeke Yeager</a></li>
+                                                <li><a>Bertolt Hoover</a></li>
+                                                <li><a>Annie Leonhart</a></li>
+                                                <li><a>Marcel Galliard</a></li>
+                                                <li><a>Porco Galliard</a></li>
+                                                <li><a>Pieck Finger</a></li>
+                                                <li><a>Gabi Braun</a></li>
+                                                <li><a>Falco Grice</a></li>
+                                                <li><a>Colt Grice</a></li>                                   
+                                            </ul>
+                                        </details>
+                                    </li>
+ 
+                                    <li>
+                                        <details>
+                                            <summary>Tybur Family</summary>
+                                            <ul>
+                                                <li><a>Willy Tybur</a></li>
+                                                <li><a>Lara Tybur</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li>
+                                        <details>
+                                            <summary>Other</summary>
+                                            <ul>                                                
+                                                <li><a>Yeagerists</a></li>
+                                                <li><a>The Anti-Marleyan Volunteers</a></li>
+                                                <li><a>Underground</a></li>                                                
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
-                        <li><a>@GetText("NavTimeline")</a></li>
-                        <li><a>@GetText("NavSpecies")</a></li>
-                        <li><a>@GetText("NavMedia")</a>
-                            <ul class="p-2 bg-base-100 w-40 z-1">
-                            <li><a>Manga</a></li>
-                            <li><a>Anime</a></li>
-                            <li><a>Games</a></li>
-                            <li><a>Comics</a></li>
-                            <li><a>Movies</a></li>
-                            <li><a>Fan arts</a></li>
-                            <li><a>Books</a></li>
-                            <li><a>Magazines</a></li>
-                            <li><a>Other</a></li>
-                            </ul>
-                        </li>                       
+
+                        <li>
+                            <details>
+                                <summary>@GetText("NavExplore")</summary>                     
+                            <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
+                                    <li><a>Story</a></li>
+                                    <li><a>Timeline</a></li>
+                                    <li><a>Gallery</a></li>
+                                    <li><a>Quotes</a></li>
+                                    <li><a>Statistics</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
+                        <li><a>@GetText("NavLoreMaps")</a></li>
+
+                        <li>
+                            <details>
+                                <summary>@GetText("NavMedia")</summary>
+                            <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
+                                    <li>
+                                        <a href="/about-author">
+                                            About Author Hajime Isayama 諫山 創
+                                        </a>
+                                    </li>
+                                    <li><a>Manga</a></li>
+                                    <li><a>Anime</a></li>
+                                    <li><a>Games</a></li>
+                                    <li><a>Comics</a></li>
+                                    <li><a>Movies</a></li>
+                                    <li><a>Fan arts</a></li>
+                                    <li><a>Books</a></li>
+                                    <li><a>Magazines</a></li>
+                                    <li><a>Other</a></li>
+                                </ul>
+                            </details>
+                        </li>
+
                         <li><a>@GetText("NavNews")</a></li>
+                        
                         <li><a>@GetText("NavFanZone")</a></li>
                     </ul>
                 </div>
-                <a class="text-sm"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
+                <a class="text-sm" href="/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
+        <div class="navbar-center hidden lg:flex dropdown dropdown-open gap-8 ">
+            <ul class="menu menu-horizontal gap-2 px-1 nav-links">
                     <li>
-                        <details>
-                            <summary>@GetText("NavCharacters")</summary>
-                            <ul class="p-2 bg-base-100 w-40 z-1">
-                                <li><a>Titans</a></li>
-                                <li><a>Armies</a></li>
-                                <li><a>Quotes</a></li>
-                                <li><a>Other</a></li>
+                    <details>
+                        <summary tabindex="0">@GetText("NavCharacters")</summary>
+                        <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu  shadow-2xl">
+                                <li>
+                                    <details>
+                                        <summary class="sub-summary">Main</summary>
+                                        <ul>
+                                            <li><a>Eren</a></li>
+                                            <li><a>Mikasa</a></li>
+                                            <li><a>Armin</a></li>
+                                            <li><a>Levi</a></li>
+                                            <li><a>Historia</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Titans</summary>
+                                        <ul>
+                                            <li><a>- 9 Titans (9体の巨人) -</a></li>
+                                            <li><a>Founding Titan (始祖の巨人)</a></li>
+                                            <li><a>Attack Titan (進撃の巨人)</a></li>
+                                            <li><a>Armored Titan (鎧の巨人)</a></li>
+                                            <li><a>Beast Titan (獣の巨人)</a></li>
+                                            <li><a>Cart Titan (車力の巨人)</a></li>
+                                            <li><a>Colossal Titan (超大型巨人)</a></li>
+                                            <li><a>Female Titan (女型の巨人)</a></li>
+                                            <li><a>Jaw Titan (顎の巨人)</a></li>
+                                            <li><a>War Hammer Titan (戦槌の巨人)</a></li>
+                                            <li><a>- Others -</a></li>
+                                            <li><a>Sonny and Bean (ソニーとビーン)</a></li>
+                                            <li><a>Wall Titans (壁の巨人)</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Survey Corps (調査兵団)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Commanders</a></li>
+                                            <li><a>Captains</a></li>
+                                            <li><a>Captains - Erwin Smith</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">The Survey Corps Special Operations Squad (調査兵団特別作戦班)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Levi Ackerman</a></li>
+                                            <li><a>Eld Jinn</a></li>
+                                            <li><a>Oluo Bozado</a></li>
+                                            <li><a>Petra Ral</a></li>
+                                            <li><a>Günther Schultz</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Garrison Regiment (駐屯兵団)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Hannes</a></li>
+                                            <li><a>Dot Pixis</a></li>
+                                            <li><a>Rico Brzenska</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Military Police Brigade (憲兵団)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Nile Dok</a></li>
+                                            <li><a>Marlowe Freudenberg</a></li>
+                                            <li><a>Hitch Dreyse</a></li>
+                                            <li><a>Boris Feulner</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">The First Interior Squad (中央第一憲兵団)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Kenny Ackerman</a></li>
+                                            <li><a>Traute Carven</a></li>
+                                            <li><a>Djel Sanes</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Ruling family (王族)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Fritz</a></li>
+                                            <li><a>Rod Reiss</a></li>
+                                            <li><a>Frieda Reiss</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">The Royal Government (王政府)</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Aurille</a></li>
+                                            <li><a>Deltoff </a></li>
+                                            <li><a>Gerald </a></li>
+                                            <li><a>Roderich </a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Civilians ()</summary>
+                                        <ul>
+                                            <li><a>- All Members - </a></li>
+                                            <li><a>Grisha Yeager</a></li>
+                                            <li><a>Carla Yeager </a></li>
+                                            <li><a>Minister Nick </a></li>
+                                            <li><a>Dimo Reeves </a></li>
+                                            <li><a>Kaya </a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                        <summary class="sub-summary">Marley (マレーリー)</summary>
+                                        <ul>
+                                            <li><a>Calvi - The Marshal (元帥)</a></li>
+                                            <li><a>Theo Magath - A commander (隊長)</a></li>
+                                            <li><a>- Warrior Unit (戦士隊) -</a></li>
+                                            <li><a>Reiner Braun</a></li>
+                                            <li><a>Zeke Yeager</a></li>
+                                            <li><a>Bertolt Hoover</a></li>
+                                            <li><a>Annie Leonhart</a></li>
+                                            <li><a>Marcel Galliard</a></li>
+                                            <li><a>Porco Galliard</a></li>
+                                            <li><a>Pieck Finger</a></li>
+                                            <li><a>Gabi Braun</a></li>
+                                            <li><a>Falco Grice</a></li>
+                                            <li><a>Colt Grice</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Tybur Family</summary>
+                                        <ul>
+                                            <li><a>Willy Tybur</a></li>
+                                            <li><a>Lara Tybur</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                    <summary class="sub-summary">Other</summary>
+                                        <ul>
+                                            <li><a>Yeagerists</a></li>
+                                            <li><a>The Anti-Marleyan Volunteers (反マーレ義勇兵)</a></li>
+                                            <li><a>Underground</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
                             </ul>
                         </details>
                     </li>
-                    <li><a>@GetText("NavTimeline")</a></li>
-                    <li><a>@GetText("NavSpecies")</a></li>
+
                     <li>
                         <details>
-                            <summary>@GetText("NavMedia")</summary>
-                            <ul class="p-2 bg-base-100 w-40 z-1">
+                            <summary tabindex="0">@GetText("NavExplore")</summary>
+                            <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2  nav-menu p-2 shadow-2xl">
+                                <li><a>Story</a></li>
+                                <li><a>Timeline</a></li>
+                                <li><a>Gallery</a></li>
+                                <li><a>Quotes</a></li>
+                                <li><a>Statistics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a>@GetText("NavLoreMaps")</a></li>
+
+                    <li>
+                        <details>
+                            <summary tabindex="0">@GetText("NavMedia")</summary>
+                            <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu p-2 shadow-2xl">
                                 <li><a>Manga</a></li>
                                 <li><a>Anime</a></li>
                                 <li><a>Games</a></li>
@@ -71,17 +451,23 @@
                                 <li><a>Movies</a></li>
                                 <li><a>Fan arts</a></li>
                                 <li><a>Books</a></li>
-                                <li><a>Magazines</a></li>                             
+                                <li><a>Magazines</a></li>
                                 <li><a>Other</a></li>
                             </ul>
                         </details>
                     </li>
 
                     <li><a>@GetText("NavNews")</a></li>
+
                     <li><a>@GetText("NavFanZone")</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
+                <!--1. Search -->
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /> </svg>
+                </button>
+
                 <!-- 2. IMAGE LANGUAGE SWITCHER BUTTON SELECTION MATRIX -->
                 <div class="flex gap-1.5 p-1 rounded-xl scale-90 md:scale-100">
                     <!-- EN Button Trigger -->
@@ -118,39 +504,26 @@
       - Desktop/iPad Landscape: Automatically expands into a side-by-side split grid configuration.
     -->
     <div class="container mx-auto p-4 md:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 flex-grow">
-        
-        <!-- TACTICAL SIDEBAR BOARD -->
-        <aside class="lg:col-span-1 flex flex-col gap-6">
-            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
-                <h2 class="card-title text-sm uppercase tracking-widest text-secondary flex items-center gap-2">
-                    <span>🛡️</span> @GetText("SidebarTitle")
-                </h2>
-                <div class="divider my-2 opacity-10"></div>
-                <p class="text-xs opacity-70 leading-relaxed">
-                    @GetText("SidebarDesc")
-                </p>
-                <div class="card-actions justify-end mt-4">
-                    <button class="btn btn-xs btn-outline btn-error w-full">@GetText("SidebarBtn")</button>
-                </div>
-            </div>
-            
-            <!-- Faction Selection Control Framework -->
-            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
-                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@GetText("FactionTitle")</h3>
-                <p class="text-xs opacity-80 mb-4">@GetText("FactionDesc")</p>
-                <div class="grid grid-cols-2 gap-2">
-                    <button class="btn btn-xs btn-error font-bold">@GetText("FactionBtn1")</button>
-                    <button class="btn btn-xs btn-outline btn-secondary font-bold">@GetText("FactionBtn2")</button>
-                </div>
-            </div>
-        </aside>
-
+ 
         <!-- CHILD ROUTE RENDERING INTERFACE LAYER -->
         <main class="lg:col-span-3 flex flex-col gap-2">
             <CascadingValue Value="@_activeLang">
                 @Body
             </CascadingValue>
         </main>
+
+        <!-- TACTICAL SIDEBAR BOARD -->
+        <aside class="lg:col-span-1 flex flex-col gap-6">
+            <!-- Faction Selection Control Framework -->
+            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
+                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@GetText("FactionTitle")</h3>
+                <p class="text-xs opacity-80 mb-4">@GetText("FactionDesc")</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <button class="btn btn-xs btn-error font-bold">@GetText("FactionBtn1")</button>
+                    <button class="btn btn-xs btn-secondary font-bold">@GetText("FactionBtn2")</button>
+                </div>
+            </div>
+        </aside>
 
     </div>
 
@@ -180,18 +553,20 @@
         ("NavCharacters", "jp") => "キャラクター",
         ("NavCharacters", "zh") => "角色設定",
 
-        ("NavTimeline", "en") => "Tactical Timeline",
-        ("NavTimeline", "jp") => "歷史戰術年表",
-        ("NavTimeline", "zh") => "戰史事件年表",
-
-        ("NavSpecies", "en") => "Titan Lore",
-        ("NavSpecies", "jp") => "九大巨人傳承",
-        ("NavSpecies", "zh") => "巨人設定研究",
+        ("NavLoreMaps", "en") => "Lore & Maps",
+        ("NavLoreMaps", "jp") => "世界觀與地圖",
+        ("NavLoreMaps", "zh") => "世界觀與地圖",
             
+            
+        ("NavExplore", "en") => "Explore",
+        ("NavExplore", "jp") => "探索",
+        ("NavExplore", "zh") => "探索",
+
         ("NavNews", "en") => "News",
         ("NavNews", "jp") => "ニュース",
         ("NavNews", "zh") => "新聞",
-    
+
+
         ("NavMedia", "en") => "Media",
         ("NavMedia", "jp") => "メディア",
         ("NavMedia", "zh") => "媒體",
@@ -228,9 +603,9 @@
         ("FactionBtn2", "jp") => "救世連合軍",
         ("FactionBtn2", "zh") => "救世聯軍",
 
-        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Sunset Theme.",
-        ("FooterCredit", "jp") => "Blazor、Tailwind、およびDaisyUIサンセットテーマで構築。",
-        ("FooterCredit", "zh") => "基於 Blazor、Tailwind CSS 及 DaisyUI Sunset 主題純前端構建。",
+        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
+        ("FooterCredit", "jp") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
+        ("FooterCredit", "zh") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
 
         _ => ""
     };

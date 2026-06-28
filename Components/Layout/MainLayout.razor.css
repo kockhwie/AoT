@@ -24,8 +24,155 @@
     width: auto;
     object-fit: contain;
 }
+
+
+
+.nav-menu {
+    background: rgba(29, 40, 77, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0.3rem;
+    backdrop-filter: blur(6px);
+}
+
+.nav-menu-toggle {
+    border: 1px solid rgba(63, 214, 180, 0.58);
+    background: rgba(29, 40, 77, 0.95);
+    color: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+    backdrop-filter: blur(6px);
+}
+
+.nav-menu-toggle:hover,
+.nav-menu-toggle:focus-visible {
+    background: rgba(29, 40, 77, 0.95);
+    border-color: rgba(29, 40, 77, 0.95);
+    color: rgba(29, 40, 77, 0.95);
+}
+
+.nav-links {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.nav-links li > a,
+.nav-links li > details > summary,
+.nav-menu li > a {
+    border-radius: 0.55rem;
+}
+
+.nav-links li > a:hover,
+.nav-links li > details > summary:hover,
+.nav-links li > a:focus-visible,
+.nav-links li > details > summary:focus-visible,
+.nav-menu li > a:hover,
+.nav-menu li > a:focus-visible {
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, lightyellow 30%, transparent);
+    border-radius: 0.55rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.nav-links li > details > summary {
+    list-style: none;
+    padding-inline: 0.55rem;
+    padding-block: 0.3rem;
+    font-size: 1.05rem;
+}
+
+.sub-summary {     
+    padding-inline: 0.55rem !important;
+    padding-block: 0.15rem !important;
+    font-size: 0.85rem !important; 
+}
+ 
+/* Menu button text & sub menu title */
+.nav-links li > details[open] > summary {
+    background: rgba(29, 40, 77, 0.95);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, #fff 12%, transparent);
+    color: #f8fffb;
+}
+
+.nav-links li > details > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.nav-login {
+    color: rgba(255, 255, 255, 0.92);
+    border-color: rgba(42, 201, 161, 0.34);
+    background: rgba(255, 255, 255, 0.02);
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+    /*font-size: 0.98rem;*/
+}
+
+.nav-join {
+    border: 0;
+    color: #09110f;
+    background: linear-gradient(90deg, #3fd6b4 0%, #f8bf24 100%);
+    box-shadow: 0 10px 24px rgba(248, 191, 36, 0.16);
+}
+
+.nav-login:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(63, 214, 180, 0.56);
+    color: #ffffff;
+}
+
+.nav-join:hover {
+    filter: brightness(1.03);
+}
+
+.nav-links li > a {
+    padding-inline: 0.35rem;
+    padding-block: 0.15rem;
+    font-size: 1.05rem;
+}
+
+.nav-menu li > a {
+    padding-inline: 0.35rem;
+    padding-block: 0.15rem;
+    margin: 0.05rem 0;
+    font-size: 0.90rem;
+}
+
+.nav-menu details > summary {
+    padding-inline: 0.35rem;
+    padding-block: 0.15rem;
+    border-radius: 0.55rem;
+    list-style: none;
+    font-size: 0.90rem;
+}
+
+ 
+.nav-menu details[open] > summary {
+    background: color-mix(in srgb, #fff 14%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, rgba(255, 255, 255, 0.92) 22%, transparent);
+    color: #f8fffb;
+}
+
+.nav-menu details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-menu details ul a {
+    padding-inline: 0.7rem;
+    padding-block: 0.10rem;
+    font-size: 0.90rem;
+}
+
+
 @media (min-width: 1200px) {
     .navbar-start {
         margin-left: 10px;
+    }
+
+    .nav-menu details > summary {
+        padding-inline: 0.35rem;
+        padding-block: 0.15rem;
+        border-radius: 0.55rem;
+        list-style: none;
+        font-size: 1.25rem;
+        
     }
 }
