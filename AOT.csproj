@@ -7,9 +7,17 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
  
- 
+
   <ItemGroup>
     <None Include="wwwroot\favicon.ico" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.9" />
+  </ItemGroup>
+ 
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppStrings.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

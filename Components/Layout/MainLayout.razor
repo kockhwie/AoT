@@ -1,9 +1,9 @@
-﻿@inherits LayoutComponentBase
-
+@inherits LayoutComponentBase
+@inject AppLocalizationService LocalizationService
 
 <!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
 <div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
-     
+
 
     <!-- 1. TOP NAVIGATION BAR (Caters seamlessly to iPhone, iPad, and Desktop viewports) -->
     <div class="navbar bg-base-100 shadow-sm">
@@ -15,181 +15,199 @@
                     <ul tabindex="-1"
                     class="menu menu-sm dropdown-content z-50 mt-2 w-56 rounded-box nav-menu p-2 shadow-2xl">
                         <li>
-                            <details>
-                            <summary class="dropdown">@GetText("NavCharacters")</summary>          
+                            <details name="nav-menu-mobile">
+                            <summary class="dropdown">@LocalizationService.NavCharacters</summary>
                             <ul class="rounded-box nav-menu p-2 bg-base-100  z-1 shadow-2xl dropdown-content">
                                     <li>
-                                        <details>
-                                            <summary>Main</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Main")</summary>
                                             <ul>
-                                                <li><a>Eren</a></li>
-                                                <li><a>Mikasa</a></li>
-                                                <li><a>Armin</a></li>
-                                                <li><a>Levi</a></li>
-                                                <li><a>Historia</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Eren")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Mikasa")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Armin")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Historia")</a></li>
                                             </ul>
                                         </details>
                                     </li>
                                     <li>
-                                        <details>
-                                            <summary>Titans</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Titans")</summary>
                                             <ul>
-                                                <li><a>- 9 Titans (9体の巨人) -</a></li>
-                                                <li><a>Founding Titan (始祖の巨人)</a></li>
-                                                <li><a>Attack Titan (進撃の巨人)</a></li>
-                                                <li><a>Armored Titan (鎧の巨人)</a></li>
-                                                <li><a>Beast Titan (獣の巨人)</a></li>
-                                                <li><a>Cart Titan (車力の巨人)</a></li>
-                                                <li><a>Colossal Titan (超大型巨人)</a></li>
-                                                <li><a>Female Titan (女型の巨人)</a></li>
-                                                <li><a>Jaw Titan (顎の巨人)</a></li>
-                                                <li><a>War Hammer Titan (戦槌の巨人)</a></li>
-                                                <li><a>- Others -</a></li>
-                                                <li><a>Sonny and Bean (ソニーとビーン)</a></li>
-                                                <li><a>Wall Titans (壁の巨人)</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_9Titans9")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_FoundingTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AttackTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_ArmoredTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_BeastTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_CartTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_ColossalTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_FemaleTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_JawTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_WarHammerTitan")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Others")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_SonnyandBean")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_WallTitans")</a></li>
                                             </ul>
                                         </details>
                                     </li>
                                     <li>
-                                        <details>
-                                            <summary>Survey Corps</summary>
-                                            <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Commanders</a></li>
-                                                <li><a>Captains</a></li>
-                                                <li><a>Captains - Erwin Smith</a></li>
-                                            </ul>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_SurveyCorps")</summary>
+                                        <ul>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Commanders")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ErwinSmith")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Armin")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_HangeZoe")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_SectionCommander")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_HangeZoe")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_ErwinSmith")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_Captains")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
+                                        </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>The Survey Corps Special Operations Squad</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_TheSurveyCorpsSpecialOperation")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Levi Ackerman</a></li>
-                                                <li><a>Eld Jinn</a></li>
-                                                <li><a>Oluo Bozado</a></li>
-                                                <li><a>Petra Ral</a></li>
-                                                <li><a>Günther Schultz</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_EldJinn")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_OluoBozado")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_PetraRal")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_GntherSchultz")</a></li>
                                             </ul>
                                         </details>
                                     </li>
                                 
                                     <li>
-                                        <details>
-                                            <summary>Garrison Regiment</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_GarrisonRegiment")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Hannes</a></li>
-                                                <li><a>Dot Pixis</a></li>
-                                                <li><a>Rico Brzenska</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Hannes")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_DotPixis")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_RicoBrzenska")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>Military Police Brigade</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_MilitaryPoliceBrigade")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Nile Dok</a></li>
-                                                <li><a>Marlowe Freudenberg</a></li>
-                                                <li><a>Hitch Dreyse</a></li>
-                                                <li><a>Boris Feulner</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_NileDok")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_MarloweFreudenberg")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_HitchDreyse")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_BorisFeulner")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>The First Interior Squad</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_TheFirstInteriorSquad")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Kenny Ackerman</a></li>
-                                                <li><a>Traute Carven</a></li>
-                                                <li><a>Djel Sanes</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_KennyAckerman")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_TrauteCarven")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_DjelSanes")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>Ruling Family</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_RulingFamily")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Fritz</a></li>
-                                                <li><a>Rod Reiss</a></li>
-                                                <li><a>Frieda Reiss</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Fritz")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_RodReiss")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_FriedaReiss")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>The Royal Government</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_TheRoyalGovernment")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Aurille</a></li>
-                                                <li><a>Deltoff </a></li>
-                                                <li><a>Gerald </a></li>
-                                                <li><a>Roderich </a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Aurille")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Deltoff")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Gerald")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Roderich")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>Civilians</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Civilians")</summary>
                                             <ul>
-                                                <li><a>- All Members - </a></li>
-                                                <li><a>Grisha Yeager</a></li>
-                                                <li><a>Carla Yeager </a></li>
-                                                <li><a>Minister Nick </a></li>
-                                                <li><a>Dimo Reeves </a></li>
-                                                <li><a>Kaya </a></li>                                      
+                                                <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_GrishaYeager")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_CarlaYeager")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_MinisterNick")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_DimoReeves")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Kaya")</a></li>                                      
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>Marley</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Marley")</summary>
                                             <ul>
-                                                <li><a>Calvi - The Marshal (元帥)</a></li>
-                                                <li><a>Theo Magath - A commander (隊長)</a></li>  
-                                                <li><a>- Warrior Unit (戦士隊) -</a></li>
-                                                <li><a>Reiner Braun</a></li>
-                                                <li><a>Zeke Yeager</a></li>
-                                                <li><a>Bertolt Hoover</a></li>
-                                                <li><a>Annie Leonhart</a></li>
-                                                <li><a>Marcel Galliard</a></li>
-                                                <li><a>Porco Galliard</a></li>
-                                                <li><a>Pieck Finger</a></li>
-                                                <li><a>Gabi Braun</a></li>
-                                                <li><a>Falco Grice</a></li>
-                                                <li><a>Colt Grice</a></li>                                   
+                                                <li><a>@LocalizationService.GetString("Nav_CalviTheMarshal")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_TheoMagathAcommander")</a></li>  
+                                                <li><a>@LocalizationService.GetString("Nav_WarriorUnit")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_ReinerBraun")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_ZekeYeager")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_BertoltHoover")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_AnnieLeonhart")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_MarcelGalliard")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_PorcoGalliard")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_PieckFinger")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_GabiBraun")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_FalcoGrice")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_ColtGrice")</a></li>                                   
                                             </ul>
                                         </details>
                                     </li>
  
                                     <li>
-                                        <details>
-                                            <summary>Tybur Family</summary>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_TyburFamily")</summary>
                                             <ul>
-                                                <li><a>Willy Tybur</a></li>
-                                                <li><a>Lara Tybur</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_WillyTybur")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_LaraTybur")</a></li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                     <li>
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Yeagerists")</summary>
+                                            <ul>
+                                                <li><a>@LocalizationService.GetString("Nav_Eren")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_FlochForster")</a></li>
                                             </ul>
                                         </details>
                                     </li>
 
                                     <li>
-                                        <details>
-                                            <summary>Other</summary>
-                                            <ul>                                                
-                                                <li><a>Yeagerists</a></li>
-                                                <li><a>The Anti-Marleyan Volunteers</a></li>
-                                                <li><a>Underground</a></li>                                                
+                                        <details name="nav-sub-mobile">
+                                            <summary>@LocalizationService.GetString("Nav_Other")</summary>
+                                            <ul>
+                                                <li><a>@LocalizationService.GetString("Nav_TheAntiMarleyanVolunteers")</a></li>
+                                                <li><a>@LocalizationService.GetString("Nav_Underground")</a></li>                                                
                                             </ul>
                                         </details>
                                     </li>
@@ -198,45 +216,43 @@
                         </li>
 
                         <li>
-                            <details>
-                                <summary>@GetText("NavExplore")</summary>                     
+                            <details name="nav-menu-mobile">
+                                <summary>@LocalizationService.NavExplore</summary>                     
                             <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
-                                    <li><a>Story</a></li>
-                                    <li><a>Timeline</a></li>
-                                    <li><a>Gallery</a></li>
-                                    <li><a>Quotes</a></li>
-                                    <li><a>Statistics</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Story")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Timeline")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
                                 </ul>
                             </details>
                         </li>
 
-                        <li><a>@GetText("NavLoreMaps")</a></li>
+                        <li><a>@LocalizationService.NavLoreMaps</a></li>
 
                         <li>
-                            <details>
-                                <summary>@GetText("NavMedia")</summary>
+                            <details name="nav-menu-mobile">
+                                <summary>@LocalizationService.NavMedia</summary>
                             <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
                                     <li>
-                                        <a href="/about-author">
-                                            About Author Hajime Isayama 諫山 創
-                                        </a>
+                                        <a href="/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
                                     </li>
-                                    <li><a>Manga</a></li>
-                                    <li><a>Anime</a></li>
-                                    <li><a>Games</a></li>
-                                    <li><a>Comics</a></li>
-                                    <li><a>Movies</a></li>
-                                    <li><a>Fan arts</a></li>
-                                    <li><a>Books</a></li>
-                                    <li><a>Magazines</a></li>
-                                    <li><a>Other</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Manga")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Anime")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Games")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Movies")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Fanarts")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Books")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Magazines")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Other")</a></li>
                                 </ul>
                             </details>
                         </li>
 
-                        <li><a>@GetText("NavNews")</a></li>
-                        
-                        <li><a>@GetText("NavFanZone")</a></li>
+                        <li><a>@LocalizationService.NavNews</a></li>
+
+                        <li><a>@LocalizationService.NavFanZone</a></li>
                     </ul>
                 </div>
                 <a class="text-sm" href="/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
@@ -244,181 +260,201 @@
         <div class="navbar-center hidden lg:flex dropdown dropdown-open gap-8 ">
             <ul class="menu menu-horizontal gap-2 px-1 nav-links">
                     <li>
-                    <details>
-                        <summary tabindex="0">@GetText("NavCharacters")</summary>
+                    <details name="nav-menu-desktop">
+                        <summary tabindex="0">@LocalizationService.NavCharacters</summary>
                         <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu  shadow-2xl">
                                 <li>
-                                    <details>
-                                        <summary class="sub-summary">Main</summary>
+                                    <details name="nav-sub-desktop">
+                                        <summary class="sub-summary">@LocalizationService.GetString("Nav_Main")</summary>
                                         <ul>
-                                            <li><a>Eren</a></li>
-                                            <li><a>Mikasa</a></li>
-                                            <li><a>Armin</a></li>
-                                            <li><a>Levi</a></li>
-                                            <li><a>Historia</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Eren")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Mikasa")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Armin")</a></li>
+                                        <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Historia")</a></li>
                                         </ul>
                                     </details>
                                 </li>
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Titans</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_Titans")</summary>
                                         <ul>
-                                            <li><a>- 9 Titans (9体の巨人) -</a></li>
-                                            <li><a>Founding Titan (始祖の巨人)</a></li>
-                                            <li><a>Attack Titan (進撃の巨人)</a></li>
-                                            <li><a>Armored Titan (鎧の巨人)</a></li>
-                                            <li><a>Beast Titan (獣の巨人)</a></li>
-                                            <li><a>Cart Titan (車力の巨人)</a></li>
-                                            <li><a>Colossal Titan (超大型巨人)</a></li>
-                                            <li><a>Female Titan (女型の巨人)</a></li>
-                                            <li><a>Jaw Titan (顎の巨人)</a></li>
-                                            <li><a>War Hammer Titan (戦槌の巨人)</a></li>
-                                            <li><a>- Others -</a></li>
-                                            <li><a>Sonny and Bean (ソニーとビーン)</a></li>
-                                            <li><a>Wall Titans (壁の巨人)</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_9Titans9")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_FoundingTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AttackTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ArmoredTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_BeastTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_CartTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ColossalTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_FemaleTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_JawTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_WarHammerTitan")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Others")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_SonnyandBean")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_WallTitans")</a></li>
                                         </ul>
                                     </details>
                                 </li>
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Survey Corps (調査兵団)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_SurveyCorps")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Commanders</a></li>
-                                            <li><a>Captains</a></li>
-                                            <li><a>Captains - Erwin Smith</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Commanders")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ErwinSmith")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Armin")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_HangeZoe")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_SectionCommander")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_HangeZoe")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_ErwinSmith")</a></li>
+
+                                            <li><a>@LocalizationService.GetString("Nav_Captains")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">The Survey Corps Special Operations Squad (調査兵団特別作戦班)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_TheSurveyCorpsSpecialOperation")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Levi Ackerman</a></li>
-                                            <li><a>Eld Jinn</a></li>
-                                            <li><a>Oluo Bozado</a></li>
-                                            <li><a>Petra Ral</a></li>
-                                            <li><a>Günther Schultz</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_LeviAckerman")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_EldJinn")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_OluoBozado")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_PetraRal")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_GntherSchultz")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Garrison Regiment (駐屯兵団)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_GarrisonRegiment")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Hannes</a></li>
-                                            <li><a>Dot Pixis</a></li>
-                                            <li><a>Rico Brzenska</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Hannes")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_DotPixis")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_RicoBrzenska")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Military Police Brigade (憲兵団)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_MilitaryPoliceBrigade")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Nile Dok</a></li>
-                                            <li><a>Marlowe Freudenberg</a></li>
-                                            <li><a>Hitch Dreyse</a></li>
-                                            <li><a>Boris Feulner</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_NileDok")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_MarloweFreudenberg")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_HitchDreyse")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_BorisFeulner")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">The First Interior Squad (中央第一憲兵団)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_TheFirstInteriorSquad")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Kenny Ackerman</a></li>
-                                            <li><a>Traute Carven</a></li>
-                                            <li><a>Djel Sanes</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_KennyAckerman")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_TrauteCarven")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_DjelSanes")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Ruling family (王族)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_RulingFamily")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Fritz</a></li>
-                                            <li><a>Rod Reiss</a></li>
-                                            <li><a>Frieda Reiss</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Fritz")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_RodReiss")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_FriedaReiss")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">The Royal Government (王政府)</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_TheRoyalGovernment")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Aurille</a></li>
-                                            <li><a>Deltoff </a></li>
-                                            <li><a>Gerald </a></li>
-                                            <li><a>Roderich </a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Aurille")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Deltoff")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Gerald")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Roderich")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Civilians ()</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_Civilians")</summary>
                                         <ul>
-                                            <li><a>- All Members - </a></li>
-                                            <li><a>Grisha Yeager</a></li>
-                                            <li><a>Carla Yeager </a></li>
-                                            <li><a>Minister Nick </a></li>
-                                            <li><a>Dimo Reeves </a></li>
-                                            <li><a>Kaya </a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AllMembers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_GrishaYeager")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_CarlaYeager")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_MinisterNick")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_DimoReeves")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Kaya")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                        <summary class="sub-summary">Marley (マレーリー)</summary>
+                                    <details name="nav-sub-desktop">
+                                        <summary class="sub-summary">@LocalizationService.GetString("Nav_Marley")</summary>
                                         <ul>
-                                            <li><a>Calvi - The Marshal (元帥)</a></li>
-                                            <li><a>Theo Magath - A commander (隊長)</a></li>
-                                            <li><a>- Warrior Unit (戦士隊) -</a></li>
-                                            <li><a>Reiner Braun</a></li>
-                                            <li><a>Zeke Yeager</a></li>
-                                            <li><a>Bertolt Hoover</a></li>
-                                            <li><a>Annie Leonhart</a></li>
-                                            <li><a>Marcel Galliard</a></li>
-                                            <li><a>Porco Galliard</a></li>
-                                            <li><a>Pieck Finger</a></li>
-                                            <li><a>Gabi Braun</a></li>
-                                            <li><a>Falco Grice</a></li>
-                                            <li><a>Colt Grice</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_CalviTheMarshal")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_TheoMagathAcommander")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_WarriorUnit")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ReinerBraun")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ZekeYeager")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_BertoltHoover")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_AnnieLeonhart")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_MarcelGalliard")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_PorcoGalliard")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_PieckFinger")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_GabiBraun")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_FalcoGrice")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_ColtGrice")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Tybur Family</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_TyburFamily")</summary>
                                         <ul>
-                                            <li><a>Willy Tybur</a></li>
-                                            <li><a>Lara Tybur</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_WillyTybur")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_LaraTybur")</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                
+                                <li>
+                                <details name="nav-sub-desktop">
+                                        <summary>@LocalizationService.GetString("Nav_Yeagerists")</summary>
+                                        <ul>
+                                            <li><a>@LocalizationService.GetString("Nav_Eren")</a></li>
+                                        <li><a>@LocalizationService.GetString("Nav_FlochForster")</a></li>
                                         </ul>
                                     </details>
                                 </li>
 
+
+
                                 <li>
-                                    <details>
-                                    <summary class="sub-summary">Other</summary>
+                                    <details name="nav-sub-desktop">
+                                    <summary class="sub-summary">@LocalizationService.GetString("Nav_Other")</summary>
                                         <ul>
-                                            <li><a>Yeagerists</a></li>
-                                            <li><a>The Anti-Marleyan Volunteers (反マーレ義勇兵)</a></li>
-                                            <li><a>Underground</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_TheAntiMarleyanVolunteers")</a></li>
+                                            <li><a>@LocalizationService.GetString("Nav_Underground")</a></li>
                                         </ul>
                                     </details>
                                 </li>
@@ -427,39 +463,39 @@
                     </li>
 
                     <li>
-                        <details>
-                            <summary tabindex="0">@GetText("NavExplore")</summary>
+                        <details name="nav-menu-desktop">
+                            <summary tabindex="0">@LocalizationService.NavExplore</summary>
                             <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2  nav-menu p-2 shadow-2xl">
-                                <li><a>Story</a></li>
-                                <li><a>Timeline</a></li>
-                                <li><a>Gallery</a></li>
-                                <li><a>Quotes</a></li>
-                                <li><a>Statistics</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Story")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Timeline")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
                             </ul>
                         </details>
                     </li>
-                    <li><a>@GetText("NavLoreMaps")</a></li>
+                    <li><a>@LocalizationService.NavLoreMaps</a></li>
 
                     <li>
-                        <details>
-                            <summary tabindex="0">@GetText("NavMedia")</summary>
+                        <details name="nav-menu-desktop">
+                            <summary tabindex="0">@LocalizationService.NavMedia</summary>
                             <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu p-2 shadow-2xl">
-                                <li><a>Manga</a></li>
-                                <li><a>Anime</a></li>
-                                <li><a>Games</a></li>
-                                <li><a>Comics</a></li>
-                                <li><a>Movies</a></li>
-                                <li><a>Fan arts</a></li>
-                                <li><a>Books</a></li>
-                                <li><a>Magazines</a></li>
-                                <li><a>Other</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Manga")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Anime")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Games")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Movies")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Fanarts")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Books")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Magazines")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Other")</a></li>
                             </ul>
                         </details>
                     </li>
 
-                    <li><a>@GetText("NavNews")</a></li>
+                    <li><a>@LocalizationService.NavNews</a></li>
 
-                    <li><a>@GetText("NavFanZone")</a></li>
+                    <li><a>@LocalizationService.NavFanZone</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -516,11 +552,11 @@
         <aside class="lg:col-span-1 flex flex-col gap-6">
             <!-- Faction Selection Control Framework -->
             <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
-                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@GetText("FactionTitle")</h3>
-                <p class="text-xs opacity-80 mb-4">@GetText("FactionDesc")</p>
+                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@LocalizationService.FactionTitle</h3>
+                <p class="text-xs opacity-80 mb-4">@LocalizationService.FactionDesc</p>
                 <div class="grid grid-cols-2 gap-2">
-                    <button class="btn btn-xs btn-error font-bold">@GetText("FactionBtn1")</button>
-                    <button class="btn btn-xs btn-secondary font-bold">@GetText("FactionBtn2")</button>
+                    <button class="btn btn-xs btn-error font-bold">@LocalizationService.FactionBtn1</button>
+                    <button class="btn btn-xs btn-secondary font-bold">@LocalizationService.FactionBtn2</button>
                 </div>
             </div>
         </aside>
@@ -531,7 +567,7 @@
     <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs border-t border-neutral">
         <aside class="flex flex-col gap-1.5">
             <p class="opacity-60 font-sans tracking-wide">「什麼都無法捨棄的人，什麼也改變不了。」</p>
-            <p class="text-primary font-bold">@GetText("FooterCredit")</p>
+            <p class="text-primary font-bold">@LocalizationService.FooterCredit</p>
         </aside>
     </footer>
 
@@ -541,74 +577,26 @@
     // FIXED DEFAULT LOCALIZATION VALUE: Alter this key variable string parameter to switch fallback profiles natively.
     private string _activeLang = "zh";
 
+    protected override void OnInitialized()
+    {
+        LocalizationService.ActiveLang = _activeLang;
+        string cultureCode = _activeLang == "jp" ? "ja" : _activeLang;
+        var cultureInfo = new System.Globalization.CultureInfo(cultureCode);
+        System.Globalization.CultureInfo.CurrentCulture = cultureInfo;
+        System.Globalization.CultureInfo.CurrentUICulture = cultureInfo;
+    }
+
     private void ChangeLanguage(string targetLang)
     {
         _activeLang = targetLang;
+        LocalizationService.ActiveLang = targetLang;
+        // Update the culture context when language changes
+        string cultureCode = targetLang == "jp" ? "ja" : targetLang;
+        var cultureInfo = new System.Globalization.CultureInfo(cultureCode);
+        System.Globalization.CultureInfo.CurrentCulture = cultureInfo;
+        System.Globalization.CultureInfo.CurrentUICulture = cultureInfo;
         StateHasChanged(); 
     }
-
-    private string GetText(string key) => (key, _activeLang) switch
-    {
-        ("NavCharacters", "en") => "Characters",
-        ("NavCharacters", "jp") => "キャラクター",
-        ("NavCharacters", "zh") => "角色設定",
-
-        ("NavLoreMaps", "en") => "Lore & Maps",
-        ("NavLoreMaps", "jp") => "世界觀與地圖",
-        ("NavLoreMaps", "zh") => "世界觀與地圖",
-            
-            
-        ("NavExplore", "en") => "Explore",
-        ("NavExplore", "jp") => "探索",
-        ("NavExplore", "zh") => "探索",
-
-        ("NavNews", "en") => "News",
-        ("NavNews", "jp") => "ニュース",
-        ("NavNews", "zh") => "新聞",
-
-
-        ("NavMedia", "en") => "Media",
-        ("NavMedia", "jp") => "メディア",
-        ("NavMedia", "zh") => "媒體",
-
-        ("NavFanZone", "en") => "Fan Zone",
-        ("NavFanZone", "jp") => "ファンゾーン",
-        ("NavFanZone", "zh") => "粉絲專區",
-
-        ("SidebarTitle", "en") => "System Terminal",
-        ("SidebarTitle", "jp") => "作戰本部軍事終端",
-        ("SidebarTitle", "zh") => "帕拉迪島防衛終端",
-
-        ("SidebarDesc", "en") => "Authorized connection online. Accessing cryptographic communication records and wall structural safety data paths.",
-        ("SidebarDesc", "jp") => "認証接続完了。暗号化された通信記録および壁内の構造安全データパスにアクセスしています。",
-        ("SidebarDesc", "zh") => "認證連線已建立。正在調閱牆內調查兵團加密戰術通訊紀錄以及城牆防禦安全數據通道。",
-
-        ("SidebarBtn", "en") => "Sync Database",
-        ("SidebarBtn", "jp") => "同期資料庫",
-        ("SidebarBtn", "zh") => "同步中央數據庫",
-
-        ("FactionTitle", "en") => "Loyalty Alignment",
-        ("FactionTitle", "jp") => "派閥の忠誠選択",
-        ("FactionTitle", "zh") => "陣營派系抉擇",
-
-        ("FactionDesc", "en") => "Where do your priorities reside in the final conflict?",
-        ("FactionDesc", "jp") => "最終決戦において、あなたの忠誠はどこにありますか？",
-        ("FactionDesc", "zh") => "當終局地鳴與滅世之戰爆發，你的內心將歸屬於哪一方的正義？",
-
-        ("FactionBtn1", "en") => "Jaegerists",
-        ("FactionBtn1", "jp") => "イェーガー派",
-        ("FactionBtn1", "zh") => "葉卡派",
-
-        ("FactionBtn2", "en") => "Alliance",
-        ("FactionBtn2", "jp") => "救世連合軍",
-        ("FactionBtn2", "zh") => "救世聯軍",
-
-        ("FooterCredit", "en") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
-        ("FooterCredit", "jp") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
-        ("FooterCredit", "zh") => "Built with Blazor, Tailwind, & DaisyUI Theme.",
-
-        _ => ""
-    };
 }
 
 

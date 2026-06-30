@@ -1,5 +1,5 @@
 @page "/"
-
+@inject AppLocalizationService LocalizationService
 <!-- 区域 1：顶部核心巨幕区 -->
 <div class="aot-hero">
     <div>
@@ -209,7 +209,7 @@
     private readonly List<TitanModel> _titanDatabase = new()
     {
         new TitanModel {
-            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "soon-titan-badge.png",
+            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "founding-titan-badge.png",
             Power = 100, Speed = 60, Armor = 100
         },
         new TitanModel {
@@ -233,15 +233,15 @@
             Power = 75, Speed = 100, Armor = 75
         },
         new TitanModel {
-            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "soon-titan-badge.png",
+            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "cart-titan-badge.png",
             Power = 50, Speed = 85, Armor = 60
         },
         new TitanModel {
-            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "soon-titan-badge.png",
+            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "warhammer-titan-badge.png",
             Power = 95, Speed = 75, Armor = 95
         },
         new TitanModel {
-            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "soon-titan-badge.png",
+            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "attack-titan-badge.png",
             Power = 85, Speed = 85, Armor = 80
         }
     };

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnGallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="BtnIntel" xml:space="preserve">
+    <value>Intel</value>
+  </data>
+  <data name="FactionBtn1" xml:space="preserve">
+    <value>Marleyan Reform Faction</value>
+  </data>
+  <data name="FactionBtn2" xml:space="preserve">
+    <value>Paradis Alliance Faction</value>
+  </data>
+  <data name="FactionDesc" xml:space="preserve">
+    <value>Where do your priorities reside in the final conflict?</value>
+  </data>
+  <data name="FactionTitle" xml:space="preserve">
+    <value>Loyalty Alignment</value>
+  </data>
+  <data name="FooterCredit" xml:space="preserve">
+    <value>© 2024 Created by kockhwie. All rights reserved.</value>
+  </data>
+  <data name="HeroDesc" xml:space="preserve">
+    <value>Discover the elite warriors of Paradis and Marley in this comprehensive database. Track their abilities, affiliations, and crucial combat data in the ongoing conflict.</value>
+  </data>
+  <data name="HeroTag" xml:space="preserve">
+    <value>SURVEY CORPS INTEL</value>
+  </data>
+  <data name="HeroTitle" xml:space="preserve">
+    <value>Attack on Titan Character Database</value>
+  </data>
+  <data name="NavCharacters" xml:space="preserve">
+    <value>Characters</value>
+  </data>
+  <data name="NavExplore" xml:space="preserve">
+    <value>Explore</value>
+  </data>
+  <data name="NavFanZone" xml:space="preserve">
+    <value>Fan Zone</value>
+  </data>
+  <data name="NavLoreMaps" xml:space="preserve">
+    <value>Lore &amp; Maps</value>
+  </data>
+  <data name="NavMedia" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="NavNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="SectionTitle" xml:space="preserve">
+    <value>Survey Corps Intelligence Division</value>
+  </data>
+  <data name="SidebarBtn" xml:space="preserve">
+    <value>Sync Database</value>
+  </data>
+  <data name="SidebarDesc" xml:space="preserve">
+    <value>Authorized connection online. Accessing cryptographic communication records and wall structural safety data paths.</value>
+  </data>
+  <data name="SidebarTitle" xml:space="preserve">
+    <value>System Terminal</value>
+  </data>
+  <data name="Nav_Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Nav_Titans" xml:space="preserve">
+    <value>Titans</value>
+  </data>
+  <data name="Nav_SurveyCorps" xml:space="preserve">
+    <value>Survey Corps</value>
+  </data>
+  <data name="Nav_TheSurveyCorpsSpecialOperation" xml:space="preserve">
+    <value>The Survey Corps Special Operations Squad</value>
+  </data>
+  <data name="Nav_GarrisonRegiment" xml:space="preserve">
+    <value>Garrison Regiment</value>
+  </data>
+  <data name="Nav_MilitaryPoliceBrigade" xml:space="preserve">
+    <value>Military Police Brigade</value>
+  </data>
+  <data name="Nav_TheFirstInteriorSquad" xml:space="preserve">
+    <value>The First Interior Squad</value>
+  </data>
+  <data name="Nav_RulingFamily" xml:space="preserve">
+    <value>Ruling Family</value>
+  </data>
+  <data name="Nav_TheRoyalGovernment" xml:space="preserve">
+    <value>The Royal Government </value>
+  </data>
+  <data name="Nav_Civilians" xml:space="preserve">
+    <value>Civilians</value>
+  </data>
+  <data name="Nav_Marley" xml:space="preserve">
+    <value>Marley</value>
+  </data>
+  <data name="Nav_TyburFamily" xml:space="preserve">
+    <value>Tybur Family</value>
+  </data>
+  <data name="Nav_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Nav_Eren" xml:space="preserve">
+    <value>Eren Yeager</value>
+  </data>
+  <data name="Nav_Mikasa" xml:space="preserve">
+    <value>Mikasa Ackerman</value>
+  </data>
+  <data name="Nav_Armin" xml:space="preserve">
+    <value>Armin</value>
+  </data>
+  <data name="Nav_Historia" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="Nav_9Titans9" xml:space="preserve">
+    <value>- 9 Titans -</value>
+  </data>
+  <data name="Nav_FoundingTitan" xml:space="preserve">
+    <value>Founding Titan</value>
+  </data>
+  <data name="Nav_AttackTitan" xml:space="preserve">
+    <value>Attack Titan</value>
+  </data>
+  <data name="Nav_ArmoredTitan" xml:space="preserve">
+    <value>Armored Titan</value>
+  </data>
+  <data name="Nav_BeastTitan" xml:space="preserve">
+    <value>Beast Titan</value>
+  </data>
+  <data name="Nav_CartTitan" xml:space="preserve">
+    <value>Cart Titan</value>
+  </data>
+  <data name="Nav_ColossalTitan" xml:space="preserve">
+    <value>Colossal Titan</value>
+  </data>
+  <data name="Nav_FemaleTitan" xml:space="preserve">
+    <value>Female Titan</value>
+  </data>
+  <data name="Nav_JawTitan" xml:space="preserve">
+    <value>Jaw Titan</value>
+  </data>
+  <data name="Nav_WarHammerTitan" xml:space="preserve">
+    <value>War Hammer Titan</value>
+  </data>
+  <data name="Nav_Others" xml:space="preserve">
+    <value>- Others -</value>
+  </data>
+  <data name="Nav_SonnyandBean" xml:space="preserve">
+    <value>Sonny and Bean</value>
+  </data>
+  <data name="Nav_WallTitans" xml:space="preserve">
+    <value>Wall Titans</value>
+  </data>
+  <data name="Nav_AllMembers" xml:space="preserve">
+    <value>- All Members -</value>
+  </data>
+  <data name="Nav_Commanders" xml:space="preserve">
+    <value>- Commanders -</value>
+  </data>
+  <data name="Nav_Captains" xml:space="preserve">
+    <value>- Captains -</value>
+  </data>
+  <data name="Nav_ErwinSmith" xml:space="preserve">
+    <value>Erwin Smith</value>
+  </data>
+  <data name="Nav_LeviAckerman" xml:space="preserve">
+    <value>Levi Ackerman</value>
+  </data>
+  <data name="Nav_EldJinn" xml:space="preserve">
+    <value>Eld Jinn</value>
+  </data>
+  <data name="Nav_OluoBozado" xml:space="preserve">
+    <value>Oluo Bozado</value>
+  </data>
+  <data name="Nav_PetraRal" xml:space="preserve">
+    <value>Petra Ral</value>
+  </data>
+  <data name="Nav_GntherSchultz" xml:space="preserve">
+    <value>Günther Schultz</value>
+  </data>
+  <data name="Nav_Hannes" xml:space="preserve">
+    <value>Hannes</value>
+  </data>
+  <data name="Nav_DotPixis" xml:space="preserve">
+    <value>Dot Pixis</value>
+  </data>
+  <data name="Nav_RicoBrzenska" xml:space="preserve">
+    <value>Rico Brzenska</value>
+  </data>
+  <data name="Nav_NileDok" xml:space="preserve">
+    <value>Nile Dok</value>
+  </data>
+  <data name="Nav_MarloweFreudenberg" xml:space="preserve">
+    <value>Marlowe Freudenberg</value>
+  </data>
+  <data name="Nav_HitchDreyse" xml:space="preserve">
+    <value>Hitch Dreyse</value>
+  </data>
+  <data name="Nav_BorisFeulner" xml:space="preserve">
+    <value>Boris Feulner</value>
+  </data>
+  <data name="Nav_KennyAckerman" xml:space="preserve">
+    <value>Kenny Ackerman</value>
+  </data>
+  <data name="Nav_TrauteCarven" xml:space="preserve">
+    <value>Traute Carven</value>
+  </data>
+  <data name="Nav_DjelSanes" xml:space="preserve">
+    <value>Djel Sannes</value>
+  </data>
+  <data name="Nav_Fritz" xml:space="preserve">
+    <value>Fritz</value>
+  </data>
+  <data name="Nav_RodReiss" xml:space="preserve">
+    <value>Rod Reiss</value>
+  </data>
+  <data name="Nav_FriedaReiss" xml:space="preserve">
+    <value>Frieda Reiss</value>
+  </data>
+  <data name="Nav_Aurille" xml:space="preserve">
+    <value>Aurille</value>
+  </data>
+  <data name="Nav_Deltoff" xml:space="preserve">
+    <value>Deltoff</value>
+  </data>
+  <data name="Nav_Gerald" xml:space="preserve">
+    <value>Gerald</value>
+  </data>
+  <data name="Nav_Roderich" xml:space="preserve">
+    <value>Roderich</value>
+  </data>
+  <data name="Nav_GrishaYeager" xml:space="preserve">
+    <value>Grisha Yeager</value>
+  </data>
+  <data name="Nav_CarlaYeager" xml:space="preserve">
+    <value>Carla Yeager</value>
+  </data>
+  <data name="Nav_MinisterNick" xml:space="preserve">
+    <value>Minister Nick</value>
+  </data>
+  <data name="Nav_DimoReeves" xml:space="preserve">
+    <value>Dimo Reeves</value>
+  </data>
+  <data name="Nav_Kaya" xml:space="preserve">
+    <value>Kaya</value>
+  </data>
+  <data name="Nav_CalviTheMarshal" xml:space="preserve">
+    <value>Calvi - The Marshal</value>
+  </data>
+  <data name="Nav_TheoMagathAcommander" xml:space="preserve">
+    <value>Theo Magath - A commander</value>
+  </data>
+  <data name="Nav_WarriorUnit" xml:space="preserve">
+    <value>- Warrior Unit -</value>
+  </data>
+  <data name="Nav_ReinerBraun" xml:space="preserve">
+    <value>Reiner Braun</value>
+  </data>
+  <data name="Nav_ZekeYeager" xml:space="preserve">
+    <value>Zeke Yeager</value>
+  </data>
+  <data name="Nav_BertoltHoover" xml:space="preserve">
+    <value>Bertolt Hoover</value>
+  </data>
+  <data name="Nav_AnnieLeonhart" xml:space="preserve">
+    <value>Annie Leonhart</value>
+  </data>
+  <data name="Nav_MarcelGalliard" xml:space="preserve">
+    <value>Marcel Galliard</value>
+  </data>
+  <data name="Nav_PorcoGalliard" xml:space="preserve">
+    <value>Porco Galliard</value>
+  </data>
+  <data name="Nav_PieckFinger" xml:space="preserve">
+    <value>Pieck Finger</value>
+  </data>
+  <data name="Nav_GabiBraun" xml:space="preserve">
+    <value>Gabi Braun</value>
+  </data>
+  <data name="Nav_FalcoGrice" xml:space="preserve">
+    <value>Falco Grice</value>
+  </data>
+  <data name="Nav_ColtGrice" xml:space="preserve">
+    <value>Colt Grice</value>
+  </data>
+  <data name="Nav_WillyTybur" xml:space="preserve">
+    <value>Willy Tybur</value>
+  </data>
+  <data name="Nav_LaraTybur" xml:space="preserve">
+    <value>Lara Tybur</value>
+  </data>
+  <data name="Nav_Yeagerists" xml:space="preserve">
+    <value>Yeagerists</value>
+  </data>
+  <data name="Nav_TheAntiMarleyanVolunteers" xml:space="preserve">
+    <value>The Anti-Marleyan Volunteers</value>
+  </data>
+  <data name="Nav_Underground" xml:space="preserve">
+    <value>Underground</value>
+  </data>
+  <data name="Nav_Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="Nav_Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="Nav_Gallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="Nav_Quotes" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="Nav_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Nav_AboutAuthorHajimeIsayama" xml:space="preserve">
+    <value>About Author Hajime Isayama</value>
+  </data>
+  <data name="Nav_Manga" xml:space="preserve">
+    <value>Manga</value>
+  </data>
+  <data name="Nav_Anime" xml:space="preserve">
+    <value>Anime</value>
+  </data>
+  <data name="Nav_Games" xml:space="preserve">
+    <value>Games</value>
+  </data>
+  <data name="Nav_Comics" xml:space="preserve">
+    <value>Comics</value>
+  </data>
+  <data name="Nav_Movies" xml:space="preserve">
+    <value>Movies</value>
+  </data>
+  <data name="Nav_Fanarts" xml:space="preserve">
+    <value>Fan arts</value>
+  </data>
+  <data name="Nav_Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="Nav_Magazines" xml:space="preserve">
+    <value>Magazines</value>
+  </data>
+  <data name="Nav_HangeZoe" xml:space="preserve">
+    <value>Hange Zoë</value>
+  </data>
+  <data name="Nav_SectionCommander" xml:space="preserve">
+    <value>Section Commander</value>
+  </data>
+  <data name="Nav_FlochForster" xml:space="preserve">
+    <value>Floch Forster</value>
+  </data>
+</root>
