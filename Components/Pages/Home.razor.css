@@ -1,0 +1,381 @@
+/* ==========================================================================
+   1. GLOBAL RESPONSIVE LAYOUT CONTAINER
+   ========================================================================== */
+/* Paste this around your card blocks in your HTML if you want them to automatically 
+   wrap and align perfectly from huge desktop monitors down to mobile screens! */
+.titan-registry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+/* ==========================================================================
+   2. 3D CARD CORE SHELL & MOBILE SCALING
+   ========================================================================== */
+.hype-card-container {
+    perspective: 1200px;
+    display: flex;
+    padding: 10px; /* Reduced from 30px to fit mobile screens comfortably */
+    background: transparent;
+    box-sizing: border-box;
+    justify-content: center;
+
+    /* Mobile Safeguard: Scales the card down perfectly on small screens */
+    /* CRUCIAL GRID SETTING: 
+     Allows the container box to expand fluidly, sets 340px as the minimum breakpoint,
+     and mathematically ensures that exactly 3 blocks align on large views. */
+    flex: 1 1 340px;
+    max-width: 390px;
+}
+
+/* ==========================================================================
+   1. UNIFIED PREMIUM CARD BASIS (FORCES GOLD UNIFORMITY)
+   ========================================================================== */
+.titan-hype-card {
+    width: 100%;
+    max-width: 370px;
+    height: 550px;
+    position: relative;
+    padding: 26px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+    /* CRUCIAL FIX: Forced background mix that anchors the deep crimson/brown game card base tone */
+    background: radial-gradient(circle at 50% 25%, #251212 0%, #150d0a 55%, #050505 100%);
+    /* FIXED: The main outer border structural frame is ALWAYS a solid, uniform premium gold wire */
+    border: 1.5px solid rgba(255, 215, 0, 0.45) !important;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+    /* The default shadow applies a soft golden ambient glow inside the card bounds */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
+    transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
+
+
+/* Responsive Fluid Resizing for Mobile Displays (e.g., iPhone/Android) */
+@media (max-width: 420px) {
+    .titan-hype-card {
+         
+        height: auto; /* Allow text block flow expansion */
+        min-height: 520px;
+        padding: 20px; /* Tighter padding for compact displays */
+    }
+
+    .titan-display-title {
+        /* CLAMP FORMULA FOR PHONES:
+       - 1.3rem is the absolute smallest size allowed (so text never gets microscopic).
+       - 8vw scales dynamically with the phone's screen width.
+       - 1.7rem is the maximum size allowed on mobile so short names don't burst out. */
+        font-size: clamp(1.3rem, 7.5vw, 1.7rem) !important;
+        /* Optional: If a phone screen gets extremely narrow, this cleanly cuts 
+       off the text with a premium dot-dot-dot (...) instead of breaking the layout */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .artwork-glass-frame {
+        height: 170px; /* Slightly shorten artwork block on phones to save space */
+    }
+
+}
+/* ==========================================================================
+   3. POLISHED HOLO ENGINE (MIXES INDIVIDUAL COLOR WITH THE GOLD SHINE)
+   ========================================================================== */
+.holo-foil-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0;
+    border-radius: 24px;
+    mix-blend-mode: color-dodge;
+    /* THE PERFECT FOIL COMPOSITION:
+     The sheen tracks bright white-gold in the center, but bleeds into the custom 
+     titan theme variable (--theme-aura) at the edges for an organic color flash! */
+    background: linear-gradient( 135deg, transparent 0%, rgba(255, 223, 128, 0) 25%, rgba(255, 235, 160, 0.35) 45%, /* Core Platinum Gold Flash */
+    var(--theme-aura) 52%, /* Custom Titan Elemental Aura shows up here */
+    rgba(139, 101, 8, 0.2) 62%, /* Bronze Shadow trail */
+    transparent 75% );
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    transition: opacity 0.4s ease, background-position 0.15s ease-out;
+}
+
+/* FIXED SCANLINES: Subdued significantly so they do not overpower the color gradients */
+.hologram-scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Pushed down behind the content text blocks */
+    pointer-events: none;
+    opacity: 0.15; /* Extremely faint line density to allow the background color to show through */
+    border-radius: 24px;
+    background: linear-gradient(rgba(124,118,118,0.5) 10%, transparent 50%);
+    background-size: 100% 4px;
+}
+/* ==========================================================================
+   4. INTERNAL INTERFACE COMPONENTS
+   ========================================================================== */
+.meta-registry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.registry-serial {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #878170;
+    letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   2. UNIFIED TEXT ELEMENTS (PREVENTS NEON OVERRUN)
+   ========================================================================== */
+/* The header components must stay gold to look like an authentic stamped foil card */
+.class-node {
+    background: linear-gradient(135deg, #aa7c11, #dfbb6b);
+    color: #0c0a09;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ 
+}
+
+/* ==========================================================================
+   FIXED AUTOSIZING TITLE ENGINE (DYNAMIC RESPONSIVE TEXT)
+   ========================================================================== */
+.chassis-header {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+/* 1. Turns this row area into a responsive measurement sandbox */
+.title-container {
+    width: 100%;
+    container-type: inline-size; /* Instructs sub-elements to read this container's actual width */
+}
+
+.titan-display-title {
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.12);
+    /* CRUCIAL BLOCK INSULATION: */
+    white-space: nowrap; /* Forces text to stay on 1 single row line */
+    /* MATH FORMULA FOR PERFECT SIZING:
+     '2rem' is the default size for short titles. 
+     '11cqw' tells the browser to drop the font size down if it approaches 11% of the row width. 
+     'min()' ensures it picks the smaller option, preventing text overflow safely! */
+    font-size: min(2rem, 11cqw);
+}
+
+.artwork-glass-frame {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--theme-glow-intense);
+    background: #050505;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.chassis-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 55%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* The subtle laser line anchoring the picture frame remains gold */
+.laser-gold-trim {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #ffd700 50%, transparent 100%) !important;
+    z-index: 3;
+}
+
+/* The decorative underline bar underneath inheritor names stays uniform */
+.gold-neon-glow {
+    color: #ffffff !important;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
+    background: linear-gradient(180deg, transparent 75%, rgba(255, 215, 0, 0.35) 75%) !important;
+}
+
+.specs-dashboard-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.spec-node {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.spec-node.align-right {
+    text-align: right;
+}
+
+.node-hdr {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #615d55;
+    letter-spacing: 1.5px;
+}
+
+.node-body {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e6e3dd;
+}
+
+ 
+
+.chassis-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 10px 0;
+}
+
+.lore-summary-area {
+    flex-grow: 1;
+}
+
+.lore-text-body {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    color: #a6a195;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   4. HOVER INTERACTION RULES (FORCES SHARP GOLD BORDER POP)
+   ========================================================================== */
+.hype-card-container:hover .titan-hype-card {
+    border-color: rgba(255, 215, 0, 0.95) !important; /* Forces frame back to brilliant gold on mouseover */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45), 0 50px 95px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.1), 0 0 35px var(--theme-aura); /* Projects the custom titan color outwards onto your page grid! */
+}
+
+.hype-card-container:hover .chassis-art {
+    transform: scale(1.04);
+}
+
+.hype-card-container:hover .holo-foil-layer {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   5. REFACTORED 9 TITAN THEME DESIGN (CLEAN CHARACTER THEMES)
+   ========================================================================== */
+/* We no longer change borders or texts here. We ONLY assign a rich background radial 
+   tint overlay and inject the unique flare color into the `--theme-aura` token. */
+
+/* 1. 始祖巨人 (Cosmic Celestial Purple) */
+.theme-founding {
+    --theme-aura: rgba(168, 85, 247, 0.5);
+    background: radial-gradient(circle at 50% 25%, #2a0f3d 0%, #11091c 45%, #050505 100%) !important;
+}
+
+/* 2. 女巨人 (Electro Crystal Cyan-Pink Sheen) */
+.theme-female {
+    --theme-aura: rgba(236, 72, 153, 0.5);
+    background: radial-gradient(circle at 50% 25%, #3c0d25 0%, #1a0813 45%, #050505 100%) !important;
+}
+
+/* 3. 野獸巨人 (Primal Golden Ochre Earth) */
+.theme-beast {
+    --theme-aura: rgba(217, 119, 6, 0.5);
+    background: radial-gradient(circle at 50% 25%, #361c07 0%, #1c1006 45%, #050505 100%) !important;
+}
+
+/* 4. 超大型巨人 (Nuclear Ash Flare & Crimson) */
+.theme-colossal {
+    --theme-aura: rgba(239, 68, 68, 0.6);
+    background: radial-gradient(circle at 50% 25%, #3d0a0a 0%, #1c0707 45%, #050505 100%) !important;
+}
+
+/* 5. 盔甲巨人 (Hardened Industrial Bronze Steel) */
+.theme-armored {
+    --theme-aura: rgba(168, 162, 158, 0.45);
+    background: radial-gradient(circle at 50% 25%, #292624 0%, #141312 45%, #050505 100%) !important;
+}
+
+/* 6. 顎巨人 (High-Velocity Volt Orange Yellow) */
+.theme-jaw {
+    --theme-aura: rgba(245, 158, 11, 0.55);
+    background: radial-gradient(circle at 50% 25%, #3d2305 0%, #1a1004 45%, #050505 100%) !important;
+}
+
+/* 7. 車力巨人 (Tactical Moss Military Olive) */
+.theme-cart {
+    --theme-aura: rgba(132, 204, 22, 0.45);
+    background: radial-gradient(circle at 50% 25%, #1e2e07 0%, #0f1704 45%, #050505 100%) !important;
+}
+
+/* 8. 戰槌巨人 (Alabaster Hard-Skin White & Soft Quartz Pink Aura) */
+.theme-warhammer {
+    /* Injects a gorgeous pale quartz-pink tint directly into the gold holographic reflection track */
+    --theme-aura: rgba(244, 180, 195, 0.45);
+    /* Creates a bright alabaster center focal point that fades out to rich burgundy-black edges */
+    background: radial-gradient( circle at 50% 25%, #3f3537 0%, /* Soft muted flesh/pink-tinted gray shadow core */
+    #1f1c1d 45%, /* Warm dark bone-white shadow veil */
+    #050505 100% /* Deep charcoal velvet floor anchor */
+    ) !important;
+}
+
+/* 9. 進擊的巨人 (Vivid Emerald Green Aura) */
+.theme-attack {
+    --theme-aura: rgba(34, 197, 94, 0.5);
+    background: radial-gradient(circle at 50% 25%, #0a3317 0%, #051a0b 45%, #050505 100%) !important;
+}
+
+.titan-power-progresss {
+ 
+ 
+    
+}

@@ -15,7 +15,23 @@
  
 
   <ItemGroup>
+    <Compile Update="Resources\AppStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+ 
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppStrings.ja.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppStrings.zh.resx">
       <Generator></Generator>
     </EmbeddedResource>
   </ItemGroup>

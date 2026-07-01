@@ -22,9 +22,9 @@
 <!-- 區域 2：調查兵團精銳作戰檔案  -->
 <div class="flex flex-col gap-2 mt-6">
     <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
-        <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")
+        <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")       
     </h3>
-
+    
     <div class="aot-card-grid">
         @foreach (var member in _characterDatabase)
         {
@@ -58,70 +58,101 @@
     </h3>
     
     <!-- 三端自适应网格容器 (手机1列，平板2列，台式PC3列) -->
-    <div class="aot-titan-grid">
-        @foreach (var titan in _titanDatabase)
-        {
-            <div class="aot-titan-card">
-                <div class="aot-titan-badges">
-                    <img src="/img/titans/@titan.TypeBadge"
-                         class="aot-titan-badge"
-                         alt="@titan.TypeBadge" />
-                    @* Add a second badge here when needed:
-                    <img src="/img/titans/@titan.SecondBadge"
-                         class="aot-titan-badge"
-                         alt="@titan.SecondBadge" />
-                    *@
+   
+
+        <div class="titan-registry-grid">
+ 
+            @foreach (var titan in _titanDatabase)
+            {
+ 
+                <div class="hype-card-container">
+                <div class="titan-hype-card  theme-@titan.Theme">
+
+                        <!-- Holographic Flare Overlay Sheets -->
+                        <div class="holo-foil-layer"></div>
+                        <div class="hologram-scanlines"></div>
+
+                        <!-- Top Row Meta Registry Labels -->
+                        <div class="meta-registry-row">
+                            <span class="registry-serial"></span>
+                            <div class="class-node">@LocalizationService.GetString(titan.Theme)</div>
+                        </div>
+
+                        <!-- Clean Full-Width Header Title -->
+                        <div class="chassis-header">
+                            <div class="title-container">
+                                <h2 class="titan-display-title">@LocalizationService.GetString(titan.NameKey)</h2>
+                            </div>
+                        </div>
+
+                        <!-- Centerpiece Immersive Image Window -->
+                        <div class="artwork-glass-frame">
+                            <div class="glass-reflection"></div>
+                            <img src="/img/titans/@titan.TypeBadge" class="chassis-art" alt="@titan.TypeBadge" />
+                            <div class="laser-gold-trim"></div>
+                        </div>
+
+                        <!-- Spec Analytics Dashboard Grid -->
+                        <div class="specs-dashboard-grid">
+                            <div class="spec-node">                                 
+                            </div>
+                            <div class="spec-node align-right"> 
+                                <div class="node-hdr">@LocalizationService.GetString(titan.HeightKey)</div>                                
+                            </div>
+                        </div>                        
+
+                        <!-- Lore Paragraph Text Box -->
+                        <div class="lore-summary-area">
+                            <p class="lore-text-body">
+                            @LocalizationService.GetString(titan.DescKey)
+                            </p>
+                        </div>
+
+                        <div class="chassis-divider"></div>
+
+                        <div class="flex flex-col gap-2.5 text-xs">
+                            <!-- 力量指标 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="">@LocalizationService.GetString("ParamPower")</span>
+                                    <span class="text-primary font-bold">@titan.Power%</span>
+                                </div>
+                                <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
+                            </div>
+
+                            <!-- 速度指标 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="">@LocalizationService.GetString("ParamSpeed")</span>
+                                    <span class="text-secondary font-bold">@titan.Speed%</span>
+                                </div>
+                                <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
+                            </div>
+
+                            <!-- 硬度/特殊能力指标 -->
+                            <div>
+                                <div class="flex justify-between  mb-1">
+                                    <span class="">@LocalizationService.GetString("ParamArmor")</span>
+                                    <span class="text-accent font-bold">@titan.Armor%</span>
+                                </div>
+                                <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- 头部基本信息 -->
-                <div class="flex justify-between items-start mb-3" style="position: relative; border: 0px solid red">
-                    <div style ="position: relative; border: 0px solid blue">
-                        <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@LocalizationService.GetString(titan.NameKey)</h4>
-                        <span class="text-xs text-error uppercase tracking-wider">@LocalizationService.GetString(titan.HeightKey)</span>
-                    </div>
 
-                </div>
+               
 
-                <!-- 描述文本 -->
-                <p class="text-xs lg:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
-                    @LocalizationService.GetString(titan.DescKey)
-                </p>
-
-                <div class="divider my-2 opacity-5"></div>
-
-                <!-- 量化三维能力雷达进度条 (使用 daisyUI 原生 Progress 组件) -->
-                <div class="flex flex-col gap-2.5 text-xs">
-                    <!-- 力量指标 -->
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="">@LocalizationService.GetString("ParamPower")</span>
-                            <span class="text-primary font-bold">@titan.Power%</span>
-                        </div>
-                        <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
-                    </div>
-
-                    <!-- 速度指标 -->
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="">@LocalizationService.GetString("ParamSpeed")</span>
-                            <span class="text-secondary font-bold">@titan.Speed%</span>
-                        </div>
-                        <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
-                    </div>
-
-                    <!-- 硬度/特殊能力指标 -->
-                    <div>
-                        <div class="flex justify-between  mb-1">
-                            <span class="">@LocalizationService.GetString("ParamArmor")</span>
-                            <span class="text-accent font-bold">@titan.Armor%</span>
-                        </div>
-                        <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
 </div>
+
+
+
+
+
 <!-- 區域 4：兵團戰術裝備與牆外調查資產 -->
 <div class="flex flex-col gap-2 mt-6">
     <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
@@ -135,7 +166,7 @@
                 <!-- 裝備頭部 -->
                 <div class="flex justify-between items-center mb-2">
                     <h4 class="font-black text-sm md:text-base lg:text-lg text-white">@LocalizationService.GetString(gear.NameKey)</h4>
-                    <div class="badge badge-xs md:badge-sm badge-outline badge-accent font-bold shrink-0">@gear.ClassBadge</div>
+                    <div class="badge badge-xs md:badge-sm badge-outline badge-accent font-bold shrink-0">@LocalizationService.GetString(gear.ClassBadge) </div>
                 </div>
                 
                 <!-- 技術分類 (全寬展示，防止折行) -->
@@ -189,6 +220,41 @@
     </div>
 </div>
 
+<script>
+
+document.querySelectorAll('.hype-card-container').forEach(container => {
+const card = container.querySelector('.titan-hype-card');
+const foil = container.querySelector('.holo-foil-layer');
+
+container.addEventListener('mousemove', (e) => {
+const rect = container.getBoundingClientRect();
+
+// Calculate cursor position relative to the container (value between 0 and 1)
+const x = (e.clientX - rect.left) / rect.width;
+const y = (e.clientY - rect.top) / rect.height;
+
+// Convert to tilt degrees (Max tilt: 12deg X, 12deg Y)
+const tiltX = (0.5 - y) * 24;
+const tiltY = (x - 0.5) * 24;
+
+// Apply the 3D tilt transformation to the card
+card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(0)`;
+
+// Map cursor positions directly onto the background gradient positions of the foil
+if (foil) {
+foil.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
+}
+});
+
+// Smoothly snap back to origin configuration on mouse leave
+container.addEventListener('mouseleave', () => {
+card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+if (foil) {
+foil.style.backgroundPosition = '0% 0%';
+}
+});
+});
+</script>
 
 @code {
     [CascadingParameter] public string CurrentLang { get; set; } = "zh";
@@ -200,6 +266,7 @@
         public string HeightKey { get; init; } = "";
         public string DescKey { get; init; } = "";
         public string TypeBadge { get; init; } = "";
+        public string Theme { get; init; } = "";  
         public int Power { get; init; }
         public int Speed { get; init; }
         public int Armor { get; init; }
@@ -209,39 +276,39 @@
     private readonly List<TitanModel> _titanDatabase = new()
     {
         new TitanModel {
-            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "founding-titan-badge.png",
+            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "founding-titan-badge.png", Theme = "founding",
             Power = 100, Speed = 60, Armor = 100
         },
         new TitanModel {
-            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "female-titan-badge.png",
+            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "female-titan-badge.png", Theme = "female",      
             Power = 85, Speed = 95, Armor = 80
         },
         new TitanModel {
-            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "beast-titan-badge.png",
+            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "beast-titan-badge.png", Theme = "beast",
             Power = 90, Speed = 55, Armor = 70
         },
         new TitanModel {
-            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "colossal-titan-badge.png",
+            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "colossal-titan-badge.png", Theme = "colossal",
             Power = 100, Speed = 20, Armor = 90
         },
         new TitanModel {
-            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "armored-titan-badge.png",
+            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "armored-titan-badge.png", Theme = "armored",
             Power = 90, Speed = 65, Armor = 95
         },
         new TitanModel {
-            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "jaw-titan-badge.png",
+            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "jaw-titan-badge.png",   Theme = "jaw",
             Power = 75, Speed = 100, Armor = 75
         },
         new TitanModel {
-            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "cart-titan-badge.png",
+            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "cart-titan-badge.png",  Theme = "cart",
             Power = 50, Speed = 85, Armor = 60
         },
         new TitanModel {
-            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "warhammer-titan-badge.png",
+            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "warhammer-titan-badge.png", Theme = "warhammer",
             Power = 95, Speed = 75, Armor = 95
         },
         new TitanModel {
-            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "attack-titan-badge.png",
+            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "attack-titan-badge.png",    Theme = "attack",
             Power = 85, Speed = 85, Armor = 80
         }
     };

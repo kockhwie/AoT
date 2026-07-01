@@ -1,5 +1,8 @@
-using System.Globalization;
+using AOT.Resources;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
+using System.Resources;
 
 namespace AOT.Services;
 
@@ -82,4 +85,75 @@ public class AppLocalizationService
     {
         return GetText(key);
     }
+
+    /// <summary>
+    /// Sample:
+    ///     <p>@LocalizationService.GetStringWithLang("Nav_LeviAckerman", "en") / @LocalizationService.GetStringWithLang("Nav_LeviAckerman", "zh")</p>
+    /// </summary>
+    public string GetStringWithLang(string key, string? cultureName = null)
+    {
+        if (string.IsNullOrEmpty(cultureName))
+        {
+            return GetText(key); // Fallback to current behavior
+        }
+
+        var culture = new CultureInfo(cultureName);
+
+        // Bypasses the localizer entirely and directly queries the underlying .resx
+        // Replace 'SharedResources' with the actual class name of your main .resx file
+        ResourceManager rm = AppStrings.ResourceManager;
+
+        return rm.GetString(key, culture) ?? GetText(key);
+    }
+
+    /// <summary>
+    /// Sample:
+    ///     <p>The author is: @LocalizationService.GetFlexibleName("Nav_LeviAckerman")</p>
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
+    public MarkupString GetFlexibleName(string key)
+    {
+
+        // FIX: Read your active service state instead of the server thread culture
+        // Normalize "jp" to "ja" for .NET's ResourceManager
+        string currentLang = ActiveLang == "jp" ? "ja" : ActiveLang;
+ 
+        // string currentLang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        ResourceManager rm = AppStrings.ResourceManager;
+
+        string textEn = rm.GetString(key, new CultureInfo("en")) ?? "";
+        string textZh = rm.GetString(key, new CultureInfo("zh")) ?? "";
+        string textJa = rm.GetString(key, new CultureInfo("ja")) ?? "";
+
+        string htmlResult;
+
+        switch (currentLang)
+        {
+            case "zh":
+                htmlResult = !string.IsNullOrEmpty(textEn)
+                    ? $"<strong class=\"main-name\">{textZh}</strong> <span class=\"alt-name\">({textEn})</span>"
+                    : $"<strong class=\"main-name\">{textZh}</strong>";
+                break;
+
+            case "ja":
+                htmlResult = !string.IsNullOrEmpty(textEn)
+                    ? $"<strong class=\"main-name\">{textJa}</strong> <span class=\"alt-name\">({textEn})</span>"
+                    : $"<strong class=\"main-name\">{textJa}</strong>";
+                break;
+
+            case "en":
+            default:
+                string altText = !string.IsNullOrEmpty(textZh) ? textZh : textJa;
+                htmlResult = !string.IsNullOrEmpty(altText)
+                    ? $"<strong class=\"main-name\">{textEn}</strong> <span class=\"alt-name\">({altText})</span>"
+                    : $"<strong class=\"main-name\">{textEn}</strong>";
+                break;
+        }
+
+
+        // Returns a native Blazor safe HTML string
+        return (MarkupString)htmlResult;
+    }
+
 }
