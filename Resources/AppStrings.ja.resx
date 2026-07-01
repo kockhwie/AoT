@@ -166,7 +166,7 @@
     <value>ニュース</value>
   </data>
   <data name="SectionTitle" xml:space="preserve">
-    <value>調査兵団諜報部</value>
+    <value>調査兵団の主要キャラクター</value>
   </data>
   <data name="SidebarBtn" xml:space="preserve">
     <value>同期資料庫</value>
@@ -464,5 +464,227 @@
   </data>
   <data name="Nav_FlochForster" xml:space="preserve">
     <value>フロック・フォルスタ</value>
+  </data>
+  <data name="LeviName" xml:space="preserve">
+    <value>リヴァイ・アッカーマン</value>
+  </data>
+  <data name="LeviTitle" xml:space="preserve">
+    <value>調査兵団 特別作戦班士長</value>
+  </data>
+  <data name="LeviBio" xml:space="preserve">
+    <value>覚醒したアッカーマンの血統により、人類最強の身体能力を持つ。立体機動装置の扱いは一線を画す。</value>
+  </data>
+  <data name="MikasaName" xml:space="preserve">
+    <value>ミカサ・アッカーマン</value>
+  </data>
+  <data name="MikasaTitle" xml:space="preserve">
+    <value>調査兵団 精鋭兵士</value>
+  </data>
+  <data name="MikasaBio" xml:space="preserve">
+    <value>一人の戦闘力は通常の兵士100人分に匹敵する。何があってもエレン・イェーガーを守るという絶対的な一念で動く。</value>
+  </data>
+  <data name="StatKills" xml:space="preserve">
+    <value>単独撃破数</value>
+  </data>
+  <data name="StatWits" xml:space="preserve">
+    <value>頭脳戦術値</value>
+  </data>
+  <data name="TimelineHeader" xml:space="preserve">
+    <value>防衛戦史クロニクル</value>
+  </data>
+  <data name="Time1Title" xml:space="preserve">
+    <value>シガンシナ区陥落</value>
+  </data>
+  <data name="Time1Desc" xml:space="preserve">
+    <value>超大型巨人と鎧の巨人がウォール・マリアを突破し、人类の100年に及ぶ平和が終わりを迎えた。</value>
+  </data>
+  <data name="Time2Title" xml:space="preserve">
+    <value>マーレ強襲と宣戦布告</value>
+  </data>
+  <data name="Time2Desc" xml:space="preserve">
+    <value>エレン・イェーガーがレベリオ収容区を急襲。世界を巻き込む最終決戦の火蓋が切られた。</value>
+  </data>
+  <data name="TitanSectionTitle" xml:space="preserve">
+    <value>九つの巨人能力系譜図</value>
+  </data>
+  <data name="ParamPower" xml:space="preserve">
+    <value>破壊力・スケール</value>
+  </data>
+  <data name="ParamSpeed" xml:space="preserve">
+    <value>機動力・スピード</value>
+  </data>
+  <data name="ParamArmor" xml:space="preserve">
+    <value>硬質化・特殊能力</value>
+  </data>
+  <data name="T1Name" xml:space="preserve">
+    <value>始祖の巨人</value>
+  </data>
+  <data name="T1H" xml:space="preserve">
+    <value>全長: 13m (通常時)</value>
+  </data>
+  <data name="T1Desc" xml:space="preserve">
+    <value>すべての巨人の頂点。「座標」を通じてユミルの民の記憶を改変し、無数の超大型巨人を操り世界を崩壊させる「地鳴らし」を発動できる。</value>
+  </data>
+  <data name="T2Name" xml:space="preserve">
+    <value>女型の巨人</value>
+  </data>
+  <data name="T2H" xml:space="preserve">
+    <value>全長: 14m</value>
+  </data>
+  <data name="T2Desc" xml:space="preserve">
+    <value>アニ・レオンハートが保持。高い汎用性と機動力を持ち、体の一部を局所的に硬質化結晶できるほか、叫び声で無垢の巨人を呼び集める。</value>
+  </data>
+  <data name="T3Name" xml:space="preserve">
+    <value>獣の巨人</value>
+  </data>
+  <data name="T3H" xml:space="preserve">
+    <value>全長: 17m</value>
+  </data>
+  <data name="T3Desc" xml:space="preserve">
+    <value>ジーク・イェーガーが保持。獣のような姿を持ち、恐るべき遠距離投擲による破壊力を誇る。王血の力で、自身の脊髄液を介し民を巨人化できる。</value>
+  </data>
+  <data name="T4Name" xml:space="preserve">
+    <value>超大型の巨人</value>
+  </data>
+  <data name="T4H" xml:space="preserve">
+    <value>全長: 60m</value>
+  </data>
+  <data name="T4Desc" xml:space="preserve">
+    <value>ベルトルト、後にアルミンが保持。圧倒的な巨大さを誇り、出現時には戦術核に匹敵する熱風爆発を巻き起こす。肉体から超高温の蒸気を放出し、敵を寄せ付けない。</value>
+  </data>
+  <data name="T5Name" xml:space="preserve">
+    <value>鎧の巨人</value>
+  </data>
+  <data name="T5H" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="T5Desc" xml:space="preserve">
+    <value>ライナー・ブラウンが保持。全身を強固な硬質化の皮膚で覆われた、まさに生きる戦車。その驚異的な防御力と体重を活かした突撃で、外門を一撃で破壊する。</value>
+  </data>
+  <data name="T6Name" xml:space="preserve">
+    <value>顎の巨人</value>
+  </data>
+  <data name="T6H" xml:space="preserve">
+    <value>全長: 5m</value>
+  </data>
+  <data name="T6Desc" xml:space="preserve">
+    <value>ユミル、ファルコらが保持。小柄ながら全巨人一の俊敏性を誇る。その強靭な顎と爪の破壊力は、女型の超硬質化結晶さえも容易に噛み砕き、引き裂くことができる。</value>
+  </data>
+  <data name="T7Name" xml:space="preserve">
+    <value>車力の巨人</value>
+  </data>
+  <data name="T7H" xml:space="preserve">
+    <value>全長: 4m (四足歩行)</value>
+  </data>
+  <data name="T7Desc" xml:space="preserve">
+    <value>ピーク・フィンガーが保持。四足歩行型で、数ヶ月間も巨人化を維持できる驚異的な持続力を誇る。背中にガトリング砲や対巨人砲などの近代兵器を搭載し運用される。</value>
+  </data>
+  <data name="T8Name" xml:space="preserve">
+    <value>戦鎚の巨人</value>
+  </data>
+  <data name="T8H" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="T8Desc" xml:space="preserve">
+    <value>タイバー家、後にエレンが保持。硬質化能力を極限まで高め、戦鎚や地刺、ボウガンなどあらゆる武器を自在に生成する。本体は地中に隠れ、コードを介して巨人を遠隔操作する。</value>
+  </data>
+  <data name="T9Name" xml:space="preserve">
+    <value>進撃の巨人 (本体)</value>
+  </data>
+  <data name="T9H" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="T9Desc" xml:space="preserve">
+    <value>エレン・イェーガーが運用する戦闘主体。優れた格闘術とバランスの取れた身体能力、そして時間をも超越して「未来の継承者の記憶」を覗き見る固有の能力を持つ。</value>
+  </data>
+  <data name="C1Name" xml:space="preserve">
+    <value>リヴァイ・アッカーマン</value>
+  </data>
+  <data name="C1Title" xml:space="preserve">
+    <value>調査兵団 特別作戦班士長</value>
+  </data>
+  <data name="C1Bio" xml:space="preserve">
+    <value>覚醒したアッカーマンの血統により、人類最強の身体能力を持つ。立体機動装置の扱いは一線を画し、「人類最強の兵士」と目される。</value>
+  </data>
+  <data name="C2Name" xml:space="preserve">
+    <value>ミカサ・アッカーマン</value>
+  </data>
+  <data name="C2Title" xml:space="preserve">
+    <value>調査兵団 精鋭兵士</value>
+  </data>
+  <data name="C2Bio" xml:space="preserve">
+    <value>一人の戦闘力は通常の兵士100人分に匹敵する首席卒業生。何があってもエレン・イェーガーを守るという絶対的な一念で動く。</value>
+  </data>
+  <data name="C3Name" xml:space="preserve">
+    <value>アルミン・アルレルト</value>
+  </data>
+  <data name="C3Title" xml:space="preserve">
+    <value>調査兵団 第15代団長 / 超大型の巨人</value>
+  </data>
+  <data name="C3Bio" xml:space="preserve">
+    <value>エレンとミカサの幼馴染。非凡な発想力と優れた知略を持ち、数々の窮地を救う作戦を立案。マリアの壁奪還戦後に超大型の巨人を引き継いだ。</value>
+  </data>
+  <data name="C4Name" xml:space="preserve">
+    <value>ハンジ・ゾエ</value>
+  </data>
+  <data name="C4Title" xml:space="preserve">
+    <value>調査兵団 第14代団長</value>
+  </data>
+  <data name="C4Bio" xml:space="preserve">
+    <value>巨人の生体研究に異様な情熱を注ぐ科学者。新兵器「雷槍」などの開発を主導し、エルヴィン亡き後は第14代団長として兵団を率いた。</value>
+  </data>
+  <data name="C5Name" xml:space="preserve">
+    <value>エルヴィン・スミス</value>
+  </data>
+  <data name="C5Title" xml:space="preserve">
+    <value>調査兵団 元第13代団長</value>
+  </data>
+  <data name="C5Bio" xml:space="preserve">
+    <value>卓越したリーダーシップと冷徹な決断力を併せ持つ第13代団長。「長距離索敵陣形」を考案。地下室の真実を追い求め、兵士を率いて散った。</value>
+  </data>
+  <data name="C6Name" xml:space="preserve">
+    <value>ジャン・キルシュタイン</value>
+  </data>
+  <data name="C6Title" xml:space="preserve">
+    <value>調査兵団 前線指揮官</value>
+  </data>
+  <data name="C6Bio" xml:space="preserve">
+    <value>現状を正しく認識できる現実主義者。それゆえに兵士の視点から冷静に戦局を判断でき、仲間から強い信頼を寄せられる指揮官へと成長した。</value>
+  </data>
+  <data name="GearSectionTitle" xml:space="preserve">
+    <value>調査兵団戦術装備・技術資産</value>
+  </data>
+  <data name="SpecWeight" xml:space="preserve">
+    <value>総戦闘重量</value>
+  </data>
+  <data name="SpecRisk" xml:space="preserve">
+    <value>運用危険度</value>
+  </data>
+  <data name="G1Name" xml:space="preserve">
+    <value>立体機動装置</value>
+  </data>
+  <data name="G1Tech" xml:space="preserve">
+    <value>技術分類: 高圧ガス駆動ワイヤーアンカー</value>
+  </data>
+  <data name="G1Desc" xml:space="preserve">
+    <value>対巨人用に開発された人類の英知。高圧ガスボンベとワイヤーアンカーを組み合わせ、三次元空間での超高速移動を可能にすることで、巨人のうなじを狙う機動力を生み出す。</value>
+  </data>
+  <data name="G2Name" xml:space="preserve">
+    <value>超硬質スチール材薄刃</value>
+  </data>
+  <data name="G2Tech" xml:space="preserve">
+    <value>技術分類: 黒金竹製高靭性特殊合金</value>
+  </data>
+  <data name="G2Desc" xml:space="preserve">
+    <value>兵団の制式近接武器。島特産の黒金竹を鋼に練り込むことで、巨人の肉を断つ強靭さと鋭利さを両立。刀身は交換可能なカッターナイフのようなスナップ式を採用している。</value>
+  </data>
+  <data name="G3Name" xml:space="preserve">
+    <value>雷槍</value>
+  </data>
+  <data name="G3Tech" xml:space="preserve">
+    <value>技術分類: 推進式高爆徹甲ロケット兵器</value>
+  </data>
+  <data name="G3Desc" xml:space="preserve">
+    <value>鎧の巨人に対抗すべくハンジが開発した新兵器。腕部に装着するロケット推進式の徹甲爆弾で、突き刺した後に紐を引くことで炸裂し、強固な鎧の皮膚をも粉砕する破壊力を持つ。</value>
   </data>
 </root>

@@ -166,7 +166,7 @@
     <value>News</value>
   </data>
   <data name="SectionTitle" xml:space="preserve">
-    <value>Survey Corps Intelligence Division</value>
+    <value>Key Members of the Survey Corps</value>
   </data>
   <data name="SidebarBtn" xml:space="preserve">
     <value>Sync Database</value>
@@ -464,5 +464,227 @@
   </data>
   <data name="Nav_FlochForster" xml:space="preserve">
     <value>Floch Forster</value>
+  </data>
+  <data name="LeviName" xml:space="preserve">
+    <value>Levi Ackerman</value>
+  </data>
+  <data name="LeviTitle" xml:space="preserve">
+    <value>Special Operations Captain</value>
+  </data>
+  <data name="LeviBio" xml:space="preserve">
+    <value>Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Lethal with vertical maneuvering equipment.</value>
+  </data>
+  <data name="MikasaName" xml:space="preserve">
+    <value>Mikasa Ackerman</value>
+  </data>
+  <data name="MikasaTitle" xml:space="preserve">
+    <value>Elite Scout Officer</value>
+  </data>
+  <data name="MikasaBio" xml:space="preserve">
+    <value>Equal to a hundred ordinary soldiers in combat. Driven by an absolute, singular drive to protect Eren Yeager at all costs.</value>
+  </data>
+  <data name="StatKills" xml:space="preserve">
+    <value>Solo Kills</value>
+  </data>
+  <data name="StatWits" xml:space="preserve">
+    <value>Wits Value</value>
+  </data>
+  <data name="TimelineHeader" xml:space="preserve">
+    <value>Historical War Chronicle</value>
+  </data>
+  <data name="Time1Title" xml:space="preserve">
+    <value>Fall of Shiganshina District</value>
+  </data>
+  <data name="Time1Desc" xml:space="preserve">
+    <value>The Colossal and Armored Titans breached Wall Maria, ending a century of fragile human peace.</value>
+  </data>
+  <data name="Time2Title" xml:space="preserve">
+    <value>The Declaration of War</value>
+  </data>
+  <data name="Time2Desc" xml:space="preserve">
+    <value>Eren Yeager launched a surprise raid on Liberio, shifting the global war into its endgame.</value>
+  </data>
+  <data name="TitanSectionTitle" xml:space="preserve">
+    <value>The Nine Titans Registry</value>
+  </data>
+  <data name="ParamPower" xml:space="preserve">
+    <value>Destructive Power</value>
+  </data>
+  <data name="ParamSpeed" xml:space="preserve">
+    <value>Agility &amp; Speed</value>
+  </data>
+  <data name="ParamArmor" xml:space="preserve">
+    <value>Hardening &amp; Magic</value>
+  </data>
+  <data name="T1Name" xml:space="preserve">
+    <value>Founding Titan</value>
+  </data>
+  <data name="T1H" xml:space="preserve">
+    <value>Height: 13m (Base Form)</value>
+  </data>
+  <data name="T1Desc" xml:space="preserve">
+    <value>The nexus of all titans. Wields the ultimate 'Coordinate' ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic 'Rumbling'.</value>
+  </data>
+  <data name="T2Name" xml:space="preserve">
+    <value>Female Titan</value>
+  </data>
+  <data name="T2H" xml:space="preserve">
+    <value>Height: 14m</value>
+  </data>
+  <data name="T2Desc" xml:space="preserve">
+    <value>Possessed by Annie Leonhart. Exhibits high all-around agility, specialized localized crystalline hardening defenses, and a vocal call that summons pure titans.</value>
+  </data>
+  <data name="T3Name" xml:space="preserve">
+    <value>Beast Titan</value>
+  </data>
+  <data name="T3H" xml:space="preserve">
+    <value>Height: 17m</value>
+  </data>
+  <data name="T3Desc" xml:space="preserve">
+    <value>Held by Zeke Yeager. Resembles an ape-like beast capable of devastating long-range bombardment. Due to royal blood, his spinal fluid instantly transforms targets.</value>
+  </data>
+  <data name="T4Name" xml:space="preserve">
+    <value>Colossal Titan</value>
+  </data>
+  <data name="T4H" xml:space="preserve">
+    <value>Height: 60m</value>
+  </data>
+  <data name="T4Desc" xml:space="preserve">
+    <value>Held by Bertholdt, then Armin. Possesses a mountainous structure. Transformation triggers a pseudo-nuclear thermal blast, alongside a tactical high-pressure burning steam defensive barrier.</value>
+  </data>
+  <data name="T5Name" xml:space="preserve">
+    <value>Armored Titan</value>
+  </data>
+  <data name="T5H" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="T5Desc" xml:space="preserve">
+    <value>Held by Reiner Braun. Encased in a heavy hardened skeletal armor plating that provides fortress-grade defensive metrics. Functions as an organic battering ram against fortified structures.</value>
+  </data>
+  <data name="T6Name" xml:space="preserve">
+    <value>Jaw Titan</value>
+  </data>
+  <data name="T6H" xml:space="preserve">
+    <value>Height: 5m</value>
+  </data>
+  <data name="T6Desc" xml:space="preserve">
+    <value>Held by Ymir, Falco, and others. The smallest form but unmatched in top-tier agility. Features powerful claws and jaws that can crush even the densest crystalline hardening.</value>
+  </data>
+  <data name="T7Name" xml:space="preserve">
+    <value>Cart Titan</value>
+  </data>
+  <data name="T7H" xml:space="preserve">
+    <value>Height: 4m (Quadrupedal)</value>
+  </data>
+  <data name="T7Desc" xml:space="preserve">
+    <value>Held by Pieck Finger. Utilizes a quadrupedal stance with unparalleled physiological endurance, allowing months of sustained transformation. Can be equipped with customized heavy military artillery.</value>
+  </data>
+  <data name="T8Name" xml:space="preserve">
+    <value>War Hammer Titan</value>
+  </data>
+  <data name="T8H" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="T8Desc" xml:space="preserve">
+    <value>Originally held by the Tybur family. Features absolute weapon materialization via dense structural hardening. The host can safely remain underground while managing the titan puppet remotely via a cable connection.</value>
+  </data>
+  <data name="T9Name" xml:space="preserve">
+    <value>The Attack Titan (Host)</value>
+  </data>
+  <data name="T9H" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="T9Desc" xml:space="preserve">
+    <value>The core combat avatar managed by Eren Yeager. Features balanced combat stats, flawless tactical grit, and the unique cross-temporal memory foresight capability.</value>
+  </data>
+  <data name="C1Name" xml:space="preserve">
+    <value>Levi Ackerman</value>
+  </data>
+  <data name="C1Title" xml:space="preserve">
+    <value>Special Operations Captain</value>
+  </data>
+  <data name="C1Bio" xml:space="preserve">
+    <value>Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Unmatched with vertical maneuvering equipment, universally hailed as Humanity's Strongest.</value>
+  </data>
+  <data name="C2Name" xml:space="preserve">
+    <value>Mikasa Ackerman</value>
+  </data>
+  <data name="C2Title" xml:space="preserve">
+    <value>Elite Scout Officer</value>
+  </data>
+  <data name="C2Bio" xml:space="preserve">
+    <value>Equal to a hundred ordinary soldiers in combat. Graduated from the 104th Training Corps alongside Eren, driven by an absolute, singular drive to protect him at all costs.</value>
+  </data>
+  <data name="C3Name" xml:space="preserve">
+    <value>Armin Arlert</value>
+  </data>
+  <data name="C3Title" xml:space="preserve">
+    <value>15th Scout Commander / Colossal Titan</value>
+  </data>
+  <data name="C3Bio" xml:space="preserve">
+    <value>Eren and Mikasa's childhood friend. Possesses an extraordinary tactical mind, devising brilliant counter-strategies in dire situations. Inherited the Colossal Titan.</value>
+  </data>
+  <data name="C4Name" xml:space="preserve">
+    <value>Hange Zoë</value>
+  </data>
+  <data name="C4Title" xml:space="preserve">
+    <value>14th Scout Commander</value>
+  </data>
+  <data name="C4Bio" xml:space="preserve">
+    <value>Led the Scout Corps' scientific research and weapon development, notably creating the Thunder Spears. Succeeded Erwin as the 14th Commander with high integrity.</value>
+  </data>
+  <data name="C5Name" xml:space="preserve">
+    <value>Erwin Smith</value>
+  </data>
+  <data name="C5Title" xml:space="preserve">
+    <value>Former 13th Scout Commander</value>
+  </data>
+  <data name="C5Bio" xml:space="preserve">
+    <value>A legendary leader with frozen resolve and hypnotic charisma. Developed the Long-Distance Scouting Formation. Sacrificed himself to historical truth.</value>
+  </data>
+  <data name="C6Name" xml:space="preserve">
+    <value>Jean Kirstein</value>
+  </data>
+  <data name="C6Title" xml:space="preserve">
+    <value>Frontline Field Commander</value>
+  </data>
+  <data name="C6Bio" xml:space="preserve">
+    <value>A grounded realist who understands weakness, enabling him to assess battlefields accurately from a soldier's view. Became a highly trusted field commander.</value>
+  </data>
+  <data name="GearSectionTitle" xml:space="preserve">
+    <value>Tactical Gear &amp; Scout Ordnance</value>
+  </data>
+  <data name="SpecWeight" xml:space="preserve">
+    <value>Combat Weight</value>
+  </data>
+  <data name="SpecRisk" xml:space="preserve">
+    <value>Operational Risk</value>
+  </data>
+  <data name="G1Name" xml:space="preserve">
+    <value>Omni-directional Mobility Gear</value>
+  </data>
+  <data name="G1Tech" xml:space="preserve">
+    <value>Tech: Gas-Powered Pneumatic Winch System</value>
+  </data>
+  <data name="G1Desc" xml:space="preserve">
+    <value>A revolutionary invention enabling humanity to fight titans. Utilizes high-pressure gas cylinders and steel wire anchors to allow high-speed 3D mobility through trees and urban structures.</value>
+  </data>
+  <data name="G2Name" xml:space="preserve">
+    <value>Ultrahard Steel Blades</value>
+  </data>
+  <data name="G2Tech" xml:space="preserve">
+    <value>Tech: Industrial Black-Bamboo Alloy</value>
+  </data>
+  <data name="G2Desc" xml:space="preserve">
+    <value>Standard-issue melee cutlery forged from industrial black-bamboo alloy. Engineered for high flexibility and razor sharpness to slice titan flesh. Features an instant segment-reload design.</value>
+  </data>
+  <data name="G3Name" xml:space="preserve">
+    <value>Thunder Spears</value>
+  </data>
+  <data name="G3Tech" xml:space="preserve">
+    <value>Tech: Jet-Propelled High-Explosive Ordnance</value>
+  </data>
+  <data name="G3Desc" xml:space="preserve">
+    <value>A specialized heavy anti-titan armor-piercing rocket weapon developed by Hange. Anchors directly into target frameworks and detonates via a tethered cord, strong enough to shatter hardened skin armor.</value>
   </data>
 </root>

@@ -166,7 +166,7 @@
     <value>新聞</value>
   </data>
   <data name="SectionTitle" xml:space="preserve">
-    <value>調查兵團諜報部</value>
+    <value>調查兵團核心角色</value>
   </data>
   <data name="SidebarBtn" xml:space="preserve">
     <value>同步中央數據庫</value>
@@ -464,5 +464,227 @@
   </data>
   <data name="Nav_FlochForster" xml:space="preserve">
     <value>弗洛克·福斯特</value>
+  </data>
+  <data name="LeviName" xml:space="preserve">
+    <value>里維·阿卡曼</value>
+  </data>
+  <data name="LeviTitle" xml:space="preserve">
+    <value>調查兵團 特別作戰班兵長</value>
+  </data>
+  <data name="LeviBio" xml:space="preserve">
+    <value>因覺醒了阿卡曼一族的血統而擁有近乎超人類的身體反射神經。戰鬥力極強，操縱立體機動裝置的技术堪稱全人類最高壁壘。</value>
+  </data>
+  <data name="MikasaName" xml:space="preserve">
+    <value>米卡莎·阿卡曼</value>
+  </data>
+  <data name="MikasaTitle" xml:space="preserve">
+    <value>調查兵團 精銳核心士官</value>
+  </data>
+  <data name="MikasaBio" xml:space="preserve">
+    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡的安危。</value>
+  </data>
+  <data name="StatKills" xml:space="preserve">
+    <value>單獨擊殺巨人數</value>
+  </data>
+  <data name="StatWits" xml:space="preserve">
+    <value>戰術頭腦指標</value>
+  </data>
+  <data name="TimelineHeader" xml:space="preserve">
+    <value>帕拉迪島防衛戰史年表</value>
+  </data>
+  <data name="Time1Title" xml:space="preserve">
+    <value>希干希納區的淪陷</value>
+  </data>
+  <data name="Time1Desc" xml:space="preserve">
+    <value>超大型巨人和盔甲巨人突然現身並摧毀了瑪利亞之牆外門，殘酷吞噬無數人類，人類維持了整整一個世纪的虛假和平宣告終結。</value>
+  </data>
+  <data name="Time2Title" xml:space="preserve">
+    <value>突襲馬雷與雷貝里欧宣戰布告</value>
+  </data>
+  <data name="Time2Desc" xml:space="preserve">
+    <value>艾連·葉卡密謀突襲馬雷首都雷貝里歐收容區，強行吞噬戰槌巨人，彻底打破國際地緣政治僵局，將全球戰爭拖入地鳴終局階段。</value>
+  </data>
+  <data name="TitanSectionTitle" xml:space="preserve">
+    <value>始祖九大巨人能力圖譜</value>
+  </data>
+  <data name="ParamPower" xml:space="preserve">
+    <value>破壞力 / 規模</value>
+  </data>
+  <data name="ParamSpeed" xml:space="preserve">
+    <value>機動力 / 速度</value>
+  </data>
+  <data name="ParamArmor" xml:space="preserve">
+    <value>硬質化 / 秘術</value>
+  </data>
+  <data name="T1Name" xml:space="preserve">
+    <value>始祖巨人</value>
+  </data>
+  <data name="T1H" xml:space="preserve">
+    <value>身高: 13米 (初始型態)</value>
+  </data>
+  <data name="T1Desc" xml:space="preserve">
+    <value>所有巨人之源。擁有至高無上的「座標」秘術，能隔空篡改尤米爾子民的集體記憶，並能操控城牆內千萬名超大型巨人發動「地鳴」摧毀世界。</value>
+  </data>
+  <data name="T2Name" xml:space="preserve">
+    <value>女巨人</value>
+  </data>
+  <data name="T2H" xml:space="preserve">
+    <value>身高: 14米</value>
+  </data>
+  <data name="T2Desc" xml:space="preserve">
+    <value>亞妮·雷恩哈特持有。具備極高的全能機动適應力，能局部實行高強度硬質化結晶防禦，並能發出尖叫大範圍吸引並引導無垢巨人。</value>
+  </data>
+  <data name="T3Name" xml:space="preserve">
+    <value>野獸巨人</value>
+  </data>
+  <data name="T3H" xml:space="preserve">
+    <value>身高: 17米</value>
+  </data>
+  <data name="T3Desc" xml:space="preserve">
+    <value>吉克·葉卡持有。外表呈現猿猴般的野獸形態，具備極其恐怖的遠程碎石投擲殺傷力。因具備王血，其脊髓液能強制將人類巨人化。</value>
+  </data>
+  <data name="T4Name" xml:space="preserve">
+    <value>超大型巨人</value>
+  </data>
+  <data name="T4H" xml:space="preserve">
+    <value>身高: 60米</value>
+  </data>
+  <data name="T4Desc" xml:space="preserve">
+    <value>先後由貝爾托特、阿爾敏持有。體型如移動的高山，變身時能引發如同戰術核武器般的毀滅性熱能爆炸，可蒸發大範圍內的一切生命，並能隨意釋放高壓高溫蒸气障壁。</value>
+  </data>
+  <data name="T5Name" xml:space="preserve">
+    <value>盔甲巨人</value>
+  </data>
+  <data name="T5H" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="T5Desc" xml:space="preserve">
+    <value>萊納·布朗持有。全身覆蓋硬質化極高的重型骨骼外殼，猶如一台鋼鐵戰車，防禦力驚人。常利用驚人的體重配合衝刺，直接撞碎城牆甕城的大門。</value>
+  </data>
+  <data name="T6Name" xml:space="preserve">
+    <value>顎巨人</value>
+  </data>
+  <data name="T6H" xml:space="preserve">
+    <value>身高: 5米</value>
+  </data>
+  <data name="T6Desc" xml:space="preserve">
+    <value>先後由尤米爾、法爾可等人持有。體型最小但速度位居九大巨人首位。其爪與顎部具備九大巨人中最強的撕裂與破壞力，甚至能輕易咬碎女型巨人的超硬質化結晶。</value>
+  </data>
+  <data name="T7Name" xml:space="preserve">
+    <value>車力巨人</value>
+  </data>
+  <data name="T7H" xml:space="preserve">
+    <value>身高: 4米 (四足步行)</value>
+  </data>
+  <data name="T7Desc" xml:space="preserve">
+    <value>皮克·芬格爾持有。採用獨特的四足步行模式，擁有九大巨人中最強的恐怖續航耐力，能連續數月保持巨人化型態。背部能搭載重型機槍塔或重砲要塞等現代化軍事裝備。</value>
+  </data>
+  <data name="T8Name" xml:space="preserve">
+    <value>戰槌巨人</value>
+  </data>
+  <data name="T8H" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="T8Desc" xml:space="preserve">
+    <value>曾由戴巴家族持有，後被艾連吞噬。能將硬質化能力運用到極致，隨心所欲地製造出巨槌、地刺、甚至弓弩等各類致命兵器。本體可隱藏在地下並通過線纜遠程操控巨人。</value>
+  </data>
+  <data name="T9Name" xml:space="preserve">
+    <value>進擊的巨人 (本體)</value>
+  </data>
+  <data name="T9H" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="T9Desc" xml:space="preserve">
+    <value>艾連·葉卡当前持有的作戰主體。具備卓越的近身格鬥術、平衡的三維作戰指標、不屈的戰鬥意志，以及能越過時間長河窺探「未來繼承者記憶」的至高宿命異能。</value>
+  </data>
+  <data name="C1Name" xml:space="preserve">
+    <value>里維·阿卡曼</value>
+  </data>
+  <data name="C1Title" xml:space="preserve">
+    <value>調查兵團 特別作戰班兵長</value>
+  </data>
+  <data name="C1Bio" xml:space="preserve">
+    <value>因覺醒了阿卡曼一族的血統而擁有近乎超人類的身體反射神經。戰鬥力極強，操縱立體機動裝置的技術堪稱全人類最高壁壘，被公認為「人類最強士兵」。</value>
+  </data>
+  <data name="C2Name" xml:space="preserve">
+    <value>米卡莎·阿卡曼</value>
+  </data>
+  <data name="C2Title" xml:space="preserve">
+    <value>調查兵團 精銳核心士官</value>
+  </data>
+  <data name="C2Bio" xml:space="preserve">
+    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。與艾連同樣隸屬第104期訓練兵團畢業，內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡。</value>
+  </data>
+  <data name="C3Name" xml:space="preserve">
+    <value>阿爾敏·亞魯雷特</value>
+  </data>
+  <data name="C3Title" xml:space="preserve">
+    <value>調查兵團 第15代團長 / 超大型巨人持有者</value>
+  </data>
+  <data name="C3Bio" xml:space="preserve">
+    <value>艾連與米卡莎的童年玩伴。具備無可匹敵的戰略頭腦與大局觀，多次在絕境中制定關鍵戰術逆轉戰局，並在瑪利亞之牆奪還戰後繼承了超大型巨人的能力。</value>
+  </data>
+  <data name="C4Name" xml:space="preserve">
+    <value>漢吉·佐伊</value>
+  </data>
+  <data name="C4Title" xml:space="preserve">
+    <value>調查兵團 第14代團長</value>
+  </data>
+  <data name="C4Bio" xml:space="preserve">
+    <value>對巨人有著近乎狂熱的探求心，主持了兵團內所有關巨人的科學實驗與武器開發（如雷槍）。在艾爾文犧牲後接任第14代團長，展現出極高的責任感與智慧。</value>
+  </data>
+  <data name="C5Name" xml:space="preserve">
+    <value>艾爾文·史密斯</value>
+  </data>
+  <data name="C5Title" xml:space="preserve">
+    <value>調查兵團 前任第13代團長</value>
+  </data>
+  <data name="C5Bio" xml:space="preserve">
+    <value>擁有卓越的領導力、冷酷的決斷力與無與倫比的煽動力。開創「長距離索敵陣形」大幅降低兵團死亡率。為了探尋地下室的歷史真相，甘願化身帶領士兵赴死的惡魔。</value>
+  </data>
+  <data name="C6Name" xml:space="preserve">
+    <value>約翰·基爾斯坦</value>
+  </data>
+  <data name="C6Title" xml:space="preserve">
+    <value>調查兵團 現場前線指揮官</value>
+  </data>
+  <data name="C6Bio" xml:space="preserve">
+    <value>性格現實且認清自身軟弱，但也正因如此，他能站在普通士兵的角度冷靜看清現狀。具備極佳的現場局勢判斷力，深得同伴信賴，逐漸成長為優秀的指揮官。</value>
+  </data>
+  <data name="GearSectionTitle" xml:space="preserve">
+    <value>調查兵團戰術裝備與軍需資產</value>
+  </data>
+  <data name="SpecWeight" xml:space="preserve">
+    <value>全作戰重量</value>
+  </data>
+  <data name="SpecRisk" xml:space="preserve">
+    <value>操作危險級別</value>
+  </data>
+  <data name="G1Name" xml:space="preserve">
+    <value>立體機動裝置</value>
+  </data>
+  <data name="G1Tech" xml:space="preserve">
+    <value>技術分類: 高壓瓦斯氣動風錨複合驅動</value>
+  </data>
+  <data name="G1Desc" xml:space="preserve">
+    <value>人類對抗巨人的革命性發明。由瓦斯鋼瓶、操作手把、高強度鋼索捲筒與錨鉤組成，使士兵能擺脫重力束縛，在巨木或建築間進行三維空間的高速立體移動，精準切下巨人後頸肉。</value>
+  </data>
+  <data name="G2Name" xml:space="preserve">
+    <value>超硬質鋼刃</value>
+  </data>
+  <data name="G2Tech" xml:space="preserve">
+    <value>技術分類: 黑金竹冶煉高韌性特殊合金</value>
+  </data>
+  <data name="G2Desc" xml:space="preserve">
+    <value>兵團制式近戰兵器。採用帕拉迪島特產的黑金竹融合鋼材冶煉而成，兼具驚人的強韌度與鋒利度，能切開巨人的硬化組織。刀刃採用可更換的夾式設計，折斷後可即時卸下並替換新刃。</value>
+  </data>
+  <data name="G3Name" xml:space="preserve">
+    <value>雷槍</value>
+  </data>
+  <data name="G3Tech" xml:space="preserve">
+    <value>技術分類: 推進式高爆破甲外掛火箭兵器</value>
+  </data>
+  <data name="G3Desc" xml:space="preserve">
+    <value>為對抗「盔甲巨人」而由漢吉主導開發的秘密重型裝備。外形如金屬長槍，固定於前臂，發射後利用火箭推進刺入巨人體內，拉動引線會引爆高爆炸藥，其威力足以炸碎最堅硬的巨人鎧甲。</value>
   </data>
 </root>

@@ -151,11 +151,11 @@ html:lang(jp) {
     overflow: visible;                         /* 允許 badge 超出邊界 */
 }
 
-.aot-titan-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 87, 87, 0.4); /* 触碰时放射德古拉警戒红光 */
-    box-shadow: 0 20px 25px -5px rgba(255, 87, 87, 0.1);
-}
+    .aot-titan-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 223, 0, 0.5); /* 触碰时放射德古拉警戒gold光 */
+        box-shadow: 0 20px 25px -5px rgba(255, 223, 0, 0.15);
+    }
 
 /* 徽章容器：絕對定位在卡片右上角，flex 橫排 */
 .aot-titan-badges {
@@ -188,7 +188,7 @@ html:lang(jp) {
 
 .aot-titan-card:hover .aot-titan-badge {
     transform: scale(1.08) rotate(-3deg);
-    box-shadow: 0 8px 24px rgba(255, 87, 87, 0.35);
+    box-shadow: 0 8px 24px rgba(255, 223, 0, 0.15);
 }
 
 /* 平板 (768px+) */
