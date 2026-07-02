@@ -547,45 +547,41 @@
             </CascadingValue>
         </main>
 
-        <!-- TACTICAL SIDEBAR BOARD -->
-        <aside class="lg:col-span-1 flex flex-col gap-6">
-            <!-- Faction Selection Control Framework -->
-            <div class="card bg-base-100 p-5 shadow-2xl border border-neutral-content/10">
-                <h3 class="font-black text-xs uppercase tracking-widest text-error mb-2">@LocalizationService.FactionTitle</h3>
-                <p class="text-xs opacity-80 mb-4">@LocalizationService.FactionDesc</p>
-                <div class="flex flex-col gap-2">
-                    <button class="btn btn-sm btn-error h-auto py-2.5 px-4 text-center break-words whitespace-normal font-bold" @onclick='() => SelectFaction("marley")'>
-                        @LocalizationService.FactionBtn1
-                    </button>
-                    <button class="btn btn-sm btn-secondary h-auto py-2.5 px-4 text-center break-words whitespace-normal font-bold" @onclick='() => SelectFaction("paradis")'>
-                        @LocalizationService.FactionBtn2
-                    </button>
-                </div>
-            </div>
-        </aside>
-
     </div>
 
-    @if (_showModal)
-    {
-        <div class="modal modal-open">
-            <div class="modal-box border border-neutral-content/10 bg-base-200 shadow-2xl">
-                <h3 class="font-black text-lg uppercase text-white flex items-center gap-2">
-                    <i class="ti ti-sword"></i> @_modalTitle
-                    <span class="badge badge-@_modalTheme text-xs font-bold px-2 py-0.5">@_modalBadge</span>
-                </h3>
-                <p class="py-4 text-sm opacity-90 whitespace-pre-line leading-relaxed">
-                    @_modalBody
-                </p>
-                <div class="modal-action">
-                    <button class="btn btn-sm btn-@_modalTheme font-bold px-5" @onclick="CloseModal">
-                        @(_activeLang == "zh" ? "確認" : (_activeLang == "jp" ? "了解" : "Acknowledge"))
-                    </button>
-                </div>
-            </div>
-            <div class="modal-backdrop bg-black/60" @onclick="CloseModal"></div>
+
+    <!-- REVAMP FLOATING ACTION FACTION WIDGET -->
+    <div class="faction-widget-container">
+  
+      <!-- The Floating Toggle Button (Always Visible) -->
+      <button class="faction-trigger-btn" onclick="toggleFactionWidget()" aria-label="Toggle Faction Poll">
+        <i class="ti ti-chart-bar"></i>
+        <span class="poll-btn-text">陣營投票</span>
+      </button>
+
+      <!-- The Popup Card Component -->
+      <div class="faction-popup-card" id="factionPopup">
+        <div class="popup-header">
+          <h4 class="popup-title">陣營派系選擇</h4>
+          <button class="popup-close-btn" onclick="toggleFactionWidget()">✕</button>
         </div>
-    }
+    
+        <div class="popup-body">
+          <p class="popup-instruction">在最終衝突中，你的忠誠在哪裡？</p>
+      
+          <!-- High-Contrast Interactive Input Selection -->
+          <div class="faction-voting-options">
+            <button class="vote-option-btn marley-btn">馬萊帝國改革派</button>
+            <button class="vote-option-btn paradis-btn">帕拉迪島聯盟派</button>
+          </div>
+      
+          <div class="popup-divider"></div>
+          <p class="popup-quote">「什麼都無法捨棄的人，什麼也改變不了。」</p>
+        </div>
+      </div>
+  
+    </div>
+
 
     <!-- 4. SYSTEM FOOTER WRAPPER -->
     <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs border-t border-neutral">
@@ -596,6 +592,26 @@
     </footer>
 
 </div>
+
+
+<script>
+    function toggleFactionWidget() {
+        const popup = document.getElementById('factionPopup');
+        if (popup) {
+            popup.classList.toggle('is-active');
+            }
+    }
+
+    // Optional Close Security Action: Automatically minimizes open dropdown matrix if a user clicks outside bounds
+    window.addEventListener('click', (e) => {
+        const container = document.querySelector('.faction-widget-container');
+        const popup = document.getElementById('factionPopup');
+        if (popup && popup.classList.contains('is-active') && container && !container.contains(e.target)) {
+            popup.classList.remove('is-active');
+        }
+    });
+</script>
+
 
 @code {
     // FIXED DEFAULT LOCALIZATION VALUE: Alter this key variable string parameter to switch fallback profiles natively.

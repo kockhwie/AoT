@@ -60,7 +60,13 @@
     transform: rotateX(0deg) rotateY(0deg) translateZ(0);
     /* The default shadow applies a soft golden ambient glow inside the card bounds */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
+    /* FIX: Using 'transform 0.1s ease-out' is critical here! 
+     It enables instant frame calculations to keep pace with your finger 
+     without creating a heavy processing backlog in Safari. */
+    /* transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease; */
     transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
+    /* Forces Mobile Safari to handle the entire card block on its hardware-accelerated GPU layer */
+    will-change: transform;
 }
 
 

@@ -88,7 +88,7 @@
                         <!-- Centerpiece Immersive Image Window -->
                         <div class="artwork-glass-frame">
                             <div class="glass-reflection"></div>
-                            <img src="/img/titans/@titan.TypeBadge" class="chassis-art" alt="@titan.TypeBadge" />
+                            <img src="/img/titans/cards/@titan.TypeBadge" class="chassis-art" alt="@titan.TypeBadge" />
                             <div class="laser-gold-trim"></div>
                         </div>
 
@@ -110,10 +110,10 @@
 
                         <div class="chassis-divider"></div>
 
-                        <div class="flex flex-col gap-2.5 text-xs">
+                        <div class="flex flex-col gap-1.5 text-xs">
                             <!-- 力量指标 -->
                             <div>
-                                <div class="flex justify-between mb-1">
+                                <div class="flex justify-between">
                                     <span class="">@LocalizationService.GetString("ParamPower")</span>
                                     <span class="text-primary font-bold">@titan.Power%</span>
                                 </div>
@@ -122,7 +122,7 @@
 
                             <!-- 速度指标 -->
                             <div>
-                                <div class="flex justify-between mb-1">
+                                <div class="flex justify-between">
                                     <span class="">@LocalizationService.GetString("ParamSpeed")</span>
                                     <span class="text-secondary font-bold">@titan.Speed%</span>
                                 </div>
@@ -131,7 +131,7 @@
 
                             <!-- 硬度/特殊能力指标 -->
                             <div>
-                                <div class="flex justify-between  mb-1">
+                                <div class="flex justify-between">
                                     <span class="">@LocalizationService.GetString("ParamArmor")</span>
                                     <span class="text-accent font-bold">@titan.Armor%</span>
                                 </div>
@@ -140,10 +140,7 @@
                         </div>
 
                     </div>
-                </div>
-
-
-               
+                </div>               
 
             }
         </div>
@@ -222,38 +219,72 @@
 
 <script>
 
-document.querySelectorAll('.hype-card-container').forEach(container => {
-const card = container.querySelector('.titan-hype-card');
-const foil = container.querySelector('.holo-foil-layer');
+    document.querySelectorAll('.hype-card-container').forEach(container => {
+      const card = container.querySelector('.titan-hype-card');
+      const foil = container.querySelector('.holo-foil-layer');
 
-container.addEventListener('mousemove', (e) => {
-const rect = container.getBoundingClientRect();
+      // Unified animation processor function
+      function processMove(clientX, clientY) {
+        const rect = container.getBoundingClientRect();
 
-// Calculate cursor position relative to the container (value between 0 and 1)
-const x = (e.clientX - rect.left) / rect.width;
-const y = (e.clientY - rect.top) / rect.height;
+        // Calculate coordinates relative to the container box boundaries (value between 0 and 1)
+        const x = (clientX - rect.left) / rect.width;
+        const y = (clientY - rect.top) / rect.height;
 
-// Convert to tilt degrees (Max tilt: 12deg X, 12deg Y)
-const tiltX = (0.5 - y) * 24;
-const tiltY = (x - 0.5) * 24;
+        // Boundary cap safety: keeps values strictly clamped between 0 and 1
+        const clampedX = Math.max(0, Math.min(1, x));
+        const clampedY = Math.max(0, Math.min(1, y));
 
-// Apply the 3D tilt transformation to the card
-card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(0)`;
+        // Convert values to tilt degrees (Max tilt parameters: 12deg X, 12deg Y)
+        const tiltX = (0.5 - clampedY) * 24;
+        const tiltY = (clampedX - 0.5) * 24;
 
-// Map cursor positions directly onto the background gradient positions of the foil
-if (foil) {
-foil.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
-}
-});
+        // Apply the 3D tilt transformation directly to the GPU plane
+        card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(0)`;
 
-// Smoothly snap back to origin configuration on mouse leave
-container.addEventListener('mouseleave', () => {
-card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-if (foil) {
-foil.style.backgroundPosition = '0% 0%';
-}
-});
-});
+        // Map the touch positions smoothly onto the background gradient positions of the foil
+        if (foil) {
+          foil.style.backgroundPosition = `${clampedX * 100}% ${clampedY * 100}%`;
+        }
+      }
+
+      function processReset() {
+        card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+        if (foil) {
+          foil.style.backgroundPosition = '0% 0%';
+        }
+      }
+
+      /* ==========================================================================
+         1. DESKTOP MOUSE EVENT LISTENERS
+         ========================================================================== */
+      container.addEventListener('mousemove', (e) => {
+        processMove(e.clientX, e.clientY);
+      });
+
+      container.addEventListener('mouseleave', () => {
+        processReset();
+      });
+
+      /* ==========================================================================
+         2. MOBILE SAFARI & TOUCH EVENT LISTENERS (FIXES MOBILE PERFORMANCE)
+         ========================================================================== */
+      container.addEventListener('touchstart', (e) => {
+        // Collect coordinates from the first active finger touch point tracking line
+        processMove(e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+
+      container.addEventListener('touchmove', (e) => {
+        // If a user drags inside a card wrapper area, process tracking parameters
+        processMove(e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+
+      container.addEventListener('touchend', () => {
+        // Smoothly snap back to origin when the finger leaves the touch panel
+        processReset();
+      });
+    });
+
 </script>
 
 @code {
@@ -276,39 +307,39 @@ foil.style.backgroundPosition = '0% 0%';
     private readonly List<TitanModel> _titanDatabase = new()
     {
         new TitanModel {
-            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "founding-titan-badge.png", Theme = "founding",
+            NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", TypeBadge = "founding-titan-card.webp", Theme = "founding",
             Power = 100, Speed = 60, Armor = 100
         },
         new TitanModel {
-            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "female-titan-badge.png", Theme = "female",      
+            NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", TypeBadge = "female-titan-card.webp", Theme = "female",
             Power = 85, Speed = 95, Armor = 80
         },
         new TitanModel {
-            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "beast-titan-badge.png", Theme = "beast",
+            NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", TypeBadge = "beast-titan-card.webp", Theme = "beast",
             Power = 90, Speed = 55, Armor = 70
         },
         new TitanModel {
-            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "colossal-titan-badge.png", Theme = "colossal",
+            NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", TypeBadge = "colossal-titan-card.webp", Theme = "colossal",
             Power = 100, Speed = 20, Armor = 90
         },
         new TitanModel {
-            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "armored-titan-badge.png", Theme = "armored",
+            NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", TypeBadge = "armored-titan-card.webp", Theme = "armored",
             Power = 90, Speed = 65, Armor = 95
         },
         new TitanModel {
-            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "jaw-titan-badge.png",   Theme = "jaw",
+            NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", TypeBadge = "jaw-titan-card.webp",   Theme = "jaw",
             Power = 75, Speed = 100, Armor = 75
         },
         new TitanModel {
-            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "cart-titan-badge.png",  Theme = "cart",
+            NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", TypeBadge = "cart-titan-card.webp",  Theme = "cart",
             Power = 50, Speed = 85, Armor = 60
         },
         new TitanModel {
-            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "warhammer-titan-badge.png", Theme = "warhammer",
+            NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", TypeBadge = "warhammer-titan-card.webp", Theme = "warhammer",
             Power = 95, Speed = 75, Armor = 95
         },
         new TitanModel {
-            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "attack-titan-badge.png",    Theme = "attack",
+            NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", TypeBadge = "attack-titan-card.webp",    Theme = "attack",
             Power = 85, Speed = 85, Armor = 80
         }
     };
