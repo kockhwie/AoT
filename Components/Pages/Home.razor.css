@@ -1,44 +1,232 @@
 /* ==========================================================================
+   0. DESIGN SYSTEM CONSTANTS
+   Typography sizes are declared directly in class rules below to prevent Blazor CSS 
+   isolation compiling bugs from collapsing variable scopes.
+   ========================================================================== */
+
+/* ==========================================================================
    1. GLOBAL RESPONSIVE LAYOUT CONTAINER
    ========================================================================== */
-/* Paste this around your card blocks in your HTML if you want them to automatically 
-   wrap and align perfectly from huge desktop monitors down to mobile screens! */
 .titan-registry-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 16px;
     padding: 10px;
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
     box-sizing: border-box;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .titan-registry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .titan-registry-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
+/* ==========================================================================
+   2. HERO COMPONENT STYLING
+   ========================================================================== */
+.aot-hero-badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    background-color: #ef4444; /* badge-error */
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.aot-hero-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.aot-hero-desc {
+    font-size: 0.9375rem; /* 15px */
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 42rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .aot-hero-title {
+        font-size: 1.75rem; /* 28px */
+    }
+    .aot-hero-desc {
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+.aot-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.aot-hero-btn {
+    font-weight: 700;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
 
 /* ==========================================================================
-   2. 3D CARD CORE SHELL & MOBILE SCALING
+   3. SECTION TITLE COMPONENT
+   ========================================================================== */
+.aot-section-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-primary, #661ae6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.625rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 767.98px) {
+    .aot-section-title {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* ==========================================================================
+   4. CHARACTER CARD COMPONENT
+   ========================================================================== */
+.aot-card {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85) 0%, rgba(12, 13, 16, 0.95) 100%) !important;
+    border: 1px solid rgba(255, 215, 0, 0.15) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.aot-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.35) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+}
+
+.aot-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.aot-char-name {
+    font-weight: 900;
+    font-size: 1.25rem; /* 20px */
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.aot-char-title {
+    font-size: 0.875rem; /* 14px */
+    color: #dfbb6b;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.125rem;
+    letter-spacing: 0.02em;
+}
+
+.aot-char-badge {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 800;
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 2px 8px !important;
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    color: #ef4444 !important;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
+}
+
+.aot-char-bio {
+    font-size: 0.875rem; /* 14px */
+    color: #d1d5db;
+    line-height: 1.5;
+    min-height: 54px;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 767.98px) {
+    .aot-char-name {
+        font-size: 1.1rem; /* 17.6px */
+    }
+    .aot-char-title {
+        font-size: 0.8125rem; /* 13px */
+    }
+    .aot-char-bio {
+        font-size: 0.9375rem; /* 15px */
+    }
+}
+
+.aot-card-divider {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+    opacity: 1 !important;
+}
+
+.aot-char-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8125rem; /* 13px */
+}
+
+.aot-stat-label {
+    color: #878170;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.aot-stat-val {
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   5. TITAN CARD CORE SHELL & MOBILE SCALING
    ========================================================================== */
 .hype-card-container {
     perspective: 1200px;
     display: flex;
-    padding: 10px; /* Reduced from 30px to fit mobile screens comfortably */
+    padding: 10px;
     background: transparent;
     box-sizing: border-box;
     justify-content: center;
-
-    /* Mobile Safeguard: Scales the card down perfectly on small screens */
-    /* CRUCIAL GRID SETTING: 
-     Allows the container box to expand fluidly, sets 340px as the minimum breakpoint,
-     and mathematically ensures that exactly 3 blocks align on large views. */
     flex: 1 1 340px;
     max-width: 390px;
 }
 
-/* ==========================================================================
-   1. UNIFIED PREMIUM CARD BASIS (FORCES GOLD UNIFORMITY)
-   ========================================================================== */
 .titan-hype-card {
     width: 100%;
     max-width: 370px;
@@ -50,56 +238,36 @@
     flex-direction: column;
     border-radius: 24px;
     overflow: hidden;
-    /* CRUCIAL FIX: Forced background mix that anchors the deep crimson/brown game card base tone */
     background: radial-gradient(circle at 50% 25%, #251212 0%, #150d0a 55%, #050505 100%);
-    /* FIXED: The main outer border structural frame is ALWAYS a solid, uniform premium gold wire */
     border: 1.5px solid rgba(255, 215, 0, 0.45) !important;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: rotateX(0deg) rotateY(0deg) translateZ(0);
-    /* The default shadow applies a soft golden ambient glow inside the card bounds */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
-    /* FIX: Using 'transform 0.1s ease-out' is critical here! 
-     It enables instant frame calculations to keep pace with your finger 
-     without creating a heavy processing backlog in Safari. */
-    /* transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease; */
     transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
-    /* Forces Mobile Safari to handle the entire card block on its hardware-accelerated GPU layer */
     will-change: transform;
 }
 
-
-
-/* Responsive Fluid Resizing for Mobile Displays (e.g., iPhone/Android) */
 @media (max-width: 420px) {
     .titan-hype-card {
-         
-        height: auto; /* Allow text block flow expansion */
+        height: auto;
         min-height: 520px;
-        padding: 20px; /* Tighter padding for compact displays */
+        padding: 20px;
     }
 
     .titan-display-title {
-        /* CLAMP FORMULA FOR PHONES:
-       - 1.3rem is the absolute smallest size allowed (so text never gets microscopic).
-       - 8vw scales dynamically with the phone's screen width.
-       - 1.7rem is the maximum size allowed on mobile so short names don't burst out. */
         font-size: clamp(1.3rem, 7.5vw, 1.7rem) !important;
-        /* Optional: If a phone screen gets extremely narrow, this cleanly cuts 
-       off the text with a premium dot-dot-dot (...) instead of breaking the layout */
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
     .artwork-glass-frame {
-        height: 170px; /* Slightly shorten artwork block on phones to save space */
+        height: 170px;
     }
-
 }
-/* ==========================================================================
-   3. POLISHED HOLO ENGINE (MIXES INDIVIDUAL COLOR WITH THE GOLD SHINE)
-   ========================================================================== */
+
+/* Hologram Scanning/Foil Styling */
 .holo-foil-layer {
     position: absolute;
     top: 0;
@@ -111,40 +279,32 @@
     opacity: 0;
     border-radius: 24px;
     mix-blend-mode: color-dodge;
-    /* THE PERFECT FOIL COMPOSITION:
-     The sheen tracks bright white-gold in the center, but bleeds into the custom 
-     titan theme variable (--theme-aura) at the edges for an organic color flash! */
-    background: linear-gradient( 135deg, transparent 0%, rgba(255, 223, 128, 0) 25%, rgba(255, 235, 160, 0.35) 45%, /* Core Platinum Gold Flash */
-    var(--theme-aura) 52%, /* Custom Titan Elemental Aura shows up here */
-    rgba(139, 101, 8, 0.2) 62%, /* Bronze Shadow trail */
-    transparent 75% );
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 223, 128, 0) 25%, rgba(255, 235, 160, 0.35) 45%, var(--theme-aura) 52%, rgba(139, 101, 8, 0.2) 62%, transparent 75%);
     background-size: 200% 200%;
     background-position: 0% 0%;
     transition: opacity 0.4s ease, background-position 0.15s ease-out;
 }
 
-/* FIXED SCANLINES: Subdued significantly so they do not overpower the color gradients */
 .hologram-scanlines {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Pushed down behind the content text blocks */
+    z-index: 1;
     pointer-events: none;
-    opacity: 0.15; /* Extremely faint line density to allow the background color to show through */
+    opacity: 0.15;
     border-radius: 24px;
-    background: linear-gradient(rgba(124,118,118,0.5) 10%, transparent 50%);
+    background: linear-gradient(rgba(124, 118, 118, 0.5) 10%, transparent 50%);
     background-size: 100% 4px;
 }
-/* ==========================================================================
-   4. INTERNAL INTERFACE COMPONENTS
-   ========================================================================== */
+
+/* Titan Component Inner Details */
 .meta-registry-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 }
 
 .registry-serial {
@@ -155,10 +315,6 @@
     letter-spacing: 2px;
 }
 
-/* ==========================================================================
-   2. UNIFIED TEXT ELEMENTS (PREVENTS NEON OVERRUN)
-   ========================================================================== */
-/* The header components must stay gold to look like an authentic stamped foil card */
 .class-node {
     background: linear-gradient(135deg, #aa7c11, #dfbb6b);
     color: #0c0a09;
@@ -168,21 +324,16 @@
     padding: 1px 6px;
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
- 
 }
 
-/* ==========================================================================
-   FIXED AUTOSIZING TITLE ENGINE (DYNAMIC RESPONSIVE TEXT)
-   ========================================================================== */
 .chassis-header {
-    margin-bottom: 18px;
+    margin-bottom: 5px;
     width: 100%;
 }
 
-/* 1. Turns this row area into a responsive measurement sandbox */
 .title-container {
     width: 100%;
-    container-type: inline-size; /* Instructs sub-elements to read this container's actual width */
+    container-type: inline-size;
 }
 
 .titan-display-title {
@@ -192,12 +343,7 @@
     margin: 0;
     letter-spacing: -0.5px;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.12);
-    /* CRUCIAL BLOCK INSULATION: */
-    white-space: nowrap; /* Forces text to stay on 1 single row line */
-    /* MATH FORMULA FOR PERFECT SIZING:
-     '2rem' is the default size for short titles. 
-     '11cqw' tells the browser to drop the font size down if it approaches 11% of the row width. 
-     'min()' ensures it picks the smaller option, preventing text overflow safely! */
+    white-space: nowrap;
     font-size: min(2rem, 11cqw);
 }
 
@@ -231,7 +377,6 @@
     pointer-events: none;
 }
 
-/* The subtle laser line anchoring the picture frame remains gold */
 .laser-gold-trim {
     position: absolute;
     bottom: 0;
@@ -242,18 +387,10 @@
     z-index: 3;
 }
 
-/* The decorative underline bar underneath inheritor names stays uniform */
-.gold-neon-glow {
-    color: #ffffff !important;
-    font-weight: 800;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
-    background: linear-gradient(180deg, transparent 75%, rgba(255, 215, 0, 0.35) 75%) !important;
-}
-
 .specs-dashboard-grid {
     display: flex;
     justify-content: space-between;
-    margin-top: 22px;
+    margin-top: 8px;
 }
 
 .spec-node {
@@ -267,19 +404,11 @@
 }
 
 .node-hdr {
-    font-size: 0.6rem;
+    font-size: 0.65rem; /* Increased size for mobile/desktop readability */
     font-weight: 700;
-    color: #615d55;
-    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.95); /* Brighter, readable color instead of dark grey */
+    letter-spacing: 1px;
 }
-
-.node-body {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #e6e3dd;
-}
-
- 
 
 .chassis-divider {
     height: 1px;
@@ -293,18 +422,28 @@
 
 .lore-text-body {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.875rem; /* 14px — identical to other cards */
     line-height: 1.25;
-    color: #a6a195;
+    color: #a6a195; /* Muted warm grey */
     text-align: justify;
 }
 
-/* ==========================================================================
-   4. HOVER INTERACTION RULES (FORCES SHARP GOLD BORDER POP)
-   ========================================================================== */
+.titan-stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.200rem;
+    font-size: 0.65rem; /* 12px */
+}
+
+.titan-stat-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Hover & Themes */
 .hype-card-container:hover .titan-hype-card {
-    border-color: rgba(255, 215, 0, 0.95) !important; /* Forces frame back to brilliant gold on mouseover */
-    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45), 0 50px 95px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.1), 0 0 35px var(--theme-aura); /* Projects the custom titan color outwards onto your page grid! */
+    border-color: rgba(255, 215, 0, 0.95) !important;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45), 0 50px 95px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.1), 0 0 35px var(--theme-aura);
 }
 
 .hype-card-container:hover .chassis-art {
@@ -315,73 +454,265 @@
     opacity: 0.8;
 }
 
-/* ==========================================================================
-   5. REFACTORED 9 TITAN THEME DESIGN (CLEAN CHARACTER THEMES)
-   ========================================================================== */
-/* We no longer change borders or texts here. We ONLY assign a rich background radial 
-   tint overlay and inject the unique flare color into the `--theme-aura` token. */
-
-/* 1. 始祖巨人 (Cosmic Celestial Purple) */
+/* Themes declarations */
 .theme-founding {
     --theme-aura: rgba(168, 85, 247, 0.5);
     background: radial-gradient(circle at 50% 25%, #2a0f3d 0%, #11091c 45%, #050505 100%) !important;
 }
 
-/* 2. 女巨人 (Electro Crystal Cyan-Pink Sheen) */
 .theme-female {
     --theme-aura: rgba(236, 72, 153, 0.5);
     background: radial-gradient(circle at 50% 25%, #3c0d25 0%, #1a0813 45%, #050505 100%) !important;
 }
 
-/* 3. 野獸巨人 (Primal Golden Ochre Earth) */
 .theme-beast {
     --theme-aura: rgba(217, 119, 6, 0.5);
     background: radial-gradient(circle at 50% 25%, #361c07 0%, #1c1006 45%, #050505 100%) !important;
 }
 
-/* 4. 超大型巨人 (Nuclear Ash Flare & Crimson) */
 .theme-colossal {
     --theme-aura: rgba(239, 68, 68, 0.6);
     background: radial-gradient(circle at 50% 25%, #3d0a0a 0%, #1c0707 45%, #050505 100%) !important;
 }
 
-/* 5. 盔甲巨人 (Hardened Industrial Bronze Steel) */
 .theme-armored {
     --theme-aura: rgba(168, 162, 158, 0.45);
     background: radial-gradient(circle at 50% 25%, #292624 0%, #141312 45%, #050505 100%) !important;
 }
 
-/* 6. 顎巨人 (High-Velocity Volt Orange Yellow) */
 .theme-jaw {
     --theme-aura: rgba(245, 158, 11, 0.55);
     background: radial-gradient(circle at 50% 25%, #3d2305 0%, #1a1004 45%, #050505 100%) !important;
 }
 
-/* 7. 車力巨人 (Tactical Moss Military Olive) */
 .theme-cart {
     --theme-aura: rgba(132, 204, 22, 0.45);
     background: radial-gradient(circle at 50% 25%, #1e2e07 0%, #0f1704 45%, #050505 100%) !important;
 }
 
-/* 8. 戰槌巨人 (Alabaster Hard-Skin White & Soft Quartz Pink Aura) */
 .theme-warhammer {
-    /* Injects a gorgeous pale quartz-pink tint directly into the gold holographic reflection track */
     --theme-aura: rgba(244, 180, 195, 0.45);
-    /* Creates a bright alabaster center focal point that fades out to rich burgundy-black edges */
-    background: radial-gradient( circle at 50% 25%, #3f3537 0%, /* Soft muted flesh/pink-tinted gray shadow core */
-    #1f1c1d 45%, /* Warm dark bone-white shadow veil */
-    #050505 100% /* Deep charcoal velvet floor anchor */
-    ) !important;
+    background: radial-gradient(circle at 50% 25%, #3f3537 0%, #1f1c1d 45%, #050505 100%) !important;
 }
 
-/* 9. 進擊的巨人 (Vivid Emerald Green Aura) */
 .theme-attack {
     --theme-aura: rgba(34, 197, 94, 0.5);
     background: radial-gradient(circle at 50% 25%, #0a3317 0%, #051a0b 45%, #050505 100%) !important;
 }
 
-.titan-power-progresss {
- 
- 
-    
+/* ==========================================================================
+   MOBILE INTERACTION ANIMATIONS
+   ========================================================================== */
+@keyframes goldBreath {
+    0%, 100% {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 14px rgba(255,215,0,0.12);
+        border-color: rgba(255, 215, 0, 0.35);
+    }
+    50% {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 28px rgba(255,215,0,0.32), 0 0 18px var(--theme-aura);
+        border-color: rgba(255, 215, 0, 0.75);
+    }
+}
+
+@keyframes tapShimmer {
+    0%   { transform: translateY(0px)   rotateX(0deg)   rotateY(0deg)   scale(1)    translateZ(0); }
+    20%  { transform: translateY(-12px) rotateX(10deg)  rotateY(-8deg)  scale(1.04) translateZ(0); }
+    45%  { transform: translateY(-16px) rotateX(-6deg)  rotateY(6deg)   scale(1.05) translateZ(0); }
+    70%  { transform: translateY(-8px)  rotateX(4deg)   rotateY(-3deg)  scale(1.02) translateZ(0); }
+    100% { transform: translateY(0px)   rotateX(0deg)   rotateY(0deg)   scale(1)    translateZ(0); }
+}
+
+@keyframes foilSweep {
+    0%   { background-position: -150% -150%; opacity: 0; }
+    15%  { opacity: 0.85; }
+    75%  { opacity: 0.65; }
+    100% { background-position: 250%  250%;  opacity: 0; }
+}
+
+@media (hover: none) {
+    .titan-hype-card {
+        animation: goldBreath 3.5s ease-in-out infinite;
+    }
+    .hype-card-container {
+        touch-action: manipulation;
+    }
+}
+
+.titan-hype-card.is-tapped {
+    animation: tapShimmer 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    border-color: rgba(255, 215, 0, 0.95) !important;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.45), 0 50px 95px rgba(0,0,0,0.9), inset 0 0 30px rgba(255,215,0,0.2), 0 0 40px var(--theme-aura) !important;
+}
+
+.titan-hype-card.is-tapped .holo-foil-layer {
+    animation: foilSweep 0.75s ease-out forwards;
+}
+
+/* ==========================================================================
+   6. GEAR CARD COMPONENT
+   ========================================================================== */
+.aot-gear-card {
+    background: linear-gradient(135deg, rgba(20, 24, 28, 0.85) 0%, rgba(10, 12, 14, 0.95) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.aot-gear-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Division-specific borders and theme highlights (all-around borders, no corner curve mismatch) */
+.aot-gear-card.gear-theme-mobility {
+    border-color: rgba(56, 189, 248, 0.15) !important;
+}
+.aot-gear-card.gear-theme-mobility:hover {
+    border-color: rgba(56, 189, 248, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.08) !important;
+}
+.aot-gear-card.gear-theme-mobility .aot-gear-badge {
+    background: rgba(56, 189, 248, 0.1) !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    color: #38bdf8 !important;
+}
+
+.aot-gear-card.gear-theme-weapon {
+    border-color: rgba(167, 139, 250, 0.15) !important;
+}
+.aot-gear-card.gear-theme-weapon:hover {
+    border-color: rgba(167, 139, 250, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(167, 139, 250, 0.08) !important;
+}
+.aot-gear-card.gear-theme-weapon .aot-gear-badge {
+    background: rgba(167, 139, 250, 0.1) !important;
+    border-color: rgba(167, 139, 250, 0.3) !important;
+    color: #a78bfa !important;
+}
+
+.aot-gear-card.gear-theme-heavy-weapon {
+    border-color: rgba(244, 63, 94, 0.15) !important;
+}
+.aot-gear-card.gear-theme-heavy-weapon:hover {
+    border-color: rgba(244, 63, 94, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(244, 63, 94, 0.08) !important;
+}
+.aot-gear-card.gear-theme-heavy-weapon .aot-gear-badge {
+    background: rgba(244, 63, 94, 0.1) !important;
+    border-color: rgba(244, 63, 94, 0.3) !important;
+    color: #f43f5e !important;
+}
+
+.aot-gear-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.aot-gear-title {
+    font-weight: 900;
+    font-size: 1.25rem; /* 20px */
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.aot-gear-badge {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 800;
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 2px 8px !important;
+    letter-spacing: 0.05em;
+}
+
+.aot-gear-tech {
+    font-size: 0.875rem; /* 14px */
+    color: #dfbb6b; /* Muted gold for tech specifications */
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.875rem;
+}
+
+.aot-gear-desc {
+    font-size: 0.875rem; /* 14px */
+    color: #d1d5db;
+    line-height: 1.5;
+    min-height: 50px;
+    margin: 0 0 1.25rem 0;
+    text-align: justify;
+}
+
+@media (max-width: 767.98px) {
+    .aot-gear-title {
+        font-size: 1.1rem; /* 17.6px */
+    }
+    .aot-gear-tech {
+        font-size: 0.8125rem; /* 13px */
+    }
+}
+
+.aot-gear-specs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8125rem; /* 13px */
+}
+
+.aot-gear-specs div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.aot-gear-specs span:first-child {
+    color: #878170;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.aot-gear-specs span:last-child {
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   7. TIMELINE COMPONENT
+   ========================================================================== */
+.aot-timeline-box {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7) 0%, rgba(12, 13, 16, 0.9) 100%) !important;
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.aot-timeline-time {
+    font-family: inherit; /* standard system sans-serif */
+    font-weight: 900;
+    color: #dfbb6b; /* Brass gold */
+    font-size: 0.875rem; /* 14px */
+    display: block;
+    letter-spacing: 0.05em;
+}
+
+.aot-timeline-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0.25rem;
+    font-size: 0.875rem; /* 14px */
+}
+
+.aot-timeline-desc {
+    opacity: 0.7;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    font-size: 0.875rem; /* 14px */
 }

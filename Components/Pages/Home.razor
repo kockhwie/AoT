@@ -1,27 +1,28 @@
 @page "/"
 @inject AppLocalizationService LocalizationService
+
 <!-- 区域 1：顶部核心巨幕区 -->
 <div class="aot-hero">
     <div>
-        <span class="badge badge-error text-xs font-black tracking-widest uppercase px-2.5 py-1 mb-3">
+        <span class="aot-hero-badge">
             @LocalizationService.GetString("HeroTag")
         </span>
-        <h1 class="text-3xl  lg:text-4xl font-black uppercase text-white leading-tight mb-3">
+        <h1 class="aot-hero-title">
             @LocalizationService.GetString("HeroTitle")
         </h1>
-        <p class="text-xs opacity-80 leading-relaxed max-w-2xl mb-6">
+        <p class="aot-hero-desc">
             @LocalizationService.GetString("HeroDesc")
         </p>
-        <div class="flex flex-wrap gap-2">
-            <button class="btn btn-xs md:btn-sm btn-primary font-bold px-5">@LocalizationService.GetString("BtnIntel")</button>
-            <button class="btn btn-xs md:btn-sm btn-outline btn-secondary ">@LocalizationService.GetString("BtnGallery")</button>
+        <div class="aot-hero-actions">
+            <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary">@LocalizationService.GetString("BtnIntel")</button>
+            <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary">@LocalizationService.GetString("BtnGallery")</button>
         </div>
     </div>
 </div>
 
 <!-- 區域 2：調查兵團精銳作戰檔案  -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+    <h3 class="aot-section-title">
         <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")       
     </h3>
     
@@ -30,20 +31,20 @@
         {
             <div class="aot-card">
                 <div class="aot-card-body">
-                    <div class="flex justify-between items-start gap-2 mb-2">
+                    <div class="aot-card-header">
                         <div>
-                            <h4 class="font-black text-base md:text-lg lg:text-xl text-white">@LocalizationService.GetString(member.NameKey)</h4>
-                            <span class="text-xs text-secondary">@LocalizationService.GetString(member.TitleKey)</span>
+                            <h4 class="aot-char-name">@LocalizationService.GetString(member.NameKey)</h4>
+                            <span class="aot-char-title">@LocalizationService.GetString(member.TitleKey)</span>
                         </div>
-                        <div class="badge badge-xs md:badge-sm badge-outline badge-error font-bold">@member.Rank</div>
+                        <div class="badge badge-outline badge-error aot-char-badge">@member.Rank</div>
                     </div>
-                    <p class="text-xs md:text-xs lg:text-sm opacity-75 min-h-[54px] leading-relaxed">
+                    <p class="aot-char-bio">
                         @LocalizationService.GetString(member.BioKey)
                     </p>
-                    <div class="divider my-2.5 opacity-5"></div>
-                    <div class="flex justify-between items-center text-xxs">
-                        <div><span class="opacity-70">@LocalizationService.GetString("StatKills"):</span> <span class="font-black text-error">@member.Kills</span></div>
-                        <div><span class="opacity-70">@LocalizationService.GetString("StatWits"):</span> <span class="font-black text-success">@member.Wits/10</span></div>
+                    <div class="divider aot-card-divider"></div>
+                    <div class="aot-char-stats">
+                        <div><span class="aot-stat-label">@LocalizationService.GetString("StatKills"):</span> <span class="aot-stat-val text-error">@member.Kills</span></div>
+                        <div><span class="aot-stat-label">@LocalizationService.GetString("StatWits"):</span> <span class="aot-stat-val text-success">@member.Wits/10</span></div>
                     </div>
                 </div>
             </div>
@@ -53,135 +54,120 @@
 
 <!-- 新增区域 3：九大巨人能力图谱面板   -->
 <div class="flex flex-col gap-2">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+    <h3 class="aot-section-title">
         <i class="ti ti-dna-2"></i> @LocalizationService.GetString("TitanSectionTitle")
     </h3>
     
-    <!-- 三端自适应网格容器 (手机1列，平板2列，台式PC3列) -->
-   
+    <div class="titan-registry-grid">
+        @foreach (var titan in _titanDatabase)
+        {
+            <div class="hype-card-container">
+                <div class="titan-hype-card theme-@titan.Theme">
 
-        <div class="titan-registry-grid">
- 
-            @foreach (var titan in _titanDatabase)
-            {
- 
-                <div class="hype-card-container">
-                <div class="titan-hype-card  theme-@titan.Theme">
+                    <!-- Holographic Flare Overlay Sheets -->
+                    <div class="holo-foil-layer"></div>
+                    <div class="hologram-scanlines"></div>
 
-                        <!-- Holographic Flare Overlay Sheets -->
-                        <div class="holo-foil-layer"></div>
-                        <div class="hologram-scanlines"></div>
-
-                        <!-- Top Row Meta Registry Labels -->
-                        <div class="meta-registry-row">
-                            <span class="registry-serial"></span>
-                            <div class="class-node">@LocalizationService.GetString(titan.Theme)</div>
-                        </div>
-
-                        <!-- Clean Full-Width Header Title -->
-                        <div class="chassis-header">
-                            <div class="title-container">
-                                <h2 class="titan-display-title">@LocalizationService.GetString(titan.NameKey)</h2>
-                            </div>
-                        </div>
-
-                        <!-- Centerpiece Immersive Image Window -->
-                        <div class="artwork-glass-frame">
-                            <div class="glass-reflection"></div>
-                            <img src="/img/titans/cards/@titan.TypeBadge" class="chassis-art" alt="@titan.TypeBadge" />
-                            <div class="laser-gold-trim"></div>
-                        </div>
-
-                        <!-- Spec Analytics Dashboard Grid -->
-                        <div class="specs-dashboard-grid">
-                            <div class="spec-node">                                 
-                            </div>
-                            <div class="spec-node align-right"> 
-                                <div class="node-hdr">@LocalizationService.GetString(titan.HeightKey)</div>                                
-                            </div>
-                        </div>                        
-
-                        <!-- Lore Paragraph Text Box -->
-                        <div class="lore-summary-area">
-                            <p class="lore-text-body">
-                            @LocalizationService.GetString(titan.DescKey)
-                            </p>
-                        </div>
-
-                        <div class="chassis-divider"></div>
-
-                        <div class="flex flex-col gap-1.5 text-xs">
-                            <!-- 力量指标 -->
-                            <div>
-                                <div class="flex justify-between">
-                                    <span class="">@LocalizationService.GetString("ParamPower")</span>
-                                    <span class="text-primary font-bold">@titan.Power%</span>
-                                </div>
-                                <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
-                            </div>
-
-                            <!-- 速度指标 -->
-                            <div>
-                                <div class="flex justify-between">
-                                    <span class="">@LocalizationService.GetString("ParamSpeed")</span>
-                                    <span class="text-secondary font-bold">@titan.Speed%</span>
-                                </div>
-                                <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
-                            </div>
-
-                            <!-- 硬度/特殊能力指标 -->
-                            <div>
-                                <div class="flex justify-between">
-                                    <span class="">@LocalizationService.GetString("ParamArmor")</span>
-                                    <span class="text-accent font-bold">@titan.Armor%</span>
-                                </div>
-                                <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
-                            </div>
-                        </div>
-
+                    <!-- Top Row Meta Registry Labels -->
+                    <div class="meta-registry-row">
+                        <span class="registry-serial"></span>
+                        <div class="class-node">@LocalizationService.GetString(titan.Theme)</div>
                     </div>
-                </div>               
 
-            }
-        </div>
+                    <!-- Clean Full-Width Header Title -->
+                    <div class="chassis-header">
+                        <div class="title-container">
+                            <h2 class="titan-display-title">@LocalizationService.GetString(titan.NameKey)</h2>
+                        </div>
+                    </div>
+
+                    <!-- Centerpiece Immersive Image Window -->
+                    <div class="artwork-glass-frame">
+                        <div class="glass-reflection"></div>
+                        <img src="/img/titans/cards/@titan.TypeBadge" class="chassis-art" alt="@titan.TypeBadge" />
+                        <div class="laser-gold-trim"></div>
+                    </div>
+
+                    <!-- Spec Analytics Dashboard Grid -->
+                    <div class="specs-dashboard-grid">
+                        <div class="spec-node"></div>
+                        <div class="spec-node align-right"> 
+                            <div class="node-hdr">@LocalizationService.GetString(titan.HeightKey)</div>                                
+                        </div>
+                    </div>                        
+
+                    <!-- Lore Paragraph Text Box -->
+                    <div class="lore-summary-area">
+                        <p class="lore-text-body">
+                            @LocalizationService.GetString(titan.DescKey)
+                        </p>
+                    </div>
+
+                    <div class="chassis-divider"></div>
+
+                    <div class="titan-stats-container">
+                        <!-- 力量指标 -->
+                        <div>
+                            <div class="titan-stat-row">
+                                <span>@LocalizationService.GetString("ParamPower")</span>
+                                <span class="text-primary font-bold">@titan.Power%</span>
+                            </div>
+                            <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
+                        </div>
+
+                        <!-- 速度指标 -->
+                        <div>
+                            <div class="titan-stat-row">
+                                <span>@LocalizationService.GetString("ParamSpeed")</span>
+                                <span class="text-secondary font-bold">@titan.Speed%</span>
+                            </div>
+                            <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
+                        </div>
+
+                        <!-- 硬度/特殊能力指标 -->
+                        <div>
+                            <div class="titan-stat-row">
+                                <span>@LocalizationService.GetString("ParamArmor")</span>
+                                <span class="text-accent font-bold">@titan.Armor%</span>
+                            </div>
+                            <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
+                        </div>
+                    </div>
+
+                </div>
+            </div>               
+        }
+    </div>
 </div>
-
-
-
-
 
 <!-- 區域 4：兵團戰術裝備與牆外調查資產 -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+    <h3 class="aot-section-title">
         <i class="ti ti-settings"></i>@LocalizationService.GetString("GearSectionTitle")
     </h3>
 
     <div class="aot-gear-grid">
         @foreach (var gear in _gearDatabase)
         {
-            <div class="aot-gear-card">
-                <!-- 裝備頭部 -->
-                <div class="flex justify-between items-center mb-2">
-                    <h4 class="font-black text-sm md:text-base lg:text-lg text-white">@LocalizationService.GetString(gear.NameKey)</h4>
-                    <div class="badge badge-xs md:badge-sm badge-outline badge-accent font-bold shrink-0">@LocalizationService.GetString(gear.ClassBadge) </div>
+            <div class="aot-gear-card gear-theme-@gear.ClassBadge.ToLower().Replace("_", "-")">
+                <div class="aot-gear-header">
+                    <h4 class="aot-gear-title">@LocalizationService.GetString(gear.NameKey)</h4>
+                    <div class="badge badge-outline badge-accent aot-gear-badge">@LocalizationService.GetString(gear.ClassBadge)</div>
                 </div>
                 
-                <!-- 技術分類 (全寬展示，防止折行) -->
-                <div class="text-xs text-secondary uppercase tracking-wider mb-3">
+                <div class="aot-gear-tech">
                     @LocalizationService.GetString(gear.TechKey)
                 </div>
 
-                <!-- 裝備描述 -->
-                <p class="text-xs md:text-sm opacity-75 leading-relaxed min-h-[50px] mb-4">
+                <p class="aot-gear-desc">
                     @LocalizationService.GetString(gear.DescKey)
                 </p>
 
-                <div class="divider my-2 opacity-5"></div>
+                <div class="divider aot-card-divider"></div>
 
-                <!-- 戰術規格參數 -->
-                <div class="flex justify-between items-center text-xxs opacity-85">
-                    <div><span class="">@LocalizationService.GetString("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
-                    <div><span class="">@LocalizationService.GetString("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
+                <div class="aot-gear-specs">
+                    <div><span>@LocalizationService.GetString("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
+                    <div><span>@LocalizationService.GetString("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
                 </div>
             </div>
         }
@@ -190,27 +176,27 @@
 
 <!-- 区域 5：编年史时间轴区 -->
 <div class="flex flex-col gap-2 mt-6">
-    <h3 class="text-sm md:text-base lg:text-lg font-black uppercase tracking-widest text-primary flex items-center gap-2">
+    <h3 class="aot-section-title">
         <i class="ti ti-clock"></i> @LocalizationService.GetString("TimelineHeader")
     </h3>
     <div class="aot-timeline-card">
         <ul class="timeline timeline-vertical timeline-compact">
             <li>
                 <div class="timeline-middle text-error">📍</div>
-                <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs mb-4 w-full">
-                    <time class="font-mono font-black text-secondary text-xs md:text-sm">845 年</time>
-                    <div class="font-bold text-white mt-1 text-xs md:text-sm">@LocalizationService.GetString("Time1Title")</div>
-                    <p class="opacity-70 mt-1">@LocalizationService.GetString("Time1Desc")</p>
+                <div class="timeline-end aot-timeline-box">
+                    <time class="aot-timeline-time">845 年</time>
+                    <div class="aot-timeline-title">@LocalizationService.GetString("Time1Title")</div>
+                    <p class="aot-timeline-desc">@LocalizationService.GetString("Time1Desc")</p>
                 </div>
                 <hr class="bg-primary/30" />
             </li>
             <li>
                 <hr class="bg-primary/30" />
                 <div class="timeline-middle text-warning">📍</div>
-                <div class="timeline-end bg-base-200 p-3 rounded-xl border border-neutral-content/5 text-[11px] md:text-xs w-full">
-                    <time class="font-mono font-black text-secondary text-xs md:text-sm">854 年</time>
-                    <div class="font-bold text-white mt-1 text-xs md:text-sm">@LocalizationService.GetString("Time2Title")</div>
-                    <p class="opacity-70 mt-1">@LocalizationService.GetString("Time2Desc")</p>
+                <div class="timeline-end aot-timeline-box">
+                    <time class="aot-timeline-time">854 年</time>
+                    <div class="aot-timeline-title">@LocalizationService.GetString("Time2Title")</div>
+                    <p class="aot-timeline-desc">@LocalizationService.GetString("Time2Desc")</p>
                 </div>
             </li>
         </ul>
@@ -219,71 +205,85 @@
 
 <script>
 
-    document.querySelectorAll('.hype-card-container').forEach(container => {
-      const card = container.querySelector('.titan-hype-card');
-      const foil = container.querySelector('.holo-foil-layer');
+    (function () {
+        // Detect touch-primary device (iPhone, Android, iPad)
+        const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-      // Unified animation processor function
-      function processMove(clientX, clientY) {
-        const rect = container.getBoundingClientRect();
+        document.querySelectorAll('.hype-card-container').forEach(container => {
+            const card = container.querySelector('.titan-hype-card');
+            const foil = container.querySelector('.holo-foil-layer');
 
-        // Calculate coordinates relative to the container box boundaries (value between 0 and 1)
-        const x = (clientX - rect.left) / rect.width;
-        const y = (clientY - rect.top) / rect.height;
+            /* ======================================================================
+               DESKTOP — smooth JS-driven 3D tilt + foil tracking (unchanged)
+               ====================================================================== */
+            if (!isTouchDevice) {
+                let rafId = null;
+                let targetTiltX = 0, targetTiltY = 0;
+                let currentTiltX = 0, currentTiltY = 0;
+                let foilX = 50, foilY = 50;
+                let isHovered = false;
 
-        // Boundary cap safety: keeps values strictly clamped between 0 and 1
-        const clampedX = Math.max(0, Math.min(1, x));
-        const clampedY = Math.max(0, Math.min(1, y));
+                // Lerp the tilt values each frame for ultra-smooth motion
+                function lerp(a, b, t) { return a + (b - a) * t; }
 
-        // Convert values to tilt degrees (Max tilt parameters: 12deg X, 12deg Y)
-        const tiltX = (0.5 - clampedY) * 24;
-        const tiltY = (clampedX - 0.5) * 24;
+                function animateFrame() {
+                    currentTiltX = lerp(currentTiltX, targetTiltX, 0.12);
+                    currentTiltY = lerp(currentTiltY, targetTiltY, 0.12);
+                    card.style.transform = `translateY(-10px) rotateX(${currentTiltX}deg) rotateY(${currentTiltY}deg) translateZ(0)`;
+                    if (foil) {
+                        foil.style.backgroundPosition = `${foilX}% ${foilY}%`;
+                    }
+                    if (isHovered) rafId = requestAnimationFrame(animateFrame);
+                }
 
-        // Apply the 3D tilt transformation directly to the GPU plane
-        card.style.transform = `translateY(-10px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(0)`;
+                container.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                    if (foil) foil.style.opacity = '0.8';
+                    rafId = requestAnimationFrame(animateFrame);
+                });
 
-        // Map the touch positions smoothly onto the background gradient positions of the foil
-        if (foil) {
-          foil.style.backgroundPosition = `${clampedX * 100}% ${clampedY * 100}%`;
-        }
-      }
+                container.addEventListener('mousemove', (e) => {
+                    const rect = container.getBoundingClientRect();
+                    const x = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                    const y = Math.max(0, Math.min(1, (e.clientY - rect.top)  / rect.height));
+                    targetTiltX = (0.5 - y) * 24;
+                    targetTiltY = (x - 0.5) * 24;
+                    foilX = x * 100;
+                    foilY = y * 100;
+                });
 
-      function processReset() {
-        card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-        if (foil) {
-          foil.style.backgroundPosition = '0% 0%';
-        }
-      }
+                container.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                    cancelAnimationFrame(rafId);
+                    targetTiltX = 0; targetTiltY = 0;
+                    currentTiltX = 0; currentTiltY = 0;
+                    card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+                    if (foil) foil.style.opacity = '0';
+                });
 
-      /* ==========================================================================
-         1. DESKTOP MOUSE EVENT LISTENERS
-         ========================================================================== */
-      container.addEventListener('mousemove', (e) => {
-        processMove(e.clientX, e.clientY);
-      });
+            /* ======================================================================
+               MOBILE — CSS keyframe tap burst (no JS tracking = zero lag)
+               goldBreath ambient pulse runs automatically from CSS.
+               A tap fires tapShimmer + foilSweep entirely on the GPU.
+               ====================================================================== */
+            } else {
+                container.addEventListener('touchstart', () => {
+                    // Cancel any running animation so it restarts cleanly on rapid taps
+                    card.classList.remove('is-tapped');
+                    // Force a reflow so removing + re-adding the class re-triggers the animation
+                    void card.offsetWidth;
+                    card.classList.add('is-tapped');
+                }, { passive: true });
 
-      container.addEventListener('mouseleave', () => {
-        processReset();
-      });
-
-      /* ==========================================================================
-         2. MOBILE SAFARI & TOUCH EVENT LISTENERS (FIXES MOBILE PERFORMANCE)
-         ========================================================================== */
-      container.addEventListener('touchstart', (e) => {
-        // Collect coordinates from the first active finger touch point tracking line
-        processMove(e.touches[0].clientX, e.touches[0].clientY);
-      }, { passive: true });
-
-      container.addEventListener('touchmove', (e) => {
-        // If a user drags inside a card wrapper area, process tracking parameters
-        processMove(e.touches[0].clientX, e.touches[0].clientY);
-      }, { passive: true });
-
-      container.addEventListener('touchend', () => {
-        // Smoothly snap back to origin when the finger leaves the touch panel
-        processReset();
-      });
-    });
+                // Clean up after the burst animation ends — ambient breath resumes automatically
+                card.addEventListener('animationend', (e) => {
+                    if (e.animationName === 'tapShimmer') {
+                        card.classList.remove('is-tapped');
+                    }
+                });
+            }
+        });
+    })();
 
 </script>
 
@@ -361,22 +361,22 @@
     private readonly List<CharacterModel> _characterDatabase = new()
     {
         new CharacterModel {
-            NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", Rank = "S-Rank", Kills = "58 (單獨)", Wits = 8
+            NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", Rank = "S-Rank", Kills = "58", Wits = 8
         },
         new CharacterModel {
-            NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", Rank = "A+ Rank", Kills = "39 (單獨)", Wits = 7
+            NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", Rank = "A+ Rank", Kills = "39", Wits = 7
         },
         new CharacterModel {
-            NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", Rank = "A-Rank", Kills = "0 (單獨)", Wits = 10
+            NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", Rank = "A-Rank", Kills = "0", Wits = 10
         },
         new CharacterModel {
-            NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", Rank = "A-Rank", Kills = "5 (輔助)", Wits = 9
+            NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", Rank = "A-Rank", Kills = "5", Wits = 9
         },
         new CharacterModel {
-            NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", Rank = "S-Rank", Kills = "未知", Wits = 10
+            NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", Rank = "S-Rank", Kills = "??", Wits = 10
         },
         new CharacterModel {
-            NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", Rank = "A-Rank", Kills = "7 (單獨)", Wits = 7
+            NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", Rank = "A-Rank", Kills = "7", Wits = 7
         }
     };
 

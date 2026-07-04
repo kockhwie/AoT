@@ -538,10 +538,10 @@
       - iPhone/Mobile: Arranges elements inside a singular column vertical feed channel.
       - Desktop/iPad Landscape: Automatically expands into a side-by-side split grid configuration.
     -->
-    <div class="container mx-auto p-4 md:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 flex-grow">
+    <div class="container mx-auto p-4 md:p-6 lg:p-8 flex-grow">
  
         <!-- CHILD ROUTE RENDERING INTERFACE LAYER -->
-        <main class="lg:col-span-3 flex flex-col gap-2">
+        <main class="flex flex-col gap-2">
             <CascadingValue Value="@_activeLang">
                 @Body
             </CascadingValue>
