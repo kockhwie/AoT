@@ -109,28 +109,28 @@
                         <!-- 力量指标 -->
                         <div>
                             <div class="titan-stat-row">
-                                <span>@LocalizationService.GetString("ParamPower")</span>
+                                <span class="badge-label">@LocalizationService.GetString("ParamPower")</span>
                                 <span class="text-primary font-bold">@titan.Power%</span>
                             </div>
-                            <progress class="progress progress-primary w-full h-1" value="@titan.Power" max="100"></progress>
+                            <progress class="progress progress-primary w-full" value="@titan.Power" max="100"></progress>
                         </div>
 
                         <!-- 速度指标 -->
                         <div>
                             <div class="titan-stat-row">
-                                <span>@LocalizationService.GetString("ParamSpeed")</span>
+                                <span class="badge-label">@LocalizationService.GetString("ParamSpeed")</span>
                                 <span class="text-secondary font-bold">@titan.Speed%</span>
                             </div>
-                            <progress class="progress progress-secondary w-full h-1" value="@titan.Speed" max="100"></progress>
+                            <progress class="progress progress-secondary w-full " value="@titan.Speed" max="100"></progress>
                         </div>
 
                         <!-- 硬度/特殊能力指标 -->
                         <div>
                             <div class="titan-stat-row">
-                                <span>@LocalizationService.GetString("ParamArmor")</span>
+                                <span class="badge-label">@LocalizationService.GetString("ParamArmor")</span>
                                 <span class="text-accent font-bold">@titan.Armor%</span>
                             </div>
-                            <progress class="progress progress-accent w-full h-1" value="@titan.Armor" max="100"></progress>
+                            <progress class="progress progress-accent w-full align-right" value="@titan.Armor" max="100"></progress>
                         </div>
                     </div>
 
