@@ -68,6 +68,7 @@
     .aot-hero-title {
         font-size: 1.75rem; /* 28px */
     }
+
     .aot-hero-desc {
         font-size: 0.875rem; /* 14px */
     }
@@ -121,11 +122,11 @@
     overflow: hidden;
 }
 
-.aot-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 215, 0, 0.35) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
-}
+    .aot-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 215, 0, 0.35) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+    }
 
 .aot-card-header {
     display: flex;
@@ -179,9 +180,11 @@
     .aot-char-name {
         font-size: 1.1rem; /* 17.6px */
     }
+
     .aot-char-title {
         font-size: 0.8125rem; /* 13px */
     }
+
     .aot-char-bio {
         font-size: 0.9375rem; /* 15px */
     }
@@ -227,11 +230,8 @@
     max-width: var(--hype-container-max, 390px);
 }
 
-#character-cards-section .hype-card-container {
-    --hype-container-basis: 320px;
-    --hype-container-max: 360px;
-}
-
+/* ponytail: character & titan containers share one size so card widths match */
+#character-cards-section .hype-card-container,
 #titan-cards-section .hype-card-container {
     --hype-container-basis: 380px;
     --hype-container-max: 420px;
@@ -256,18 +256,18 @@
     will-change: transform;
 }
 
-/* Character dossier — compact, outline badge */
+/* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
 .member-hype-card {
-    --hype-card-width: 340px;
+    --hype-card-width: 390px;
     --hype-card-radius: 20px;
-    min-height: 500px;
+    height: 560px;
     background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
 }
 
-/* Titan registry — larger premium card */
+/* Titan registry — gold is reserved for this card type only */
 .titan-hype-card {
     --hype-card-width: 390px;
     --hype-card-radius: 24px;
@@ -284,13 +284,10 @@
         padding: 20px;
     }
 
-    .titan-hype-card {
+    .titan-hype-card,
+    .member-hype-card {
         height: auto;
         min-height: 520px;
-    }
-
-    .member-hype-card {
-        min-height: 480px;
     }
 
     .titan-display-title {
@@ -346,9 +343,9 @@
     flex-wrap: wrap;
 }
 
-.meta-registry-row > :last-child:not(.registry-serial) {
-    margin-left: auto;
-}
+    .meta-registry-row > :last-child:not(.registry-serial) {
+        margin-left: auto;
+    }
 
 .registry-serial {
     font-family: system-ui, -apple-system, sans-serif;
@@ -437,6 +434,17 @@
     z-index: 3;
 }
 
+/* Character cards: normal white/silver reflection (gold stays titan-only) */
+.laser-rank-trim {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #e5e7eb 50%, transparent 100%);
+    z-index: 3;
+}
+
 .specs-dashboard-grid {
     display: flex;
     justify-content: space-between;
@@ -449,9 +457,9 @@
     gap: 4px;
 }
 
-.spec-node.align-right {
-    text-align: right;
-}
+    .spec-node.align-right {
+        text-align: right;
+    }
 
 .node-hdr {
     font-size: 0.7rem; /* Increased size for mobile/desktop readability */
@@ -572,266 +580,282 @@
     --theme-aura: rgba(34, 197, 94, 0.5);
     background: radial-gradient(circle at 50% 25%, #0a3317 0%, #051a0b 45%, #050505 100%) !important;
 }
-    /* ==========================================================================
+/* ==========================================================================
    MOBILE INTERACTION ANIMATIONS
    ========================================================================== */
-    @keyframes goldBreath {
-        0%, 100% {
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 14px rgba(255,215,0,0.12);
-            border-color: rgba(255, 215, 0, 0.35);
-        }
-
-        50% {
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 28px rgba(255,215,0,0.32), 0 0 18px var(--theme-aura);
-            border-color: rgba(255, 215, 0, 0.75);
-        }
+@keyframes goldBreath {
+    0%, 100% {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 14px rgba(255,215,0,0.12);
+        border-color: rgba(255, 215, 0, 0.35);
     }
 
-    @keyframes tapShimmer {
-        0% {
-            transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0);
-        }
+    50% {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 28px rgba(255,215,0,0.32), 0 0 18px var(--theme-aura);
+        border-color: rgba(255, 215, 0, 0.75);
+    }
+}
 
-        20% {
-            transform: translateY(-12px) rotateX(10deg) rotateY(-8deg) scale(1.04) translateZ(0);
-        }
-
-        45% {
-            transform: translateY(-16px) rotateX(-6deg) rotateY(6deg) scale(1.05) translateZ(0);
-        }
-
-        70% {
-            transform: translateY(-8px) rotateX(4deg) rotateY(-3deg) scale(1.02) translateZ(0);
-        }
-
-        100% {
-            transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0);
-        }
+@keyframes tapShimmer {
+    0% {
+        transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0);
     }
 
-    @keyframes foilSweep {
-        0% {
-            background-position: -150% -150%;
-            opacity: 0;
-        }
-
-        15% {
-            opacity: 0.85;
-        }
-
-        75% {
-            opacity: 0.65;
-        }
-
-        100% {
-            background-position: 250% 250%;
-            opacity: 0;
-        }
+    20% {
+        transform: translateY(-12px) rotateX(10deg) rotateY(-8deg) scale(1.04) translateZ(0);
     }
 
-    @media (hover: none) {
-        .titan-hype-card {
-            animation: goldBreath 3.5s ease-in-out infinite;
-        }
-
-        .hype-card-container {
-            touch-action: manipulation;
-        }
+    45% {
+        transform: translateY(-16px) rotateX(-6deg) rotateY(6deg) scale(1.05) translateZ(0);
     }
 
-    .titan-hype-card.is-tapped {
-        animation: tapShimmer 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
-        border-color: rgba(255, 215, 0, 0.95) !important;
-        box-shadow: 0 25px 40px rgba(0,0,0,0.45), 0 50px 95px rgba(0,0,0,0.9), inset 0 0 30px rgba(255,215,0,0.2), 0 0 40px var(--theme-aura) !important;
+    70% {
+        transform: translateY(-8px) rotateX(4deg) rotateY(-3deg) scale(1.02) translateZ(0);
     }
 
-        .titan-hype-card.is-tapped .holo-foil-layer {
-            animation: foilSweep 0.75s ease-out forwards;
-        }
-    /* ==========================================================================
+    100% {
+        transform: translateY(0px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0);
+    }
+}
+
+@keyframes foilSweep {
+    0% {
+        background-position: -150% -150%;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.85;
+    }
+
+    75% {
+        opacity: 0.65;
+    }
+
+    100% {
+        background-position: 250% 250%;
+        opacity: 0;
+    }
+}
+
+@keyframes memberBreath {
+    0%, 100% {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+        border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    50% {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04), 0 0 18px rgba(255,255,255,0.25);
+        border-color: rgba(255, 255, 255, 0.55);
+    }
+}
+
+@media (hover: none) {
+    .titan-hype-card {
+        animation: goldBreath 3.5s ease-in-out infinite;
+    }
+
+    .member-hype-card {
+        animation: memberBreath 3.5s ease-in-out infinite;
+    }
+
+    .hype-card-container {
+        touch-action: manipulation;
+    }
+}
+
+.titan-hype-card.is-tapped {
+    animation: tapShimmer 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+    border-color: rgba(255, 215, 0, 0.95) !important;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.45), 0 50px 95px rgba(0,0,0,0.9), inset 0 0 30px rgba(255,215,0,0.2), 0 0 40px var(--theme-aura) !important;
+}
+
+    .titan-hype-card.is-tapped .holo-foil-layer {
+        animation: foilSweep 0.75s ease-out forwards;
+    }
+/* ==========================================================================
    6. GEAR CARD COMPONENT
    ========================================================================== */
-    .aot-gear-card {
-        background: linear-gradient(135deg, rgba(20, 24, 28, 0.85) 0%, rgba(10, 12, 14, 0.95) 100%) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 14px !important;
-        padding: 1.5rem !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.02) !important;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-        position: relative;
-        overflow: hidden;
+.aot-gear-card {
+    background: linear-gradient(135deg, rgba(20, 24, 28, 0.85) 0%, rgba(10, 12, 14, 0.95) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+    .aot-gear-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+    }
+    /* Division-specific borders and theme highlights (all-around borders, no corner curve mismatch) */
+    .aot-gear-card.gear-theme-mobility {
+        border-color: rgba(56, 189, 248, 0.15) !important;
     }
 
-        .aot-gear-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
-        }
-        /* Division-specific borders and theme highlights (all-around borders, no corner curve mismatch) */
-        .aot-gear-card.gear-theme-mobility {
-            border-color: rgba(56, 189, 248, 0.15) !important;
+        .aot-gear-card.gear-theme-mobility:hover {
+            border-color: rgba(56, 189, 248, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.08) !important;
         }
 
-            .aot-gear-card.gear-theme-mobility:hover {
-                border-color: rgba(56, 189, 248, 0.4) !important;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.08) !important;
-            }
-
-            .aot-gear-card.gear-theme-mobility .aot-gear-badge {
-                background: rgba(56, 189, 248, 0.1) !important;
-                border-color: rgba(56, 189, 248, 0.3) !important;
-                color: #38bdf8 !important;
-            }
-
-        .aot-gear-card.gear-theme-weapon {
-            border-color: rgba(167, 139, 250, 0.15) !important;
+        .aot-gear-card.gear-theme-mobility .aot-gear-badge {
+            background: rgba(56, 189, 248, 0.1) !important;
+            border-color: rgba(56, 189, 248, 0.3) !important;
+            color: #38bdf8 !important;
         }
 
-            .aot-gear-card.gear-theme-weapon:hover {
-                border-color: rgba(167, 139, 250, 0.4) !important;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(167, 139, 250, 0.08) !important;
-            }
-
-            .aot-gear-card.gear-theme-weapon .aot-gear-badge {
-                background: rgba(167, 139, 250, 0.1) !important;
-                border-color: rgba(167, 139, 250, 0.3) !important;
-                color: #a78bfa !important;
-            }
-
-        .aot-gear-card.gear-theme-heavy-weapon {
-            border-color: rgba(244, 63, 94, 0.15) !important;
-        }
-
-            .aot-gear-card.gear-theme-heavy-weapon:hover {
-                border-color: rgba(244, 63, 94, 0.4) !important;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(244, 63, 94, 0.08) !important;
-            }
-
-            .aot-gear-card.gear-theme-heavy-weapon .aot-gear-badge {
-                background: rgba(244, 63, 94, 0.1) !important;
-                border-color: rgba(244, 63, 94, 0.3) !important;
-                color: #f43f5e !important;
-            }
-
-    .aot-gear-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.5rem;
+    .aot-gear-card.gear-theme-weapon {
+        border-color: rgba(167, 139, 250, 0.15) !important;
     }
 
+        .aot-gear-card.gear-theme-weapon:hover {
+            border-color: rgba(167, 139, 250, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(167, 139, 250, 0.08) !important;
+        }
+
+        .aot-gear-card.gear-theme-weapon .aot-gear-badge {
+            background: rgba(167, 139, 250, 0.1) !important;
+            border-color: rgba(167, 139, 250, 0.3) !important;
+            color: #a78bfa !important;
+        }
+
+    .aot-gear-card.gear-theme-heavy-weapon {
+        border-color: rgba(244, 63, 94, 0.15) !important;
+    }
+
+        .aot-gear-card.gear-theme-heavy-weapon:hover {
+            border-color: rgba(244, 63, 94, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(244, 63, 94, 0.08) !important;
+        }
+
+        .aot-gear-card.gear-theme-heavy-weapon .aot-gear-badge {
+            background: rgba(244, 63, 94, 0.1) !important;
+            border-color: rgba(244, 63, 94, 0.3) !important;
+            color: #f43f5e !important;
+        }
+
+.aot-gear-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.aot-gear-title {
+    font-weight: 900;
+    font-size: 1.25rem; /* 20px */
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.aot-gear-badge {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 800;
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 2px 8px !important;
+    letter-spacing: 0.05em;
+}
+
+.aot-gear-tech {
+    font-size: 0.875rem; /* 14px */
+    color: #dfbb6b; /* Muted gold for tech specifications */
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.875rem;
+}
+
+.aot-gear-desc {
+    font-size: 0.875rem; /* 14px */
+    color: #d1d5db;
+    line-height: 1.5;
+    min-height: 50px;
+    margin: 0 0 1.25rem 0;
+    text-align: justify;
+}
+
+@media (max-width: 767.98px) {
     .aot-gear-title {
-        font-weight: 900;
-        font-size: 1.25rem; /* 20px */
-        color: #ffffff;
-        margin: 0;
-        letter-spacing: 0.03em;
-    }
-
-    .aot-gear-badge {
-        font-size: 0.75rem; /* 12px */
-        font-weight: 800;
-        flex-shrink: 0;
-        border-radius: 4px;
-        padding: 2px 8px !important;
-        letter-spacing: 0.05em;
+        font-size: 1.1rem; /* 17.6px */
     }
 
     .aot-gear-tech {
-        font-size: 0.875rem; /* 14px */
-        color: #dfbb6b; /* Muted gold for tech specifications */
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        margin-bottom: 0.875rem;
-    }
-
-    .aot-gear-desc {
-        font-size: 0.875rem; /* 14px */
-        color: #d1d5db;
-        line-height: 1.5;
-        min-height: 50px;
-        margin: 0 0 1.25rem 0;
-        text-align: justify;
-    }
-
-    @media (max-width: 767.98px) {
-        .aot-gear-title {
-            font-size: 1.1rem; /* 17.6px */
-        }
-
-        .aot-gear-tech {
-            font-size: 0.8125rem; /* 13px */
-        }
-    }
-
-    .aot-gear-specs {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         font-size: 0.8125rem; /* 13px */
-        gap: 0.5rem;
+    }
+}
+
+.aot-gear-specs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.8125rem; /* 13px */
+    gap: 0.5rem;
+}
+
+    .aot-gear-specs div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
     }
 
-        .aot-gear-specs div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2px;
-        }
-
-        .aot-gear-specs span:first-child {
-            color: #878170;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            display: block;
-        }
-
-        .aot-gear-specs span:last-child {
-            font-weight: 700;
-            display: block;
-        }
-    /* On very small screens stack the two spec blocks vertically so they don't compress */
-    @media (max-width: 520px) {
-        .aot-gear-specs {
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    .aot-gear-specs span:first-child {
+        color: #878170;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        display: block;
     }
-    /* ==========================================================================
+
+    .aot-gear-specs span:last-child {
+        font-weight: 700;
+        display: block;
+    }
+/* On very small screens stack the two spec blocks vertically so they don't compress */
+@media (max-width: 520px) {
+    .aot-gear-specs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ==========================================================================
    7. TIMELINE COMPONENT
    ========================================================================== */
-    .aot-timeline-box {
-        background: linear-gradient(135deg, rgba(20, 22, 26, 0.7) 0%, rgba(12, 13, 16, 0.9) 100%) !important;
-        padding: 1.25rem !important;
-        border-radius: 12px !important;
-        border: 1px solid rgba(255, 255, 255, 0.05) !important;
-        margin-bottom: 1rem !important;
-        width: 100% !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
+.aot-timeline-box {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7) 0%, rgba(12, 13, 16, 0.9) 100%) !important;
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
 
-    .aot-timeline-time {
-        font-family: inherit; /* standard system sans-serif */
-        font-weight: 900;
-        color: #dfbb6b; /* Brass gold */
-        font-size: 0.875rem; /* 14px */
-        display: block;
-        letter-spacing: 0.05em;
-    }
+.aot-timeline-time {
+    font-family: inherit; /* standard system sans-serif */
+    font-weight: 900;
+    color: #dfbb6b; /* Brass gold */
+    font-size: 0.875rem; /* 14px */
+    display: block;
+    letter-spacing: 0.05em;
+}
 
-    .aot-timeline-title {
-        font-weight: 700;
-        color: #ffffff;
-        margin-top: 0.25rem;
-        font-size: 0.875rem; /* 14px */
-    }
+.aot-timeline-title {
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0.25rem;
+    font-size: 0.875rem; /* 14px */
+}
 
-    .aot-timeline-desc {
-        opacity: 0.7;
-        margin-top: 0.25rem;
-        margin-bottom: 0;
-        font-size: 0.875rem; /* 14px */
-    }
+.aot-timeline-desc {
+    opacity: 0.7;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    font-size: 0.875rem; /* 14px */
+}
 
 /* ==========================================================================
    8. ROUNDED PROGRESS-BLOCKS (used by character stat bars)
@@ -906,30 +930,50 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-/* color variants */
-.progress-fill.blue {
-    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-}
+    /* color variants */
+    .progress-fill.blue {
+        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+    }
 
-.progress-fill.pink {
-    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-}
+    .progress-fill.pink {
+        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+    }
 
-.progress-fill.green {
-    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-}
+    .progress-fill.green {
+        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+    }
 
 /* small screens: shift to stacked if necessary but keep compact */
 @media (max-width: 520px) {
-    .progress-meta { width: 40%; }
-    .progress-bar-track { height: 14px; padding: 4px; }
-    .progress-label, .progress-percent { font-size: 0.9rem; }
+    .progress-meta {
+        width: 40%;
+    }
+
+    .progress-bar-track {
+        height: 14px;
+        padding: 4px;
+    }
+
+    .progress-label, .progress-percent {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 380px) {
-    .progress-row { flex-direction: column; align-items: stretch; }
-    .progress-meta { width: 100%; display:flex; justify-content:space-between; }
-    .progress-bar-track { width: 100%; }
+    .progress-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .progress-meta {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .progress-bar-track {
+        width: 100%;
+    }
 }
 
 
@@ -941,27 +985,35 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-/* color variants */
-.progress-fill.blue {
-    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-}
+    /* color variants */
+    .progress-fill.blue {
+        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+    }
 
-.progress-fill.pink {
-    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-}
+    .progress-fill.pink {
+        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+    }
 
-.progress-fill.green {
-    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-}
+    .progress-fill.green {
+        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+    }
 
 /* small screens: slightly taller bar for touch */
 @media (max-width: 420px) {
-    .progress-bar-track { height: 14px; padding: 4px; }
-    .progress-label, .progress-percent { font-size: 0.9rem; }
+    .progress-bar-track {
+        height: 14px;
+        padding: 4px;
+    }
+
+    .progress-label, .progress-percent {
+        font-size: 0.9rem;
+    }
 }
 
 /* optional subtle bloom for the percent when full */
-.progress-percent.full { color: #34d399; }
+.progress-percent.full {
+    color: #34d399;
+}
 
 
 /* ==========================================================================
@@ -969,25 +1021,15 @@
    ========================================================================== */
 
 .member-hype-card:hover {
-    box-shadow:
-        0 16px 48px rgba(0,0,0,0.7),
-        0 0 28px var(--member-aura, rgba(255,215,0,0.12)),
-        inset 0 1px 0 rgba(255,255,255,0.06);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.45);
 }
 
-.member-hype-card.theme-levi   { --member-aura: rgba(100, 200, 255, 0.30); --theme-aura: rgba(100, 200, 255, 0.30); }
-.member-hype-card.theme-mikasa { --member-aura: rgba(239,  68,  68, 0.35); --theme-aura: rgba(239,  68,  68, 0.35); }
-.member-hype-card.theme-armin  { --member-aura: rgba( 56, 189, 248, 0.30); --theme-aura: rgba( 56, 189, 248, 0.30); }
-.member-hype-card.theme-hange  { --member-aura: rgba(251, 191,  36, 0.30); --theme-aura: rgba(251, 191,  36, 0.30); }
-.member-hype-card.theme-erwin  { --member-aura: rgba(167, 139, 250, 0.35); --theme-aura: rgba(167, 139, 250, 0.35); }
-.member-hype-card.theme-jean   { --member-aura: rgba( 34, 197,  94, 0.28); --theme-aura: rgba( 34, 197,  94, 0.28); }
-
-.member-hype-card.theme-levi:hover   { border-color: rgba(100,200,255,0.50); }
-.member-hype-card.theme-mikasa:hover { border-color: rgba(239, 68, 68,0.55); }
-.member-hype-card.theme-armin:hover  { border-color: rgba( 56,189,248,0.50); }
-.member-hype-card.theme-hange:hover  { border-color: rgba(251,191, 36,0.55); }
-.member-hype-card.theme-erwin:hover  { border-color: rgba(167,139,250,0.55); }
-.member-hype-card.theme-jean:hover   { border-color: rgba( 34,197, 94,0.50); }
+/* Character cards stay neutral white/gray chrome — rank color lives only on the small
+   rank badge (.member-rank-badge.rank-*), not the card border/glow/foil. Gold is titan-only. */
+.member-hype-card .holo-foil-layer {
+    background-image: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.22) 52%, rgba(120,120,120,0.15) 62%, transparent 75%);
+}
 
 .member-hype-card.is-tapped {
     animation: tapShimmer 0.55s ease-out forwards;
@@ -1003,12 +1045,23 @@
     border: 1px solid currentColor;
 }
 
-.rank-levi   { color: #64c8ff; border-color: rgba(100,200,255,0.55); background: rgba(100,200,255,0.10); }
-.rank-mikasa { color: #ef4444; border-color: rgba(239, 68, 68,0.55); background: rgba(239, 68, 68,0.10); }
-.rank-armin  { color: #38bdf8; border-color: rgba( 56,189,248,0.55); background: rgba( 56,189,248,0.10); }
-.rank-hange  { color: #fbbf24; border-color: rgba(251,191, 36,0.55); background: rgba(251,191, 36,0.10); }
-.rank-erwin  { color: #a78bfa; border-color: rgba(167,139,250,0.55); background: rgba(167,139,250,0.10); }
-.rank-jean   { color: #22c55e; border-color: rgba( 34,197, 94,0.55); background: rgba( 34,197, 94,0.10); }
+    .member-rank-badge.rank-s {
+        color: #facc15;
+        border-color: rgba(250, 204, 21, 0.55);
+        background: rgba(250, 204, 21, 0.10);
+    }
+
+    .member-rank-badge.rank-a-plus {
+        color: #cbd5e1;
+        border-color: rgba(203, 213, 225, 0.55);
+        background: rgba(203, 213, 225, 0.10);
+    }
+
+    .member-rank-badge.rank-a {
+        color: #cd7f32;
+        border-color: rgba(205, 127, 50, 0.55);
+        background: rgba(205, 127, 50, 0.10);
+    }
 
 .titan-shifter-badge {
     font-size: 0.6rem;
@@ -1024,8 +1077,13 @@
 }
 
 @keyframes titanPulse {
-    0%, 100% { box-shadow: 0 0 4px rgba(251,191,36,0.3); }
-    50%       { box-shadow: 0 0 12px rgba(251,191,36,0.7); }
+    0%, 100% {
+        box-shadow: 0 0 4px rgba(251,191,36,0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 12px rgba(251,191,36,0.7);
+    }
 }
 
 .member-display-name {

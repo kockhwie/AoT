@@ -30,7 +30,7 @@
         @foreach (var member in _characterDatabase)
         {
             <div class="hype-card-container">
-                <div class="member-hype-card theme-@member.Theme">
+                <div class="member-hype-card">
 
                     <div class="holo-foil-layer"></div>
                     <div class="hologram-scanlines"></div>
@@ -44,7 +44,7 @@
                         {
                             <span class="registry-serial"></span>
                         }
-                        <div class="member-rank-badge rank-@member.Theme">@member.Rank</div>
+                        <div class="member-rank-badge @member.RankClass">@member.Rank</div>
                     </div>
 
                     <div class="chassis-header">
@@ -55,7 +55,7 @@
                     <div class="artwork-glass-frame">
                         <div class="glass-reflection"></div>
                         <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
-                        <div class="laser-gold-trim"></div>
+                        <div class="laser-rank-trim"></div>
                     </div>
 
                     <div class="member-ability-row">
@@ -96,7 +96,7 @@
     <h3 class="aot-section-title">
         <i class="ti ti-dna-2"></i> @LocalizationService.GetString("TitanSectionTitle")
     </h3>
-    
+
     <div class="registry-grid">
         @foreach (var titan in _titanDatabase)
         {
@@ -130,10 +130,10 @@
                     <!-- Spec Analytics Dashboard Grid -->
                     <div class="specs-dashboard-grid">
                         <div class="spec-node"></div>
-                        <div class="spec-node align-right"> 
-                            <div class="node-hdr">@LocalizationService.GetString(titan.HeightKey)</div>                                
+                        <div class="spec-node align-right">
+                            <div class="node-hdr">@LocalizationService.GetString(titan.HeightKey)</div>
                         </div>
-                    </div>                        
+                    </div>
 
                     <!-- Lore Paragraph Text Box -->
                     <div class="lore-summary-area">
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-            </div>               
+            </div>
         }
     </div>
 </div>
@@ -187,7 +187,7 @@
                     <h4 class="aot-gear-title">@LocalizationService.GetString(gear.NameKey)</h4>
                     <div class="badge badge-outline badge-accent aot-gear-badge">@LocalizationService.GetString(gear.ClassBadge)</div>
                 </div>
-                
+
                 <div class="aot-gear-tech">
                     @LocalizationService.GetString(gear.TechKey)
                 </div>
@@ -330,7 +330,7 @@
         public string HeightKey { get; init; } = "";
         public string DescKey { get; init; } = "";
         public string TypeBadge { get; init; } = "";
-        public string Theme { get; init; } = "";  
+        public string Theme { get; init; } = "";
         public int Power { get; init; }
         public int Speed { get; init; }
         public int Armor { get; init; }
@@ -388,6 +388,13 @@
         public string AbilityKey { get; init; } = "";
         public string Rank { get; init; } = "A";
         public string Theme { get; init; } = "";
+        // ponytail: rank drives card/badge color now (standardized rank palette), not per-character Theme
+        public string RankClass => Rank switch
+        {
+            "S-RANK" => "rank-s",
+            "A+RANK" => "rank-a-plus",
+            _ => "rank-a"
+        };
         public string Portrait { get; init; } = "";
         public string Kills { get; init; } = "0";
         public int KillsPct { get; init; }       // 0-100 for progress bar
