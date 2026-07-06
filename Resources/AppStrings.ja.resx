@@ -687,4 +687,28 @@
   <data name="G3Desc" xml:space="preserve">
     <value>鎧の巨人に対抗すべくハンジが開発した新兵器。腕部に装着するロケット推進式の徹甲爆弾で、突き刺した後に紐を引くことで炸裂し、強固な鎧の皮膚をも粉砕する破壊力を持つ。</value>
   </data>
+  <data name="C1Ability" xml:space="preserve">
+    <value>人類最強の兵士</value>
+  </data>
+  <data name="C2Ability" xml:space="preserve">
+    <value>アッカーマンの本能</value>
+  </data>
+  <data name="C3Ability" xml:space="preserve">
+    <value>超大型巨人</value>
+  </data>
+  <data name="C4Ability" xml:space="preserve">
+    <value>雷槍の開発者</value>
+  </data>
+  <data name="C5Ability" xml:space="preserve">
+    <value>長距離索敵陣形</value>
+  </data>
+  <data name="C6Ability" xml:space="preserve">
+    <value>前線戦術家</value>
+  </data>
+  <data name="StatKillsBar" xml:space="preserve">
+    <value>巨人討伐数</value>
+  </data>
+  <data name="StatWitsBar" xml:space="preserve">
+    <value>戦術知性指数</value>
+  </data>
 </root>

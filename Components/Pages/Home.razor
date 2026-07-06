@@ -21,31 +21,70 @@
 </div>
 
 <!-- 區域 2：調查兵團精銳作戰檔案  -->
-<div class="flex flex-col gap-2 mt-6">
+<div id="character-cards-section" class="flex flex-col gap-2 mt-6">
     <h3 class="aot-section-title">
-        <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")       
+        <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")
     </h3>
-    
-    <div class="aot-card-grid">
+
+    <div class="registry-grid">
         @foreach (var member in _characterDatabase)
         {
-            <div class="aot-card">
-                <div class="aot-card-body">
-                    <div class="aot-card-header">
-                        <div>
-                            <h4 class="aot-char-name">@LocalizationService.GetString(member.NameKey)</h4>
-                            <span class="aot-char-title">@LocalizationService.GetString(member.TitleKey)</span>
+            <div class="hype-card-container">
+                <div class="member-hype-card theme-@member.Theme">
+
+                    <div class="holo-foil-layer"></div>
+                    <div class="hologram-scanlines"></div>
+
+                    <div class="meta-registry-row">
+                        @if (member.IsTitanShifter)
+                        {
+                            <div class="titan-shifter-badge">⚡ TITAN SHIFTER</div>
+                        }
+                        else
+                        {
+                            <span class="registry-serial"></span>
+                        }
+                        <div class="member-rank-badge rank-@member.Theme">@member.Rank</div>
+                    </div>
+
+                    <div class="chassis-header">
+                        <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
+                        <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
+                    </div>
+
+                    <div class="artwork-glass-frame">
+                        <div class="glass-reflection"></div>
+                        <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
+                        <div class="laser-gold-trim"></div>
+                    </div>
+
+                    <div class="member-ability-row">
+                        <span class="member-ability-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
+                    </div>
+
+                    <div class="lore-summary-area">
+                        <p class="lore-text-body">@LocalizationService.GetString(member.BioKey)</p>
+                    </div>
+
+                    <div class="chassis-divider"></div>
+
+                    <div class="hype-stats-container">
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
+                                <span class="hype-stat-pct text-error">@member.Kills</span>
+                            </div>
+                            <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
                         </div>
-                        <div class="badge badge-outline badge-error aot-char-badge">@member.Rank</div>
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
+                                <span class="hype-stat-pct text-success">@member.Wits/10</span>
+                            </div>
+                            <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
+                        </div>
                     </div>
-                    <p class="aot-char-bio">
-                        @LocalizationService.GetString(member.BioKey)
-                    </p>
-                    <div class="divider aot-card-divider"></div>
-                    <div class="aot-char-stats">
-                        <div><span class="aot-stat-label">@LocalizationService.GetString("StatKills"):</span> <span class="aot-stat-val text-error">@member.Kills</span></div>
-                        <div><span class="aot-stat-label">@LocalizationService.GetString("StatWits"):</span> <span class="aot-stat-val text-success">@member.Wits/10</span></div>
-                    </div>
+
                 </div>
             </div>
         }
@@ -53,12 +92,12 @@
 </div>
 
 <!-- 新增区域 3：九大巨人能力图谱面板   -->
-<div class="flex flex-col gap-2">
+<div id="titan-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-dna-2"></i> @LocalizationService.GetString("TitanSectionTitle")
     </h3>
     
-    <div class="titan-registry-grid">
+    <div class="registry-grid">
         @foreach (var titan in _titanDatabase)
         {
             <div class="hype-card-container">
@@ -105,35 +144,29 @@
 
                     <div class="chassis-divider"></div>
 
-                    <div class="titan-stats-container">
-                        <!-- 力量指标 -->
-                        <div>
-                            <div class="titan-stat-row">
-                                <span class="badge-label">@LocalizationService.GetString("ParamPower")</span>
-                                <span class="text-primary font-bold">@titan.Power%</span>
+                    <div class="hype-stats-container">
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("ParamPower")</span>
+                                <span class="hype-stat-pct text-primary">@titan.Power%</span>
                             </div>
-                            <progress class="progress progress-primary w-full" value="@titan.Power" max="100"></progress>
+                            <progress class="progress progress-xs progress-primary w-full" value="@titan.Power" max="100"></progress>
                         </div>
-
-                        <!-- 速度指标 -->
-                        <div>
-                            <div class="titan-stat-row">
-                                <span class="badge-label">@LocalizationService.GetString("ParamSpeed")</span>
-                                <span class="text-secondary font-bold">@titan.Speed%</span>
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("ParamSpeed")</span>
+                                <span class="hype-stat-pct text-accent">@titan.Speed%</span>
                             </div>
-                            <progress class="progress progress-secondary w-full " value="@titan.Speed" max="100"></progress>
+                            <progress class="progress progress-xs progress-accent w-full" value="@titan.Speed" max="100"></progress>
                         </div>
-
-                        <!-- 硬度/特殊能力指标 -->
-                        <div>
-                            <div class="titan-stat-row">
-                                <span class="badge-label">@LocalizationService.GetString("ParamArmor")</span>
-                                <span class="text-accent font-bold">@titan.Armor%</span>
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("ParamArmor")</span>
+                                <span class="hype-stat-pct text-warning">@titan.Armor%</span>
                             </div>
-                            <progress class="progress progress-accent w-full align-right" value="@titan.Armor" max="100"></progress>
+                            <progress class="progress progress-xs progress-warning w-full" value="@titan.Armor" max="100"></progress>
                         </div>
                     </div>
-
                 </div>
             </div>               
         }
@@ -210,7 +243,7 @@
         const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
         document.querySelectorAll('.hype-card-container').forEach(container => {
-            const card = container.querySelector('.titan-hype-card');
+            const card = container.querySelector('.titan-hype-card, .member-hype-card');
             const foil = container.querySelector('.holo-foil-layer');
 
             /* ======================================================================
@@ -352,31 +385,48 @@
         public string NameKey { get; init; } = "";
         public string TitleKey { get; init; } = "";
         public string BioKey { get; init; } = "";
+        public string AbilityKey { get; init; } = "";
         public string Rank { get; init; } = "A";
+        public string Theme { get; init; } = "";
+        public string Portrait { get; init; } = "";
         public string Kills { get; init; } = "0";
-        public int Wits { get; init; }
+        public int KillsPct { get; init; }       // 0-100 for progress bar
+        public int Wits { get; init; }            // 0-10
+        public bool IsTitanShifter { get; init; }
     }
 
     // 依據維基百科與官方設定集建立的調查兵團核心精銳矩陣
     private readonly List<CharacterModel> _characterDatabase = new()
     {
         new CharacterModel {
-            NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", Rank = "S-Rank", Kills = "58", Wits = 8
+            NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", AbilityKey = "C1Ability",
+            Rank = "S-RANK", Theme = "levi", Portrait = "levi-portrait.png",
+            Kills = "58+", KillsPct = 96, Wits = 8, IsTitanShifter = false
         },
         new CharacterModel {
-            NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", Rank = "A+ Rank", Kills = "39", Wits = 7
+            NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", AbilityKey = "C2Ability",
+            Rank = "A+RANK", Theme = "mikasa", Portrait = "mikasa-portrait.png",
+            Kills = "39", KillsPct = 65, Wits = 7, IsTitanShifter = false
         },
         new CharacterModel {
-            NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", Rank = "A-Rank", Kills = "0", Wits = 10
+            NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", AbilityKey = "C3Ability",
+            Rank = "A-RANK", Theme = "armin", Portrait = "armin-portrait.png",
+            Kills = "0", KillsPct = 0, Wits = 10, IsTitanShifter = true
         },
         new CharacterModel {
-            NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", Rank = "A-Rank", Kills = "5", Wits = 9
+            NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", AbilityKey = "C4Ability",
+            Rank = "A-RANK", Theme = "hange", Portrait = "hange-portrait.png",
+            Kills = "5", KillsPct = 10, Wits = 9, IsTitanShifter = false
         },
         new CharacterModel {
-            NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", Rank = "S-Rank", Kills = "??", Wits = 10
+            NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", AbilityKey = "C5Ability",
+            Rank = "S-RANK", Theme = "erwin", Portrait = "erwin-portrait.png",
+            Kills = "??" , KillsPct = 80, Wits = 10, IsTitanShifter = false
         },
         new CharacterModel {
-            NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", Rank = "A-Rank", Kills = "7", Wits = 7
+            NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", AbilityKey = "C6Ability",
+            Rank = "A-RANK", Theme = "jean", Portrait = "jean-portrait.png",
+            Kills = "7", KillsPct = 15, Wits = 7, IsTitanShifter = false
         }
     };
 

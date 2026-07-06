@@ -687,4 +687,28 @@
   <data name="G3Desc" xml:space="preserve">
     <value>為對抗「盔甲巨人」而由漢吉主導開發的秘密重型裝備。外形如金屬長槍，固定於前臂，發射後利用火箭推進刺入巨人體內，拉動引線會引爆高爆炸藥，其威力足以炸碎最堅硬的巨人鎧甲。</value>
   </data>
+  <data name="C1Ability" xml:space="preserve">
+    <value>人類最強</value>
+  </data>
+  <data name="C2Ability" xml:space="preserve">
+    <value>阿克曼覺醒</value>
+  </data>
+  <data name="C3Ability" xml:space="preserve">
+    <value>超大型巨人</value>
+  </data>
+  <data name="C4Ability" xml:space="preserve">
+    <value>雷槍開發者</value>
+  </data>
+  <data name="C5Ability" xml:space="preserve">
+    <value>遠征編隊</value>
+  </data>
+  <data name="C6Ability" xml:space="preserve">
+    <value>前線指揮官</value>
+  </data>
+  <data name="StatKillsBar" xml:space="preserve">
+    <value>巨人擊殺數</value>
+  </data>
+  <data name="StatWitsBar" xml:space="preserve">
+    <value>戰術智慧指數</value>
+  </data>
 </root>

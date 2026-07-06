@@ -5,9 +5,9 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. GLOBAL RESPONSIVE LAYOUT CONTAINER
+   1. SHARED REGISTRY GRID (character + titan cards)
    ========================================================================== */
-.titan-registry-grid {
+.registry-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -18,13 +18,13 @@
 }
 
 @media (min-width: 768px) {
-    .titan-registry-grid {
+    .registry-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1200px) {
-    .titan-registry-grid {
+    .registry-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -214,7 +214,7 @@
 }
 
 /* ==========================================================================
-   5. TITAN CARD CORE SHELL & MOBILE SCALING
+   5. HYPE CARD SYSTEM (shared shell + titan premium variant)
    ========================================================================== */
 .hype-card-container {
     perspective: 1200px;
@@ -223,37 +223,74 @@
     background: transparent;
     box-sizing: border-box;
     justify-content: center;
-    flex: 1 1 340px;
-    max-width: 390px;
+    flex: 1 1 var(--hype-container-basis, 340px);
+    max-width: var(--hype-container-max, 390px);
 }
 
+#character-cards-section .hype-card-container {
+    --hype-container-basis: 320px;
+    --hype-container-max: 360px;
+}
+
+#titan-cards-section .hype-card-container {
+    --hype-container-basis: 380px;
+    --hype-container-max: 420px;
+}
+
+/* Shared card shell */
+.member-hype-card,
 .titan-hype-card {
     width: 100%;
-    max-width: 370px;
-    height: 550px;
+    max-width: var(--hype-card-width, 370px);
     position: relative;
     padding: 26px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    border-radius: 24px;
+    border-radius: var(--hype-card-radius, 24px);
     overflow: hidden;
-    background: radial-gradient(circle at 50% 25%, #251212 0%, #150d0a 55%, #050505 100%);
-    border: 1.5px solid rgba(255, 215, 0, 0.45) !important;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: rotateX(0deg) rotateY(0deg) translateZ(0);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
-    transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
     will-change: transform;
 }
 
+/* Character dossier — compact, outline badge */
+.member-hype-card {
+    --hype-card-width: 340px;
+    --hype-card-radius: 20px;
+    min-height: 500px;
+    background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.18);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
+}
+
+/* Titan registry — larger premium card */
+.titan-hype-card {
+    --hype-card-width: 390px;
+    --hype-card-radius: 24px;
+    height: 560px;
+    background: radial-gradient(circle at 50% 25%, #251212 0%, #150d0a 55%, #050505 100%);
+    border: 1.5px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
+    transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
 @media (max-width: 420px) {
+    .member-hype-card,
+    .titan-hype-card {
+        padding: 20px;
+    }
+
     .titan-hype-card {
         height: auto;
         min-height: 520px;
-        padding: 20px;
+    }
+
+    .member-hype-card {
+        min-height: 480px;
     }
 
     .titan-display-title {
@@ -277,7 +314,7 @@
     z-index: 4;
     pointer-events: none;
     opacity: 0;
-    border-radius: 24px;
+    border-radius: inherit;
     mix-blend-mode: color-dodge;
     background: linear-gradient(135deg, transparent 0%, rgba(255, 223, 128, 0) 25%, rgba(255, 235, 160, 0.35) 45%, var(--theme-aura) 52%, rgba(139, 101, 8, 0.2) 62%, transparent 75%);
     background-size: 200% 200%;
@@ -294,31 +331,23 @@
     z-index: 1;
     pointer-events: none;
     opacity: 0.15;
-    border-radius: 24px;
+    border-radius: inherit;
     background: linear-gradient(rgba(124, 118, 118, 0.5) 10%, transparent 50%);
     background-size: 100% 4px;
 }
 
-/* Titan Component Inner Details */
+/* Shared inner layout */
 .meta-registry-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3px;
     gap: 8px;
+    margin-bottom: 3px;
     flex-wrap: wrap;
 }
 
-/* Small screens: stack badge and serial above/below the title for better wrapping */
-@media (max-width: 520px) {
-    .meta-registry-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-    .meta-registry-row .class-node {
-        align-self: flex-start; /* keep badge at left on very small viewports */
-    }
+.meta-registry-row > :last-child:not(.registry-serial) {
+    margin-left: auto;
 }
 
 .registry-serial {
@@ -361,7 +390,7 @@
     white-space: normal;
     word-break: break-word;
     hyphens: auto;
-    font-size: min(2rem, 11cqw);
+    font-size: min(2rem, 10cqw);
 }
 
 .artwork-glass-frame {
@@ -381,6 +410,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chassis-art--portrait {
+    object-position: center top;
 }
 
 .glass-reflection {
@@ -421,10 +454,10 @@
 }
 
 .node-hdr {
-    font-size: 0.65rem; /* Increased size for mobile/desktop readability */
-    font-weight: 700;
+    font-size: 0.7rem; /* Increased size for mobile/desktop readability */
     color: rgba(255,255,255,0.95); /* Brighter, readable color instead of dark grey */
     letter-spacing: 1px;
+    margin-bottom: 2px;
 }
 
 .chassis-divider {
@@ -439,102 +472,106 @@
 
 .lore-text-body {
     margin: 0;
-    font-size: 0.875rem; /* 14px — identical to other cards */
+    font-size: 0.875rem;
     line-height: 1.25;
-    color: #a6a195; /* Muted warm grey */
+    color: #a6a195;
     text-align: justify;
 }
 
-.titan-stats-container {
-    /* switch to a responsive grid: 2 columns on small screens, 3 on md+ */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 0.75rem; /* slightly larger for readability */
+/* Shared stat rows (character + titan cards) */
+.hype-stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
 }
 
-@media (min-width: 768px) {
-    .titan-stats-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.titan-stat-row {
-    /* Stack label above the numeric percentage to avoid mid-line wrapping when space is tight */
+.hype-stat-row {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    align-items: flex-end;
-    justify-content: flex-start;
- 
 }
-    .titan-stat-row > span.badge-label {
 
-        padding: 0px;
-        margin: 0px;
-      
-        linear-gradient(135deg, rgba(88,159,193,0.1) 0%, rgba(255, 215, 0, 0.02) 100%);
-    }
+.hype-stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+}
 
-    /* Hover & Themes */
-    .hype-card-container:hover .titan-hype-card {
-        border-color: rgba(255, 215, 0, 0.95) !important;
-        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45), 0 50px 95px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.1), 0 0 35px var(--theme-aura);
-    }
+.hype-stat-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #d1d5db;
+    line-height: 1.2;
+    min-width: 0;
+}
 
-    .hype-card-container:hover .chassis-art {
-        transform: scale(1.04);
-    }
+.hype-stat-pct {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+}
 
-    .hype-card-container:hover .holo-foil-layer {
-        opacity: 0.8;
-    }
-    /* Themes declarations */
-    .theme-founding {
-        --theme-aura: rgba(168, 85, 247, 0.5);
-        background: radial-gradient(circle at 50% 25%, #2a0f3d 0%, #11091c 45%, #050505 100%) !important;
-    }
+/* Hover & Themes */
+.hype-card-container:hover .titan-hype-card {
+    border-color: rgba(255, 215, 0, 0.95);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45), 0 50px 95px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.1), 0 0 35px var(--theme-aura);
+}
 
-    .theme-female {
-        --theme-aura: rgba(236, 72, 153, 0.5);
-        background: radial-gradient(circle at 50% 25%, #3c0d25 0%, #1a0813 45%, #050505 100%) !important;
-    }
+.hype-card-container:hover .chassis-art {
+    transform: scale(1.04);
+}
 
-    .theme-beast {
-        --theme-aura: rgba(217, 119, 6, 0.5);
-        background: radial-gradient(circle at 50% 25%, #361c07 0%, #1c1006 45%, #050505 100%) !important;
-    }
+.hype-card-container:hover .holo-foil-layer {
+    opacity: 0.8;
+}
 
-    .theme-colossal {
-        --theme-aura: rgba(239, 68, 68, 0.6);
-        background: radial-gradient(circle at 50% 25%, #3d0a0a 0%, #1c0707 45%, #050505 100%) !important;
-    }
+/* Themes declarations */
+.theme-founding {
+    --theme-aura: rgba(168, 85, 247, 0.5);
+    background: radial-gradient(circle at 50% 25%, #2a0f3d 0%, #11091c 45%, #050505 100%) !important;
+}
 
-    .theme-armored {
-        --theme-aura: rgba(168, 162, 158, 0.45);
-        background: radial-gradient(circle at 50% 25%, #292624 0%, #141312 45%, #050505 100%) !important;
-    }
+.theme-female {
+    --theme-aura: rgba(236, 72, 153, 0.5);
+    background: radial-gradient(circle at 50% 25%, #3c0d25 0%, #1a0813 45%, #050505 100%) !important;
+}
 
-    .theme-jaw {
-        --theme-aura: rgba(245, 158, 11, 0.55);
-        background: radial-gradient(circle at 50% 25%, #3d2305 0%, #1a1004 45%, #050505 100%) !important;
-    }
+.theme-beast {
+    --theme-aura: rgba(217, 119, 6, 0.5);
+    background: radial-gradient(circle at 50% 25%, #361c07 0%, #1c1006 45%, #050505 100%) !important;
+}
 
-    .theme-cart {
-        --theme-aura: rgba(132, 204, 22, 0.45);
-        background: radial-gradient(circle at 50% 25%, #1e2e07 0%, #0f1704 45%, #050505 100%) !important;
-    }
+.theme-colossal {
+    --theme-aura: rgba(239, 68, 68, 0.6);
+    background: radial-gradient(circle at 50% 25%, #3d0a0a 0%, #1c0707 45%, #050505 100%) !important;
+}
 
-    .theme-warhammer {
-        --theme-aura: rgba(244, 180, 195, 0.45);
-        background: radial-gradient(circle at 50% 25%, #3f3537 0%, #1f1c1d 45%, #050505 100%) !important;
-    }
+.theme-armored {
+    --theme-aura: rgba(168, 162, 158, 0.45);
+    background: radial-gradient(circle at 50% 25%, #292624 0%, #141312 45%, #050505 100%) !important;
+}
 
-    .theme-attack {
-        --theme-aura: rgba(34, 197, 94, 0.5);
-        background: radial-gradient(circle at 50% 25%, #0a3317 0%, #051a0b 45%, #050505 100%) !important;
-    }
+.theme-jaw {
+    --theme-aura: rgba(245, 158, 11, 0.55);
+    background: radial-gradient(circle at 50% 25%, #3d2305 0%, #1a1004 45%, #050505 100%) !important;
+}
+
+.theme-cart {
+    --theme-aura: rgba(132, 204, 22, 0.45);
+    background: radial-gradient(circle at 50% 25%, #1e2e07 0%, #0f1704 45%, #050505 100%) !important;
+}
+
+.theme-warhammer {
+    --theme-aura: rgba(244, 180, 195, 0.45);
+    background: radial-gradient(circle at 50% 25%, #3f3537 0%, #1f1c1d 45%, #050505 100%) !important;
+}
+
+.theme-attack {
+    --theme-aura: rgba(34, 197, 94, 0.5);
+    background: radial-gradient(circle at 50% 25%, #0a3317 0%, #051a0b 45%, #050505 100%) !important;
+}
     /* ==========================================================================
    MOBILE INTERACTION ANIMATIONS
    ========================================================================== */
@@ -795,3 +832,238 @@
         margin-bottom: 0;
         font-size: 0.875rem; /* 14px */
     }
+
+/* ==========================================================================
+   8. ROUNDED PROGRESS-BLOCKS (used by character stat bars)
+   Usage HTML:
+   <div class="progress-list">
+     <div class="progress-row">
+       <div class="progress-meta">
+         <div class="progress-label">破壊力 / 規模</div>
+         <div class="progress-percent">100%</div>
+       </div>
+       <div class="progress-bar-track">
+         <div class="progress-fill" style="width:100%"></div>
+       </div>
+     </div>
+   </div>
+   ========================================================================== */
+
+.progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.progress-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.progress-label {
+    color: #cfc7c0; /* warm light grey */
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: left;
+    flex: 0 0 28%; /* left label column width */
+}
+
+/* percent will be positioned inside the bar, aligned to the right */
+.progress-percent {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #59e0ff; /* cyan default for percent */
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+    pointer-events: none;
+}
+
+/* the bar now sits to the right and flexes to fill remaining space */
+.progress-bar-track {
+    position: relative;
+    flex: 1 1 auto;
+    height: 12px; /* pill height */
+    background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border-radius: 9999px;
+    padding: 3px; /* inner breathing room for subtle inset */
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 2px 6px rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+}
+
+/* the fill grows to the width percentage (use inline style width:XX%) */
+.progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    width: 60%; /* default, override with inline style width:XX% */
+    transition: width 700ms cubic-bezier(0.2,0.9,0.2,1);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
+}
+
+/* color variants */
+.progress-fill.blue {
+    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+}
+
+.progress-fill.pink {
+    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+}
+
+.progress-fill.green {
+    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+}
+
+/* small screens: shift to stacked if necessary but keep compact */
+@media (max-width: 520px) {
+    .progress-meta { width: 40%; }
+    .progress-bar-track { height: 14px; padding: 4px; }
+    .progress-label, .progress-percent { font-size: 0.9rem; }
+}
+
+@media (max-width: 380px) {
+    .progress-row { flex-direction: column; align-items: stretch; }
+    .progress-meta { width: 100%; display:flex; justify-content:space-between; }
+    .progress-bar-track { width: 100%; }
+}
+
+
+.progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    width: 60%; /* default, override with inline style width:XX% */
+    transition: width 700ms cubic-bezier(0.2,0.9,0.2,1);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
+}
+
+/* color variants */
+.progress-fill.blue {
+    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+}
+
+.progress-fill.pink {
+    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+}
+
+.progress-fill.green {
+    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+}
+
+/* small screens: slightly taller bar for touch */
+@media (max-width: 420px) {
+    .progress-bar-track { height: 14px; padding: 4px; }
+    .progress-label, .progress-percent { font-size: 0.9rem; }
+}
+
+/* optional subtle bloom for the percent when full */
+.progress-percent.full { color: #34d399; }
+
+
+/* ==========================================================================
+   9. MEMBER DOSSIER — character-only accents (shell shared in §5)
+   ========================================================================== */
+
+.member-hype-card:hover {
+    box-shadow:
+        0 16px 48px rgba(0,0,0,0.7),
+        0 0 28px var(--member-aura, rgba(255,215,0,0.12)),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.member-hype-card.theme-levi   { --member-aura: rgba(100, 200, 255, 0.30); --theme-aura: rgba(100, 200, 255, 0.30); }
+.member-hype-card.theme-mikasa { --member-aura: rgba(239,  68,  68, 0.35); --theme-aura: rgba(239,  68,  68, 0.35); }
+.member-hype-card.theme-armin  { --member-aura: rgba( 56, 189, 248, 0.30); --theme-aura: rgba( 56, 189, 248, 0.30); }
+.member-hype-card.theme-hange  { --member-aura: rgba(251, 191,  36, 0.30); --theme-aura: rgba(251, 191,  36, 0.30); }
+.member-hype-card.theme-erwin  { --member-aura: rgba(167, 139, 250, 0.35); --theme-aura: rgba(167, 139, 250, 0.35); }
+.member-hype-card.theme-jean   { --member-aura: rgba( 34, 197,  94, 0.28); --theme-aura: rgba( 34, 197,  94, 0.28); }
+
+.member-hype-card.theme-levi:hover   { border-color: rgba(100,200,255,0.50); }
+.member-hype-card.theme-mikasa:hover { border-color: rgba(239, 68, 68,0.55); }
+.member-hype-card.theme-armin:hover  { border-color: rgba( 56,189,248,0.50); }
+.member-hype-card.theme-hange:hover  { border-color: rgba(251,191, 36,0.55); }
+.member-hype-card.theme-erwin:hover  { border-color: rgba(167,139,250,0.55); }
+.member-hype-card.theme-jean:hover   { border-color: rgba( 34,197, 94,0.50); }
+
+.member-hype-card.is-tapped {
+    animation: tapShimmer 0.55s ease-out forwards;
+}
+
+.member-rank-badge {
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+}
+
+.rank-levi   { color: #64c8ff; border-color: rgba(100,200,255,0.55); background: rgba(100,200,255,0.10); }
+.rank-mikasa { color: #ef4444; border-color: rgba(239, 68, 68,0.55); background: rgba(239, 68, 68,0.10); }
+.rank-armin  { color: #38bdf8; border-color: rgba( 56,189,248,0.55); background: rgba( 56,189,248,0.10); }
+.rank-hange  { color: #fbbf24; border-color: rgba(251,191, 36,0.55); background: rgba(251,191, 36,0.10); }
+.rank-erwin  { color: #a78bfa; border-color: rgba(167,139,250,0.55); background: rgba(167,139,250,0.10); }
+.rank-jean   { color: #22c55e; border-color: rgba( 34,197, 94,0.55); background: rgba( 34,197, 94,0.10); }
+
+.titan-shifter-badge {
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: rgba(251,191,36,0.15);
+    border: 1px solid rgba(251,191,36,0.55);
+    color: #fbbf24;
+    animation: titanPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes titanPulse {
+    0%, 100% { box-shadow: 0 0 4px rgba(251,191,36,0.3); }
+    50%       { box-shadow: 0 0 12px rgba(251,191,36,0.7); }
+}
+
+.member-display-name {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0 0 2px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.member-display-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #dfbb6b;
+    letter-spacing: 0.02em;
+}
+
+.member-ability-row {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.member-ability-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background: rgba(223, 187, 107, 0.12);
+    border: 1px solid rgba(223, 187, 107, 0.45);
+    color: #dfbb6b;
+}
+
+@media (max-width: 767.98px) {
+    .member-display-name {
+        font-size: 1.125rem;
+    }
+}

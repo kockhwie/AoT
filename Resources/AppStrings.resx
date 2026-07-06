@@ -687,4 +687,28 @@
   <data name="G3Desc" xml:space="preserve">
     <value>A specialized heavy anti-titan armor-piercing rocket weapon developed by Hange. Anchors directly into target frameworks and detonates via a tethered cord, strong enough to shatter hardened skin armor.</value>
   </data>
+  <data name="C1Ability" xml:space="preserve">
+    <value>Humanity's Strongest</value>
+  </data>
+  <data name="C2Ability" xml:space="preserve">
+    <value>Ackerman Instinct</value>
+  </data>
+  <data name="C3Ability" xml:space="preserve">
+    <value>Colossal Titan</value>
+  </data>
+  <data name="C4Ability" xml:space="preserve">
+    <value>Thunder Spear Dev</value>
+  </data>
+  <data name="C5Ability" xml:space="preserve">
+    <value>Long-Range Formation</value>
+  </data>
+  <data name="C6Ability" xml:space="preserve">
+    <value>Field Tactician</value>
+  </data>
+  <data name="StatKillsBar" xml:space="preserve">
+    <value>TITAN ELIMINATIONS</value>
+  </data>
+  <data name="StatWitsBar" xml:space="preserve">
+    <value>TACTICAL WITS</value>
+  </data>
 </root>
