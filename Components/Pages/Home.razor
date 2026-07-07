@@ -29,104 +29,63 @@
     <div class="registry-grid">
         @foreach (var member in _characterDatabase)
         {
-            <div class="hype-card-container member-flip-scene">
-                <div class="member-flip-inner">
-                    <!-- Front — hero portrait + quick stats -->
-                    <div class="member-hype-card member-card-face member-card-front">
-                        <div class="holo-foil-layer"></div>
-                        <div class="hologram-scanlines"></div>
+            <div class="hype-card-container">
+                <div class="member-hype-card">
 
-                        <div class="member-hero-frame">
-                            <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
-                            <div class="member-hero-scrim"></div>
-                            <div class="member-hero-meta">
-                                @if (member.IsTitanShifter)
-                                {
-                                    <div class="titan-shifter-badge">⚡ TITAN SHIFTER</div>
-                                }
-                                else
-                                {
-                                    <span></span>
-                                }
-                                <div class="member-rank-badge @member.RankClass">@member.Rank</div>
-                            </div>
-                            <div class="member-hero-text">
-                                <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
-                                <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
-                            </div>
-                            <div class="laser-rank-trim"></div>
-                        </div>
+                    <div class="holo-foil-layer"></div>
+                    <div class="hologram-scanlines"></div>
 
-                        <div class="member-ability-row">
-                            <span class="member-ability-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
-                        </div>
-
-                        <div class="hype-stats-container">
-                            <div class="hype-stat-row">
-                                <div class="hype-stat-header">
-                                    <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
-                                    <span class="hype-stat-pct text-error">@member.Kills</span>
-                                </div>
-                                <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
-                            </div>
-                            <div class="hype-stat-row">
-                                <div class="hype-stat-header">
-                                    <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
-                                    <span class="hype-stat-pct text-success">@member.Wits/10</span>
-                                </div>
-                                <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
-                            </div>
-                        </div>
-
-                        <p class="member-flip-hint"><i class="ti ti-rotate-360"></i> @LocalizationService.GetString("MemberFlipHint")</p>
-                    </div>
-
-                    <!-- Back — full dossier -->
-                    <div class="member-hype-card member-card-face member-card-back">
-                        <div class="hologram-scanlines"></div>
-
-                        <div class="member-dossier-header">
-                            <span class="member-dossier-label">@LocalizationService.GetString("MemberDossierTitle")</span>
-                            <div class="member-rank-badge @member.RankClass">@member.Rank</div>
-                        </div>
-
-                        <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
-                        <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
-
-                        <div class="chassis-divider"></div>
-
-                        <div class="member-dossier-body">
-                            <p class="lore-text-body">@LocalizationService.GetString(member.BioKey)</p>
-                        </div>
-
-                        <div class="member-ability-row">
-                            <span class="member-ability-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
-                        </div>
-
+                    <div class="meta-registry-row">
                         @if (member.IsTitanShifter)
                         {
-                            <div class="member-dossier-shifter">⚡ @LocalizationService.GetString("MemberTitanShifterNote")</div>
+                            <div class="titan-shifter-badge">⚡ TITAN SHIFTER</div>
                         }
-
-                        <div class="hype-stats-container">
-                            <div class="hype-stat-row">
-                                <div class="hype-stat-header">
-                                    <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
-                                    <span class="hype-stat-pct text-error">@member.Kills</span>
-                                </div>
-                                <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
-                            </div>
-                            <div class="hype-stat-row">
-                                <div class="hype-stat-header">
-                                    <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
-                                    <span class="hype-stat-pct text-success">@member.Wits/10</span>
-                                </div>
-                                <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
-                            </div>
-                        </div>
-
-                        <p class="member-flip-hint"><i class="ti ti-arrow-back-up"></i> @LocalizationService.GetString("MemberFlipBack")</p>
+                        else
+                        {
+                            <span class="registry-serial"></span>
+                        }
+                        <div class="member-rank-badge @member.RankClass">@member.Rank</div>
                     </div>
+
+                    <div class="chassis-header">
+                        <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
+                        <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
+                    </div>
+
+                    <div class="artwork-glass-frame">
+                        <div class="glass-reflection"></div>
+                        <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
+                        <div class="member-tap-sweep" aria-hidden="true"></div>
+                        <div class="laser-rank-trim"></div>
+                    </div>
+
+                    <div class="member-ability-row">
+                        <span class="member-ability-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
+                    </div>
+
+                    <div class="lore-summary-area">
+                        <p class="lore-text-body">@LocalizationService.GetString(member.BioKey)</p>
+                    </div>
+
+                    <div class="chassis-divider"></div>
+
+                    <div class="hype-stats-container">
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
+                                <span class="hype-stat-pct text-error">@member.Kills</span>
+                            </div>
+                            <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
+                        </div>
+                        <div class="hype-stat-row">
+                            <div class="hype-stat-header">
+                                <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
+                                <span class="hype-stat-pct text-success">@member.Wits/10</span>
+                            </div>
+                            <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         }
@@ -281,14 +240,16 @@
 <script>
 
     (function () {
+        // Detect touch-primary device (iPhone, Android, iPad)
         const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-        /* ── Titan cards: desktop tilt + mobile gold tap burst ── */
-        document.querySelectorAll('.hype-card-container:not(.member-flip-scene)').forEach(container => {
-            const card = container.querySelector('.titan-hype-card');
-            if (!card) return;
+        document.querySelectorAll('.hype-card-container').forEach(container => {
+            const card = container.querySelector('.titan-hype-card, .member-hype-card');
             const foil = container.querySelector('.holo-foil-layer');
 
+            /* ======================================================================
+               DESKTOP — smooth JS-driven 3D tilt + foil tracking (unchanged)
+               ====================================================================== */
             if (!isTouchDevice) {
                 let rafId = null;
                 let targetTiltX = 0, targetTiltY = 0;
@@ -296,13 +257,16 @@
                 let foilX = 50, foilY = 50;
                 let isHovered = false;
 
+                // Lerp the tilt values each frame for ultra-smooth motion
                 function lerp(a, b, t) { return a + (b - a) * t; }
 
                 function animateFrame() {
                     currentTiltX = lerp(currentTiltX, targetTiltX, 0.12);
                     currentTiltY = lerp(currentTiltY, targetTiltY, 0.12);
                     card.style.transform = `translateY(-10px) rotateX(${currentTiltX}deg) rotateY(${currentTiltY}deg) translateZ(0)`;
-                    if (foil) foil.style.backgroundPosition = `${foilX}% ${foilY}%`;
+                    if (foil) {
+                        foil.style.backgroundPosition = `${foilX}% ${foilY}%`;
+                    }
                     if (isHovered) rafId = requestAnimationFrame(animateFrame);
                 }
 
@@ -315,7 +279,7 @@
                 container.addEventListener('mousemove', (e) => {
                     const rect = container.getBoundingClientRect();
                     const x = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-                    const y = Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height));
+                    const y = Math.max(0, Math.min(1, (e.clientY - rect.top)  / rect.height));
                     targetTiltX = (0.5 - y) * 24;
                     targetTiltY = (x - 0.5) * 24;
                     foilX = x * 100;
@@ -330,7 +294,15 @@
                     card.style.transform = 'translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(0)';
                     if (foil) foil.style.opacity = '0';
                 });
+
+            /* ======================================================================
+               MOBILE — CSS-only tap feedback (transform + opacity only = GPU)
+               Character: "Survey Lock-On" snap + sensor sweep (no 3D tilt / box-shadow anim)
+               Titan: keeps gold tapShimmer + foilSweep
+               ====================================================================== */
             } else {
+                const isMember = card.classList.contains('member-hype-card');
+
                 container.addEventListener('touchstart', () => {
                     card.classList.remove('is-tapped');
                     void card.offsetWidth;
@@ -338,48 +310,11 @@
                 }, { passive: true });
 
                 card.addEventListener('animationend', (e) => {
-                    if (e.animationName === 'tapShimmer') card.classList.remove('is-tapped');
+                    const done = isMember
+                        ? e.animationName === 'memberTapSnap'
+                        : e.animationName === 'tapShimmer';
+                    if (done) card.classList.remove('is-tapped');
                 });
-            }
-        });
-
-        /* ── Character cards: 3D flip dossier (tap or horizontal swipe) ── */
-        document.querySelectorAll('.member-flip-scene').forEach(scene => {
-            const inner = scene.querySelector('.member-flip-inner');
-            if (!inner) return;
-
-            let startX = 0, startY = 0;
-            let moved = false;
-
-            function toggleFlip() {
-                inner.classList.toggle('is-flipped');
-            }
-
-            scene.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                moved = false;
-            }, { passive: true });
-
-            scene.addEventListener('touchmove', (e) => {
-                const dx = Math.abs(e.touches[0].clientX - startX);
-                const dy = Math.abs(e.touches[0].clientY - startY);
-                if (dx > 8 || dy > 8) moved = true;
-            }, { passive: true });
-
-            scene.addEventListener('touchend', (e) => {
-                const dx = e.changedTouches[0].clientX - startX;
-                const dy = e.changedTouches[0].clientY - startY;
-                if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.2) {
-                    toggleFlip();
-                } else if (!moved) {
-                    toggleFlip();
-                }
-            }, { passive: true });
-
-            if (!isTouchDevice) {
-                scene.addEventListener('click', toggleFlip);
-                scene.style.cursor = 'pointer';
             }
         });
     })();
