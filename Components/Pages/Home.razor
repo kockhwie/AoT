@@ -55,6 +55,7 @@
                     <div class="artwork-glass-frame">
                         <div class="glass-reflection"></div>
                         <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
+                        <div class="member-tap-sweep" aria-hidden="true"></div>
                         <div class="laser-rank-trim"></div>
                     </div>
 
@@ -295,24 +296,24 @@
                 });
 
             /* ======================================================================
-               MOBILE — CSS keyframe tap burst (no JS tracking = zero lag)
-               goldBreath ambient pulse runs automatically from CSS.
-               A tap fires tapShimmer + foilSweep entirely on the GPU.
+               MOBILE — CSS-only tap feedback (transform + opacity only = GPU)
+               Character: "Survey Lock-On" snap + sensor sweep (no 3D tilt / box-shadow anim)
+               Titan: keeps gold tapShimmer + foilSweep
                ====================================================================== */
             } else {
+                const isMember = card.classList.contains('member-hype-card');
+
                 container.addEventListener('touchstart', () => {
-                    // Cancel any running animation so it restarts cleanly on rapid taps
                     card.classList.remove('is-tapped');
-                    // Force a reflow so removing + re-adding the class re-triggers the animation
                     void card.offsetWidth;
                     card.classList.add('is-tapped');
                 }, { passive: true });
 
-                // Clean up after the burst animation ends — ambient breath resumes automatically
                 card.addEventListener('animationend', (e) => {
-                    if (e.animationName === 'tapShimmer') {
-                        card.classList.remove('is-tapped');
-                    }
+                    const done = isMember
+                        ? e.animationName === 'memberTapSnap'
+                        : e.animationName === 'tapShimmer';
+                    if (done) card.classList.remove('is-tapped');
                 });
             }
         });
@@ -407,32 +408,32 @@
     {
         new CharacterModel {
             NameKey = "C1Name", TitleKey = "C1Title", BioKey = "C1Bio", AbilityKey = "C1Ability",
-            Rank = "S-RANK", Theme = "levi", Portrait = "levi-portrait.png",
+            Rank = "S RANK", Theme = "levi", Portrait = "levi-portrait.png",
             Kills = "58+", KillsPct = 96, Wits = 8, IsTitanShifter = false
         },
         new CharacterModel {
             NameKey = "C2Name", TitleKey = "C2Title", BioKey = "C2Bio", AbilityKey = "C2Ability",
-            Rank = "A+RANK", Theme = "mikasa", Portrait = "mikasa-portrait.png",
+            Rank = "A+ RANK", Theme = "mikasa", Portrait = "mikasa-portrait.png",
             Kills = "39", KillsPct = 65, Wits = 7, IsTitanShifter = false
         },
         new CharacterModel {
             NameKey = "C3Name", TitleKey = "C3Title", BioKey = "C3Bio", AbilityKey = "C3Ability",
-            Rank = "A-RANK", Theme = "armin", Portrait = "armin-portrait.png",
+            Rank = "A RANK", Theme = "armin", Portrait = "armin-portrait.png",
             Kills = "0", KillsPct = 0, Wits = 10, IsTitanShifter = true
         },
         new CharacterModel {
             NameKey = "C4Name", TitleKey = "C4Title", BioKey = "C4Bio", AbilityKey = "C4Ability",
-            Rank = "A-RANK", Theme = "hange", Portrait = "hange-portrait.png",
+            Rank = "A RANK", Theme = "hange", Portrait = "hange-portrait.png",
             Kills = "5", KillsPct = 10, Wits = 9, IsTitanShifter = false
         },
         new CharacterModel {
             NameKey = "C5Name", TitleKey = "C5Title", BioKey = "C5Bio", AbilityKey = "C5Ability",
-            Rank = "S-RANK", Theme = "erwin", Portrait = "erwin-portrait.png",
+            Rank = "S RANK", Theme = "erwin", Portrait = "erwin-portrait.png",
             Kills = "??" , KillsPct = 80, Wits = 10, IsTitanShifter = false
         },
         new CharacterModel {
             NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", AbilityKey = "C6Ability",
-            Rank = "A-RANK", Theme = "jean", Portrait = "jean-portrait.png",
+            Rank = "A RANK", Theme = "jean", Portrait = "jean-portrait.png",
             Kills = "7", KillsPct = 15, Wits = 7, IsTitanShifter = false
         }
     };
