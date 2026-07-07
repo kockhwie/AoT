@@ -711,4 +711,16 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>戦術知性指数</value>
   </data>
+  <data name="MemberDossierTitle" xml:space="preserve">
+    <value>機密作戦檔案</value>
+  </data>
+  <data name="MemberFlipHint" xml:space="preserve">
+    <value>タップまたはスワイプで閲覧</value>
+  </data>
+  <data name="MemberFlipBack" xml:space="preserve">
+    <value>タップで戻る</value>
+  </data>
+  <data name="MemberTitanShifterNote" xml:space="preserve">
+    <value>巨人化能力者確認 — 特別監視が必要。</value>
+  </data>
 </root>

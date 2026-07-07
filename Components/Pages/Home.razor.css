@@ -256,15 +256,16 @@
     will-change: transform;
 }
 
-/* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
+/* Character dossier — flip card, content-driven height */
 .member-hype-card {
     --hype-card-width: 390px;
     --hype-card-radius: 20px;
-    height: 560px;
+    height: auto;
+    min-height: 0;
     background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Titan registry — gold is reserved for this card type only */
@@ -284,8 +285,7 @@
         padding: 20px;
     }
 
-    .titan-hype-card,
-    .member-hype-card {
+    .titan-hype-card {
         height: auto;
         min-height: 520px;
     }
@@ -446,19 +446,7 @@
     transform-origin: center;
 }
 
-/* Survey Corps "target lock" sweep — mobile tap only, GPU transform */
-.member-tap-sweep {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 2px;
-    z-index: 5;
-    pointer-events: none;
-    opacity: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.95) 50%, transparent 100%);
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
-}
+/* Survey Corps "target lock" sweep — removed; flip card replaces tap burst */
 
 .specs-dashboard-grid {
     display: flex;
@@ -652,48 +640,6 @@
     }
 }
 
-@keyframes memberTapSnap {
-    0% {
-        transform: translateY(0) scale(1) translateZ(0);
-    }
-
-    40% {
-        transform: translateY(-6px) scale(1.012) translateZ(0);
-    }
-
-    100% {
-        transform: translateY(0) scale(1) translateZ(0);
-    }
-}
-
-@keyframes memberSensorSweep {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-
-    12% {
-        opacity: 0.85;
-    }
-
-    100% {
-        transform: translateY(220px);
-        opacity: 0;
-    }
-}
-
-@keyframes memberTrimFlash {
-    0%, 100% {
-        opacity: 0.7;
-        transform: scaleX(0.6);
-    }
-
-    45% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-
 @keyframes memberGlowBreath {
     0%, 100% {
         opacity: 0.22;
@@ -704,76 +650,30 @@
     }
 }
 
-@keyframes memberScanPulse {
-    0%, 100% {
-        opacity: 0.08;
-    }
-
-    50% {
-        opacity: 0.24;
-    }
-}
-
-@keyframes memberTrimIdle {
-    0%, 100% {
-        opacity: 0.45;
-        transform: scaleX(0.75);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-
 @media (hover: none) {
     .titan-hype-card {
         animation: goldBreath 3.5s ease-in-out infinite;
     }
 
-    /* ponytail: opacity-only breath — static box-shadow/border, GPU compositor friendly on iOS */
-    .member-hype-card > * {
+    /* Subtle border pulse on character front — opacity only, overlays stay absolute */
+    .member-card-front::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        z-index: 0;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        opacity: 0.3;
+        animation: memberGlowBreath 3.5s ease-in-out infinite;
+    }
+
+    .member-card-front > :not(.holo-foil-layer):not(.hologram-scanlines) {
         position: relative;
         z-index: 1;
     }
 
-    .member-hype-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        z-index: 0;
-        background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.16) 0%, transparent 55%);
-        opacity: 0.35;
-        animation: memberGlowBreath 3.5s ease-in-out infinite;
-    }
-
-    .member-hype-card::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        z-index: 0;
-        box-shadow: 0 0 20px rgba(255,255,255,0.18);
-        border: 1px solid rgba(255, 255, 255, 0.45);
-        opacity: 0.28;
-        animation: memberGlowBreath 3.5s ease-in-out infinite;
-    }
-
-    .member-hype-card .hologram-scanlines {
-        animation: memberScanPulse 4s ease-in-out infinite;
-    }
-
-    .member-hype-card .laser-rank-trim {
-        animation: memberTrimIdle 3.5s ease-in-out infinite;
-    }
-
-    .member-hype-card.is-tapped::before,
-    .member-hype-card.is-tapped::after,
-    .member-hype-card.is-tapped .hologram-scanlines,
-    .member-hype-card.is-tapped .laser-rank-trim {
+    .member-flip-inner.is-flipped .member-card-front::after {
         animation-play-state: paused;
     }
 
@@ -781,7 +681,10 @@
         touch-action: manipulation;
     }
 
-    /* mix-blend-mode: color-dodge is costly on mobile — hide foil on touch devices */
+    .member-flip-scene {
+        touch-action: pan-y;
+    }
+
     .member-hype-card .holo-foil-layer {
         display: none;
     }
@@ -1141,44 +1044,143 @@
 
 
 /* ==========================================================================
-   9. MEMBER DOSSIER — character-only accents (shell shared in §5)
+   9. MEMBER DOSSIER — flip card + hero portrait
    ========================================================================== */
 
-.member-hype-card:hover {
-    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.45);
+.member-flip-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Character cards stay neutral white/gray chrome — rank color lives only on the small
-   rank badge (.member-rank-badge.rank-*), not the card border/glow/foil. Gold is titan-only. */
+.member-flip-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.member-card-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.member-card-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.member-hero-frame {
+    position: relative;
+    width: calc(100% + 8px);
+    margin: 0 0 10px -4px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: #050505;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.55);
+}
+
+.member-hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.15) 45%, transparent 70%);
+}
+
+.member-hero-meta {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.member-hero-text {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.member-hero-text .member-display-name {
+    margin: 0 0 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+
+.member-hero-text .member-display-title {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}
+
+.member-dossier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.member-dossier-label {
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #878170;
+}
+
+.member-dossier-body {
+    flex: 1;
+    min-height: 0;
+    margin-bottom: 8px;
+}
+
+.member-dossier-shifter {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #fbbf24;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+.member-flip-hint {
+    margin: 10px 0 0;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #878170;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    opacity: 0.85;
+}
+
+.member-flip-scene:hover .member-card-front {
+    border-color: rgba(255,255,255,0.45);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+@media (max-width: 420px) {
+    .member-hero-frame {
+        height: 220px;
+    }
+}
+
 .member-hype-card .holo-foil-layer {
     background-image: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.22) 52%, rgba(120,120,120,0.15) 62%, transparent 75%);
-}
-
-.member-hype-card.is-tapped {
-    animation: memberTapSnap 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-    .member-hype-card.is-tapped .member-tap-sweep {
-        animation: memberSensorSweep 0.42s ease-out forwards;
-    }
-
-    .member-hype-card.is-tapped .laser-rank-trim {
-        animation: memberTrimFlash 0.42s ease-out forwards;
-    }
-
-    .member-hype-card.is-tapped .member-rank-badge {
-        animation: memberBadgePing 0.42s ease-out forwards;
-    }
-
-@keyframes memberBadgePing {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    45% {
-        transform: scale(1.08);
-    }
 }
 
 .member-rank-badge {

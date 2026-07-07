@@ -711,4 +711,16 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>TACTICAL WITS</value>
   </data>
+  <data name="MemberDossierTitle" xml:space="preserve">
+    <value>CLASSIFIED DOSSIER</value>
+  </data>
+  <data name="MemberFlipHint" xml:space="preserve">
+    <value>Tap or swipe to open dossier</value>
+  </data>
+  <data name="MemberFlipBack" xml:space="preserve">
+    <value>Tap to return</value>
+  </data>
+  <data name="MemberTitanShifterNote" xml:space="preserve">
+    <value>Confirmed Titan Shifter — subject requires special monitoring.</value>
+  </data>
 </root>
