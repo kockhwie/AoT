@@ -1,22 +1,69 @@
 @page "/"
 @inject AppLocalizationService LocalizationService
 
-<!-- 区域 1：顶部核心巨幕区 -->
-<div class="aot-hero">
-    <div>
-        <span class="aot-hero-badge">
-            @LocalizationService.GetString("HeroTag")
-        </span>
-        <h1 class="aot-hero-title">
-            @LocalizationService.GetString("HeroTitle")
-        </h1>
-        <p class="aot-hero-desc">
-            @LocalizationService.GetString("HeroDesc")
-        </p>
-        <div class="aot-hero-actions">
-            <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary">@LocalizationService.GetString("BtnIntel")</button>
-            <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary">@LocalizationService.GetString("BtnGallery")</button>
+<!-- 区域 1：顶部核心巨幕区 (互动式漫画分镜带) -->
+<div class="manga-slider-container" 
+     @ontouchstart="HandleTouchStart" 
+     @ontouchend="HandleTouchEnd"
+     @onmousemove="HandleMouseMove"
+     @onmouseleave="HandleMouseLeave"
+     style="--tilt-x: @(_tiltX)deg; --tilt-y: @(_tiltY)deg;"
+     tabindex="0"
+     aria-label="Manga Comic Panel Story Slider">
+    
+    <div class="manga-screentone-overlay"></div>
+    
+    @for (int i = 0; i < _mangaSlides.Count; i++)
+    {
+        var slide = _mangaSlides[i];
+        var index = i;
+        <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
+            <!-- Background Image -->
+            <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" />
+            <div class="manga-vignette"></div>
+
+            <!-- Manga Speech Bubble / Combat Telemetry Panel -->
+            <div class="manga-telemetry-panel">
+                <a href="#manga-library-section" class="manga-tag-badge" aria-label="Explore chapter details">
+                    <i class="ti ti-book mr-1"></i> @slide.Chapter
+                </a>
+                <h1 class="manga-panel-title">
+                    @slide.Title
+                </h1>
+                
+                <!-- Manga Quote Display -->
+                <blockquote class="manga-quote-block">
+                    “@slide.Quote”
+                </blockquote>
+                
+                <div class="manga-panel-actions">
+                    <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary" aria-label="Access Intelligence Database">
+                        <i class="ti ti-activity mr-1"></i>@LocalizationService.GetString("BtnIntel")
+                    </button>
+                    <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary" aria-label="Open Visual Gallery">
+                        <i class="ti ti-photo mr-1"></i>@LocalizationService.GetString("BtnGallery")
+                    </button>
+                </div>
+            </div>
         </div>
+    }
+
+    <!-- Manual Navigation Arrows -->
+    <button class="manga-nav-arrow prev" @onclick="PrevSlide" aria-label="Previous Slide">
+        <i class="ti ti-chevron-left"></i>
+    </button>
+    <button class="manga-nav-arrow next" @onclick="NextSlide" aria-label="Next Slide">
+        <i class="ti ti-chevron-right"></i>
+    </button>
+
+    <!-- Navigation Dots -->
+    <div class="manga-slider-dots">
+        @for (int i = 0; i < _mangaSlides.Count; i++)
+        {
+            var index = i;
+            <span class="manga-dot @(index == _currentSlideIndex ? "active" : "")" 
+                  @onclick="() => SetSlide(index)"></span>
+        }
     </div>
 </div>
 
@@ -322,6 +369,145 @@
 </script>
 
 @code {
+    // Manga Slide Model
+    private sealed class MangaSlideModel
+    {
+        public string Title { get; init; } = "";
+        public string Chapter { get; init; } = "";
+        public string Quote { get; init; } = "";
+        public string Image { get; init; } = "";
+    }
+
+    private List<MangaSlideModel> _mangaSlides = new();
+    private int _currentSlideIndex = 0;
+    private System.Threading.Timer? _autoPlayTimer;
+    private double _touchStartX = 0;
+    private double _tiltX = 0;
+    private double _tiltY = 0;
+
+    protected override void OnInitialized()
+    {
+        // Populate slides with localized quote contents
+        _mangaSlides = new List<MangaSlideModel>
+        {
+            new MangaSlideModel
+            {
+                Title = "The Breach / 牆的破壞",
+                Chapter = "VOL 01 - CH 01",
+                Quote = CurrentLang switch {
+                    "zh" => "那一天，人類回想起了，受支配的恐怖…",
+                    "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
+                    _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
+                },
+                Image = "manga_breach.png"
+            },
+            new MangaSlideModel
+            {
+                Title = "Humanity's Strongest / 最強的兵士",
+                Chapter = "VOL 03 - CH 09",
+                Quote = CurrentLang switch {
+                    "zh" => "什麼都無法捨棄的人，什麼也改變不了。",
+                    "jp" => "何も捨てることができない人には、何も変えることはできない。",
+                    _ => "A person who cannot sacrifice anything, cannot change anything."
+                },
+                Image = "manga_levi_slash.png"
+            },
+            new MangaSlideModel
+            {
+                Title = "The Roar of Attack / 進擊的咆哮",
+                Chapter = "VOL 34 - CH 139",
+                Quote = CurrentLang switch {
+                    "zh" => "我要將牠們驅逐出去，一個不留！",
+                    "jp" => "駆逐してやる、この世から一匹残らず！",
+                    _ => "I will exterminate them... every single one of them from this world!"
+                },
+                Image = "manga_eren_roar.png"
+            }
+        };
+
+        // Initialize 7s autoplay rotation loop
+        _autoPlayTimer = new System.Threading.Timer(AutoPlayTick, null, 7000, 7000);
+    }
+
+    private void AutoPlayTick(object? state)
+    {
+        InvokeAsync(() =>
+        {
+            NextSlide();
+            StateHasChanged();
+        });
+    }
+
+    private void PrevSlide()
+    {
+        ResetAutoplay();
+        _currentSlideIndex = _currentSlideIndex == 0 ? _mangaSlides.Count - 1 : _currentSlideIndex - 1;
+    }
+
+    private void NextSlide()
+    {
+        ResetAutoplay();
+        _currentSlideIndex = (_currentSlideIndex + 1) % _mangaSlides.Count;
+    }
+
+    private void SetSlide(int index)
+    {
+        ResetAutoplay();
+        _currentSlideIndex = index;
+    }
+
+    private void ResetAutoplay()
+    {
+        _autoPlayTimer?.Change(7000, 7000);
+    }
+
+    private void HandleTouchStart(Microsoft.AspNetCore.Components.Web.TouchEventArgs e)
+    {
+        if (e.Touches.Length > 0)
+        {
+            _touchStartX = e.Touches[0].ClientX;
+        }
+    }
+
+    private void HandleTouchEnd(Microsoft.AspNetCore.Components.Web.TouchEventArgs e)
+    {
+        if (e.ChangedTouches.Length > 0)
+        {
+            var deltaX = e.ChangedTouches[0].ClientX - _touchStartX;
+            // threshold of 60px swipe delta
+            if (deltaX > 60)
+            {
+                PrevSlide();
+            }
+            else if (deltaX < -60)
+            {
+                NextSlide();
+            }
+        }
+    }
+
+    private void HandleMouseMove(Microsoft.AspNetCore.Components.Web.MouseEventArgs e)
+    {
+        // Calculate tilt between -10 to +10 degrees based on cursor position relative to window bounds
+        // (Rough normalization for slider bounds)
+        double width = 1200; // estimated width
+        double height = 500; // estimated height
+        
+        _tiltY = -((e.OffsetX - (width / 2)) / (width / 2)) * 8;
+        _tiltX = ((e.OffsetY - (height / 2)) / (height / 2)) * 8;
+    }
+
+    private void HandleMouseLeave(Microsoft.AspNetCore.Components.Web.MouseEventArgs e)
+    {
+        _tiltX = 0;
+        _tiltY = 0;
+    }
+
+    public void Dispose()
+    {
+        _autoPlayTimer?.Dispose();
+    }
+
     [CascadingParameter] public string CurrentLang { get; set; } = "zh";
 
     // DRY 核心：定义轻量级数据模型以供组件循环复用
@@ -466,4 +652,5 @@
             WeightSpec = "4.5 kg (單發)", RiskLevel = "CRITICAL"
         }
     };
+
 }

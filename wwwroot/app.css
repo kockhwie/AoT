@@ -12,6 +12,96 @@ body {
     font-size: 1rem;
 }
 
+/* ==========================================
+   1.5. MANGA NAVBAR GLOBAL OVERRIDE
+   ========================================== */
+
+/* The main nav bar — manga comic panel style */
+.navbar {
+    background-color: #0a0a0a !important;
+    border-bottom: 5px solid #000000 !important;
+    box-shadow: 0 5px 0px #000000 !important;
+    padding: 0 1rem !important;
+    min-height: 3.5rem !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Brand mark — sits in a comic panel bubble */
+.brand-mark {
+    height: 36px;
+    filter: invert(1) contrast(1.5);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.brand-mark:hover {
+    filter: invert(1) contrast(2) sepia(1) hue-rotate(320deg) saturate(3);
+    transform: scale(1.05);
+}
+
+/* Nav link typography — manga uppercase stencil */
+.nav-links .menu-horizontal > li > details > summary,
+.nav-links .menu-horizontal > li > a {
+    font-size: 0.75rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.12em !important;
+    color: #e5e7eb !important;
+    padding: 0.5rem 0.75rem !important;
+    border: 2px solid transparent;
+    transition: all 0.15s ease !important;
+}
+
+/* Hover: black/white inversion comic punch */
+.nav-links .menu-horizontal > li > details > summary:hover,
+.nav-links .menu-horizontal > li > a:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: 3px 3px 0px #ef4444 !important;
+}
+
+/* Dropdown menus — comic panel frames */
+.nav-menu {
+    background-color: #0a0a0a !important;
+    border: 3px solid #000000 !important;
+    box-shadow: 6px 6px 0px #000000 !important;
+    border-radius: 0 !important;
+    min-width: 14rem;
+}
+
+.nav-menu li a,
+.nav-menu li summary {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    color: #d1d5db !important;
+    text-transform: uppercase !important;
+}
+
+.nav-menu li a:hover,
+.nav-menu li summary:hover {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+/* Language switcher pills — manga button style */
+.btn-xs.btn-outline,
+.btn-xs.btn-error {
+    border-radius: 0 !important;
+    border-width: 2px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.1em !important;
+}
+
+/* Mobile hamburger button */
+.btn-ghost svg {
+    color: #ffffff;
+}
+
+
+
 
 /* ==========================================
    1. 全局基础与语言字体配置 (DRY 核心)
@@ -33,20 +123,134 @@ html:lang(jp) {
 /* ==========================================
    2. 巨幕组件 (Hero Section) - 自适应各端
    ========================================== */
+/* ==========================================
+   2. 巨幕组件 (Hero Section) - 自适应各端 & 沉浸式动效
+   ========================================== */
 .aot-hero {
-    background-color:  rgb(181 226 226 / 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 45vh;
+    background: radial-gradient(circle at 50% 30%, #2f0f0f 0%, #150909 60%, #050505 100%);
+    border: 1px solid rgba(239, 68, 68, 0.2);
     border-radius: 1.5rem;
-    padding: 1.5rem;
+    padding: 2.25rem 1.75rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 
+                inset 0 0 40px rgba(0, 0, 0, 0.9),
+                0 0 20px rgba(239, 68, 68, 0.05);
+    transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    touch-action: pan-y;
 }
 
 @media (min-width: 768px) {
     .aot-hero {
-        padding: 2rem;
+        padding: 3.5rem 3rem;
+        min-height: 50vh;
     }
 }
+
+/* Touch active/hover states for mobile/desktop */
+.aot-hero:hover,
+.aot-hero:active {
+    border-color: rgba(239, 68, 68, 0.45);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 
+                inset 0 0 50px rgba(239, 68, 68, 0.1),
+                0 0 30px rgba(239, 68, 68, 0.15);
+}
+
+/* Scanlines overlay */
+.aot-hero-scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 6px 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Ember particles wrapper */
+.aot-hero-embers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.aot-hero-embers::before,
+.aot-hero-embers::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #f97316;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f97316, 0 0 20px #ef4444;
+    animation: floatEmber 6s linear infinite;
+    opacity: 0;
+}
+
+.aot-hero-embers::before {
+    left: 20%;
+    animation-delay: 0s;
+    animation-duration: 7s;
+}
+
+.aot-hero-embers::after {
+    left: 75%;
+    animation-delay: 2.5s;
+    animation-duration: 5s;
+}
+
+/* Bottom warning stripe */
+.aot-hero-danger-stripe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #facc15,
+        #facc15 10px,
+        #1e1b4b 10px,
+        #1e1b4b 20px
+    );
+    z-index: 3;
+    animation: scrollStripe 12s linear infinite;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes floatEmber {
+    0% {
+        transform: translateY(110%) translateX(0) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-20%) translateX(20px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes scrollStripe {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
  
 /* ==========================================
    3. 角色卡片组件网格 (Character Grid)

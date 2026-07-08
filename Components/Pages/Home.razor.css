@@ -33,58 +33,242 @@
 /* ==========================================================================
    2. HERO COMPONENT STYLING
    ========================================================================== */
-.aot-hero-badge {
-    display: inline-block;
-    padding: 0.25rem 0.625rem;
-    font-size: 0.6875rem; /* 11px */
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 9999px;
-    background-color: #ef4444; /* badge-error */
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-}
-
-.aot-hero-title {
-    font-size: 2.5rem; /* 40px */
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #ffffff;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-}
-
-.aot-hero-desc {
-    font-size: 0.9375rem; /* 15px */
-    opacity: 0.8;
-    line-height: 1.5;
-    max-width: 42rem;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-}
-
-@media (max-width: 767.98px) {
-    .aot-hero-title {
-        font-size: 1.75rem; /* 28px */
-    }
-
-    .aot-hero-desc {
-        font-size: 0.875rem; /* 14px */
-    }
-}
-
-.aot-hero-actions {
+/* ==========================================================================
+   2. MANGA SLIDER COMPONENT STYLING (High-Contrast Comic Panel)
+   ========================================================================== */
+.manga-slider-container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    height: 55vh;
+    border: 6px solid #000000;
+    box-shadow: 12px 12px 0px #000000;
+    background-color: #0b0b0b;
+    border-radius: 4px;
+    overflow: hidden;
+    touch-action: pan-y;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    align-items: stretch;
+    perspective: 1000px;
+    transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
 }
 
-.aot-hero-btn {
-    font-weight: 700;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+.manga-slider-container:hover {
+    box-shadow: 18px 18px 0px #ef4444;
 }
+
+/* Screentone layout using CSS grid pattern */
+.manga-screentone-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+    background-size: 8px 8px;
+    opacity: 0.85;
+}
+
+/* Slide structure */
+.manga-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.98);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.6s;
+    z-index: 1;
+}
+
+.manga-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* Ink artwork layer */
+.manga-bg-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.15) brightness(0.65) grayscale(1);
+    transition: transform 8s ease-out, filter 0.3s ease;
+}
+
+.manga-slider-container:hover .manga-bg-art {
+    filter: contrast(1.25) brightness(0.75) grayscale(1);
+}
+
+.manga-slide.active .manga-bg-art {
+    transform: scale(1.06);
+}
+
+.manga-vignette {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 2;
+}
+
+/* Manga content layout */
+.manga-telemetry-panel {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+}
+
+.manga-tag-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.manga-tag-badge:hover {
+    background-color: #ef4444;
+    border-color: #000000;
+    box-shadow: 4px 4px 0px #000000;
+    transform: translate(-2px, -2px);
+}
+
+.manga-panel-title {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 0px #000000;
+}
+
+.manga-quote-block {
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+    color: #dfdfdf;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    max-width: 50rem;
+    border-left: 4px solid #ffffff;
+    padding-left: 1rem;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+
+
+
+/* Layout Control Buttons */
+.manga-panel-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Slider Controls */
+.manga-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    color: #000000;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+.manga-nav-arrow:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.manga-nav-arrow:active {
+    transform: translateY(-50%) translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.manga-nav-arrow.prev {
+    left: 1.5rem;
+}
+
+.manga-nav-arrow.next {
+    right: 1.5rem;
+}
+
+/* Slider Dot indicators */
+.manga-slider-dots {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 20;
+}
+
+.manga-dot {
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.manga-dot.active {
+    background-color: #ef4444;
+    transform: scale(1.2);
+}
+
+@keyframes comicPulse {
+    0% {
+        transform: rotate(6deg) scale(0.92);
+    }
+    100% {
+        transform: rotate(9deg) scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .manga-slider-container {
+        height: 480px;
+        min-height: 480px;
+    }
+    .manga-telemetry-panel {
+        padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+    }
+    .manga-nav-arrow {
+        display: none; /* Swipe works, buttons hidden on mobile */
+    }
+    .manga-fx-badge {
+        right: 1.25rem;
+        top: 1.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+
 
 /* ==========================================================================
    3. SECTION TITLE COMPONENT
