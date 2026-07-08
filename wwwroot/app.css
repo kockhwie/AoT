@@ -41,8 +41,8 @@ body {
 }
 
 /* Nav link typography — manga uppercase stencil */
-.nav-links .menu-horizontal > li > details > summary,
-.nav-links .menu-horizontal > li > a {
+.nav-links > li > details > summary,
+.nav-links > li > a {
     font-size: 0.75rem !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
@@ -50,16 +50,39 @@ body {
     color: #e5e7eb !important;
     padding: 0.5rem 0.75rem !important;
     border: 2px solid transparent;
+    border-radius: 0.5rem !important;
     transition: all 0.15s ease !important;
 }
 
+/* Force visible overflow so shadows aren't clipped by daisyUI's menu li/details styling */
+.nav-links > li,
+.nav-links > li > details {
+    overflow: visible !important;
+}
+
 /* Hover: black/white inversion comic punch */
-.nav-links .menu-horizontal > li > details > summary:hover,
-.nav-links .menu-horizontal > li > a:hover {
+.nav-links > li > details > summary:hover,
+.nav-links > li > a:hover {
     background-color: #ffffff !important;
     color: #000000 !important;
     border-color: #000000 !important;
-    box-shadow: 3px 3px 0px #ef4444 !important;
+    box-shadow: 4px 4px 0px 1px #ef4444 !important;
+    z-index: 10;
+    position: relative;
+}
+
+/* Prevent the bad red shadow when details is open or focused */
+.nav-links > li > details[open] > summary,
+.nav-links > li > details > summary:active,
+.nav-links > li > a:active,
+.nav-links > li > details > summary:focus,
+.nav-links > li > a:focus {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: 4px 4px 0px 1px #000000 !important;
+    z-index: 10;
+    position: relative;
 }
 
 /* Dropdown menus — comic panel frames */
@@ -67,7 +90,7 @@ body {
     background-color: #0a0a0a !important;
     border: 3px solid #000000 !important;
     box-shadow: 6px 6px 0px #000000 !important;
-    border-radius: 0 !important;
+    border-radius: 0.75rem !important;
     min-width: 14rem;
 }
 
@@ -78,10 +101,15 @@ body {
     letter-spacing: 0.05em !important;
     color: #d1d5db !important;
     text-transform: uppercase !important;
+    border-radius: 0.5rem !important;
 }
 
 .nav-menu li a:hover,
-.nav-menu li summary:hover {
+.nav-menu li summary:hover,
+.nav-menu li a:active,
+.nav-menu li summary:active,
+.nav-menu li a:focus,
+.nav-menu li summary:focus {
     background-color: #ef4444 !important;
     color: #ffffff !important;
 }
@@ -89,7 +117,7 @@ body {
 /* Language switcher pills — manga button style */
 .btn-xs.btn-outline,
 .btn-xs.btn-error {
-    border-radius: 0 !important;
+    border-radius: 0.5rem !important;
     border-width: 2px !important;
     font-weight: 900 !important;
     letter-spacing: 0.1em !important;

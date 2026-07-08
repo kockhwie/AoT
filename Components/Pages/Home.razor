@@ -11,42 +11,45 @@
      tabindex="0"
      aria-label="Manga Comic Panel Story Slider">
     
-    <div class="manga-screentone-overlay"></div>
-    
-    @for (int i = 0; i < _mangaSlides.Count; i++)
-    {
-        var slide = _mangaSlides[i];
-        var index = i;
-        <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
-            <!-- Background Image -->
-            <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" />
-            <div class="manga-vignette"></div>
+    <!-- Inner wrapper with hidden overflow to prevent slides from bleeding out, while letting arrows overflow -->
+    <div style="position: absolute; inset: 0; overflow: hidden; border-radius: inherit;">
+        <div class="manga-screentone-overlay"></div>
+        
+        @for (int i = 0; i < _mangaSlides.Count; i++)
+        {
+            var slide = _mangaSlides[i];
+            var index = i;
+            <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
+                <!-- Background Image -->
+                <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" />
+                <div class="manga-vignette"></div>
 
-            <!-- Manga Speech Bubble / Combat Telemetry Panel -->
-            <div class="manga-telemetry-panel">
-                <a href="#manga-library-section" class="manga-tag-badge" aria-label="Explore chapter details">
-                    <i class="ti ti-book mr-1"></i> @slide.Chapter
-                </a>
-                <h1 class="manga-panel-title">
-                    @slide.Title
-                </h1>
-                
-                <!-- Manga Quote Display -->
-                <blockquote class="manga-quote-block">
-                    “@slide.Quote”
-                </blockquote>
-                
-                <div class="manga-panel-actions">
-                    <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary" aria-label="Access Intelligence Database">
-                        <i class="ti ti-activity mr-1"></i>@LocalizationService.GetString("BtnIntel")
-                    </button>
-                    <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary" aria-label="Open Visual Gallery">
-                        <i class="ti ti-photo mr-1"></i>@LocalizationService.GetString("BtnGallery")
-                    </button>
+                <!-- Manga Speech Bubble / Combat Telemetry Panel -->
+                <div class="manga-telemetry-panel">
+                    <a href="#manga-library-section" class="manga-tag-badge" aria-label="Explore chapter details">
+                        <i class="ti ti-book mr-1"></i> @slide.Chapter
+                    </a>
+                    <h1 class="manga-panel-title">
+                        @slide.Title
+                    </h1>
+                    
+                    <!-- Manga Quote Display -->
+                    <blockquote class="manga-quote-block">
+                        “@slide.Quote”
+                    </blockquote>
+                    
+                    <div class="manga-panel-actions">
+                        <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary" aria-label="Access Intelligence Database">
+                            <i class="ti ti-activity mr-1"></i>@LocalizationService.GetString("BtnIntel")
+                        </button>
+                        <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary" aria-label="Open Visual Gallery">
+                            <i class="ti ti-photo mr-1"></i>@LocalizationService.GetString("BtnGallery")
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 
     <!-- Manual Navigation Arrows -->
     <button class="manga-nav-arrow prev" @onclick="PrevSlide" aria-label="Previous Slide">

@@ -45,13 +45,12 @@
     box-shadow: 12px 12px 0px #000000;
     background-color: #0b0b0b;
     border-radius: 4px;
-    overflow: hidden;
+    /* overflow: hidden; Removed to allow arrows on border */
     touch-action: pan-y;
     display: flex;
     align-items: stretch;
     perspective: 1000px;
-    transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
-    transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .manga-slider-container:hover {
@@ -182,7 +181,6 @@
 .manga-nav-arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: 48px;
     height: 48px;
     background-color: #ffffff;
@@ -196,6 +194,7 @@
     z-index: 20;
     transition: background-color 0.2s, transform 0.2s;
     box-shadow: 4px 4px 0px #000000;
+    border-radius: 50%;
 }
 
 .manga-nav-arrow:hover {
@@ -203,17 +202,24 @@
     color: #ffffff;
 }
 
-.manga-nav-arrow:active {
-    transform: translateY(-50%) translate(2px, 2px);
+.manga-nav-arrow.prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.manga-nav-arrow.prev:active {
+    transform: translate(-50%, -50%) scale(0.92);
     box-shadow: 2px 2px 0px #000000;
 }
 
-.manga-nav-arrow.prev {
-    left: 1.5rem;
+.manga-nav-arrow.next {
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
-.manga-nav-arrow.next {
-    right: 1.5rem;
+.manga-nav-arrow.next:active {
+    transform: translate(50%, -50%) scale(0.92);
+    box-shadow: 2px 2px 0px #000000;
 }
 
 /* Slider Dot indicators */
