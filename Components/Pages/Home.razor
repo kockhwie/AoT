@@ -26,8 +26,8 @@
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
                 <div class="manga-telemetry-panel">
-                    <a href="#manga-library-section" class="manga-tag-badge" aria-label="Explore chapter details">
-                        <i class="ti ti-book mr-1"></i> @slide.Chapter
+                    <a href="#manga-library-section" class="aot-btn aot-btn--red aot-btn--sm" aria-label="Explore chapter details">
+                        <i class="ti ti-bookmark mr-1"></i>@slide.Chapter
                     </a>
                     <h1 class="manga-panel-title">
                         @slide.Title
@@ -37,15 +37,13 @@
                     <blockquote class="manga-quote-block">
                         “@slide.Quote”
                     </blockquote>
-                    
-                    <div class="manga-panel-actions">
-                        <button class="btn btn-xs md:btn-sm aot-hero-btn btn-primary" aria-label="Access Intelligence Database">
-                            <i class="ti ti-activity mr-1"></i>@LocalizationService.GetString("BtnIntel")
-                        </button>
-                        <button class="btn btn-xs md:btn-sm aot-hero-btn btn-outline btn-secondary" aria-label="Open Visual Gallery">
-                            <i class="ti ti-photo mr-1"></i>@LocalizationService.GetString("BtnGallery")
-                        </button>
-                    </div>
+                    <button class="aot-btn aot-btn--white mr-1" aria-label="Access Intelligence Database">
+                        <i class="ti ti-activity"></i>@LocalizationService.GetString("BtnIntel")
+                    </button>
+                    <button class="aot-btn aot-btn--white mr-1" aria-label="Open Visual Gallery">
+                        <i class="ti ti-photo"></i>@LocalizationService.GetString("BtnGallery")
+                    </button>
+
                 </div>
             </div>
         }

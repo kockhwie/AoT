@@ -12,6 +12,149 @@ body {
     font-size: 1rem;
 }
 
+
+
+/* ==========================================
+   GLOBAL BUTTON SYSTEM
+   Change a token here, every button updates.
+   ========================================== */
+:root {
+    --aot-btn-border: 2px;
+    --aot-btn-radius: 4px;
+    --aot-btn-shadow-color: #000000;
+    --aot-btn-font-weight: 900;
+}
+
+.aot-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    border: var(--aot-btn-border) solid #000000;
+    border-radius: var(--aot-btn-radius);
+    font-weight: var(--aot-btn-font-weight);
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 3px 3px 0px var(--aot-btn-shadow-color);
+    transition: all 0.15s ease;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 48px; /* covers Android 48dp + iOS 44pt */
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none; /* stop long-press selection callout on Android */
+}
+
+/* Only apply hover lift on devices that actually have a mouse —
+   prevents the effect getting "stuck" after a tap on iOS Safari */
+@media (hover: hover) {
+    /*
+        .aot-btn:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: 4px 4px 0px var(--aot-btn-shadow-color);
+    }
+    */
+ 
+    .aot-btn:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border-color: #000000 !important;
+        box-shadow: 4px 4px 0px 1px #ef4444 !important;
+        transform: none; /* drop the old lift — box-shadow does the work now */
+    }
+}
+
+.aot-btn:active {
+    box-shadow: 2px 2px 0px 1px #ef4444 !important;
+    transform: translate(1px, 1px);
+}
+
+/* more simple button style */
+/*
+.aot-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--aot-btn-shadow-color);
+}
+*/
+
+/* Sizes — sm now respects the 44px floor via min-height above,
+   padding just controls horizontal width */
+ 
+.aot-btn--lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    min-height: 52px;
+}
+
+.aot-btn--sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.5rem;
+    min-height: 32px;
+}
+
+.aot-btn--xsm {
+    padding: 0.20rem 0.35rem;
+    font-size: 0.4rem;
+    min-height: 28px;
+}
+
+
+
+/* Colors — add new ones here only when you actually need a new color */
+.aot-btn--white {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.aot-btn--white:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.aot-btn--red {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #f87171;
+}
+
+.aot-btn--red:hover {
+    filter: brightness(1.1);
+}
+
+.aot-btn--blue {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #60a5fa;
+}
+
+.aot-btn--blue:hover {
+    filter: brightness(1.1);
+}
+
+.aot-btn--lang {
+    min-height: 28px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.65rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.aot-btn--lang.is-active {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #000000;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+
+
+
 /* ==========================================
    1.5. MANGA NAVBAR GLOBAL OVERRIDE
    ========================================== */
@@ -39,6 +182,30 @@ body {
     filter: invert(1) contrast(2) sepia(1) hue-rotate(320deg) saturate(3);
     transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Nav link typography — manga uppercase stencil */
 .nav-links > li > details > summary,
@@ -71,20 +238,8 @@ body {
     position: relative;
 }
 
-/* Prevent the bad red shadow when details is open or focused */
-.nav-links > li > details[open] > summary,
-.nav-links > li > details > summary:active,
-.nav-links > li > a:active,
-.nav-links > li > details > summary:focus,
-.nav-links > li > a:focus {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border-color: #000000 !important;
-    box-shadow: 4px 4px 0px 1px #000000 !important;
-    z-index: 10;
-    position: relative;
-}
-
+ 
+   
 /* Dropdown menus — comic panel frames */
 .nav-menu {
     background-color: #0a0a0a !important;
@@ -92,6 +247,7 @@ body {
     box-shadow: 6px 6px 0px #000000 !important;
     border-radius: 0.75rem !important;
     min-width: 14rem;
+    overflow: visible !important; /* undo daisyUI's dropdown-content overflow:auto clipping the red shadow */
 }
 
 .nav-menu li a,
@@ -102,17 +258,43 @@ body {
     color: #d1d5db !important;
     text-transform: uppercase !important;
     border-radius: 0.5rem !important;
+    border: 2px solid transparent !important; /* so hover border-color has something to show */
 }
 
+/* Hover/active/focus — ONE "comic punch" effect, shared by desktop top-level
+nav-links AND the nav-menu dropdown (hamburger flyout on mobile, sub-menus
+on desktop). Change it here once, both update. */
+.nav-links > li > details > summary:hover,
+.nav-links > li > a:hover,
 .nav-menu li a:hover,
-.nav-menu li summary:hover,
+.nav-menu li summary:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: 4px 4px 0px 1px #ef4444 !important;
+    z-index: 10;
+    position: relative;
+}
+
+
+.nav-links > li > details[open] > summary,
+.nav-links > li > details > summary:active,
+.nav-links > li > a:active,
+.nav-links > li > details > summary:focus,
+.nav-links > li > a:focus,
 .nav-menu li a:active,
 .nav-menu li summary:active,
 .nav-menu li a:focus,
-.nav-menu li summary:focus {
-    background-color: #ef4444 !important;
-    color: #ffffff !important;
+.nav-menu li summary:focus,
+.nav-menu details[open] > summary {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: 4px 4px 0px 1px #000000 !important;
+    z-index: 10;
+    position: relative;
 }
+
 
 /* Language switcher pills — manga button style */
 .btn-xs.btn-outline,

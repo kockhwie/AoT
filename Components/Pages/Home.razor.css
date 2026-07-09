@@ -124,27 +124,7 @@
     padding: 2.5rem 2rem;
     box-sizing: border-box;
 }
-
-.manga-tag-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.75rem;
-    font-weight: 900;
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-}
-
-.manga-tag-badge:hover {
-    background-color: #ef4444;
-    border-color: #000000;
-    box-shadow: 4px 4px 0px #000000;
-    transform: translate(-2px, -2px);
-}
+ 
 
 .manga-panel-title {
     font-size: clamp(1.75rem, 5vw, 3rem);
@@ -418,6 +398,7 @@
     justify-content: center;
     flex: 1 1 var(--hype-container-basis, 340px);
     max-width: var(--hype-container-max, 390px);
+    overflow: hidden;
 }
 
 /* ponytail: character & titan containers share one size so card widths match */
@@ -432,6 +413,7 @@
 .titan-hype-card {
     width: 100%;
     max-width: var(--hype-card-width, 370px);
+    min-width: 0;
     position: relative;
     padding: 26px;
     box-sizing: border-box;
@@ -442,7 +424,6 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: rotateX(0deg) rotateY(0deg) translateZ(0);
     will-change: transform;
 }
 
@@ -468,26 +449,66 @@
     transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 767.98px) {
+    .hype-card-container {
+        padding: 0 0 8px;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+
     .member-hype-card,
     .titan-hype-card {
-        padding: 20px;
-    }
-
-    .titan-hype-card,
-    .member-hype-card {
+        padding: 16px;
+        margin: 0;
+        border-radius: 14px;
+        width: 100%;
+        max-width: 100%;
         height: auto;
-        min-height: 520px;
-    }
-
-    .titan-display-title {
-        font-size: clamp(1.3rem, 7.5vw, 1.7rem) !important;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        min-height: unset;
+        transform: none !important;
     }
 
     .artwork-glass-frame {
+        width: 100%;
+        margin-left: 0;
         height: 170px;
+    }
+
+    .meta-registry-row {
+        gap: 6px;
+        align-items: flex-start;
+    }
+
+    .member-display-name,
+    .member-display-title,
+    .member-ability-tag,
+    .titan-display-title,
+    .lore-text-body,
+    .member-rank-badge,
+    .titan-shifter-badge {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        max-width: 100%;
+    }
+
+    .member-display-name {
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+    .member-display-title {
+        font-size: 0.8rem;
+    }
+
+    .member-ability-tag {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .titan-display-title {
+        font-size: clamp(1.3rem, 7vw, 1.8rem) !important;
+        line-height: 1.05;
+        max-width: 100%;
     }
 }
 
@@ -921,8 +942,7 @@
         animation: goldBreath 3.5s ease-in-out infinite;
     }
 
-    /* ponytail: opacity-only breath — static box-shadow/border, GPU compositor friendly on iOS */
-    .member-hype-card > * {
+    .member-hype-card > *:not(.holo-foil-layer):not(.hologram-scanlines){
         position: relative;
         z-index: 1;
     }
@@ -1244,18 +1264,18 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-    /* color variants */
-    .progress-fill.blue {
-        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-    }
+/* color variants */
+.progress-fill.blue {
+    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+}
 
-    .progress-fill.pink {
-        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-    }
+.progress-fill.pink {
+    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+}
 
-    .progress-fill.green {
-        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-    }
+.progress-fill.green {
+    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+}
 
 /* small screens: shift to stacked if necessary but keep compact */
 @media (max-width: 520px) {
@@ -1299,18 +1319,18 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-    /* color variants */
-    .progress-fill.blue {
-        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-    }
+/* color variants */
+.progress-fill.blue {
+    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+}
 
-    .progress-fill.pink {
-        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-    }
+.progress-fill.pink {
+    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+}
 
-    .progress-fill.green {
-        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-    }
+.progress-fill.green {
+    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+}
 
 /* small screens: slightly taller bar for touch */
 @media (max-width: 420px) {
@@ -1349,17 +1369,17 @@
     animation: memberTapSnap 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-    .member-hype-card.is-tapped .member-tap-sweep {
-        animation: memberSensorSweep 0.42s ease-out forwards;
-    }
+.member-hype-card.is-tapped .member-tap-sweep {
+    animation: memberSensorSweep 0.42s ease-out forwards;
+}
 
-    .member-hype-card.is-tapped .laser-rank-trim {
-        animation: memberTrimFlash 0.42s ease-out forwards;
-    }
+.member-hype-card.is-tapped .laser-rank-trim {
+    animation: memberTrimFlash 0.42s ease-out forwards;
+}
 
-    .member-hype-card.is-tapped .member-rank-badge {
-        animation: memberBadgePing 0.42s ease-out forwards;
-    }
+.member-hype-card.is-tapped .member-rank-badge {
+    animation: memberBadgePing 0.42s ease-out forwards;
+}
 
 @keyframes memberBadgePing {
     0%, 100% {
@@ -1381,23 +1401,23 @@
     border: 1px solid currentColor;
 }
 
-    .member-rank-badge.rank-s {
-        color: #facc15;
-        border-color: rgba(250, 204, 21, 0.55);
-        background: rgba(250, 204, 21, 0.10);
-    }
+.member-rank-badge.rank-s {
+    color: #facc15;
+    border-color: rgba(250, 204, 21, 0.55);
+    background: rgba(250, 204, 21, 0.10);
+}
 
-    .member-rank-badge.rank-a-plus {
-        color: #cbd5e1;
-        border-color: rgba(203, 213, 225, 0.55);
-        background: rgba(203, 213, 225, 0.10);
-    }
+.member-rank-badge.rank-a-plus {
+    color: #cbd5e1;
+    border-color: rgba(203, 213, 225, 0.55);
+    background: rgba(203, 213, 225, 0.10);
+}
 
-    .member-rank-badge.rank-a {
-        color: #cd7f32;
-        border-color: rgba(205, 127, 50, 0.55);
-        background: rgba(205, 127, 50, 0.10);
-    }
+.member-rank-badge.rank-a {
+    color: #cd7f32;
+    border-color: rgba(205, 127, 50, 0.55);
+    background: rgba(205, 127, 50, 0.10);
+}
 
 .titan-shifter-badge {
     font-size: 0.6rem;
@@ -1461,3 +1481,5 @@
         font-size: 1.125rem;
     }
 }
+
+ 
