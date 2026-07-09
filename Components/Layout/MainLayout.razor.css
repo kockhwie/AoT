@@ -25,14 +25,6 @@
 }
 
 
-.brand-mark {
-    display: block;
-    height: 2.65rem;
-    width: auto;
-    max-width: 140px; /* was unconstrained — this is what caused the overlap */
-    object-fit: contain;
-    transition: filter 0.2s ease, transform 0.2s ease;
-}
 
 
 
@@ -240,9 +232,9 @@
     transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
-    .vote-option-btn:hover {
-        transform: translateY(-2px);
-    }
+.vote-option-btn:hover {
+    transform: translateY(-2px);
+}
 
 /* Marley Faction Palette Accent (Crimson Core Variant) */
 .marley-btn {
@@ -264,9 +256,9 @@
     box-shadow: 0 4px 12px rgba(37, 99, 211, 0.2);
 }
 
-    .paradis-btn:hover {
-        box-shadow: 0 6px 18px rgba(37, 99, 211, 0.35);
-    }
+.paradis-btn:hover {
+    box-shadow: 0 6px 18px rgba(37, 99, 211, 0.35);
+}
 
 .popup-divider {
     height: 1px;

@@ -20,7 +20,7 @@ body {
    ========================================== */
 :root {
     --aot-btn-border: 2px;
-    --aot-btn-radius: 4px;
+    --aot-btn-radius: 8px;
     --aot-btn-shadow-color: #000000;
     --aot-btn-font-weight: 900;
 }
@@ -36,7 +36,7 @@ body {
     font-family: inherit;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    box-shadow: 3px 3px 0px var(--aot-btn-shadow-color);
+    box-shadow: 2px 2px 0px var(--aot-btn-shadow-color);
     transition: all 0.15s ease;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -58,12 +58,12 @@ body {
         box-shadow: 4px 4px 0px var(--aot-btn-shadow-color);
     }
     */
- 
+
     .aot-btn:hover {
         background-color: #ffffff !important;
         color: #000000 !important;
         border-color: #000000 !important;
-        box-shadow: 4px 4px 0px 1px #ef4444 !important;
+        box-shadow: 3px 3px 0px 1px #ef4444 !important;
         transform: none; /* drop the old lift — box-shadow does the work now */
     }
 }
@@ -118,7 +118,7 @@ body {
 .aot-btn--red {
     background-color: #ef4444;
     color: #ffffff;
-    border-color: #f87171;
+    border-color: #000000;/* #f87171;*/
 }
 
 .aot-btn--red:hover {
@@ -172,39 +172,35 @@ body {
 }
 
 /* Brand mark — sits in a comic panel bubble */
-.brand-mark {
+/*
+    .brand-mark {
     height: 36px;
     filter: invert(1) contrast(1.5);
     transition: filter 0.2s ease, transform 0.2s ease;
+}*/
+
+.brand-mark {
+    display: block;
+    height: 2.65rem;
+    width: auto;
+    max-width: 140px; /* was unconstrained — this is what caused the overlap */
+    object-fit: contain;
+    transition: filter 0.2s ease, transform 0.2s ease;
 }
+
 
 .brand-mark:hover {
     filter: invert(1) contrast(2) sepia(1) hue-rotate(320deg) saturate(3);
     transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ .brand-mark {
+    display: block;
+    height: 2.65rem;
+    width: auto;
+    max-width: 140px; /* was unconstrained — this is what caused the overlap */
+    object-fit: contain;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
 
 
 /* Nav link typography — manga uppercase stencil */
@@ -227,17 +223,6 @@ body {
     overflow: visible !important;
 }
 
-/* Hover: black/white inversion comic punch */
-.nav-links > li > details > summary:hover,
-.nav-links > li > a:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border-color: #000000 !important;
-    box-shadow: 4px 4px 0px 1px #ef4444 !important;
-    z-index: 10;
-    position: relative;
-}
-
  
    
 /* Dropdown menus — comic panel frames */
@@ -245,9 +230,14 @@ body {
     background-color: #0a0a0a !important;
     border: 3px solid #000000 !important;
     box-shadow: 6px 6px 0px #000000 !important;
-    border-radius: 0.75rem !important;
+    border-radius: 0.55rem !important;
     min-width: 14rem;
     overflow: visible !important; /* undo daisyUI's dropdown-content overflow:auto clipping the red shadow */
+}
+
+.nav-menu li,
+.nav-menu li > details {
+    overflow: visible !important; /* daisyUI's .menu li clips rounded corners by default — kills our box-shadow */
 }
 
 .nav-menu li a,
@@ -271,7 +261,7 @@ on desktop). Change it here once, both update. */
     background-color: #ffffff !important;
     color: #000000 !important;
     border-color: #000000 !important;
-    box-shadow: 4px 4px 0px 1px #ef4444 !important;
+    box-shadow: 3px 3px 0px 1px #ef4444 !important;
     z-index: 10;
     position: relative;
 }
@@ -497,11 +487,6 @@ html:lang(jp) {
     padding: 1.25rem;
 }
 
-@media (min-width: 768px) {
-    .aot-card-body {
-        padding: 1.5rem;
-    }
-}
 
 /* ==========================================
    4. 战术时间轴组件 (Timeline)
@@ -512,12 +497,6 @@ html:lang(jp) {
     border-radius: 1rem;
     padding: 1.25rem;
     box-shadow: var(--shadow-xl);
-}
-
-@media (min-width: 768px) {
-    .aot-timeline-card {
-        padding: 1.5rem;
-    }
 }
 
 .aot-timeline-box {
@@ -540,37 +519,25 @@ html:lang(jp) {
     margin-top: 0rem;
 }
 
-@media (min-width: 768px) {
-    .aot-titan-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自动变为双列 */
-        gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .aot-titan-grid {
-        grid-template-columns: repeat(3, 1fr); /* Desktop 升级为标准三列 */
-    }
-}
 
 /* 巨人卡片专属样式 */
 .aot-titan-card {
-    position: relative;                        /* badge 的定位錨點 */
+    position: relative; /* badge 的定位錨點 */
     background-color: rgb(116, 154, 222, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.25rem;
     padding: 1.5rem;
-    padding-top: 2rem;                         /* 為 badge 留頂部空間 */
+    padding-top: 2rem; /* 為 badge 留頂部空間 */
     box-shadow: var(--shadow-2xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: visible;                         /* 允許 badge 超出邊界 */
+    overflow: visible; /* 允許 badge 超出邊界 */
 }
 
-    .aot-titan-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(255, 223, 0, 0.5); /* 触碰时放射德古拉警戒gold光 */
-        box-shadow: 0 20px 25px -5px rgba(255, 223, 0, 0.15);
-    }
+.aot-titan-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 223, 0, 0.5); /* 触碰时放射德古拉警戒gold光 */
+    box-shadow: 0 20px 25px -5px rgba(255, 223, 0, 0.15);
+}
 
 /* 徽章容器：絕對定位在卡片右上角，flex 橫排 */
 .aot-titan-badges {
@@ -578,7 +545,7 @@ html:lang(jp) {
     top: -1rem;
     right: -1rem;
     display: flex;
-    flex-direction: row-reverse;  /* 新徽章從右往左疊加 */
+    flex-direction: row-reverse; /* 新徽章從右往左疊加 */
     gap: 0;
     z-index: 10;
 }
@@ -591,9 +558,8 @@ html:lang(jp) {
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    margin-left: -1rem;           /* 第二枚向左重疊，形成硬幣疊加感 */
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.3s ease;
+    margin-left: -1rem; /* 第二枚向左重疊，形成硬幣疊加感 */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
 /* 第一枚（最右）不需要負 margin */
@@ -606,20 +572,6 @@ html:lang(jp) {
     box-shadow: 0 8px 24px rgba(255, 223, 0, 0.15);
 }
 
-/* 平板 (768px+) */
-@media (min-width: 768px) {
-    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }
-    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
-    .aot-titan-badge:last-child { margin-left: 0; }
-}
-
-/* 桌面 (1280px+) */
-@media (min-width: 1280px) {
-    .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
-    .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
-    .aot-titan-badge:last-child { margin-left: 0; }
-}
-
 /* ==========================================
    6. 兵團戰術裝備網格 (Gear Grid) - 完美適配三端
    ========================================== */
@@ -628,19 +580,6 @@ html:lang(jp) {
     grid-template-columns: 1fr; /* iPhone 預設單列 */
     gap: 1.25rem;
     margin-top: 0rem;
-}
-
-@media (min-width: 768px) {
-    .aot-gear-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自動變為雙列 */
-        gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .aot-gear-grid {
-        grid-template-columns: repeat(3, 1fr); /* Desktop 升級為標準三列 */
-    }
 }
 
 /* 戰術裝備卡片專屬樣式 */
@@ -656,4 +595,69 @@ html:lang(jp) {
 .aot-gear-card:hover {
     border-color: rgba(189, 147, 249, 0.4); /* 觸碰时放射德古拉紫色高亮 */
     box-shadow: 0 15px 25px -5px rgba(189, 147, 249, 0.1);
+}
+
+
+
+@media (min-width: 768px) {
+    .aot-card-body {
+        padding: 1.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .nav-menu {
+        margin-inline: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .aot-timeline-card {
+        padding: 1.5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .aot-titan-grid {
+        grid-template-columns: repeat(2, 1fr); /* iPad 自动变为双列 */
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .aot-titan-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop 升级为标准三列 */
+    }
+}
+
+
+/* 平板 (768px+) */
+@media (min-width: 768px) {
+    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }
+    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
+
+/* 桌面 (1280px+) */
+@media (min-width: 1280px) {
+    .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
+    .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+}
+
+
+
+@media (min-width: 768px) {
+    .aot-gear-grid {
+        grid-template-columns: repeat(2, 1fr); /* iPad 自動變為雙列 */
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .aot-gear-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop 升級為標準三列 */
+    }
 }
