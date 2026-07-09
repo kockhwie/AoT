@@ -428,6 +428,7 @@
 }
 
 /* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
+/*
 .member-hype-card {
     --hype-card-width: 390px;
     --hype-card-radius: 20px;
@@ -436,6 +437,28 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
+}
+*/
+
+/* Home.razor.css — §5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
+.member-hype-card {
+    --hype-card-width: 390px;
+    --hype-card-radius: 20px;
+    height: 560px;
+    background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px #000000, 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
+}
+
+.member-hype-card:hover {
+    border-color: #ef4444;
+    box-shadow: 6px 6px 0px #ef4444, 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.member-hype-card .holo-foil-layer {
+    background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
+    background-size: 8px 8px;
 }
 
 /* Titan registry — gold is reserved for this card type only */
