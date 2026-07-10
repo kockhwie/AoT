@@ -26,7 +26,7 @@
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
                 <div class="manga-telemetry-panel">
-                    <a href="#manga-library-section" class="aot-btn aot-btn--red aot-btn--sm" aria-label="Explore chapter details">
+                    <a href="#manga-library-section" class="aot-btn aot-btn--yellow" aria-label="Explore chapter details">
                         <i class="ti ti-bookmark mr-1"></i>@slide.Chapter
                     </a>
                     <h1 class="manga-panel-title">
@@ -78,7 +78,7 @@
         @foreach (var member in _characterDatabase)
         {
             <div class="hype-card-container">
-                <div class="member-hype-card">
+                <div class="member-hype-card comic-card">
 
                     <div class="holo-foil-layer"></div>
                     <div class="hologram-scanlines"></div>
@@ -86,13 +86,13 @@
                     <div class="meta-registry-row">
                         @if (member.IsTitanShifter)
                         {
-                            <div class="titan-shifter-badge">⚡ TITAN SHIFTER</div>
+                            <div class="titan-shifter-badge comic-badge comic-badge--accent">⚡ TITAN SHIFTER</div>
                         }
                         else
                         {
                             <span class="registry-serial"></span>
                         }
-                        <div class="member-rank-badge @member.RankClass">@member.Rank</div>
+                        <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
                     </div>
 
                     <div class="chassis-header">
@@ -100,7 +100,7 @@
                         <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
                     </div>
 
-                    <div class="artwork-glass-frame">
+                    <div class="artwork-glass-frame comic-frame">
                         <div class="glass-reflection"></div>
                         <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
                         <div class="member-tap-sweep" aria-hidden="true"></div>
@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="member-ability-row">
-                        <span class="member-ability-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
+                        <span class="member-ability-tag comic-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
                     </div>
 
                     <div class="lore-summary-area">

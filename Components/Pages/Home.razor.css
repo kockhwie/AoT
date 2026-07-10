@@ -124,7 +124,6 @@
     padding: 2.5rem 2rem;
     box-sizing: border-box;
 }
- 
 
 .manga-panel-title {
     font-size: clamp(1.75rem, 5vw, 3rem);
@@ -241,6 +240,7 @@
         height: 480px;
         min-height: 480px;
     }
+
     .manga-telemetry-panel {
         padding: 1.5rem 1.25rem 2.5rem 1.25rem;
     }
@@ -260,22 +260,43 @@
    3. SECTION TITLE COMPONENT
    ========================================================================== */
 .aot-section-title {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--color-primary, #661ae6);
+    letter-spacing: 0.14em;
+    color: #f8fafc;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0.625rem;
-    opacity: 0.9;
+    margin-top: 1.9rem;
+    margin-bottom: 0.9rem;
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, rgba(10,10,10,0.98), rgba(30,15,15,0.98));
+    border: 3px solid #000000;
+    box-shadow: 6px 6px 0 #000000;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.aot-section-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+.aot-section-title i {
+    color: #facc15;
+    text-shadow: 2px 2px 0 #000000;
 }
 
 @media (max-width: 767.98px) {
     .aot-section-title {
-        font-size: 1rem; /* 16px */
+        font-size: 0.9rem;
+        padding: 0.7rem 0.85rem;
+        box-shadow: 4px 4px 0 #000000;
     }
 }
 
@@ -398,7 +419,7 @@
     justify-content: center;
     flex: 1 1 var(--hype-container-basis, 340px);
     max-width: var(--hype-container-max, 390px);
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to prevent hover clipping */
 }
 
 /* ponytail: character & titan containers share one size so card widths match */
@@ -443,22 +464,21 @@
 /* Home.razor.css — §5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
 .member-hype-card {
     --hype-card-width: 390px;
-    --hype-card-radius: 20px;
     height: 560px;
-    background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
-    border: 2px solid #000000;
-    box-shadow: 4px 4px 0px #000000, 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
 }
 
 .member-hype-card:hover {
-    border-color: #ef4444;
-    box-shadow: 6px 6px 0px #ef4444, 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.member-hype-card .holo-foil-layer {
+.member-hype-card  {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
+}
+
+.member-hype-card:hover .holo-foil-layer {
+    opacity: 0.08;
 }
 
 /* Titan registry — gold is reserved for this card type only */
@@ -575,6 +595,8 @@
     gap: 8px;
     margin-bottom: 3px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10; /* Keep above foil/scanlines */
 }
 
     .meta-registry-row > :last-child:not(.registry-serial) {
@@ -603,6 +625,8 @@
 .chassis-header {
     margin-bottom: 12px;
     width: 100%;
+    position: relative;
+    z-index: 10; /* Keep above foil/scanlines */
 }
 
 .title-container {
@@ -725,13 +749,15 @@
 
 .lore-summary-area {
     flex-grow: 1;
+    position: relative;
+    z-index: 10; /* Keep above foil/scanlines */
 }
 
 .lore-text-body {
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.25;
-    color: #a6a195;
+    color: #F0F0F0;
     text-align: justify;
 }
 
@@ -740,6 +766,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
+    position: relative;
+    z-index: 10; /* Keep above foil/scanlines */
 }
 
 .hype-stat-row {
@@ -756,7 +784,7 @@
 }
 
 .hype-stat-label {
-    font-size: 0.8125rem;
+    font-size: 0.65rem;
     font-weight: 500;
     color: #d1d5db;
     line-height: 1.2;
@@ -764,7 +792,7 @@
 }
 
 .hype-stat-pct {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 700;
     flex-shrink: 0;
     line-height: 1;
@@ -782,6 +810,10 @@
 
 .hype-card-container:hover .holo-foil-layer {
     opacity: 0.8;
+}
+
+.hype-card-container:hover .member-hype-card .holo-foil-layer {
+    opacity: 0.08;
 }
 
 /* Themes declarations */
@@ -1377,15 +1409,13 @@
    9. MEMBER DOSSIER — character-only accents (shell shared in §5)
    ========================================================================== */
 
-.member-hype-card:hover {
-    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 28px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.45);
-}
+
 
 /* Character cards stay neutral white/gray chrome — rank color lives only on the small
    rank badge (.member-rank-badge.rank-*), not the card border/glow/foil. Gold is titan-only. */
-.member-hype-card .holo-foil-layer {
+.member-hype-card  {
     background-image: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.22) 52%, rgba(120,120,120,0.15) 62%, transparent 75%);
+    background-size: 8px 8px;
 }
 
 .member-hype-card.is-tapped {
@@ -1414,44 +1444,22 @@
     }
 }
 
-.member-rank-badge {
-    font-size: 0.625rem;
-    font-weight: 900;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 4px;
-    border: 1px solid currentColor;
-}
+/* Styles handled by comic-badge now */
 
 .member-rank-badge.rank-s {
-    color: #facc15;
-    border-color: rgba(250, 204, 21, 0.55);
-    background: rgba(250, 204, 21, 0.10);
+    border-color: #000000;
 }
 
 .member-rank-badge.rank-a-plus {
-    color: #cbd5e1;
-    border-color: rgba(203, 213, 225, 0.55);
-    background: rgba(203, 213, 225, 0.10);
+    border-color: #000000;
 }
 
 .member-rank-badge.rank-a {
-    color: #cd7f32;
-    border-color: rgba(205, 127, 50, 0.55);
-    background: rgba(205, 127, 50, 0.10);
+    border-color: #000000;
 }
 
+/* Some styles handled by comic-badge, but retain pulse animation */
 .titan-shifter-badge {
-    font-size: 0.6rem;
-    font-weight: 900;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    border-radius: 4px;
-    background: rgba(251,191,36,0.15);
-    border: 1px solid rgba(251,191,36,0.55);
-    color: #fbbf24;
     animation: titanPulse 2.4s ease-in-out infinite;
 }
 
@@ -1484,20 +1492,11 @@
 .member-ability-row {
     margin-top: 8px;
     margin-bottom: 8px;
+    position: relative;
+    z-index: 10;
 }
 
-.member-ability-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 9999px;
-    background: rgba(223, 187, 107, 0.12);
-    border: 1px solid rgba(223, 187, 107, 0.45);
-    color: #dfbb6b;
-}
+/* Styles moved to .comic-tag in app.css */
 
 @media (max-width: 767.98px) {
     .member-display-name {

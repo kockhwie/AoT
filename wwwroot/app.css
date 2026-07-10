@@ -35,7 +35,7 @@ body {
     font-weight: var(--aot-btn-font-weight);
     font-family: inherit;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     box-shadow: 2px 2px 0px var(--aot-btn-shadow-color);
     transition: all 0.15s ease;
     cursor: pointer;
@@ -115,10 +115,21 @@ body {
     color: #ffffff;
 }
 
+
+.aot-btn--yellow {
+    background-color: #facc15;
+    color: #000000;
+}
+
+.aot-btn--yellow:hover {
+ 
+    color: #ffffff;
+}   
+ 
 .aot-btn--red {
     background-color: #ef4444;
     color: #ffffff;
-    border-color: #000000;/* #f87171;*/
+    border-color: #000000; /* #f87171;*/
 }
 
 .aot-btn--red:hover {
@@ -661,3 +672,79 @@ html:lang(jp) {
         grid-template-columns: repeat(3, 1fr); /* Desktop 升級為標準三列 */
     }
 }
+
+/* ==========================================
+   GLOBAL COMIC CARD SYSTEM (DRY)
+   ========================================== */
+.comic-card {
+    background: radial-gradient(ellipse at 60% 10%, rgba(30, 34, 42, 0.95) 0%, rgba(10, 11, 14, 0.98) 100%) !important;
+    border: 3px solid #000000 !important;
+    border-radius: 12px !important;
+    box-shadow: 6px 6px 0px #000000, 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.comic-card:hover {
+
+    box-shadow: 6px 6px 0px #ef4444, 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+}
+
+.comic-frame {
+    border: 2px solid #000000;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 4px 4px 0px #000000;
+    background: #050505;
+}
+
+.comic-badge {
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0px #000000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+}
+
+.comic-badge--accent {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.comic-badge--gold {
+    background-color: #facc15;
+    color: #000000;
+}
+
+.comic-badge--silver {
+    background-color: #cbd5e1;
+    color: #000000;
+}
+
+.comic-badge--bronze {
+    background-color: #cd7f32;
+    color: #000000;
+}
+
+.comic-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    color: #000000;
+}
+
