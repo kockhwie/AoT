@@ -53,9 +53,9 @@
     transition: box-shadow 0.3s ease;
 }
 
-.manga-slider-container:hover {
-    box-shadow: 12px 12px 0px #ef4444;
-}
+    .manga-slider-container:hover {
+        box-shadow: 12px 12px 0px #ef4444;
+    }
 
 /* Screentone layout using CSS grid pattern */
 .manga-screentone-overlay {
@@ -77,18 +77,16 @@
     opacity: 0;
     visibility: hidden;
     transform: scale(0.98);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                visibility 0.6s;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
     z-index: 1;
 }
 
-.manga-slide.active {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-    z-index: 2;
-}
+    .manga-slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        z-index: 2;
+    }
 
 /* Ink artwork layer */
 .manga-bg-art {
@@ -176,30 +174,30 @@
     border-radius: 50%;
 }
 
-.manga-nav-arrow:hover {
-    background-color: #ef4444;
-    color: #ffffff;
-}
+    .manga-nav-arrow:hover {
+        background-color: #ef4444;
+        color: #ffffff;
+    }
 
-.manga-nav-arrow.prev {
-    left: 0;
-    transform: translate(-50%, -50%);
-}
+    .manga-nav-arrow.prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
 
-.manga-nav-arrow.prev:active {
-    transform: translate(-50%, -50%) scale(0.92);
-    box-shadow: 2px 2px 0px #000000;
-}
+        .manga-nav-arrow.prev:active {
+            transform: translate(-50%, -50%) scale(0.92);
+            box-shadow: 2px 2px 0px #000000;
+        }
 
-.manga-nav-arrow.next {
-    right: 0;
-    transform: translate(50%, -50%);
-}
+    .manga-nav-arrow.next {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
 
-.manga-nav-arrow.next:active {
-    transform: translate(50%, -50%) scale(0.92);
-    box-shadow: 2px 2px 0px #000000;
-}
+        .manga-nav-arrow.next:active {
+            transform: translate(50%, -50%) scale(0.92);
+            box-shadow: 2px 2px 0px #000000;
+        }
 
 /* Slider Dot indicators */
 .manga-slider-dots {
@@ -221,15 +219,16 @@
     transition: background-color 0.2s, transform 0.2s;
 }
 
-.manga-dot.active {
-    background-color: #ef4444;
-    transform: scale(1.2);
-}
+    .manga-dot.active {
+        background-color: #ef4444;
+        transform: scale(1.2);
+    }
 
 @keyframes comicPulse {
     0% {
         transform: rotate(6deg) scale(0.92);
     }
+
     100% {
         transform: rotate(9deg) scale(1.05);
     }
@@ -244,9 +243,11 @@
     .manga-telemetry-panel {
         padding: 1.5rem 1.25rem 2.5rem 1.25rem;
     }
+
     .manga-nav-arrow {
         display: none; /* Swipe works, buttons hidden on mobile */
     }
+
     .manga-fx-badge {
         right: 1.25rem;
         top: 1.5rem;
@@ -279,18 +280,18 @@
     opacity: 1;
 }
 
-.aot-section-title::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-    pointer-events: none;
-}
+    .aot-section-title::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+        pointer-events: none;
+    }
 
-.aot-section-title i {
-    color: #facc15;
-    text-shadow: 2px 2px 0 #000000;
-}
+    .aot-section-title i {
+        color: #facc15;
+        text-shadow: 2px 2px 0 #000000;
+    }
 
 @media (max-width: 767.98px) {
     .aot-section-title {
@@ -448,7 +449,7 @@
     will-change: transform;
 }
 
-/* Character dossier � same footprint as titan card, standardized rank-color border (see �9) */
+/* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
 /*
 .member-hype-card {
     --hype-card-width: 390px;
@@ -461,25 +462,25 @@
 }
 */
 
-/* Home.razor.css � �5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
+/* Home.razor.css — §5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
 .member-hype-card {
     --hype-card-width: 390px;
     height: 560px;
 }
 
-.member-hype-card:hover {
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
+    .member-hype-card:hover {
+        border-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
 
-.member-hype-card  {
+.member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-.member-hype-card:hover .holo-foil-layer {
-    opacity: 0.08;
-}
+    .member-hype-card:hover .holo-foil-layer {
+        opacity: 0.08;
+    }
 
 /* Character carousel layout */
 .character-carousel-shell {
@@ -515,16 +516,15 @@
     text-align: left;
     transition: transform 640ms cubic-bezier(0.2, 0.85, 0.2, 1), opacity 260ms ease, filter 260ms ease;
     will-change: transform, opacity, filter;
-    
     /* Crucial fix: display flex forces the child (.character-card) height: 100% to resolve correctly */
     display: flex;
     flex-direction: column;
 }
 
-.character-carousel-item:focus-visible {
-    outline: 3px solid #facc15;
-    outline-offset: 8px;
-}
+    .character-carousel-item:focus-visible {
+        outline: 3px solid #facc15;
+        outline-offset: 8px;
+    }
 
 /* Character card flip shell */
 .character-card {
@@ -612,6 +612,7 @@
     align-items: flex-start;
     min-height: 42px;
 }
+
 .character-art-shell {
     flex: 0 0 auto;
 }
@@ -622,6 +623,7 @@
     flex-direction: column;
     gap: 6px;
 }
+
 .character-card .artwork-glass-frame {
     height: 170px;
 }
@@ -810,11 +812,12 @@
 @media (max-width: 900px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: 460px;
+        min-height: 500px; /* ponytail: was 460 — too short for content, caused clipping */
     }
 
     .character-carousel-item {
         width: min(270px, 84vw);
+        aspect-ratio: 3 / 5; /* ponytail: taller than 3/4 so front/back content fits without overflow-clip */
         top: 15px;
     }
 
@@ -839,11 +842,12 @@
 @media (max-width: 640px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: 410px;
+        min-height: 440px; /* ponytail: was 410 — too short for content, caused clipping */
     }
 
     .character-carousel-item {
         width: min(240px, 88vw);
+        aspect-ratio: 3 / 5; /* ponytail: taller than 3/4 so name/title/ability (front) and bio/stats (back) fit without overflow-clip */
         top: 12px;
     }
 
@@ -932,19 +936,19 @@
     height: 560px;
 }
 
-.member-hype-card:hover {
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
+    .member-hype-card:hover {
+        border-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
 
-.member-hype-card  {
+.member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-.member-hype-card:hover .holo-foil-layer {
-    opacity: 0.08;
-}
+    .member-hype-card:hover .holo-foil-layer {
+        opacity: 0.08;
+    }
 
 /* Titan registry — gold is reserved for this card type only */
 .titan-hype-card {
@@ -1462,7 +1466,7 @@
         animation: goldBreath 3.5s ease-in-out infinite;
     }
 
-    .member-hype-card > *:not(.holo-foil-layer):not(.hologram-scanlines){
+    .member-hype-card > *:not(.holo-foil-layer):not(.hologram-scanlines) {
         position: relative;
         z-index: 1;
     }
@@ -1784,18 +1788,18 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-/* color variants */
-.progress-fill.blue {
-    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-}
+    /* color variants */
+    .progress-fill.blue {
+        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+    }
 
-.progress-fill.pink {
-    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-}
+    .progress-fill.pink {
+        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+    }
 
-.progress-fill.green {
-    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-}
+    .progress-fill.green {
+        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+    }
 
 /* small screens: shift to stacked if necessary but keep compact */
 @media (max-width: 520px) {
@@ -1839,18 +1843,18 @@
     box-shadow: 0 4px 14px rgba(0,0,0,0.45), inset 0 -6px 18px rgba(255,255,255,0.03);
 }
 
-/* color variants */
-.progress-fill.blue {
-    background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
-}
+    /* color variants */
+    .progress-fill.blue {
+        background: linear-gradient(90deg, #29c3ff 0%, #54bfff 40%, #2aa9ff 100%);
+    }
 
-.progress-fill.pink {
-    background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
-}
+    .progress-fill.pink {
+        background: linear-gradient(90deg, #ff8ac1 0%, #ff76b9 50%, #ff4fa3 100%);
+    }
 
-.progress-fill.green {
-    background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
-}
+    .progress-fill.green {
+        background: linear-gradient(90deg, #7ef3b2 0%, #3be89a 50%, #17c66f 100%);
+    }
 
 /* small screens: slightly taller bar for touch */
 @media (max-width: 420px) {
@@ -1878,26 +1882,26 @@
 
 /* Character cards stay neutral white/gray chrome — rank color lives only on the small
    rank badge (.member-rank-badge.rank-*), not the card border/glow/foil. Gold is titan-only. */
-.member-hype-card  {
+.member-hype-card {
     background-image: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.22) 52%, rgba(120,120,120,0.15) 62%, transparent 75%);
     background-size: 8px 8px;
 }
 
-.member-hype-card.is-tapped {
-    animation: memberTapSnap 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
+    .member-hype-card.is-tapped {
+        animation: memberTapSnap 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
 
-.member-hype-card.is-tapped .member-tap-sweep {
-    animation: memberSensorSweep 0.42s ease-out forwards;
-}
+        .member-hype-card.is-tapped .member-tap-sweep {
+            animation: memberSensorSweep 0.42s ease-out forwards;
+        }
 
-.member-hype-card.is-tapped .laser-rank-trim {
-    animation: memberTrimFlash 0.42s ease-out forwards;
-}
+        .member-hype-card.is-tapped .laser-rank-trim {
+            animation: memberTrimFlash 0.42s ease-out forwards;
+        }
 
-.member-hype-card.is-tapped .member-rank-badge {
-    animation: memberBadgePing 0.42s ease-out forwards;
-}
+        .member-hype-card.is-tapped .member-rank-badge {
+            animation: memberBadgePing 0.42s ease-out forwards;
+        }
 
 @keyframes memberBadgePing {
     0%, 100% {
@@ -1968,7 +1972,3 @@
         font-size: 1.125rem;
     }
 }
-
- 
-
-
