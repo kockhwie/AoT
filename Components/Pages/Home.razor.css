@@ -1467,7 +1467,6 @@
     }
 
     .member-hype-card > *:not(.holo-foil-layer):not(.hologram-scanlines) {
-        position: relative;
         z-index: 1;
     }
 
