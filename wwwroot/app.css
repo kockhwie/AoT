@@ -1,4 +1,4 @@
-/* Remove browser default, replace with consistent visible ring */
+﻿/* Remove browser default, replace with consistent visible ring */
 h1:focus {
     outline: none;
 }

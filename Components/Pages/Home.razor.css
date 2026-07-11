@@ -448,6 +448,471 @@
     will-change: transform;
 }
 
+/* Character dossier � same footprint as titan card, standardized rank-color border (see �9) */
+/*
+.member-hype-card {
+    --hype-card-width: 390px;
+    --hype-card-radius: 20px;
+    height: 560px;
+    background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
+}
+*/
+
+/* Home.razor.css � �5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
+.member-hype-card {
+    --hype-card-width: 390px;
+    height: 560px;
+}
+
+.member-hype-card:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.member-hype-card  {
+    background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
+    background-size: 8px 8px;
+}
+
+.member-hype-card:hover .holo-foil-layer {
+    opacity: 0.08;
+}
+
+/* Character carousel layout */
+.character-carousel-shell {
+    position: relative;
+    width: 100%;
+    min-height: 540px; /* Reduced from 620px to eliminate vertical dead space */
+    margin-top: 0.25rem;
+}
+
+.character-carousel-stage {
+    position: relative;
+    width: 100%;
+    min-height: 540px; /* Reduced from 620px to eliminate vertical dead space */
+    overflow: hidden;
+    perspective: 1400px;
+    touch-action: pan-y;
+}
+
+.character-carousel-item {
+    position: absolute;
+    top: 24px; /* Shift down by 24px so scaling up does not cut off the top of card */
+    left: 50%;
+    width: min(340px, 78vw); /* Slightly narrower to reduce dead space and balance layout */
+    aspect-ratio: 3 / 4; /* Less tall aspect ratio to bring content together */
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-origin: center center;
+    color: inherit;
+    text-align: left;
+    transition: transform 640ms cubic-bezier(0.2, 0.85, 0.2, 1), opacity 260ms ease, filter 260ms ease;
+    will-change: transform, opacity, filter;
+    
+    /* Crucial fix: display flex forces the child (.character-card) height: 100% to resolve correctly */
+    display: flex;
+    flex-direction: column;
+}
+
+.character-carousel-item:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 8px;
+}
+
+/* Character card flip shell */
+.character-card {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    transform-origin: center center;
+    transition: transform 640ms cubic-bezier(0.2, 0.85, 0.2, 1);
+    transform-style: flat; /*preserve-3d*/
+    display: flex;
+    flex-direction: column;
+}
+
+/* Higher specificity keeps the TCG card inside its carousel footprint. */
+.character-carousel-item .character-card {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+.character-card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: opacity 240ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.character-card-front > *:not(.holo-foil-layer):not(.hologram-scanlines) {
+    position: relative;
+    z-index: 1;
+}
+
+.character-card-front .holo-foil-layer,
+.character-card-front .hologram-scanlines {
+    z-index: 0;
+}
+
+
+.character-card-front {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 14px 12px;
+    gap: 10px;
+    flex: 1 1 auto; /* allow front to fill available height */
+    transform: translateX(0) scale(1);
+    opacity: 1;
+}
+
+
+.character-card-back {
+    padding: 14px;
+    flex: 1 1 auto; /* allow back to fill available height */
+    transform: translateX(8%) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.character-card.is-flipped .character-card-front {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-8%) scale(0.98);
+}
+
+.character-card.is-flipped .character-card-back {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+}
+
+
+.character-card-front,
+.character-card-back {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+.tcg-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 42px;
+}
+.character-art-shell {
+    flex: 0 0 auto;
+}
+
+.character-front-copy {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.character-card .artwork-glass-frame {
+    height: 170px;
+}
+
+.character-card .member-display-name {
+    font-size: 1.25rem; /* Tier 1 Title */
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.character-card .member-display-title {
+    font-size: 0.875rem; /* Tier 2 Subtitle */
+    font-weight: 500;
+    color: #dfbb6b; /* Warm Brass Gold */
+}
+
+.character-card .member-ability-row {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.875rem; /* Tier 3 Body */
+    color: #d1d5db; /* Neutral Light Grey */
+}
+
+.character-flip-hint,
+.character-back-note {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.character-front-copy .character-flip-hint {
+    margin-top: auto;
+}
+
+.back-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.back-card-title {
+    font-size: 0.68rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #facc15;
+}
+
+.back-card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.character-back-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.55rem;
+}
+
+.character-card-back .lore-summary-area {
+    min-height: 0;
+    max-height: 7.5rem;
+    overflow: auto;
+}
+
+.character-card-back .lore-text-body {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: #d1d5db; /* Tier 3 - Body/Details: Neutral Light Grey */
+}
+
+.character-card-back .hype-stats-container {
+    gap: 0.45rem;
+}
+
+.character-card-back .hype-stat-label,
+.character-card-back .hype-stat-pct {
+    font-size: 0.75rem;
+}
+
+.character-card-back .progress {
+    height: 0.45rem;
+}
+
+.character-back-note {
+    margin-top: auto;
+}
+
+.character-card.is-focused .character-card-front .holo-foil-layer {
+    opacity: 0.08;
+}
+
+.character-carousel-item.is-center {
+    z-index: 20;
+    opacity: 1;
+    filter: none;
+    transform: translateX(-50%) translateY(0) rotateY(0deg) scale(1);
+}
+
+.character-carousel-item.is-near-left {
+    z-index: 16;
+    opacity: 0.9;
+    filter: blur(0.5px) saturate(0.9);
+    transform: translateX(calc(-50% - 235px)) translateY(14px) rotateY(18deg) scale(0.9);
+}
+
+.character-carousel-item.is-left {
+    z-index: 12;
+    opacity: 0.55;
+    filter: blur(2px) saturate(0.85);
+    transform: translateX(calc(-50% - 430px)) translateY(24px) rotateY(26deg) scale(0.8);
+}
+
+.character-carousel-item.is-far-left {
+    z-index: 8;
+    opacity: 0;
+    transform: translateX(calc(-50% - 620px)) translateY(32px) rotateY(32deg) scale(0.72);
+    pointer-events: none;
+}
+
+.character-carousel-item.is-near-right {
+    z-index: 16;
+    opacity: 0.9;
+    filter: blur(0.5px) saturate(0.9);
+    transform: translateX(calc(-50% + 235px)) translateY(14px) rotateY(-18deg) scale(0.9);
+}
+
+.character-carousel-item.is-right {
+    z-index: 12;
+    opacity: 0.55;
+    filter: blur(2px) saturate(0.85);
+    transform: translateX(calc(-50% + 430px)) translateY(24px) rotateY(-26deg) scale(0.8);
+}
+
+.character-carousel-item.is-far-right {
+    z-index: 8;
+    opacity: 0;
+    transform: translateX(calc(-50% + 620px)) translateY(32px) rotateY(-32deg) scale(0.72);
+    pointer-events: none;
+}
+
+.character-carousel-item.is-pinned {
+    z-index: 30;
+    opacity: 1;
+    filter: none;
+    transform: translateX(-50%) translateY(0) rotateY(0deg) scale(1.02);
+}
+
+.character-card.is-focused .chassis-art {
+    transform: scale(1.03);
+}
+
+@media (max-width: 1280px) {
+    .character-carousel-shell,
+    .character-carousel-stage {
+        min-height: 500px;
+    }
+
+    .character-carousel-item {
+        width: min(300px, 78vw);
+        top: 20px;
+    }
+
+        .character-carousel-item.is-left,
+        .character-carousel-item.is-right {
+            transform: translateX(calc(-50% - 310px)) translateY(16px) rotateY(22deg) scale(0.76);
+        }
+
+        .character-carousel-item.is-right {
+            transform: translateX(calc(-50% + 310px)) translateY(16px) rotateY(-22deg) scale(0.76);
+        }
+}
+
+@media (max-width: 900px) {
+    .character-carousel-shell,
+    .character-carousel-stage {
+        min-height: 460px;
+    }
+
+    .character-carousel-item {
+        width: min(270px, 84vw);
+        top: 15px;
+    }
+
+        .character-carousel-item.is-near-left {
+            transform: translateX(calc(-50% - 145px)) translateY(10px) rotateY(14deg) scale(0.86);
+        }
+
+        .character-carousel-item.is-near-right {
+            transform: translateX(calc(-50% + 145px)) translateY(10px) rotateY(-14deg) scale(0.86);
+        }
+
+        .character-carousel-item.is-left,
+        .character-carousel-item.is-right {
+            transform: translateX(calc(-50% - 250px)) translateY(20px) rotateY(20deg) scale(0.74);
+        }
+
+        .character-carousel-item.is-right {
+            transform: translateX(calc(-50% + 250px)) translateY(20px) rotateY(-20deg) scale(0.74);
+        }
+}
+
+@media (max-width: 640px) {
+    .character-carousel-shell,
+    .character-carousel-stage {
+        min-height: 410px;
+    }
+
+    .character-carousel-item {
+        width: min(240px, 88vw);
+        top: 12px;
+    }
+
+    .character-card .member-display-name {
+        font-size: 1.15rem;
+    }
+
+    .character-card .artwork-glass-frame {
+        height: 130px;
+    }
+
+    .character-card-front,
+    .character-card-back {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .character-front-copy {
+        gap: 4px;
+    }
+
+    .character-card-back .lore-summary-area {
+        max-height: 4.5rem;
+    }
+
+    .character-back-content {
+        gap: 4px;
+    }
+
+    .character-carousel-item.is-near-left {
+        transform: translateX(calc(-50% - 110px)) translateY(8px) rotateY(12deg) scale(0.84);
+    }
+
+    .character-carousel-item.is-near-right {
+        transform: translateX(calc(-50% + 110px)) translateY(8px) rotateY(-12deg) scale(0.84);
+    }
+
+    .character-carousel-item.is-left,
+    .character-carousel-item.is-right {
+        transform: translateX(calc(-50% - 180px)) translateY(14px) rotateY(18deg) scale(0.72);
+    }
+
+    .character-carousel-item.is-right {
+        transform: translateX(calc(-50% + 180px)) translateY(14px) rotateY(-18deg) scale(0.72);
+    }
+
+    .character-carousel-item.is-pinned {
+        transform: translateX(-50%) translateY(2px) rotateY(0deg) scale(1.02);
+    }
+}
+
+.member-hype-card
+.titan-hype-card {
+    width: 100%;
+    max-width: var(--hype-card-width, 370px);
+    min-width: 0;
+    position: relative;
+    padding: 26px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--hype-card-radius, 24px);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+}
+
 /* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
 /*
 .member-hype-card {
@@ -1505,3 +1970,5 @@
 }
 
  
+
+

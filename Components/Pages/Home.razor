@@ -68,79 +68,116 @@
     </div>
 </div>
 
-<!-- 區域 2：調查兵團精銳作戰檔案  -->
+<!-- 新增区域 3：九大巨人能力图谱面板   -->
 <div id="character-cards-section" class="flex flex-col gap-2 mt-6">
     <h3 class="aot-section-title">
         <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")
     </h3>
 
-    <div class="registry-grid">
-        @foreach (var member in _characterDatabase)
-        {
-            <div class="hype-card-container">
-                <div class="member-hype-card comic-card">
+    <div class="character-carousel-shell">
+        <div class="character-carousel-stage"
+             @onwheel="HandleCharacterCarouselWheel"
+             @ontouchstart="HandleCharacterTouchStart"
+             @ontouchend="HandleCharacterTouchEnd">
+            @for (var i = 0; i < _characterDatabase.Count; i++)
+            {
+                var index = i;
+                var member = _characterDatabase[index];
+                var relative = index - _activeCharacterIndex;
+                var absDistance = Math.Abs(relative);
+                var isActive = _pinnedCharacterIndex == index;
+                var isFocused = _hoveredCharacterIndex == index || _activeCharacterIndex == index || isActive;
+                var positionClass = $"is-{GetCharacterPosition(relative)}";
+                var itemClass = $"hype-card-container character-carousel-item {positionClass} {(isActive ? "is-pinned" : "")}";
+                var cardClass = $"member-hype-card comic-card character-card {(isActive ? "is-pinned" : "")} {(isFocused ? "is-focused" : "")} {(_flippedCharacterIndex == index ? "is-flipped" : "")}";
+                var cardStyle = $"--card-offset:{relative}; --card-depth:{absDistance};";
 
-                    <div class="holo-foil-layer"></div>
-                    <div class="hologram-scanlines"></div>
-
-                    <div class="meta-registry-row">
-                        @if (member.IsTitanShifter)
-                        {
-                            <div class="titan-shifter-badge comic-badge comic-badge--accent">⚡ TITAN SHIFTER</div>
-                        }
-                        else
-                        {
-                            <span class="registry-serial"></span>
-                        }
-                        <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
-                    </div>
-
-                    <div class="chassis-header">
-                        <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
-                        <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
-                    </div>
-
-                    <div class="artwork-glass-frame comic-frame">
-                        <div class="glass-reflection"></div>
-                        <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
-                        <div class="member-tap-sweep" aria-hidden="true"></div>
-                        <div class="laser-rank-trim"></div>
-                    </div>
-
-                    <div class="member-ability-row">
-                        <span class="member-ability-tag comic-tag">✦ @LocalizationService.GetString(member.AbilityKey)</span>
-                    </div>
-
-                    <div class="lore-summary-area">
-                        <p class="lore-text-body">@LocalizationService.GetString(member.BioKey)</p>
-                    </div>
-
-                    <div class="chassis-divider"></div>
-
-                    <div class="hype-stats-container">
-                        <div class="hype-stat-row">
-                            <div class="hype-stat-header">
-                                <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
-                                <span class="hype-stat-pct text-error">@member.Kills</span>
+                <button type="button"
+                        class="@itemClass"
+                        style="@cardStyle"
+                        aria-pressed="@(isActive ? "true" : "false")"
+                        @onclick="() => ToggleCharacterCard(index)"
+                        @onmouseenter="() => SetHoveredCharacter(index)"
+                        @onmouseleave="ClearHoveredCharacter">
+                    <div class="@cardClass">
+                        <div class="character-card-face character-card-front">
+                            <div class="holo-foil-layer"></div>
+                            <div class="hologram-scanlines"></div>
+                            <div class="tcg-topbar">
+                                <div class="meta-registry-row">
+                                    @if (member.IsTitanShifter)
+                                    {
+                                        <div class="titan-shifter-badge comic-badge comic-badge--accent">? TITAN SHIFTER</div>
+                                    }
+                                    else
+                                    {
+                                        <span class="registry-serial"></span>
+                                    }
+                                    <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
+                                </div>
                             </div>
-                            <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
-                        </div>
-                        <div class="hype-stat-row">
-                            <div class="hype-stat-header">
-                                <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
-                                <span class="hype-stat-pct text-success">@member.Wits/10</span>
+
+                            <div class="character-art-shell">
+                                <div class="artwork-glass-frame comic-frame">
+                                    <div class="glass-reflection"></div>
+                                    <img src="/img/characters/@member.Portrait" class="chassis-art chassis-art--portrait" alt="@LocalizationService.GetString(member.NameKey)" />
+                                    <div class="member-tap-sweep" aria-hidden="true"></div>
+                                    <div class="laser-rank-trim"></div>
+                                </div>
                             </div>
-                            <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
+
+                            <div class="character-front-copy">
+                                <div class="chassis-header">
+                                    <h2 class="member-display-name">@LocalizationService.GetString(member.NameKey)</h2>
+                                    <div class="member-display-title">@LocalizationService.GetString(member.TitleKey)</div>
+                                </div>
+                                <div class="member-ability-row">
+                                    <span class="member-ability-tag comic-tag">@LocalizationService.GetString(member.AbilityKey)</span>
+                                </div>
+                                <div class="character-flip-hint">tap / click to flip</div>
+                            </div>
+                        </div>
+
+                        <div class="character-card-face character-card-back">
+                            <div class="back-card-header">
+                                <div class="back-card-title">combat sheet</div>
+                                <div class="back-card-subtitle">@LocalizationService.GetString(member.NameKey)</div>
+                            </div>
+
+                            <div class="character-back-content">
+                                <div class="lore-summary-area">
+                                    <p class="lore-text-body">@LocalizationService.GetString(member.BioKey)</p>
+                                </div>
+
+                                <div class="chassis-divider"></div>
+
+                                <div class="hype-stats-container">
+                                    <div class="hype-stat-row">
+                                        <div class="hype-stat-header">
+                                            <span class="hype-stat-label">@LocalizationService.GetString("StatKillsBar")</span>
+                                            <span class="hype-stat-pct text-error">@member.Kills</span>
+                                        </div>
+                                        <progress class="progress progress-xs progress-error w-full" value="@member.KillsPct" max="100"></progress>
+                                    </div>
+                                    <div class="hype-stat-row">
+                                        <div class="hype-stat-header">
+                                            <span class="hype-stat-label">@LocalizationService.GetString("StatWitsBar")</span>
+                                            <span class="hype-stat-pct text-success">@member.Wits/10</span>
+                                        </div>
+                                        <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
+                                    </div>
+                                </div>
+
+                                <div class="character-back-note">tap again to return to front</div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        }
+                </button>
+            }
+        </div>
     </div>
 </div>
 
-<!-- 新增区域 3：九大巨人能力图谱面板   -->
 <div id="titan-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-dna-2"></i> @LocalizationService.GetString("TitanSectionTitle")
@@ -292,7 +329,8 @@
         const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
         document.querySelectorAll('.hype-card-container').forEach(container => {
-            const card = container.querySelector('.titan-hype-card, .member-hype-card');
+            const card = container.querySelector('.titan-hype-card, .member-hype-card:not(.character-card)');
+            if (!card) return;
             const foil = container.querySelector('.holo-foil-layer');
 
             /* ======================================================================
@@ -385,6 +423,11 @@
     private double _touchStartX = 0;
     private double _tiltX = 0;
     private double _tiltY = 0;
+    private int _activeCharacterIndex = 0;
+    private int _pinnedCharacterIndex = -1;
+    private int _hoveredCharacterIndex = -1;
+    private int _flippedCharacterIndex = -1;
+    private double _characterTouchStartX = 0;
 
     protected override void OnInitialized()
     {
@@ -425,6 +468,8 @@
                 Image = "manga_attack_titan_first_fight.webp"
             }
         };
+
+        _activeCharacterIndex = Math.Min((_characterDatabase.Count - 1) / 2, _characterDatabase.Count - 1);
 
         // Initialize 7s autoplay rotation loop
         _autoPlayTimer = new System.Threading.Timer(AutoPlayTick, null, 7000, 7000);
@@ -503,6 +548,104 @@
         _tiltX = 0;
         _tiltY = 0;
     }
+
+    private void SetHoveredCharacter(int index)
+    {
+        _hoveredCharacterIndex = index;
+        if (_pinnedCharacterIndex < 0)
+        {
+            _activeCharacterIndex = index;
+        }
+    }
+
+    private void ClearHoveredCharacter()
+    {
+        _hoveredCharacterIndex = -1;
+        if (_pinnedCharacterIndex < 0)
+        {
+            _activeCharacterIndex = Math.Clamp(_activeCharacterIndex, 0, _characterDatabase.Count - 1);
+        }
+    }
+
+    private void ToggleCharacterCard(int index)
+    {
+        if (_pinnedCharacterIndex != index)
+        {
+            _pinnedCharacterIndex = index;
+            _activeCharacterIndex = index;
+            _flippedCharacterIndex = -1;
+            return;
+        }
+
+        _flippedCharacterIndex = _flippedCharacterIndex == index ? -1 : index;
+    }
+
+    private void ClearPinnedCharacter()
+    {
+        _pinnedCharacterIndex = -1;
+        _hoveredCharacterIndex = -1;
+        _flippedCharacterIndex = -1;
+    }
+
+    private void HandleCharacterCarouselWheel(Microsoft.AspNetCore.Components.Web.WheelEventArgs e)
+    {
+        _pinnedCharacterIndex = -1;
+        _flippedCharacterIndex = -1;
+
+        if (e.DeltaY > 0)
+        {
+            _activeCharacterIndex = (_activeCharacterIndex + 1) % _characterDatabase.Count;
+        }
+        else if (e.DeltaY < 0)
+        {
+            _activeCharacterIndex = _activeCharacterIndex == 0 ? _characterDatabase.Count - 1 : _activeCharacterIndex - 1;
+        }
+
+    }
+
+    private void HandleCharacterTouchStart(Microsoft.AspNetCore.Components.Web.TouchEventArgs e)
+    {
+        if (e.Touches.Length > 0)
+        {
+            _characterTouchStartX = e.Touches[0].ClientX;
+        }
+    }
+
+    private void HandleCharacterTouchEnd(Microsoft.AspNetCore.Components.Web.TouchEventArgs e)
+    {
+        if (e.ChangedTouches.Length == 0)
+        {
+            return;
+        }
+
+        var deltaX = e.ChangedTouches[0].ClientX - _characterTouchStartX;
+
+        if (Math.Abs(deltaX) > 50)
+        {
+            _pinnedCharacterIndex = -1;
+            _flippedCharacterIndex = -1;
+
+            if (deltaX < 0)
+            {
+                _activeCharacterIndex = (_activeCharacterIndex + 1) % _characterDatabase.Count;
+            }
+            else
+            {
+                _activeCharacterIndex = _activeCharacterIndex == 0 ? _characterDatabase.Count - 1 : _activeCharacterIndex - 1;
+            }
+        }
+    }
+
+    private string GetCharacterPosition(int relativeIndex) => relativeIndex switch
+    {
+        <= -3 => "far-left",
+        -2 => "left",
+        -1 => "near-left",
+        0 => "center",
+        1 => "near-right",
+        2 => "right",
+        _ => "far-right"
+    };
 
     public void Dispose()
     {
@@ -655,3 +798,4 @@
     };
 
 }
+
