@@ -105,15 +105,15 @@
                             <div class="hologram-scanlines"></div>
                             <div class="tcg-topbar">
                                 <div class="meta-registry-row">
+                                    <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
                                     @if (member.IsTitanShifter)
                                     {
-                                        <div class="titan-shifter-badge comic-badge comic-badge--accent">? TITAN SHIFTER</div>
+                                        <div class="titan-shifter-badge comic-badge comic-badge--accent">TITAN SHIFTER</div>
                                     }
                                     else
                                     {
                                         <span class="registry-serial"></span>
                                     }
-                                    <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
                                 </div>
                             </div>
 
@@ -140,7 +140,7 @@
 
                         <div class="character-card-face character-card-back">
                             <div class="back-card-header">
-                                <div class="back-card-title">combat sheet</div>
+                                <div class="back-card-title"></div>
                                 <div class="back-card-subtitle">@LocalizationService.GetString(member.NameKey)</div>
                             </div>
 

@@ -493,7 +493,7 @@
 .character-carousel-stage {
     position: relative;
     width: 100%;
-    min-height: 540px; /* Reduced from 620px to eliminate vertical dead space */
+    min-height: calc(min(340px, 78vw) * 88 / 63 + 64px);
     overflow: hidden;
     perspective: 1400px;
     touch-action: pan-y;
@@ -504,7 +504,8 @@
     top: 24px; /* Shift down by 24px so scaling up does not cut off the top of card */
     left: 50%;
     width: min(340px, 78vw); /* Slightly narrower to reduce dead space and balance layout */
-    aspect-ratio: 3 / 4; /* Less tall aspect ratio to bring content together */
+    /* aspect-ratio: 3 / 4; */ /* Less tall aspect ratio to bring content together */
+    aspect-ratio: 63 / 88; /* Real TCG trading card ratio (63mm x 88mm) */
     height: auto;
     padding: 0;
     border: 0;
@@ -521,10 +522,10 @@
     flex-direction: column;
 }
 
-    .character-carousel-item:focus-visible {
-        outline: 3px solid #facc15;
-        outline-offset: 8px;
-    }
+.character-carousel-item:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 8px;
+}
 
 /* Character card flip shell */
 .character-card {
@@ -546,6 +547,24 @@
     height: 100%;
     width: 100%;
     max-width: none;
+    /* 
+        ponytail: proportional radius (scales with card size) + a stacked shadow to read as
+       ~0.3mm-thick cardstock instead of a flat comic panel. Overrides .comic-card's !important. 
+    */
+    border-radius: 4% / 3% !important;
+    box-shadow: 
+        0 0 0 1px rgba(255, 255, 255, 0.07) inset, 
+        0 2px 0 rgba(0, 0, 0, 0.55), 
+        0 3px 8px rgba(0, 0, 0, 0.55), 
+        0 20px 34px -12px rgba(0, 0, 0, 0.75) !important;
+}
+
+.character-carousel-item .character-card:hover {
+    box-shadow: 
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset, 
+        0 2px 0 rgba(0, 0, 0, 0.5), 
+        0 3px 8px rgba(0, 0, 0, 0.55), 
+        0 24px 40px -10px rgba(239, 68, 68, 0.4) !important;
 }
 
 .character-card-face {
@@ -571,7 +590,7 @@
 .character-card-front {
     display: flex;
     flex-direction: column;
-    padding: 14px 14px 12px;
+    padding: 14px 14px;
     gap: 10px;
     flex: 1 1 auto; /* allow front to fill available height */
     transform: translateX(0) scale(1);
@@ -614,18 +633,26 @@
 }
 
 .character-art-shell {
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
+    /* ponytail: was flex:0 0 auto with a fixed-height image below it — when the title wrapped to
+       2 lines the whole column overflowed and clipped the flip-hint (overflow:hidden on the face).
+       Now the image is the flexible part and the copy always keeps its space. */
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
 }
 
 .character-front-copy {
-    margin-top: auto;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
 .character-card .artwork-glass-frame {
-    height: 170px;
+    height: auto; /* overrides the generic 200px fixed height so flex stretch can size it */
+    flex: 1 1 auto;
+    min-height: 0;
 }
 
 .character-card .member-display-name {
@@ -652,8 +679,8 @@
 
 .character-flip-hint,
 .character-back-note {
-    font-size: 0.68rem;
-    font-weight: 800;
+    font-size: 0.30rem;
+    padding: 0.20rem 0px 0rem 0px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
@@ -791,7 +818,7 @@
 @media (max-width: 1280px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: 500px;
+        min-height: calc(min(300px, 78vw) * 88 / 63 + 60px);
     }
 
     .character-carousel-item {
@@ -799,25 +826,25 @@
         top: 20px;
     }
 
-        .character-carousel-item.is-left,
-        .character-carousel-item.is-right {
-            transform: translateX(calc(-50% - 310px)) translateY(16px) rotateY(22deg) scale(0.76);
-        }
+    .character-carousel-item.is-left,
+    .character-carousel-item.is-right {
+        transform: translateX(calc(-50% - 310px)) translateY(16px) rotateY(22deg) scale(0.76);
+    }
 
-        .character-carousel-item.is-right {
-            transform: translateX(calc(-50% + 310px)) translateY(16px) rotateY(-22deg) scale(0.76);
-        }
+    .character-carousel-item.is-right {
+        transform: translateX(calc(-50% + 310px)) translateY(16px) rotateY(-22deg) scale(0.76);
+    }
 }
 
 @media (max-width: 900px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: 500px; /* ponytail: was 460 — too short for content, caused clipping */
+        min-height: calc(min(270px, 84vw) * 88 / 63 + 55px); /* ponytail: was 460 — too short for content, caused clipping */
     }
 
     .character-carousel-item {
         width: min(270px, 84vw);
-        aspect-ratio: 3 / 5; /* ponytail: taller than 3/4 so front/back content fits without overflow-clip */
+        /* aspect-ratio: 3 / 5; */ /* ponytail: taller than 3/4 so front/back content fits without overflow-clip */
         top: 15px;
     }
 
@@ -842,12 +869,12 @@
 @media (max-width: 640px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: 440px; /* ponytail: was 410 — too short for content, caused clipping */
+        min-height: calc(min(240px, 88vw) * 88 / 63 + 52px); /* ponytail: was 410 — too short for content, caused clipping */
     }
 
     .character-carousel-item {
         width: min(240px, 88vw);
-        aspect-ratio: 3 / 5; /* ponytail: taller than 3/4 so name/title/ability (front) and bio/stats (back) fit without overflow-clip */
+        /* aspect-ratio: 3 / 5; */ /* ponytail: taller than 3/4 so name/title/ability (front) and bio/stats (back) fit without overflow-clip */
         top: 12px;
     }
 
@@ -855,13 +882,13 @@
         font-size: 1.15rem;
     }
 
-    .character-card .artwork-glass-frame {
+    /* .character-card .artwork-glass-frame {
         height: 130px;
-    }
+    } */
 
     .character-card-front,
     .character-card-back {
-        padding: 10px 12px;
+        padding: 14px 14px;
         gap: 6px;
     }
 
@@ -959,6 +986,11 @@
     border: 1.5px solid rgba(255, 215, 0, 0.45);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
     transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
+.titan-shifter-badge {
+    font-size: 0.50rem;
+
 }
 
 @media (max-width: 767.98px) {
