@@ -53,9 +53,9 @@
     transition: box-shadow 0.3s ease;
 }
 
-.manga-slider-container:hover {
-    box-shadow: 12px 12px 0px #ef4444;
-}
+    .manga-slider-container:hover {
+        box-shadow: 12px 12px 0px #ef4444;
+    }
 
 /* Screentone layout using CSS grid pattern */
 .manga-screentone-overlay {
@@ -76,33 +76,34 @@
     align-items: flex-end;
     opacity: 0;
     visibility: hidden;
-    /*transform: scale(0.98);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
-    */
+    /* ponytail: no longer scaling this element — it was clipped by overflow:hidden on its parent,
+       so briefly sitting at 0.98 scale during the 0.6s crossfade shrank the whole slide (image +
+       vignette) below full coverage and exposed a light seam at the edges. The .manga-bg-art image
+       already does its own slow zoom (scale(1.06) over 8s), so no separate scale is needed here. */
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
     z-index: 1;
 }
 
-.manga-slide.active {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-    z-index: 2;
-}
+    .manga-slide.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+    }
 
 /* Ink artwork layer */
 .manga-bg-art {
     position: absolute;
+    /* ponytail: was inset:0 flush with the clip box — iOS Safari sometimes rounds the clipped
+       edge to a sub-pixel off from the container's, showing as a hairline gap (usually left/top).
+       A small negative inset bleeds the image past the edge so the rounding error is hidden. */
     inset: -2px;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     filter: contrast(1.15) brightness(0.65) grayscale(1);
     transition: transform 8s ease-out, filter 0.3s ease;
 }
 
 .manga-slider-container:hover .manga-bg-art {
-    filter: contrast(1.15) brightness(0.85) grayscale(1);
+    filter: contrast(1.25) brightness(0.75) grayscale(1);
 }
 
 .manga-slide.active .manga-bg-art {
@@ -176,30 +177,30 @@
     border-radius: 50%;
 }
 
-.manga-nav-arrow:hover {
-    background-color: #ef4444;
-    color: #ffffff;
-}
+    .manga-nav-arrow:hover {
+        background-color: #ef4444;
+        color: #ffffff;
+    }
 
-.manga-nav-arrow.prev {
-    left: 0;
-    transform: translate(-50%, -50%);
-}
+    .manga-nav-arrow.prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
 
-.manga-nav-arrow.prev:active {
-    transform: translate(-50%, -50%) scale(0.92);
-    box-shadow: 2px 2px 0px #000000;
-}
+        .manga-nav-arrow.prev:active {
+            transform: translate(-50%, -50%) scale(0.92);
+            box-shadow: 2px 2px 0px #000000;
+        }
 
-.manga-nav-arrow.next {
-    right: 0;
-    transform: translate(50%, -50%);
-}
+    .manga-nav-arrow.next {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
 
-.manga-nav-arrow.next:active {
-    transform: translate(50%, -50%) scale(0.92);
-    box-shadow: 2px 2px 0px #000000;
-}
+        .manga-nav-arrow.next:active {
+            transform: translate(50%, -50%) scale(0.92);
+            box-shadow: 2px 2px 0px #000000;
+        }
 
 /* Slider Dot indicators */
 .manga-slider-dots {
@@ -221,10 +222,10 @@
     transition: background-color 0.2s, transform 0.2s;
 }
 
-.manga-dot.active {
-    background-color: #ef4444;
-    transform: scale(1.2);
-}
+    .manga-dot.active {
+        background-color: #ef4444;
+        transform: scale(1.2);
+    }
 
 @keyframes comicPulse {
     0% {
@@ -271,7 +272,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.10rem;
+    margin-top: 1.9rem;
     margin-bottom: 0.9rem;
     padding: 0.8rem 1rem;
     background: linear-gradient(135deg, rgba(10,10,10,0.98), rgba(30,15,15,0.98));
@@ -282,18 +283,18 @@
     opacity: 1;
 }
 
-.aot-section-title::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-    pointer-events: none;
-}
+    .aot-section-title::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+        pointer-events: none;
+    }
 
-.aot-section-title i {
-    color: #facc15;
-    text-shadow: 2px 2px 0 #000000;
-}
+    .aot-section-title i {
+        color: #facc15;
+        text-shadow: 2px 2px 0 #000000;
+    }
 
 @media (max-width: 767.98px) {
     .aot-section-title {
@@ -316,11 +317,11 @@
     overflow: hidden;
 }
 
-.aot-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 215, 0, 0.35) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
-}
+    .aot-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 215, 0, 0.35) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+    }
 
 .aot-card-header {
     display: flex;
@@ -470,25 +471,27 @@
     height: 560px;
 }
 
-.member-hype-card:hover {
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
+    .member-hype-card:hover {
+        border-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
 
 .member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-.member-hype-card:hover .holo-foil-layer {
-    opacity: 0.08;
-}
+    .member-hype-card:hover .holo-foil-layer {
+        opacity: 0.08;
+    }
 
 /* Character carousel layout */
 .character-carousel-shell {
     position: relative;
     width: 100%;
-    min-height: 540px; /* Reduced from 620px to eliminate vertical dead space */
+    /* ponytail: height derived from the card's own box (width * 88/63 ratio + top offset + a little
+       clearance for the side cards' translateY) instead of a flat guess, so there's no dead space. */
+    min-height: calc(min(340px, 78vw) * 88 / 63 + 64px);
     margin-top: 0.25rem;
 }
 
@@ -506,13 +509,12 @@
     top: 24px; /* Shift down by 24px so scaling up does not cut off the top of card */
     left: 50%;
     width: min(340px, 78vw); /* Slightly narrower to reduce dead space and balance layout */
-    /* aspect-ratio: 3 / 4; */ /* Less tall aspect ratio to bring content together */
     aspect-ratio: 63 / 88; /* Real TCG trading card ratio (63mm x 88mm) */
     height: auto;
     padding: 0;
     border: 0;
     background: transparent;
-    overflow: visible;
+    overflow: visible; /* defensive: the flip-affordance badge must never be clipped by this box */
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transform-origin: center center;
@@ -523,6 +525,28 @@
     /* Crucial fix: display flex forces the child (.character-card) height: 100% to resolve correctly */
     display: flex;
     flex-direction: column;
+}
+
+/* Mirrors .character-carousel-item's own top/width/aspect-ratio at every breakpoint below
+   (kept in sync manually) so the badge lines up with the centered card's actual corner —
+   but as a sibling of .character-carousel-stage, so the stage's overflow:hidden never touches it. */
+.flip-affordance-anchor {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    width: min(340px, 78vw);
+    aspect-ratio: 63 / 88;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.flip-affordance-anchor.is-visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .character-carousel-item:focus-visible {
@@ -550,25 +574,15 @@
     height: 100%;
     width: 100%;
     max-width: none;
-    /* 
-        ponytail: proportional radius (scales with card size) + a stacked shadow to read as
-       ~0.3mm-thick cardstock instead of a flat comic panel. Overrides .comic-card's !important. 
-    */
+    /* ponytail: proportional radius (scales with card size) + a stacked shadow to read as
+       ~0.3mm-thick cardstock instead of a flat comic panel. Overrides .comic-card's !important. */
     border-radius: 4% / 3% !important;
-    box-shadow: 
-        0 0 0 1px rgba(255, 255, 255, 0.07) inset, 
-        0 2px 0 rgba(0, 0, 0, 0.55), 
-        0 3px 8px rgba(0, 0, 0, 0.55), 
-        0 20px 34px -12px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.07) inset, 0 2px 0 rgba(0, 0, 0, 0.55), 0 3px 8px rgba(0, 0, 0, 0.55), 0 20px 34px -12px rgba(0, 0, 0, 0.75) !important;
 }
 
-.character-carousel-item .character-card:hover {
-    box-shadow: 
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset, 
-        0 2px 0 rgba(0, 0, 0, 0.5), 
-        0 3px 8px rgba(0, 0, 0, 0.55), 
-        0 9px 20px 0px rgb(255 255 255 / 0.45) !important;
-}
+    .character-carousel-item .character-card:hover {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 2px 0 rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.55), 0 24px 40px -10px rgba(239, 68, 68, 0.4) !important;
+    }
 
 .character-card-face {
     position: absolute;
@@ -636,7 +650,6 @@
 }
 
 .character-art-shell {
-    /* flex: 0 0 auto; */
     /* ponytail: was flex:0 0 auto with a fixed-height image below it — when the title wrapped to
        2 lines the whole column overflowed and clipped the flip-hint (overflow:hidden on the face).
        Now the image is the flexible part and the copy always keeps its space. */
@@ -656,7 +669,7 @@
     height: auto; /* overrides the generic 200px fixed height so flex stretch can size it */
     flex: 1 1 auto;
     min-height: 0;
-    width: 100%;
+    width: 100%; /* cancel the titan cards' full-bleed width so it aligns with the card padding */
     margin-left: 0;
 }
 
@@ -682,18 +695,108 @@
     color: #d1d5db; /* Neutral Light Grey */
 }
 
-.character-flip-hint,
-.character-back-note {
-    font-size: 0.60rem;
-    padding: 0.20rem 0px 0rem 0px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
+/* Flip affordance — a small "tap here" prompt (ripple rings expanding from a hand-tap icon,
+   like a game tutorial cue) instead of "tap / click to flip" text or a generic refresh icon.
+   Sits inside .flip-affordance-anchor (a sibling of the clipped carousel stage, positioned to
+   match the centered card's own box) so nothing can clip it, and hangs off the corner rather
+   than sitting flush inside it.
+   ponytail: dropped the old per-card hover-reveal-on-desktop behavior — since this is now one
+   shared badge rather than nested per-card, there's no single DOM ancestor left to hang a plain
+   CSS :hover off of without wiring hover state through Blazor. Simpler to just always show it. */
+.flip-affordance {
+    position: absolute;
+    right: -16px;
+    bottom: -16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.85);
+    border: 1.15px solid rgb(241 239 239 / 19%);
+    color: #ffffff;
+    font-size: 0.82rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* lift, so it reads as pinned on top of the card */
 }
 
-.character-front-copy .character-flip-hint {
-    margin-top: auto;
+    .flip-affordance::before,
+    .flip-affordance::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255,255,255,0.65);
+        animation: flipTapRipple 2.2s ease-out infinite;
+    }
+
+    .flip-affordance::after {
+        animation-delay: 1.1s; /* offsets the second ring so one is always mid-pulse */
+    }
+
+    .flip-affordance i {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        rotate: 0deg;
+        transition: rotate 420ms cubic-bezier(0.22, 1, 0.36, 1);
+        /* ponytail: rotate/translate as separate CSS properties (not the transform shorthand) so
+           the vibrate jitter below and the 180° flip-on-flip rotation never stomp on each other. */
+        animation: flipIconVibrate 4.5s ease-in-out infinite;
+    }
+
+    .flip-affordance.is-flipped-state i {
+        rotate: 180deg;
+    }
+
+@keyframes flipIconVibrate {
+    0%, 87%, 100% {
+        translate: 0 0;
+    }
+    /* short, low-amplitude jitter near the end of the cycle, then a long rest — a nudge, not a shake */
+    89% {
+        translate: -1px 0;
+    }
+
+    91% {
+        translate: 1px 0;
+    }
+
+    93% {
+        translate: -1px 0;
+    }
+
+    95% {
+        translate: 1px 0;
+    }
+
+    97% {
+        translate: 0 0;
+    }
+}
+
+@keyframes flipTapRipple {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flip-affordance::before,
+    .flip-affordance::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    .flip-affordance i {
+        animation: none;
+    }
 }
 
 .back-card-header {
@@ -750,10 +853,6 @@
 
 .character-card-back .progress {
     height: 0.45rem;
-}
-
-.character-back-note {
-    margin-top: auto;
 }
 
 .character-card.is-focused .character-card-front .holo-foil-layer {
@@ -831,6 +930,11 @@
         top: 20px;
     }
 
+    .flip-affordance-anchor {
+        width: min(300px, 78vw);
+        top: 20px;
+    }
+
     .character-carousel-item.is-left,
     .character-carousel-item.is-right {
         transform: translateX(calc(-50% - 310px)) translateY(16px) rotateY(22deg) scale(0.76);
@@ -839,22 +943,21 @@
     .character-carousel-item.is-right {
         transform: translateX(calc(-50% + 310px)) translateY(16px) rotateY(-22deg) scale(0.76);
     }
-
-    .flip-affordance-anchor {
-        width: min(300px, 78vw);
-        top: 20px;
-    }
 }
 
 @media (max-width: 900px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: calc(min(270px, 84vw) * 88 / 63 + 55px); /* ponytail: was 460 — too short for content, caused clipping */
+        min-height: calc(min(270px, 84vw) * 88 / 63 + 55px);
     }
 
     .character-carousel-item {
         width: min(270px, 84vw);
-        /* aspect-ratio: 3 / 5; */ /* ponytail: taller than 3/4 so front/back content fits without overflow-clip */
+        top: 15px;
+    }
+
+    .flip-affordance-anchor {
+        width: min(270px, 84vw);
         top: 15px;
     }
 
@@ -874,22 +977,21 @@
     .character-carousel-item.is-right {
         transform: translateX(calc(-50% + 250px)) translateY(20px) rotateY(-20deg) scale(0.74);
     }
-
-    .flip-affordance-anchor {
-        width: min(270px, 84vw);
-        top: 15px;
-    }
 }
 
 @media (max-width: 640px) {
     .character-carousel-shell,
     .character-carousel-stage {
-        min-height: calc(min(240px, 88vw) * 88 / 63 + 52px); /* ponytail: was 410 — too short for content, caused clipping */
+        min-height: calc(min(240px, 88vw) * 88 / 63 + 52px);
     }
 
     .character-carousel-item {
         width: min(240px, 88vw);
-        /* aspect-ratio: 3 / 5; */ /* ponytail: taller than 3/4 so name/title/ability (front) and bio/stats (back) fit without overflow-clip */
+        top: 12px;
+    }
+
+    .flip-affordance-anchor {
+        width: min(240px, 88vw);
         top: 12px;
     }
 
@@ -897,13 +999,9 @@
         font-size: 1.15rem;
     }
 
-    /* .character-card .artwork-glass-frame {
-        height: 130px;
-    } */
-
     .character-card-front,
     .character-card-back {
-        padding: 13px;
+        padding: 12px;
         gap: 6px;
     }
 
@@ -939,13 +1037,6 @@
     .character-carousel-item.is-pinned {
         transform: translateX(-50%) translateY(2px) rotateY(0deg) scale(1.02);
     }
-
-    
-    .flip-affordance-anchor {
-        width: min(240px, 88vw);
-        top: 12px;
-    }
- 
 }
 
 .member-hype-card
@@ -985,19 +1076,19 @@
     height: 560px;
 }
 
-.member-hype-card:hover {
-    border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
+    .member-hype-card:hover {
+        border-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
 
 .member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-.member-hype-card:hover .holo-foil-layer {
-    opacity: 0.08;
-}
+    .member-hype-card:hover .holo-foil-layer {
+        opacity: 0.08;
+    }
 
 /* Titan registry — gold is reserved for this card type only */
 .titan-hype-card {
@@ -1008,11 +1099,6 @@
     border: 1.5px solid rgba(255, 215, 0, 0.45);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
     transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
-}
-
-.titan-shifter-badge {
-    font-size: 0.50rem;
-
 }
 
 @media (max-width: 767.98px) {
@@ -1122,9 +1208,9 @@
     z-index: 10; /* Keep above foil/scanlines */
 }
 
-.meta-registry-row > :last-child:not(.registry-serial) {
-    margin-left: auto;
-}
+    .meta-registry-row > :last-child:not(.registry-serial) {
+        margin-left: auto;
+    }
 
 .registry-serial {
     font-family: system-ui, -apple-system, sans-serif;
@@ -1253,9 +1339,9 @@
     gap: 4px;
 }
 
-.spec-node.align-right {
-    text-align: right;
-}
+    .spec-node.align-right {
+        text-align: right;
+    }
 
 .node-hdr {
     font-size: 0.7rem; /* Increased size for mobile/desktop readability */
@@ -2023,94 +2109,5 @@
 @media (max-width: 767.98px) {
     .member-display-name {
         font-size: 1.125rem;
-    }
-}
-
-
-
-/* Flip affordance — a small "tap here" prompt (ripple rings expanding from a hand-tap icon,
-   like a game tutorial cue) instead of "tap / click to flip" text or a generic refresh icon.
-   Lives as a sibling of .character-card (not inside it) so comic-card's overflow:hidden doesn't
-   clip it, and hangs slightly off the card's own corner instead of sitting flush inside it. */
-.flip-affordance {
-    position: absolute;
-    right: -16px;
-    bottom: -16px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(10, 10, 10, 0.85);
-    border: 1.5px solid rgba(239, 68, 68, 0.85);
-    color: #ffffff;
-    font-size: 0.82rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
-/* Mouse/trackpad users: keep it out of the way until they're actually looking at this card */
-@media (hover: hover) {
-    .flip-affordance {
-        opacity: 0;
-    }
-
-    .character-carousel-item:hover .flip-affordance,
-    .character-carousel-item:focus-visible .flip-affordance {
-        opacity: 1;
-    }
-}
-
-.flip-affordance::before,
-.flip-affordance::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 1.5px solid rgba(239, 68, 68, 0.65);
-    animation: flipTapRipple 2.2s ease-out infinite;
-}
-
-.flip-affordance::after {
-    animation-delay: 1.1s; /* offsets the second ring so one is always mid-pulse */
-}
-
-.flip-affordance i {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    rotate: 0deg;
-    transition: rotate 420ms cubic-bezier(0.22, 1, 0.36, 1);
-    animation: flipIconVibrate 4.5s ease-in-out infinite;
-}
-
-.character-card.is-flipped .flip-affordance i {
-    rotate: 180deg;
-}
-
-@keyframes flipIconVibrate {
-    0%, 87%, 100% { translate: 0 0; }
-    89% { translate: -1px 0; }
-    91% { translate: 1px 0; }
-    93% { translate: -1px 0; }
-    95% { translate: 1px 0; }
-    97% { translate: 0 0; }
-}
-
-
-@keyframes flipTapRipple {
-    0% { transform: scale(1); opacity: 0.85; }
-    100% { transform: scale(2.2); opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .flip-affordance::before,
-    .flip-affordance::after {
-        animation: none;
-        opacity: 0;
-    }
-
-    .flip-affordance i {
-        animation: none;
     }
 }

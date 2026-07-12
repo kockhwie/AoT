@@ -2,26 +2,26 @@
 @inject AppLocalizationService LocalizationService
 
 <!-- 区域 1：顶部核心巨幕区 (互动式漫画分镜带) -->
-<div class="manga-slider-container" 
-     @ontouchstart="HandleTouchStart" 
+<div class="manga-slider-container"
+     @ontouchstart="HandleTouchStart"
      @ontouchend="HandleTouchEnd"
      @onmousemove="HandleMouseMove"
      @onmouseleave="HandleMouseLeave"
      style="--tilt-x: @(_tiltX)deg; --tilt-y: @(_tiltY)deg;"
      tabindex="0"
      aria-label="Manga Comic Panel Story Slider">
-    
+
     <!-- Inner wrapper with hidden overflow to prevent slides from bleeding out, while letting arrows overflow -->
     <div style="position: absolute; inset: 0; overflow: hidden; border-radius: inherit;">
         <div class="manga-screentone-overlay"></div>
-        
+
         @for (int i = 0; i < _mangaSlides.Count; i++)
         {
             var slide = _mangaSlides[i];
             var index = i;
             <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
                 <!-- Background Image -->
-                <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" style="object-position: @slide.FocalPosition;" />
+                <img src="/img/manga/@slide.Image" class="manga-bg-art" style="object-position: @slide.FocalPosition" alt="@slide.Title" />
                 <div class="manga-vignette"></div>
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
@@ -32,7 +32,7 @@
                     <h1 class="manga-panel-title">
                         @slide.Title
                     </h1>
-                    
+
                     <!-- Manga Quote Display -->
                     <blockquote class="manga-quote-block">
                         “@slide.Quote”
@@ -62,7 +62,7 @@
         @for (int i = 0; i < _mangaSlides.Count; i++)
         {
             var index = i;
-            <span class="manga-dot @(index == _currentSlideIndex ? "active" : "")" 
+            <span class="manga-dot @(index == _currentSlideIndex ? "active" : "")"
                   @onclick="() => SetSlide(index)"></span>
         }
     </div>
@@ -134,15 +134,12 @@
                                 <div class="member-ability-row">
                                     <span class="member-ability-tag comic-tag">@LocalizationService.GetString(member.AbilityKey)</span>
                                 </div>
-                                <div class="flip-affordance" aria-hidden="true">
-                                    <i class="ti ti-rotate-360"></i>
-                                </div>
                             </div>
                         </div>
 
                         <div class="character-card-face character-card-back">
                             <div class="back-card-header">
-                                <div class="back-card-title"></div>
+                                <div class="back-card-title">combat sheet</div>
                                 <div class="back-card-subtitle">@LocalizationService.GetString(member.NameKey)</div>
                             </div>
 
@@ -169,7 +166,6 @@
                                         <progress class="progress progress-xs progress-success w-full" value="@(member.Wits * 10)" max="100"></progress>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -177,10 +173,16 @@
             }
         </div>
 
-    </div>        
-    <div class="flip-affordance-anchor" aria-hidden="true">
-        <div class="flip-affordance @(_flippedCharacterIndex != -1 ? "is-flipped-state" : "")">
-            <i class="ti ti-rotate-360"></i>
+        <!-- Lives outside .character-carousel-stage (which needs overflow:hidden to keep the
+             off-screen carousel cards from widening the page) so it can never be clipped, and
+             is styled to sit at the same spot the centered card occupies (see
+             .flip-affordance-anchor, kept in sync with .character-carousel-item's own
+             top/width per breakpoint). Only the centered/active card is realistically what a
+             person is flipping, so one shared badge stands in for a per-card one. -->
+        <div class="flip-affordance-anchor @(_pinnedCharacterIndex != -1 ? "is-visible" : "")" aria-hidden="true">
+            <div class="flip-affordance @(_flippedCharacterIndex == _pinnedCharacterIndex ? "is-flipped-state" : "")">
+                <i class="ti ti-rotate-360"></i>
+            </div>
         </div>
     </div>
 </div>
@@ -422,6 +424,9 @@
         public string Chapter { get; init; } = "";
         public string Quote { get; init; } = "";
         public string Image { get; init; } = "";
+        // object-position for the background art — lets a slide whose subject sits off-center
+        // (e.g. panels with the character on the right third) stay in frame as the container
+        // narrows on mobile, without needing a separately-cropped image export.
         public string FocalPosition { get; init; } = "center";
     }
 
@@ -451,8 +456,7 @@
                     "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
                     _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
                 },
-                Image = "manga_first_titan.webp",
-                FocalPosition = "50% 50%"
+                Image = "manga_first_titan.webp"
             },
             new MangaSlideModel
             {
@@ -475,8 +479,7 @@
                     "jp" => "駆逐してやる、この世から一匹残らず！",
                     _ => "I will exterminate them... every single one of them from this world!"
                 },
-                Image = "manga_attack_titan_first_fight.webp",
-                FocalPosition = "0% 50%"
+                Image = "manga_attack_titan_first_fight.webp"
             }
         };
 
@@ -549,7 +552,7 @@
         // (Rough normalization for slider bounds)
         double width = 1200; // estimated width
         double height = 500; // estimated height
-        
+
         _tiltY = -((e.OffsetX - (width / 2)) / (width / 2)) * 8;
         _tiltX = ((e.OffsetY - (height / 2)) / (height / 2)) * 8;
     }
