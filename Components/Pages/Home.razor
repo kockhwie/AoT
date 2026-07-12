@@ -134,7 +134,9 @@
                                 <div class="member-ability-row">
                                     <span class="member-ability-tag comic-tag">@LocalizationService.GetString(member.AbilityKey)</span>
                                 </div>
-                                <div class="character-flip-hint">Tap / click to flip</div>
+                                <div class="flip-affordance" aria-hidden="true">
+                                    <i class="ti ti-rotate-360"></i>
+                                </div>
                             </div>
                         </div>
 
@@ -168,12 +170,17 @@
                                     </div>
                                 </div>
 
-                                <div class="character-back-note">Tap again to return to front</div>
                             </div>
                         </div>
                     </div>
                 </button>
             }
+        </div>
+
+    </div>        
+    <div class="flip-affordance-anchor" aria-hidden="true">
+        <div class="flip-affordance @(_flippedCharacterIndex != -1 ? "is-flipped-state" : "")">
+            <i class="ti ti-rotate-360"></i>
         </div>
     </div>
 </div>
