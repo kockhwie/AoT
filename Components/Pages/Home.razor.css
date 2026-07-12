@@ -53,9 +53,9 @@
     transition: box-shadow 0.3s ease;
 }
 
-    .manga-slider-container:hover {
-        box-shadow: 12px 12px 0px #ef4444;
-    }
+.manga-slider-container:hover {
+    box-shadow: 12px 12px 0px #ef4444;
+}
 
 /* Screentone layout using CSS grid pattern */
 .manga-screentone-overlay {
@@ -76,22 +76,24 @@
     align-items: flex-end;
     opacity: 0;
     visibility: hidden;
-    transform: scale(0.98);
+    /*transform: scale(0.98);
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+    */
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
     z-index: 1;
 }
 
-    .manga-slide.active {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-        z-index: 2;
-    }
+.manga-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
 
 /* Ink artwork layer */
 .manga-bg-art {
     position: absolute;
-    inset: 0;
+    inset: -2px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -100,7 +102,7 @@
 }
 
 .manga-slider-container:hover .manga-bg-art {
-    filter: contrast(1.25) brightness(0.75) grayscale(1);
+    filter: contrast(1.15) brightness(0.85) grayscale(1);
 }
 
 .manga-slide.active .manga-bg-art {
@@ -174,30 +176,30 @@
     border-radius: 50%;
 }
 
-    .manga-nav-arrow:hover {
-        background-color: #ef4444;
-        color: #ffffff;
-    }
+.manga-nav-arrow:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
 
-    .manga-nav-arrow.prev {
-        left: 0;
-        transform: translate(-50%, -50%);
-    }
+.manga-nav-arrow.prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
 
-        .manga-nav-arrow.prev:active {
-            transform: translate(-50%, -50%) scale(0.92);
-            box-shadow: 2px 2px 0px #000000;
-        }
+.manga-nav-arrow.prev:active {
+    transform: translate(-50%, -50%) scale(0.92);
+    box-shadow: 2px 2px 0px #000000;
+}
 
-    .manga-nav-arrow.next {
-        right: 0;
-        transform: translate(50%, -50%);
-    }
+.manga-nav-arrow.next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
 
-        .manga-nav-arrow.next:active {
-            transform: translate(50%, -50%) scale(0.92);
-            box-shadow: 2px 2px 0px #000000;
-        }
+.manga-nav-arrow.next:active {
+    transform: translate(50%, -50%) scale(0.92);
+    box-shadow: 2px 2px 0px #000000;
+}
 
 /* Slider Dot indicators */
 .manga-slider-dots {
@@ -219,10 +221,10 @@
     transition: background-color 0.2s, transform 0.2s;
 }
 
-    .manga-dot.active {
-        background-color: #ef4444;
-        transform: scale(1.2);
-    }
+.manga-dot.active {
+    background-color: #ef4444;
+    transform: scale(1.2);
+}
 
 @keyframes comicPulse {
     0% {
@@ -280,18 +282,18 @@
     opacity: 1;
 }
 
-    .aot-section-title::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-        pointer-events: none;
-    }
+.aot-section-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+    pointer-events: none;
+}
 
-    .aot-section-title i {
-        color: #facc15;
-        text-shadow: 2px 2px 0 #000000;
-    }
+.aot-section-title i {
+    color: #facc15;
+    text-shadow: 2px 2px 0 #000000;
+}
 
 @media (max-width: 767.98px) {
     .aot-section-title {
@@ -314,11 +316,11 @@
     overflow: hidden;
 }
 
-    .aot-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(255, 215, 0, 0.35) !important;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
-    }
+.aot-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.35) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 215, 0, 0.05), inset 0 0 15px rgba(255, 255, 255, 0.03) !important;
+}
 
 .aot-card-header {
     display: flex;
@@ -468,19 +470,19 @@
     height: 560px;
 }
 
-    .member-hype-card:hover {
-        border-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
+.member-hype-card:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
 
 .member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-    .member-hype-card:hover .holo-foil-layer {
-        opacity: 0.08;
-    }
+.member-hype-card:hover .holo-foil-layer {
+    opacity: 0.08;
+}
 
 /* Character carousel layout */
 .character-carousel-shell {
@@ -564,7 +566,7 @@
         0 0 0 1px rgba(255, 255, 255, 0.1) inset, 
         0 2px 0 rgba(0, 0, 0, 0.5), 
         0 3px 8px rgba(0, 0, 0, 0.55), 
-        0 24px 40px -10px rgba(239, 68, 68, 0.4) !important;
+        0 9px 20px 0px rgb(255 255 255 / 0.45) !important;
 }
 
 .character-card-face {
@@ -590,7 +592,7 @@
 .character-card-front {
     display: flex;
     flex-direction: column;
-    padding: 14px 14px;
+    padding: 14px;
     gap: 10px;
     flex: 1 1 auto; /* allow front to fill available height */
     transform: translateX(0) scale(1);
@@ -653,6 +655,8 @@
     height: auto; /* overrides the generic 200px fixed height so flex stretch can size it */
     flex: 1 1 auto;
     min-height: 0;
+    width: 100%;
+    margin-left: 0;
 }
 
 .character-card .member-display-name {
@@ -888,7 +892,7 @@
 
     .character-card-front,
     .character-card-back {
-        padding: 14px 14px;
+        padding: 13px;
         gap: 6px;
     }
 
@@ -963,19 +967,19 @@
     height: 560px;
 }
 
-    .member-hype-card:hover {
-        border-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
+.member-hype-card:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
 
 .member-hype-card {
     background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
     background-size: 8px 8px;
 }
 
-    .member-hype-card:hover .holo-foil-layer {
-        opacity: 0.08;
-    }
+.member-hype-card:hover .holo-foil-layer {
+    opacity: 0.08;
+}
 
 /* Titan registry — gold is reserved for this card type only */
 .titan-hype-card {
@@ -1100,9 +1104,9 @@
     z-index: 10; /* Keep above foil/scanlines */
 }
 
-    .meta-registry-row > :last-child:not(.registry-serial) {
-        margin-left: auto;
-    }
+.meta-registry-row > :last-child:not(.registry-serial) {
+    margin-left: auto;
+}
 
 .registry-serial {
     font-family: system-ui, -apple-system, sans-serif;
@@ -1231,9 +1235,9 @@
     gap: 4px;
 }
 
-    .spec-node.align-right {
-        text-align: right;
-    }
+.spec-node.align-right {
+    text-align: right;
+}
 
 .node-hdr {
     font-size: 0.7rem; /* Increased size for mobile/desktop readability */

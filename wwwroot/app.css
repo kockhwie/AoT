@@ -22,7 +22,7 @@ body {
     --aot-btn-border: 2px;
     --aot-btn-radius: 8px;
     --aot-btn-shadow-color: #000000;
-    --aot-btn-font-weight: 900;
+    --aot-btn-font-weight: 600;
 }
 
 .aot-btn {

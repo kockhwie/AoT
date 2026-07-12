@@ -21,7 +21,7 @@
             var index = i;
             <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
                 <!-- Background Image -->
-                <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" />
+                <img src="/img/manga/@slide.Image" class="manga-bg-art" alt="@slide.Title" style="object-position: @slide.FocalPosition;" />
                 <div class="manga-vignette"></div>
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
@@ -415,6 +415,7 @@
         public string Chapter { get; init; } = "";
         public string Quote { get; init; } = "";
         public string Image { get; init; } = "";
+        public string FocalPosition { get; init; } = "center";
     }
 
     private List<MangaSlideModel> _mangaSlides = new();
@@ -443,7 +444,8 @@
                     "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
                     _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
                 },
-                Image = "manga_first_titan.webp"
+                Image = "manga_first_titan.webp",
+                FocalPosition = "50% 50%"
             },
             new MangaSlideModel
             {
@@ -454,7 +456,8 @@
                     "jp" => "何も捨てることができない人には、何も変えることはできない。",
                     _ => "A person who cannot sacrifice anything, cannot change anything."
                 },
-                Image = "manga_levi_beast.webp"
+                Image = "manga_levi_beast.webp",
+                FocalPosition = "80% 30%"
             },
             new MangaSlideModel
             {
@@ -465,7 +468,8 @@
                     "jp" => "駆逐してやる、この世から一匹残らず！",
                     _ => "I will exterminate them... every single one of them from this world!"
                 },
-                Image = "manga_attack_titan_first_fight.webp"
+                Image = "manga_attack_titan_first_fight.webp",
+                FocalPosition = "0% 50%"
             }
         };
 
