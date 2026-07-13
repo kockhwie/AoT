@@ -1,0 +1,53 @@
+@page "/manga/{VolumeNumber:int}"
+@using AOT.Services
+@inject NavigationManager Nav
+
+@if (_volume is not null)
+{
+    <PageTitle>Vol. @_volume.VolumeNumber — @_volume.ArcName</PageTitle>
+
+    <div class="aot-card comic-card p-5 flex flex-col gap-4">
+        <div class="flex gap-4 items-start">
+            <img src="/img/manga/volumes/@_volume.CoverImage" alt="Vol. @_volume.VolumeNumber" class="manga-detail-cover" />
+            <div>
+                <h1 class="character-name">Volume @_volume.VolumeNumber</h1>
+                <span class="character-title">@_volume.ArcName</span>
+            </div>
+        </div>
+
+        @foreach (var chapter in _volume.Chapters)
+        {
+            <div class="aot-timeline-box">
+                <div class="aot-timeline-title">@chapter.ChapterLabel</div>
+                @if (chapter.AnimeEpisodes.Length > 0)
+                {
+                    <p class="aot-timeline-desc">Anime: EP @string.Join(", ", chapter.AnimeEpisodes)</p>
+                }
+                @foreach (var moment in chapter.KeyMoments)
+                {
+                    <p class="aot-timeline-desc">• @moment</p>
+                }
+                <div class="manga-detail-tags">
+                    @foreach (var tag in chapter.Tags)
+                    {
+                        <span class="comic-badge comic-badge--accent">@tag</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public int VolumeNumber { get; set; }
+    private MangaVolumeModel? _volume;
+
+    protected override void OnParametersSet()
+    {
+        _volume = MangaData.FindVolume(VolumeNumber);
+        if (_volume is null)
+        {
+            Nav.NavigateTo("/not-found");
+        }
+    }
+}

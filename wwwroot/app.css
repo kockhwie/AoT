@@ -66,6 +66,13 @@ body {
         box-shadow: 3px 3px 0px 1px #ef4444 !important;
         transform: none; /* drop the old lift — box-shadow does the work now */
     }
+
+    .manga-spine:hover {
+        transform: translateY(-2px);
+        box-shadow: 3px 5px 0px #ef4444;
+    }
+
+
 }
 
 .aot-btn:active {
@@ -609,31 +616,9 @@ html:lang(jp) {
 }
 
 
-
-@media (min-width: 768px) {
-    .aot-card-body {
-        padding: 1.5rem;
-    }
-}
-
-
 @media (max-width: 480px) {
     .nav-menu {
         margin-inline: 0.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .aot-timeline-card {
-        padding: 1.5rem;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .aot-titan-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自动变为双列 */
-        gap: 1.5rem;
     }
 }
 
@@ -641,37 +626,47 @@ html:lang(jp) {
     .aot-titan-grid {
         grid-template-columns: repeat(3, 1fr); /* Desktop 升级为标准三列 */
     }
-}
-
-
-/* 平板 (768px+) */
-@media (min-width: 768px) {
-    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }
-    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
-    .aot-titan-badge:last-child { margin-left: 0; }
-}
-
-/* 桌面 (1280px+) */
-@media (min-width: 1280px) {
     .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
     .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
     .aot-titan-badge:last-child { margin-left: 0; }
-}
-
-
-
-@media (min-width: 768px) {
-    .aot-gear-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自動變為雙列 */
-        gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1280px) {
     .aot-gear-grid {
         grid-template-columns: repeat(3, 1fr); /* Desktop 升級為標準三列 */
     }
 }
+
+/* 平板 (768px+) */
+@media (min-width: 768px) {
+    .aot-card-body {
+        padding: 1.5rem;
+    }     
+    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }  
+    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
+    .aot-titan-badge:last-child { margin-left: 0; }
+    .aot-gear-grid {
+        grid-template-columns: repeat(2, 1fr); /* iPad 自動變為雙列 */
+        gap: 1.5rem;
+    }
+    .aot-titan-grid {
+        grid-template-columns: repeat(2, 1fr); /* iPad 自动变为双列 */
+        gap: 1.5rem;
+    }
+    .aot-timeline-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .manga-spine {
+        width: 38px;
+        height: 180px;
+    }
+
+    .manga-spine.is-pulled {
+        width: 140px;
+    }
+}
+
+
 
 /* ==========================================
    GLOBAL COMIC CARD SYSTEM (DRY)
@@ -747,4 +742,139 @@ html:lang(jp) {
     box-shadow: 2px 2px 0px #000000;
     color: #000000;
 }
+
+/* ==========================================================================
+   MANGA SHELF SYSTEM — append to the end of wwwroot/app.css
+   Global (not .razor.css) because it's shared by Home.razor, Manga.razor,
+   and MangaVolume.razor — Blazor CSS isolation only scopes to one component.
+   ========================================================================== */
+.manga-shelf-row-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.manga-arc-title {
+    font-size: 0.875rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #dfbb6b;
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+}
+
+.manga-shelf-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 0.5rem 0.25rem 1rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.manga-spine {
+    position: relative;
+    flex: 0 0 auto;
+    width: 46px;
+    height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: start;
+    box-shadow: 3px 3px 0px #000000;
+    transition: width 320ms cubic-bezier(0.2, 0.85, 0.2, 1), transform 200ms ease, box-shadow 200ms ease;
+    display: block;
+    text-decoration: none;
+}
+
+
+.manga-spine.is-pulled {
+    width: 168px;
+    z-index: 5;
+    border-color: #ef4444;
+}
+
+.manga-spine-cover {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    /* right-aligned crop keeps the volume number/logo (usually top-right on tankōbon
+       covers) visible even at spine width before it's pulled out */
+    object-position: right center;
+}
+
+.manga-spine-number {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 2;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+
+.manga-spine-detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 40%, transparent 100%);
+}
+
+.manga-detail-rating {
+    display: flex;
+    gap: 2px;
+    font-size: 0.75rem;
+    color: #facc15;
+}
+
+.manga-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.manga-tag-badge {
+    font-size: 0.6rem !important;
+    padding: 2px 6px !important;
+    border: none;
+    cursor: pointer;
+}
+
+.manga-tag-badge.is-active {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.manga-spine--viewall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #dfbb6b;
+    background: rgba(255, 255, 255, 0.04);
+    border-style: dashed;
+    text-decoration: none;
+}
+
+.manga-detail-cover {
+    width: 120px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px #000000;
+}
+
 
