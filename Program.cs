@@ -12,6 +12,15 @@ builder.Services.AddScoped<AppLocalizationService>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+
+// Antiforgery is needed for forms — but the homepage has none.
+// Suppress the cookie on non-form GET requests:
+builder.Services.AddAntiforgery(options =>
+{
+    options.Cookie.SameSite = SameSiteMode.Strict;
+    options.SuppressXFrameOptionsHeader = false;
+});
+
 var app = builder.Build();
 
 // Configure supported cultures for localization
@@ -34,6 +43,8 @@ app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages:
 app.UseHttpsRedirection();
 
 app.UseAntiforgery();
+
+
 
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
