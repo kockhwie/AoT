@@ -27,7 +27,7 @@
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
                 <div class="manga-telemetry-panel">
-                    <a href="#manga-library-section" class="aot-btn aot-btn--yellow" aria-label="Explore chapter details">
+                    <a href="@slide.MangaPath" class="aot-btn aot-btn--yellow" aria-label="Explore chapter details">
                         <i class="ti ti-bookmark mr-1"></i>@slide.Chapter
                     </a>
                     <h1 class="manga-panel-title">
@@ -466,6 +466,7 @@
         public string Chapter { get; init; } = "";
         public string Quote { get; init; } = "";
         public string Image { get; init; } = "";
+        public string MangaPath { get; init; } = "";
         // object-position for the background art — lets a slide whose subject sits off-center
         // (e.g. panels with the character on the right third) stay in frame as the container
         // narrows on mobile, without needing a separately-cropped image export.
@@ -510,12 +511,13 @@
             new MangaSlideModel
             {
                 Title = "The Breach / 牆的破壞",
-                Chapter = "Vol. 01 / CH. 01 / Pg. 51",
+                Chapter = "Vol. 1 / CH. 1 / Pg. 51",
                 Quote = CurrentLang switch {
                     "zh" => "那一天，人類回想起了，受支配的恐怖…",
                     "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
                     _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
                 },
+                MangaPath = "/manga/1",
                 Image = "manga_first_titan.webp"
             },
             new MangaSlideModel
@@ -527,6 +529,7 @@
                     "jp" => "何も捨てることができない人には、何も変えることはできない。",
                     _ => "A person who cannot sacrifice anything, cannot change anything."
                 },
+                MangaPath = "/manga/20",
                 Image = "manga_levi_beast.webp",
                 FocalPosition = "80% 30%"
             },
@@ -539,6 +542,7 @@
                     "jp" => "駆逐してやる、この世から一匹残らず！",
                     _ => "I will exterminate them... every single one of them from this world!"
                 },
+                MangaPath = "/manga/3",
                 Image = "manga_attack_titan_first_fight.webp"
             }
         };
