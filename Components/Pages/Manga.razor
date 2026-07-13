@@ -5,12 +5,15 @@
 
 <h1 class="aot-section-title"><i class="ti ti-books"></i> All Manga Volumes</h1>
 
-@foreach (var arcGroup in MangaData.Volumes.GroupBy(v => v.ArcName))
+@foreach (var arc in MangaData.ArcOrder)
 {
+    var volsInArc = MangaData.VolumesInArc(arc).ToList();
+    if (volsInArc.Count == 0) { continue; }
+
     <div class="manga-shelf-row-wrapper">
-        <h4 class="manga-arc-title">@arcGroup.Key</h4>
+        <h4 class="manga-arc-title">@arc</h4>
         <div class="manga-shelf-scroll">
-            @foreach (var vol in arcGroup)
+            @foreach (var vol in volsInArc)
             {
                 <a href="/manga/@vol.VolumeNumber" class="manga-spine">
                     <img src="/img/manga/volumes/@vol.CoverImage" class="manga-spine-cover" alt="Vol. @vol.VolumeNumber" />

@@ -4,14 +4,14 @@
 
 @if (_volume is not null)
 {
-    <PageTitle>Vol. @_volume.VolumeNumber — @_volume.ArcName</PageTitle>
+    <PageTitle>Vol. @_volume.VolumeNumber — @_volume.ArcDisplayName</PageTitle>
 
     <div class="aot-card comic-card p-5 flex flex-col gap-4">
         <div class="flex gap-4 items-start">
             <img src="/img/manga/volumes/@_volume.CoverImage" alt="Vol. @_volume.VolumeNumber" class="manga-detail-cover" />
             <div>
                 <h1 class="character-name">Volume @_volume.VolumeNumber</h1>
-                <span class="character-title">@_volume.ArcName</span>
+                <span class="character-title">@_volume.ArcDisplayName</span>
             </div>
         </div>
 

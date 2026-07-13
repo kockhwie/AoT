@@ -276,12 +276,13 @@
     </h3>
 
     @{
-        var teaserArc = MangaData.Volumes.GroupBy(v => v.ArcName).First();
+        var teaserArcName = MangaData.ArcOrder[0];
+        var teaserVolumes = MangaData.VolumesInArc(teaserArcName).ToList();
     }
     <div class="manga-shelf-row-wrapper">
-        <h4 class="manga-arc-title">@teaserArc.Key</h4>
+        <h4 class="manga-arc-title">@teaserArcName</h4>
         <div class="manga-shelf-scroll">
-            @foreach (var vol in teaserArc)
+            @foreach (var vol in teaserVolumes)
             {
                 var isOpen = _pulledVolumeNumber == vol.VolumeNumber;
                 <div class="manga-spine @(isOpen ? "is-pulled" : "")"
