@@ -293,7 +293,10 @@
                                 <i class="ti @(i <= Math.Round(vol.DisplayRating) ? "ti-star-filled" : "ti-star")"></i>
                             }                            
                         </div>
-                        
+                        <a href="/manga/@vol.VolumeNumber" class="aot-btn aot-btn--xsm aot-btn--red"
+                            @onclick:stopPropagation="true">
+                            View <i class="ti ti-arrow-right"></i>                           
+                        </a>
                     </div>
                 </div>
             }
