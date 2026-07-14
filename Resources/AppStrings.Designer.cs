@@ -160,6 +160,24 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View all {0} →.
+        /// </summary>
+        public static string Btn_ViewAllManga {
+            get {
+                return ResourceManager.GetString("Btn_ViewAllManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        public static string Btn_ViewManga {
+            get {
+                return ResourceManager.GetString("Btn_ViewManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gallery.
         /// </summary>
         public static string BtnGallery {
@@ -579,6 +597,24 @@ namespace AOT.Resources {
         public static string LeviTitle {
             get {
                 return ResourceManager.GetString("LeviTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Manga Volumes.
+        /// </summary>
+        public static string MangaAllVolumesTitle {
+            get {
+                return ResourceManager.GetString("MangaAllVolumesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manga Volumes.
+        /// </summary>
+        public static string MangaSectionTitle {
+            get {
+                return ResourceManager.GetString("MangaSectionTitle", resourceCulture);
             }
         }
         

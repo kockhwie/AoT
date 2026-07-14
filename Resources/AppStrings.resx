@@ -747,6 +747,8 @@
   <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
     <value>Battle of Heaven and Earth</value>
   </data>
-  
-  
+  <data name="Btn_ViewManga" xml:space="preserve"><value>View</value></data>
+  <data name="Btn_ViewAllManga" xml:space="preserve"><value>View all {0} →</value></data>
+  <data name="MangaSectionTitle" xml:space="preserve"><value>Manga Volumes</value></data>
+  <data name="MangaAllVolumesTitle" xml:space="preserve"><value>All Manga Volumes</value></data>
 </root>

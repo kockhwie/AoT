@@ -269,10 +269,10 @@
     </div>
 </div>
 
-<!-- 區域 3：漫畫分卷展示區 -->
+<!-- 區域 3.5：漫畫分卷展示區 -->
 <div class="flex flex-col gap-2 mt-6">
     <h3 class="aot-section-title">
-        <i class="ti ti-books"></i> Manga Volumes
+        <i class="ti ti-books"></i> @LocalizationService.GetString("MangaSectionTitle")
     </h3>
  
     <div class="manga-shelf-row-wrapper">
@@ -295,13 +295,13 @@
                         </div>
                         <a href="/manga/@vol.VolumeNumber" class="aot-btn aot-btn--xsm aot-btn--red"
                             @onclick:stopPropagation="true">
-                            View <i class="ti ti-arrow-right"></i>                           
+                            @LocalizationService.GetString("Btn_ViewManga") <i class="ti ti-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             }
             <a href="/manga" class="manga-spine manga-spine--viewall">
-                <span>View all<br />34 →</span>
+                <span>@string.Format(LocalizationService.GetString("Btn_ViewAllManga"), 34)</span>
             </a>
         </div>
     </div>
@@ -552,7 +552,9 @@
 
         // Random.Shared is thread-safe across concurrent Blazor Server circuits —
         // a shared `Random` instance field here would race across users.
-        _teaserVolumes = MangaData.Volumes.OrderBy(_ => Random.Shared.Next()).Take(34).ToList();
+        //_teaserVolumes = MangaData.Volumes.OrderBy(_ => Random.Shared.Next()).Take(34).ToList();
+        // i dun want to use random, i want it sort the book by volume number, so the first 34 volumes are shown in order
+        _teaserVolumes = MangaData.Volumes.OrderBy(v => v.VolumeNumber).Take(34).ToList();
 
     }
 

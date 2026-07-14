@@ -3,6 +3,9 @@
 @inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
 
+
+<a href="@Nav.ToAbsoluteUri("/manga")" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</a>
+
 @if (_volume is not null)
 {
     var arcDisplayName = string.Join(" & ", _volume.Arcs.Select(a => LocalizationService.GetString(MangaData.ArcNameKeys[a])));

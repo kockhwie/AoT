@@ -667,7 +667,8 @@ html:lang(jp) {
 
 @media (max-width: 640px) {
     .manga-spine {
-        width: 38px;
+        width: 140px;
+        /* width: 38px; */
         height: 180px;
     }
 
@@ -812,13 +813,20 @@ html:lang(jp) {
 
 .manga-spine-cover {
     position: absolute;
-    inset: 0;
-    width: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* ponytail: fixed to the pulled/hover width, not the spine's own current width —
+      object-fit:cover recalculates its zoom level whenever the box's aspect ratio
+       changes, so letting the image resize with the narrow<->pulled spine caused a
+       visible re-crop/zoom jump on hover. Locking the image to a constant width and
+       right-anchoring it means the narrow spine's overflow:hidden just clips the left
+       portion of an image that never changes scale — same crop, different window. */
+    /*width: 146px;*/
+    width: 100%;
     height: 100%;
     max-width: none;
-    object-fit: cover;
-    /* right-aligned crop keeps the volume number/logo (usually top-right on tankōbon
-       covers) visible even at spine width before it's pulled out */
+    object-fit: cover; 
     object-position: right center;
 }
 
