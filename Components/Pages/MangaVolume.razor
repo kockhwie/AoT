@@ -3,8 +3,9 @@
 @inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
 
-
-<a href="@Nav.ToAbsoluteUri("/manga")" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</a>
+<div>
+    <a href="@Nav.ToAbsoluteUri("/manga")" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</a>
+</div>
 
 @if (_volume is not null)
 {
@@ -12,7 +13,7 @@
 
     <PageTitle>Vol. @_volume.VolumeNumber — @arcDisplayName</PageTitle>
 
-    <div class="aot-card comic-card p-5 flex flex-col gap-4">
+    <div class="aot-card p-5 flex flex-col gap-4">
         <div class="flex gap-4 items-start">
             <img src="/img/manga/volumes/@_volume.CoverImage" alt="Vol. @_volume.VolumeNumber" class="manga-detail-cover" />
             <div>
@@ -27,7 +28,7 @@
                 <div class="aot-timeline-title">@chapter.ChapterLabel</div>
                 @if (chapter.AnimeEpisodes.Length > 0)
                 {
-                    <p class="aot-timeline-desc">Anime: EP @string.Join(", ", chapter.AnimeEpisodes)</p>
+                    <!-- p class="aot-timeline-desc">Anime: EP @string.Join(", ", chapter.AnimeEpisodes)</p -->
                 }
                 @foreach (var moment in chapter.KeyMoments)
                 {

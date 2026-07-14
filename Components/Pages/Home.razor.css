@@ -265,46 +265,7 @@
 /* ==========================================================================
    3. SECTION TITLE COMPONENT
    ========================================================================== */
-.aot-section-title {
-    font-size: 1rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: #f8fafc;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1.9rem;
-    margin-bottom: 0.9rem;
-    padding: 0.8rem 1rem;
-    background: linear-gradient(135deg, rgba(10,10,10,0.98), rgba(30,15,15,0.98));
-    border: 3px solid #000000;
-    box-shadow: 6px 6px 0 #000000;
-    position: relative;
-    overflow: hidden;
-    opacity: 1;
-}
-
-    .aot-section-title::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-        pointer-events: none;
-    }
-
-    .aot-section-title i {
-        color: #facc15;
-        text-shadow: 2px 2px 0 #000000;
-    }
-
-@media (max-width: 767.98px) {
-    .aot-section-title {
-        font-size: 0.9rem;
-        padding: 0.7rem 0.85rem;
-        box-shadow: 4px 4px 0 #000000;
-    }
-}
+ 
 
 /* ==========================================================================
    4. CHARACTER CARD COMPONENT

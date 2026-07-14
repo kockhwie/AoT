@@ -3,8 +3,8 @@
 @inject AppLocalizationService LocalizationService
 
 <PageTitle>@LocalizationService.GetString("MangaAllVolumesTitle") - Attack on Titan</PageTitle>
-
-<h1 class="aot-section-title"><i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</h1>
+ 
+<h3 class="aot-section-title"><i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</h3>
 
 @foreach (var arc in MangaData.ArcOrder)
 {
