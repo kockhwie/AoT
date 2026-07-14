@@ -67,11 +67,21 @@ body {
         transform: none; /* drop the old lift — box-shadow does the work now */
     }
 
+    /* Desktop/pointer-capable only. Per "why :hover fails on mobile" — touch has no real
+   cursor, so mobile browsers fake hover-on-tap, causing sticky states and a dead first
+   tap. Gating behind (hover: hover) keeps mobile on tap-only, matching the rest of this
+   codebase's existing hover-gating convention (see .aot-btn:hover, @media (hover: none)). */
+
     .manga-spine:hover {
-        transform: translateY(-2px);
-        box-shadow: 3px 5px 0px #ef4444;
+        width: 168px;
+        z-index: 5;
+        border-color: #ef4444;
     }
 
+    .manga-spine:hover .manga-spine-detail {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
 }
 
@@ -771,6 +781,17 @@ html:lang(jp) {
     -webkit-overflow-scrolling: touch;
 }
 
+/* Teaser-only variant: wraps instead of scrolling. An 8-item random sample looks
+   like a mistake as a horizontal scroller (leaves dead space on anything wider than
+   ~500px) — wrapping fills whatever width it's given with no dead space, no per-
+   breakpoint magic numbers. /manga's per-arc rows keep the scroll behavior since
+   those can have many volumes worth of horizontal browsing. */
+.manga-shelf-scroll--wrap {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+}
+
 .manga-spine {
     position: relative;
     flex: 0 0 auto;
@@ -788,11 +809,6 @@ html:lang(jp) {
 }
 
 
-.manga-spine.is-pulled {
-    width: 168px;
-    z-index: 5;
-    border-color: #ef4444;
-}
 
 .manga-spine-cover {
     position: absolute;
@@ -831,6 +847,24 @@ html:lang(jp) {
     flex-direction: column;
     gap: 6px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 40%, transparent 100%);
+    /* ponytail: always in the DOM now (was a Blazor @if before) so CSS :hover has
+       something to reveal on desktop with zero server round-trip. Hidden by default;
+       shown by .is-pulled (tap-confirmed, all devices) or :hover (pointer devices only). */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+}
+
+
+.manga-spine.is-pulled {
+    width: 168px;
+    z-index: 5;
+    border-color: #ef4444;
+}
+
+.manga-spine.is-pulled .manga-spine-detail {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .manga-detail-rating {

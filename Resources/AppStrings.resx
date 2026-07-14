@@ -711,4 +711,42 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>TACTICAL WITS</value>
   </data>
+
+
+  <!-- Arc Names -->
+  <data name="Arc_FallOfShiganshina" xml:space="preserve">
+    <value>Prologue / Fall of Shiganshina</value>
+  </data>
+  <data name="Arc_BattleOfTrost" xml:space="preserve">
+    <value>Battle of Trost District</value>
+  </data>
+  <data name="Arc_TrainingCorps104" xml:space="preserve">
+    <value>104th Training Corps</value>
+  </data>
+  <data name="Arc_FemaleTitan" xml:space="preserve">
+    <value>The Female Titan</value>
+  </data>
+  <data name="Arc_ClashOfTitans" xml:space="preserve">
+    <value>Clash of the Titans</value>
+  </data>
+  <data name="Arc_RoyalGovernment" xml:space="preserve">
+    <value>The Royal Government</value>
+  </data>
+  <data name="Arc_ReturnToShiganshina" xml:space="preserve">
+    <value>Return to Shiganshina</value>
+  </data>
+  <data name="Arc_Marley" xml:space="preserve">
+    <value>Marley Arc</value>
+  </data>
+  <data name="Arc_WarForParadis" xml:space="preserve">
+    <value>War for Paradis</value>
+  </data>
+  <data name="Arc_Rumbling" xml:space="preserve">
+    <value>The Rumbling</value>
+  </data>
+  <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
+    <value>Battle of Heaven and Earth</value>
+  </data>
+  
+  
 </root>

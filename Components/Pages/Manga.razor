@@ -1,5 +1,6 @@
 @page "/manga"
 @using AOT.Services
+@inject AppLocalizationService LocalizationService
 
 <PageTitle>Manga Volumes — Attack on Titan</PageTitle>
 
@@ -11,7 +12,7 @@
     if (volsInArc.Count == 0) { continue; }
 
     <div class="manga-shelf-row-wrapper">
-        <h4 class="manga-arc-title">@arc</h4>
+        <h4 class="manga-arc-title">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</h4>
         <div class="manga-shelf-scroll">
             @foreach (var vol in volsInArc)
             {

@@ -274,15 +274,11 @@
     <h3 class="aot-section-title">
         <i class="ti ti-books"></i> Manga Volumes
     </h3>
-
-    @{
-        var teaserArcName = MangaData.ArcOrder[0];
-        var teaserVolumes = MangaData.VolumesInArc(teaserArcName).ToList();
-    }
+ 
     <div class="manga-shelf-row-wrapper">
-        <h4 class="manga-arc-title">@teaserArcName</h4>
-        <div class="manga-shelf-scroll">
-            @foreach (var vol in teaserVolumes)
+ 
+        <div class="manga-shelf-scroll manga-shelf-scroll--wrap">
+            @foreach (var vol in _teaserVolumes)
             {
                 var isOpen = _pulledVolumeNumber == vol.VolumeNumber;
                 <div class="manga-spine @(isOpen ? "is-pulled" : "")"
@@ -290,17 +286,15 @@
                     <img src="/img/manga/volumes/@vol.CoverImage" class="manga-spine-cover" alt="Vol. @vol.VolumeNumber" />
                     <div class="manga-spine-number">@vol.VolumeNumber</div>
 
-                    @if (isOpen)
-                    {
-                        <div class="manga-spine-detail">
-                            <div class="manga-detail-rating">
-                                @for (int i = 1; i <= 5; i++)
-                                {
-                                    <i class="ti @(i <= Math.Round(vol.DisplayRating) ? "ti-star-filled" : "ti-star")"></i>
-                                }
-                            </div>
+                    <div class="manga-spine-detail">
+                        <div class="manga-detail-rating">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <i class="ti @(i <= Math.Round(vol.DisplayRating) ? "ti-star-filled" : "ti-star")"></i>
+                            }                            
                         </div>
-                    }
+                        
+                    </div>
                 </div>
             }
             <a href="/manga" class="manga-spine manga-spine--viewall">
@@ -485,8 +479,9 @@
     private int _flippedCharacterIndex = -1;
     private double _characterTouchStartX = 0;
 
-
-    private int? _pulledVolumeNumber = 1; // teaser opens vol.1 automatically — no click needed
+    private int? _pulledVolumeNumber; // no volume pre-opened — random set has no obvious "first"
+    private List<MangaVolumeModel> _teaserVolumes = new();
+ 
     private readonly HashSet<string> _activeTagFilters = new();
 
     private void TogglePulledVolume(int volumeNumber)
@@ -551,6 +546,11 @@
 
         // Initialize 7s autoplay rotation loop
         _autoPlayTimer = new System.Threading.Timer(AutoPlayTick, null, 7000, 7000);
+
+        // Random.Shared is thread-safe across concurrent Blazor Server circuits —
+        // a shared `Random` instance field here would race across users.
+        _teaserVolumes = MangaData.Volumes.OrderBy(_ => Random.Shared.Next()).Take(34).ToList();
+
     }
 
     private void AutoPlayTick(object? state)

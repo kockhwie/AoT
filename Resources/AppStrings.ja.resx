@@ -711,4 +711,41 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>戦術知性指数</value>
   </data>
+
+
+  <!-- Arc Names -->
+  <data name="Arc_FallOfShiganshina" xml:space="preserve">
+    <value>プロローグ／シガンシナ陥落編</value>
+  </data>
+  <data name="Arc_BattleOfTrost" xml:space="preserve">
+    <value>トロスト区防衛戦編</value>
+  </data>
+  <data name="Arc_TrainingCorps104" xml:space="preserve">
+    <value>104期訓練兵団編</value>
+  </data>
+  <data name="Arc_FemaleTitan" xml:space="preserve">
+    <value>女型の巨人編</value>
+  </data>
+  <data name="Arc_ClashOfTitans" xml:space="preserve">
+    <value>エレン奪還編／獣の巨人編</value>
+  </data>
+  <data name="Arc_RoyalGovernment" xml:space="preserve">
+    <value>王政編</value>
+  </data>
+  <data name="Arc_ReturnToShiganshina" xml:space="preserve">
+    <value>奪還編</value>
+  </data>
+  <data name="Arc_Marley" xml:space="preserve">
+    <value>マーレ編</value>
+  </data>
+  <data name="Arc_WarForParadis" xml:space="preserve">
+    <value>兄弟対決編</value>
+  </data>
+  <data name="Arc_Rumbling" xml:space="preserve">
+    <value>地鳴らし編</value>
+  </data>
+  <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
+    <value>天と地の戦い編／完結編</value>
+  </data>
+
 </root>

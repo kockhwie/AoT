@@ -711,4 +711,42 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>戰術智慧指數</value>
   </data>
+
+<!-- Arc Names -->
+  <data name="Arc_FallOfShiganshina" xml:space="preserve">
+    <value>席甘希娜區陷落篇</value>
+  </data>
+  <data name="Arc_BattleOfTrost" xml:space="preserve">
+    <value>托洛斯特區防衛篇</value>
+  </data>
+  <data name="Arc_TrainingCorps104" xml:space="preserve">
+    <value>104期訓練兵團篇</value>
+  </data>
+  <data name="Arc_FemaleTitan" xml:space="preserve">
+    <value>女巨人篇</value>
+  </data>
+  <data name="Arc_ClashOfTitans" xml:space="preserve">
+    <value>厄特加爾城 / 野獸巨人篇</value>
+  </data>
+  <data name="Arc_RoyalGovernment" xml:space="preserve">
+    <value>王政篇</value>
+  </data>
+  <data name="Arc_ReturnToShiganshina" xml:space="preserve">
+    <value>瑪利亞之牆奪回篇</value>
+  </data>
+  <data name="Arc_Marley" xml:space="preserve">
+    <value>馬雷篇</value>
+  </data>
+  <data name="Arc_WarForParadis" xml:space="preserve">
+    <value>帕拉迪島奇襲篇 / 兄弟交鋒篇</value>
+  </data>
+  <data name="Arc_Rumbling" xml:space="preserve">
+    <value>地鳴篇 / 終局之戰</value>
+  </data>
+  <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
+    <value>天與地之戰 / 最終完結篇</value>
+  </data>
+
+  
+  
 </root>
