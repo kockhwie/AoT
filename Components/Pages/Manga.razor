@@ -4,23 +4,41 @@
 
 <PageTitle>@LocalizationService.GetString("MangaAllVolumesTitle") - Attack on Titan</PageTitle>
  
-<h3 class="aot-section-title"><i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</h3>
+<h3 class="aot-section-title"><i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</h3>    
+<p class="manga-page-hero-sub">34 Volumes · 11 Story Arcs · The Final Chapter</p>
+
 
 @foreach (var arc in MangaData.ArcOrder)
 {
     var volsInArc = MangaData.VolumesInArc(arc).ToList();
     if (volsInArc.Count == 0) { continue; }
 
-    <div class="manga-shelf-row-wrapper">
-        <h4 class="manga-arc-title">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</h4>
-        <div class="manga-shelf-scroll">
+    <section class="manga-arc-section">
+        <div class="manga-arc-header">
+            <div class="manga-arc-header-line"></div>
+
+            <h2 class="manga-arc-name">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</h2>
+            <div class="manga-arc-header-badge">
+                <span class="manga-arc-vol-count">@volsInArc.Count VOL@(volsInArc.Count > 1 ? "S" : "")</span>
+            </div>           
+            <div class="manga-arc-header-line"></div>
+        </div>
+        <div class="manga-cover-grid">
             @foreach (var vol in volsInArc)
             {
-                <a href="/manga/@vol.VolumeNumber" class="manga-spine">
-                    <img src="/img/manga/volumes/@vol.CoverImage" class="manga-spine-cover" alt="Vol. @vol.VolumeNumber" />
-                    <div class="manga-spine-number">@vol.VolumeNumber</div>
+                <a href="/manga/@vol.VolumeNumber" class="manga-cover-card">
+                    <div class="manga-cover-card-img-wrap">
+                        <img src="/img/manga/volumes/@vol.CoverImage"
+                             class="manga-cover-card-img"
+                             alt="Vol. @vol.VolumeNumber" />
+                        <div class="manga-cover-card-shine"></div>
+                    </div>
+                    <div class="manga-cover-card-footer">
+                        <span class="manga-cover-card-vol">VOL. @vol.VolumeNumber</span>
+                    </div>
                 </a>
             }
         </div>
-    </div>
+ 
+    </section>
 }

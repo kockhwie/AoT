@@ -1,10 +1,11 @@
-﻿/* Remove browser default, replace with consistent visible ring */
+/* Remove browser default, replace with consistent visible ring */
 h1:focus {
     outline: none;
 }
 
 .text-xxs {
-    font-size: 0.6875rem; /* 11px — used only for ultra-small labels */
+    font-size: 0.6875rem;
+    /* 11px — used only for ultra-small labels */
 }
 
 body {
@@ -41,12 +42,14 @@ body {
     cursor: pointer;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
-    min-height: 48px; /* covers Android 48dp + iOS 44pt */
+    min-height: 48px;
+    /* covers Android 48dp + iOS 44pt */
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     -webkit-user-select: none;
-    user-select: none; /* stop long-press selection callout on Android */
+    user-select: none;
+    /* stop long-press selection callout on Android */
 }
 
 /* Only apply hover lift on devices that actually have a mouse —
@@ -64,7 +67,8 @@ body {
         color: #000000 !important;
         border-color: #000000 !important;
         box-shadow: 3px 3px 0px 1px #ef4444 !important;
-        transform: none; /* drop the old lift — box-shadow does the work now */
+        transform: none;
+        /* drop the old lift — box-shadow does the work now */
     }
 
     /* Desktop/pointer-capable only. Per "why :hover fails on mobile" — touch has no real
@@ -100,7 +104,7 @@ body {
 
 /* Sizes — sm now respects the 44px floor via min-height above,
    padding just controls horizontal width */
- 
+
 .aot-btn--lg {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -139,14 +143,15 @@ body {
 }
 
 .aot-btn--yellow:hover {
- 
+
     color: #ffffff;
-}   
- 
+}
+
 .aot-btn--red {
     background-color: #ef4444;
     color: #ffffff;
-    border-color: #000000; /* #f87171;*/
+    border-color: #000000;
+    /* #f87171;*/
 }
 
 .aot-btn--red:hover {
@@ -195,7 +200,7 @@ body {
     margin-top: 1.9rem;
     margin-bottom: 0.9rem;
     padding: 0.8rem 1rem;
-    background: linear-gradient(135deg, rgba(10,10,10,0.98), rgba(30,15,15,0.98));
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98), rgba(30, 15, 15, 0.98));
     border: 3px solid #000000;
     box-shadow: 6px 6px 0 #000000;
     position: relative;
@@ -203,18 +208,18 @@ body {
     opacity: 1;
 }
 
-    .aot-section-title::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
-        pointer-events: none;
-    }
+.aot-section-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+    pointer-events: none;
+}
 
-    .aot-section-title i {
-        color: #facc15;
-        text-shadow: 2px 2px 0 #000000;
-    }
+.aot-section-title i {
+    color: #facc15;
+    text-shadow: 2px 2px 0 #000000;
+}
 
 @media (max-width: 767.98px) {
     .aot-section-title {
@@ -253,7 +258,8 @@ body {
     display: block;
     height: 2.65rem;
     width: auto;
-    max-width: 140px; /* was unconstrained — this is what caused the overlap */
+    max-width: 140px;
+    /* was unconstrained — this is what caused the overlap */
     object-fit: contain;
     transition: filter 0.2s ease, transform 0.2s ease;
 }
@@ -263,19 +269,21 @@ body {
     filter: invert(1) contrast(2) sepia(1) hue-rotate(320deg) saturate(3);
     transform: scale(1.05);
 }
- .brand-mark {
+
+.brand-mark {
     display: block;
     height: 2.65rem;
     width: auto;
-    max-width: 140px; /* was unconstrained — this is what caused the overlap */
+    max-width: 140px;
+    /* was unconstrained — this is what caused the overlap */
     object-fit: contain;
     transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 
 /* Nav link typography — manga uppercase stencil */
-.nav-links > li > details > summary,
-.nav-links > li > a {
+.nav-links>li>details>summary,
+.nav-links>li>a {
     font-size: 0.75rem !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
@@ -288,13 +296,13 @@ body {
 }
 
 /* Force visible overflow so shadows aren't clipped by daisyUI's menu li/details styling */
-.nav-links > li,
-.nav-links > li > details {
+.nav-links>li,
+.nav-links>li>details {
     overflow: visible !important;
 }
 
- 
-   
+
+
 /* Dropdown menus — comic panel frames */
 .nav-menu {
     background-color: #0a0a0a !important;
@@ -302,12 +310,14 @@ body {
     box-shadow: 6px 6px 0px #000000 !important;
     border-radius: 0.55rem !important;
     min-width: 14rem;
-    overflow: visible !important; /* undo daisyUI's dropdown-content overflow:auto clipping the red shadow */
+    overflow: visible !important;
+    /* undo daisyUI's dropdown-content overflow:auto clipping the red shadow */
 }
 
 .nav-menu li,
-.nav-menu li > details {
-    overflow: visible !important; /* daisyUI's .menu li clips rounded corners by default — kills our box-shadow */
+.nav-menu li>details {
+    overflow: visible !important;
+    /* daisyUI's .menu li clips rounded corners by default — kills our box-shadow */
 }
 
 .nav-menu li a,
@@ -318,14 +328,15 @@ body {
     color: #d1d5db !important;
     text-transform: uppercase !important;
     border-radius: 0.5rem !important;
-    border: 2px solid transparent !important; /* so hover border-color has something to show */
+    border: 2px solid transparent !important;
+    /* so hover border-color has something to show */
 }
 
 /* Hover/active/focus — ONE "comic punch" effect, shared by desktop top-level
 nav-links AND the nav-menu dropdown (hamburger flyout on mobile, sub-menus
 on desktop). Change it here once, both update. */
-.nav-links > li > details > summary:hover,
-.nav-links > li > a:hover,
+.nav-links>li>details>summary:hover,
+.nav-links>li>a:hover,
 .nav-menu li a:hover,
 .nav-menu li summary:hover {
     background-color: #ffffff !important;
@@ -337,16 +348,16 @@ on desktop). Change it here once, both update. */
 }
 
 
-.nav-links > li > details[open] > summary,
-.nav-links > li > details > summary:active,
-.nav-links > li > a:active,
-.nav-links > li > details > summary:focus,
-.nav-links > li > a:focus,
+.nav-links>li>details[open]>summary,
+.nav-links>li>details>summary:active,
+.nav-links>li>a:active,
+.nav-links>li>details>summary:focus,
+.nav-links>li>a:focus,
 .nav-menu li a:active,
 .nav-menu li summary:active,
 .nav-menu li a:focus,
 .nav-menu li summary:focus,
-.nav-menu details[open] > summary {
+.nav-menu details[open]>summary {
     background-color: #ffffff !important;
     color: #000000 !important;
     border-color: #000000 !important;
@@ -406,9 +417,9 @@ html:lang(jp) {
     overflow: hidden;
     display: flex;
     align-items: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 
-                inset 0 0 40px rgba(0, 0, 0, 0.9),
-                0 0 20px rgba(239, 68, 68, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+        inset 0 0 40px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(239, 68, 68, 0.05);
     transition: border-color 0.5s ease, box-shadow 0.5s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     touch-action: pan-y;
 }
@@ -424,9 +435,9 @@ html:lang(jp) {
 .aot-hero:hover,
 .aot-hero:active {
     border-color: rgba(239, 68, 68, 0.45);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 
-                inset 0 0 50px rgba(239, 68, 68, 0.1),
-                0 0 30px rgba(239, 68, 68, 0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9),
+        inset 0 0 50px rgba(239, 68, 68, 0.1),
+        0 0 30px rgba(239, 68, 68, 0.15);
 }
 
 /* Scanlines overlay */
@@ -434,8 +445,8 @@ html:lang(jp) {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
     background-size: 100% 4px, 6px 100%;
     z-index: 1;
     opacity: 0.8;
@@ -482,13 +493,11 @@ html:lang(jp) {
     left: 0;
     width: 200%;
     height: 4px;
-    background: repeating-linear-gradient(
-        -45deg,
-        #facc15,
-        #facc15 10px,
-        #1e1b4b 10px,
-        #1e1b4b 20px
-    );
+    background: repeating-linear-gradient(-45deg,
+            #facc15,
+            #facc15 10px,
+            #1e1b4b 10px,
+            #1e1b4b 20px);
     z-index: 3;
     animation: scrollStripe 12s linear infinite;
     opacity: 0.7;
@@ -500,12 +509,15 @@ html:lang(jp) {
         transform: translateY(110%) translateX(0) scale(0.8);
         opacity: 0;
     }
+
     10% {
         opacity: 0.7;
     }
+
     90% {
         opacity: 0.4;
     }
+
     100% {
         transform: translateY(-20%) translateX(20px) scale(1.2);
         opacity: 0;
@@ -516,12 +528,13 @@ html:lang(jp) {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
 }
 
- 
+
 /* ==========================================
    3. 角色卡片组件网格 (Character Grid)
    ========================================== */
@@ -542,7 +555,7 @@ html:lang(jp) {
 /* 独立卡片结构 */
 .aot-card {
     width: 100%;
-    min-height: 100px; 
+    min-height: 100px;
     border: 6px solid #000000;
     box-shadow: 12px 12px 0px #000000;
     background-color: #0b0b0b;
@@ -555,7 +568,7 @@ html:lang(jp) {
     transition: box-shadow 0.3s ease;
     /*transition: all 0.3s ease;*/
 }
- 
+
 
 .aot-card-body {
     padding: 1.25rem;
@@ -575,7 +588,7 @@ html:lang(jp) {
 
 .aot-timeline-box {
     background-color: rgb(13 45 83);
-    border: 6px solid #000000;
+    border: 3px solid #000000;
     border-radius: 4px;
     box-shadow: 9px 8px 0px black;
     padding: 0.75rem;
@@ -590,7 +603,7 @@ html:lang(jp) {
     color: #fff;
 }
 
-.aot-timeline-desc{
+.aot-timeline-desc {
     color: #fff;
     font-size: 0.85rem;
     line-height: 1.85;
@@ -601,7 +614,8 @@ html:lang(jp) {
    ========================================== */
 .aot-titan-grid {
     display: grid;
-    grid-template-columns: 1fr; /* iPhone 默认单列 */
+    grid-template-columns: 1fr;
+    /* iPhone 默认单列 */
     gap: 1.25rem;
     margin-top: 0rem;
 }
@@ -609,20 +623,24 @@ html:lang(jp) {
 
 /* 巨人卡片专属样式 */
 .aot-titan-card {
-    position: relative; /* badge 的定位錨點 */
+    position: relative;
+    /* badge 的定位錨點 */
     background-color: rgb(116, 154, 222, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.25rem;
     padding: 1.5rem;
-    padding-top: 2rem; /* 為 badge 留頂部空間 */
+    padding-top: 2rem;
+    /* 為 badge 留頂部空間 */
     box-shadow: var(--shadow-2xl);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: visible; /* 允許 badge 超出邊界 */
+    overflow: visible;
+    /* 允許 badge 超出邊界 */
 }
 
 .aot-titan-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 223, 0, 0.5); /* 触碰时放射德古拉警戒gold光 */
+    border-color: rgba(255, 223, 0, 0.5);
+    /* 触碰时放射德古拉警戒gold光 */
     box-shadow: 0 20px 25px -5px rgba(255, 223, 0, 0.15);
 }
 
@@ -632,7 +650,8 @@ html:lang(jp) {
     top: -1rem;
     right: -1rem;
     display: flex;
-    flex-direction: row-reverse; /* 新徽章從右往左疊加 */
+    flex-direction: row-reverse;
+    /* 新徽章從右往左疊加 */
     gap: 0;
     z-index: 10;
 }
@@ -645,7 +664,8 @@ html:lang(jp) {
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    margin-left: -1rem; /* 第二枚向左重疊，形成硬幣疊加感 */
+    margin-left: -1rem;
+    /* 第二枚向左重疊，形成硬幣疊加感 */
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
@@ -664,7 +684,8 @@ html:lang(jp) {
    ========================================== */
 .aot-gear-grid {
     display: grid;
-    grid-template-columns: 1fr; /* iPhone 預設單列 */
+    grid-template-columns: 1fr;
+    /* iPhone 預設單列 */
     gap: 1.25rem;
     margin-top: 0rem;
 }
@@ -680,7 +701,8 @@ html:lang(jp) {
 }
 
 .aot-gear-card:hover {
-    border-color: rgba(189, 147, 249, 0.4); /* 觸碰时放射德古拉紫色高亮 */
+    border-color: rgba(189, 147, 249, 0.4);
+    /* 觸碰时放射德古拉紫色高亮 */
     box-shadow: 0 15px 25px -5px rgba(189, 147, 249, 0.1);
 }
 
@@ -693,13 +715,28 @@ html:lang(jp) {
 
 @media (min-width: 1280px) {
     .aot-titan-grid {
-        grid-template-columns: repeat(3, 1fr); /* Desktop 升级为标准三列 */
+        grid-template-columns: repeat(3, 1fr);
+        /* Desktop 升级为标准三列 */
     }
-    .aot-titan-badges { top: -1.5rem; right: -1.5rem; }
-    .aot-titan-badge  { width: 96px; height: 96px; margin-left: -1.25rem; }
-    .aot-titan-badge:last-child { margin-left: 0; }
+
+    .aot-titan-badges {
+        top: -1.5rem;
+        right: -1.5rem;
+    }
+
+    .aot-titan-badge {
+        width: 96px;
+        height: 96px;
+        margin-left: -1.25rem;
+    }
+
+    .aot-titan-badge:last-child {
+        margin-left: 0;
+    }
+
     .aot-gear-grid {
-        grid-template-columns: repeat(3, 1fr); /* Desktop 升級為標準三列 */
+        grid-template-columns: repeat(3, 1fr);
+        /* Desktop 升級為標準三列 */
     }
 }
 
@@ -707,18 +744,35 @@ html:lang(jp) {
 @media (min-width: 768px) {
     .aot-card-body {
         padding: 1.5rem;
-    }     
-    .aot-titan-badges { top: -1.25rem; right: -1.25rem; }  
-    .aot-titan-badge  { width: 84px; height: 84px; margin-left: -1.1rem; }
-    .aot-titan-badge:last-child { margin-left: 0; }
+    }
+
+    .aot-titan-badges {
+        top: -1.25rem;
+        right: -1.25rem;
+    }
+
+    .aot-titan-badge {
+        width: 84px;
+        height: 84px;
+        margin-left: -1.1rem;
+    }
+
+    .aot-titan-badge:last-child {
+        margin-left: 0;
+    }
+
     .aot-gear-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自動變為雙列 */
+        grid-template-columns: repeat(2, 1fr);
+        /* iPad 自動變為雙列 */
         gap: 1.5rem;
     }
+
     .aot-titan-grid {
-        grid-template-columns: repeat(2, 1fr); /* iPad 自动变为双列 */
+        grid-template-columns: repeat(2, 1fr);
+        /* iPad 自动变为双列 */
         gap: 1.5rem;
     }
+
     .aot-timeline-card {
         padding: 1.5rem;
     }
@@ -885,7 +939,7 @@ html:lang(jp) {
     width: 100%;
     height: 100%;
     max-width: none;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: right center;
 }
 
@@ -979,3 +1033,214 @@ html:lang(jp) {
     box-shadow: 3px 3px 0px #000000;
 }
 
+
+
+/* ==========================================================================
+   MANGA PAGE — HERO BANNER
+   ========================================================================== */
+.manga-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 2rem 2.5rem;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #0a0b0d 0%, #12080a 50%, #0a0b0d 100%);
+    border-bottom: 2px solid rgba(239, 68, 68, 0.35);
+}
+/* Animated speed-line burst (pure CSS, no image needed) */
+.manga-page-hero-speed-lines {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    /* radial conic gradient that simulates speed lines emanating from top-right */
+    background: conic-gradient( from 200deg at 85% 20%, transparent 0deg, rgba(239, 68, 68, 0.04) 3deg, transparent 6deg, transparent 9deg, rgba(239, 68, 68, 0.025) 11deg, transparent 14deg, transparent 18deg, rgba(239, 68, 68, 0.035) 19deg, transparent 22deg, transparent 26deg, rgba(239, 68, 68, 0.02) 27deg, transparent 30deg, transparent 0deg );
+    mix-blend-mode: screen;
+}
+
+.manga-page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(139, 0, 0, 0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 10% 80%, rgba(20, 10, 10, 0.8) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.manga-page-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.manga-page-hero-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    color: #ef4444;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.manga-page-hero-title {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 0.6rem;
+    text-shadow: 0 0 40px rgba(239, 68, 68, 0.3);
+}
+
+    .manga-page-hero-title .ti {
+        color: #dfbb6b;
+        margin-right: 0.3em;
+    }
+
+.manga-page-hero-sub {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+/* ==========================================================================
+   MANGA PAGE — ARC SECTIONS
+   ========================================================================== */
+.manga-arc-section {
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+}
+
+    .manga-arc-section + .manga-arc-section {
+        border-top: 1px solid rgba(255, 215, 0, 0.08);
+    }
+/* Arc header: centered line-through badge layout */
+.manga-arc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.manga-arc-header-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+}
+
+.manga-arc-header-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.manga-arc-vol-count {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 3px;
+    padding: 2px 6px;
+}
+
+.manga-arc-name {
+    font-size: 0.95rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #dfbb6b;
+    margin: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+/* ==========================================================================
+   MANGA PAGE — COVER GRID
+   Fills all available space; no dead columns, no horizontal scroll on desktop.
+   ========================================================================== */
+.manga-cover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .manga-cover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .manga-cover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 14px;
+    }
+}
+
+.manga-cover-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.9), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+    cursor: pointer;
+}
+
+    .manga-cover-card:hover {
+        transform: translateY(-3px) scale(1.02);
+        border-color: rgba(239, 68, 68, 0.55);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(239, 68, 68, 0.2);
+    }
+
+.manga-cover-card-img-wrap {
+    position: relative;
+    width: 100%;
+    /* aspect-ratio locks height so every card is identical regardless of grid column width */
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: #0a0b0d;
+}
+
+.manga-cover-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 300ms ease;
+}
+
+.manga-cover-card:hover .manga-cover-card-img {
+    transform: scale(1.06);
+}
+/* Subtle shine overlay that slides on hover */
+.manga-cover-card-shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 135deg, rgba(255, 255, 255, 0.10) 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100% );
+    opacity: 0;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+}
+
+.manga-cover-card:hover .manga-cover-card-shine {
+    opacity: 1;
+}
+/* Bottom footer strip */
+.manga-cover-card-footer {
+    padding: 5px 6px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 215, 0, 0.08);
+}
+
+.manga-cover-card-vol {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    color: #dfbb6b;
+    text-transform: uppercase;
+}
