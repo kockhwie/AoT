@@ -41,9 +41,9 @@
     width: 100%;
     min-height: 520px;
     height: 55vh;
-    border: 6px solid #000000;
-    box-shadow: 12px 12px 0px #000000;
-    background-color: #0b0b0b;
+    border: 6px solid var(--aot-black);
+    box-shadow: var(--shadow-xl);
+    background-color: var(--aot-card-bg);
     border-radius: 4px;
     /* overflow: hidden; Removed to allow arrows on border */
     touch-action: pan-y;
@@ -54,7 +54,7 @@
 }
 
     .manga-slider-container:hover {
-        box-shadow: 12px 12px 0px #ef4444;
+        box-shadow: 12px 12px 0px var(--aot-red);
     }
 
 /* Screentone layout using CSS grid pattern */
@@ -132,22 +132,22 @@
     font-size: clamp(1.75rem, 5vw, 3rem);
     font-weight: 900;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--aot-white);
     line-height: 1.1;
     margin-bottom: 1rem;
-    text-shadow: 4px 4px 0px #000000;
+    text-shadow: 4px 4px 0px var(--aot-black);
 }
 
 .manga-quote-block {
     font-size: clamp(0.95rem, 2.5vw, 1.25rem);
-    color: #dfdfdf;
+    color: var(--aot-text-secondary);
     font-style: italic;
     line-height: 1.6;
     margin: 0 0 1.5rem 0;
     max-width: 50rem;
-    border-left: 4px solid #ffffff;
+    border-left: 4px solid var(--aot-white);
     padding-left: 1rem;
-    text-shadow: 2px 2px 2px #000000;
+    text-shadow: 2px 2px 2px var(--aot-black);
 }
 
 
@@ -165,9 +165,9 @@
     top: 50%;
     width: 48px;
     height: 48px;
-    background-color: #ffffff;
-    border: 3px solid #000000;
-    color: #000000;
+    background-color: var(--aot-white);
+    border: 3px solid var(--aot-black);
+    color: var(--aot-black);
     font-size: 1.25rem;
     display: flex;
     align-items: center;
@@ -175,13 +175,13 @@
     cursor: pointer;
     z-index: 20;
     transition: background-color 0.2s, transform 0.2s;
-    box-shadow: 4px 4px 0px #000000;
+    box-shadow: 4px 4px 0px var(--aot-black);
     border-radius: 50%;
 }
 
     .manga-nav-arrow:hover {
-        background-color: #ef4444;
-        color: #ffffff;
+        background-color: var(--aot-red);
+        color: var(--aot-white);
     }
 
     .manga-nav-arrow.prev {
@@ -191,7 +191,7 @@
 
         .manga-nav-arrow.prev:active {
             transform: translate(-50%, -50%) scale(0.92);
-            box-shadow: 2px 2px 0px #000000;
+            box-shadow: 2px 2px 0px var(--aot-black);
         }
 
     .manga-nav-arrow.next {
@@ -201,7 +201,7 @@
 
         .manga-nav-arrow.next:active {
             transform: translate(50%, -50%) scale(0.92);
-            box-shadow: 2px 2px 0px #000000;
+            box-shadow: 2px 2px 0px var(--aot-black);
         }
 
 /* Slider Dot indicators */
@@ -217,15 +217,15 @@
 .manga-dot {
     width: 14px;
     height: 14px;
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: var(--aot-white);
+    border: 2px solid var(--aot-black);
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
 }
 
     .manga-dot.active {
-        background-color: #ef4444;
+        background-color: var(--aot-red);
         transform: scale(1.2);
     }
 
@@ -297,14 +297,14 @@
 .aot-char-name {
     font-weight: 900;
     font-size: 1.25rem; /* 20px */
-    color: #ffffff;
+    color: var(--aot-white);
     margin: 0;
     letter-spacing: 0.03em;
 }
 
 .aot-char-title {
     font-size: 0.875rem; /* 14px */
-    color: #dfbb6b;
+    color: var(--aot-brass);
     font-weight: 600;
     display: block;
     margin-top: 0.125rem;
@@ -319,14 +319,14 @@
     padding: 2px 8px !important;
     background: rgba(239, 68, 68, 0.1) !important;
     border: 1px solid rgba(239, 68, 68, 0.3) !important;
-    color: #ef4444 !important;
+    color: var(--aot-red) !important;
     letter-spacing: 0.05em;
     box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
 }
 
 .aot-char-bio {
     font-size: 0.875rem; /* 14px */
-    color: #d1d5db;
+    color: var(--aot-text-secondary);
     line-height: 1.5;
     min-height: 54px;
     margin: 0;
@@ -364,7 +364,7 @@
 }
 
 .aot-stat-label {
-    color: #878170;
+    color: var(--aot-text-muted);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -774,13 +774,13 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.16em;
-    color: #facc15;
+    color: var(--aot-gold);
 }
 
 .back-card-subtitle {
     font-size: 1.1rem;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--aot-white);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1000,68 +1000,6 @@
     .character-carousel-item.is-pinned {
         transform: translateX(-50%) translateY(2px) rotateY(0deg) scale(1.02);
     }
-}
-
-.member-hype-card
-.titan-hype-card {
-    width: 100%;
-    max-width: var(--hype-card-width, 370px);
-    min-width: 0;
-    position: relative;
-    padding: 26px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--hype-card-radius, 24px);
-    overflow: hidden;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    will-change: transform;
-}
-
-/* Character dossier — same footprint as titan card, standardized rank-color border (see §9) */
-/*
-.member-hype-card {
-    --hype-card-width: 390px;
-    --hype-card-radius: 20px;
-    height: 560px;
-    background: radial-gradient(ellipse at 60% 10%, rgba(30,34,42,0.92) 0%, rgba(10,11,14,0.97) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out;
-}
-*/
-
-/* Home.razor.css — §5 SHARED HYPE CARD SYSTEM: replace the .member-hype-card rule */
-.member-hype-card {
-    --hype-card-width: 390px;
-    height: 560px;
-}
-
-    .member-hype-card:hover {
-        border-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 28px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-
-.member-hype-card {
-    background-image: radial-gradient(rgba(255,255,255,0.4) 15%, transparent 16%);
-    background-size: 8px 8px;
-}
-
-    .member-hype-card:hover .holo-foil-layer {
-        opacity: 0.08;
-    }
-
-/* Titan registry — gold is reserved for this card type only */
-.titan-hype-card {
-    --hype-card-width: 390px;
-    --hype-card-radius: 24px;
-    height: 560px;
-    background: radial-gradient(circle at 50% 25%, #251212 0%, #150d0a 55%, #050505 100%);
-    border: 1.5px solid rgba(255, 215, 0, 0.45);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 35px 70px rgba(0, 0, 0, 0.85), inset 0 0 14px rgba(255, 215, 0, 0.15);
-    transition: transform 0.1s ease-out, box-shadow 0.6s ease, border-color 0.6s ease;
 }
 
 @media (max-width: 767.98px) {
@@ -1565,6 +1503,25 @@
 }
 
 @media (hover: none) {
+    @media (prefers-reduced-motion: reduce) {
+        .titan-hype-card {
+            animation: none;
+        }
+
+        .member-hype-card::before,
+        .member-hype-card::after {
+            animation: none;
+        }
+
+        .member-hype-card .hologram-scanlines {
+            animation: none;
+        }
+
+        .member-hype-card .laser-rank-trim {
+            animation: none;
+        }
+    }
+
     .titan-hype-card {
         animation: goldBreath 3.5s ease-in-out infinite;
     }
@@ -1637,7 +1594,7 @@
    ========================================================================== */
 .aot-gear-card {
     background: linear-gradient(135deg, rgba(20, 24, 28, 0.85) 0%, rgba(10, 12, 14, 0.95) 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid var(--aot-border-subtle) !important;
     border-radius: 14px !important;
     padding: 1.5rem !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.02) !important;
@@ -1706,7 +1663,7 @@
 .aot-gear-title {
     font-weight: 900;
     font-size: 1.25rem; /* 20px */
-    color: #ffffff;
+    color: var(--aot-white);
     margin: 0;
     letter-spacing: 0.03em;
 }
@@ -1722,7 +1679,7 @@
 
 .aot-gear-tech {
     font-size: 0.875rem; /* 14px */
-    color: #dfbb6b; /* Muted gold for tech specifications */
+    color: var(--aot-brass); /* Muted gold for tech specifications */
     font-weight: 700;
     letter-spacing: 0.08em;
     margin-bottom: 0.875rem;
@@ -1730,7 +1687,7 @@
 
 .aot-gear-desc {
     font-size: 0.875rem; /* 14px */
-    color: #d1d5db;
+    color: var(--aot-text-secondary);
     line-height: 1.5;
     min-height: 50px;
     margin: 0 0 1.25rem 0;
@@ -1763,7 +1720,7 @@
     }
 
     .aot-gear-specs span:first-child {
-        color: #878170;
+        color: var(--aot-text-muted);
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 0.05em;
@@ -1788,7 +1745,7 @@
     background: linear-gradient(135deg, rgba(20, 22, 26, 0.7) 0%, rgba(12, 13, 16, 0.9) 100%) !important;
     padding: 1.25rem !important;
     border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--aot-border-subtle) !important;
     margin-bottom: 1rem !important;
     width: 100% !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -1797,7 +1754,7 @@
 .aot-timeline-time {
     font-family: inherit; /* standard system sans-serif */
     font-weight: 900;
-    color: #dfbb6b; /* Brass gold */
+    color: var(--aot-brass); /* Brass gold */
     font-size: 0.875rem; /* 14px */
     display: block;
     letter-spacing: 0.05em;
@@ -1805,7 +1762,7 @@
 
 .aot-timeline-title {
     font-weight: 700;
-    color: #ffffff;
+    color: var(--aot-white);
     margin-top: 0.25rem;
     font-size: 0.875rem; /* 14px */
 }
@@ -2047,7 +2004,7 @@
 .member-display-name {
     font-size: 1.25rem;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--aot-white);
     margin: 0 0 2px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -2056,7 +2013,7 @@
 .member-display-title {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #dfbb6b;
+    color: var(--aot-brass);
     letter-spacing: 0.02em;
 }
 
