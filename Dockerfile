@@ -3,7 +3,7 @@ FROM node:22-alpine AS css-build
 WORKDIR /src
 COPY package.json ./
 RUN npm install
-COPY Styles ./Styles
+COPY . .
 RUN npm run build:css
 
 # Build stage
