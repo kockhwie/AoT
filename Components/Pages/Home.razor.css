@@ -417,10 +417,13 @@
     box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 35px 70px rgba(0,0,0,0.85), inset 0 0 14px rgba(255,215,0,0.12);
 }
 
-    /* ponytail: goldBreath used to animate box-shadow/border-color directly (main-thread paint every frame,
-   ~14s of Style&Layout in Lighthouse). border-color animated nothing visible (card has no border-width),
-   so it's dropped. The box-shadow "peak" now lives on this pseudo-element and only its opacity animates,
-   which is GPU-compositable. Upgrade path if a heavier glow is wanted: keep this pattern, just adjust colors. */
+    /* ponytail: goldBreath used to animate box-shadow + border-color together on the same element
+   (main-thread paint every frame, ~14s of Style&Layout in Lighthouse). The multi-layer box-shadow
+   now lives on this pseudo-element and only its opacity animates (GPU-compositable). border-color
+   still animates on .titan-hype-card directly below — browsers don't support compositing border-color,
+   so that part keeps its (smaller) cost. Upgrade path: drop the border pulse entirely if the shadow
+   pulse alone reads as "enough" glow, or swap the border for an outline (still non-compositable, but
+   cheaper to repaint than a shadow). */
     .titan-hype-card::after {
         content: '';
         position: absolute;
@@ -1392,6 +1395,16 @@
    ========================================================================== */
 @keyframes goldBreath {
     0%, 100% {
+        border-color: rgba(255, 215, 0, 0.35);
+    }
+
+    50% {
+        border-color: rgba(255, 215, 0, 0.75);
+    }
+}
+
+@keyframes goldBreathGlow {
+    0%, 100% {
         opacity: 0;
     }
 
@@ -1518,6 +1531,7 @@
 
 @media (hover: none) {
     @media (prefers-reduced-motion: reduce) {
+        .titan-hype-card,
         .titan-hype-card::after {
             animation: none;
         }
@@ -1536,9 +1550,13 @@
         }
     }
 
-    .titan-hype-card::after {
+    .titan-hype-card {
         animation: goldBreath 3.5s ease-in-out infinite;
     }
+
+        .titan-hype-card::after {
+            animation: goldBreathGlow 3.5s ease-in-out infinite;
+        }
 
     .member-hype-card > *:not(.holo-foil-layer):not(.hologram-scanlines) {
         z-index: 1;
