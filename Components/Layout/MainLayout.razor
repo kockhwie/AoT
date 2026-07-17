@@ -1,6 +1,9 @@
 @inherits LayoutComponentBase
 @inject AppLocalizationService LocalizationService
 @inject LanguageSwitchService LanguageSwitcher
+@inject FactionPollService PollService
+@inject IJSRuntime JS
+
 
 <!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
 <div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
@@ -545,34 +548,66 @@
     <div class="faction-widget-container">
   
       <!-- The Floating Toggle Button (Always Visible) -->
-        <button class="aot-btn  aot-btn--white __faction-trigger-btn" onclick="toggleFactionWidget()" aria-label="Toggle Faction Poll">
-        <i class="ti ti-chart-bar"></i>
-        <span class="poll-btn-text">陣營投票</span>
-      </button>
+        <button class="aot-btn aot-btn--limegreen" onclick="toggleFactionWidget()" aria-label="Toggle Faction Poll">
+            <span class="faction-ping"></span>
+            <i class="ti ti-chart-bar"></i>
+            <span class="poll-btn-text">陣營投票</span>
+        </button>
 
       <!-- The Popup Card Component -->
       <div class="faction-popup-card" id="factionPopup">
-        <div class="popup-header">
-          <h4 class="popup-title">陣營派系選擇</h4>
-          <button class="popup-close-btn" onclick="toggleFactionWidget()">✕</button>
-        </div>
+            <div class="popup-header">
+              <h4 class="popup-title">陣營派系選擇</h4>
+                <button class="popup-close-btn" onclick="toggleFactionWidget()"><i class="ti ti-x"></i></button>
+            </div>
     
-        <div class="popup-body">
-          <p class="popup-instruction">在最終衝突中，你的忠誠在哪裡？</p>
-      
-          <!-- High-Contrast Interactive Input Selection -->
-          <div class="faction-voting-options">
-            <button class="vote-option-btn marley-btn">馬萊帝國改革派</button>
-            <button class="vote-option-btn paradis-btn">帕拉迪島聯盟派</button>
-          </div>
-      
-          <div class="popup-divider"></div>
-          <p class="popup-quote">「什麼都無法捨棄的人，什麼也改變不了。」</p>
-        </div>
-      </div>
-  
-    </div>
+        
+            <div class="popup-body">
+                @if (_hasVoted)
+                {
+                    <p class="popup-instruction">在最終衝突中，你的忠誠在哪裡？</p>
 
+                    <div class="faction-vs-badge">VS</div>
+
+                    <div class="faction-voting-options">
+                        <button class="vote-option-btn marley-btn" @onclick='() => Vote("marley")'>
+                            <i class="ti ti-flag-2"></i> 馬萊帝國改革派
+                        </button>
+                        <button class="vote-option-btn paradis-btn" @onclick='() => Vote("paradis")'>
+                            <i class="ti ti-shield"></i> 帕拉迪島聯盟派
+                        </button>
+                    </div>
+                }
+                else
+                {
+                    <p class="popup-instruction">
+                        感謝投票！ <span class="comic-badge comic-badge--gold faction-voted-badge">已投票</span>
+                    </p>
+
+                    <div class="faction-results">
+                        <div class="faction-result-row">
+                            <div class="faction-result-label">
+                                <span>馬萊帝國改革派</span>
+                                <span>@MarleyPct% (@PollService.MarleyVotes)</span>
+                            </div>
+                            <div class="faction-result-track">
+                                <div class="faction-result-fill marley" style="@MarleyFillStyle"></div>
+                            </div>
+                        </div>
+                        <div class="faction-result-row">
+                            <div class="faction-result-label">
+                                <span>帕拉迪島聯盟派</span>
+                                <span>@ParadisPct% (@PollService.ParadisVotes)</span>
+                            </div>
+                            <div class="faction-result-track">
+                                <div class="faction-result-fill paradis" style="@ParadisFillStyle"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+      </div>
+    </div>
 
     <!-- 4. SYSTEM FOOTER WRAPPER -->
     <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs border-t border-neutral">
@@ -612,6 +647,16 @@
     private string _modalBody = "";
     private string _modalBadge = "";
     private string _modalTheme = ""; // "error" (Marley) or "secondary" (Paradis)
+
+    
+    private bool _hasVoted;
+    private string? _votedFaction;
+
+    private int MarleyPct => PollService.TotalVotes == 0 ? 50 : (int)Math.Round(PollService.MarleyVotes * 100.0 / PollService.TotalVotes);
+    private int ParadisPct => PollService.TotalVotes == 0 ? 50 : 100 - MarleyPct;
+
+    private string MarleyFillStyle => $"width: {MarleyPct}%;";
+    private string ParadisFillStyle => $"width: {ParadisPct}%;";
 
     protected override void OnInitialized()
     {
@@ -697,6 +742,27 @@
     {
         _showModal = false;
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _votedFaction = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_faction_vote");
+            _hasVoted = !string.IsNullOrEmpty(_votedFaction);
+            if (_hasVoted) StateHasChanged();
+        }
+    }
+
+    private async Task Vote(string faction)
+    {
+        if (_hasVoted) return;
+        PollService.Vote(faction);
+        _votedFaction = faction;
+        _hasVoted = true;
+        await JS.InvokeVoidAsync("localStorage.setItem", "aot_faction_vote", faction);
+    }
+
+
 }
 
 
