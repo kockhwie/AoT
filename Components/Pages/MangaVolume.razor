@@ -16,11 +16,11 @@
                             .Select(a => LocalizationService.GetString(MangaData.ArcNameKeys[a]))
                             .ToList();
 
-    <PageTitle>Volume @_volume.VolumeNumber</PageTitle>
+    <PageTitle>@string.Format(LocalizationService.GetString("lblTheVolume"), _volume.VolumeNumber) - @LocalizationService.GetString("PageTitle")</PageTitle>
 
     <div>
         <h3 class="aot-section-title mb-6">
-            <i class="ti ti-book"></i> Volume @_volume.VolumeNumber <span class="text-gray-400 text-lg ml-2 font-normal"></span>
+            <i class="ti ti-book"></i> @string.Format(LocalizationService.GetString("lblTheVolume"), _volume.VolumeNumber)
         </h3>
 
         <div class="manga-detail-layout">

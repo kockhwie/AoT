@@ -1259,7 +1259,7 @@ html:lang(jp) {
 
 @media (min-width: 1024px) {
     .manga-detail-sidebar {
-        width: 260px;
+        width: 320px;
         flex-shrink: 0;
         position: sticky;
         top: 2rem;
@@ -1397,4 +1397,25 @@ html:lang(jp) {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: auto;
+}
+
+/* Tablet (768px–1023px): cover left, meta right, to fill the dead space at this width */
+@media (min-width: 450px) and (max-width: 1023.98px) {
+    .manga-detail-sidebar {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .manga-detail-sidebar-cover {
+        width: 180px;
+        flex-shrink: 0;
+    }
+
+    .manga-detail-sidebar-meta {
+        align-items: flex-start;
+        width: auto;
+        flex: 1;
+        min-width: 0;
+    }
 }

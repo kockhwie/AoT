@@ -601,6 +601,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Volume {0}.
+        /// </summary>
+        public static string lblTheVolume {
+            get {
+                return ResourceManager.GetString("lblTheVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total.
         /// </summary>
         public static string lblTotal {
@@ -1632,6 +1641,15 @@ namespace AOT.Resources {
         public static string NavNews {
             get {
                 return ResourceManager.GetString("NavNews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 進撃の巨人 Attack on Titan.
+        /// </summary>
+        public static string PageTitle {
+            get {
+                return ResourceManager.GetString("PageTitle", resourceCulture);
             }
         }
         
