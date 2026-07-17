@@ -1,5 +1,6 @@
 @inherits LayoutComponentBase
 @inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
 
 <!-- Natively forces perfect font smoothing, line heights, and character tracking across devices -->
 <div data-theme="night" lang="@_activeLang" class="min-h-screen bg-base-300 text-base-content font-sans antialiased flex flex-col justify-between">
@@ -604,7 +605,6 @@
 
 
 @code {
-    // FIXED DEFAULT LOCALIZATION VALUE: Alter this key variable string parameter to switch fallback profiles natively.
     private string _activeLang = "zh";
 
     private bool _showModal = false;
@@ -615,23 +615,33 @@
 
     protected override void OnInitialized()
     {
+        // Initialize the language switcher service
+        LanguageSwitcher.Initialize(_activeLang);
         LocalizationService.ActiveLang = _activeLang;
-        string cultureCode = _activeLang == "jp" ? "ja" : _activeLang;
-        var cultureInfo = new System.Globalization.CultureInfo(cultureCode);
-        System.Globalization.CultureInfo.CurrentCulture = cultureInfo;
-        System.Globalization.CultureInfo.CurrentUICulture = cultureInfo;
+
+        // Subscribe to language changes
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
     }
 
+    /// <summary>
+    /// Handler for language changes. This single method replaces the need to duplicate
+    /// language-change logic on every page. Child components can now also subscribe to
+    /// LanguageSwitcher.OnLanguageChanged if they need to react to language changes.
+    /// </summary>
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        _activeLang = newLanguage;
+        LocalizationService.ActiveLang = newLanguage;
+        StateHasChanged();
+    }
+
+    /// <summary>
+    /// Change language - delegates to the centralized service.
+    /// This is now a simple pass-through that maintains the DRY principle.
+    /// </summary>
     private void ChangeLanguage(string targetLang)
     {
-        _activeLang = targetLang;
-        LocalizationService.ActiveLang = targetLang;
-        // Update the culture context when language changes
-        string cultureCode = targetLang == "jp" ? "ja" : targetLang;
-        var cultureInfo = new System.Globalization.CultureInfo(cultureCode);
-        System.Globalization.CultureInfo.CurrentCulture = cultureInfo;
-        System.Globalization.CultureInfo.CurrentUICulture = cultureInfo;
-        StateHasChanged(); 
+        LanguageSwitcher.ChangeLanguage(targetLang);
     }
 
     private void SelectFaction(string faction)

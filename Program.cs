@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddScoped<AppLocalizationService>();
+builder.Services.AddScoped<LanguageSwitchService>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

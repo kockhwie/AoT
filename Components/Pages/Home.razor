@@ -1,6 +1,8 @@
 @page "/"
 @inject AppLocalizationService LocalizationService
 @using AOT.Services
+@inject LanguageSwitchService LanguageSwitcher
+@implements IDisposable
 
 <!-- 区域 1：顶部核心巨幕区 (互动式漫画分镜带) -->
 <div class="manga-slider-container"
@@ -70,7 +72,7 @@
 </div>
 
 <!-- 新增区域 3：九大巨人能力图谱面板   -->
-<div id="character-cards-section" class="flex flex-col gap-2 mt-6">
+<div id="character-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")
     </h3>
@@ -270,7 +272,7 @@
 </div>
 
 <!-- 區域 3.5：漫畫分卷展示區 -->
-<div class="flex flex-col gap-2 mt-6">
+<div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-books"></i> @LocalizationService.GetString("MangaSectionTitle")
     </h3>
@@ -308,7 +310,7 @@
 </div>
 
 <!-- 區域 4：兵團戰術裝備與牆外調查資產 -->
-<div class="flex flex-col gap-2 mt-6">
+<div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-settings"></i>@LocalizationService.GetString("GearSectionTitle")
     </h3>
@@ -342,7 +344,7 @@
 </div>
 
 <!-- 区域 5：编年史时间轴区 -->
-<div class="flex flex-col gap-2 mt-6">
+<div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-clock"></i> @LocalizationService.GetString("TimelineHeader")
     </h3>
@@ -503,6 +505,9 @@
 
     protected override void OnInitialized()
     {
+        // Subscribe to language changes to rebuild slides with new quotes
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+
         // Populate slides with localized quote contents
         _mangaSlides = new List<MangaSlideModel>
         {
@@ -733,6 +738,53 @@
     public void Dispose()
     {
         _autoPlayTimer?.Dispose();
+        // Unsubscribe from language changes to prevent memory leaks
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
+
+    /// <summary>
+    /// Handle language changes by rebuilding the manga slides with new localized quotes
+    /// </summary>
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        // Rebuild slides with new language
+        _mangaSlides = BuildMangaSlides();
+        StateHasChanged();
+    }
+
+    /// <summary>
+    /// Helper method to build manga slides with current language quotes
+    /// Reduces code duplication and makes it easy to rebuild on language change
+    /// </summary>
+    private List<MangaSlideModel> BuildMangaSlides()
+    {
+        return new List<MangaSlideModel>
+        {
+            new MangaSlideModel
+            {
+                Title = "The Breach / 壁的破壞",
+                Chapter = "Vol. 1 / CH. 1 / Pg. 51",
+                Quote = CurrentLang switch {
+                    "zh" => "那一天，人類回想起了，受支配的恐怖…",
+                    "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
+                    _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
+                },
+                MangaPath = "/manga/1",
+                Image = "manga_first_titan.webp"
+            },
+            new MangaSlideModel
+            {
+                Title = "Humanity's Strongest / 最強的兵士",
+                Chapter = "Vol. 20 / CH. 81 / Pg. 115",
+                Quote = CurrentLang switch {
+                    "zh" => "什麼都無法捨棄的人，什麼也改變不了。",
+                    "jp" => "何も捨てることができない人に は、何も変えることはできない。",
+                    _ => "A person who cannot sacrifice anything, cannot change anything."
+                },
+                MangaPath = "/manga/20",
+                Image = "manga_levi_beast.webp"
+            }
+        };
     }
 
     [CascadingParameter] public string CurrentLang { get; set; } = "zh";

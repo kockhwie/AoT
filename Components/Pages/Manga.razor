@@ -1,44 +1,85 @@
 @page "/manga"
 @using AOT.Services
+@implements IDisposable
 @inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
 
 <PageTitle>@LocalizationService.GetString("MangaAllVolumesTitle") - Attack on Titan</PageTitle>
- 
-<h3 class="aot-section-title"><i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</h3>    
-<p class="manga-page-hero-sub">34 Volumes · 11 Story Arcs · The Final Chapter</p>
+<div class=" ">
+    <h3 class="aot-section-title mb-6">
+        <i class="ti ti-books"></i> @LocalizationService.GetString("MangaAllVolumesTitle")
+        <span class="text-gray-400 text-lg ml-2 font-normal"> · @LocalizationService.GetString("MangaPageSubtitle")</span>
+    </h3>
 
+    <div class="manga-detail-layout">
+        <!-- Sidebar Navigation to match detail page layout -->
+        <aside class="manga-detail-sidebar">
+            
+            <div class="manga-detail-sidebar-meta w-full mt-4">
+                <div class="manga-detail-sidebar-chapters mb-2 text-center md:text-left w-full border-b border-gray-800 pb-2">@LocalizationService.GetString("MangaStoryArcs")</div>
+                <div class="flex flex-col gap-2 w-full text-center md:text-left">
+                    @foreach (var arc in MangaData.ArcOrder)
+                    {
+                        var volsInArc = MangaData.VolumesInArc(arc).ToList();
+                        if (volsInArc.Count > 0)
+                        {
+                            <div class="text-gray-400 hover:text-white transition-colors text-sm font-bold cursor-pointer">
+                                <a href="/manga#section_@MangaData.ArcNameKeys[arc]">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</a>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </aside>
 
-@foreach (var arc in MangaData.ArcOrder)
-{
-    var volsInArc = MangaData.VolumesInArc(arc).ToList();
-    if (volsInArc.Count == 0) { continue; }
+        <!-- Main Content -->
+        <main class="manga-detail-content">
+            <div class="manga-continuous-grid">
+                @foreach (var arc in MangaData.ArcOrder)
+                {
+                    var volsInArc = MangaData.VolumesInArc(arc).ToList();
+                    if (volsInArc.Count == 0) { continue; }
 
-    <section class="manga-arc-section">
-        <div class="manga-arc-header">
-            <div class="manga-arc-header-line"></div>
+                    
+                    <h4 id="section_@MangaData.ArcNameKeys[arc]" class="manga-arc-title" style="grid-column: 1 / -1;">
+                        @LocalizationService.GetString(MangaData.ArcNameKeys[arc])
+                        <span class="manga-arc-title-count">@volsInArc.Count VOL@(volsInArc.Count > 1 ? "S" : "")</span>
+                        </h4>
+                    
+                    @foreach (var vol in volsInArc)
+                    {
+                        <a href="/manga/@vol.VolumeNumber" class="manga-cover-card">
+                            <div class="manga-cover-card-top-badge">VOL @vol.VolumeNumber</div>
+                            <div class="manga-cover-card-img-wrap">
+                                <img src="/img/manga/volumes/@vol.CoverImage"
+                                     class="manga-cover-card-img"
+                                     alt="Vol. @vol.VolumeNumber" />
+                                <div class="manga-cover-card-shine"></div>
+                            </div>
+                        </a>
+                    }
+                }
+            </div>
+        </main>
+    </div>
+</div>
 
-            <h2 class="manga-arc-name">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</h2>
-            <div class="manga-arc-header-badge">
-                <span class="manga-arc-vol-count">@volsInArc.Count VOL@(volsInArc.Count > 1 ? "S" : "")</span>
-            </div>           
-            <div class="manga-arc-header-line"></div>
-        </div>
-        <div class="manga-cover-grid">
-            @foreach (var vol in volsInArc)
-            {
-                <a href="/manga/@vol.VolumeNumber" class="manga-cover-card">
-                    <div class="manga-cover-card-img-wrap">
-                        <img src="/img/manga/volumes/@vol.CoverImage"
-                             class="manga-cover-card-img"
-                             alt="Vol. @vol.VolumeNumber" />
-                        <div class="manga-cover-card-shine"></div>
-                    </div>
-                    <div class="manga-cover-card-footer">
-                        <span class="manga-cover-card-vol">VOL. @vol.VolumeNumber</span>
-                    </div>
-                </a>
-            }
-        </div>
- 
-    </section>
+@code {
+    protected override void OnInitialized()
+    {
+        // Subscribe to language changes to trigger immediate UI update
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+    }
+
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        // Trigger re-render when language changes
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        // Unsubscribe to prevent memory leaks
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
 }

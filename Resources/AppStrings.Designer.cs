@@ -61,7 +61,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Battle of Heaven and Earth.
+        ///   Looks up a localized string similar to 11. Battle of Heaven and Earth.
         /// </summary>
         public static string Arc_BattleOfHeavenAndEarth {
             get {
@@ -70,7 +70,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Battle of Trost District.
+        ///   Looks up a localized string similar to 2. Battle of Trost District.
         /// </summary>
         public static string Arc_BattleOfTrost {
             get {
@@ -79,7 +79,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clash of the Titans.
+        ///   Looks up a localized string similar to 5. Clash of the Titans.
         /// </summary>
         public static string Arc_ClashOfTitans {
             get {
@@ -88,7 +88,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Prologue / Fall of Shiganshina.
+        ///   Looks up a localized string similar to 1. Prologue / Fall of Shiganshina.
         /// </summary>
         public static string Arc_FallOfShiganshina {
             get {
@@ -97,7 +97,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Female Titan.
+        ///   Looks up a localized string similar to 4. The Female Titan.
         /// </summary>
         public static string Arc_FemaleTitan {
             get {
@@ -106,7 +106,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Marley Arc.
+        ///   Looks up a localized string similar to 8. Marley Arc.
         /// </summary>
         public static string Arc_Marley {
             get {
@@ -115,7 +115,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Return to Shiganshina.
+        ///   Looks up a localized string similar to 7. Return to Shiganshina.
         /// </summary>
         public static string Arc_ReturnToShiganshina {
             get {
@@ -124,7 +124,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Royal Government.
+        ///   Looks up a localized string similar to 6. The Royal Government.
         /// </summary>
         public static string Arc_RoyalGovernment {
             get {
@@ -133,7 +133,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Rumbling.
+        ///   Looks up a localized string similar to 10. The Rumbling.
         /// </summary>
         public static string Arc_Rumbling {
             get {
@@ -142,7 +142,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 104th Training Corps.
+        ///   Looks up a localized string similar to 3. 104th Training Corps.
         /// </summary>
         public static string Arc_TrainingCorps104 {
             get {
@@ -151,7 +151,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to War for Paradis.
+        ///   Looks up a localized string similar to 9. War for Paradis.
         /// </summary>
         public static string Arc_WarForParadis {
             get {
@@ -574,6 +574,42 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapters.
+        /// </summary>
+        public static string lblChapters {
+            get {
+                return ResourceManager.GetString("lblChapters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next Volume.
+        /// </summary>
+        public static string lblNextVolume {
+            get {
+                return ResourceManager.GetString("lblNextVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous Volume.
+        /// </summary>
+        public static string lblPreviousVolume {
+            get {
+                return ResourceManager.GetString("lblPreviousVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Volume.
+        /// </summary>
+        public static string lblVolume {
+            get {
+                return ResourceManager.GetString("lblVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Lethal with vertical maneuvering equipment..
         /// </summary>
         public static string LeviBio {
@@ -610,11 +646,38 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 34 Volumes · 11 Story Arcs.
+        /// </summary>
+        public static string MangaPageSubtitle {
+            get {
+                return ResourceManager.GetString("MangaPageSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manga Volumes.
         /// </summary>
         public static string MangaSectionTitle {
             get {
                 return ResourceManager.GetString("MangaSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to STORY ARCS.
+        /// </summary>
+        public static string MangaStoryArcs {
+            get {
+                return ResourceManager.GetString("MangaStoryArcs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Final Chapter.
+        /// </summary>
+        public static string MangaTheFinalChapter {
+            get {
+                return ResourceManager.GetString("MangaTheFinalChapter", resourceCulture);
             }
         }
         

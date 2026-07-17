@@ -711,45 +711,70 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>戦術知性指数</value>
   </data>
-
-
-  <!-- Arc Names -->
   <data name="Arc_FallOfShiganshina" xml:space="preserve">
-    <value>プロローグ／シガンシナ陥落編</value>
+    <value>壱、プロローグ／シガンシナ陥落編</value>
   </data>
   <data name="Arc_BattleOfTrost" xml:space="preserve">
-    <value>トロスト区防衛戦編</value>
+    <value>弐、トロスト区防衛戦編</value>
   </data>
   <data name="Arc_TrainingCorps104" xml:space="preserve">
-    <value>104期訓練兵団編</value>
+    <value>参、104期訓練兵団編</value>
   </data>
   <data name="Arc_FemaleTitan" xml:space="preserve">
-    <value>女型の巨人編</value>
+    <value>四、女型の巨人編</value>
   </data>
   <data name="Arc_ClashOfTitans" xml:space="preserve">
-    <value>エレン奪還編／獣の巨人編</value>
+    <value>五、エレン奪還編／獣の巨人編</value>
   </data>
   <data name="Arc_RoyalGovernment" xml:space="preserve">
-    <value>王政編</value>
+    <value>六、王政編</value>
   </data>
   <data name="Arc_ReturnToShiganshina" xml:space="preserve">
-    <value>奪還編</value>
+    <value>七、奪還編</value>
   </data>
   <data name="Arc_Marley" xml:space="preserve">
-    <value>マーレ編</value>
+    <value>八、マーレ編</value>
   </data>
   <data name="Arc_WarForParadis" xml:space="preserve">
-    <value>兄弟対決編</value>
+    <value>九、兄弟対決編</value>
   </data>
   <data name="Arc_Rumbling" xml:space="preserve">
-    <value>地鳴らし編</value>
+    <value>拾、地鳴らし編</value>
   </data>
   <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
-    <value>天と地の戦い編／完結編</value>
+    <value>拾壱、天と地の戦い編／完結編</value>
   </data>
-  <data name="Btn_ViewManga" xml:space="preserve"><value>詳細を見る</value></data>
-  <data name="Btn_ViewAllManga" xml:space="preserve"><value>全{0}巻を見る →</value></data>
-  <data name="MangaSectionTitle" xml:space="preserve"><value>コミックス単行本</value></data>
-  <data name="MangaAllVolumesTitle" xml:space="preserve"><value>全巻一覧</value></data>
-  
+  <data name="Btn_ViewManga" xml:space="preserve">
+    <value>詳細を見る</value>
+  </data>
+  <data name="Btn_ViewAllManga" xml:space="preserve">
+    <value>全{0}巻を見る →</value>
+  </data>
+  <data name="MangaSectionTitle" xml:space="preserve">
+    <value>コミックス単行本</value>
+  </data>
+  <data name="MangaAllVolumesTitle" xml:space="preserve">
+    <value>全巻一覧</value>
+  </data>
+  <data name="MangaPageSubtitle" xml:space="preserve">
+    <value>全34巻 · 11のストーリーアーク</value>
+  </data>
+  <data name="MangaTheFinalChapter" xml:space="preserve">
+    <value>最終章</value>
+  </data>
+  <data name="MangaStoryArcs" xml:space="preserve">
+    <value>ストーリーアーク</value>
+  </data>
+  <data name="lblChapters" xml:space="preserve">
+    <value>話</value>
+  </data>
+  <data name="lblVolume" xml:space="preserve">
+    <value>卷</value>
+  </data>
+  <data name="lblNextVolume" xml:space="preserve">
+    <value>下一卷</value>
+  </data>
+  <data name="lblPreviousVolume" xml:space="preserve">
+    <value>上一卷</value>
+  </data>
 </root>

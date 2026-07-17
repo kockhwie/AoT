@@ -711,44 +711,70 @@
   <data name="StatWitsBar" xml:space="preserve">
     <value>TACTICAL WITS</value>
   </data>
-
-
-  <!-- Arc Names -->
   <data name="Arc_FallOfShiganshina" xml:space="preserve">
-    <value>Prologue / Fall of Shiganshina</value>
+    <value>1. Prologue / Fall of Shiganshina</value>
   </data>
   <data name="Arc_BattleOfTrost" xml:space="preserve">
-    <value>Battle of Trost District</value>
+    <value>2. Battle of Trost District</value>
   </data>
   <data name="Arc_TrainingCorps104" xml:space="preserve">
-    <value>104th Training Corps</value>
+    <value>3. 104th Training Corps</value>
   </data>
   <data name="Arc_FemaleTitan" xml:space="preserve">
-    <value>The Female Titan</value>
+    <value>4. The Female Titan</value>
   </data>
   <data name="Arc_ClashOfTitans" xml:space="preserve">
-    <value>Clash of the Titans</value>
+    <value>5. Clash of the Titans</value>
   </data>
   <data name="Arc_RoyalGovernment" xml:space="preserve">
-    <value>The Royal Government</value>
+    <value>6. The Royal Government</value>
   </data>
   <data name="Arc_ReturnToShiganshina" xml:space="preserve">
-    <value>Return to Shiganshina</value>
+    <value>7. Return to Shiganshina</value>
   </data>
   <data name="Arc_Marley" xml:space="preserve">
-    <value>Marley Arc</value>
+    <value>8. Marley Arc</value>
   </data>
   <data name="Arc_WarForParadis" xml:space="preserve">
-    <value>War for Paradis</value>
+    <value>9. War for Paradis</value>
   </data>
   <data name="Arc_Rumbling" xml:space="preserve">
-    <value>The Rumbling</value>
+    <value>10. The Rumbling</value>
   </data>
   <data name="Arc_BattleOfHeavenAndEarth" xml:space="preserve">
-    <value>Battle of Heaven and Earth</value>
+    <value>11. Battle of Heaven and Earth</value>
   </data>
-  <data name="Btn_ViewManga" xml:space="preserve"><value>View</value></data>
-  <data name="Btn_ViewAllManga" xml:space="preserve"><value>View all {0} →</value></data>
-  <data name="MangaSectionTitle" xml:space="preserve"><value>Manga Volumes</value></data>
-  <data name="MangaAllVolumesTitle" xml:space="preserve"><value>All Manga Volumes</value></data>
+  <data name="Btn_ViewManga" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Btn_ViewAllManga" xml:space="preserve">
+    <value>View all {0} →</value>
+  </data>
+  <data name="MangaSectionTitle" xml:space="preserve">
+    <value>Manga Volumes</value>
+  </data>
+  <data name="MangaAllVolumesTitle" xml:space="preserve">
+    <value>All Manga Volumes</value>
+  </data>
+  <data name="MangaPageSubtitle" xml:space="preserve">
+    <value>34 Volumes · 11 Story Arcs</value>
+  </data>
+  <data name="MangaTheFinalChapter" xml:space="preserve">
+    <value>The Final Chapter</value>
+  </data>
+  <data name="MangaStoryArcs" xml:space="preserve">
+    <value>STORY ARCS</value>
+  </data>
+  <data name="lblChapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="lblVolume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="lblNextVolume" xml:space="preserve">
+    <value>Next Volume</value>
+  </data>
+  <data name="lblPreviousVolume" xml:space="preserve">
+    <value>Previous Volume</value>
+  </data>
 </root>
