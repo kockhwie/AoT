@@ -777,4 +777,7 @@
   <data name="lblPreviousVolume" xml:space="preserve">
     <value>Previous Volume</value>
   </data>
+  <data name="lblTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
 </root>

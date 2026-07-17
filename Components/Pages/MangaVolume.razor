@@ -45,7 +45,7 @@
                     {
                         <p class="manga-detail-sidebar-chapters">@name</p>
                     }
-                     <span class="manga-detail-sidebar-chapters">@_volume.Chapters.Count @LocalizationService.GetString("lblChapters")</span>
+                    <span class="manga-detail-sidebar-chapters">@LocalizationService.GetString("lblTotal") @_volume.Chapters.Count @LocalizationService.GetString("lblChapters")</span>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@
         </div>
     </div>
 
-    <div class="flex justify-between items-center px-4 py-8 max-w-[1200px] mx-auto">
+    <div class="flex justify-between items-center px-4 py-8 mx-auto gap-4 mt-2">
         @if (VolumeNumber > 1)
         {
             <a href="/manga/@(VolumeNumber - 1)" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("lblPreviousVolume")</a>

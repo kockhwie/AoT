@@ -777,4 +777,7 @@
   <data name="lblPreviousVolume" xml:space="preserve">
     <value>上一集</value>
   </data>
+  <data name="lblTotal" xml:space="preserve">
+    <value>共</value>
+  </data>
 </root>

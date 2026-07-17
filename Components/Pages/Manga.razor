@@ -17,13 +17,13 @@
             
             <div class="manga-detail-sidebar-meta w-full mt-4">
                 <div class="manga-detail-sidebar-chapters mb-2 text-center md:text-left w-full border-b border-gray-800 pb-2">@LocalizationService.GetString("MangaStoryArcs")</div>
-                <div class="flex flex-col gap-2 w-full text-center md:text-left">
+                <div class="flex flex-col gap-1 w-full text-center md:text-left">
                     @foreach (var arc in MangaData.ArcOrder)
                     {
                         var volsInArc = MangaData.VolumesInArc(arc).ToList();
                         if (volsInArc.Count > 0)
                         {
-                            <div class="text-gray-400 hover:text-white transition-colors text-sm font-bold cursor-pointer">
+                            <div class="text-gray-400 hover:text-white transition-colors text-xs font-bold cursor-pointer">
                                 <a href="/manga#section_@MangaData.ArcNameKeys[arc]">@LocalizationService.GetString(MangaData.ArcNameKeys[arc])</a>
                             </div>
                         }
@@ -40,11 +40,10 @@
                     var volsInArc = MangaData.VolumesInArc(arc).ToList();
                     if (volsInArc.Count == 0) { continue; }
 
-                    
                     <h4 id="section_@MangaData.ArcNameKeys[arc]" class="manga-arc-title" style="grid-column: 1 / -1;">
                         @LocalizationService.GetString(MangaData.ArcNameKeys[arc])
-                        <span class="manga-arc-title-count">@volsInArc.Count VOL@(volsInArc.Count > 1 ? "S" : "")</span>
-                        </h4>
+                        <!-- span  class="manga-arc-title-count">@volsInArc.Count VOL@(volsInArc.Count > 1 ? "S" : "")</span-->
+                    </h4>
                     
                     @foreach (var vol in volsInArc)
                     {

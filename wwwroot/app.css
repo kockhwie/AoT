@@ -1282,8 +1282,8 @@ html:lang(jp) {
 .manga-detail-sidebar-meta {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: left;
+    gap: 0.25rem;
 }
 
 @media (min-width: 1024px) {
