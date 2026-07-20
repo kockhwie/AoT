@@ -1,9 +1,11 @@
 using AOT.Components;
 using AOT.Services;
 using System.Globalization;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
+var isRender = !string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER"));
 
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -15,29 +17,24 @@ builder.Services.AddSingleton<FactionPollService>(); // Add the FactionPollServi
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Configure Data Protection to persist keys securely.
-// In Render, we can provide the key via the DATA_PROTECTION_KEY_XML environment variable to avoid committing it to GitHub.
-var dpBuilder = builder.Services.AddDataProtection()
-    .SetApplicationName("AOT")
-    .SetDefaultKeyLifetime(TimeSpan.FromDays(3650)); // 10 years
-
-var dpKeyXml = Environment.GetEnvironmentVariable("DATA_PROTECTION_KEY_XML");
-if (!string.IsNullOrWhiteSpace(dpKeyXml) && CanParseXml(dpKeyXml))
+// Render free-tier containers are ephemeral, so use an in-memory provider there to avoid
+// file-system key storage warnings and stale protected payloads after restarts.
+if (isRender)
 {
-    // Use the environment variable on Render
-    dpBuilder.AddKeyManagementOptions(options =>
-    {
-        options.XmlRepository = new EnvironmentVariableXmlRepository("DATA_PROTECTION_KEY_XML");
-    });
+    builder.Services.AddSingleton<IDataProtectionProvider>(sp =>
+        new EphemeralDataProtectionProvider(sp.GetRequiredService<ILoggerFactory>()));
 }
 else
 {
-    // Fallback to the local file system for development or when the Render key is missing/invalid.
-    dpBuilder.PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
+    // Persist keys locally during development so browser sessions and antiforgery tokens survive reloads.
+    builder.Services.AddDataProtection()
+        .SetApplicationName("AOT")
+        .SetDefaultKeyLifetime(TimeSpan.FromDays(3650))
+        .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
 }
 
-// Antiforgery is intentionally omitted because this app currently has no browser form posts
-// or other state-changing endpoints. Re-enable it if we add forms, login, or POST actions.
+// Antiforgery is required for the interactive server endpoint metadata used by this app.
+// Keep it enabled so Blazor's endpoint pipeline stays happy.
 builder.Services.AddAntiforgery(options =>
 {
     options.Cookie.SameSite = SameSiteMode.Strict;
@@ -65,9 +62,37 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
 // Render terminates TLS before traffic reaches the app, so redirecting here just adds noise.
-if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER")))
+if (!isRender)
 {
     app.UseHttpsRedirection();
+}
+
+if (isRender)
+{
+    app.Use(async (context, next) =>
+    {
+        try
+        {
+            await next();
+        }
+        catch (AntiforgeryValidationException)
+        {
+            if (context.Response.HasStarted)
+            {
+                throw;
+            }
+
+            var antiforgeryOptions = context.RequestServices.GetRequiredService<IOptions<AntiforgeryOptions>>().Value;
+            var cookieOptions = antiforgeryOptions.Cookie.Build(context);
+
+            if (!string.IsNullOrWhiteSpace(cookieOptions.Name))
+            {
+                context.Response.Cookies.Delete(cookieOptions.Name, cookieOptions);
+            }
+
+            context.Response.Redirect(context.Request.PathBase + context.Request.Path + context.Request.QueryString);
+        }
+    });
 }
 
 app.UseAntiforgery();
@@ -77,16 +102,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-
-static bool CanParseXml(string xml)
-{
-    try
-    {
-        System.Xml.Linq.XElement.Parse(xml.Trim());
-        return true;
-    }
-    catch
-    {
-        return false;
-    }
-}
