@@ -1,49 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aot.codingdinos.asia/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-20</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- Manga Library index -->
   <url>
-    <loc>https://aot.codingdinos.asia/manga</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://aot.codingdinos.asia/about-author</loc>
+    <lastmod>2026-07-20</lastmod>
     <priority>0.9</priority>
   </url>
-
-  <!-- Manga Volume detail pages -->
   <url>
-    <loc>https://aot.codingdinos.asia/manga/1</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://aot.codingdinos.asia/manga</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aot.codingdinos.asia/manga/2</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://aot.codingdinos.asia/manga/1</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/20</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aot.codingdinos.asia/manga/3</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/2</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aot.codingdinos.asia/manga/4</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/5</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/6</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/7</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/8</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/9</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/10</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/11</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/12</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/13</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/14</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/15</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/16</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/17</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/18</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/19</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/21</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/22</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/23</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/24</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/25</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/26</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/27</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/28</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/29</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/30</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/31</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/32</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/33</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/34</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aot.codingdinos.asia/manga/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.9</priority>
+  </url>
 </urlset>
