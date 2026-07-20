@@ -1,6 +1,7 @@
 using AOT.Components;
 using AOT.Services;
 using System.Globalization;
+using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,27 @@ builder.Services.AddSingleton<FactionPollService>(); // Add the FactionPollServi
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Configure Data Protection to persist keys securely.
+// In Render, we can provide the key via the DATA_PROTECTION_KEY_XML environment variable to avoid committing it to GitHub.
+var dpBuilder = builder.Services.AddDataProtection()
+    .SetApplicationName("AOT")
+    .SetDefaultKeyLifetime(TimeSpan.FromDays(3650)); // 10 years
+
+var dpKeyXml = Environment.GetEnvironmentVariable("DATA_PROTECTION_KEY_XML");
+if (!string.IsNullOrEmpty(dpKeyXml))
+{
+    // Use the environment variable on Render
+    dpBuilder.AddKeyManagementOptions(options =>
+    {
+        options.XmlRepository = new EnvironmentVariableXmlRepository("DATA_PROTECTION_KEY_XML");
+    });
+}
+else
+{
+    // Fallback to local file system for development
+    dpBuilder.PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
+}
 
 
 // Antiforgery is needed for forms — but the homepage has none.
