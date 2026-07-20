@@ -38,6 +38,12 @@ else
 
 // Antiforgery is intentionally omitted because this app currently has no browser form posts
 // or other state-changing endpoints. Re-enable it if we add forms, login, or POST actions.
+builder.Services.AddAntiforgery(options =>
+{
+    options.Cookie.SameSite = SameSiteMode.Strict;
+    options.SuppressXFrameOptionsHeader = false;
+});
+
 var app = builder.Build();
 
 // Configure supported cultures for localization
@@ -64,6 +70,7 @@ if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER")))
     app.UseHttpsRedirection();
 }
 
+app.UseAntiforgery();
 
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
