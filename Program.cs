@@ -36,7 +36,8 @@ else
     dpBuilder.PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
 }
 
-
+// Antiforgery is intentionally omitted because this app currently has no browser form posts
+// or other state-changing endpoints. Re-enable it if we add forms, login, or POST actions.
 var app = builder.Build();
 
 // Configure supported cultures for localization
