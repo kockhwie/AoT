@@ -37,14 +37,6 @@ else
 }
 
 
-// Antiforgery is needed for forms — but the homepage has none.
-// Suppress the cookie on non-form GET requests:
-builder.Services.AddAntiforgery(options =>
-{
-    options.Cookie.SameSite = SameSiteMode.Strict;
-    options.SuppressXFrameOptionsHeader = false;
-});
-
 var app = builder.Build();
 
 // Configure supported cultures for localization
@@ -70,9 +62,6 @@ if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER")))
 {
     app.UseHttpsRedirection();
 }
-
-app.UseAntiforgery();
-
 
 
 app.MapStaticAssets();
