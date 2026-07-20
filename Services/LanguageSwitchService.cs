@@ -12,7 +12,7 @@ public class LanguageSwitchService
     private string _activeLang = "zh";
 
     /// <summary>
-    /// Gets or sets the currently active language code (e.g., "en", "zh", "jp").
+    /// Gets or sets the currently active language code (e.g., "en", "zh", "ja").
     /// </summary>
     public string ActiveLang
     {
@@ -27,13 +27,27 @@ public class LanguageSwitchService
     public event Action<string>? OnLanguageChanged;
 
     /// <summary>
+    /// The valid URL locale prefixes supported by this application.
+    /// </summary>
+    public static readonly string[] ValidLangs = { "zh", "en", "ja" };
+
+    /// <summary>
     /// Initializes the service with the given language.
     /// Called during app startup to set the initial language.
     /// </summary>
-    /// <param name="languageCode">The initial language code (e.g., "en", "zh", "jp")</param>
+    /// <param name="languageCode">The initial language code (e.g., "en", "zh", "ja")</param>
     public void Initialize(string languageCode)
     {
-        ChangeLanguage(languageCode);
+        // Normalize ja/jp alias
+        var normalized = Normalize(languageCode);
+
+        // Silently ignore invalid codes — fall back to current lang
+        if (!ValidLangs.Contains(normalized)) return;
+
+        // Force-update even if same lang (handles page navigation to a lang URL)
+        _activeLang = normalized;
+        UpdateCultureContext(normalized);
+        OnLanguageChanged?.Invoke(normalized);
     }
 
     /// <summary>
@@ -44,58 +58,78 @@ public class LanguageSwitchService
     /// <param name="languageCode">The target language code</param>
     public void ChangeLanguage(string languageCode)
     {
-        if (_activeLang == languageCode)
+        var normalized = Normalize(languageCode);
+        if (_activeLang == normalized) return;
+
+        _activeLang = normalized;
+        UpdateCultureContext(normalized);
+        OnLanguageChanged?.Invoke(normalized);
+    }
+
+    /// <summary>
+    /// Returns the URL prefix for a language (e.g. "zh" → "/zh", "en" → "/en").
+    /// </summary>
+    public static string GetLangPrefix(string lang) => $"/{Normalize(lang)}";
+
+    /// <summary>
+    /// Given a current relative URL (e.g. "/en/manga/1"), returns the equivalent URL
+    /// for the target language (e.g. "/zh/manga/1"). Handles the bare "/" root.
+    /// </summary>
+    public static string GetLocalizedUrl(string currentRelativeUrl, string targetLang)
+    {
+        var target = Normalize(targetLang);
+        var targetPrefix = GetLangPrefix(target);
+
+        // Strip existing lang prefix if present (/zh/..., /en/..., /ja/...)
+        string path = currentRelativeUrl;
+        foreach (var lang in ValidLangs)
         {
-            return; // No change needed
+            var prefix = $"/{lang}";
+            if (path == prefix || path == prefix + "/")
+            {
+                path = "/";
+                break;
+            }
+            if (path.StartsWith(prefix + "/"))
+            {
+                path = path.Substring(prefix.Length); // keeps leading /
+                break;
+            }
         }
 
-        _activeLang = languageCode;
-
-        // Update culture context for .NET localization
-        UpdateCultureContext(languageCode);
-
-        // Notify all subscribers of the language change
-        OnLanguageChanged?.Invoke(languageCode);
+        // path is now the language-neutral path (e.g. "/", "/manga", "/manga/1")
+        return path == "/" ? targetPrefix + "/" : targetPrefix + path;
     }
 
     /// <summary>
     /// Updates the current thread's culture to match the language setting.
-    /// This single method replaces the repetitive culture update code that was scattered across pages.
     /// </summary>
-    /// <param name="languageCode">The language code to apply</param>
-    private void UpdateCultureContext(string languageCode)
+    private static void UpdateCultureContext(string languageCode)
     {
-        // Normalize "jp" to "ja" for .NET's CultureInfo
-        string cultureCode = languageCode == "jp" ? "ja" : languageCode;
-        var cultureInfo = new CultureInfo(cultureCode);
-
+        var cultureInfo = new CultureInfo(languageCode);
         CultureInfo.CurrentCulture = cultureInfo;
         CultureInfo.CurrentUICulture = cultureInfo;
     }
 
     /// <summary>
     /// Gets the display name for a language code.
-    /// Useful for UI labels in language switchers.
     /// </summary>
-    /// <param name="languageCode">The language code</param>
-    /// <returns>The display name (e.g., "English", "中文", "日本語")</returns>
-    public string GetLanguageDisplayName(string languageCode)
-    {
-        return languageCode switch
+    public string GetLanguageDisplayName(string languageCode) =>
+        Normalize(languageCode) switch
         {
             "en" => "English",
             "zh" => "汉语",
-            "jp" => "日本語",
+            "ja" => "日本語",
             _ => languageCode
         };
-    }
 
     /// <summary>
     /// Gets the available language options.
     /// </summary>
-    /// <returns>List of available language codes</returns>
-    public IEnumerable<string> GetAvailableLanguages()
-    {
-        return new[] { "en", "zh", "jp" };
-    }
+    public IEnumerable<string> GetAvailableLanguages() => ValidLangs;
+
+    /// <summary>
+    /// Normalizes "jp" → "ja" for backwards compatibility.
+    /// </summary>
+    public static string Normalize(string lang) => lang == "jp" ? "ja" : lang;
 }

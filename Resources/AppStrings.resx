@@ -1,110 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -786,4 +728,4 @@
   <data name="PageTitle" xml:space="preserve">
     <value>進撃の巨人 Attack on Titan</value>
   </data>
-</root>
+<data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — Attack on Titan Creator</value></data><data name="Author_MetaDesc" xml:space="preserve"><value>Biography and details about Hajime Isayama, the creator and mangaka of Attack on Titan (Shingeki no Kyojin).</value></data><data name="Author_Badge" xml:space="preserve"><value>Mangaka</value></data><data name="Author_Title" xml:space="preserve"><value>Creator &amp; Illustrator of Attack on Titan</value></data><data name="Author_StatBorn" xml:space="preserve"><value>Born</value></data><data name="Author_StatHometown" xml:space="preserve"><value>Hometown</value></data><data name="Author_StatPublisher" xml:space="preserve"><value>Publisher</value></data><data name="Author_StatActiveYears" xml:space="preserve"><value>Active Years</value></data><data name="Author_ValBorn" xml:space="preserve"><value>Aug 29, 1986</value></data><data name="Author_ValHometown" xml:space="preserve"><value>Ōita, Japan</value></data><data name="Author_ValPublisher" xml:space="preserve"><value>Kodansha</value></data><data name="Author_ValActive" xml:space="preserve"><value>2006 – Present</value></data><data name="Author_SecBio" xml:space="preserve"><value>Creative Biography</value></data><data name="Author_SecAwards" xml:space="preserve"><value>Awards &amp; Honors</value></data><data name="Author_SecLegacy" xml:space="preserve"><value>Legacy &amp; Influence</value></data><data name="Author_Bio1" xml:space="preserve"><value>Born in Oyama, Ōita Prefecture, Japan, Hajime Isayama dreamed of creating manga from an early age. His breakthrough came when he moved to Tokyo and submitted a short version of Attack on Titan (Shingeki no Kyojin) to Kodansha. Despite early critiques of his raw art style, the series was serialized in Bessatsu Shōnen Magazine starting in 2009.</value></data><data name="Author_Bio2" xml:space="preserve"><value>Over the next 12 years, Isayama crafted a narrative masterpiece that redefined modern dark fantasy and shōnen manga. Blending survival horror, political intrigue, and complex moral dilemmas, the story of humanity's struggle against the Titans captivated a global audience. The manga concluded in April 2021 after 139 chapters.</value></data><data name="Author_Quote" xml:space="preserve"><value>"I think the story of Attack on Titan is about the struggle to break free from the cage of pre-determined destiny, and the heavy price of freedom."</value></data><data name="Author_Award1Title" xml:space="preserve"><value>Kodansha Manga Award</value></data><data name="Author_Award1Desc" xml:space="preserve"><value>Won the 35th annual award in the Shōnen category for Attack on Titan.</value></data><data name="Author_Award2Title" xml:space="preserve"><value>Micheluzzi Award</value></data><data name="Author_Award2Desc" xml:space="preserve"><value>Awarded Best Foreign Series at the Napoli COMICON in Italy.</value></data><data name="Author_Award3Title" xml:space="preserve"><value>Harvey Award Nomination</value></data><data name="Author_Award3Desc" xml:space="preserve"><value>Nominated for Best American Edition of Foreign Material.</value></data><data name="Author_Award4Title" xml:space="preserve"><value>Angoulême Festival Special Award</value></data><data name="Author_Award4Desc" xml:space="preserve"><value>Honored with the Special 50th Anniversary Prize at the prestigious French festival.</value></data><data name="Author_MetricVolumes" xml:space="preserve"><value>Manga Volumes</value></data><data name="Author_MetricChapters" xml:space="preserve"><value>Chapters</value></data><data name="Author_MetricCopies" xml:space="preserve"><value>Copies Sold Worldwide</value></data><data name="Author_LegacyText" xml:space="preserve"><value>Isayama's work transcends standard pop culture. Attack on Titan has inspired major anime adaptations, live-action feature films, light novels, video games, and numerous academic essays exploring its complex themes of cyclical hatred, nationalism, and collective trauma. His storytelling is recognized globally for its intricate foreshadowing and unforgettable narrative payoffs.</value></data></root>

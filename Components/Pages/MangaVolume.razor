@@ -1,4 +1,5 @@
 @page "/manga/{VolumeNumber:int}"
+@page "/{Lang}/manga/{VolumeNumber:int}"
 @using AOT.Services
 @inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
@@ -6,7 +7,7 @@
 @implements IDisposable
 
 <div>
-    <a href="@Nav.ToAbsoluteUri("/manga")" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</a>
+    <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("MangaAllVolumesTitle")</a>
 </div>
 
 @if (_volume is not null)
@@ -79,7 +80,7 @@
     <div class="flex justify-between items-center px-4 py-8 mx-auto gap-4 mt-2">
         @if (VolumeNumber > 1)
         {
-            <a href="/manga/@(VolumeNumber - 1)" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("lblPreviousVolume")</a>
+            <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga/@(VolumeNumber - 1)" class="aot-btn aot-btn--white"><i class="ti ti-caret-left"></i> @LocalizationService.GetString("lblPreviousVolume")</a>
         }
         else
         {
@@ -88,7 +89,7 @@
         
         @if (VolumeNumber < AOT.Services.MangaData.Volumes.Count)
         {
-            <a href="/manga/@(VolumeNumber + 1)" class="aot-btn aot-btn--white">@LocalizationService.GetString("lblNextVolume") <i class="ti ti-caret-right"></i></a>
+            <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga/@(VolumeNumber + 1)" class="aot-btn aot-btn--white">@LocalizationService.GetString("lblNextVolume") <i class="ti ti-caret-right"></i></a>
         }
         else
         {
@@ -99,7 +100,7 @@
 
 @code {
     [Parameter] public int VolumeNumber { get; set; }
-    [CascadingParameter] public string CurrentLang { get; set; } = "zh";
+    [Parameter] public string? Lang { get; set; }
     private MangaVolumeModel? _volume;
 
     protected override void OnParametersSet()
@@ -109,10 +110,14 @@
         {
             Nav.NavigateTo("/not-found");
         }
+
+        if (!string.IsNullOrEmpty(Lang))
+            LanguageSwitcher.Initialize(Lang);
     }
 
     protected override void OnInitialized()
     {
+
         // Subscribe to language changes
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
     }

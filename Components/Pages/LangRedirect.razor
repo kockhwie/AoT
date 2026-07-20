@@ -1,0 +1,13 @@
+@page "/"
+@using AOT.Services
+@inject NavigationManager Nav
+@inject LanguageSwitchService LanguageSwitcher
+
+@code {
+    protected override void OnInitialized()
+    {
+        // Redirect bare "/" to the active language prefix (default: /zh/)
+        var lang = LanguageSwitcher.ActiveLang;
+        Nav.NavigateTo($"/{lang}/", replace: true);
+    }
+}

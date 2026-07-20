@@ -1,7 +1,8 @@
-@page "/"
+@page "/{Lang}"
 @inject AppLocalizationService LocalizationService
 @using AOT.Services
 @inject LanguageSwitchService LanguageSwitcher
+@inject NavigationManager Nav
 @implements IDisposable
 
 <!-- 区域 1：顶部核心巨幕区 (互动式漫画分镜带) -->
@@ -458,6 +459,9 @@
 </script>
 
 @code {
+    /// <summary>URL locale segment — set by Blazor router from /{Lang} route.</summary>
+    [Parameter] public string Lang { get; set; } = "zh";
+
     // Manga Slide Model
     private sealed class MangaSlideModel
     {
@@ -503,8 +507,16 @@
     }
 
 
+    protected override void OnParametersSet()
+    {
+        // Seed language from the URL segment (e.g. /en/ → "en")
+        if (!string.IsNullOrEmpty(Lang))
+            LanguageSwitcher.Initialize(Lang);
+    }
+
     protected override void OnInitialized()
     {
+
         // Subscribe to language changes to rebuild slides with new quotes
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
 

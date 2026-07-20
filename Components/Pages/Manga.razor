@@ -1,4 +1,5 @@
 @page "/manga"
+@page "/{Lang}/manga"
 @using AOT.Services
 @implements IDisposable
 @inject AppLocalizationService LocalizationService
@@ -47,7 +48,7 @@
                     
                     @foreach (var vol in volsInArc)
                     {
-                        <a href="/manga/@vol.VolumeNumber" class="manga-cover-card">
+                        <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga/@vol.VolumeNumber" class="manga-cover-card">
                             <div class="manga-cover-card-top-badge">VOL @vol.VolumeNumber</div>
                             <div class="manga-cover-card-img-wrap">
                                 <img src="/img/manga/volumes/@vol.CoverImage"
@@ -64,8 +65,17 @@
 </div>
 
 @code {
+    [Parameter] public string? Lang { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+            LanguageSwitcher.Initialize(Lang);
+    }
+
     protected override void OnInitialized()
     {
+
         // Subscribe to language changes to trigger immediate UI update
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
     }

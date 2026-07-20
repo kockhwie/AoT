@@ -1,0 +1,328 @@
+/* AboutAuthor.razor.css - Premium layout using explicit values (no :root variables) */
+
+.author-page {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* --- HERO BANNER SECTION --- */
+.author-hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-hero:hover {
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 215, 0, 0.05);
+}
+
+/* Portrait */
+.author-portrait-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-portrait-frame {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 215, 0, 0.25);
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.author-portrait-frame:hover {
+    border-color: rgba(255, 215, 0, 0.55);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+    transform: scale(1.03);
+}
+
+.author-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-portrait-scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+    background-size: 100% 4px;
+    opacity: 0.6;
+}
+
+/* Details */
+.author-hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.author-badge {
+    background-color: #dfbb6b;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.author-hero-details .aot-char-name {
+    font-size: 1.75rem; /* Tier 1 Title */
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.author-name-en {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    font-weight: 500;
+}
+
+.author-hero-details .aot-char-title {
+    font-size: 1rem; /* Tier 2 Subtitle */
+    font-weight: 500;
+    color: #dfbb6b;
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Quick Stats */
+.author-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.author-stat-tile {
+    background: rgba(20, 22, 26, 0.6);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.author-stat-tile:hover {
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.author-stat-tile .aot-stat-label {
+    font-size: 0.6875rem; /* Tier 2 style info label */
+    color: #dfbb6b;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.author-stat-tile .aot-stat-val {
+    font-size: 0.875rem; /* Tier 3 Body */
+    color: #d1d5db;
+    font-weight: 600;
+}
+
+/* --- BIOGRAPHY SECTION --- */
+.author-bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7), rgba(12, 13, 16, 0.85));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.author-bio-content .aot-char-bio {
+    font-size: 0.875rem; /* Tier 3 Body */
+    color: #d1d5db;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.author-bio-content strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Pullquote (has no border-radius, so border-left is valid) */
+.author-pullquote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #dfbb6b;
+    border-left: 3px solid #dfbb6b;
+    padding-left: 1.25rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+/* --- AWARDS SECTION --- */
+.author-awards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.author-award-card {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.8), rgba(12, 13, 16, 0.9));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.author-award-card:hover {
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.award-year {
+    font-size: 0.75rem; /* Tier 2 */
+    font-weight: 700;
+    color: #dfbb6b;
+    letter-spacing: 0.05em;
+}
+
+.award-title {
+    font-size: 1.125rem; /* Tier 1 Title */
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.award-desc {
+    font-size: 0.8125rem; /* Tier 3 Body style details */
+    color: #a1a1aa;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --- LEGACY & IMPACT SECTION --- */
+.author-legacy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.author-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.author-metric-card {
+    background: rgba(20, 22, 26, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.author-metric-card:hover {
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.metric-number {
+    font-size: 1.85rem; /* Large impact Tier 1 style */
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.metric-label {
+    font-size: 0.75rem; /* Tier 2 */
+    color: #dfbb6b;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.author-legacy-text {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7), rgba(12, 13, 16, 0.85));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.author-legacy-text .aot-char-bio {
+    font-size: 0.875rem; /* Tier 3 */
+    color: #d1d5db;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 991px) {
+    .author-quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .author-awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .author-hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .author-hero-details {
+        align-items: center;
+    }
+    
+    .author-legacy-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .author-quick-stats {
+        grid-template-columns: 1fr;
+    }
+    .author-awards-grid {
+        grid-template-columns: 1fr;
+    }
+    .author-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

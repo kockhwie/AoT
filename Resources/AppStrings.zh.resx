@@ -1,110 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -786,4 +728,4 @@
   <data name="PageTitle" xml:space="preserve">
     <value>進撃の巨人 Attack on Titan</value>
   </data>
-</root>
+<data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — 進擊的巨人作者</value></data><data name="Author_MetaDesc" xml:space="preserve"><value>關於《進擊的巨人》創作者與漫畫家諫山創的生平與詳細介紹。</value></data><data name="Author_Badge" xml:space="preserve"><value>漫畫家</value></data><data name="Author_Title" xml:space="preserve"><value>《進擊的巨人》創作者與插畫家</value></data><data name="Author_StatBorn" xml:space="preserve"><value>出生</value></data><data name="Author_StatHometown" xml:space="preserve"><value>故鄉</value></data><data name="Author_StatPublisher" xml:space="preserve"><value>出版社</value></data><data name="Author_StatActiveYears" xml:space="preserve"><value>活躍年份</value></data><data name="Author_ValBorn" xml:space="preserve"><value>1986年8月29日</value></data><data name="Author_ValHometown" xml:space="preserve"><value>日本大分縣</value></data><data name="Author_ValPublisher" xml:space="preserve"><value>講談社</value></data><data name="Author_ValActive" xml:space="preserve"><value>2006年 – 至今</value></data><data name="Author_SecBio" xml:space="preserve"><value>創作生平</value></data><data name="Author_SecAwards" xml:space="preserve"><value>獎項與榮譽</value></data><data name="Author_SecLegacy" xml:space="preserve"><value>傳奇與影響力</value></data><data name="Author_Bio1" xml:space="preserve"><value>諫山創出生於日本大分縣大山町，從小就夢想著創作漫畫。當他搬到東京並向講談社提交《進擊的巨人》短篇版時，他迎來了突破。儘管早期的粗獷畫風曾受到批評，但該系列仍於2009年開始在《別冊少年Magazine》連載。</value></data><data name="Author_Bio2" xml:space="preserve"><value>在接下來的12年中，諫山創精心打造了一部重新定義現代黑暗奇幻和少年漫畫的敘事傑作。融合了生存恐怖、政治陰謀和複雜的道德困境，人類與巨人抗爭的故事吸引了全球觀眾。該漫畫於2021年4月完結，共139話。</value></data><data name="Author_Quote" xml:space="preserve"><value>「我認為《進擊的巨人》的故事是關於掙脫命中注定的牢籠的鬥爭，以及為自由付出的沉重代價。」</value></data><data name="Author_Award1Title" xml:space="preserve"><value>講談社漫畫賞</value></data><data name="Author_Award1Desc" xml:space="preserve"><value>憑藉《進擊的巨人》榮獲第35屆少年部門大賞。</value></data><data name="Author_Award2Title" xml:space="preserve"><value>米歇魯齊獎</value></data><data name="Author_Award2Desc" xml:space="preserve"><value>在義大利拿坡里國際漫畫節榮獲最佳外國系列獎。</value></data><data name="Author_Award3Title" xml:space="preserve"><value>哈維獎提名</value></data><data name="Author_Award3Desc" xml:space="preserve"><value>獲提名為最佳美國版外國作品。</value></data><data name="Author_Award4Title" xml:space="preserve"><value>安古蘭國際漫畫節特別獎</value></data><data name="Author_Award4Desc" xml:space="preserve"><value>在法國這項久負盛名的漫畫節上榮獲50週年特別獎。</value></data><data name="Author_MetricVolumes" xml:space="preserve"><value>漫畫單行本</value></data><data name="Author_MetricChapters" xml:space="preserve"><value>漫畫話數</value></data><data name="Author_MetricCopies" xml:space="preserve"><value>全球銷量</value></data><data name="Author_LegacyText" xml:space="preserve"><value>諫山創的作品超越了標準的流行文化。《進擊的巨人》啟發了大型動畫改編、真人電影、輕小說、電子遊戲，以及無數探討其循環仇恨、民族主義和集體創傷等複雜主題的學術論文。他的敘事因其錯綜複雜的伏筆和令人難忘的故事收尾而享譽全球。</value></data></root>

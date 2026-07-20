@@ -1,4 +1,5 @@
 @inherits LayoutComponentBase
+@inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
 @inject LanguageSwitchService LanguageSwitcher
 @inject FactionPollService PollService
@@ -238,9 +239,9 @@
                                 <summary>@LocalizationService.NavMedia</summary>
                             <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
                                     <li>
-                                        <a href="/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
+                                        <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
                                     </li>
-                                    <li><a href="/about-author">@LocalizationService.GetString("Nav_Manga")</a></li>
+                                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga">@LocalizationService.GetString("Nav_Manga")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Anime")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Games")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
@@ -256,7 +257,7 @@
                         <li><a>@LocalizationService.NavFanZone</a></li>
                     </ul>
                 </div>
-                <a class="text-sm" href="/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
+                <a class="text-sm" href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
             </div>
         <div class="navbar-center hidden lg:flex dropdown dropdown-open gap-8 ">
             <ul class="menu menu-horizontal gap-2 px-1 nav-links">
@@ -481,9 +482,9 @@
                             <summary tabindex="0">@LocalizationService.NavMedia</summary>
                             <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu p-2 shadow-2xl">
                                 <li>
-                                    <a href="/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
+                                    <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
                                 </li>
-                                <li><a href="/manga">@LocalizationService.GetString("Nav_Manga")</a></li>
+                                <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga">@LocalizationService.GetString("Nav_Manga")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Anime")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Games")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
@@ -691,12 +692,14 @@
     }
 
     /// <summary>
-    /// Change language - delegates to the centralized service.
-    /// This is now a simple pass-through that maintains the DRY principle.
+    /// Change language - navigates to the localized URL.
     /// </summary>
     private void ChangeLanguage(string targetLang)
     {
-        LanguageSwitcher.ChangeLanguage(targetLang);
+        var currentUri = new Uri(Nav.Uri);
+        var relativeUrl = currentUri.PathAndQuery;
+        var targetUrl = LanguageSwitchService.GetLocalizedUrl(relativeUrl, targetLang);
+        Nav.NavigateTo(targetUrl, forceLoad: false);
     }
 
     private void SelectFaction(string faction)
