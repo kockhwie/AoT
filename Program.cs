@@ -3,9 +3,10 @@ using AOT.Services;
 using System.Globalization;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
-var isRender = !string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER"));
+var isRender = IsRenderEnvironment();
 
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -17,29 +18,8 @@ builder.Services.AddSingleton<FactionPollService>(); // Add the FactionPollServi
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Render free-tier containers are ephemeral, so use an in-memory provider there to avoid
-// file-system key storage warnings and stale protected payloads after restarts.
-if (isRender)
-{
-    builder.Services.AddSingleton<IDataProtectionProvider>(sp =>
-        new EphemeralDataProtectionProvider(sp.GetRequiredService<ILoggerFactory>()));
-}
-else
-{
-    // Persist keys locally during development so browser sessions and antiforgery tokens survive reloads.
-    builder.Services.AddDataProtection()
-        .SetApplicationName("AOT")
-        .SetDefaultKeyLifetime(TimeSpan.FromDays(3650))
-        .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
-}
-
-// Antiforgery is required for the interactive server endpoint metadata used by this app.
-// Keep it enabled so Blazor's endpoint pipeline stays happy.
-builder.Services.AddAntiforgery(options =>
-{
-    options.Cookie.SameSite = SameSiteMode.Strict;
-    options.SuppressXFrameOptionsHeader = false;
-});
+ConfigureDataProtection(builder.Services, builder.Environment, isRender);
+ConfigureAntiforgery(builder.Services);
 
 var app = builder.Build();
 
@@ -61,13 +41,59 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
-// Render terminates TLS before traffic reaches the app, so redirecting here just adds noise.
 if (!isRender)
 {
     app.UseHttpsRedirection();
 }
 
 if (isRender)
+{
+    UseRenderAntiforgeryRecovery(app);
+}
+
+app.UseAntiforgery();
+
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();
+
+static bool IsRenderEnvironment()
+{
+    return !string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER"));
+}
+
+static void ConfigureDataProtection(IServiceCollection services, IWebHostEnvironment environment, bool isRender)
+{
+    if (isRender)
+    {
+        // Render free-tier containers are ephemeral, so use an in-memory provider there to avoid
+        // file-system key storage warnings and stale protected payloads after restarts.
+        services.AddSingleton<IDataProtectionProvider>(sp =>
+            new EphemeralDataProtectionProvider(sp.GetRequiredService<ILoggerFactory>()));
+        return;
+    }
+
+    // Persist keys locally during development so browser sessions and antiforgery tokens survive reloads.
+    services.AddDataProtection()
+        .SetApplicationName("AOT")
+        .SetDefaultKeyLifetime(TimeSpan.FromDays(3650))
+        .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(environment.ContentRootPath, "DataProtectionKeys")));
+}
+
+static void ConfigureAntiforgery(IServiceCollection services)
+{
+    // Antiforgery is required for the interactive server endpoint metadata used by this app.
+    // Keep it enabled so Blazor's endpoint pipeline stays happy.
+    services.AddAntiforgery(options =>
+    {
+        options.Cookie.SameSite = SameSiteMode.Strict;
+        options.SuppressXFrameOptionsHeader = false;
+    });
+}
+
+static void UseRenderAntiforgeryRecovery(WebApplication app)
 {
     app.Use(async (context, next) =>
     {
@@ -84,21 +110,14 @@ if (isRender)
 
             var antiforgeryOptions = context.RequestServices.GetRequiredService<IOptions<AntiforgeryOptions>>().Value;
             var cookieOptions = antiforgeryOptions.Cookie.Build(context);
+            var cookieName = antiforgeryOptions.Cookie.Name ?? ".AspNetCore.Antiforgery";
 
-            if (!string.IsNullOrWhiteSpace(cookieOptions.Name))
+            if (!string.IsNullOrWhiteSpace(cookieName))
             {
-                context.Response.Cookies.Delete(cookieOptions.Name, cookieOptions);
+                context.Response.Cookies.Delete(cookieName, cookieOptions);
             }
 
             context.Response.Redirect(context.Request.PathBase + context.Request.Path + context.Request.QueryString);
         }
     });
 }
-
-app.UseAntiforgery();
-
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.Run();
