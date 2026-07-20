@@ -22,7 +22,7 @@ var dpBuilder = builder.Services.AddDataProtection()
     .SetDefaultKeyLifetime(TimeSpan.FromDays(3650)); // 10 years
 
 var dpKeyXml = Environment.GetEnvironmentVariable("DATA_PROTECTION_KEY_XML");
-if (!string.IsNullOrEmpty(dpKeyXml))
+if (!string.IsNullOrWhiteSpace(dpKeyXml) && CanParseXml(dpKeyXml))
 {
     // Use the environment variable on Render
     dpBuilder.AddKeyManagementOptions(options =>
@@ -32,7 +32,7 @@ if (!string.IsNullOrEmpty(dpKeyXml))
 }
 else
 {
-    // Fallback to local file system for development
+    // Fallback to the local file system for development or when the Render key is missing/invalid.
     dpBuilder.PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "DataProtectionKeys")));
 }
 
@@ -64,7 +64,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
-app.UseHttpsRedirection();
+
+// Render terminates TLS before traffic reaches the app, so redirecting here just adds noise.
+if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER")))
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAntiforgery();
 
@@ -75,3 +80,16 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+
+static bool CanParseXml(string xml)
+{
+    try
+    {
+        System.Xml.Linq.XElement.Parse(xml.Trim());
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+}
