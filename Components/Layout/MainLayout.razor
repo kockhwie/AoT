@@ -628,6 +628,16 @@
             }
     }
 
+    // Close any details element when clicking outside of it
+    document.addEventListener('click', (e) => {
+        const details = document.querySelectorAll('details');
+        details.forEach((detail) => {
+            if (!detail.contains(e.target)) {
+                detail.removeAttribute('open');
+            }
+        });
+    });
+
     // Optional Close Security Action: Automatically minimizes open dropdown matrix if a user clicks outside bounds
     window.addEventListener('click', (e) => {
         const container = document.querySelector('.faction-widget-container');
