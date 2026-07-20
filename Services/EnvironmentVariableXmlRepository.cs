@@ -15,12 +15,20 @@ public class EnvironmentVariableXmlRepository : IXmlRepository
     public IReadOnlyCollection<XElement> GetAllElements()
     {
         var xml = Environment.GetEnvironmentVariable(_envVarName);
-        if (string.IsNullOrEmpty(xml))
+        if (string.IsNullOrWhiteSpace(xml))
         {
             return Array.Empty<XElement>();
         }
 
-        return new[] { XElement.Parse(xml) };
+        try
+        {
+            return new[] { XElement.Parse(xml.Trim()) };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DataProtection] Failed to parse XML from {_envVarName}: {ex.Message}");
+            return Array.Empty<XElement>();
+        }
     }
 
     public void StoreElement(XElement element, string friendlyName)
