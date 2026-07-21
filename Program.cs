@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
-var isRender = IsRenderEnvironment();
+ 
 
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
@@ -18,7 +18,7 @@ builder.Services.AddSingleton<FactionPollService>(); // Add the FactionPollServi
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-ConfigureDataProtection(builder.Services, builder.Environment, isRender);
+ConfigureDataProtection(builder.Services, builder.Environment);
 ConfigureAntiforgery(builder.Services);
 
 var app = builder.Build();
@@ -41,14 +41,16 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
-if (!isRender)
+if (!app.Environment.IsDevelopment())
 {
     app.UseHttpsRedirection();
 }
 
-if (isRender)
+// Ephemeral key storage means restarts invalidate old antiforgery cookies —
+// recover from that instead of 500ing.
+if (!PersistDataProtectionKeys(app.Environment))
 {
-    UseRenderAntiforgeryRecovery(app);
+    UseAntiforgeryRecovery(app);
 }
 
 app.UseAntiforgery();
@@ -59,23 +61,27 @@ app.MapRazorComponents<App>()
 
 app.Run();
 
-static bool IsRenderEnvironment()
+
+// ponytail: don't detect "is this Render" — env var names/values are outside your control and
+// can change without notice. The thing that actually matters is "does this container have a
+// persistent disk", and the safe default for any cloud host (Render, Fly, Railway, a future
+// host you haven't picked yet) is no. Opt in explicitly if you ever attach real persistent
+// storage. Upgrade path: set PERSIST_DP_KEYS=true once you have a real volume mounted.
+static bool PersistDataProtectionKeys(IWebHostEnvironment environment)
 {
-    return !string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("RENDER"));
+    return environment.IsDevelopment()
+        || Environment.GetEnvironmentVariable("PERSIST_DP_KEYS") == "true";
 }
 
-static void ConfigureDataProtection(IServiceCollection services, IWebHostEnvironment environment, bool isRender)
+static void ConfigureDataProtection(IServiceCollection services, IWebHostEnvironment environment)
 {
-    if (isRender)
+    if (!PersistDataProtectionKeys(environment))
     {
-        // Render free-tier containers are ephemeral, so use an in-memory provider there to avoid
-        // file-system key storage warnings and stale protected payloads after restarts.
         services.AddSingleton<IDataProtectionProvider>(sp =>
             new EphemeralDataProtectionProvider(sp.GetRequiredService<ILoggerFactory>()));
         return;
     }
 
-    // Persist keys locally during development so browser sessions and antiforgery tokens survive reloads.
     services.AddDataProtection()
         .SetApplicationName("AOT")
         .SetDefaultKeyLifetime(TimeSpan.FromDays(3650))
@@ -84,8 +90,6 @@ static void ConfigureDataProtection(IServiceCollection services, IWebHostEnviron
 
 static void ConfigureAntiforgery(IServiceCollection services)
 {
-    // Antiforgery is required for the interactive server endpoint metadata used by this app.
-    // Keep it enabled so Blazor's endpoint pipeline stays happy.
     services.AddAntiforgery(options =>
     {
         options.Cookie.SameSite = SameSiteMode.Strict;
@@ -93,7 +97,7 @@ static void ConfigureAntiforgery(IServiceCollection services)
     });
 }
 
-static void UseRenderAntiforgeryRecovery(WebApplication app)
+static void UseAntiforgeryRecovery(WebApplication app)
 {
     app.Use(async (context, next) =>
     {
