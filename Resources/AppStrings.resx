@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
   <xs:schema id="root">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xs:element name="root" ns1:IsDataSet="true">
@@ -647,6 +647,54 @@
   <data name="C6Ability" xml:space="preserve">
     <value>Field Tactician</value>
   </data>
+  <data name="C7Name" xml:space="preserve">
+    <value>Eren Yeager</value>
+  </data>
+  <data name="C7Title" xml:space="preserve">
+    <value>Attack Titan / Founding Titan</value>
+  </data>
+  <data name="C7Bio" xml:space="preserve">
+    <value>A former Scout who discovered he possessed the power of the Titans. Driven by an unwavering desire for freedom, he eventually initiated the Rumbling to protect Paradis.</value>
+  </data>
+  <data name="C7Ability" xml:space="preserve">
+    <value>Founding Titan</value>
+  </data>
+  <data name="C8Name" xml:space="preserve">
+    <value>Reiner Braun</value>
+  </data>
+  <data name="C8Title" xml:space="preserve">
+    <value>Armored Titan / Vice-Captain</value>
+  </data>
+  <data name="C8Bio" xml:space="preserve">
+    <value>A Marleyan Warrior who infiltrated the Walls. Struggled with a split personality due to the guilt of his actions. A formidable soldier with immense durability.</value>
+  </data>
+  <data name="C8Ability" xml:space="preserve">
+    <value>Hardening</value>
+  </data>
+  <data name="C9Name" xml:space="preserve">
+    <value>Annie Leonhart</value>
+  </data>
+  <data name="C9Title" xml:space="preserve">
+    <value>Female Titan / Warrior</value>
+  </data>
+  <data name="C9Bio" xml:space="preserve">
+    <value>A lone wolf with exceptional martial arts skills. Served as the Female Titan for Marley. Spent years encased in a crystal after her capture by the Scouts.</value>
+  </data>
+  <data name="C9Ability" xml:space="preserve">
+    <value>Martial Arts</value>
+  </data>
+  <data name="FactionScouts" xml:space="preserve">
+    <value>Scout Corps</value>
+  </data>
+  <data name="FactionWarriors" xml:space="preserve">
+    <value>Marley Warriors</value>
+  </data>
+  <data name="CharactersPageTitle" xml:space="preserve">
+    <value>Intelligence Database: Personnel Dossiers</value>
+  </data>
+  <data name="CharactersPageSubtitle" xml:space="preserve">
+    <value>Confidential records of humanity's finest and their adversaries.</value>
+  </data>
   <data name="StatKillsBar" xml:space="preserve">
     <value>TITAN ELIMINATIONS</value>
   </data>
@@ -728,4 +776,34 @@
   <data name="PageTitle" xml:space="preserve">
     <value>進撃の巨人 Attack on Titan</value>
   </data>
-<data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — Attack on Titan Creator</value></data><data name="Author_MetaDesc" xml:space="preserve"><value>Biography and details about Hajime Isayama, the creator and mangaka of Attack on Titan (Shingeki no Kyojin).</value></data><data name="Author_Badge" xml:space="preserve"><value>Mangaka</value></data><data name="Author_Title" xml:space="preserve"><value>Creator &amp; Illustrator of Attack on Titan</value></data><data name="Author_StatBorn" xml:space="preserve"><value>Born</value></data><data name="Author_StatHometown" xml:space="preserve"><value>Hometown</value></data><data name="Author_StatPublisher" xml:space="preserve"><value>Publisher</value></data><data name="Author_StatActiveYears" xml:space="preserve"><value>Active Years</value></data><data name="Author_ValBorn" xml:space="preserve"><value>Aug 29, 1986</value></data><data name="Author_ValHometown" xml:space="preserve"><value>Ōita, Japan</value></data><data name="Author_ValPublisher" xml:space="preserve"><value>Kodansha</value></data><data name="Author_ValActive" xml:space="preserve"><value>2006 – Present</value></data><data name="Author_SecBio" xml:space="preserve"><value>Creative Biography</value></data><data name="Author_SecAwards" xml:space="preserve"><value>Awards &amp; Honors</value></data><data name="Author_SecLegacy" xml:space="preserve"><value>Legacy &amp; Influence</value></data><data name="Author_Bio1" xml:space="preserve"><value>Born in Oyama, Ōita Prefecture, Japan, Hajime Isayama dreamed of creating manga from an early age. His breakthrough came when he moved to Tokyo and submitted a short version of Attack on Titan (Shingeki no Kyojin) to Kodansha. Despite early critiques of his raw art style, the series was serialized in Bessatsu Shōnen Magazine starting in 2009.</value></data><data name="Author_Bio2" xml:space="preserve"><value>Over the next 12 years, Isayama crafted a narrative masterpiece that redefined modern dark fantasy and shōnen manga. Blending survival horror, political intrigue, and complex moral dilemmas, the story of humanity's struggle against the Titans captivated a global audience. The manga concluded in April 2021 after 139 chapters.</value></data><data name="Author_Quote" xml:space="preserve"><value>"I think the story of Attack on Titan is about the struggle to break free from the cage of pre-determined destiny, and the heavy price of freedom."</value></data><data name="Author_Award1Title" xml:space="preserve"><value>Kodansha Manga Award</value></data><data name="Author_Award1Desc" xml:space="preserve"><value>Won the 35th annual award in the Shōnen category for Attack on Titan.</value></data><data name="Author_Award2Title" xml:space="preserve"><value>Micheluzzi Award</value></data><data name="Author_Award2Desc" xml:space="preserve"><value>Awarded Best Foreign Series at the Napoli COMICON in Italy.</value></data><data name="Author_Award3Title" xml:space="preserve"><value>Harvey Award Nomination</value></data><data name="Author_Award3Desc" xml:space="preserve"><value>Nominated for Best American Edition of Foreign Material.</value></data><data name="Author_Award4Title" xml:space="preserve"><value>Angoulême Festival Special Award</value></data><data name="Author_Award4Desc" xml:space="preserve"><value>Honored with the Special 50th Anniversary Prize at the prestigious French festival.</value></data><data name="Author_MetricVolumes" xml:space="preserve"><value>Manga Volumes</value></data><data name="Author_MetricChapters" xml:space="preserve"><value>Chapters</value></data><data name="Author_MetricCopies" xml:space="preserve"><value>Copies Sold Worldwide</value></data><data name="Author_LegacyText" xml:space="preserve"><value>Isayama's work transcends standard pop culture. Attack on Titan has inspired major anime adaptations, live-action feature films, light novels, video games, and numerous academic essays exploring its complex themes of cyclical hatred, nationalism, and collective trauma. His storytelling is recognized globally for its intricate foreshadowing and unforgettable narrative payoffs.</value></data></root>
+  <data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — Attack on Titan Creator</value></data>
+  <data name="Author_MetaDesc" xml:space="preserve"><value>Biography and details about Hajime Isayama, the creator and mangaka of Attack on Titan (Shingeki no Kyojin).</value></data>
+  <data name="Author_Badge" xml:space="preserve"><value>Mangaka</value></data>
+  <data name="Author_Title" xml:space="preserve"><value>Creator &amp; Illustrator of Attack on Titan</value></data>
+  <data name="Author_StatBorn" xml:space="preserve"><value>Born</value></data>
+  <data name="Author_StatHometown" xml:space="preserve"><value>Hometown</value></data>
+  <data name="Author_StatPublisher" xml:space="preserve"><value>Publisher</value></data>
+  <data name="Author_StatActiveYears" xml:space="preserve"><value>Active Years</value></data>
+  <data name="Author_ValBorn" xml:space="preserve"><value>Aug 29, 1986</value></data>
+  <data name="Author_ValHometown" xml:space="preserve"><value>Ōita, Japan</value></data>
+  <data name="Author_ValPublisher" xml:space="preserve"><value>Kodansha</value></data>
+  <data name="Author_ValActive" xml:space="preserve"><value>2006 – Present</value></data>
+  <data name="Author_SecBio" xml:space="preserve"><value>Creative Biography</value></data>
+  <data name="Author_SecAwards" xml:space="preserve"><value>Awards &amp; Honors</value></data>
+  <data name="Author_SecLegacy" xml:space="preserve"><value>Legacy &amp; Influence</value></data>
+  <data name="Author_Bio1" xml:space="preserve"><value>Born in Oyama, Ōita Prefecture, Japan, Hajime Isayama dreamed of creating manga from an early age. His breakthrough came when he moved to Tokyo and submitted a short version of Attack on Titan (Shingeki no Kyojin) to Kodansha. Despite early critiques of his raw art style, the series was serialized in Bessatsu Shōnen Magazine starting in 2009.</value></data>
+  <data name="Author_Bio2" xml:space="preserve"><value>Over the next 12 years, Isayama crafted a narrative masterpiece that redefined modern dark fantasy and shōnen manga. Blending survival horror, political intrigue, and complex moral dilemmas, the story of humanity's struggle against the Titans captivated a global audience. The manga concluded in April 2021 after 139 chapters.</value></data>
+  <data name="Author_Quote" xml:space="preserve"><value>"I think the story of Attack on Titan is about the struggle to break free from the cage of pre-determined destiny, and the heavy price of freedom."</value></data>
+  <data name="Author_Award1Title" xml:space="preserve"><value>Kodansha Manga Award</value></data>
+  <data name="Author_Award1Desc" xml:space="preserve"><value>Won the 35th annual award in the Shōnen category for Attack on Titan.</value></data>
+  <data name="Author_Award2Title" xml:space="preserve"><value>Micheluzzi Award</value></data>
+  <data name="Author_Award2Desc" xml:space="preserve"><value>Awarded Best Foreign Series at the Napoli COMICON in Italy.</value></data>
+  <data name="Author_Award3Title" xml:space="preserve"><value>Harvey Award Nomination</value></data>
+  <data name="Author_Award3Desc" xml:space="preserve"><value>Nominated for Best American Edition of Foreign Material.</value></data>
+  <data name="Author_Award4Title" xml:space="preserve"><value>Angoulême Festival Special Award</value></data>
+  <data name="Author_Award4Desc" xml:space="preserve"><value>Honored with the Special 50th Anniversary Prize at the prestigious French festival.</value></data>
+  <data name="Author_MetricVolumes" xml:space="preserve"><value>Manga Volumes</value></data>
+  <data name="Author_MetricChapters" xml:space="preserve"><value>Chapters</value></data>
+  <data name="Author_MetricCopies" xml:space="preserve"><value>Copies Sold Worldwide</value></data>
+  <data name="Author_LegacyText" xml:space="preserve"><value>Isayama's work transcends standard pop culture. Attack on Titan has inspired major anime adaptations, live-action feature films, light novels, video games, and numerous academic essays exploring its complex themes of cyclical hatred, nationalism, and collective trauma. His storytelling is recognized globally for its intricate foreshadowing and unforgettable narrative payoffs.</value></data>
+<data name="CharGarrison_Title" xml:space="preserve"><value>Garrison Regiment Veteran</value></data><data name="CharGarrison_Bio" xml:space="preserve"><value>Stationed on the walls to defend the interior districts from breaches. Known for a fierce, unwavering loyalty to the people of Shiganshina.</value></data><data name="CharMP_Title" xml:space="preserve"><value>Military Police Commander</value></data><data name="CharMP_Bio" xml:space="preserve"><value>Commands the Military Police Brigade tasked with keeping order within the walls, often caught between civic duty and the corruption of the Interior.</value></data><data name="CharInterior_Title" xml:space="preserve"><value>Chief of the First Interior Squad</value></data><data name="CharInterior_Bio" xml:space="preserve"><value>A ruthless enforcer of the crown's will, wielding absolute authority over the Military Police's most secretive operations.</value></data><data name="CharRoyal_Title" xml:space="preserve"><value>Member of the Reiss Bloodline</value></data><data name="CharRoyal_Bio" xml:space="preserve"><value>Carries the blood of the true royal family, hidden from history to protect the secret of the Founding Titan.</value></data><data name="CharGov_Title" xml:space="preserve"><value>Royal Government Official</value></data><data name="CharGov_Bio" xml:space="preserve"><value>Serves within the walls' ruling administration, navigating the political machinery that has controlled Paradis for a century.</value></data><data name="CharCivilian_Title" xml:space="preserve"><value>Paradis Island Physician</value></data><data name="CharCivilian_Bio" xml:space="preserve"><value>A former Marleyan Warrior candidate who infiltrated Wall Maria disguised as a doctor, carrying the secret of the Attack and Founding Titans.</value></data><data name="CharMarley_Title" xml:space="preserve"><value>Marleyan Warrior Unit</value></data><data name="CharMarley_Bio" xml:space="preserve"><value>Raised from childhood on Paradis-hating propaganda, trained to inherit a Titan power and serve the Marleyan military.</value></data><data name="CharTybur_Title" xml:space="preserve"><value>Head of the Tybur Family</value></data><data name="CharTybur_Bio" xml:space="preserve"><value>Steward of the War Hammer Titan and the only family permitted to declare war on behalf of the Eldian people.</value></data><data name="CharYeagerist_Title" xml:space="preserve"><value>Yeagerist Militia Leader</value></data><data name="CharYeagerist_Bio" xml:space="preserve"><value>A former Scout who turned to radical loyalty toward Eren Yeager's cause after Marley's assault on Liberio.</value></data></root>

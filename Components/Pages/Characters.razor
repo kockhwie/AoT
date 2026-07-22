@@ -1,0 +1,75 @@
+@page "/characters"
+@page "/{Lang}/characters"
+@using AOT.Services
+@implements IDisposable
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+
+<PageTitle>@LocalizationService.NavCharacters - @LocalizationService.GetString("PageTitle")</PageTitle>
+
+<div>
+    <h3 class="aot-section-title mb-6">
+        <i class="ti ti-swords"></i> @LocalizationService.NavCharacters
+    </h3>
+
+    <!-- faction jump-strip: same horizontal-scroll pattern as .manga-shelf-scroll -->
+    <div class="manga-shelf-scroll" style="padding-top:0;">
+        @foreach (var faction in CharacterData.FactionOrder)
+        {
+            @* if (!CharacterData.InFaction(faction).Any()) { continue; } *@
+            @* Characters.razor *@
+            <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters#faction_@faction" class="aot-btn aot-btn--white aot-btn--sm" style="flex:0 0 auto;">
+                @LocalizationService.GetString(CharacterData.FactionNameKeys[faction])
+            </a>
+        }
+    </div>
+
+    <div class="manga-continuous-grid">
+        @foreach (var faction in CharacterData.FactionOrder)
+        {
+            var members = CharacterData.InFaction(faction).ToList();
+            @* if (members.Count == 0) { continue; } *@
+
+            <h4 id="faction_@faction" class="manga-arc-title" style="grid-column: 1 / -1;">
+                @LocalizationService.GetString(CharacterData.FactionNameKeys[faction])
+            </h4>
+
+            @foreach (var member in members)
+            {
+                <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters/@member.Slug" class="manga-cover-card">
+                    @if (!string.IsNullOrEmpty(member.Badge))
+                    {
+                        <div class="manga-cover-card-top-badge">@member.Badge</div>
+                    }
+                    <div class="manga-cover-card-img-wrap">
+                        <img src="/img/characters/@member.Portrait" class="manga-cover-card-img" alt="@LocalizationService.GetString(member.NameKey)" />
+                        <div class="manga-cover-card-shine"></div>
+                        <div class="manga-cover-card-name">@LocalizationService.GetString(member.NameKey)</div>
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Lang { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+            LanguageSwitcher.Initialize(Lang);
+    }
+
+    protected override void OnInitialized()
+    {
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+    }
+
+    private void HandleLanguageChanged(string newLanguage) => StateHasChanged();
+
+    public void Dispose()
+    {
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
+}

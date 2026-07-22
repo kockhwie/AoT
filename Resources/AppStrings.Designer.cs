@@ -160,6 +160,276 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Won the 35th annual award in the Shōnen category for Attack on Titan..
+        /// </summary>
+        public static string Author_Award1Desc {
+            get {
+                return ResourceManager.GetString("Author_Award1Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kodansha Manga Award.
+        /// </summary>
+        public static string Author_Award1Title {
+            get {
+                return ResourceManager.GetString("Author_Award1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Awarded Best Foreign Series at the Napoli COMICON in Italy..
+        /// </summary>
+        public static string Author_Award2Desc {
+            get {
+                return ResourceManager.GetString("Author_Award2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Micheluzzi Award.
+        /// </summary>
+        public static string Author_Award2Title {
+            get {
+                return ResourceManager.GetString("Author_Award2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nominated for Best American Edition of Foreign Material..
+        /// </summary>
+        public static string Author_Award3Desc {
+            get {
+                return ResourceManager.GetString("Author_Award3Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Harvey Award Nomination.
+        /// </summary>
+        public static string Author_Award3Title {
+            get {
+                return ResourceManager.GetString("Author_Award3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Honored with the Special 50th Anniversary Prize at the prestigious French festival..
+        /// </summary>
+        public static string Author_Award4Desc {
+            get {
+                return ResourceManager.GetString("Author_Award4Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Angoulême Festival Special Award.
+        /// </summary>
+        public static string Author_Award4Title {
+            get {
+                return ResourceManager.GetString("Author_Award4Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mangaka.
+        /// </summary>
+        public static string Author_Badge {
+            get {
+                return ResourceManager.GetString("Author_Badge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Born in Oyama, Ōita Prefecture, Japan, Hajime Isayama dreamed of creating manga from an early age. His breakthrough came when he moved to Tokyo and submitted a short version of Attack on Titan (Shingeki no Kyojin) to Kodansha. Despite early critiques of his raw art style, the series was serialized in Bessatsu Shōnen Magazine starting in 2009..
+        /// </summary>
+        public static string Author_Bio1 {
+            get {
+                return ResourceManager.GetString("Author_Bio1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Over the next 12 years, Isayama crafted a narrative masterpiece that redefined modern dark fantasy and shōnen manga. Blending survival horror, political intrigue, and complex moral dilemmas, the story of humanity&apos;s struggle against the Titans captivated a global audience. The manga concluded in April 2021 after 139 chapters..
+        /// </summary>
+        public static string Author_Bio2 {
+            get {
+                return ResourceManager.GetString("Author_Bio2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Isayama&apos;s work transcends standard pop culture. Attack on Titan has inspired major anime adaptations, live-action feature films, light novels, video games, and numerous academic essays exploring its complex themes of cyclical hatred, nationalism, and collective trauma. His storytelling is recognized globally for its intricate foreshadowing and unforgettable narrative payoffs..
+        /// </summary>
+        public static string Author_LegacyText {
+            get {
+                return ResourceManager.GetString("Author_LegacyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Biography and details about Hajime Isayama, the creator and mangaka of Attack on Titan (Shingeki no Kyojin)..
+        /// </summary>
+        public static string Author_MetaDesc {
+            get {
+                return ResourceManager.GetString("Author_MetaDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chapters.
+        /// </summary>
+        public static string Author_MetricChapters {
+            get {
+                return ResourceManager.GetString("Author_MetricChapters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copies Sold Worldwide.
+        /// </summary>
+        public static string Author_MetricCopies {
+            get {
+                return ResourceManager.GetString("Author_MetricCopies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manga Volumes.
+        /// </summary>
+        public static string Author_MetricVolumes {
+            get {
+                return ResourceManager.GetString("Author_MetricVolumes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 諫山 創 (Hajime Isayama) — Attack on Titan Creator.
+        /// </summary>
+        public static string Author_PageTitle {
+            get {
+                return ResourceManager.GetString("Author_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;I think the story of Attack on Titan is about the struggle to break free from the cage of pre-determined destiny, and the heavy price of freedom.&quot;.
+        /// </summary>
+        public static string Author_Quote {
+            get {
+                return ResourceManager.GetString("Author_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Awards &amp; Honors.
+        /// </summary>
+        public static string Author_SecAwards {
+            get {
+                return ResourceManager.GetString("Author_SecAwards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creative Biography.
+        /// </summary>
+        public static string Author_SecBio {
+            get {
+                return ResourceManager.GetString("Author_SecBio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legacy &amp; Influence.
+        /// </summary>
+        public static string Author_SecLegacy {
+            get {
+                return ResourceManager.GetString("Author_SecLegacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active Years.
+        /// </summary>
+        public static string Author_StatActiveYears {
+            get {
+                return ResourceManager.GetString("Author_StatActiveYears", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Born.
+        /// </summary>
+        public static string Author_StatBorn {
+            get {
+                return ResourceManager.GetString("Author_StatBorn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hometown.
+        /// </summary>
+        public static string Author_StatHometown {
+            get {
+                return ResourceManager.GetString("Author_StatHometown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publisher.
+        /// </summary>
+        public static string Author_StatPublisher {
+            get {
+                return ResourceManager.GetString("Author_StatPublisher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creator &amp; Illustrator of Attack on Titan.
+        /// </summary>
+        public static string Author_Title {
+            get {
+                return ResourceManager.GetString("Author_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2006 – Present.
+        /// </summary>
+        public static string Author_ValActive {
+            get {
+                return ResourceManager.GetString("Author_ValActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aug 29, 1986.
+        /// </summary>
+        public static string Author_ValBorn {
+            get {
+                return ResourceManager.GetString("Author_ValBorn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ōita, Japan.
+        /// </summary>
+        public static string Author_ValHometown {
+            get {
+                return ResourceManager.GetString("Author_ValHometown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kodansha.
+        /// </summary>
+        public static string Author_ValPublisher {
+            get {
+                return ResourceManager.GetString("Author_ValPublisher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View all {0} →.
         /// </summary>
         public static string Btn_ViewAllManga {
@@ -412,6 +682,132 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Founding Titan.
+        /// </summary>
+        public static string C7Ability {
+            get {
+                return ResourceManager.GetString("C7Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A former Scout who discovered he possessed the power of the Titans. Driven by an unwavering desire for freedom, he eventually initiated the Rumbling to protect Paradis..
+        /// </summary>
+        public static string C7Bio {
+            get {
+                return ResourceManager.GetString("C7Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Yeager.
+        /// </summary>
+        public static string C7Name {
+            get {
+                return ResourceManager.GetString("C7Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attack Titan / Founding Titan.
+        /// </summary>
+        public static string C7Title {
+            get {
+                return ResourceManager.GetString("C7Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hardening.
+        /// </summary>
+        public static string C8Ability {
+            get {
+                return ResourceManager.GetString("C8Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Marleyan Warrior who infiltrated the Walls. Struggled with a split personality due to the guilt of his actions. A formidable soldier with immense durability..
+        /// </summary>
+        public static string C8Bio {
+            get {
+                return ResourceManager.GetString("C8Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiner Braun.
+        /// </summary>
+        public static string C8Name {
+            get {
+                return ResourceManager.GetString("C8Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armored Titan / Vice-Captain.
+        /// </summary>
+        public static string C8Title {
+            get {
+                return ResourceManager.GetString("C8Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Martial Arts.
+        /// </summary>
+        public static string C9Ability {
+            get {
+                return ResourceManager.GetString("C9Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A lone wolf with exceptional martial arts skills. Served as the Female Titan for Marley. Spent years encased in a crystal after her capture by the Scouts..
+        /// </summary>
+        public static string C9Bio {
+            get {
+                return ResourceManager.GetString("C9Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Annie Leonhart.
+        /// </summary>
+        public static string C9Name {
+            get {
+                return ResourceManager.GetString("C9Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female Titan / Warrior.
+        /// </summary>
+        public static string C9Title {
+            get {
+                return ResourceManager.GetString("C9Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confidential records of humanity&apos;s finest and their adversaries..
+        /// </summary>
+        public static string CharactersPageSubtitle {
+            get {
+                return ResourceManager.GetString("CharactersPageSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intelligence Database: Personnel Dossiers.
+        /// </summary>
+        public static string CharactersPageTitle {
+            get {
+                return ResourceManager.GetString("CharactersPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Marleyan Reform Faction.
         /// </summary>
         public static string FactionBtn1 {
@@ -439,11 +835,29 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scout Corps.
+        /// </summary>
+        public static string FactionScouts {
+            get {
+                return ResourceManager.GetString("FactionScouts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loyalty Alignment.
         /// </summary>
         public static string FactionTitle {
             get {
                 return ResourceManager.GetString("FactionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marley Warriors.
+        /// </summary>
+        public static string FactionWarriors {
+            get {
+                return ResourceManager.GetString("FactionWarriors", resourceCulture);
             }
         }
         

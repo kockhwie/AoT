@@ -1,0 +1,47 @@
+﻿@page "/characters/{Slug}"
+@page "/{Lang}/characters/{Slug}"
+@using AOT.Services
+@inject NavigationManager Nav
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+
+@if (_character is not null)
+{
+    <PageTitle>@LocalizationService.GetString(_character.NameKey) - @LocalizationService.GetString("PageTitle")</PageTitle>
+
+    <div class="author-page">
+        <section class="author-hero">
+            <div class="author-portrait-container">
+                <div class="author-portrait-frame">
+                    <img src="/img/characters/@_character.Portrait" class="author-portrait-img" alt="@LocalizationService.GetString(_character.NameKey)" />
+                    <div class="author-portrait-scanlines"></div>
+                </div>
+            </div>
+            <div class="author-hero-details">
+                @if (!string.IsNullOrEmpty(_character.Badge))
+                {
+                    <span class="author-badge">@_character.Badge</span>
+                }
+                <h1 class="aot-char-name">@LocalizationService.GetString(_character.NameKey)</h1>
+                <p class="aot-char-title">@LocalizationService.GetString(_character.TitleKey)</p>
+            </div>
+        </section>
+
+        <section class="author-bio-content">
+            <p class="aot-char-bio">@LocalizationService.GetString(_character.BioKey)</p>
+        </section>
+    </div>
+}
+
+@code {
+    [Parameter] public string Slug { get; set; } = "";
+    [Parameter] public string? Lang { get; set; }
+    private CharacterProfile? _character;
+
+    protected override void OnParametersSet()
+    {
+        _character = CharacterData.FindBySlug(Slug);
+        if (_character is null) Nav.NavigateTo("/not-found");
+        if (!string.IsNullOrEmpty(Lang)) LanguageSwitcher.Initialize(Lang);
+    }
+}

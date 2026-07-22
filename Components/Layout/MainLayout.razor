@@ -20,7 +20,7 @@
                     <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 w-56 rounded-box nav-menu p-2 shadow-2xl">
                         <li>
                             <details name="nav-menu-mobile">
-                            <summary class="dropdown">@LocalizationService.NavCharacters</summary>
+                            <summary class="dropdown"><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a></summary>
                             <ul class="rounded-box nav-menu p-2 bg-base-100  z-1 shadow-2xl dropdown-content">
                                     <li>
                                         <details name="nav-sub-mobile">
@@ -263,7 +263,7 @@
             <ul class="menu menu-horizontal gap-2 px-1 nav-links">
                     <li>
                     <details name="nav-menu-desktop">
-                        <summary tabindex="0">@LocalizationService.NavCharacters</summary>
+                        <summary class="dropdown"><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a></summary>
                         <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu  shadow-2xl">
                                 <li>
                                     <details name="nav-sub-desktop">

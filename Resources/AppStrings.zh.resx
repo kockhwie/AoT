@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
   <xs:schema id="root">
     <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xs:element name="root" ns1:IsDataSet="true">
@@ -647,6 +647,54 @@
   <data name="C6Ability" xml:space="preserve">
     <value>前線指揮官</value>
   </data>
+  <data name="C7Name" xml:space="preserve">
+    <value>艾連·葉卡</value>
+  </data>
+  <data name="C7Title" xml:space="preserve">
+    <value>進擊的巨人 / 始祖的巨人</value>
+  </data>
+  <data name="C7Bio" xml:space="preserve">
+    <value>前調查兵團成員，發現自己擁有巨人之力。在對自由的堅定追求驅使下，他最終發動了地鳴以保護帕拉迪島。</value>
+  </data>
+  <data name="C7Ability" xml:space="preserve">
+    <value>始祖的巨人</value>
+  </data>
+  <data name="C8Name" xml:space="preserve">
+    <value>萊納·布朗</value>
+  </data>
+  <data name="C8Title" xml:space="preserve">
+    <value>盔甲巨人 / 副隊長</value>
+  </data>
+  <data name="C8Bio" xml:space="preserve">
+    <value>潛入牆內的瑪雷戰士。因對自己行為的負罪感而掙扎於雙重人格。一名擁有驚人耐力的強大戰士。</value>
+  </data>
+  <data name="C8Ability" xml:space="preserve">
+    <value>硬化</value>
+  </data>
+  <data name="C9Name" xml:space="preserve">
+    <value>亞妮·雷恩哈特</value>
+  </data>
+  <data name="C9Title" xml:space="preserve">
+    <value>女巨人 / 戰士</value>
+  </data>
+  <data name="C9Bio" xml:space="preserve">
+    <value>擁有卓越格鬥術的孤狼。為瑪雷效力的女巨人。在被調查兵團捕獲後，在水晶中度過了多年。</value>
+  </data>
+  <data name="C9Ability" xml:space="preserve">
+    <value>格鬥術</value>
+  </data>
+  <data name="FactionScouts" xml:space="preserve">
+    <value>調查兵團</value>
+  </data>
+  <data name="FactionWarriors" xml:space="preserve">
+    <value>瑪雷戰士</value>
+  </data>
+  <data name="CharactersPageTitle" xml:space="preserve">
+    <value>情報數據庫：人員檔案</value>
+  </data>
+  <data name="CharactersPageSubtitle" xml:space="preserve">
+    <value>人類精英及其對手的機密記錄。</value>
+  </data>
   <data name="StatKillsBar" xml:space="preserve">
     <value>巨人擊殺數</value>
   </data>
@@ -728,4 +776,34 @@
   <data name="PageTitle" xml:space="preserve">
     <value>進撃の巨人 Attack on Titan</value>
   </data>
-<data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — 進擊的巨人作者</value></data><data name="Author_MetaDesc" xml:space="preserve"><value>關於《進擊的巨人》創作者與漫畫家諫山創的生平與詳細介紹。</value></data><data name="Author_Badge" xml:space="preserve"><value>漫畫家</value></data><data name="Author_Title" xml:space="preserve"><value>《進擊的巨人》創作者與插畫家</value></data><data name="Author_StatBorn" xml:space="preserve"><value>出生</value></data><data name="Author_StatHometown" xml:space="preserve"><value>故鄉</value></data><data name="Author_StatPublisher" xml:space="preserve"><value>出版社</value></data><data name="Author_StatActiveYears" xml:space="preserve"><value>活躍年份</value></data><data name="Author_ValBorn" xml:space="preserve"><value>1986年8月29日</value></data><data name="Author_ValHometown" xml:space="preserve"><value>日本大分縣</value></data><data name="Author_ValPublisher" xml:space="preserve"><value>講談社</value></data><data name="Author_ValActive" xml:space="preserve"><value>2006年 – 至今</value></data><data name="Author_SecBio" xml:space="preserve"><value>創作生平</value></data><data name="Author_SecAwards" xml:space="preserve"><value>獎項與榮譽</value></data><data name="Author_SecLegacy" xml:space="preserve"><value>傳奇與影響力</value></data><data name="Author_Bio1" xml:space="preserve"><value>諫山創出生於日本大分縣大山町，從小就夢想著創作漫畫。當他搬到東京並向講談社提交《進擊的巨人》短篇版時，他迎來了突破。儘管早期的粗獷畫風曾受到批評，但該系列仍於2009年開始在《別冊少年Magazine》連載。</value></data><data name="Author_Bio2" xml:space="preserve"><value>在接下來的12年中，諫山創精心打造了一部重新定義現代黑暗奇幻和少年漫畫的敘事傑作。融合了生存恐怖、政治陰謀和複雜的道德困境，人類與巨人抗爭的故事吸引了全球觀眾。該漫畫於2021年4月完結，共139話。</value></data><data name="Author_Quote" xml:space="preserve"><value>「我認為《進擊的巨人》的故事是關於掙脫命中注定的牢籠的鬥爭，以及為自由付出的沉重代價。」</value></data><data name="Author_Award1Title" xml:space="preserve"><value>講談社漫畫賞</value></data><data name="Author_Award1Desc" xml:space="preserve"><value>憑藉《進擊的巨人》榮獲第35屆少年部門大賞。</value></data><data name="Author_Award2Title" xml:space="preserve"><value>米歇魯齊獎</value></data><data name="Author_Award2Desc" xml:space="preserve"><value>在義大利拿坡里國際漫畫節榮獲最佳外國系列獎。</value></data><data name="Author_Award3Title" xml:space="preserve"><value>哈維獎提名</value></data><data name="Author_Award3Desc" xml:space="preserve"><value>獲提名為最佳美國版外國作品。</value></data><data name="Author_Award4Title" xml:space="preserve"><value>安古蘭國際漫畫節特別獎</value></data><data name="Author_Award4Desc" xml:space="preserve"><value>在法國這項久負盛名的漫畫節上榮獲50週年特別獎。</value></data><data name="Author_MetricVolumes" xml:space="preserve"><value>漫畫單行本</value></data><data name="Author_MetricChapters" xml:space="preserve"><value>漫畫話數</value></data><data name="Author_MetricCopies" xml:space="preserve"><value>全球銷量</value></data><data name="Author_LegacyText" xml:space="preserve"><value>諫山創的作品超越了標準的流行文化。《進擊的巨人》啟發了大型動畫改編、真人電影、輕小說、電子遊戲，以及無數探討其循環仇恨、民族主義和集體創傷等複雜主題的學術論文。他的敘事因其錯綜複雜的伏筆和令人難忘的故事收尾而享譽全球。</value></data></root>
+  <data name="Author_PageTitle" xml:space="preserve"><value>諫山 創 (Hajime Isayama) — 進擊的巨人作者</value></data>
+  <data name="Author_MetaDesc" xml:space="preserve"><value>關於《進擊的巨人》創作者與漫畫家諫山創的生平與詳細介紹。</value></data>
+  <data name="Author_Badge" xml:space="preserve"><value>漫畫家</value></data>
+  <data name="Author_Title" xml:space="preserve"><value>《進擊的巨人》創作者與插畫家</value></data>
+  <data name="Author_StatBorn" xml:space="preserve"><value>出生</value></data>
+  <data name="Author_StatHometown" xml:space="preserve"><value>故鄉</value></data>
+  <data name="Author_StatPublisher" xml:space="preserve"><value>出版社</value></data>
+  <data name="Author_StatActiveYears" xml:space="preserve"><value>活躍年份</value></data>
+  <data name="Author_ValBorn" xml:space="preserve"><value>1986年8月29日</value></data>
+  <data name="Author_ValHometown" xml:space="preserve"><value>日本大分縣</value></data>
+  <data name="Author_ValPublisher" xml:space="preserve"><value>講談社</value></data>
+  <data name="Author_ValActive" xml:space="preserve"><value>2006年 – 至今</value></data>
+  <data name="Author_SecBio" xml:space="preserve"><value>創作生平</value></data>
+  <data name="Author_SecAwards" xml:space="preserve"><value>獎項與榮譽</value></data>
+  <data name="Author_SecLegacy" xml:space="preserve"><value>傳奇與影響力</value></data>
+  <data name="Author_Bio1" xml:space="preserve"><value>諫山創出生於日本大分縣大山町，從小就夢想著創作漫畫。當他搬到東京並向講談社提交《進擊的巨人》短篇版時，他迎來了突破。儘管早期的粗獷畫風曾受到批評，但該系列仍於2009年開始在《別冊少年Magazine》連載。</value></data>
+  <data name="Author_Bio2" xml:space="preserve"><value>在接下來的12年中，諫山創精心打造了一部重新定義現代黑暗奇幻和少年漫畫的敘事傑作。融合了生存恐怖、政治陰謀和複雜的道德困境，人類與巨人抗爭的故事吸引了全球觀眾。該漫畫於2021年4月完結，共139話。</value></data>
+  <data name="Author_Quote" xml:space="preserve"><value>「我認為《進擊的巨人》的故事是關於掙脫命中注定的牢籠的鬥爭，以及為自由付出的沉重代價。」</value></data>
+  <data name="Author_Award1Title" xml:space="preserve"><value>講談社漫畫賞</value></data>
+  <data name="Author_Award1Desc" xml:space="preserve"><value>憑藉《進擊的巨人》榮獲第35屆少年部門大賞。</value></data>
+  <data name="Author_Award2Title" xml:space="preserve"><value>米歇魯齊獎</value></data>
+  <data name="Author_Award2Desc" xml:space="preserve"><value>在義大利拿坡里國際漫畫節榮獲最佳外國系列獎。</value></data>
+  <data name="Author_Award3Title" xml:space="preserve"><value>哈維獎提名</value></data>
+  <data name="Author_Award3Desc" xml:space="preserve"><value>獲提名為最佳美國版外國作品。</value></data>
+  <data name="Author_Award4Title" xml:space="preserve"><value>安古蘭國際漫畫節特別獎</value></data>
+  <data name="Author_Award4Desc" xml:space="preserve"><value>在法國這項久負盛名的漫畫節上榮獲50週年特別獎。</value></data>
+  <data name="Author_MetricVolumes" xml:space="preserve"><value>漫畫單行本</value></data>
+  <data name="Author_MetricChapters" xml:space="preserve"><value>漫畫話數</value></data>
+  <data name="Author_MetricCopies" xml:space="preserve"><value>全球銷量</value></data>
+  <data name="Author_LegacyText" xml:space="preserve"><value>諫山創的作品超越了標準的流行文化。《進擊的巨人》啟發了大型動畫改編、真人電影、輕小說、電子遊戲，以及無數探討其循環仇恨、民族主義和集體創傷等複雜主題的學術論文。他的敘事因其錯綜複雜的伏筆和令人難忘的故事收尾而享譽全球。</value></data>
+<data name="CharGarrison_Title" xml:space="preserve"><value>駐紮兵團老兵</value></data><data name="CharGarrison_Bio" xml:space="preserve"><value>駐守城牆以防禦內部區域被突破，以對希干希納區居民堅定不移的忠誠著稱。</value></data><data name="CharMP_Title" xml:space="preserve"><value>憲兵團指揮官</value></data><data name="CharMP_Bio" xml:space="preserve"><value>統領負責維持牆內秩序的憲兵團，時常在公職與中央的腐敗之間掙扎。</value></data><data name="CharInterior_Title" xml:space="preserve"><value>中央第一憲兵團隊長</value></data><data name="CharInterior_Bio" xml:space="preserve"><value>無情執行王室意志的執法者，掌握憲兵團最機密行動的絕對權力。</value></data><data name="CharRoyal_Title" xml:space="preserve"><value>雷斯王室血脈成員</value></data><data name="CharRoyal_Bio" xml:space="preserve"><value>身懷真正的王室血統，為保護始祖巨人的祕密而隱姓埋名於歷史之外。</value></data><data name="CharGov_Title" xml:space="preserve"><value>王政府官員</value></data><data name="CharGov_Bio" xml:space="preserve"><value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value></data><data name="CharCivilian_Title" xml:space="preserve"><value>帕拉迪島醫師</value></data><data name="CharCivilian_Bio" xml:space="preserve"><value>曾是馬雷戰士候補生，偽裝成醫生潛入瑪利亞之牆，身懷進擊與始祖巨人的祕密。</value></data><data name="CharMarley_Title" xml:space="preserve"><value>馬雷戰士隊</value></data><data name="CharMarley_Bio" xml:space="preserve"><value>自幼被灌輸仇恨帕拉迪島的思想長大，受訓繼承巨人之力並效忠馬雷軍。</value></data><data name="CharTybur_Title" xml:space="preserve"><value>戴巴家族當家</value></data><data name="CharTybur_Bio" xml:space="preserve"><value>戰槌巨人的守護者，也是唯一被允許代表艾爾迪亞人宣戰的家族。</value></data><data name="CharYeagerist_Title" xml:space="preserve"><value>葉卡派民兵領袖</value></data><data name="CharYeagerist_Bio" xml:space="preserve"><value>曾是調查兵團一員，在馬雷突襲雷貝里歐後轉而狂熱效忠艾連的理念。</value></data></root>
