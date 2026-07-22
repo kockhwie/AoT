@@ -175,7 +175,11 @@ h4, [id] {
     min-height: 28px;
 }
 
-
+.aot-btn--thin {
+    padding: 0.25rem 0.55rem;
+    font-size: 0.70rem;
+    min-height: 20px;
+}
 
 
 
