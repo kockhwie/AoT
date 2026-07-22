@@ -25,7 +25,7 @@
             var index = i;
             <div class="manga-slide @(index == _currentSlideIndex ? "active" : "")">
                 <!-- Background Image -->
-                <img src="/img/manga/@slide.Image" class="manga-bg-art" style="object-position: @slide.FocalPosition" alt="@slide.Title" />
+                <img src="/img/manga/@slide.Image" class="manga-bg-art" style="object-position: @slide.FocalPosition" alt="@LocalizationService.GetString(slide.TitleKey)" />
                 <div class="manga-vignette"></div>
 
                 <!-- Manga Speech Bubble / Combat Telemetry Panel -->
@@ -34,12 +34,12 @@
                         <i class="ti ti-bookmark mr-1"></i>@slide.Chapter
                     </a>
                     <h1 class="manga-panel-title">
-                        @slide.Title
+                        @LocalizationService.GetString(slide.TitleKey)
                     </h1>
 
                     <!-- Manga Quote Display -->
                     <blockquote class="manga-quote-block">
-                        “@slide.Quote”
+                        “@LocalizationService.GetString(slide.QuoteKey)”
                     </blockquote>
  
 
@@ -460,9 +460,9 @@
     // Manga Slide Model
     private sealed class MangaSlideModel
     {
-        public string Title { get; init; } = "";
+        public string TitleKey { get; init; } = "";
         public string Chapter { get; init; } = "";
-        public string Quote { get; init; } = "";
+        public string QuoteKey { get; init; } = "";
         public string Image { get; init; } = "";
         public string MangaPath { get; init; } = "";
         // object-position for the background art — lets a slide whose subject sits off-center
@@ -515,47 +515,7 @@
         // Subscribe to language changes to rebuild slides with new quotes
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
 
-        // Populate slides with localized quote contents
-        _mangaSlides = new List<MangaSlideModel>
-        {
-            new MangaSlideModel
-            {
-                Title = "The Breach / 牆的破壞",
-                Chapter = "Vol. 1 / CH. 1 / Pg. 51",
-                Quote = CurrentLang switch {
-                    "zh" => "那一天，人類回想起了，受支配的恐怖…",
-                    "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
-                    _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
-                },
-                MangaPath = "/manga/1",
-                Image = "manga_first_titan.webp"
-            },
-            new MangaSlideModel
-            {
-                Title = "Humanity's Strongest / 最強的兵士",
-                Chapter = "Vol. 20 / CH. 81 / Pg. 115",
-                Quote = CurrentLang switch {
-                    "zh" => "什麼都無法捨棄的人，什麼也改變不了。",
-                    "jp" => "何も捨てることができない人には、何も変えることはできない。",
-                    _ => "A person who cannot sacrifice anything, cannot change anything."
-                },
-                MangaPath = "/manga/20",
-                Image = "manga_levi_beast.webp",
-                FocalPosition = "80% 30%"
-            },
-            new MangaSlideModel
-            {
-                Title = "The Roar of Attack / 進擊的咆哮",
-                Chapter = "Vol. 3 / CH. 10 / Pg. 40",
-                Quote = CurrentLang switch {
-                    "zh" => "我要將牠們驅逐出去，一個不留！",
-                    "jp" => "駆逐してやる、この世から一匹残らず！",
-                    _ => "I will exterminate them... every single one of them from this world!"
-                },
-                MangaPath = "/manga/3",
-                Image = "manga_attack_titan_first_fight.webp"
-            }
-        };
+_mangaSlides = BuildMangaSlides();
 
         _activeCharacterIndex = Math.Min((_characterDatabase.Count - 1) / 2, _characterDatabase.Count - 1);
 
@@ -769,27 +729,28 @@
         {
             new MangaSlideModel
             {
-                Title = "The Breach / 壁的破壞",
+                TitleKey = "Slide1_Title",
                 Chapter = "Vol. 1 / CH. 1 / Pg. 51",
-                Quote = CurrentLang switch {
-                    "zh" => "那一天，人類回想起了，受支配的恐怖…",
-                    "jp" => "その日 人類は思い出した ヤツらに支配されていた恐怖を…",
-                    _ => "On that day, mankind received a grim reminder of the terror of being ruled by them..."
-                },
+                QuoteKey = "Slide1_Quote",
                 MangaPath = "/manga/1",
                 Image = "manga_first_titan.webp"
             },
             new MangaSlideModel
             {
-                Title = "Humanity's Strongest / 最強的兵士",
+                TitleKey = "Slide2_Title",
                 Chapter = "Vol. 20 / CH. 81 / Pg. 115",
-                Quote = CurrentLang switch {
-                    "zh" => "什麼都無法捨棄的人，什麼也改變不了。",
-                    "jp" => "何も捨てることができない人に は、何も変えることはできない。",
-                    _ => "A person who cannot sacrifice anything, cannot change anything."
-                },
+                QuoteKey = "Slide2_Quote",
                 MangaPath = "/manga/20",
-                Image = "manga_levi_beast.webp"
+                Image = "manga_levi_beast.webp",
+                FocalPosition = "80% 30%"
+            },
+            new MangaSlideModel
+            {
+                TitleKey = "Slide3_Title",
+                Chapter = "Vol. 3 / CH. 10 / Pg. 40",
+                QuoteKey = "Slide3_Quote",
+                MangaPath = "/manga/3",
+                Image = "manga_attack_titan_first_fight.webp"
             }
         };
     }
