@@ -808,6 +808,168 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A former Marleyan Warrior candidate who infiltrated Wall Maria disguised as a doctor, carrying the secret of the Attack and Founding Titans..
+        /// </summary>
+        public static string CharCivilian_Bio {
+            get {
+                return ResourceManager.GetString("CharCivilian_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paradis Island Physician.
+        /// </summary>
+        public static string CharCivilian_Title {
+            get {
+                return ResourceManager.GetString("CharCivilian_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stationed on the walls to defend the interior districts from breaches. Known for a fierce, unwavering loyalty to the people of Shiganshina..
+        /// </summary>
+        public static string CharGarrison_Bio {
+            get {
+                return ResourceManager.GetString("CharGarrison_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garrison Regiment Veteran.
+        /// </summary>
+        public static string CharGarrison_Title {
+            get {
+                return ResourceManager.GetString("CharGarrison_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serves within the walls&apos; ruling administration, navigating the political machinery that has controlled Paradis for a century..
+        /// </summary>
+        public static string CharGov_Bio {
+            get {
+                return ResourceManager.GetString("CharGov_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royal Government Official.
+        /// </summary>
+        public static string CharGov_Title {
+            get {
+                return ResourceManager.GetString("CharGov_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A ruthless enforcer of the crown&apos;s will, wielding absolute authority over the Military Police&apos;s most secretive operations..
+        /// </summary>
+        public static string CharInterior_Bio {
+            get {
+                return ResourceManager.GetString("CharInterior_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chief of the First Interior Squad.
+        /// </summary>
+        public static string CharInterior_Title {
+            get {
+                return ResourceManager.GetString("CharInterior_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raised from childhood on Paradis-hating propaganda, trained to inherit a Titan power and serve the Marleyan military..
+        /// </summary>
+        public static string CharMarley_Bio {
+            get {
+                return ResourceManager.GetString("CharMarley_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marleyan Warrior Unit.
+        /// </summary>
+        public static string CharMarley_Title {
+            get {
+                return ResourceManager.GetString("CharMarley_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commands the Military Police Brigade tasked with keeping order within the walls, often caught between civic duty and the corruption of the Interior..
+        /// </summary>
+        public static string CharMP_Bio {
+            get {
+                return ResourceManager.GetString("CharMP_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Police Commander.
+        /// </summary>
+        public static string CharMP_Title {
+            get {
+                return ResourceManager.GetString("CharMP_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carries the blood of the true royal family, hidden from history to protect the secret of the Founding Titan..
+        /// </summary>
+        public static string CharRoyal_Bio {
+            get {
+                return ResourceManager.GetString("CharRoyal_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member of the Reiss Bloodline.
+        /// </summary>
+        public static string CharRoyal_Title {
+            get {
+                return ResourceManager.GetString("CharRoyal_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steward of the War Hammer Titan and the only family permitted to declare war on behalf of the Eldian people..
+        /// </summary>
+        public static string CharTybur_Bio {
+            get {
+                return ResourceManager.GetString("CharTybur_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Head of the Tybur Family.
+        /// </summary>
+        public static string CharTybur_Title {
+            get {
+                return ResourceManager.GetString("CharTybur_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A former Scout who turned to radical loyalty toward Eren Yeager&apos;s cause after Marley&apos;s assault on Liberio..
+        /// </summary>
+        public static string CharYeagerist_Bio {
+            get {
+                return ResourceManager.GetString("CharYeagerist_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeagerist Militia Leader.
+        /// </summary>
+        public static string CharYeagerist_Title {
+            get {
+                return ResourceManager.GetString("CharYeagerist_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Marleyan Reform Faction.
         /// </summary>
         public static string FactionBtn1 {
@@ -1429,6 +1591,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Final Founding Titan.
+        /// </summary>
+        public static string Nav_FinalFoundingTitan {
+            get {
+                return ResourceManager.GetString("Nav_FinalFoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Floch Forster.
         /// </summary>
         public static string Nav_FlochForster {
@@ -1443,6 +1614,15 @@ namespace AOT.Resources {
         public static string Nav_FoundingTitan {
             get {
                 return ResourceManager.GetString("Nav_FoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Founding Titan - Final  Founding Titan.
+        /// </summary>
+        public static string Nav_FoundingTitanMix {
+            get {
+                return ResourceManager.GetString("Nav_FoundingTitanMix", resourceCulture);
             }
         }
         
