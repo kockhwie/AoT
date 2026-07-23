@@ -36,16 +36,31 @@
 
             @foreach (var member in members)
             {
-                <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters/@member.Slug" class="manga-cover-card">
-                    @if (!string.IsNullOrEmpty(member.Badge))
-                    {
-                        <div class="manga-cover-card-top-badge">@member.Badge</div>
-                    }
-                    <div class="manga-cover-card-img-wrap">
-                        <img src="/img/characters/@member.Portrait" class="manga-cover-card-img" alt="@LocalizationService.GetString(member.NameKey)" />
-                        <div class="manga-cover-card-shine"></div>
-                        <div class="manga-cover-card-name">@LocalizationService.GetString(member.NameKey)</div>
-                    </div>
+                var isFeatured = faction == CharacterFaction.Main;
+                <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters/@member.Slug" class="character-game-card @(isFeatured ? "character-game-card--featured" : "") faction-@faction" data-holo-card aria-label="@LocalizationService.GetString(member.NameKey)">
+                    <span class="character-game-card__glow"></span>
+                    <span class="character-game-card__holo"></span>
+                    <span class="character-game-card__glare"></span>
+                    <span class="character-game-card__frame">
+                        <span class="character-game-card__topline">
+                            @if (!string.IsNullOrEmpty(member.Badge))
+                            {
+                                <span class="character-game-card__badge comic-badge @(member.Badge.StartsWith("S") ? "comic-badge--gold" : member.Badge.StartsWith("A") ? "comic-badge--silver" : "comic-badge--bronze")">@member.Badge</span>
+                            }
+                        </span>
+                        <span class="character-game-card__portrait-wrap">
+                            <img src="/img/characters/@member.Portrait" class="character-game-card__portrait" alt="" />
+                            <span class="character-game-card__scanlines"></span>
+                            <span class="character-game-card__portrait-vignette"></span>
+                        </span>
+                        <span class="character-game-card__copy">
+                            <span class="character-game-card__name">@LocalizationService.GetString(member.NameKey)</span>
+                            <span class="character-game-card__title">@LocalizationService.GetString(member.TitleKey)</span>
+                        </span>
+                        <span class="character-game-card__logo-wrap">
+                            <img src="/img/aot-logo-m.png" class="character-game-card__logo" alt="Attack on Titan" />
+                        </span>
+                    </span>
                 </a>
             }
         }

@@ -61,7 +61,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 11. Battle of Heaven and Earth.
+        ///   Looks up a localized string similar to ⑪ Battle of Heaven and Earth.
         /// </summary>
         public static string Arc_BattleOfHeavenAndEarth {
             get {
@@ -70,7 +70,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2. Battle of Trost District.
+        ///   Looks up a localized string similar to ② Battle of Trost District.
         /// </summary>
         public static string Arc_BattleOfTrost {
             get {
@@ -79,7 +79,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5. Clash of the Titans.
+        ///   Looks up a localized string similar to ⑤ Clash of the Titans.
         /// </summary>
         public static string Arc_ClashOfTitans {
             get {
@@ -88,7 +88,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. Prologue / Fall of Shiganshina.
+        ///   Looks up a localized string similar to ① Prologue / Fall of Shiganshina.
         /// </summary>
         public static string Arc_FallOfShiganshina {
             get {
@@ -97,7 +97,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4. The Female Titan.
+        ///   Looks up a localized string similar to ④ The Female Titan.
         /// </summary>
         public static string Arc_FemaleTitan {
             get {
@@ -106,7 +106,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 8. Marley Arc.
+        ///   Looks up a localized string similar to ⑧ Marley Arc.
         /// </summary>
         public static string Arc_Marley {
             get {
@@ -115,7 +115,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7. Return to Shiganshina.
+        ///   Looks up a localized string similar to ⑦ Return to Shiganshina.
         /// </summary>
         public static string Arc_ReturnToShiganshina {
             get {
@@ -124,7 +124,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 6. The Royal Government.
+        ///   Looks up a localized string similar to ⑥ The Royal Government.
         /// </summary>
         public static string Arc_RoyalGovernment {
             get {
@@ -133,7 +133,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 10. The Rumbling.
+        ///   Looks up a localized string similar to ⑩ The Rumbling.
         /// </summary>
         public static string Arc_Rumbling {
             get {
@@ -142,7 +142,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3. 104th Training Corps.
+        ///   Looks up a localized string similar to ③ 104th Training Corps.
         /// </summary>
         public static string Arc_TrainingCorps104 {
             get {
@@ -151,7 +151,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 9. War for Paradis.
+        ///   Looks up a localized string similar to ⑨ War for Paradis.
         /// </summary>
         public static string Arc_WarForParadis {
             get {
@@ -2307,6 +2307,60 @@ namespace AOT.Resources {
         public static string SidebarTitle {
             get {
                 return ResourceManager.GetString("SidebarTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to On that day, mankind received a grim reminder of the terror of being ruled by them....
+        /// </summary>
+        public static string Slide1_Quote {
+            get {
+                return ResourceManager.GetString("Slide1_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Breach.
+        /// </summary>
+        public static string Slide1_Title {
+            get {
+                return ResourceManager.GetString("Slide1_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A person who cannot sacrifice anything, cannot change anything..
+        /// </summary>
+        public static string Slide2_Quote {
+            get {
+                return ResourceManager.GetString("Slide2_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Humanity&apos;s Strongest.
+        /// </summary>
+        public static string Slide2_Title {
+            get {
+                return ResourceManager.GetString("Slide2_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I will exterminate them... every single one of them from this world!.
+        /// </summary>
+        public static string Slide3_Quote {
+            get {
+                return ResourceManager.GetString("Slide3_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Roar of Attack.
+        /// </summary>
+        public static string Slide3_Title {
+            get {
+                return ResourceManager.GetString("Slide3_Title", resourceCulture);
             }
         }
         

@@ -147,14 +147,18 @@
 }
 
 /* --- BIOGRAPHY SECTION --- */
-.author-bio-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+.author-bio-content,
+.author-legacy-text {
     background: linear-gradient(135deg, rgba(20, 22, 26, 0.7), rgba(12, 13, 16, 0.85));
     border: 1px solid rgba(255, 215, 0, 0.15);
     border-radius: 12px;
     padding: 2rem;
+}
+
+.author-bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .author-bio-content .aot-char-bio {
@@ -203,6 +207,7 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     transform: translateY(-2px);
 }
+
 
 .award-year {
     font-size: 0.75rem; /* Tier 2 */
@@ -253,11 +258,13 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
+.author-award-card:hover,
 .author-metric-card:hover {
     border-color: rgba(255, 215, 0, 0.35);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     transform: translateY(-2px);
 }
+
 
 .metric-number {
     font-size: 1.85rem; /* Large impact Tier 1 style */
@@ -273,12 +280,6 @@
     letter-spacing: 0.05em;
 }
 
-.author-legacy-text {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7), rgba(12, 13, 16, 0.85));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 12px;
-    padding: 2rem;
-}
 
 .author-legacy-text .aot-char-bio {
     font-size: 0.875rem; /* Tier 3 */
