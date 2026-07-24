@@ -226,7 +226,7 @@
     <value>Armin</value>
   </data>
   <data name="Nav_Historia" xml:space="preserve">
-    <value>Historia</value>
+    <value>Historia Reiss aka Christa Lenz</value>
   </data>
   <data name="Nav_9Titans9" xml:space="preserve">
     <value>- 9 Titans -</value>
@@ -1001,5 +1001,26 @@
   </data>
   <data name="Slide3_Quote" xml:space="preserve">
     <value>I will exterminate them... every single one of them from this world!</value>
+  </data>
+  <data name="Version_Human" xml:space="preserve">
+    <value>Human Form</value>
+  </data>
+  <data name="Version_AttackTitan" xml:space="preserve">
+    <value>Attack Titan</value>
+  </data>
+  <data name="Version_FoundingTitan" xml:space="preserve">
+    <value>Founding Titan</value>
+  </data>
+  <data name="Version_ArmoredTitan" xml:space="preserve">
+    <value>Armored Titan</value>
+  </data>
+  <data name="Version_FemaleTitan" xml:space="preserve">
+    <value>Female Titan</value>
+  </data>
+  <data name="Version_BeastTitan" xml:space="preserve">
+    <value>Beast Titan</value>
+  </data>
+  <data name="Version_ColossalTitan" xml:space="preserve">
+    <value>Colossal Titan</value>
   </data>
 </root>

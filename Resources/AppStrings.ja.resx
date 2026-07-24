@@ -226,7 +226,7 @@
     <value>アルミン・アルレルト</value>
   </data>
   <data name="Nav_Historia" xml:space="preserve">
-    <value>ヒストリア・レイス</value>
+    <value>ヒストリア・レイス aka クリスタ・レンズ</value>
   </data>
   <data name="Nav_9Titans9" xml:space="preserve">
     <value>- 9体の巨人 -</value>
@@ -1001,5 +1001,26 @@
   </data>
   <data name="Slide3_Quote" xml:space="preserve">
     <value>駆逐してやる、この世から一匹残らず！</value>
+  </data>
+  <data name="Version_Human" xml:space="preserve">
+    <value>人間態</value>
+  </data>
+  <data name="Version_AttackTitan" xml:space="preserve">
+    <value>進撃の巨人</value>
+  </data>
+  <data name="Version_FoundingTitan" xml:space="preserve">
+    <value>始祖の巨人</value>
+  </data>
+  <data name="Version_ArmoredTitan" xml:space="preserve">
+    <value>鎧の巨人</value>
+  </data>
+  <data name="Version_FemaleTitan" xml:space="preserve">
+    <value>女型の巨人</value>
+  </data>
+  <data name="Version_BeastTitan" xml:space="preserve">
+    <value>獣の巨人</value>
+  </data>
+  <data name="Version_ColossalTitan" xml:space="preserve">
+    <value>超大型の巨人</value>
   </data>
 </root>

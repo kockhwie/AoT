@@ -12,6 +12,13 @@ public enum CharacterFaction
     TyburFamily, Yeagerists, Other
 }
 
+// a secondary portrait for characters with a distinct alternate form (titan shift, etc).
+// LabelKey is a resx key shown as a small tag under the name when this version is active.
+public sealed class CharacterVersion
+{
+    public string Portrait { get; init; } = "";
+    public string LabelKey { get; init; } = "";
+}
 
 public sealed class CharacterProfile
 {
@@ -22,7 +29,23 @@ public sealed class CharacterProfile
     public string Portrait { get; init; } = "";// wwwroot/img/characters/{Portrait}
     public List<CharacterFaction> Factions { get; init; } = new(); // was single Faction — a character appears on every faction shelf listed here
     public string Badge { get; init; } = "";
-   
+    public List<CharacterVersion>? ExtraVersions { get; init; }
+
+    // base portrait + any extra versions, each resolved to a full /img src — detail page
+    // filmstrip just iterates this, no path logic in the .razor file.
+    public List<(string Src, string LabelKey)> AllVersions
+    {
+        get
+        {
+            var list = new List<(string, string)>
+            {
+                ($"/img/characters/{Portrait}", ExtraVersions is { Count: > 0 } ? "Version_Human" : "")
+            };
+            if (ExtraVersions != null)
+                list.AddRange(ExtraVersions.Select(v => ($"/img/titans/cards/{v.Portrait}", v.LabelKey)));
+            return list;
+        }
+    }
 }
 
 public static class CharacterData
@@ -54,20 +77,28 @@ public static class CharacterData
         new CharacterProfile { Slug = "erwin-smith", NameKey = "Nav_ErwinSmith", TitleKey = "C5Title", BioKey = "C5Bio", Portrait = "erwin-portrait.webp", Factions = [CharacterFaction.SurveyCorps], Badge = "S RANK" }, // Nav_Commanders, Nav_SectionCommander
         new CharacterProfile { Slug = "jean-kirstein", NameKey = "C6Name", TitleKey = "C6Title", BioKey = "C6Bio", Portrait = "jean-portrait.webp", Factions = [CharacterFaction.SurveyCorps], Badge = "A RANK" },
         new CharacterProfile { Slug = "armin-arlert", NameKey = "Nav_Armin", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "armin-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.SurveyCorps], Badge = "A RANK" }, // Nav_Commanders
-        new CharacterProfile { Slug = "eren-yeager", NameKey = "Nav_Eren", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.Yeagerists], Badge = "A RANK" },
-        new CharacterProfile { Slug = "historia-reiss", NameKey = "Nav_Historia", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.RulingFamily], Badge = "B RANK" },
+
+        new CharacterProfile { Slug = "eren-yeager", NameKey = "Nav_Eren", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "eren1-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.Yeagerists], Badge = "A RANK",
+            ExtraVersions = new() {
+                new() { Portrait = "attack-titan-card.webp", LabelKey = "Version_AttackTitan" },
+                new() { Portrait = "founding-titan-card.webp", LabelKey = "Version_FoundingTitan" }
+            } },
+
+        new CharacterProfile { Slug = "historia-reiss", NameKey = "Nav_Historia", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "historia-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.RulingFamily], Badge = "B RANK" },
 
         // --- Titans ---
-        new CharacterProfile { Slug = "Founding-Titan",     NameKey = "Nav_FoundingTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "13M" },
+
+ 
+        new CharacterProfile { Slug = "Founding-Titan",     NameKey = "Nav_FoundingTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "founding-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "13M" },
         new CharacterProfile { Slug = "Final-Founding-Titan",     NameKey = "Nav_FinalFoundingTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "100M+" },
-        new CharacterProfile { Slug = "Attack-Titan",       NameKey = "Nav_AttackTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
-        new CharacterProfile { Slug = "Armored-Titan",      NameKey = "Nav_ArmoredTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
-        new CharacterProfile { Slug = "Beast-Titan",        NameKey = "Nav_BeastTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "17M" },
-        new CharacterProfile { Slug = "Cart-Titan",         NameKey = "Nav_CartTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "4M" },
-        new CharacterProfile { Slug = "Colossal-Titan",     NameKey = "Nav_ColossalTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "60M" },
-        new CharacterProfile { Slug = "Female-Titan",       NameKey = "Nav_FemaleTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
-        new CharacterProfile { Slug = "Jaw-Titan",          NameKey = "Nav_JawTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "5M" },
-        new CharacterProfile { Slug = "WarHammer-Titan",    NameKey = "Nav_WarHammerTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
+        new CharacterProfile { Slug = "Attack-Titan",       NameKey = "Nav_AttackTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "attack-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
+        new CharacterProfile { Slug = "Armored-Titan",      NameKey = "Nav_ArmoredTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "armored-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
+        new CharacterProfile { Slug = "Beast-Titan",        NameKey = "Nav_BeastTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "beast-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "17M" },
+        new CharacterProfile { Slug = "Cart-Titan",         NameKey = "Nav_CartTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "cart-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "4M" },
+        new CharacterProfile { Slug = "Colossal-Titan",     NameKey = "Nav_ColossalTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "colossal-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "60M" },
+        new CharacterProfile { Slug = "Female-Titan",       NameKey = "Nav_FemaleTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "female-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
+        new CharacterProfile { Slug = "Jaw-Titan",          NameKey = "Nav_JawTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "jaw-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "5M" },
+        new CharacterProfile { Slug = "WarHammer-Titan",    NameKey = "Nav_WarHammerTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "warhammer-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
         new CharacterProfile { Slug = "Sonny-and-Bean",     NameKey = "Nav_SonnyandBean", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "4M~7M" },
         new CharacterProfile { Slug = "Wall-Titans",        NameKey = "Nav_WallTitans", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "50M" },
 
@@ -119,10 +150,18 @@ public static class CharacterData
         // --- Marley - Nav_Marley ---
         new CharacterProfile { Slug = "Calvi-The-Marshal", NameKey = "Nav_CalviTheMarshal", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "The Marshal" },
         new CharacterProfile { Slug = "Theo-Magath-Acommander", NameKey = "Nav_TheoMagathAcommander", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Commander" },
-        new CharacterProfile { Slug = "Reiner-Braun", NameKey = "Nav_ReinerBraun", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
-        new CharacterProfile { Slug = "Zeke-Yeager", NameKey = "Nav_ZekeYeager", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge =  "Warrior Unit" },
-        new CharacterProfile { Slug = "Bertolt-Hoover", NameKey = "Nav_BertoltHoover", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
-        new CharacterProfile { Slug = "Annie-Leonhart", NameKey = "Nav_AnnieLeonhart", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
+
+
+        new CharacterProfile { Slug = "Reiner-Braun", NameKey = "Nav_ReinerBraun", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
+            ExtraVersions = new() { new() { Portrait = "armored-titan-card.webp", LabelKey = "Version_ArmoredTitan" } } 
+        },
+
+        new CharacterProfile { Slug = "Zeke-Yeager", NameKey = "Nav_ZekeYeager", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge =  "Warrior Unit",
+            ExtraVersions = new() { new() { Portrait = "beast-titan-card.webp", LabelKey = "Version_BeastTitan" } } },
+        new CharacterProfile { Slug = "Bertolt-Hoover", NameKey = "Nav_BertoltHoover", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
+            ExtraVersions = new() { new() { Portrait = "colossal-titan-card.webp", LabelKey = "Version_ColossalTitan" } } },
+        new CharacterProfile { Slug = "Annie-Leonhart", NameKey = "Nav_AnnieLeonhart", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
+            ExtraVersions = new() { new() { Portrait = "female-titan-card.webp", LabelKey = "Version_FemaleTitan" } } },    
         new CharacterProfile { Slug = "Marcel-Galliard", NameKey = "Nav_MarcelGalliard", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
         new CharacterProfile { Slug = "Porco-Galliard", NameKey = "Nav_PorcoGalliard", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
         new CharacterProfile { Slug = "Pieck-Finger", NameKey = "Nav_PieckFinger", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },

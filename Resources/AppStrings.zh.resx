@@ -226,7 +226,7 @@
     <value>阿爾敏·亞魯雷特</value>
   </data>
   <data name="Nav_Historia" xml:space="preserve">
-    <value>希絲特莉亞·雷斯</value>
+    <value>希絲特莉亞·雷斯 aka 克里斯塔·連茲</value>
   </data>
   <data name="Nav_9Titans9" xml:space="preserve">
     <value>- 九大巨人 -</value>
@@ -1001,5 +1001,26 @@
   </data>
   <data name="Slide3_Quote" xml:space="preserve">
     <value>我要將牠們驅逐出去，一個不留！</value>
+  </data>
+  <data name="Version_Human" xml:space="preserve">
+    <value>人類形態</value>
+  </data>
+  <data name="Version_AttackTitan" xml:space="preserve">
+    <value>進擊的巨人</value>
+  </data>
+  <data name="Version_FoundingTitan" xml:space="preserve">
+    <value>始祖巨人</value>
+  </data>
+  <data name="Version_ArmoredTitan" xml:space="preserve">
+    <value>盔甲巨人</value>
+  </data>
+  <data name="Version_FemaleTitan" xml:space="preserve">
+    <value>女巨人</value>
+  </data>
+  <data name="Version_BeastTitan" xml:space="preserve">
+    <value>野獸巨人</value>
+  </data>
+  <data name="Version_ColossalTitan" xml:space="preserve">
+    <value>超大型巨人</value>
   </data>
 </root>

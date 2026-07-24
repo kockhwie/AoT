@@ -50,6 +50,10 @@
                         </span>
                         <span class="character-game-card__portrait-wrap">
                             <img src="/img/characters/@member.Portrait" class="character-game-card__portrait" alt="" />
+                            @if (member.ExtraVersions is { Count: > 0 })
+                            {
+                                <span class="character-game-card__multiform" title="Multiple forms"><i class="ti ti-replace"></i></span>
+                            }
                             <span class="character-game-card__scanlines"></span>
                             <span class="character-game-card__portrait-vignette"></span>
                         </span>

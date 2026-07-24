@@ -1,0 +1,259 @@
+/* CharacterDetail.razor.css — comic-panel language (comic-card / comic-frame / comic-badge
+   / comic-tag are global, defined in app.css). Explicit values only — no :root vars
+   inside *.razor.css, isolation breaks the cascade. */
+
+.char-detail-page {
+    max-width: 900px;
+    margin: 1rem auto 2rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.char-detail-back {
+    align-self: flex-start;
+}
+
+/* --- HERO PANEL --- */
+.char-detail-hero {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem;
+}
+
+.char-detail-portrait-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.char-detail-portrait {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+}
+
+.char-detail-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    animation: charDetailFadeIn 0.25s ease;
+}
+
+@keyframes charDetailFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.char-detail-portrait-scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
+    background-size: 100% 4px;
+    opacity: 0.6;
+}
+
+/* --- FILMSTRIP --- */
+.char-detail-filmstrip {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.char-detail-filmstrip-thumb {
+    width: 48px;
+    height: 64px;
+    padding: 0;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0a0a0a;
+    box-shadow: 2px 2px 0px #000000;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    flex-shrink: 0;
+}
+
+    .char-detail-filmstrip-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        opacity: 0.6;
+        transition: opacity 0.15s ease;
+    }
+
+    .char-detail-filmstrip-thumb:hover {
+        box-shadow: 2px 2px 0px #ef4444;
+        transform: translateY(-2px);
+    }
+
+        .char-detail-filmstrip-thumb:hover img {
+            opacity: 0.85;
+        }
+
+    .char-detail-filmstrip-thumb.is-active {
+        border-color: #ef4444;
+        box-shadow: 2px 2px 0px #ef4444;
+    }
+
+        .char-detail-filmstrip-thumb.is-active img {
+            opacity: 1;
+        }
+
+/* --- INFO COLUMN --- */
+.char-detail-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.char-detail-badge {
+    margin-bottom: 0.85rem;
+}
+
+/* Tier 1 — Title */
+.char-detail-name {
+    font-size: clamp(1.6rem, 2.5vw + 1rem, 2.25rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+/* Tier 2 — Subtitle */
+.char-detail-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #dfbb6b;
+    margin: 0.6rem 0 0;
+}
+
+.char-detail-version-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #000000;
+    background: #ef4444;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    margin-top: 0.75rem;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+.char-detail-factions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.char-detail-faction-tag {
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+}
+
+/* --- BIO PANEL --- */
+.char-detail-bio-card {
+    padding: 1.75rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+    .char-detail-bio-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
+
+.char-detail-bio-label {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #dfbb6b;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* Tier 3 — Body */
+.char-detail-bio {
+    position: relative;
+    z-index: 1;
+    font-size: 0.9375rem;
+    color: #d1d5db;
+    line-height: 1.75;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .char-detail-hero {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .char-detail-portrait-col {
+        align-items: center;
+    }
+
+    .char-detail-portrait {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .char-detail-filmstrip {
+        justify-content: center;
+    }
+
+    .char-detail-info {
+        align-items: center;
+    }
+
+    .char-detail-factions {
+        justify-content: center;
+    }
+
+    .char-detail-bio-label {
+        justify-content: center;
+        text-align: center;
+    }
+}

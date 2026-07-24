@@ -1726,7 +1726,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Historia.
+        ///   Looks up a localized string similar to Historia Reiss aka Christa Lenz.
         /// </summary>
         public static string Nav_Historia {
             get {
@@ -2712,6 +2712,69 @@ namespace AOT.Resources {
         public static string TitanSectionTitle {
             get {
                 return ResourceManager.GetString("TitanSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armored Titan.
+        /// </summary>
+        public static string Version_ArmoredTitan {
+            get {
+                return ResourceManager.GetString("Version_ArmoredTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attack Titan.
+        /// </summary>
+        public static string Version_AttackTitan {
+            get {
+                return ResourceManager.GetString("Version_AttackTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beast Titan.
+        /// </summary>
+        public static string Version_BeastTitan {
+            get {
+                return ResourceManager.GetString("Version_BeastTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colossal Titan.
+        /// </summary>
+        public static string Version_ColossalTitan {
+            get {
+                return ResourceManager.GetString("Version_ColossalTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female Titan.
+        /// </summary>
+        public static string Version_FemaleTitan {
+            get {
+                return ResourceManager.GetString("Version_FemaleTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Founding Titan.
+        /// </summary>
+        public static string Version_FoundingTitan {
+            get {
+                return ResourceManager.GetString("Version_FoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Human Form.
+        /// </summary>
+        public static string Version_Human {
+            get {
+                return ResourceManager.GetString("Version_Human", resourceCulture);
             }
         }
     }

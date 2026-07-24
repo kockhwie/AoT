@@ -12,115 +12,110 @@
 </HeadContent>
 
 <div class="author-page">
-    <!-- Hero Banner Section -->
-    <section class="author-hero">
-        <div class="author-portrait-container">
-            <div class="author-portrait-frame">
-                <img src="/img/isayama.png" class="author-portrait-img" alt="Hajime Isayama" />
-                <div class="author-portrait-scanlines"></div>
-            </div>
+    <!-- Hero Panel -->
+    <section class="author-hero comic-card">
+        <div class="author-portrait comic-frame">
+            <img src="/img/isayama.png" class="author-portrait-img" alt="Hajime Isayama" />
         </div>
-        
+
         <div class="author-hero-details">
-            <span class="author-badge">@LocalizationService.GetString("Author_Badge")</span>
-            <h1 class="aot-char-name">諫山 創 <span class="author-name-en">(Hajime Isayama)</span></h1>
-            <p class="aot-char-title">@LocalizationService.GetString("Author_Title")</p>
-            
+            <span class="comic-badge comic-badge--gold author-badge">@LocalizationService.GetString("Author_Badge")</span>
+            <h1 class="author-name">諫山 創 <span class="author-name-en">(Hajime Isayama)</span></h1>
+            <p class="author-title">@LocalizationService.GetString("Author_Title")</p>
+
             <div class="author-quick-stats">
                 <div class="author-stat-tile">
-                    <span class="aot-stat-label">@LocalizationService.GetString("Author_StatBorn")</span>
-                    <span class="aot-stat-val">@LocalizationService.GetString("Author_ValBorn")</span>
+                    <span class="author-stat-label">@LocalizationService.GetString("Author_StatBorn")</span>
+                    <span class="author-stat-val">@LocalizationService.GetString("Author_ValBorn")</span>
                 </div>
                 <div class="author-stat-tile">
-                    <span class="aot-stat-label">@LocalizationService.GetString("Author_StatHometown")</span>
-                    <span class="aot-stat-val">@LocalizationService.GetString("Author_ValHometown")</span>
+                    <span class="author-stat-label">@LocalizationService.GetString("Author_StatHometown")</span>
+                    <span class="author-stat-val">@LocalizationService.GetString("Author_ValHometown")</span>
                 </div>
                 <div class="author-stat-tile">
-                    <span class="aot-stat-label">@LocalizationService.GetString("Author_StatPublisher")</span>
-                    <span class="aot-stat-val">@LocalizationService.GetString("Author_ValPublisher")</span>
+                    <span class="author-stat-label">@LocalizationService.GetString("Author_StatPublisher")</span>
+                    <span class="author-stat-val">@LocalizationService.GetString("Author_ValPublisher")</span>
                 </div>
                 <div class="author-stat-tile">
-                    <span class="aot-stat-label">@LocalizationService.GetString("Author_StatActiveYears")</span>
-                    <span class="aot-stat-val">@LocalizationService.GetString("Author_ValActive")</span>
+                    <span class="author-stat-label">@LocalizationService.GetString("Author_StatActiveYears")</span>
+                    <span class="author-stat-val">@LocalizationService.GetString("Author_ValActive")</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Biography Section -->
-    <section class="author-bio-section">
+    <!-- Biography -->
+    <section class="author-panel comic-card">
         <h3 class="aot-section-title">
             <i class="ti ti-book-2"></i> @LocalizationService.GetString("Author_SecBio")
         </h3>
-        <div class="author-bio-content">
-            <p class="aot-char-bio">
+        <div class="author-panel-body">
+            <p class="author-bio-text">
                 @((MarkupString)LocalizationService.GetString("Author_Bio1").Replace("Attack on Titan", "<strong>Attack on Titan</strong>").Replace("Shingeki no Kyojin", "<strong>Shingeki no Kyojin</strong>").Replace("進撃の巨人", "<strong>進撃の巨人</strong>").Replace("進擊的巨人", "<strong>進擊的巨人</strong>"))
             </p>
-            
-            <p class="aot-char-bio">
+
+            <p class="author-bio-text">
                 @LocalizationService.GetString("Author_Bio2")
             </p>
-            
+
             <blockquote class="author-pullquote">
                 @LocalizationService.GetString("Author_Quote")
             </blockquote>
         </div>
     </section>
 
-    <!-- Awards Section -->
-    <section class="author-awards-section">
+    <!-- Awards -->
+    <section class="author-panel comic-card">
         <h3 class="aot-section-title">
             <i class="ti ti-trophy"></i> @LocalizationService.GetString("Author_SecAwards")
         </h3>
-        <div class="author-awards-grid">
+        <div class="author-panel-body author-awards-grid">
             <div class="author-award-card">
-                <div class="award-year">2011</div>
-                <h4 class="award-title">@LocalizationService.GetString("Author_Award1Title")</h4>
-                <p class="award-desc">@LocalizationService.GetString("Author_Award1Desc")</p>
+                <div class="author-award-year">2011</div>
+                <h4 class="author-award-title">@LocalizationService.GetString("Author_Award1Title")</h4>
+                <p class="author-award-desc">@LocalizationService.GetString("Author_Award1Desc")</p>
             </div>
             <div class="author-award-card">
-                <div class="award-year">2014</div>
-                <h4 class="award-title">@LocalizationService.GetString("Author_Award2Title")</h4>
-                <p class="award-desc">@LocalizationService.GetString("Author_Award2Desc")</p>
+                <div class="author-award-year">2014</div>
+                <h4 class="author-award-title">@LocalizationService.GetString("Author_Award2Title")</h4>
+                <p class="author-award-desc">@LocalizationService.GetString("Author_Award2Desc")</p>
             </div>
             <div class="author-award-card">
-                <div class="award-year">2014</div>
-                <h4 class="award-title">@LocalizationService.GetString("Author_Award3Title")</h4>
-                <p class="award-desc">@LocalizationService.GetString("Author_Award3Desc")</p>
+                <div class="author-award-year">2014</div>
+                <h4 class="author-award-title">@LocalizationService.GetString("Author_Award3Title")</h4>
+                <p class="author-award-desc">@LocalizationService.GetString("Author_Award3Desc")</p>
             </div>
             <div class="author-award-card">
-                <div class="award-year">2023</div>
-                <h4 class="award-title">@LocalizationService.GetString("Author_Award4Title")</h4>
-                <p class="award-desc">@LocalizationService.GetString("Author_Award4Desc")</p>
+                <div class="author-award-year">2023</div>
+                <h4 class="author-award-title">@LocalizationService.GetString("Author_Award4Title")</h4>
+                <p class="author-award-desc">@LocalizationService.GetString("Author_Award4Desc")</p>
             </div>
         </div>
     </section>
 
-    <!-- Legacy & Impact Section -->
-    <section class="author-legacy-section">
+    <!-- Legacy & Impact -->
+    <section class="author-panel comic-card">
         <h3 class="aot-section-title">
             <i class="ti ti-chart-bar"></i> @LocalizationService.GetString("Author_SecLegacy")
         </h3>
-        <div class="author-legacy-container">
+        <div class="author-panel-body author-legacy-container">
             <div class="author-metrics-grid">
                 <div class="author-metric-card">
-                    <span class="metric-number">34</span>
-                    <span class="metric-label">@LocalizationService.GetString("Author_MetricVolumes")</span>
+                    <span class="author-metric-number">34</span>
+                    <span class="author-metric-label">@LocalizationService.GetString("Author_MetricVolumes")</span>
                 </div>
                 <div class="author-metric-card">
-                    <span class="metric-number">139</span>
-                    <span class="metric-label">@LocalizationService.GetString("Author_MetricChapters")</span>
+                    <span class="author-metric-number">139</span>
+                    <span class="author-metric-label">@LocalizationService.GetString("Author_MetricChapters")</span>
                 </div>
                 <div class="author-metric-card">
-                    <span class="metric-number">140M+</span>
-                    <span class="metric-label">@LocalizationService.GetString("Author_MetricCopies")</span>
+                    <span class="author-metric-number">140M+</span>
+                    <span class="author-metric-label">@LocalizationService.GetString("Author_MetricCopies")</span>
                 </div>
             </div>
-            <div class="author-legacy-text">
-                <p class="aot-char-bio">
-                    @LocalizationService.GetString("Author_LegacyText")
-                </p>
-            </div>
+            <p class="author-bio-text">
+                @LocalizationService.GetString("Author_LegacyText")
+            </p>
         </div>
     </section>
 </div>

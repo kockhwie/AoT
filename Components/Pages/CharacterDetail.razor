@@ -7,29 +7,67 @@
 
 @if (_character is not null)
 {
+    var versions = _character.AllVersions;
+    var active = versions[_activeVersionIndex];
+
     <PageTitle>@LocalizationService.GetString(_character.NameKey) - @LocalizationService.GetString("PageTitle")</PageTitle>
 
-    <div class="author-page">
-        <section class="author-hero">
-            <div class="author-portrait-container">
-                <div class="author-portrait-frame">
-                    <img src="/img/characters/@_character.Portrait" class="author-portrait-img" alt="@LocalizationService.GetString(_character.NameKey)" />
-                    <div class="author-portrait-scanlines"></div>
+    <div class="char-detail-page">
+        <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters" class="aot-btn aot-btn--white aot-btn--sm char-detail-back">
+            <i class="ti ti-caret-left"></i> @LocalizationService.NavCharacters
+        </a>
+
+        <div class="char-detail-hero comic-card">
+            <div class="char-detail-portrait-col">
+                <div class="char-detail-portrait comic-frame">
+                    <img @key="_activeVersionIndex" src="@active.Src" class="char-detail-portrait-img" alt="@LocalizationService.GetString(_character.NameKey)" />
+                    <div class="char-detail-portrait-scanlines"></div>
                 </div>
+
+                @if (versions.Count > 1)
+                {
+                    <div class="char-detail-filmstrip">
+                        @for (int i = 0; i < versions.Count; i++)
+                        {
+                            var index = i;
+                            var v = versions[i];
+                            <button type="button"
+                                    class="char-detail-filmstrip-thumb @(index == _activeVersionIndex ? "is-active" : "")"
+                                    @onclick="() => _activeVersionIndex = index"
+                                    aria-label="@LocalizationService.GetString(v.LabelKey)">
+                                <img src="@v.Src" alt="" />
+                            </button>
+                        }
+                    </div>
+                }
             </div>
-            <div class="author-hero-details">
+
+            <div class="char-detail-info">
                 @if (!string.IsNullOrEmpty(_character.Badge))
                 {
-                    <span class="author-badge">@_character.Badge</span>
+                    <span class="comic-badge comic-badge--gold char-detail-badge">@_character.Badge</span>
                 }
-                <h1 class="aot-char-name">@LocalizationService.GetString(_character.NameKey)</h1>
-                <p class="aot-char-title">@LocalizationService.GetString(_character.TitleKey)</p>
-            </div>
-        </section>
+                <h1 class="char-detail-name">@LocalizationService.GetString(_character.NameKey)</h1>
+                <p class="char-detail-title">@LocalizationService.GetString(_character.TitleKey)</p>
 
-        <section class="author-bio-content">
-            <p class="aot-char-bio">@LocalizationService.GetString(_character.BioKey)</p>
-        </section>
+                @if (!string.IsNullOrEmpty(active.LabelKey))
+                {
+                    <span class="char-detail-version-tag"><i class="ti ti-replace"></i> @LocalizationService.GetString(active.LabelKey)</span>
+                }
+
+                <div class="char-detail-factions">
+                    @foreach (var faction in _character.Factions)
+                    {
+                        <span class="comic-tag char-detail-faction-tag">@LocalizationService.GetString(CharacterData.FactionNameKeys[faction])</span>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="char-detail-bio-card comic-card">
+            <span class="char-detail-bio-label"><i class="ti ti-file-text"></i> Personnel File</span>
+            <p class="char-detail-bio">@LocalizationService.GetString(_character.BioKey)</p>
+        </div>
     </div>
 }
 
@@ -37,11 +75,13 @@
     [Parameter] public string Slug { get; set; } = "";
     [Parameter] public string? Lang { get; set; }
     private CharacterProfile? _character;
+    private int _activeVersionIndex;
 
     protected override void OnParametersSet()
     {
         _character = CharacterData.FindBySlug(Slug);
         if (_character is null) Nav.NavigateTo("/not-found");
+        _activeVersionIndex = 0;
         if (!string.IsNullOrEmpty(Lang)) LanguageSwitcher.Initialize(Lang);
     }
 }
