@@ -523,7 +523,7 @@
     <value>始祖の巨人</value>
   </data>
   <data name="T1H" xml:space="preserve">
-    <value>全長: 13m (通常時)</value>
+    <value>全長: 204m (通常時)</value>
   </data>
   <data name="T1Desc" xml:space="preserve">
     <value>すべての巨人の頂点。「座標」を通じてユミルの民の記憶を改変し、無数の超大型巨人を操り世界を崩壊させる「地鳴らし」を発動できる。</value>
@@ -1022,5 +1022,8 @@
   </data>
   <data name="Version_ColossalTitan" xml:space="preserve">
     <value>超大型の巨人</value>
+  </data>
+  <data name="Character_Ymir" xml:space="preserve">
+    <value>ユミル</value>
   </data>
 </root>

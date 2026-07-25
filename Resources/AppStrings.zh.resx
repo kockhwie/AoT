@@ -523,7 +523,7 @@
     <value>始祖巨人</value>
   </data>
   <data name="T1H" xml:space="preserve">
-    <value>身高: 13米 (初始型態)</value>
+    <value>身高: 204米 (初始型態)</value>
   </data>
   <data name="T1Desc" xml:space="preserve">
     <value>所有巨人之源。擁有至高無上的「座標」秘術，能隔空篡改尤米爾子民的集體記憶，並能操控城牆內千萬名超大型巨人發動「地鳴」摧毀世界。</value>
@@ -1022,5 +1022,8 @@
   </data>
   <data name="Version_ColossalTitan" xml:space="preserve">
     <value>超大型巨人</value>
+  </data>
+  <data name="Character_Ymir" xml:space="preserve">
+    <value>尤米爾</value>
   </data>
 </root>

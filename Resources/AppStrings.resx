@@ -523,7 +523,7 @@
     <value>Founding Titan</value>
   </data>
   <data name="T1H" xml:space="preserve">
-    <value>Height: 13m (Base Form)</value>
+    <value>Height: 204m (Base Form)</value>
   </data>
   <data name="T1Desc" xml:space="preserve">
     <value>The nexus of all titans. Wields the ultimate 'Coordinate' ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic 'Rumbling'.</value>
@@ -1022,5 +1022,8 @@
   </data>
   <data name="Version_ColossalTitan" xml:space="preserve">
     <value>Colossal Titan</value>
+  </data>
+  <data name="Character_Ymir" xml:space="preserve">
+    <value>Ymir</value>
   </data>
 </root>

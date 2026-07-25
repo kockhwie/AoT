@@ -790,6 +790,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ymir.
+        /// </summary>
+        public static string Character_Ymir {
+            get {
+                return ResourceManager.GetString("Character_Ymir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confidential records of humanity&apos;s finest and their adversaries..
         /// </summary>
         public static string CharactersPageSubtitle {
@@ -2428,7 +2437,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Height: 13m (Base Form).
+        ///   Looks up a localized string similar to Height: 204m (Base Form).
         /// </summary>
         public static string T1H {
             get {
