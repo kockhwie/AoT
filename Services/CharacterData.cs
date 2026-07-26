@@ -91,12 +91,10 @@ public static class CharacterData
             ExtraVersions = [
                 new() { Portrait = "jaw-titan-card.webp", LabelKey = "Version_JawTitan" } 
             ] },
-        new CharacterProfile { Slug = "historia-reiss", NameKey = "Nav_Historia", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "historia-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.RulingFamily], Badge = "B RANK" },
 
+        new CharacterProfile { Slug = "historia-reiss", NameKey = "Nav_Historia", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "historia-portrait.webp", FocalPosition = "center 40%", Factions = [CharacterFaction.Main, CharacterFaction.RulingFamily], Badge = "B RANK" },
+        
         // --- Titans ---
-
- 
-
         new CharacterProfile { Slug = "Founding-Titan",     NameKey = "Nav_FoundingTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "founding-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "204M" },
         new CharacterProfile { Slug = "Final-Founding-Titan",     NameKey = "Nav_FinalFoundingTitan", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "100M+" },
         new CharacterProfile { Slug = "Attack-Titan",       NameKey = "Nav_AttackTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "attack-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
