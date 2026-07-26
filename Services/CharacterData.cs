@@ -27,10 +27,15 @@ public sealed class CharacterProfile
     public string TitleKey { get; init; } = "";
     public string BioKey { get; init; } = "";
     public string Portrait { get; init; } = "";// wwwroot/img/characters/{Portrait}
-    public List<CharacterFaction> Factions { get; init; } = new(); // was single Faction — a character appears on every faction shelf listed here
+    public List<CharacterFaction> Factions { get; init; } = []; // was single Faction — a character appears on every faction shelf listed here
     public string Badge { get; init; } = "";
     public List<CharacterVersion>? ExtraVersions { get; init; }
 
+    public string? FocalPosition { get; init; }
+    // Pre-formatted style string so Razor markup never embeds a raw ternary/colon inside
+    // style="...", which trips VS's CSS024 analyzer (CSS024: missing property name before ':').
+    public string FocalStyle => string.IsNullOrEmpty(FocalPosition) ? "" : $"object-position: {FocalPosition};";
+    
     // base portrait + any extra versions, each resolved to a full /img src — detail page
     // filmstrip just iterates this, no path logic in the .razor file.
     public List<(string Src, string LabelKey)> AllVersions
@@ -50,8 +55,7 @@ public sealed class CharacterProfile
 
 public static class CharacterData
 {
-    public static readonly List<CharacterProfile> Profiles = new()
-    {
+    public static readonly List<CharacterProfile> Profiles = [
 
        /*                          
             <li class="menu-title"><span>@LocalizationService.GetString("Nav_Captains")</span></li>
@@ -79,14 +83,14 @@ public static class CharacterData
         new CharacterProfile { Slug = "armin-arlert", NameKey = "Nav_Armin", TitleKey = "C3Title", BioKey = "C3Bio", Portrait = "armin-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.SurveyCorps], Badge = "A RANK" }, // Nav_Commanders
 
         new CharacterProfile { Slug = "eren-yeager", NameKey = "Nav_Eren", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "eren1-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.Yeagerists], Badge = "A RANK",
-            ExtraVersions = new() {
+            ExtraVersions = [
                 new() { Portrait = "attack-titan-card.webp", LabelKey = "Version_AttackTitan" },
                 new() { Portrait = "founding-titan-card.webp", LabelKey = "Version_FoundingTitan" }
-            } },
+            ] },
         new CharacterProfile { Slug = "Ymir", NameKey = "Character_Ymir", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "ymir-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.SurveyCorps], Badge = "A RANK",
-            ExtraVersions = new() {
+            ExtraVersions = [
                 new() { Portrait = "jaw-titan-card.webp", LabelKey = "Version_JawTitan" } 
-            } },
+            ] },
         new CharacterProfile { Slug = "historia-reiss", NameKey = "Nav_Historia", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "historia-portrait.webp", Factions = [CharacterFaction.Main, CharacterFaction.RulingFamily], Badge = "B RANK" },
 
         // --- Titans ---
@@ -104,7 +108,7 @@ public static class CharacterData
         new CharacterProfile { Slug = "Jaw-Titan",          NameKey = "Nav_JawTitan", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "jaw-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "5M" },
         new CharacterProfile { Slug = "WarHammer-Titan",    NameKey = "Nav_WarHammerTitan", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "warhammer-titan-card.webp", Factions = [CharacterFaction.Titans], Badge = "15M" },
         new CharacterProfile { Slug = "Sonny-and-Bean",     NameKey = "Nav_SonnyandBean", TitleKey = "CharEren_Title", BioKey = "CharEren_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "4M~7M" },
-        new CharacterProfile { Slug = "Wall-Titans",        NameKey = "Nav_WallTitans", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "50M" },
+        new CharacterProfile { Slug = "Wall-Titans",        NameKey = "Nav_WallTitans", TitleKey = "CharHistoria_Title", BioKey = "CharHistoria_Bio", Portrait = "wall-titans-portrait.webp", Factions = [CharacterFaction.Titans], Badge = "50M" },
 
         new CharacterProfile { Slug = "Eld-Jinn", NameKey = "Nav_EldJinn", TitleKey = "C2Title", BioKey = "C2Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.SurveyCorpsSpecialOps], Badge = "A+ RANK" },
         new CharacterProfile { Slug = "Oluo-Bozado", NameKey = "Nav_OluoBozado", TitleKey = "C2Title", BioKey = "C2Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.SurveyCorpsSpecialOps], Badge = "A+ RANK" },
@@ -157,15 +161,15 @@ public static class CharacterData
 
 
         new CharacterProfile { Slug = "Reiner-Braun", NameKey = "Nav_ReinerBraun", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "reiner-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
-            ExtraVersions = new() { new() { Portrait = "armored-titan-card.webp", LabelKey = "Version_ArmoredTitan" } } 
+            ExtraVersions = [ new() { Portrait = "armored-titan-card.webp", LabelKey = "Version_ArmoredTitan" } ] 
         },
 
         new CharacterProfile { Slug = "Zeke-Yeager", NameKey = "Nav_ZekeYeager", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "zeke-portrait.webp", Factions = [CharacterFaction.Marley], Badge =  "Warrior Unit",
-            ExtraVersions = new() { new() { Portrait = "beast-titan-card.webp", LabelKey = "Version_BeastTitan" } } },
+            ExtraVersions = [ new() { Portrait = "beast-titan-card.webp", LabelKey = "Version_BeastTitan" } ] },
         new CharacterProfile { Slug = "Bertolt-Hoover", NameKey = "Nav_BertoltHoover", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "bertolt-hoover-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
-            ExtraVersions = new() { new() { Portrait = "colossal-titan-card.webp", LabelKey = "Version_ColossalTitan" } } },
+            ExtraVersions = [ new() { Portrait = "colossal-titan-card.webp", LabelKey = "Version_ColossalTitan" } ] },
         new CharacterProfile { Slug = "Annie-Leonhart", NameKey = "Nav_AnnieLeonhart", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit",
-            ExtraVersions = new() { new() { Portrait = "female-titan-card.webp", LabelKey = "Version_FemaleTitan" } } },    
+            ExtraVersions = [ new() { Portrait = "female-titan-card.webp", LabelKey = "Version_FemaleTitan" } ] },    
         new CharacterProfile { Slug = "Marcel-Galliard", NameKey = "Nav_MarcelGalliard", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
         new CharacterProfile { Slug = "Porco-Galliard", NameKey = "Nav_PorcoGalliard", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
         new CharacterProfile { Slug = "Pieck-Finger", NameKey = "Nav_PieckFinger", TitleKey = "CharMarley_Title", BioKey = "CharMarley_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Marley], Badge = "Warrior Unit" },
@@ -189,12 +193,12 @@ public static class CharacterData
         new CharacterProfile { Slug = "Underground", NameKey = "Nav_Underground", TitleKey = "CharYeagerist_Title", BioKey = "CharYeagerist_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Other], Badge = "B RANK" },
 
 
-    };
+    ];
 
     public static CharacterProfile? FindBySlug(string slug) => Profiles.FirstOrDefault(c => c.Slug == slug);
 
-    public static readonly List<CharacterFaction> FactionOrder = new()
-    {
+    public static readonly List<CharacterFaction> FactionOrder = [
+    
         CharacterFaction.Main, 
         CharacterFaction.Titans, 
         CharacterFaction.SurveyCorps, 
@@ -209,7 +213,7 @@ public static class CharacterData
         CharacterFaction.TyburFamily, 
         CharacterFaction.Yeagerists, 
         CharacterFaction.Other
-    };
+    ];
 
     // enum -> resx key — reuses the Nav_* keys your dropdown already has (Nav_Main, Nav_Titans,
     // Nav_SurveyCorps...), zero new localization needed for section headers.

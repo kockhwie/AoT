@@ -20,8 +20,8 @@
         <div class="char-detail-hero comic-card">
             <div class="char-detail-portrait-col">
                 <div class="char-detail-portrait comic-frame">
-                    <img @key="_activeVersionIndex" src="@active.Src" class="char-detail-portrait-img" alt="@LocalizationService.GetString(_character.NameKey)" />
-                    <div class="char-detail-portrait-scanlines"></div>
+                    <img @key="_activeVersionIndex" src="@active.Src" class="char-detail-portrait-img"
+                         style="@ActiveFocalStyle" alt="@LocalizationService.GetString(_character.NameKey)" />
                 </div>
 
                 @if (versions.Count > 1)
@@ -47,8 +47,7 @@
                 {
                     <span class="comic-badge comic-badge--gold char-detail-badge">@_character.Badge</span>
                 }
-                <h1 class="char-detail-name">@LocalizationService.GetString(_character.NameKey)</h1>
-                <p class="char-detail-title">@LocalizationService.GetString(_character.TitleKey)</p>
+                <h1 class="char-detail-name">@TextFormatHelper.FormatNameWithAka(LocalizationService.GetString(_character.NameKey))</h1>                <p class="char-detail-title">@LocalizationService.GetString(_character.TitleKey)</p>
 
                 @if (!string.IsNullOrEmpty(active.LabelKey))
                 {
@@ -76,6 +75,9 @@
     [Parameter] public string? Lang { get; set; }
     private CharacterProfile? _character;
     private int _activeVersionIndex;
+    private string ActiveFocalStyle => _activeVersionIndex == 0 && !string.IsNullOrEmpty(_character?.FocalPosition)
+    ? $"object-position: {_character!.FocalPosition};" : "";
+
 
     protected override void OnParametersSet()
     {

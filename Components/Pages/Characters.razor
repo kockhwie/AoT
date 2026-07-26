@@ -49,7 +49,8 @@
                             }
                         </span>
                         <span class="character-game-card__portrait-wrap">
-                            <img src="/img/characters/@member.Portrait" class="character-game-card__portrait" alt="" />
+                            <img src="/img/characters/@member.Portrait" class="character-game-card__portrait"
+                                 style="@(string.IsNullOrEmpty(member.FocalPosition) ? "" : $"object-position: {member.FocalPosition};")" alt="" />
                             @if (member.ExtraVersions is { Count: > 0 })
                             {
                                 <span class="character-game-card__multiform" title="Multiple forms"><i class="ti ti-replace"></i></span>
@@ -58,8 +59,7 @@
                             <span class="character-game-card__portrait-vignette"></span>
                         </span>
                         <span class="character-game-card__copy">
-                            <span class="character-game-card__name">@LocalizationService.GetString(member.NameKey)</span>
-                            <span class="character-game-card__title">@LocalizationService.GetString(member.TitleKey)</span>
+                            <span class="character-game-card__name">@TextFormatHelper.FormatNameWithAka(LocalizationService.GetString(member.NameKey))</span>                            <span class="character-game-card__title">@LocalizationService.GetString(member.TitleKey)</span>
                         </span>
                         <span class="character-game-card__logo-wrap">
                             <img src="/img/aot-logo-m.png" class="character-game-card__logo" alt="Attack on Titan" />
