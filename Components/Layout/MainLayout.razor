@@ -192,7 +192,7 @@
                         <div class="faction-result-row">
                             <div class="faction-result-label">
                                 <span>馬萊帝國改革派</span>
-                                <span>@MarleyPct% (@PollService.MarleyVotes)</span>
+                                <span>@MarleyPct% (@MarleyVotes)</span>
                             </div>
                             <div class="faction-result-track">
                                 <div class="faction-result-fill marley" style="@MarleyFillStyle"></div>
@@ -201,12 +201,19 @@
                         <div class="faction-result-row">
                             <div class="faction-result-label">
                                 <span>帕拉迪島聯盟派</span>
-                                <span>@ParadisPct% (@PollService.ParadisVotes)</span>
+                                <span>@ParadisPct% (@ParadisVotes)</span>
                             </div>
                             <div class="faction-result-track">
                                 <div class="faction-result-fill paradis" style="@ParadisFillStyle"></div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Reset Vote Button for Testing -->
+                    <div class="mt-3 text-center">
+                        <button type="button" class="btn btn-xs btn-outline btn-warning" @onclick="ResetVote">
+                            <i class="ti ti-refresh mr-1"></i> 重置本地投票 (測試用)
+                        </button>
                     </div>
                 }
             </div>
@@ -264,9 +271,14 @@
     
     private bool _hasVoted;
     private string? _votedFaction;
+    private Dictionary<string, long> _votes = new(StringComparer.OrdinalIgnoreCase);
 
-    private int MarleyPct => PollService.TotalVotes == 0 ? 50 : (int)Math.Round(PollService.MarleyVotes * 100.0 / PollService.TotalVotes);
-    private int ParadisPct => PollService.TotalVotes == 0 ? 50 : 100 - MarleyPct;
+    private long MarleyVotes => _votes.TryGetValue("marley", out var v) ? v : 0;
+    private long ParadisVotes => _votes.TryGetValue("paradis", out var v) ? v : 0;
+    private long TotalVotes => _votes.Values.Sum();
+
+    private int MarleyPct => TotalVotes == 0 ? 50 : (int)Math.Round(MarleyVotes * 100.0 / TotalVotes);
+    private int ParadisPct => TotalVotes == 0 ? 50 : 100 - MarleyPct;
 
     private string MarleyFillStyle => $"width: {MarleyPct}%;";
     private string ParadisFillStyle => $"width: {ParadisPct}%;";
@@ -281,11 +293,6 @@
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
     }
 
-    /// <summary>
-    /// Handler for language changes. This single method replaces the need to duplicate
-    /// language-change logic on every page. Child components can now also subscribe to
-    /// LanguageSwitcher.OnLanguageChanged if they need to react to language changes.
-    /// </summary>
     private void HandleLanguageChanged(string newLanguage)
     {
         _activeLang = newLanguage;
@@ -293,9 +300,6 @@
         StateHasChanged();
     }
 
-    /// <summary>
-    /// Change language - navigates to the localized URL.
-    /// </summary>
     private void ChangeLanguage(string targetLang)
     {
         var currentUri = new Uri(Nav.Uri);
@@ -304,77 +308,35 @@
         Nav.NavigateTo(targetUrl, forceLoad: false);
     }
 
-    private void SelectFaction(string faction)
-    {
-        if (faction == "marley")
-        {
-            _modalTitle = _activeLang switch
-            {
-                "zh" => "馬萊帝國",
-                "jp" => "マーレ帝国",
-                _ => "Marley Empire"
-            };
-            _modalBody = _activeLang switch
-            {
-                "zh" => "「為了馬萊的榮耀！」\n\n你已宣誓效忠馬萊。戰士，準備好繼承巨人之力，為帝國開疆拓土了嗎？",
-                "jp" => "「マーレの栄光のために！」\n\nマーレへの忠誠を誓いました。戦士よ、巨人の力を継承し、帝国の未来を切り拓く覚悟はあるか？",
-                _ => "\"For the glory of Marley!\"\n\nYou have pledged your loyalty to the Marleyan Empire. Warrior, are you ready to inherit the power of the Titans and fight for the Motherland?"
-            };
-            _modalBadge = _activeLang switch
-            {
-                "zh" => "榮譽馬萊人",
-                "jp" => "名誉マーレ人",
-                _ => "Honorary Marleyan"
-            };
-            _modalTheme = "error";
-        }
-        else
-        {
-            _modalTitle = _activeLang switch
-            {
-                "zh" => "帕拉迪島",
-                "jp" => "パラディ島",
-                _ => "Paradis Island"
-            };
-            _modalBody = _activeLang switch
-            {
-                "zh" => "「獻出你的心臟吧！」（心臓を捧げよ！）\n\n我們是牆內最後的希望。為了全人類的自由，奉獻一切！",
-                "jp" => "「心臓を捧げよ！」\n\n我々は壁の中の最後の希望だ。全人類の自由のために、すべてを捧げよ！",
-                _ => "\"Dedicate your hearts! (Shinzou wo Sasageyo!)\"\n\nWe are the last hope inside the walls. Sacrifice everything for the absolute freedom of humanity!"
-            };
-            _modalBadge = _activeLang switch
-            {
-                "zh" => "調查兵團",
-                "jp" => "調査兵団",
-                _ => "Survey Corps"
-            };
-            _modalTheme = "secondary";
-        }
-        _showModal = true;
-    }
-
-    private void CloseModal()
-    {
-        _showModal = false;
-    }
-
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             _votedFaction = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_faction_vote");
             _hasVoted = !string.IsNullOrEmpty(_votedFaction);
-            if (_hasVoted) StateHasChanged();
+            _votes = await PollService.GetAllVotesAsync();
+            StateHasChanged();
         }
     }
 
     private async Task Vote(string faction)
     {
         if (_hasVoted) return;
-        PollService.Vote(faction);
+        var newCount = await PollService.VoteAsync(faction);
+        _votes[faction] = newCount;
         _votedFaction = faction;
         _hasVoted = true;
         await JS.InvokeVoidAsync("localStorage.setItem", "aot_faction_vote", faction);
+        StateHasChanged();
+    }
+
+    private async Task ResetVote()
+    {
+        _hasVoted = false;
+        _votedFaction = null;
+        await JS.InvokeVoidAsync("localStorage.removeItem", "aot_faction_vote");
+        _votes = await PollService.GetAllVotesAsync();
+        StateHasChanged();
     }
 
 

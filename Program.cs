@@ -8,10 +8,14 @@ using Microsoft.Extensions.Options;
 var builder = WebApplication.CreateBuilder(args);
  
 
+// Load optional local appsettings secrets file if present
+builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: false);
+
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddScoped<AppLocalizationService>();
 builder.Services.AddScoped<LanguageSwitchService>();
+builder.Services.AddHttpClient();
 builder.Services.AddSingleton<FactionPollService>(); // Add the FactionPollService as a singleton
 
 // Add services to the container.
