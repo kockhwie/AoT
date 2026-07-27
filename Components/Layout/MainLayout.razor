@@ -1,4 +1,4 @@
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 @inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
 @inject LanguageSwitchService LanguageSwitcher
@@ -155,13 +155,13 @@
         <button class="aot-btn aot-btn--limegreen" onclick="toggleFactionWidget()" aria-label="Toggle Faction Poll">
             <span class="faction-ping"></span>
             <i class="ti ti-chart-bar"></i>
-            <span class="poll-btn-text">陣營投票</span>
+            <span class="poll-btn-text">@LocalizationService.GetString("PollBtnText")</span>
         </button>
 
       <!-- The Popup Card Component -->
       <div class="faction-popup-card" id="factionPopup">
             <div class="popup-header">
-              <h4 class="popup-title">陣營派系選擇</h4>
+              <h4 class="popup-title">@LocalizationService.GetString("PollTitle")</h4>
                 <button class="popup-close-btn" onclick="toggleFactionWidget()"><i class="ti ti-x"></i></button>
             </div>
     
@@ -169,29 +169,29 @@
             <div class="popup-body">
                 @if (!_hasVoted)
                 {
-                    <p class="popup-instruction">在最終衝突中，你的忠誠在哪裡？</p>
+                    <p class="popup-instruction">@LocalizationService.GetString("PollInstruction")</p>
 
                     <div class="faction-vs-badge">VS</div>
 
                     <div class="faction-voting-options">
                         <button class="vote-option-btn marley-btn" @onclick='() => Vote("marley")'>
-                            <i class="ti ti-flag-2"></i> 馬萊帝國改革派
+                            <i class="ti ti-flag-2"></i> @LocalizationService.GetString("PollMarleyOpt")
                         </button>
                         <button class="vote-option-btn paradis-btn" @onclick='() => Vote("paradis")'>
-                            <i class="ti ti-shield"></i> 帕拉迪島聯盟派
+                            <i class="ti ti-shield"></i> @LocalizationService.GetString("PollParadisOpt")
                         </button>
                     </div>
                 }
                 else
                 {
                     <p class="popup-instruction">
-                        感謝投票！ <span class="comic-badge comic-badge--gold faction-voted-badge">已投票</span>
+                        @LocalizationService.GetString("PollThanks") <span class="comic-badge comic-badge--gold faction-voted-badge">@LocalizationService.GetString("PollVotedBadge")</span>
                     </p>
 
                     <div class="faction-results">
                         <div class="faction-result-row">
                             <div class="faction-result-label">
-                                <span>馬萊帝國改革派</span>
+                                <span>@LocalizationService.GetString("PollMarleyOpt")</span>
                                 <span>@MarleyPct% (@MarleyVotes)</span>
                             </div>
                             <div class="faction-result-track">
@@ -200,7 +200,7 @@
                         </div>
                         <div class="faction-result-row">
                             <div class="faction-result-label">
-                                <span>帕拉迪島聯盟派</span>
+                                <span>@LocalizationService.GetString("PollParadisOpt")</span>
                                 <span>@ParadisPct% (@ParadisVotes)</span>
                             </div>
                             <div class="faction-result-track">
@@ -212,7 +212,7 @@
                     <!-- Reset Vote Button for Testing -->
                     <div class="mt-3 text-center">
                         <button type="button" class="btn btn-xs btn-outline btn-warning" @onclick="ResetVote">
-                            <i class="ti ti-refresh mr-1"></i> 重置本地投票 (測試用)
+                            <i class="ti ti-refresh mr-1"></i> @LocalizationService.GetString("PollResetBtn")
                         </button>
                     </div>
                 }
@@ -220,7 +220,7 @@
       </div>
     </div>
 
-    <!-- 4. SYSTEM FOOTER WRAPPER -->
+        <!-- 4. SYSTEM FOOTER WRAPPER -->
     <footer class="footer footer-center p-6 bg-base-100 text-neutral-content text-xs border-t border-neutral">
         <aside class="flex flex-col gap-1.5">
             <p class="text-primary font-bold">@LocalizationService.FooterCredit</p>

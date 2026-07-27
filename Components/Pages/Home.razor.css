@@ -1599,6 +1599,51 @@ cheaper to repaint than a shadow). */
             color: #f43f5e !important;
         }
 
+    .aot-gear-card.gear-theme-firearm {
+        border-color: rgba(251, 146, 60, 0.15) !important;
+    }
+
+        .aot-gear-card.gear-theme-firearm:hover {
+            border-color: rgba(251, 146, 60, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(251, 146, 60, 0.08) !important;
+        }
+
+        .aot-gear-card.gear-theme-firearm .aot-gear-badge {
+            background: rgba(251, 146, 60, 0.1) !important;
+            border-color: rgba(251, 146, 60, 0.3) !important;
+            color: #fb923c !important;
+        }
+
+    .aot-gear-card.gear-theme-artillery {
+        border-color: rgba(234, 179, 8, 0.15) !important;
+    }
+
+        .aot-gear-card.gear-theme-artillery:hover {
+            border-color: rgba(234, 179, 8, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(234, 179, 8, 0.08) !important;
+        }
+
+        .aot-gear-card.gear-theme-artillery .aot-gear-badge {
+            background: rgba(234, 179, 8, 0.1) !important;
+            border-color: rgba(234, 179, 8, 0.3) !important;
+            color: #eab308 !important;
+        }
+
+    .aot-gear-card.gear-theme-tactical {
+        border-color: rgba(74, 222, 128, 0.15) !important;
+    }
+
+        .aot-gear-card.gear-theme-tactical:hover {
+            border-color: rgba(74, 222, 128, 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(74, 222, 128, 0.08) !important;
+        }
+
+        .aot-gear-card.gear-theme-tactical .aot-gear-badge {
+            background: rgba(74, 222, 128, 0.1) !important;
+            border-color: rgba(74, 222, 128, 0.3) !important;
+            color: #4ade80 !important;
+        }
+
 .aot-gear-header {
     display: flex;
     justify-content: space-between;

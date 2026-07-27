@@ -663,6 +663,48 @@
   <data name="SpecRisk" xml:space="preserve">
     <value>Operational Risk</value>
   </data>
+  <data name="PollBtnText" xml:space="preserve">
+    <value>Faction Poll</value>
+  </data>
+  <data name="PollTitle" xml:space="preserve">
+    <value>Faction Alignment Selection</value>
+  </data>
+  <data name="PollInstruction" xml:space="preserve">
+    <value>Where does your loyalty lie in the final conflict?</value>
+  </data>
+  <data name="PollMarleyOpt" xml:space="preserve">
+    <value>Marley Empire Reformists</value>
+  </data>
+  <data name="PollParadisOpt" xml:space="preserve">
+    <value>Paradis Island Alliance</value>
+  </data>
+  <data name="PollThanks" xml:space="preserve">
+    <value>Thanks for voting!</value>
+  </data>
+  <data name="PollVotedBadge" xml:space="preserve">
+    <value>Voted</value>
+  </data>
+  <data name="PollResetBtn" xml:space="preserve">
+    <value>Reset Local Vote (Testing)</value>
+  </data>
+  <data name="MOBILITY" xml:space="preserve">
+    <value>MOBILITY</value>
+  </data>
+  <data name="WEAPON" xml:space="preserve">
+    <value>WEAPON</value>
+  </data>
+  <data name="HEAVY_WEAPON" xml:space="preserve">
+    <value>HEAVY WEAPON</value>
+  </data>
+  <data name="FIREARM" xml:space="preserve">
+    <value>FIREARM</value>
+  </data>
+  <data name="ARTILLERY" xml:space="preserve">
+    <value>ARTILLERY</value>
+  </data>
+  <data name="TACTICAL" xml:space="preserve">
+    <value>TACTICAL</value>
+  </data>
   <data name="G1Name" xml:space="preserve">
     <value>Omni-directional Mobility Gear</value>
   </data>
@@ -689,6 +731,33 @@
   </data>
   <data name="G3Desc" xml:space="preserve">
     <value>A specialized heavy anti-titan armor-piercing rocket weapon developed by Hange. Anchors directly into target frameworks and detonates via a tethered cord, strong enough to shatter hardened skin armor.</value>
+  </data>
+  <data name="G4Name" xml:space="preserve">
+    <value>Anti-Personnel 3D Maneuver Gear</value>
+  </data>
+  <data name="G4Tech" xml:space="preserve">
+    <value>Tech: Dual Shotgun-Integrated Cable Unit</value>
+  </data>
+  <data name="G4Desc" xml:space="preserve">
+    <value>Created by Kenny Ackerman and the Military Police Interior First Squad for anti-human combat. Replaces blades with dual-barreled scattershot pistols, allowing lethal close-quarters firepower combined with 3D aerial maneuvers.</value>
+  </data>
+  <data name="G5Name" xml:space="preserve">
+    <value>Anti-Titan Field Artillery &amp; Executioner</value>
+  </data>
+  <data name="G5Tech" xml:space="preserve">
+    <value>Tech: Heavy Fixed Fixed-Position Defenses</value>
+  </data>
+  <data name="G5Desc" xml:space="preserve">
+    <value>Heavy fixed cannons and Wall-mounted Guillotine traps designed for city gate defense. Uses gravity-driven guillotine blades or heavy explosive canister shells to decapitate titans without risking infantry lives.</value>
+  </data>
+  <data name="G6Name" xml:space="preserve">
+    <value>Signal Flares &amp; Long-Distance Formation</value>
+  </data>
+  <data name="G6Tech" xml:space="preserve">
+    <value>Tech: Pyrotechnic Chromatic Acoustic Telemetry</value>
+  </data>
+  <data name="G6Desc" xml:space="preserve">
+    <value>Color-coded smoke signal pistols devised by Commander Erwin Smith for the Long-Distance Scouting Formation. Red denotes titan sightings, green changes march vector, black signals abnormal titans, and yellow reports mission status over vast distances.</value>
   </data>
   <data name="C1Ability" xml:space="preserve">
     <value>Humanity's Strongest</value>

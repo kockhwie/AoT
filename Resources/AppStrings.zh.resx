@@ -663,6 +663,48 @@
   <data name="SpecRisk" xml:space="preserve">
     <value>操作危險級別</value>
   </data>
+  <data name="PollBtnText" xml:space="preserve">
+    <value>陣營投票</value>
+  </data>
+  <data name="PollTitle" xml:space="preserve">
+    <value>陣營派系選擇</value>
+  </data>
+  <data name="PollInstruction" xml:space="preserve">
+    <value>在最終衝突中，你的忠誠在哪裡？</value>
+  </data>
+  <data name="PollMarleyOpt" xml:space="preserve">
+    <value>馬萊帝國改革派</value>
+  </data>
+  <data name="PollParadisOpt" xml:space="preserve">
+    <value>帕拉迪島聯盟派</value>
+  </data>
+  <data name="PollThanks" xml:space="preserve">
+    <value>感謝投票！</value>
+  </data>
+  <data name="PollVotedBadge" xml:space="preserve">
+    <value>已投票</value>
+  </data>
+  <data name="PollResetBtn" xml:space="preserve">
+    <value>重置本地投票 (測試用)</value>
+  </data>
+  <data name="MOBILITY" xml:space="preserve">
+    <value>機動裝備</value>
+  </data>
+  <data name="WEAPON" xml:space="preserve">
+    <value>制式兵器</value>
+  </data>
+  <data name="HEAVY_WEAPON" xml:space="preserve">
+    <value>重型破甲兵器</value>
+  </data>
+  <data name="FIREARM" xml:space="preserve">
+    <value>對人槍械</value>
+  </data>
+  <data name="ARTILLERY" xml:space="preserve">
+    <value>城防重砲</value>
+  </data>
+  <data name="TACTICAL" xml:space="preserve">
+    <value>戰術通訊</value>
+  </data>
   <data name="G1Name" xml:space="preserve">
     <value>立體機動裝置</value>
   </data>
@@ -689,6 +731,33 @@
   </data>
   <data name="G3Desc" xml:space="preserve">
     <value>為對抗「盔甲巨人」而由漢吉主導開發的秘密重型裝備。外形如金屬長槍，固定於前臂，發射後利用火箭推進刺入巨人體內，拉動引線會引爆高爆炸藥，其威力足以炸碎最堅硬的巨人鎧甲。</value>
+  </data>
+  <data name="G4Name" xml:space="preserve">
+    <value>對人立體機動裝置</value>
+  </data>
+  <data name="G4Tech" xml:space="preserve">
+    <value>技術分類: 雙管霰彈槍整合式風錨系統</value>
+  </data>
+  <data name="G4Desc" xml:space="preserve">
+    <value>由肯尼·阿克曼及憲兵團對人壓制部隊秘密開發。專門用於對人戰鬥，將傳統刀刃替換為雙管霰彈手槍，能在立體機動的高速移動中提供強大且致命的近距離火力壓制。</value>
+  </data>
+  <data name="G5Name" xml:space="preserve">
+    <value>對巨人固定砲與處刑裝置</value>
+  </data>
+  <data name="G5Tech" xml:space="preserve">
+    <value>技術分類: 重型固定陣地防禦與重力機關</value>
+  </data>
+  <data name="G5Desc" xml:space="preserve">
+    <value>用於城牆與要塞防守的重型火砲與漢吉設計的「巨人切肉機（處刑裝置）」。利用重力落下的巨大懸吊鐵槌或榴彈散彈，能在不犧牲兵士的情況下自動斬斷誘捕巨人的後頸。</value>
+  </data>
+  <data name="G6Name" xml:space="preserve">
+    <value>煙報彈與長距離索敵陣形</value>
+  </data>
+  <data name="G6Tech" xml:space="preserve">
+    <value>技術分類: 色彩聲光光學戰術傳播發射器</value>
+  </data>
+  <data name="G6Desc" xml:space="preserve">
+    <value>由艾爾文團長開創的長距離索敵陣形核心通訊工具。透過發射不同顏色的煙霧彈進行遠距離情報傳遞：紅煙代表發現巨人、綠煙代表變更前進方向、黑煙代表奇行種，黃煙則代表作戰完成或緊急撤退。</value>
   </data>
   <data name="C1Ability" xml:space="preserve">
     <value>人類最強</value>

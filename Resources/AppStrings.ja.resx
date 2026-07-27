@@ -663,6 +663,48 @@
   <data name="SpecRisk" xml:space="preserve">
     <value>運用危険度</value>
   </data>
+  <data name="PollBtnText" xml:space="preserve">
+    <value>陣営投票</value>
+  </data>
+  <data name="PollTitle" xml:space="preserve">
+    <value>陣営派閥選択</value>
+  </data>
+  <data name="PollInstruction" xml:space="preserve">
+    <value>最終決戦において、あなたの忠誠はどこにありますか？</value>
+  </data>
+  <data name="PollMarleyOpt" xml:space="preserve">
+    <value>マーレ帝国改革派</value>
+  </data>
+  <data name="PollParadisOpt" xml:space="preserve">
+    <value>パラディ島同盟派</value>
+  </data>
+  <data name="PollThanks" xml:space="preserve">
+    <value>投票ありがとうございます！</value>
+  </data>
+  <data name="PollVotedBadge" xml:space="preserve">
+    <value>投票済み</value>
+  </data>
+  <data name="PollResetBtn" xml:space="preserve">
+    <value>ローカル投票リセット (テスト用)</value>
+  </data>
+  <data name="MOBILITY" xml:space="preserve">
+    <value>機動装備</value>
+  </data>
+  <data name="WEAPON" xml:space="preserve">
+    <value>制式兵器</value>
+  </data>
+  <data name="HEAVY_WEAPON" xml:space="preserve">
+    <value>重型破甲兵器</value>
+  </data>
+  <data name="FIREARM" xml:space="preserve">
+    <value>対人銃器</value>
+  </data>
+  <data name="ARTILLERY" xml:space="preserve">
+    <value>城防重砲</value>
+  </data>
+  <data name="TACTICAL" xml:space="preserve">
+    <value>戦術通信</value>
+  </data>
   <data name="G1Name" xml:space="preserve">
     <value>立体機動装置</value>
   </data>
@@ -689,6 +731,33 @@
   </data>
   <data name="G3Desc" xml:space="preserve">
     <value>鎧の巨人に対抗すべくハンジが開発した新兵器。腕部に装着するロケット推進式の徹甲爆弾で、突き刺した後に紐を引くことで炸裂し、強固な鎧の皮膚をも粉砕する破壊力を持つ。</value>
+  </data>
+  <data name="G4Name" xml:space="preserve">
+    <value>対人立体機動装置</value>
+  </data>
+  <data name="G4Tech" xml:space="preserve">
+    <value>技術分類: 散弾銃一体型ワイヤーユニット</value>
+  </data>
+  <data name="G4Desc" xml:space="preserve">
+    <value>ケニー・アッカーマン率いる対人抑圧部隊が極秘裏に開発した対人戦闘用装備。ブレードの代わりに二連発の散弾銃を装着し、空中機動を行いながら強力な近接射撃を繰り出す。</value>
+  </data>
+  <data name="G5Name" xml:space="preserve">
+    <value>対巨人固定砲・野戦ギロチン</value>
+  </data>
+  <data name="G5Tech" xml:space="preserve">
+    <value>技術分類: 重固定陣地防護・重力式カラクリ</value>
+  </data>
+  <data name="G5Desc" xml:space="preserve">
+    <value>壁や要塞の防衛用に配置された大砲およびハンジが考案した「対巨人ギロチン」。重力を利用して落とす巨大な刃や散弾砲により、兵士の損害を出すことなく誘引した巨人のうなじを削ぎ落とす。</value>
+  </data>
+  <data name="G6Name" xml:space="preserve">
+    <value>信号弾・長距離索敵陣形</value>
+  </data>
+  <data name="G6Tech" xml:space="preserve">
+    <value>技術分類: 色彩音響伝達式戦術発煙筒</value>
+  </data>
+  <data name="G6Desc" xml:space="preserve">
+    <value>エルヴィン団長が発案した長距離索敵陣形の伝達手段。発煙筒の色（赤：巨人発見、緑：進路変更、黒：奇行種、黄：作戦完了/撤退）により視界の悪い長距離間でも迅速に情報伝達を行う。</value>
   </data>
   <data name="C1Ability" xml:space="preserve">
     <value>人類最強の兵士</value>
