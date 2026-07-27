@@ -622,7 +622,7 @@
     <value>阿爾敏·亞魯雷特</value>
   </data>
   <data name="C3Title" xml:space="preserve">
-    <value>調查兵團 第15代團長 / 超大型巨人持有者</value>
+    <value>調查兵團 第15代團長 / 超大型巨人</value>
   </data>
   <data name="C3Bio" xml:space="preserve">
     <value>艾連與米卡莎的童年玩伴。具備無可匹敵的戰略頭腦與大局觀，多次在絕境中制定關鍵戰術逆轉戰局，並在瑪利亞之牆奪還戰後繼承了超大型巨人的能力。</value>
@@ -712,7 +712,7 @@
     <value>艾連·葉卡</value>
   </data>
   <data name="C7Title" xml:space="preserve">
-    <value>進擊的巨人 / 始祖的巨人</value>
+    <value>進擊的巨人 / 始祖的巨人 / 戰槌巨人</value>
   </data>
   <data name="C7Bio" xml:space="preserve">
     <value>前調查兵團成員，發現自己擁有巨人之力。在對自由的堅定追求驅使下，他最終發動了地鳴以保護帕拉迪島。</value>
@@ -1025,5 +1025,41 @@
   </data>
   <data name="Character_Ymir" xml:space="preserve">
     <value>尤米爾</value>
+  </data>
+  <data name="CharHistoria_Title" xml:space="preserve">
+    <value>牆內女王</value>
+  </data>
+  <data name="CharHistoria_Bio" xml:space="preserve">
+    <value>雷斯王室的私生女，拒絕繼承始祖巨人之力後被迫登上王座，肩負起帶領帕拉迪島度過最黑暗時刻的重任。</value>
+  </data>
+  <data name="CharYmir_Title" xml:space="preserve">
+    <value>104期訓練兵團 / 前顎之巨人持有者</value>
+  </data>
+  <data name="CharYmir_Bio" xml:space="preserve">
+    <value>104期訓練兵團中身世成謎的學員，曾是顎之巨人的持有者。對希絲特莉亞抱持著深厚的情誼，最終為守護所愛之人犧牲自己。</value>
+  </data>
+  <data name="CharSpecialOps_Title" xml:space="preserve">
+    <value>特別作戰班成員</value>
+  </data>
+  <data name="CharSpecialOps_Bio" xml:space="preserve">
+    <value>里維最初特別作戰班的創始成員，因立體機動裝置操作技術出眾及對調查兵團的絕對忠誠而入選。</value>
+  </data>
+  <data name="TitanFinal_H" xml:space="preserve">
+    <value>身高：不定</value>
+  </data>
+  <data name="TitanFinal_Desc" xml:space="preserve">
+    <value>地鳴事件後始祖巨人的最終型態，喪失了操控九大巨人繼承者的能力，卻依然受尤彌爾詛咒的束縛。</value>
+  </data>
+  <data name="TitanSonnyBean_H" xml:space="preserve">
+    <value>身高：4米～7米</value>
+  </data>
+  <data name="TitanSonnyBean_Desc" xml:space="preserve">
+    <value>被調查兵團活捉用於實驗的一對無垢巨人。牠們的行為模式為人類首次提供了關於巨人生理機能與再生能力的科學觀察數據。</value>
+  </data>
+  <data name="TitanWall_H" xml:space="preserve">
+    <value>身高：約50米（沉睡狀態）</value>
+  </data>
+  <data name="TitanWall_Desc" xml:space="preserve">
+    <value>自城牆建造以來便被埋藏於三道城牆之中、等待甦醒的無數巨人。牠們的存在被隱藏了整整一個世紀，直到真相揭曉的那天。</value>
   </data>
 </root>

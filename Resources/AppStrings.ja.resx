@@ -712,7 +712,7 @@
     <value>エレン・イェーガー</value>
   </data>
   <data name="C7Title" xml:space="preserve">
-    <value>進撃の巨人 / 始祖の巨人</value>
+    <value>進撃の巨人 / 始祖の巨人 / 戦槌の巨人</value>
   </data>
   <data name="C7Bio" xml:space="preserve">
     <value>巨人の力を宿す元調査兵団員。自由への飽くなき渇望に突き動かされ、最終的にはパラディ島を守るために「地鳴らし」を発動させた。</value>
@@ -1025,5 +1025,41 @@
   </data>
   <data name="Character_Ymir" xml:space="preserve">
     <value>ユミル</value>
+  </data>
+  <data name="CharHistoria_Title" xml:space="preserve">
+    <value>壁の女王</value>
+  </data>
+  <data name="CharHistoria_Bio" xml:space="preserve">
+    <value>レイス王家の私生児。始祖の巨人の継承を拒み、やがて玉座に就いてパラディ島を最も暗い時代へと導いた。</value>
+  </data>
+  <data name="CharYmir_Title" xml:space="preserve">
+    <value>104期訓練兵団 / 元顎の巨人保有者</value>
+  </data>
+  <data name="CharYmir_Bio" xml:space="preserve">
+    <value>104期訓練兵団に所属する謎めいた訓練生で、かつて顎の巨人を宿していた。ヒストリアへの深い想いを胸に、愛する者を守るため自らを犠牲にした。</value>
+  </data>
+  <data name="CharSpecialOps_Title" xml:space="preserve">
+    <value>特別作戦班メンバー</value>
+  </data>
+  <data name="CharSpecialOps_Bio" xml:space="preserve">
+    <value>リヴァイ班の創設メンバーの一人。卓越した立体機動装置の技術と調査兵団への揺るぎない忠誠心により選抜された。</value>
+  </data>
+  <data name="TitanFinal_H" xml:space="preserve">
+    <value>身長：不定</value>
+  </data>
+  <data name="TitanFinal_Desc" xml:space="preserve">
+    <value>地鳴らしの後に変化した始祖の巨人の最終形態。九つの巨人の継承者を操る力を失ったが、ユミルの呪縛には依然として縛られている。</value>
+  </data>
+  <data name="TitanSonnyBean_H" xml:space="preserve">
+    <value>身長：4m～7m</value>
+  </data>
+  <data name="TitanSonnyBean_Desc" xml:space="preserve">
+    <value>調査兵団によって生け捕られ、実験に用いられた無垢の巨人の一対。その行動様式は、巨人の生理機能と再生能力に関する初の科学的知見をもたらした。</value>
+  </data>
+  <data name="TitanWall_H" xml:space="preserve">
+    <value>身長：約50m（休眠状態）</value>
+  </data>
+  <data name="TitanWall_Desc" xml:space="preserve">
+    <value>城壁が築かれた当初から三重の壁の中に埋め込まれ、覚醒の時を待つ無数の巨人たち。その存在は真実が明かされるまで一世紀にわたり隠され続けた。</value>
   </data>
 </root>

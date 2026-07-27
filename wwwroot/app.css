@@ -165,7 +165,7 @@ h4, [id] {
 
 .aot-btn--sm {
     padding: 0.25rem 0.5rem;
-    font-size: 0.5rem;
+    font-size: 0.55rem;
     min-height: 32px;
 }
 
@@ -608,7 +608,7 @@ html:lang(jp) {
 
 
 .name-aka {
-    font-size: 0.6em;
+    font-size: 0.65em;
     font-weight: 600;
     opacity: 0.75;
     text-transform: lowercase;
@@ -1365,7 +1365,13 @@ html:lang(jp) {
 .character-game-card__scanlines { position: absolute; inset: 0; opacity: .24; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.13) 4px); mix-blend-mode: overlay; }
 .character-game-card__portrait-vignette { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,8,.1) 18%, transparent 42%, rgba(5,8,8,.94) 88%, #080b0b 100%); }
 .character-game-card__copy { position: absolute; z-index: 2; right: 0; bottom: 0; left: 0; min-width: 0; padding: 2.2rem .95rem 2.85rem; background: linear-gradient(180deg, transparent, rgba(5,8,8,.78) 27%, #080b0b 66%); }
-.character-game-card__name { display: block; text-shadow: 0 2px 8px rgba(0,0,0,.7); font: 900 clamp(1.08rem, 1.60vw, 1.55rem)/1.05 sans-serif; letter-spacing: .045em; text-transform: uppercase; }
+.character-game-card__name {
+    display: block;
+    text-shadow: 0 2px 8px rgba(0,0,0,.7);
+    font: 900 clamp(1.08rem, 1.60.aot-btn--smvw, 1.55rem)/1.05 sans-serif;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
 .character-game-card__title { display: -webkit-box; margin-top: .35rem; overflow: hidden; color: var(--card-accent); font: 600 clamp(.58rem, .9vw, .72rem)/1.25 system-ui, sans-serif; letter-spacing: .07em; text-overflow: ellipsis; text-transform: uppercase; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .character-game-card__glow { position: absolute; z-index: -1; inset: 10% -30%; pointer-events: none; background: var(--card-glow); filter: blur(2rem); opacity: .8; }
 .faction-Titans { --card-accent: #e1725e; --card-glow: rgba(225,114,94,.3); }

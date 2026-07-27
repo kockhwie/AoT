@@ -709,7 +709,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attack Titan / Founding Titan.
+        ///   Looks up a localized string similar to Attack Titan / Founding Titan / War Hammer Titan.
         /// </summary>
         public static string C7Title {
             get {
@@ -871,6 +871,24 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The illegitimate daughter of the Reiss royal bloodline, thrust into the crown after refusing to inherit the Founding Titan. Later ascended the throne to guide Paradis through its darkest hour..
+        /// </summary>
+        public static string CharHistoria_Bio {
+            get {
+                return ResourceManager.GetString("CharHistoria_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queen of the Walls.
+        /// </summary>
+        public static string CharHistoria_Title {
+            get {
+                return ResourceManager.GetString("CharHistoria_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A ruthless enforcer of the crown&apos;s will, wielding absolute authority over the Military Police&apos;s most secretive operations..
         /// </summary>
         public static string CharInterior_Bio {
@@ -943,6 +961,24 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A founding member of Levi&apos;s original Special Operations Squad, chosen for exceptional skill with vertical maneuvering equipment and unwavering loyalty to the Scout Corps..
+        /// </summary>
+        public static string CharSpecialOps_Bio {
+            get {
+                return ResourceManager.GetString("CharSpecialOps_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Squad Member.
+        /// </summary>
+        public static string CharSpecialOps_Title {
+            get {
+                return ResourceManager.GetString("CharSpecialOps_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Steward of the War Hammer Titan and the only family permitted to declare war on behalf of the Eldian people..
         /// </summary>
         public static string CharTybur_Bio {
@@ -975,6 +1011,24 @@ namespace AOT.Resources {
         public static string CharYeagerist_Title {
             get {
                 return ResourceManager.GetString("CharYeagerist_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A mysterious cadet of the 104th Training Corps who once held the Jaw Titan. Fiercely devoted to Historia, she sacrificed herself to protect the ones she loved..
+        /// </summary>
+        public static string CharYmir_Bio {
+            get {
+                return ResourceManager.GetString("CharYmir_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 104th Training Corps / Former Jaw Titan Holder.
+        /// </summary>
+        public static string CharYmir_Title {
+            get {
+                return ResourceManager.GetString("CharYmir_Title", resourceCulture);
             }
         }
         
@@ -2716,11 +2770,65 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The evolved form of the Founding Titan after the Rumbling, stripped of its ability to control the Nine Titans’ successors but still bound to Ymir’s curse..
+        /// </summary>
+        public static string TitanFinal_Desc {
+            get {
+                return ResourceManager.GetString("TitanFinal_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: Variable.
+        /// </summary>
+        public static string TitanFinal_H {
+            get {
+                return ResourceManager.GetString("TitanFinal_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Nine Titans Registry.
         /// </summary>
         public static string TitanSectionTitle {
             get {
                 return ResourceManager.GetString("TitanSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A pair of pure titans captured alive by the Scout Corps for experimentation. Their behavior offered the first scientific insights into titan physiology and regeneration..
+        /// </summary>
+        public static string TitanSonnyBean_Desc {
+            get {
+                return ResourceManager.GetString("TitanSonnyBean_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 4m ~ 7m.
+        /// </summary>
+        public static string TitanSonnyBean_H {
+            get {
+                return ResourceManager.GetString("TitanSonnyBean_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Countless titans embedded within the three walls since their construction, waiting to be awakened. Their existence remained hidden for a century until the truth was revealed..
+        /// </summary>
+        public static string TitanWall_Desc {
+            get {
+                return ResourceManager.GetString("TitanWall_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: ~50m (Dormant).
+        /// </summary>
+        public static string TitanWall_H {
+            get {
+                return ResourceManager.GetString("TitanWall_H", resourceCulture);
             }
         }
         

@@ -712,7 +712,7 @@
     <value>Eren Yeager</value>
   </data>
   <data name="C7Title" xml:space="preserve">
-    <value>Attack Titan / Founding Titan</value>
+    <value>Attack Titan / Founding Titan / War Hammer Titan</value>
   </data>
   <data name="C7Bio" xml:space="preserve">
     <value>A former Scout who discovered he possessed the power of the Titans. Driven by an unwavering desire for freedom, he eventually initiated the Rumbling to protect Paradis.</value>
@@ -1025,5 +1025,41 @@
   </data>
   <data name="Character_Ymir" xml:space="preserve">
     <value>Ymir</value>
+  </data>
+  <data name="CharHistoria_Title" xml:space="preserve">
+    <value>Queen of the Walls</value>
+  </data>
+  <data name="CharHistoria_Bio" xml:space="preserve">
+    <value>The illegitimate daughter of the Reiss royal bloodline, thrust into the crown after refusing to inherit the Founding Titan. Later ascended the throne to guide Paradis through its darkest hour.</value>
+  </data>
+  <data name="CharYmir_Title" xml:space="preserve">
+    <value>104th Training Corps / Former Jaw Titan Holder</value>
+  </data>
+  <data name="CharYmir_Bio" xml:space="preserve">
+    <value>A mysterious cadet of the 104th Training Corps who once held the Jaw Titan. Fiercely devoted to Historia, she sacrificed herself to protect the ones she loved.</value>
+  </data>
+  <data name="CharSpecialOps_Title" xml:space="preserve">
+    <value>Special Operations Squad Member</value>
+  </data>
+  <data name="CharSpecialOps_Bio" xml:space="preserve">
+    <value>A founding member of Levi's original Special Operations Squad, chosen for exceptional skill with vertical maneuvering equipment and unwavering loyalty to the Scout Corps.</value>
+  </data>
+  <data name="TitanFinal_H" xml:space="preserve">
+    <value>Height: Variable</value>
+  </data>
+  <data name="TitanFinal_Desc" xml:space="preserve">
+    <value>The evolved form of the Founding Titan after the Rumbling, stripped of its ability to control the Nine Titans’ successors but still bound to Ymir’s curse.</value>
+  </data>
+  <data name="TitanSonnyBean_H" xml:space="preserve">
+    <value>Height: 4m ~ 7m</value>
+  </data>
+  <data name="TitanSonnyBean_Desc" xml:space="preserve">
+    <value>A pair of pure titans captured alive by the Scout Corps for experimentation. Their behavior offered the first scientific insights into titan physiology and regeneration.</value>
+  </data>
+  <data name="TitanWall_H" xml:space="preserve">
+    <value>Height: ~50m (Dormant)</value>
+  </data>
+  <data name="TitanWall_Desc" xml:space="preserve">
+    <value>Countless titans embedded within the three walls since their construction, waiting to be awakened. Their existence remained hidden for a century until the truth was revealed.</value>
   </data>
 </root>
