@@ -1765,6 +1765,75 @@ cheaper to repaint than a shadow). */
     font-size: 0.875rem; /* 14px */
 }
 
+/* Timeline connector line between events */
+.timeline-connector {
+    background-color: rgba(255, 215, 0, 0.18) !important;
+}
+
+/* Base icon node — replaces raw emoji */
+.timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+/* Catastrophe — Wall breach, red */
+.timeline-icon--catastrophe {
+    background: rgba(239, 68, 68, 0.18);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+/* Battle — First offensive win, amber */
+.timeline-icon--battle {
+    background: rgba(251, 146, 60, 0.18);
+    color: #fb923c;
+    border-color: rgba(251, 146, 60, 0.35);
+}
+
+/* Recon — Intelligence / scouting, teal */
+.timeline-icon--recon {
+    background: rgba(45, 212, 191, 0.18);
+    color: #2dd4bf;
+    border-color: rgba(45, 212, 191, 0.35);
+}
+
+/* Betrayal — Shock reveal, yellow-orange */
+.timeline-icon--betrayal {
+    background: rgba(234, 179, 8, 0.18);
+    color: #eab308;
+    border-color: rgba(234, 179, 8, 0.35);
+}
+
+/* War declaration — Offensive strike, bright red */
+.timeline-icon--war {
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    border-color: rgba(220, 38, 38, 0.4);
+}
+
+/* Rumbling — Apocalyptic, deep orange-red */
+.timeline-icon--rumbling {
+    background: rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
+    border-color: rgba(239, 68, 68, 0.5);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.25);
+}
+
+/* Final battle — Gold crown */
+.timeline-icon--final {
+    background: rgba(212, 175, 55, 0.2);
+    color: #dfbb6b;
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
 /* ==========================================================================
    8. ROUNDED PROGRESS-BLOCKS (used by character stat bars)
    Usage HTML:

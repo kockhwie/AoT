@@ -657,29 +657,6 @@ html:lang(jp) {
     box-shadow: var(--shadow-xl);
 }
 
-.aot-timeline-box {
-    background-color: rgb(13 45 83);
-    border: 3px solid var(--aot-black);
-    border-radius: 4px;
-    box-shadow: 9px 8px 0px black;
-    padding: 0.75rem;
-    font-size: 0.75rem;
-    width: 100%;
-}
-
-.aot-timeline-title {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--aot-white);
-}
-
-.aot-timeline-desc{
-    color: var(--aot-white);
-    font-size: 0.85rem;
-    line-height: 1.85;
-}
-
 /* ==========================================
    5. 九大巨人图谱网格 (Titan Grid) - 完美适配三端
    ========================================== */

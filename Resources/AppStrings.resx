@@ -507,6 +507,36 @@
   <data name="Time2Desc" xml:space="preserve">
     <value>Eren Yeager launched a surprise raid on Liberio, shifting the global war into its endgame.</value>
   </data>
+  <data name="Time3Title" xml:space="preserve">
+    <value>Battle of Trost District</value>
+  </data>
+  <data name="Time3Desc" xml:space="preserve">
+    <value>Titans breached the southern gate of Wall Rose. Eren Yeager's Titan power awakened for the first time, sealing the breach and saving humanity from the brink of collapse.</value>
+  </data>
+  <data name="Time4Title" xml:space="preserve">
+    <value>57th Exterior Scouting Mission</value>
+  </data>
+  <data name="Time4Desc" xml:space="preserve">
+    <value>The Survey Corps ventured beyond the Walls in their largest operation. A Female Titan hunted Eren relentlessly — and was ultimately unmasked as Annie Leonhart.</value>
+  </data>
+  <data name="Time5Title" xml:space="preserve">
+    <value>Clash of the Titans</value>
+  </data>
+  <data name="Time5Desc" xml:space="preserve">
+    <value>Wall Rose was apparently breached. In a shocking betrayal, Reiner Braun and Bertholdt Hoover revealed themselves as the Armored and Colossal Titans.</value>
+  </data>
+  <data name="Time6Title" xml:space="preserve">
+    <value>The Rumbling Begins</value>
+  </data>
+  <data name="Time6Desc" xml:space="preserve">
+    <value>Eren Yeager activated the Power of the Founding Titan, unleashing millions of Wall Titans in a cataclysmic march to annihilate all life beyond Paradis.</value>
+  </data>
+  <data name="Time7Title" xml:space="preserve">
+    <value>Battle of Heaven and Earth</value>
+  </data>
+  <data name="Time7Desc" xml:space="preserve">
+    <value>The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa — ending the Rumbling and the cycle of hatred at the cost of the world they knew.</value>
+  </data>
   <data name="TitanSectionTitle" xml:space="preserve">
     <value>The Nine Titans Registry</value>
   </data>

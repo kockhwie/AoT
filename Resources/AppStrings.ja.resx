@@ -507,6 +507,36 @@
   <data name="Time2Desc" xml:space="preserve">
     <value>エレン・イェーガーがレベリオ収容区を急襲。世界を巻き込む最終決戦の火蓋が切られた。</value>
   </data>
+  <data name="Time3Title" xml:space="preserve">
+    <value>トロスト区攻防戦</value>
+  </data>
+  <data name="Time3Desc" xml:space="preserve">
+    <value>巨人がウォール・ローゼの南門を突破。エレン・イェーガーの巨人化能力が初めて覚醒し、岩で穴を塞ぐことで人類の崩壊を辛うじて阻止した。</value>
+  </data>
+  <data name="Time4Title" xml:space="preserve">
+    <value>第57回壁外調査</value>
+  </data>
+  <data name="Time4Desc" xml:space="preserve">
+    <value>調査兵団が最大規模の壁外遠征を敢行。女型の巨人がエレンを執拗に追い詰め、最終的にアニ・レオンハートとして正体を暴かれた。</value>
+  </data>
+  <data name="Time5Title" xml:space="preserve">
+    <value>巨人大戦（ライナー・ベルトルト正体暴露）</value>
+  </data>
+  <data name="Time5Desc" xml:space="preserve">
+    <value>ウォール・ローゼへの侵入が発覚。ライナー・ブラウンとベルトルト・フーバーが鎧の巨人と超大型巨人としての正体を明かし、104期生を裏切った。</value>
+  </data>
+  <data name="Time6Title" xml:space="preserve">
+    <value>地鳴らし発動</value>
+  </data>
+  <data name="Time6Desc" xml:space="preserve">
+    <value>エレン・イェーガーが始祖の巨人の力を発動し、壁内に眠る数百万の超大型巨人を解放。パラディ島の外に存在するすべての命を滅ぼすべく、地鳴らしが始まった。</value>
+  </data>
+  <data name="Time7Title" xml:space="preserve">
+    <value>天地の戦い（最終決戦）</value>
+  </data>
+  <data name="Time7Desc" xml:space="preserve">
+    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った——彼らが知る世界の終焉と引き換えに。</value>
+  </data>
   <data name="TitanSectionTitle" xml:space="preserve">
     <value>九つの巨人能力系譜図</value>
   </data>

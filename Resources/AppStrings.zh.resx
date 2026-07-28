@@ -507,6 +507,36 @@
   <data name="Time2Desc" xml:space="preserve">
     <value>艾連·葉卡密謀突襲馬雷首都雷貝里歐收容區，強行吞噬戰槌巨人，彻底打破國際地緣政治僵局，將全球戰爭拖入地鳴終局階段。</value>
   </data>
+  <data name="Time3Title" xml:space="preserve">
+    <value>托洛斯特區保衛戰</value>
+  </data>
+  <data name="Time3Desc" xml:space="preserve">
+    <value>巨人突破玫瑰之牆南側城門。艾連·葉卡的巨人之力首度覺醒，以一己之力搬運巨石封堵缺口，從崩潰邊緣拯救了全人類。</value>
+  </data>
+  <data name="Time4Title" xml:space="preserve">
+    <value>第57次壁外調查行動</value>
+  </data>
+  <data name="Time4Desc" xml:space="preserve">
+    <value>調查兵團展開規模最大的壁外遠征。女巨人不斷追獵艾連，最終被逮捕並揭露真實身份——阿妮·萊昂哈特。</value>
+  </data>
+  <data name="Time5Title" xml:space="preserve">
+    <value>巨人碰撞之戰</value>
+  </data>
+  <data name="Time5Desc" xml:space="preserve">
+    <value>玫瑰之牆遭到疑似突破。萊納·布朗與貝爾托德·胡弗相繼坦白，分別以盔甲巨人與超大型巨人的真身，背叛了並肩作戰的104期同袍。</value>
+  </data>
+  <data name="Time6Title" xml:space="preserve">
+    <value>地鳴啟動</value>
+  </data>
+  <data name="Time6Desc" xml:space="preserve">
+    <value>艾連·葉卡啟動始祖巨人之力，驅動壁中數以百萬計的超大型巨人踏上徵途，以滅世地鳴之名向帕拉迪島以外的所有生命宣告終滅。</value>
+  </data>
+  <data name="Time7Title" xml:space="preserve">
+    <value>天地之戰（最終決戰）</value>
+  </data>
+  <data name="Time7Desc" xml:space="preserve">
+    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈——代價是他們所熟知的整個世界。</value>
+  </data>
   <data name="TitanSectionTitle" xml:space="preserve">
     <value>始祖九大巨人能力圖譜</value>
   </data>

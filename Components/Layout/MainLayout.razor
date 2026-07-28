@@ -1,4 +1,4 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
 @inject NavigationManager Nav
 @inject AppLocalizationService LocalizationService
 @inject LanguageSwitchService LanguageSwitcher
@@ -209,12 +209,15 @@
                         </div>
                     </div>
 
-                    <!-- Reset Vote Button for Testing -->
-                    <div class="mt-3 text-center">
-                        <button type="button" class="btn btn-xs btn-outline btn-warning" @onclick="ResetVote">
-                            <i class="ti ti-refresh mr-1"></i> @LocalizationService.GetString("PollResetBtn")
-                        </button>
-                    </div>
+                    @if (!bolTurnOffReset)
+                    {
+                        <!-- Reset Vote Button for Testing -->
+                        <div class="mt-3 text-center">
+                            <button type="button" class="btn btn-xs btn-outline btn-warning" @onclick="ResetVote">
+                                <i class="ti ti-refresh mr-1"></i> @LocalizationService.GetString("PollResetBtn")
+                            </button>
+                        </div>
+                    }
                 }
             </div>
       </div>
@@ -261,6 +264,7 @@
 
 @code {
     private string _activeLang = "zh";
+    private bool bolTurnOffReset = true; // Set to true to hide the reset button after testing
 
     private bool _showModal = false;
     private string _modalTitle = "";
