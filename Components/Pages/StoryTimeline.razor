@@ -18,10 +18,10 @@
         
         <!-- Toggle Switch Tab Container -->
         <div class="aot-tab-switcher">
-            <button class="aot-tab-btn @(IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("story")'>
+            <button class="aot-tab-btn aot-btn @(IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("story")'>
                 <i class="ti ti-books"></i> @LocalizationService.GetString("StoryTabTitle")
             </button>
-            <button class="aot-tab-btn @(!IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("timeline")'>
+            <button class="aot-tab-btn aot-btn @(!IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("timeline")'>
                 <i class="ti ti-clock"></i> @LocalizationService.GetString("TimelineTabTitle")
             </button>
         </div>
@@ -140,6 +140,7 @@
     protected override void OnInitialized()
     {
         LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+        Nav.LocationChanged += HandleLocationChanged;
     }
 
     protected override void OnParametersSet()
@@ -158,6 +159,11 @@
 
     private void SwitchTab(string tab)
     {
+        // avoid navigating to the same tab (prevents no-op navigation that doesn't trigger
+        // state change in some cases)
+        if ((tab == "story" && IsStoryTab) || (tab == "timeline" && !IsStoryTab))
+            return;
+
         var prefix = LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang);
         Nav.NavigateTo($"{prefix}/{tab}", forceLoad: false);
     }
@@ -165,5 +171,12 @@
     public void Dispose()
     {
         LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+        Nav.LocationChanged -= HandleLocationChanged;
+    }
+
+    private void HandleLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        // ensure component re-renders when the URL changes so IsStoryTab updates
+        InvokeAsync(StateHasChanged);
     }
 }
