@@ -417,11 +417,8 @@
   <data name="Nav_Underground" xml:space="preserve">
     <value>地下街</value>
   </data>
-  <data name="Nav_Story" xml:space="preserve">
-    <value>Story</value>
-  </data>
-  <data name="Nav_Timeline" xml:space="preserve">
-    <value>Timeline</value>
+  <data name="Nav_StoryTimeline" xml:space="preserve">
+    <value>ストーリー &amp; 年表</value>
   </data>
   <data name="Nav_Gallery" xml:space="preserve">
     <value>Gallery</value>
@@ -494,6 +491,108 @@
   </data>
   <data name="TimelineHeader" xml:space="preserve">
     <value>防衛戦史クロニクル</value>
+  </data>
+  <data name="StoryTabTitle" xml:space="preserve">
+    <value>ストーリー篇</value>
+  </data>
+  <data name="TimelineTabTitle" xml:space="preserve">
+    <value>戦史クロニクル</value>
+  </data>
+  <data name="StoryPageHeader" xml:space="preserve">
+    <value>パラディ島・マーレ歴史アーカイブ</value>
+  </data>
+  <data name="StoryPageSub" xml:space="preserve">
+    <value>世界を形作った主要な軍事戦役、政治的クーデター、そして破滅的な「地鳴らし」の歴史を網羅した記録。</value>
+  </data>
+  <data name="Arc1Title" xml:space="preserve">
+    <value>シガンシナ区陥落編</value>
+  </data>
+  <data name="Arc1Chapters" xml:space="preserve">
+    <value>第1話〜第2話 (単行本第1巻)</value>
+  </data>
+  <data name="Arc1Desc" xml:space="preserve">
+    <value>超大型巨人と鎧の巨人の襲来により、人類の100年に及ぶ偽りの平和が崩壊。ウォール・マリアが突破され、人類はウォール・ローゼへの後退を余儀なくされる。エレンは母親を巨人に捕食され、すべての巨人を駆逐することを誓う。</value>
+  </data>
+  <data name="Arc2Title" xml:space="preserve">
+    <value>第104期訓練兵団編</value>
+  </data>
+  <data name="Arc2Chapters" xml:space="preserve">
+    <value>第3話〜第4話 (単行本第1巻〜第2巻)</value>
+  </data>
+  <data name="Arc2Desc" xml:space="preserve">
+    <value>ウォール・マリア陥落から5年後、エレン、ミカサ、アルミンは兵団に入隊する。様々な背景を持つ同期の訓練兵たちと共に、過酷な訓練を通じて立体機動装置を習得し、前線へ赴く準備を整える。</value>
+  </data>
+  <data name="Arc3Title" xml:space="preserve">
+    <value>トロスト区防衛戦編</value>
+  </data>
+  <data name="Arc3Chapters" xml:space="preserve">
+    <value>第5話〜第14話 (単行本第2巻〜第4巻)</value>
+  </data>
+  <data name="Arc3Desc" xml:space="preserve">
+    <value>超大型巨人が再び襲来し、トロスト区の扉が破られる。絶望的な防衛戦の最中、エレンは巨人に飲み込まれるが、自らの巨人の力に覚醒。その新たな力を使い、大岩で扉の穴を塞ぐことで、人類初の対巨人勝利を飾る。</value>
+  </data>
+  <data name="Arc4Title" xml:space="preserve">
+    <value>女型の巨人編</value>
+  </data>
+  <data name="Arc4Chapters" xml:space="preserve">
+    <value>第15話〜第34話 (単行本第4巻〜第8巻)</value>
+  </data>
+  <data name="Arc4Desc" xml:space="preserve">
+    <value>エレンはリヴァイ兵長率いる特別作戦班（リヴァイ班）に配属される。第57回壁外調査中、高い知性を持つ「女型の巨人」が急襲し、リヴァイ班を壊滅させる。ストヘス区での激闘の末、正体は同期のアニ・レオンハートと判明し、彼女は尋問を防ぐため自身を結晶化する。</value>
+  </data>
+  <data name="Arc5Title" xml:space="preserve">
+    <value>巨人の出現・対決編</value>
+  </data>
+  <data name="Arc5Chapters" xml:space="preserve">
+    <value>第35話〜第50話 (単行本第9巻〜第12巻)</value>
+  </data>
+  <data name="Arc5Desc" xml:space="preserve">
+    <value>ウォール・ローゼ内に巨人が突如出現。ウドガルド城での死闘の中、ユミルが巨人の正体を現す。さらに、ライナーとベルトルトが自ら「鎧の巨人」と「超大型巨人」であることを告白し、エレンを拉致する。死闘の末奪還に成功したエレンは、初めて「座標」の力を発動する。</value>
+  </data>
+  <data name="Arc6Title" xml:space="preserve">
+    <value>王政クーデター編（王政編）</value>
+  </data>
+  <data name="Arc6Chapters" xml:space="preserve">
+    <value>第51話〜第70話 (単行本第13巻〜第17巻)</value>
+  </data>
+  <data name="Arc6Desc" xml:space="preserve">
+    <value>調査兵団は腐敗した中央憲兵と王政府からの迫害を受ける。エルヴィンとリヴァイの主導のもと、兵団は無血クーデターを画策して偽りの王を失脚させ、ヒストリア・レイスを女王に即位させる。同時に、レイス家の闇と巨人の継承の真実が明かされる。</value>
+  </data>
+  <data name="Arc7Title" xml:space="preserve">
+    <value>ウォール・マリア奪還作戦編</value>
+  </data>
+  <data name="Arc7Chapters" xml:space="preserve">
+    <value>第71話〜第90話 (単行本第18巻〜第22巻)</value>
+  </data>
+  <data name="Arc7Desc" xml:space="preserve">
+    <value>調査兵団はウォール・マリア奪還を目指し、シガンシナ区で決戦を挑む。エルヴィン団長を含む多くの犠牲を払いながらも、獣、鎧、超大型の巨人を撃破。アルミンが超大型巨人を継承し、エレンは実家の地下室へ到達して壁外世界の真実を知る。</value>
+  </data>
+  <data name="Arc8Title" xml:space="preserve">
+    <value>マーレ編</value>
+  </data>
+  <data name="Arc8Chapters" xml:space="preserve">
+    <value>第91話〜第106話 (単行本第23巻〜第26巻)</value>
+  </data>
+  <data name="Arc8Desc" xml:space="preserve">
+    <value>視点は海の向こうのマーレ帝国へ。エレンはマーレへ潜入し、ヴィリー・タイバーの宣戦布告の最中、レベリオ収容区を急襲する。エレンは「戦鎚の巨人」を捕食し、マーレとパラディ島は世界規模の全面戦争へと突入する。</value>
+  </data>
+  <data name="Arc9Title" xml:space="preserve">
+    <value>パラディ島分裂・決戦編</value>
+  </data>
+  <data name="Arc9Chapters" xml:space="preserve">
+    <value>第107話〜第122話 (単行本第27巻〜第30巻)</value>
+  </data>
+  <data name="Arc9Desc" xml:space="preserve">
+    <value>パラディ島内部で「イェーガー派」が台頭し兵団が決裂する中、マーレ軍が空中から奇襲を仕掛ける。エレンとジークは接触に成功し「道」に到達。エレンはジークの「安楽死計画」を拒絶し、始祖ユミルの意志を呼び覚まして完全なる「始祖の巨人」の力を手にする。</value>
+  </data>
+  <data name="Arc10Title" xml:space="preserve">
+    <value>地鳴らし・終局編</value>
+  </data>
+  <data name="Arc10Chapters" xml:space="preserve">
+    <value>第123話〜第139話 (単行本第31巻〜第34巻)</value>
+  </data>
+  <data name="Arc10Desc" xml:space="preserve">
+    <value>「地鳴らし」が発動し、壁内に眠る数百万の超大型巨人が世界中を踏み潰し始める。生き残ったマーレの戦士たちとパラディ島の兵士が同盟を組み、エレンの暴走を止めるため追撃。始祖の巨人の背の上で行われた最後の天地の戦いで、ミカサがエレンを討ち取り、2000年続いた巨人の呪いは終結した。</value>
   </data>
   <data name="Time1Title" xml:space="preserve">
     <value>シガンシナ区陥落</value>

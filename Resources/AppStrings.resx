@@ -417,11 +417,8 @@
   <data name="Nav_Underground" xml:space="preserve">
     <value>Underground</value>
   </data>
-  <data name="Nav_Story" xml:space="preserve">
-    <value>Story</value>
-  </data>
-  <data name="Nav_Timeline" xml:space="preserve">
-    <value>Timeline</value>
+  <data name="Nav_StoryTimeline" xml:space="preserve">
+    <value>Story &amp; Timeline</value>
   </data>
   <data name="Nav_Gallery" xml:space="preserve">
     <value>Gallery</value>
@@ -494,6 +491,108 @@
   </data>
   <data name="TimelineHeader" xml:space="preserve">
     <value>Historical War Chronicle</value>
+  </data>
+  <data name="StoryTabTitle" xml:space="preserve">
+    <value>Story Arcs</value>
+  </data>
+  <data name="TimelineTabTitle" xml:space="preserve">
+    <value>War Chronicles</value>
+  </data>
+  <data name="StoryPageHeader" xml:space="preserve">
+    <value>The History of Paradis &amp; Marley</value>
+  </data>
+  <data name="StoryPageSub" xml:space="preserve">
+    <value>A comprehensive archive of the military campaigns, political coups, and catastrophic events that shaped the world.</value>
+  </data>
+  <data name="Arc1Title" xml:space="preserve">
+    <value>Fall of Shiganshina Arc</value>
+  </data>
+  <data name="Arc1Chapters" xml:space="preserve">
+    <value>Chapters 1–2 (Volumes 1)</value>
+  </data>
+  <data name="Arc1Desc" xml:space="preserve">
+    <value>The century of fragile peace is shattered when the Colossal and Armored Titans breach Wall Maria. Humanity is forced to retreat behind Wall Rose, losing one-third of its territory and countless lives, including Eren's mother, sparking his vow to eradicate all Titans.</value>
+  </data>
+  <data name="Arc2Title" xml:space="preserve">
+    <value>104th Training Corps Arc</value>
+  </data>
+  <data name="Arc2Chapters" xml:space="preserve">
+    <value>Chapters 3–4 (Volumes 1–2)</value>
+  </data>
+  <data name="Arc2Desc" xml:space="preserve">
+    <value>Five years after the fall of Wall Maria, Eren, Mikasa, and Armin enlist in the military. Alongside a diverse group of cadets, they undergo brutal training to master the Omni-Directional Mobility gear and prepare for the frontlines.</value>
+  </data>
+  <data name="Arc3Title" xml:space="preserve">
+    <value>Battle of Trost District Arc</value>
+  </data>
+  <data name="Arc3Chapters" xml:space="preserve">
+    <value>Chapters 5–14 (Volumes 2–4)</value>
+  </data>
+  <data name="Arc3Desc" xml:space="preserve">
+    <value>The Colossal Titan strikes again, breaching Trost District. During the desperate defense, Eren is swallowed by a Titan, only to awaken his own Titan power. Using this newfound form, he seals the breach, marking humanity's first victory against the Titans.</value>
+  </data>
+  <data name="Arc4Title" xml:space="preserve">
+    <value>Female Titan Arc</value>
+  </data>
+  <data name="Arc4Chapters" xml:space="preserve">
+    <value>Chapters 15–34 (Volumes 4–8)</value>
+  </data>
+  <data name="Arc4Desc" xml:space="preserve">
+    <value>Eren is placed under Levi's custody in the Special Operations Squad. During the 57th Expedition, a highly intelligent Female Titan attacks, slaughtering the squad. After a fierce battle in Stohess District, she is unmasked as fellow cadet Annie Leonhart, who crystallizes herself to avoid interrogation.</value>
+  </data>
+  <data name="Arc5Title" xml:space="preserve">
+    <value>Clash of the Titans Arc</value>
+  </data>
+  <data name="Arc5Chapters" xml:space="preserve">
+    <value>Chapters 35–50 (Volumes 9–12)</value>
+  </data>
+  <data name="Arc5Desc" xml:space="preserve">
+    <value>Titans mysteriously appear within Wall Rose. In the chaos at Utgard Castle, Ymir reveals her Titan form. Shortly after, Reiner and Bertholdt reveal themselves as the Armored and Colossal Titans, kidnapping Eren and triggering a rescue mission where Eren first unleashes the Coordinate power.</value>
+  </data>
+  <data name="Arc6Title" xml:space="preserve">
+    <value>The Uprising Arc</value>
+  </data>
+  <data name="Arc6Chapters" xml:space="preserve">
+    <value>Chapters 51–70 (Volumes 13–17)</value>
+  </data>
+  <data name="Arc6Desc" xml:space="preserve">
+    <value>The Survey Corps faces persecution from the corrupt Royal Government. Led by Erwin and Levi, they orchestrate a coup d'état to overthrow the puppet king and place Historia Reiss on the throne, uncovering the dark secrets of the Reiss family and the Titan inheritance.</value>
+  </data>
+  <data name="Arc7Title" xml:space="preserve">
+    <value>Return to Shiganshina Arc</value>
+  </data>
+  <data name="Arc7Chapters" xml:space="preserve">
+    <value>Chapters 71–90 (Volumes 18–22)</value>
+  </data>
+  <data name="Arc7Desc" xml:space="preserve">
+    <value>The Survey Corps launches a high-stakes campaign to reclaim Wall Maria. They defeat the Beast, Armored, and Colossal Titans at a devastating cost, losing Commander Erwin. Armin inherits the Colossal Titan, and Eren finally reaches his basement to discover the truth of the outside world.</value>
+  </data>
+  <data name="Arc8Title" xml:space="preserve">
+    <value>Marley Arc</value>
+  </data>
+  <data name="Arc8Chapters" xml:space="preserve">
+    <value>Chapters 91–106 (Volumes 23–26)</value>
+  </data>
+  <data name="Arc8Desc" xml:space="preserve">
+    <value>The perspective shifts to the nation of Marley. Following Eren's infiltration, he launches a devastating surprise attack on Liberio during Willy Tybur's declaration of war. Eren consumes the War Hammer Titan, cementing Marley and Paradis in a state of absolute, total war.</value>
+  </data>
+  <data name="Arc9Title" xml:space="preserve">
+    <value>War for Paradis Arc</value>
+  </data>
+  <data name="Arc9Chapters" xml:space="preserve">
+    <value>Chapters 107–122 (Volumes 27–30)</value>
+  </data>
+  <data name="Arc9Desc" xml:space="preserve">
+    <value>Factions splinter on Paradis as the Yeagerists seize control. Marley launches a sudden aerial counter-invasion. Eren and Zeke make contact to enter the Paths, where Eren rejects Zeke's euthanasia plan and instead convinces Ymir Fritz to grant him the full power of the Founding Titan.</value>
+  </data>
+  <data name="Arc10Title" xml:space="preserve">
+    <value>The Rumbling Arc</value>
+  </data>
+  <data name="Arc10Chapters" xml:space="preserve">
+    <value>Chapters 123–139 (Volumes 31–34)</value>
+  </data>
+  <data name="Arc10Desc" xml:space="preserve">
+    <value>The Rumbling is unleashed, marching millions of Wall Titans to flatten the world. An alliance of surviving Marleyan Warriors and Paradis soldiers pursue Eren. In a final battle atop the Founder, Mikasa kills Eren, ending the Titan curse and leaving the remaining population to build a fragile future.</value>
   </data>
   <data name="Time1Title" xml:space="preserve">
     <value>Fall of Shiganshina District</value>

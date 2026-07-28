@@ -417,11 +417,8 @@
   <data name="Nav_Underground" xml:space="preserve">
     <value>地下城</value>
   </data>
-  <data name="Nav_Story" xml:space="preserve">
-    <value>Story</value>
-  </data>
-  <data name="Nav_Timeline" xml:space="preserve">
-    <value>Timeline</value>
+  <data name="Nav_StoryTimeline" xml:space="preserve">
+    <value>故事與時間軸</value>
   </data>
   <data name="Nav_Gallery" xml:space="preserve">
     <value>Gallery</value>
@@ -494,6 +491,108 @@
   </data>
   <data name="TimelineHeader" xml:space="preserve">
     <value>帕拉迪島防衛戰史年表</value>
+  </data>
+  <data name="StoryTabTitle" xml:space="preserve">
+    <value>故事篇章</value>
+  </data>
+  <data name="TimelineTabTitle" xml:space="preserve">
+    <value>戰史編年</value>
+  </data>
+  <data name="StoryPageHeader" xml:space="preserve">
+    <value>帕拉迪島與馬雷之歷史檔案</value>
+  </data>
+  <data name="StoryPageSub" xml:space="preserve">
+    <value>詳盡記錄塑造此世界的軍事戰役、政權交替及地鳴災難等核心歷史篇章。</value>
+  </data>
+  <data name="Arc1Title" xml:space="preserve">
+    <value>希干希納區陷落篇</value>
+  </data>
+  <data name="Arc1Chapters" xml:space="preserve">
+    <value>第1–2話 (單行本第1卷)</value>
+  </data>
+  <data name="Arc1Desc" xml:space="preserve">
+    <value>人類維持了整整一個世紀的虛假和平被突如其來的超大型巨人和盔甲巨人無情粉碎。瑪利亞之牆外門失守，人類被迫退守至玫瑰之牆以內，喪失了三分之一的領土和無數生命。艾連目睹母親被巨人吞噬，誓言將所有巨人驅逐殆盡。</value>
+  </data>
+  <data name="Arc2Title" xml:space="preserve">
+    <value>第104期訓練兵團篇</value>
+  </data>
+  <data name="Arc2Chapters" xml:space="preserve">
+    <value>第3–4話 (單行本第1–2卷)</value>
+  </data>
+  <data name="Arc2Desc" xml:space="preserve">
+    <value>瑪利亞之牆陷落五年後，艾連、米卡莎、阿爾敏正式加入軍隊。與其他抱持不同理念的同期訓練兵一起，在教官的殘酷指導下進行極限訓練，熟練掌握立體機動裝置，為走向殘酷的前線做足準備。</value>
+  </data>
+  <data name="Arc3Title" xml:space="preserve">
+    <value>托洛斯特區防衛戰篇</value>
+  </data>
+  <data name="Arc3Chapters" xml:space="preserve">
+    <value>第5–14話 (單行本第2–4卷)</value>
+  </data>
+  <data name="Arc3Desc" xml:space="preserve">
+    <value>超大型巨人再度現身突破托洛斯特區城門。在絕望的防衛戰中，艾連為救阿爾敏被巨人吞噬，卻意外覺醒了自身的巨人之力。藉由化身巨人的姿態，艾連成功搬運巨石封堵城門缺口，取得了人類對巨人的歷史性首勝。</value>
+  </data>
+  <data name="Arc4Title" xml:space="preserve">
+    <value>女巨人篇</value>
+  </data>
+  <data name="Arc4Chapters" xml:space="preserve">
+    <value>第15–34話 (單行本第4–8卷)</value>
+  </data>
+  <data name="Arc4Desc" xml:space="preserve">
+    <value>艾連被編入里維兵長率領的特別作戰小組。在第57次壁外調查中，擁有高度智慧的女巨人突襲調查兵團，以壓倒性戰力殘殺里維班成員。在史托黑斯區展開激烈決戰後，女巨人被證實為同期生阿妮·萊昂哈特，她於最後關頭將自身結晶化以逃避審訊。</value>
+  </data>
+  <data name="Arc5Title" xml:space="preserve">
+    <value>巨人對決篇</value>
+  </data>
+  <data name="Arc5Chapters" xml:space="preserve">
+    <value>第35–50話 (單行本第9–12卷)</value>
+  </data>
+  <data name="Arc5Desc" xml:space="preserve">
+    <value>玫瑰之牆內側驚現大批巨人。在厄特加爾城的混戰中，尤米爾展現了其巨人真身。隨後，萊納與貝爾托德在牆頭公開了自己分別是盔甲巨人與超大型巨人的身份，強行綁走艾連。調查兵團展開死傷慘重的奪回戰，混亂中艾連首次發動了「座標」之力。</value>
+  </data>
+  <data name="Arc6Title" xml:space="preserve">
+    <value>王政奪還篇（王政篇）</value>
+  </data>
+  <data name="Arc6Chapters" xml:space="preserve">
+    <value>第51–70話 (單行本第13–17卷)</value>
+  </data>
+  <data name="Arc6Desc" xml:space="preserve">
+    <value>調查兵團遭到腐敗的王政府追捕迫害。在艾爾文與里維的籌劃下，兵團發動不流血政變推翻了傀儡王室，並擁立擁有一半王室血統的希絲特莉亞登基為女王。同時解開了雷伊斯家族的黑歷史以及巨人之力傳承的終極真相。</value>
+  </data>
+  <data name="Arc7Title" xml:space="preserve">
+    <value>瑪利亞之牆奪還篇</value>
+  </data>
+  <data name="Arc7Chapters" xml:space="preserve">
+    <value>第71–90話 (單行本第18–22卷)</value>
+  </data>
+  <data name="Arc7Desc" xml:space="preserve">
+    <value>調查兵團孤注一擲，發起奪回希干希納區與瑪利亞之牆的決戰。他們付出了包括團長艾爾文犧牲在內的極其慘痛的代價，擊敗了獸之巨人、盔甲巨人和超大型巨人。阿爾敏繼承了超大型巨人，而艾連終於抵達父親留下的地下室，揭開了牆外世界的驚天真相。</value>
+  </data>
+  <data name="Arc8Title" xml:space="preserve">
+    <value>馬雷篇</value>
+  </data>
+  <data name="Arc8Chapters" xml:space="preserve">
+    <value>第91–106話 (單行本第23–26卷)</value>
+  </data>
+  <data name="Arc8Desc" xml:space="preserve">
+    <value>視角轉移到大洋彼岸的馬雷帝國。艾連隻身潛入馬雷，並在威利·戴巴發表宣戰布告之際，在雷貝里歐收容區發動毀滅性的突襲。艾連成功吞噬戰槌巨人，將馬雷與帕拉迪島拖入了不死不休的全球大戰之中。</value>
+  </data>
+  <data name="Arc9Title" xml:space="preserve">
+    <value>帕拉迪島分裂/決戰篇</value>
+  </data>
+  <data name="Arc9Chapters" xml:space="preserve">
+    <value>第107–122話 (單行本第27–30卷)</value>
+  </data>
+  <data name="Arc9Desc" xml:space="preserve">
+    <value>帕拉迪島內部因「葉卡派」的奪權而四分五裂。馬雷隨即發動空中奇襲。艾連與吉克在戰火中成功接觸進入「道路」，艾連當場拒絕了吉克的「安樂死計劃」，並喚醒了始祖尤米爾的個人意志，獲得了完整的始祖巨人之力。</value>
+  </data>
+  <data name="Arc10Title" xml:space="preserve">
+    <value>地鳴滅世/終局篇</value>
+  </data>
+  <data name="Arc10Chapters" xml:space="preserve">
+    <value>第123–139話 (單行本第31–34卷)</value>
+  </data>
+  <data name="Arc10Desc" xml:space="preserve">
+    <value>滅世「地鳴」正式啟動，數以百萬計的牆中超大型巨人開始踐踏世界。由倖存的馬雷戰士與帕拉迪島士兵組成的聯合救援隊追擊艾連。在始祖巨人背脊之上的最後天地決戰中，米卡莎親手斬首艾連，終結了延續兩千年的巨人詛咒。</value>
   </data>
   <data name="Time1Title" xml:space="preserve">
     <value>希干希納區的淪陷</value>

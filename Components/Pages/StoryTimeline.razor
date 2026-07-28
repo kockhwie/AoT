@@ -1,0 +1,209 @@
+@page "/story"
+@page "/timeline"
+@page "/{Lang}/story"
+@page "/{Lang}/timeline"
+@using AOT.Services
+@implements IDisposable
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+@inject NavigationManager Nav
+
+<PageTitle>@(IsStoryTab ? LocalizationService.GetString("StoryTabTitle") : LocalizationService.GetString("TimelineTabTitle")) - @LocalizationService.GetString("PageTitle")</PageTitle>
+
+<div class="aot-page-container">
+    <!-- Premium Obsidian Header Panel -->
+    <div class="aot-story-header">
+        <h1 class="aot-page-title uppercase">@LocalizationService.GetString("StoryPageHeader")</h1>
+        <p class="aot-page-subtitle font-sans">@LocalizationService.GetString("StoryPageSub")</p>
+        
+        <!-- Toggle Switch Tab Container -->
+        <div class="aot-tab-switcher">
+            <button class="aot-tab-btn @(IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("story")'>
+                <i class="ti ti-books"></i> @LocalizationService.GetString("StoryTabTitle")
+            </button>
+            <button class="aot-tab-btn @(!IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("timeline")'>
+                <i class="ti ti-clock"></i> @LocalizationService.GetString("TimelineTabTitle")
+            </button>
+        </div>
+    </div>
+
+    <!-- Active View Area -->
+    <div class="aot-view-content mt-6">
+        @if (IsStoryTab)
+        {
+            <!-- Story Arcs View -->
+            <div class="aot-story-grid">
+                @foreach (var arc in _storyArcs)
+                {
+                    <div class="aot-arc-card">
+                        <div class="aot-arc-header">
+                            <span class="aot-arc-vol font-sans">@LocalizationService.GetString(arc.ChaptersKey)</span>
+                            <h2 class="aot-arc-title font-sans">@LocalizationService.GetString(arc.TitleKey)</h2>
+                        </div>
+                        <p class="aot-arc-desc font-sans">@LocalizationService.GetString(arc.DescKey)</p>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <!-- Chronological Timeline View -->
+            <div class="aot-timeline-container">
+                <ul class="timeline timeline-vertical timeline-compact">
+                    <!-- Event 1 · 845 — Fall of Shiganshina -->
+                    <li>
+                        <div class="timeline-middle timeline-icon timeline-icon--catastrophe">
+                            <i class="ti ti-wall"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">845 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time1Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time1Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 2 · 850 — Battle of Trost -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--battle">
+                            <i class="ti ti-sword"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">850 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time3Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time3Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 3 · 850 — 57th Scouting Mission -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--recon">
+                            <i class="ti ti-eye"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">850 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time4Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time4Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 4 · 850 — Clash of the Titans -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--betrayal">
+                            <i class="ti ti-alert-triangle"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">850 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time5Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time5Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 5 · 854 — Declaration of War -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--war">
+                            <i class="ti ti-flag-2"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">854 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time2Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time2Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 6 · 854 — The Rumbling Begins -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--rumbling">
+                            <i class="ti ti-flame"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">854 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time6Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time6Desc")</p>
+                        </div>
+                        <hr class="timeline-connector" />
+                    </li>
+
+                    <!-- Event 7 · 854 — Battle of Heaven and Earth -->
+                    <li>
+                        <hr class="timeline-connector" />
+                        <div class="timeline-middle timeline-icon timeline-icon--final">
+                            <i class="ti ti-crown"></i>
+                        </div>
+                        <div class="timeline-end aot-timeline-box">
+                            <time class="aot-timeline-time font-sans">854 年</time>
+                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time7Title")</div>
+                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time7Desc")</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Lang { get; set; }
+
+    private bool IsStoryTab => Nav.Uri.EndsWith("/story", StringComparison.OrdinalIgnoreCase) || Nav.Uri.Contains("/story?", StringComparison.OrdinalIgnoreCase);
+
+    private sealed class StoryArcModel
+    {
+        public string TitleKey { get; init; } = "";
+        public string ChaptersKey { get; init; } = "";
+        public string DescKey { get; init; } = "";
+    }
+
+    private readonly List<StoryArcModel> _storyArcs = new()
+    {
+        new StoryArcModel { TitleKey = "Arc1Title", ChaptersKey = "Arc1Chapters", DescKey = "Arc1Desc" },
+        new StoryArcModel { TitleKey = "Arc2Title", ChaptersKey = "Arc2Chapters", DescKey = "Arc2Desc" },
+        new StoryArcModel { TitleKey = "Arc3Title", ChaptersKey = "Arc3Chapters", DescKey = "Arc3Desc" },
+        new StoryArcModel { TitleKey = "Arc4Title", ChaptersKey = "Arc4Chapters", DescKey = "Arc4Desc" },
+        new StoryArcModel { TitleKey = "Arc5Title", ChaptersKey = "Arc5Chapters", DescKey = "Arc5Desc" },
+        new StoryArcModel { TitleKey = "Arc6Title", ChaptersKey = "Arc6Chapters", DescKey = "Arc6Desc" },
+        new StoryArcModel { TitleKey = "Arc7Title", ChaptersKey = "Arc7Chapters", DescKey = "Arc7Desc" },
+        new StoryArcModel { TitleKey = "Arc8Title", ChaptersKey = "Arc8Chapters", DescKey = "Arc8Desc" },
+        new StoryArcModel { TitleKey = "Arc9Title", ChaptersKey = "Arc9Chapters", DescKey = "Arc9Desc" },
+        new StoryArcModel { TitleKey = "Arc10Title", ChaptersKey = "Arc10Chapters", DescKey = "Arc10Desc" }
+    };
+
+    protected override void OnInitialized()
+    {
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+        {
+            LanguageSwitcher.Initialize(Lang);
+            LocalizationService.ActiveLang = LanguageSwitcher.ActiveLang;
+        }
+    }
+
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        StateHasChanged();
+    }
+
+    private void SwitchTab(string tab)
+    {
+        var prefix = LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang);
+        Nav.NavigateTo($"{prefix}/{tab}", forceLoad: false);
+    }
+
+    public void Dispose()
+    {
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
+}
