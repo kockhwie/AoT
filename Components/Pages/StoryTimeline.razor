@@ -50,101 +50,28 @@
             <!-- Chronological Timeline View -->
             <div class="aot-timeline-container">
                 <ul class="timeline timeline-vertical timeline-compact">
-                    <!-- Event 1 · 845 — Fall of Shiganshina -->
-                    <li>
-                        <div class="timeline-middle timeline-icon timeline-icon--catastrophe">
-                            <i class="ti ti-wall"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">845 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time1Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time1Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 2 · 850 — Battle of Trost -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--battle">
-                            <i class="ti ti-sword"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">850 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time3Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time3Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 3 · 850 — 57th Scouting Mission -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--recon">
-                            <i class="ti ti-eye"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">850 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time4Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time4Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 4 · 850 — Clash of the Titans -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--betrayal">
-                            <i class="ti ti-alert-triangle"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">850 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time5Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time5Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 5 · 854 — Declaration of War -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--war">
-                            <i class="ti ti-flag-2"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">854 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time2Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time2Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 6 · 854 — The Rumbling Begins -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--rumbling">
-                            <i class="ti ti-flame"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">854 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time6Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time6Desc")</p>
-                        </div>
-                        <hr class="timeline-connector" />
-                    </li>
-
-                    <!-- Event 7 · 854 — Battle of Heaven and Earth -->
-                    <li>
-                        <hr class="timeline-connector" />
-                        <div class="timeline-middle timeline-icon timeline-icon--final">
-                            <i class="ti ti-crown"></i>
-                        </div>
-                        <div class="timeline-end aot-timeline-box">
-                            <time class="aot-timeline-time font-sans">854 年</time>
-                            <div class="aot-timeline-title font-sans">@LocalizationService.GetString("Time7Title")</div>
-                            <p class="aot-timeline-desc font-sans">@LocalizationService.GetString("Time7Desc")</p>
-                        </div>
-                    </li>
+                    @for (int i = 0; i < _timelineEvents.Count; i++)
+                    {
+                        var evt = _timelineEvents[i];
+                        <li>
+                            @if (i > 0)
+                            {
+                                <hr class="timeline-connector" />
+                            }
+                            <div class="timeline-middle timeline-icon @evt.IconColorClass">
+                                <i class="ti @evt.IconClass"></i>
+                            </div>
+                            <div class="timeline-end aot-timeline-box">
+                                <time class="aot-timeline-time font-sans">@LocalizationService.GetString(evt.YearKey) @(LocalizationService.ActiveLang == "en" ? "" : "年")</time>
+                                <div class="aot-timeline-title font-sans">@LocalizationService.GetString(evt.TitleKey)</div>
+                                <p class="aot-timeline-desc font-sans">@LocalizationService.GetString(evt.DescKey)</p>
+                            </div>
+                            @if (i < _timelineEvents.Count - 1)
+                            {
+                                <hr class="timeline-connector" />
+                            }
+                        </li>
+                    }
                 </ul>
             </div>
         }
@@ -175,6 +102,39 @@
         new StoryArcModel { TitleKey = "Arc8Title", ChaptersKey = "Arc8Chapters", DescKey = "Arc8Desc" },
         new StoryArcModel { TitleKey = "Arc9Title", ChaptersKey = "Arc9Chapters", DescKey = "Arc9Desc" },
         new StoryArcModel { TitleKey = "Arc10Title", ChaptersKey = "Arc10Chapters", DescKey = "Arc10Desc" }
+    };
+
+    private sealed class TimelineEventModel
+    {
+        public int Id { get; init; }
+        public string TitleKey => $"Timeline_Event{Id}_Title";
+        public string DescKey => $"Timeline_Event{Id}_Desc";
+        public string YearKey => $"Timeline_Event{Id}_Year";
+        public string IconClass { get; init; } = "ti-clock";
+        public string IconColorClass { get; init; } = "timeline-icon--battle";
+    }
+
+    private readonly List<TimelineEventModel> _timelineEvents = new()
+    {
+        new TimelineEventModel { Id = 1, IconClass = "ti-sparkles", IconColorClass = "timeline-icon--catastrophe" },
+        new TimelineEventModel { Id = 2, IconClass = "ti-skull", IconColorClass = "timeline-icon--catastrophe" },
+        new TimelineEventModel { Id = 3, IconClass = "ti-swords", IconColorClass = "timeline-icon--battle" },
+        new TimelineEventModel { Id = 4, IconClass = "ti-wall", IconColorClass = "timeline-icon--recon" },
+        new TimelineEventModel { Id = 5, IconClass = "ti-key", IconColorClass = "timeline-icon--betrayal" },
+        new TimelineEventModel { Id = 6, IconClass = "ti-skull", IconColorClass = "timeline-icon--catastrophe" },
+        new TimelineEventModel { Id = 7, IconClass = "ti-flame", IconColorClass = "timeline-icon--catastrophe" },
+        new TimelineEventModel { Id = 8, IconClass = "ti-syringe", IconColorClass = "timeline-icon--recon" },
+        new TimelineEventModel { Id = 9, IconClass = "ti-alert-triangle", IconColorClass = "timeline-icon--catastrophe" },
+        new TimelineEventModel { Id = 10, IconClass = "ti-shield-check", IconColorClass = "timeline-icon--battle" },
+        new TimelineEventModel { Id = 11, IconClass = "ti-horse", IconColorClass = "timeline-icon--recon" },
+        new TimelineEventModel { Id = 12, IconClass = "ti-diamond", IconColorClass = "timeline-icon--battle" },
+        new TimelineEventModel { Id = 13, IconClass = "ti-users", IconColorClass = "timeline-icon--betrayal" },
+        new TimelineEventModel { Id = 14, IconClass = "ti-sword", IconColorClass = "timeline-icon--battle" },
+        new TimelineEventModel { Id = 15, IconClass = "ti-building-monument", IconColorClass = "timeline-icon--betrayal" },
+        new TimelineEventModel { Id = 16, IconClass = "ti-crosshair", IconColorClass = "timeline-icon--battle" },
+        new TimelineEventModel { Id = 17, IconClass = "ti-flag-2", IconColorClass = "timeline-icon--war" },
+        new TimelineEventModel { Id = 18, IconClass = "ti-flame", IconColorClass = "timeline-icon--rumbling" },
+        new TimelineEventModel { Id = 19, IconClass = "ti-crown", IconColorClass = "timeline-icon--final" }
     };
 
     protected override void OnInitialized()

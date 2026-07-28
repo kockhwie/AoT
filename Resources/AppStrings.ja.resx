@@ -1260,4 +1260,175 @@
   <data name="TitanWall_Desc" xml:space="preserve">
     <value>城壁が築かれた当初から三重の壁の中に埋め込まれ、覚醒の時を待つ無数の巨人たち。その存在は真実が明かされるまで一世紀にわたり隠され続けた。</value>
   </data>
+  <data name="Timeline_Event1_Title" xml:space="preserve">
+    <value>ユミル、巨人の力を手に入れる</value>
+  </data>
+  <data name="Timeline_Event1_Desc" xml:space="preserve">
+    <value>ユミル・フリッツが「大地の悪魔」と接触し、最初の巨人「始祖の巨人」となる。彼女は 13 年間その力を用いてエルディア帝国を築き上げた。</value>
+  </data>
+  <data name="Timeline_Event1_Year" xml:space="preserve">
+    <value>~1003 B1</value>
+  </data>
+  <data name="Timeline_Event2_Title" xml:space="preserve">
+    <value>ユミルの死と九つの巨人への分割</value>
+  </data>
+  <data name="Timeline_Event2_Desc" xml:space="preserve">
+    <value>ユミルは王を槍から守り死亡。その力は 3 人の娘に継承され、やがて「九つの巨人」と「ユミルの呪い（13 年の寿命）」が生まれた。</value>
+  </data>
+  <data name="Timeline_Event2_Year" xml:space="preserve">
+    <value>~990 B1</value>
+  </data>
+  <data name="Timeline_Event3_Title" xml:space="preserve">
+    <value>巨人大戦終結</value>
+  </data>
+  <data name="Timeline_Event3_Desc" xml:space="preserve">
+    <value>145 代王カール・フリッツはエルディアの歴史を恥じ、タイバー家と共謀して内戦を終結させた。マーレは 7 つの巨人を手中に収め、進撃の巨人のみが姿を消した。</value>
+  </data>
+  <data name="Timeline_Event3_Year" xml:space="preserve">
+    <value>~743</value>
+  </data>
+  <data name="Timeline_Event4_Title" xml:space="preserve">
+    <value>三重の壁が築かれる</value>
+  </data>
+  <data name="Timeline_Event4_Desc" xml:space="preserve">
+    <value>王は始祖の巨人の力を用いて無数の超大型巨人を硬化させ、三重の壁（マリア、ローゼ、シーナ）を築いた。壁内エルディア人の記憶は改竄された。</value>
+  </data>
+  <data name="Timeline_Event4_Year" xml:space="preserve">
+    <value>743</value>
+  </data>
+  <data name="Timeline_Event5_Title" xml:space="preserve">
+    <value>グリシャ、進撃の巨人を継承</value>
+  </data>
+  <data name="Timeline_Event5_Desc" xml:space="preserve">
+    <value>ジークの告発によりグリシャはパラディ島へ送還される。エレン・クルーガー（梟）が彼を救い、進撃の巨人を継承させて始祖奪還を託した。</value>
+  </data>
+  <data name="Timeline_Event5_Year" xml:space="preserve">
+    <value>832</value>
+  </data>
+  <data name="Timeline_Event6_Title" xml:space="preserve">
+    <value>ミカサの両親が殺害される</value>
+  </data>
+  <data name="Timeline_Event6_Desc" xml:space="preserve">
+    <value>人身売買犯がミカサの両親を殺害。エレンが 2 人を殺し、ミカサのアカルマンの力が覚醒して残り 1 人を殺害。彼女はイェーガー家の養子となる。</value>
+  </data>
+  <data name="Timeline_Event6_Year" xml:space="preserve">
+    <value>844</value>
+  </data>
+  <data name="Timeline_Event7_Title" xml:space="preserve">
+    <value>ウォール・マリア陥落</value>
+  </data>
+  <data name="Timeline_Event7_Desc" xml:space="preserve">
+    <value>超大型巨人と鎧の巨人がシガンシナ区でマリアを破壊。人類はローゼへ後退。エレンの母カルラは巨人（後にダイナ・フリッツと判明）に捕食される。</value>
+  </data>
+  <data name="Timeline_Event7_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event8_Title" xml:space="preserve">
+    <value>グリシャの最期の任務</value>
+  </data>
+  <data name="Timeline_Event8_Desc" xml:space="preserve">
+    <value>グリシャは礼拝堂地下でレイス家を虐殺、フリーダから始祖の巨人を簒奪。エレンに自身を食わせ、進撃と始祖の巨人を継承させた。</value>
+  </data>
+  <data name="Timeline_Event8_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event9_Title" xml:space="preserve">
+    <value>マリア奪還作戦の失敗</value>
+  </data>
+  <data name="Timeline_Event9_Desc" xml:space="preserve">
+    <value>王政府は全人口の 2 割（25 万人）を動員してマリア奪還作戦を実施。作戦は惨敗し、マリアは公式に放棄された。</value>
+  </data>
+  <data name="Timeline_Event9_Year" xml:space="preserve">
+    <value>846</value>
+  </data>
+  <data name="Timeline_Event10_Title" xml:space="preserve">
+    <value>トロスト区攻防戦</value>
+  </data>
+  <data name="Timeline_Event10_Desc" xml:space="preserve">
+    <value>超大型巨人がトロスト区でローゼを破壊。エレンは捕食後巨人化能力に目覚め、岩で門を封鎖。人類初の巨人への勝利となった。</value>
+  </data>
+  <data name="Timeline_Event10_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event11_Title" xml:space="preserve">
+    <value>第 57 回壁外調査</value>
+  </data>
+  <data name="Timeline_Event11_Desc" xml:space="preserve">
+    <value>調査兵団は女型の巨人を捕獲するため壁外へ出陣。アニ（女型）が右翼を虐殺。作戦は多大な犠牲を出して失敗した。</value>
+  </data>
+  <data name="Timeline_Event11_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event12_Title" xml:space="preserve">
+    <value>ストヘス区女型捕獲作戦</value>
+  </data>
+  <data name="Timeline_Event12_Desc" xml:space="preserve">
+    <value>アニはストヘス区に誘い出され女型として正体を現す。エレンと激突、捕獲されるも自身を結晶化。壁内部に巨人が露出する。</value>
+  </data>
+  <data name="Timeline_Event12_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event13_Title" xml:space="preserve">
+    <value>ウォール・ローゼ巨人出現</value>
+  </data>
+  <data name="Timeline_Event13_Desc" xml:space="preserve">
+    <value>ジークの獣の巨人がラガコ村民を無垢の巨人へ変える。ライナーとベルトルトが鎧と超大型巨人として正体を現し、エレンとユミルを拉致する。</value>
+  </data>
+  <data name="Timeline_Event13_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event14_Title" xml:space="preserve">
+    <value>エレン奪還作戦</value>
+  </data>
+  <data name="Timeline_Event14_Desc" xml:space="preserve">
+    <value>調査兵団・駐屯兵団・憲兵団が拉致犯を追跡。エレンは「座標」の力を覚醒させ巨人を操る。ハンネス戦死、ユミルはマーレに捕獲される。</value>
+  </data>
+  <data name="Timeline_Event14_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event15_Title" xml:space="preserve">
+    <value>王政転覆クーデター</value>
+  </data>
+  <data name="Timeline_Event15_Desc" xml:space="preserve">
+    <value>調査兵団が腐敗した王政府を転覆。真の王家（レイス家）が判明。ヒストリアは巨人化した父ロッドを倒し女王に即位する。</value>
+  </data>
+  <data name="Timeline_Event15_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event16_Title" xml:space="preserve">
+    <value>シガンシナ奪還作戦</value>
+  </data>
+  <data name="Timeline_Event16_Desc" xml:space="preserve">
+    <value>調査兵団はシガンシナを奪還しマリアを封鎖。エルヴィンは囮となり戦死、アルミンは超大型巨人を継承。リヴァイが獣の巨人を倒す。</value>
+  </data>
+  <data name="Timeline_Event16_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event17_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event18_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event19_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event17_Title" xml:space="preserve">
+    <value>マーレ強襲と宣戦布告</value>
+  </data>
+  <data name="Timeline_Event17_Desc" xml:space="preserve">
+    <value>エレン・イェーガーがレベリオ収容区を急襲。世界を巻き込む最終決戦の火蓋が切られた。</value>
+  </data>
+  <data name="Timeline_Event18_Title" xml:space="preserve">
+    <value>地鳴らし発動</value>
+  </data>
+  <data name="Timeline_Event18_Desc" xml:space="preserve">
+    <value>エレン・イェーガーが始祖の巨人の力を発動し、壁内に眠る数百万の超大型巨人を解放。パラディ島の外に存在するすべての命を滅ぼすべく、地鳴らしが始まった。</value>
+  </data>
+  <data name="Timeline_Event19_Title" xml:space="preserve">
+    <value>天地の戦い（最終決戦）</value>
+  </data>
+  <data name="Timeline_Event19_Desc" xml:space="preserve">
+    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った——彼らが知る世界の終焉と引き換えに。</value>
+  </data>
 </root>

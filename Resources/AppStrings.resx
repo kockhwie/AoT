@@ -1260,4 +1260,175 @@
   <data name="TitanWall_Desc" xml:space="preserve">
     <value>Countless titans embedded within the three walls since their construction, waiting to be awakened. Their existence remained hidden for a century until the truth was revealed.</value>
   </data>
+  <data name="Timeline_Event1_Title" xml:space="preserve">
+    <value>Ymir Gains Titan Power</value>
+  </data>
+  <data name="Timeline_Event1_Desc" xml:space="preserve">
+    <value>Ymir Fritz makes contact with the "Source of All Living Matter" (Devil of All Earth) and becomes the first Titan, the Founding Titan. She uses her power to build the Eldian Empire over 13 years.</value>
+  </data>
+  <data name="Timeline_Event1_Year" xml:space="preserve">
+    <value>~1003 B1</value>
+  </data>
+  <data name="Timeline_Event2_Title" xml:space="preserve">
+    <value>Ymir's Death and Division</value>
+  </data>
+  <data name="Timeline_Event2_Desc" xml:space="preserve">
+    <value>Ymir dies protecting King Fritz from a spear. Her power is divided among her three daughters, eventually creating the Nine Titans and the 13-year Curse of Ymir.</value>
+  </data>
+  <data name="Timeline_Event2_Year" xml:space="preserve">
+    <value>~990 B1</value>
+  </data>
+  <data name="Timeline_Event3_Title" xml:space="preserve">
+    <value>The Great Titan War Ends</value>
+  </data>
+  <data name="Timeline_Event3_Desc" xml:space="preserve">
+    <value>The 145th King Karl Fritz, ashamed of Eldia's history, conspires with the Tybur family to end the civil war. Marley gains seven Titans; only the Attack Titan remains in hiding.</value>
+  </data>
+  <data name="Timeline_Event3_Year" xml:space="preserve">
+    <value>~743</value>
+  </data>
+  <data name="Timeline_Event4_Title" xml:space="preserve">
+    <value>Walls Are Constructed</value>
+  </data>
+  <data name="Timeline_Event4_Desc" xml:space="preserve">
+    <value>King Fritz uses the Founding Titan to create the three Walls (Maria, Rose, Sina) from countless Colossus Titans. He erases the memories of Subjects of Ymir inside Paradis Island.</value>
+  </data>
+  <data name="Timeline_Event4_Year" xml:space="preserve">
+    <value>743</value>
+  </data>
+  <data name="Timeline_Event5_Title" xml:space="preserve">
+    <value>Grisha Inherits Attack Titan</value>
+  </data>
+  <data name="Timeline_Event5_Desc" xml:space="preserve">
+    <value>After Zeke betrays the Eldian Restorationists, Grisha is exiled to Paradis. Eren Kruger (the Owl) saves him and passes the Attack Titan, tasking him to reclaim the Founding Titan.</value>
+  </data>
+  <data name="Timeline_Event5_Year" xml:space="preserve">
+    <value>832</value>
+  </data>
+  <data name="Timeline_Event6_Title" xml:space="preserve">
+    <value>Mikasa's Parents Murdered</value>
+  </data>
+  <data name="Timeline_Event6_Desc" xml:space="preserve">
+    <value>Human traffickers murder Mikasa's parents. Eren kills two traffickers; Mikasa's Ackerman power awakens and she kills the third. She becomes the Yeagers' adopted daughter.</value>
+  </data>
+  <data name="Timeline_Event6_Year" xml:space="preserve">
+    <value>844</value>
+  </data>
+  <data name="Timeline_Event7_Title" xml:space="preserve">
+    <value>Fall of Wall Maria</value>
+  </data>
+  <data name="Timeline_Event7_Desc" xml:space="preserve">
+    <value>The Colossus and Armored Titans breach Wall Maria at Shiganshina. Humanity retreats to Wall Rose. Eren's mother Carla is eaten by a Titan (later revealed as Dina Fritz).</value>
+  </data>
+  <data name="Timeline_Event7_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event8_Title" xml:space="preserve">
+    <value>Grisha's Final Mission</value>
+  </data>
+  <data name="Timeline_Event8_Desc" xml:space="preserve">
+    <value>Grisha massacres the Reiss family in the chapel crypt, steals the Founding Titan from Frieda, and forces Eren to eat him, inheriting both the Attack and Founding Titans.</value>
+  </data>
+  <data name="Timeline_Event8_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event9_Title" xml:space="preserve">
+    <value>Failed Maria Reclamation</value>
+  </data>
+  <data name="Timeline_Event9_Desc" xml:space="preserve">
+    <value>The government launches a reclamation operation using 20% of the population (250,000 people). The mission fails catastrophically, and Wall Maria is officially abandoned.</value>
+  </data>
+  <data name="Timeline_Event9_Year" xml:space="preserve">
+    <value>846</value>
+  </data>
+  <data name="Timeline_Event10_Title" xml:space="preserve">
+    <value>Battle of Trost</value>
+  </data>
+  <data name="Timeline_Event10_Desc" xml:space="preserve">
+    <value>The Colossus Titan breaches Wall Rose at Trost. Eren discovers his Titan-shifting ability after being eaten. He seals the gate with a boulder, humanity's first victory against Titans.</value>
+  </data>
+  <data name="Timeline_Event10_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event11_Title" xml:space="preserve">
+    <value>57th Exterior Scout Mission</value>
+  </data>
+  <data name="Timeline_Event11_Desc" xml:space="preserve">
+    <value>The Survey Corps departs to capture the Female Titan in the interior. Annie (Female Titan) massacres the right flank. The mission fails with heavy casualties.</value>
+  </data>
+  <data name="Timeline_Event11_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event12_Title" xml:space="preserve">
+    <value>Stohess District Battle</value>
+  </data>
+  <data name="Timeline_Event12_Desc" xml:space="preserve">
+    <value>Annie is lured into Stohess and reveals herself as the Female Titan. Eren battles her; she is captured but crystallizes herself. A Titan is revealed inside the Wall.</value>
+  </data>
+  <data name="Timeline_Event12_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event13_Title" xml:space="preserve">
+    <value>Wall Rose Titan Breach</value>
+  </data>
+  <data name="Timeline_Event13_Desc" xml:space="preserve">
+    <value>Zeke's Beast Titan transforms Ragako villagers into Pure Titans. Reiner and Bertholdt reveal themselves as Armored and Colossus Titans, kidnapping Eren and Ymir.</value>
+  </data>
+  <data name="Timeline_Event13_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event14_Title" xml:space="preserve">
+    <value>Eren Rescue Operation</value>
+  </data>
+  <data name="Timeline_Event14_Desc" xml:space="preserve">
+    <value>The Survey Corps, Garrison, and Military Police pursue the kidnappers. Eren awakens the Coordinate power, controlling Titans. Hannes dies; Ymir is captured by Marley.</value>
+  </data>
+  <data name="Timeline_Event14_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event15_Title" xml:space="preserve">
+    <value>Uprising and Coup</value>
+  </data>
+  <data name="Timeline_Event15_Desc" xml:space="preserve">
+    <value>The Survey Corps overthrows the corrupt government. The true royal family (Reiss) is revealed. Historia becomes queen after killing her titanized father Rod.</value>
+  </data>
+  <data name="Timeline_Event15_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event16_Title" xml:space="preserve">
+    <value>Shiganshina Battle</value>
+  </data>
+  <data name="Timeline_Event16_Desc" xml:space="preserve">
+    <value>The Survey Corps retakes Wall Maria. Erwin dies leading a charge; Armin inherits the Colossus Titan. Levi defeats the Beast Titan. Nine of the original 100 soldiers survive.</value>
+  </data>
+  <data name="Timeline_Event16_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event17_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event18_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event19_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event17_Title" xml:space="preserve">
+    <value>The Declaration of War</value>
+  </data>
+  <data name="Timeline_Event17_Desc" xml:space="preserve">
+    <value>Eren Yeager launched a surprise raid on Liberio, shifting the global war into its endgame.</value>
+  </data>
+  <data name="Timeline_Event18_Title" xml:space="preserve">
+    <value>The Rumbling Begins</value>
+  </data>
+  <data name="Timeline_Event18_Desc" xml:space="preserve">
+    <value>Eren Yeager activated the Power of the Founding Titan, unleashing millions of Wall Titans in a cataclysmic march to annihilate all life beyond Paradis.</value>
+  </data>
+  <data name="Timeline_Event19_Title" xml:space="preserve">
+    <value>Battle of Heaven and Earth</value>
+  </data>
+  <data name="Timeline_Event19_Desc" xml:space="preserve">
+    <value>The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa — ending the Rumbling and the cycle of hatred at the cost of the world they knew.</value>
+  </data>
 </root>

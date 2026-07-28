@@ -1260,4 +1260,175 @@
   <data name="TitanWall_Desc" xml:space="preserve">
     <value>自城牆建造以來便被埋藏於三道城牆之中、等待甦醒的無數巨人。牠們的存在被隱藏了整整一個世紀，直到真相揭曉的那天。</value>
   </data>
+  <data name="Timeline_Event1_Title" xml:space="preserve">
+    <value>尤米爾獲得巨人之力</value>
+  </data>
+  <data name="Timeline_Event1_Desc" xml:space="preserve">
+    <value>尤米爾·弗里茨與「大地之惡魔」接觸，成為第一個巨人「始祖巨人」。她利用這份力量在 13 年間建立了艾爾迪亞帝國。</value>
+  </data>
+  <data name="Timeline_Event1_Year" xml:space="preserve">
+    <value>~1003 B1</value>
+  </data>
+  <data name="Timeline_Event2_Title" xml:space="preserve">
+    <value>尤米爾之死與九大巨人分裂</value>
+  </data>
+  <data name="Timeline_Event2_Desc" xml:space="preserve">
+    <value>尤米爾為保護國王而死於長矛之下。她的力量被三個女兒繼承，最終演變成「九大巨人」與「尤米爾的詛咒（13 年壽命）」。</value>
+  </data>
+  <data name="Timeline_Event2_Year" xml:space="preserve">
+    <value>~990 B1</value>
+  </data>
+  <data name="Timeline_Event3_Title" xml:space="preserve">
+    <value>巨人大戰結束</value>
+  </data>
+  <data name="Timeline_Event3_Desc" xml:space="preserve">
+    <value>第 145 代王卡爾·弗里茨因艾爾迪亞的歷史感到羞恥，與泰伯家共謀結束內戰。瑪雷獲得了七個巨人，唯有進擊的巨人下落不明。</value>
+  </data>
+  <data name="Timeline_Event3_Year" xml:space="preserve">
+    <value>~743</value>
+  </data>
+  <data name="Timeline_Event4_Title" xml:space="preserve">
+    <value>三重牆壁建立</value>
+  </data>
+  <data name="Timeline_Event4_Desc" xml:space="preserve">
+    <value>國王運用始祖巨人的力量，將無數超大型巨人硬化，建立起三重牆壁（瑪利亞、羅塞、希娜）。牆內艾爾迪亞人的記憶遭到篡改。</value>
+  </data>
+  <data name="Timeline_Event4_Year" xml:space="preserve">
+    <value>743</value>
+  </data>
+  <data name="Timeline_Event5_Title" xml:space="preserve">
+    <value>古利夏繼承進擊的巨人</value>
+  </data>
+  <data name="Timeline_Event5_Desc" xml:space="preserve">
+    <value>因吉克告發，古利夏被流放至帕拉迪島。艾倫·克魯格（梟）救了他並傳承進擊的巨人，委託他奪回始祖巨人。</value>
+  </data>
+  <data name="Timeline_Event5_Year" xml:space="preserve">
+    <value>832</value>
+  </data>
+  <data name="Timeline_Event6_Title" xml:space="preserve">
+    <value>米卡莎雙親遇害</value>
+  </data>
+  <data name="Timeline_Event6_Desc" xml:space="preserve">
+    <value>人口販子殺害了米卡莎的雙親。艾倫殺死兩人，米卡莎的阿卡曼之力覺醒並殺死第三人。她成為耶格爾家的養女。</value>
+  </data>
+  <data name="Timeline_Event6_Year" xml:space="preserve">
+    <value>844</value>
+  </data>
+  <data name="Timeline_Event7_Title" xml:space="preserve">
+    <value>瑪利亞之牆陷落</value>
+  </data>
+  <data name="Timeline_Event7_Desc" xml:space="preserve">
+    <value>超大型巨人與鎧巨人在希干希納區破壞瑪利亞之牆。人類撤退至羅塞之牆。艾倫之母卡菈被巨人（後證實為戴娜·弗里茨）吞噬。</value>
+  </data>
+  <data name="Timeline_Event7_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event8_Title" xml:space="preserve">
+    <value>古利夏的最後任務</value>
+  </data>
+  <data name="Timeline_Event8_Desc" xml:space="preserve">
+    <value>古利夏在教堂地下室屠殺雷斯家，從芙莉妲奪取始祖巨人，並讓艾倫吞食自己，繼承進擊與始祖巨人之力。</value>
+  </data>
+  <data name="Timeline_Event8_Year" xml:space="preserve">
+    <value>845</value>
+  </data>
+  <data name="Timeline_Event9_Title" xml:space="preserve">
+    <value>瑪利亞奪還作戰失敗</value>
+  </data>
+  <data name="Timeline_Event9_Desc" xml:space="preserve">
+    <value>王政府動員總人口兩成（25 萬人）發動瑪利亞奪還作戰。作戰慘敗，瑪利亞之牆正式被放棄。</value>
+  </data>
+  <data name="Timeline_Event9_Year" xml:space="preserve">
+    <value>846</value>
+  </data>
+  <data name="Timeline_Event10_Title" xml:space="preserve">
+    <value>托洛斯特區攻防戰</value>
+  </data>
+  <data name="Timeline_Event10_Desc" xml:space="preserve">
+    <value>超大型巨人在托洛斯特區破壞羅塞之牆。艾倫被吞噬後覺醒巨人化能力，以巨石封閉城門。這是人類首次對抗巨人的勝利。</value>
+  </data>
+  <data name="Timeline_Event10_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event11_Title" xml:space="preserve">
+    <value>第 57 次牆外調查</value>
+  </data>
+  <data name="Timeline_Event11_Desc" xml:space="preserve">
+    <value>調查兵團為捕獲女巨人而牆外出征。亞妮（女巨人）屠殺右翼部隊。作戰以重大傷亡失敗告終。</value>
+  </data>
+  <data name="Timeline_Event11_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event12_Title" xml:space="preserve">
+    <value>史托黑斯區女巨人捕獲戰</value>
+  </data>
+  <data name="Timeline_Event12_Desc" xml:space="preserve">
+    <value>亞妮被誘至史托黑斯區暴露女巨人真身。她與艾倫激戰後被捕获，但將自己結晶化。牆壁內側露出巨人。</value>
+  </data>
+  <data name="Timeline_Event12_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event13_Title" xml:space="preserve">
+    <value>羅塞之牆巨人出現</value>
+  </data>
+  <data name="Timeline_Event13_Desc" xml:space="preserve">
+    <value>吉克的獸巨人將拉加科村民變成純潔巨人。萊納與貝爾托特以鎧巨人與超大型巨人身份現身，擄走艾倫與尤米爾。</value>
+  </data>
+  <data name="Timeline_Event13_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event14_Title" xml:space="preserve">
+    <value>艾倫奪還作戰</value>
+  </data>
+  <data name="Timeline_Event14_Desc" xml:space="preserve">
+    <value>調查兵團、駐紮兵團與憲兵團追擊擄走者。艾倫覺醒「座標」之力操控巨人。漢尼斯戰死，尤米爾被瑪雷捕獲。</value>
+  </data>
+  <data name="Timeline_Event14_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event15_Title" xml:space="preserve">
+    <value>王政顛覆政變</value>
+  </data>
+  <data name="Timeline_Event15_Desc" xml:space="preserve">
+    <value>調查兵團顛覆腐敗的王政府。真正的王室（雷斯家）被揭露。希絲特莉亞擊殺巨人化的父親羅德後即位為女王。</value>
+  </data>
+  <data name="Timeline_Event15_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event16_Title" xml:space="preserve">
+    <value>希干希納奪還戰</value>
+  </data>
+  <data name="Timeline_Event16_Desc" xml:space="preserve">
+    <value>調查兵團奪回希干希納並封閉瑪利亞之牆。艾爾文作為誘餌戰死，阿爾敏繼承超大型巨人。里維擊敗獸巨人。</value>
+  </data>
+  <data name="Timeline_Event16_Year" xml:space="preserve">
+    <value>850</value>
+  </data>
+  <data name="Timeline_Event17_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event18_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event19_Year" xml:space="preserve">
+    <value>854</value>
+  </data>
+  <data name="Timeline_Event17_Title" xml:space="preserve">
+    <value>突襲馬雷與雷貝里欧宣戰布告</value>
+  </data>
+  <data name="Timeline_Event17_Desc" xml:space="preserve">
+    <value>艾連·葉卡密謀突襲馬雷首都雷貝里歐收容區，強行吞噬戰槌巨人，彻底打破國際地緣政治僵局，將全球戰爭拖入地鳴終局階段。</value>
+  </data>
+  <data name="Timeline_Event18_Title" xml:space="preserve">
+    <value>地鳴啟動</value>
+  </data>
+  <data name="Timeline_Event18_Desc" xml:space="preserve">
+    <value>艾連·葉卡啟動始祖巨人之力，驅動壁中數以百萬計的超大型巨人踏上徵途，以滅世地鳴之名向帕拉迪島以外的所有生命宣告終滅。</value>
+  </data>
+  <data name="Timeline_Event19_Title" xml:space="preserve">
+    <value>天地之戰（最終決戰）</value>
+  </data>
+  <data name="Timeline_Event19_Desc" xml:space="preserve">
+    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈——代價是他們所熟知的整個世界。</value>
+  </data>
 </root>
