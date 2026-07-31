@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
 
 // Load optional local appsettings secrets file if present
 builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: false);
@@ -34,6 +34,24 @@ var localizationOptions = new RequestLocalizationOptions()
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
+// Insert a Custom Request Culture Provider at index 0 to parse URL path prefixes (/zh/..., /ja/..., /en/...)
+localizationOptions.RequestCultureProviders.Insert(0,
+    new Microsoft.AspNetCore.Localization.CustomRequestCultureProvider(context =>
+    {
+        var path = context.Request.Path.Value?.TrimStart('/');
+        if (!string.IsNullOrEmpty(path))
+        {
+            var firstSegment = path.Split('/')[0].ToLowerInvariant();
+            if (firstSegment == "jp") firstSegment = "ja"; // normalize alias
+            if (supportedCultures.Contains(firstSegment))
+            {
+                return Task.FromResult<Microsoft.AspNetCore.Localization.ProviderCultureResult?>(
+                    new Microsoft.AspNetCore.Localization.ProviderCultureResult(firstSegment));
+            }
+        }
+
+        return Task.FromResult<Microsoft.AspNetCore.Localization.ProviderCultureResult?>(null);
+    }));
 app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
@@ -72,7 +90,7 @@ app.Run();
 static bool PersistDataProtectionKeys(IWebHostEnvironment environment)
 {
     return environment.IsDevelopment()
-        || Environment.GetEnvironmentVariable("PERSIST_DP_KEYS") == "true";
+           || Environment.GetEnvironmentVariable("PERSIST_DP_KEYS") == "true";
 }
 
 static void ConfigureDataProtection(IServiceCollection services, IWebHostEnvironment environment)
