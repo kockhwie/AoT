@@ -1,15 +1,11 @@
 @using System.Globalization
 
 <!DOCTYPE html>
-@{
-    // Capture the HttpContext directly from Blazor's cascading architecture
-    var currentCulture = CultureInfo.CurrentUICulture.Name;
-}
-<html lang="@currentCulture">
+<html lang="@CultureInfo.CurrentUICulture.Name;">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>進撃の巨人 Attack on Titan @CultureInfo.CurrentUICulture.Name</title>
+    <title>進撃の巨人 Attack on Titan</title>
 
     <!-- SEO: Primary meta -->
     <meta name="description" content="The ultimate Attack on Titan encyclopedia — explore all 34 manga volumes, 9 titans, Survey Corps characters, gear, and the complete story arc timeline. Available in English, 繁體中文, and 日本語." />
