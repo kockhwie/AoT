@@ -478,7 +478,7 @@
     <value>調査兵団 精鋭兵士</value>
   </data>
   <data name="MikasaBio" xml:space="preserve">
-    <value>一人の戦闘力は通常の兵士100人分に匹敵する。何があってもエレン・イェーガーを守るという絶対的な一念で動く。</value>
+    <value>一人の戦闘力は通常の兵士100人分に匹敵する。何があってもエレン・イェーガーを守るという絶対的な 一 念で動く。</value>
   </data>
   <data name="StatKills" xml:space="preserve">
     <value>単独撃破数</value>
@@ -631,7 +631,7 @@
     <value>天地の戦い（最終決戦）</value>
   </data>
   <data name="Time7Desc" xml:space="preserve">
-    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った——彼らが知る世界の終焉と引き換えに。</value>
+    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った。彼らが知る世界の終焉と引き換えに。</value>
   </data>
   <data name="TitanSectionTitle" xml:space="preserve">
     <value>九つの巨人能力系譜図</value>
@@ -742,7 +742,7 @@
     <value>調査兵団 精鋭兵士</value>
   </data>
   <data name="C2Bio" xml:space="preserve">
-    <value>一人の戦闘力は通常の兵士100人分に匹敵する首席卒業生。何があってもエレン・イェーガーを守るという絶対的な一念で動く。</value>
+    <value>一人の戦闘力は通常の兵士100人分に匹敵する首席卒業生。何があってもエレン・イェーガーを守るという絶対的な 一 念で動く。</value>
   </data>
   <data name="C3Name" xml:space="preserve">
     <value>アルミン・アルレルト</value>
@@ -1426,20 +1426,19 @@
     <value>天地の戦い（最終決戦）</value>
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
-    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った——彼らが知る世界の終焉と引き換えに。</value>
+    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った。彼らが知る世界の終焉と引き換えに。</value>
   </data>
-  <!-- ========== 世界観と地図ページ ========== -->
   <data name="Lore_PageTitle" xml:space="preserve">
     <value>世界観と地図</value>
   </data>
   <data name="Lore_MetaDesc" xml:space="preserve">
-    <value>進撃の巨人の世界を探求する——九つの巨人、三重の壁、各勢力、そして神秘的な「道」の世界。</value>
+    <value>進撃の巨人の世界を探求する。九つの巨人、三重の壁、各勢力、そして神秘的な「道」の世界。</value>
   </data>
   <data name="Lore_PageHeader" xml:space="preserve">
     <value>世界観と地図</value>
   </data>
   <data name="Lore_PageSub" xml:space="preserve">
-    <value>進撃の巨人の世界観を深く知る——九つの巨人の力からパラディ島とマーレの地政学まで。</value>
+    <value>進撃の巨人の世界観を深く知る。九つの巨人の力からパラディ島とマーレの地政学まで。</value>
   </data>
   <data name="Lore_TabTitans" xml:space="preserve">
     <value>九つの巨人</value>
@@ -1474,7 +1473,6 @@
   <data name="Lore_LabelMembers" xml:space="preserve">
     <value>主な構成員</value>
   </data>
-  <!-- 九つの巨人 — 継承者 -->
   <data name="Lore_T1_Inheritors" xml:space="preserve">
     <value>ユミール・フリッツ → カール・フリッツ → フリーダ・レイス → グリシャ・イェーガー → エレン・イェーガー</value>
   </data>
@@ -1502,9 +1500,8 @@
   <data name="Lore_T9_Inheritors" xml:space="preserve">
     <value>エレン・クルーガー → グリシャ・イェーガー → エレン・イェーガー</value>
   </data>
-  <!-- 九つの巨人 — 能力 -->
   <data name="Lore_T1_Ability" xml:space="preserve">
-    <value>すべての巨人を統括し、ユミールの民の記憶を改変し、「道」を操る——王家の血筋が持つ絶対の力。</value>
+    <value>すべての巨人を統括し、ユミールの民の記憶を改変し、「道」を操る。王家の血筋が持つ絶対の力。</value>
   </data>
   <data name="Lore_T2_Ability" xml:space="preserve">
     <value>汎用性が高く、皮膚の一部を硬質化させる能力や、叫びによって無知性の巨人を引き寄せる力を持つ。</value>
@@ -1530,7 +1527,6 @@
   <data name="Lore_T9_Ability" xml:space="preserve">
     <value>未来の継承者の記憶を覗き見ることができ、常に「自由」を求めて進み続ける力を持つ。</value>
   </data>
-  <!-- 三重の壁 -->
   <data name="Lore_Wall1_Name" xml:space="preserve">
     <value>ウォール・マリア</value>
   </data>
@@ -1567,7 +1563,6 @@
   <data name="Lore_Wall3_Districts" xml:space="preserve">
     <value>ストヘス区、ヤッケル区、ミトラス（王都）</value>
   </data>
-  <!-- 勢力 -->
   <data name="Lore_F1_Name" xml:space="preserve">
     <value>調査兵団</value>
   </data>
@@ -1631,7 +1626,6 @@
   <data name="Lore_F7_Members" xml:space="preserve">
     <value>キヨミ・アズマビト</value>
   </data>
-  <!-- 「道」 -->
   <data name="Lore_Paths_Title" xml:space="preserve">
     <value>「道」</value>
   </data>
@@ -1655,5 +1649,8 @@
   </data>
   <data name="Lore_Paths_CoordinateDesc" xml:space="preserve">
     <value>すべての「道」が交わる中心。始祖の巨人の力を行使することで、すべてのユミールの民を支配・変化させることができる。</value>
+  </data>
+  <data name="Lore_Wall_Centre_Name" xml:space="preserve">
+    <value>王都</value>
   </data>
 </root>

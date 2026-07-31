@@ -92,7 +92,7 @@
                         <div class="wall-ring wall-sina-ring">
                             <span class="wall-ring-label font-sans">@LocalizationService.GetString("Lore_Wall3_Name")</span>
                             <div class="wall-center">
-                                <span class="wall-center-label font-sans">Mitras</span>
+                                <span class="wall-center-label font-sans">@LocalizationService.GetString("Lore_Wall_Centre_Name")</span>
                             </div>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
     private int _activeTab;
     private int _expandedTitanId = -1;
 
-    private readonly string[] _tabIcons = { "ti-flame", "ti-wall", "ti-flag-2", "ti-stars" };
+    private readonly string[] _tabIcons = { "ti-man", "ti-wall", "ti-flag", "ti-stars" };
     private readonly string[] _tabKeys = { "Lore_TabTitans", "Lore_TabWalls", "Lore_TabFactions", "Lore_TabPaths" };
 
     private void SetTab(int tab)
@@ -260,7 +260,7 @@
         new() { Id = 2, IconClass = "ti-rosette" },      // Garrison
         new() { Id = 3, IconClass = "ti-shield-lock" },  // Military Police
         new() { Id = 4, IconClass = "ti-trees" },        // Eldia / Paradis
-        new() { Id = 5, IconClass = "ti-flag-2" },       // Marley
+        new() { Id = 5, IconClass = "ti-flag" },       // Marley
         new() { Id = 6, IconClass = "ti-swords" },       // Warrior Unit
         new() { Id = 7, IconClass = "ti-sun" },          // Hizuru
     };

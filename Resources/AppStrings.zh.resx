@@ -478,7 +478,7 @@
     <value>調查兵團 精銳核心士官</value>
   </data>
   <data name="MikasaBio" xml:space="preserve">
-    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡的安危。</value>
+    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。內心被唯一的至高信念所驅使，不惜一切代價守護艾連·葉卡的安危。</value>
   </data>
   <data name="StatKills" xml:space="preserve">
     <value>單獨擊殺巨人數</value>
@@ -613,7 +613,7 @@
     <value>第57次壁外調查行動</value>
   </data>
   <data name="Time4Desc" xml:space="preserve">
-    <value>調查兵團展開規模最大的壁外遠征。女巨人不斷追獵艾連，最終被逮捕並揭露真實身份——阿妮·萊昂哈特。</value>
+    <value>調查兵團展開規模最大的壁外遠征。女巨人不斷追獵艾連，最終被逮捕並揭露真實身份 — 阿妮·萊昂哈特。</value>
   </data>
   <data name="Time5Title" xml:space="preserve">
     <value>巨人碰撞之戰</value>
@@ -631,7 +631,7 @@
     <value>天地之戰（最終決戰）</value>
   </data>
   <data name="Time7Desc" xml:space="preserve">
-    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈——代價是他們所熟知的整個世界。</value>
+    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈，代價是他們所熟知的整個世界。</value>
   </data>
   <data name="TitanSectionTitle" xml:space="preserve">
     <value>始祖九大巨人能力圖譜</value>
@@ -742,7 +742,7 @@
     <value>調查兵團 精銳核心士官</value>
   </data>
   <data name="C2Bio" xml:space="preserve">
-    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。與艾連同樣隸屬第104期訓練兵團畢業，內心被唯一的至高信念所驅使——不惜一切代價守護艾連·葉卡。</value>
+    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。與艾連同樣隸屬第104期訓練兵團畢業，內心被唯一的至高信念所驅使，不惜一切代價守護艾連·葉卡。</value>
   </data>
   <data name="C3Name" xml:space="preserve">
     <value>阿爾敏·亞魯雷特</value>
@@ -1426,20 +1426,19 @@
     <value>天地之戰（最終決戰）</value>
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
-    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈——代價是他們所熟知的整個世界。</value>
+    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈，代價是他們所熟知的整個世界。</value>
   </data>
-  <!-- ========== 世界觀與地圖頁面 ========== -->
   <data name="Lore_PageTitle" xml:space="preserve">
     <value>世界觀與地圖</value>
   </data>
   <data name="Lore_MetaDesc" xml:space="preserve">
-    <value>探索進擊的巨人的世界觀——九大巨人、三重城壁、各國勢力，以及神秘的「道」之領域。</value>
+    <value>探索進擊的巨人的世界觀，九大巨人、三重城壁、各國勢力，以及神秘的「道」之領域。</value>
   </data>
   <data name="Lore_PageHeader" xml:space="preserve">
     <value>世界觀與地圖</value>
   </data>
   <data name="Lore_PageSub" xml:space="preserve">
-    <value>深入了解進擊的巨人的世界設定——從九大巨人之力到帕拉迪島與馬雷的地緣政治。</value>
+    <value>深入了解進擊的巨人的世界設定，從九大巨人之力到帕拉迪島與馬雷的地緣政治。</value>
   </data>
   <data name="Lore_TabTitans" xml:space="preserve">
     <value>九大巨人</value>
@@ -1454,7 +1453,7 @@
     <value>道（パス）</value>
   </data>
   <data name="Lore_TitansIntro" xml:space="preserve">
-    <value>兩千年前，尤彌爾·弗里茲獲得了巨人之力。她死後，力量一分為九——每一種都承載著獨特的能力，世代相傳至今。</value>
+    <value>兩千年前，尤彌爾·弗里茲獲得了巨人之力。她死後，力量一分為九，每一種都承載著獨特的能力，世代相傳至今。</value>
   </data>
   <data name="Lore_WallsIntro" xml:space="preserve">
     <value>瑪麗亞之牆陷落的一百年前，卡爾·弗里茲王以數百萬超大型巨人築起三重同心城壁，將艾爾迪亞的殘餘子民庇護在帕拉迪島上。</value>
@@ -1474,7 +1473,6 @@
   <data name="Lore_LabelMembers" xml:space="preserve">
     <value>核心成員</value>
   </data>
-  <!-- 九大巨人 — 繼承者 -->
   <data name="Lore_T1_Inheritors" xml:space="preserve">
     <value>尤彌爾·弗里茲 → 卡爾·弗里茲 → 芙莉達·雷伊斯 → 乔洛特·耶格尔 → 艾連·耶格爾</value>
   </data>
@@ -1502,9 +1500,8 @@
   <data name="Lore_T9_Inheritors" xml:space="preserve">
     <value>艾連·乔洛特 → 乔洛特·耶格尔 → 艾連·耶格爾</value>
   </data>
-  <!-- 九大巨人 — 能力 -->
   <data name="Lore_T1_Ability" xml:space="preserve">
-    <value>可支配所有巨人、改寫艾爾迪亞人的記憶、掌控「道」——始祖血脈的終極力量。</value>
+    <value>可支配所有巨人、改寫艾爾迪亞人的記憶、掌控「道」，始祖血脈的終極力量。</value>
   </data>
   <data name="Lore_T2_Ability" xml:space="preserve">
     <value>可透過訓練模仿其他巨人的能力，進行局部硬質化，並以吶喊吸引周圍的無垢巨人。</value>
@@ -1519,7 +1516,7 @@
     <value>全身覆蓋硬質化裝甲，可抵禦幾乎所有傳統武器的攻擊，並能選擇性地硬化或脫落裝甲。</value>
   </data>
   <data name="Lore_T6_Ability" xml:space="preserve">
-    <value>結晶化的顎部與利爪可粉碎幾乎一切事物——包括巨人的硬質化——同時具備極高的速度與敏捷性。</value>
+    <value>結晶化的顎部與利爪可粉碎幾乎一切事物v包括巨人的硬質化，同時具備極高的速度與敏捷性。</value>
   </data>
   <data name="Lore_T7_Ability" xml:space="preserve">
     <value>極強的持久力可長時間作戰。四足型態可搬運重型貨物、搭載火砲，作為機動作戰平台。</value>
@@ -1530,7 +1527,6 @@
   <data name="Lore_T9_Ability" xml:space="preserve">
     <value>可繼承未來繼承者的記憶，獲得預知未來的能力。受「不可動搖的自由意志」驅使而不斷前進。</value>
   </data>
-  <!-- 三重城壁 -->
   <data name="Lore_Wall1_Name" xml:space="preserve">
     <value>瑪利亞之牆</value>
   </data>
@@ -1550,7 +1546,7 @@
     <value>直徑約 380 公里</value>
   </data>
   <data name="Lore_Wall2_Desc" xml:space="preserve">
-    <value>中間層城壁，在瑪利亞之牆淪陷後成為人類的前線。托洛斯特區見證了首次成功抵禦巨人突破的戰役——仰賴的正是艾連新發現的巨人化能力。</value>
+    <value>中間層城壁，在瑪利亞之牆淪陷後成為人類的前線。托洛斯特區見證了首次成功抵禦巨人突破的戰役，仰賴的正是艾連新發現的巨人化能力。</value>
   </data>
   <data name="Lore_Wall2_Districts" xml:space="preserve">
     <value>托洛斯特區、克洛巴區、烏托邦區</value>
@@ -1562,12 +1558,11 @@
     <value>直徑約 250 公里</value>
   </data>
   <data name="Lore_Wall3_Desc" xml:space="preserve">
-    <value>最內層的城壁，王都與統治精英的所在地。在席娜之牆內，貴族享受相對奢華的生活，而外層城區的民眾則苦苦掙扎。憲兵團在此維持秩序——並守護著王室最黑暗的秘密。</value>
+    <value>最內層的城壁，王都與統治精英的所在地。在席娜之牆內，貴族享受相對奢華的生活，而外層城區的民眾則苦苦掙扎。憲兵團在此維持秩序，並守護著王室最黑暗的秘密。</value>
   </data>
   <data name="Lore_Wall3_Districts" xml:space="preserve">
     <value>斯托黑斯區、雅爾凱爾區、米特拉斯（王都）</value>
   </data>
-  <!-- 勢力 -->
   <data name="Lore_F1_Name" xml:space="preserve">
     <value>調查兵團</value>
   </data>
@@ -1631,7 +1626,6 @@
   <data name="Lore_F7_Members" xml:space="preserve">
     <value>吉雅·阿茲瑪比特</value>
   </data>
-  <!-- 道 -->
   <data name="Lore_Paths_Title" xml:space="preserve">
     <value>道（パス）</value>
   </data>
@@ -1639,21 +1633,24 @@
     <value>連接所有尤彌爾子民的無形之線</value>
   </data>
   <data name="Lore_Paths_Desc1" xml:space="preserve">
-    <value>「道」是一個超越時間與空間的隱形超自然領域，將每一位尤彌爾子民連結在一起。透過這些道，巨人的血肉、骨骼與記憶會在新的繼承者吞噬前任持有者時傳遞。在所有道的交匯處就是「座標」——始祖巨人絕對力量的來源。</value>
+    <value>「道」是一個超越時間與空間的隱形超自然領域，將每一位尤彌爾子民連結在一起。透過這些道，巨人的血肉、骨骼與記憶會在新的繼承者吞噬前任持有者時傳遞。在所有道的交匯處就是「座標」，始祖巨人絕對力量的來源。</value>
   </data>
   <data name="Lore_Paths_Desc2" xml:space="preserve">
-    <value>在這個永恆的次元中，尤彌爾·弗里茲——最初的始祖——已存在了兩千年，在王族血脈的命令下不停地用砂土構築每一個巨人。直到艾連·耶格爾抵達座標，這個循環才終於被打破。</value>
+    <value>在這個永恆的次元中，尤彌爾·弗里茲，最初的始祖，已存在了兩千年，在王族血脈的命令下不停地用砂土構築每一個巨人。直到艾連·耶格爾抵達座標，這個循環才終於被打破。</value>
   </data>
   <data name="Lore_Paths_YmirTitle" xml:space="preserve">
-    <value>尤彌爾·弗里茲——始祖</value>
+    <value>尤彌爾·弗里茲 — 始祖</value>
   </data>
   <data name="Lore_Paths_YmirDesc" xml:space="preserve">
-    <value>一名年幼的奴隸少女，在兩千多年前接觸到「一切生命物質的起源」而成為第一個巨人。死後，她的靈魂被困在「道」之中，無盡地為王族血脈服役構築巨人——直到最終被解放。</value>
+    <value>一名年幼的奴隸少女，在兩千多年前接觸到「一切生命物質的起源」而成為第一個巨人。死後，她的靈魂被困在「道」之中，無盡地為王族血脈服役構築巨人，直到最終被解放。</value>
   </data>
   <data name="Lore_Paths_CoordinateTitle" xml:space="preserve">
     <value>座標</value>
   </data>
   <data name="Lore_Paths_CoordinateDesc" xml:space="preserve">
-    <value>所有「道」匯聚的中心點。掌控座標者可以支配所有尤彌爾子民——改寫他們的記憶、身體、甚至生殖能力。要完全使用其力量，需要同時擁有始祖巨人與王族血脈。</value>
+    <value>所有「道」匯聚的中心點。掌控座標者可以支配所有尤彌爾子民，改寫他們的記憶、身體、甚至生殖能力。要完全使用其力量，需要同時擁有始祖巨人與王族血脈。</value>
+  </data>
+  <data name="Lore_Wall_Centre_Name" xml:space="preserve">
+    <value>王都</value>
   </data>
 </root>

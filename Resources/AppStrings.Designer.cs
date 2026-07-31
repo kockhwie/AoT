@@ -1672,6 +1672,681 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The expeditionary branch of the military that ventures beyond the walls to combat titans and explore the outside world. Despite suffering the highest casualty rate of any branch, the Survey Corps embodies humanity&apos;s hope and defiance..
+        /// </summary>
+        public static string Lore_F1_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F1_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erwin Smith, Levi Ackerman, Hange Zoë, Eren Yeager, Mikasa Ackerman, Armin Arlert.
+        /// </summary>
+        public static string Lore_F1_Members {
+            get {
+                return ResourceManager.GetString("Lore_F1_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survey Corps.
+        /// </summary>
+        public static string Lore_F1_Name {
+            get {
+                return ResourceManager.GetString("Lore_F1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The largest military branch, responsible for patrolling and maintaining the walls. Garrison soldiers man the fixed artillery atop the walls and serve as the primary defense during titan breaches..
+        /// </summary>
+        public static string Lore_F2_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F2_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dot Pixis, Hannes, Ian Dietrich, Rico Brzenska.
+        /// </summary>
+        public static string Lore_F2_Members {
+            get {
+                return ResourceManager.GetString("Lore_F2_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garrison Regiment.
+        /// </summary>
+        public static string Lore_F2_Name {
+            get {
+                return ResourceManager.GetString("Lore_F2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The elite force operating within Wall Sina, tasked with maintaining order and protecting the royal government. Acceptance requires graduating in the top 10 of a training class. Despite its prestige, the Brigade is rife with corruption..
+        /// </summary>
+        public static string Lore_F3_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F3_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nile Dok, Kenny Ackerman, Marlo Freudenberg.
+        /// </summary>
+        public static string Lore_F3_Members {
+            get {
+                return ResourceManager.GetString("Lore_F3_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Police Brigade.
+        /// </summary>
+        public static string Lore_F3_Name {
+            get {
+                return ResourceManager.GetString("Lore_F3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The island nation where the remnants of the Eldian Empire live behind the three walls. Ruled by the Fritz / Reiss royal family, Paradis was kept in ignorance of the outside world for over a century by the Founding Titan&apos;s memory wipe..
+        /// </summary>
+        public static string Lore_F4_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F4_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Historia Reiss (Queen), Rod Reiss, Darius Zackly.
+        /// </summary>
+        public static string Lore_F4_Members {
+            get {
+                return ResourceManager.GetString("Lore_F4_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eldia (Paradis Island).
+        /// </summary>
+        public static string Lore_F4_Name {
+            get {
+                return ResourceManager.GetString("Lore_F4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A vast continental power that subjugates Eldians in internment zones and weaponizes titan powers for military expansion. Marley controls seven of the Nine Titans and uses Eldian &quot;Warriors&quot; as frontline soldiers in foreign wars..
+        /// </summary>
+        public static string Lore_F5_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F5_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Willy Tybur, Theo Magath, Calvi.
+        /// </summary>
+        public static string Lore_F5_Members {
+            get {
+                return ResourceManager.GetString("Lore_F5_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marley.
+        /// </summary>
+        public static string Lore_F5_Name {
+            get {
+                return ResourceManager.GetString("Lore_F5_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marley&apos;s elite Eldian soldiers who inherit titan powers and fight on behalf of the nation that oppresses their people. Selected as children, Warriors are promised &quot;honorary Marleyan&quot; status for their families in return for service..
+        /// </summary>
+        public static string Lore_F6_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F6_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiner Braun, Bertolt Hoover, Annie Leonhart, Zeke Yeager, Pieck Finger, Porco Galliard, Falco Grice, Gabi Braun.
+        /// </summary>
+        public static string Lore_F6_Members {
+            get {
+                return ResourceManager.GetString("Lore_F6_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit.
+        /// </summary>
+        public static string Lore_F6_Name {
+            get {
+                return ResourceManager.GetString("Lore_F6_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An eastern nation with historical ties to the Eldian Empire through the Azumabito clan. Hizuru is one of the few foreign powers willing to negotiate with Paradis, driven by both diplomatic pragmatism and ancestral obligation..
+        /// </summary>
+        public static string Lore_F7_Desc {
+            get {
+                return ResourceManager.GetString("Lore_F7_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiyomi Azumabito.
+        /// </summary>
+        public static string Lore_F7_Members {
+            get {
+                return ResourceManager.GetString("Lore_F7_Members", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hizuru.
+        /// </summary>
+        public static string Lore_F7_Name {
+            get {
+                return ResourceManager.GetString("Lore_F7_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The world of Attack on Titan is shaped by the bitter conflict between nations and military organizations, each with their own ideologies and agendas..
+        /// </summary>
+        public static string Lore_FactionsIntro {
+            get {
+                return ResourceManager.GetString("Lore_FactionsIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Ability.
+        /// </summary>
+        public static string Lore_LabelAbility {
+            get {
+                return ResourceManager.GetString("Lore_LabelAbility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key Districts.
+        /// </summary>
+        public static string Lore_LabelDistricts {
+            get {
+                return ResourceManager.GetString("Lore_LabelDistricts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Known Inheritors.
+        /// </summary>
+        public static string Lore_LabelInheritors {
+            get {
+                return ResourceManager.GetString("Lore_LabelInheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key Members.
+        /// </summary>
+        public static string Lore_LabelMembers {
+            get {
+                return ResourceManager.GetString("Lore_LabelMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore the world of Attack on Titan, the Nine Titans, the Three Walls, factions, nations, and the mysterious Paths realm..
+        /// </summary>
+        public static string Lore_MetaDesc {
+            get {
+                return ResourceManager.GetString("Lore_MetaDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lore &amp; Maps.
+        /// </summary>
+        public static string Lore_PageHeader {
+            get {
+                return ResourceManager.GetString("Lore_PageHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dive deep into the world-building of Attack on Titan, from the power of the Nine Titans to the geopolitics of Paradis and Marley..
+        /// </summary>
+        public static string Lore_PageSub {
+            get {
+                return ResourceManager.GetString("Lore_PageSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lore &amp; Maps.
+        /// </summary>
+        public static string Lore_PageTitle {
+            get {
+                return ResourceManager.GetString("Lore_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The nexus where all Paths converge. Whoever controls the Coordinate can command all Subjects of Ymir, altering their memories, bodies, and even their reproductive capabilities. Accessing its full power requires both the Founding Titan and royal blood..
+        /// </summary>
+        public static string Lore_Paths_CoordinateDesc {
+            get {
+                return ResourceManager.GetString("Lore_Paths_CoordinateDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Coordinate.
+        /// </summary>
+        public static string Lore_Paths_CoordinateTitle {
+            get {
+                return ResourceManager.GetString("Lore_Paths_CoordinateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate — the source of the Founding Titan&apos;s absolute power..
+        /// </summary>
+        public static string Lore_Paths_Desc1 {
+            get {
+                return ResourceManager.GetString("Lore_Paths_Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Within this timeless dimension, Ymir Fritz - the original Founder, has existed for two thousand years, ceaselessly building every titan from sand at the command of the royal bloodline. It was only when Eren Yeager reached the Coordinate that the cycle was finally broken..
+        /// </summary>
+        public static string Lore_Paths_Desc2 {
+            get {
+                return ResourceManager.GetString("Lore_Paths_Desc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The invisible threads connecting all Subjects of Ymir.
+        /// </summary>
+        public static string Lore_Paths_Subtitle {
+            get {
+                return ResourceManager.GetString("Lore_Paths_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Paths.
+        /// </summary>
+        public static string Lore_Paths_Title {
+            get {
+                return ResourceManager.GetString("Lore_Paths_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A young slave girl who, over 2,000 years ago, made contact with the &quot;source of all living matter&quot; and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline — until she was finally freed..
+        /// </summary>
+        public static string Lore_Paths_YmirDesc {
+            get {
+                return ResourceManager.GetString("Lore_Paths_YmirDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ymir Fritz, The Founder.
+        /// </summary>
+        public static string Lore_Paths_YmirTitle {
+            get {
+                return ResourceManager.GetString("Lore_Paths_YmirTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commands all titans, alters Eldian memories, controls the Paths, the ultimate power of the Founding bloodline..
+        /// </summary>
+        public static string Lore_T1_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T1_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ymir Fritz → Karl Fritz → Frieda Reiss → Grisha Yeager → Eren Yeager.
+        /// </summary>
+        public static string Lore_T1_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T1_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mimicry of other titan abilities through training, selective body hardening, and a scream that attracts nearby Pure Titans..
+        /// </summary>
+        public static string Lore_T2_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T2_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Annie Leonhart.
+        /// </summary>
+        public static string Lore_T2_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T2_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Devastating long-range projectile attacks and the ability to transform and command Subjects of Ymir via spinal fluid..
+        /// </summary>
+        public static string Lore_T3_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T3_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tom Ksaver → Zeke Yeager.
+        /// </summary>
+        public static string Lore_T3_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T3_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explosive nuclear-like transformation, superheated steam emission, and overwhelming destructive power at 60 meters tall..
+        /// </summary>
+        public static string Lore_T4_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T4_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bertolt Hoover → Armin Arlert.
+        /// </summary>
+        public static string Lore_T4_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T4_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full-body hardened armor plating impervious to most conventional weaponry, with the ability to selectively harden or shed plates..
+        /// </summary>
+        public static string Lore_T5_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T5_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiner Braun.
+        /// </summary>
+        public static string Lore_T5_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T5_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crystalline jaw and claws capable of crushing nearly anything, including titan hardening. combined with exceptional speed and agility..
+        /// </summary>
+        public static string Lore_T6_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T6_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marcel Galliard → Ymir → Porco Galliard → Falco Grice.
+        /// </summary>
+        public static string Lore_T6_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T6_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extreme endurance for prolonged operations. Its quadrupedal form can carry heavy cargo, mounted artillery, and serve as a mobile platform..
+        /// </summary>
+        public static string Lore_T7_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T7_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pieck Finger.
+        /// </summary>
+        public static string Lore_T7_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T7_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creates weapons and structures from hardened titan flesh at will. Can operate remotely via a crystal tether, keeping the user hidden underground..
+        /// </summary>
+        public static string Lore_T8_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T8_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lara Tybur → Eren Yeager.
+        /// </summary>
+        public static string Lore_T8_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T8_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inherits memories from future holders, granting prophetic foresight. Driven by an unwavering, unbreakable will to fight for freedom..
+        /// </summary>
+        public static string Lore_T9_Ability {
+            get {
+                return ResourceManager.GetString("Lore_T9_Ability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Kruger → Grisha Yeager → Eren Yeager.
+        /// </summary>
+        public static string Lore_T9_Inheritors {
+            get {
+                return ResourceManager.GetString("Lore_T9_Inheritors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Factions.
+        /// </summary>
+        public static string Lore_TabFactions {
+            get {
+                return ResourceManager.GetString("Lore_TabFactions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Paths.
+        /// </summary>
+        public static string Lore_TabPaths {
+            get {
+                return ResourceManager.GetString("Lore_TabPaths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nine Titans.
+        /// </summary>
+        public static string Lore_TabTitans {
+            get {
+                return ResourceManager.GetString("Lore_TabTitans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three Walls.
+        /// </summary>
+        public static string Lore_TabWalls {
+            get {
+                return ResourceManager.GetString("Lore_TabWalls", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine — each carrying a unique ability passed down through the ages..
+        /// </summary>
+        public static string Lore_TitansIntro {
+            get {
+                return ResourceManager.GetString("Lore_TitansIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mitras.
+        /// </summary>
+        public static string Lore_Wall_Centre_Name {
+            get {
+                return ResourceManager.GetString("Lore_Wall_Centre_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The outermost wall and the first line of defense for humanity within the walls. Wall Maria was breached by the Colossal and Armored Titans in Year 845, forcing hundreds of thousands of refugees inward and triggering the central conflict of the story..
+        /// </summary>
+        public static string Lore_Wall1_Desc {
+            get {
+                return ResourceManager.GetString("Lore_Wall1_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~480 km diameter.
+        /// </summary>
+        public static string Lore_Wall1_Diameter {
+            get {
+                return ResourceManager.GetString("Lore_Wall1_Diameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shiganshina (Eren&apos;s hometown), Quinta.
+        /// </summary>
+        public static string Lore_Wall1_Districts {
+            get {
+                return ResourceManager.GetString("Lore_Wall1_Districts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Maria.
+        /// </summary>
+        public static string Lore_Wall1_Name {
+            get {
+                return ResourceManager.GetString("Lore_Wall1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The middle wall that became humanity&apos;s front line after the fall of Wall Maria. Trost District saw the first successful defense against a titan breach, thanks to Eren&apos;s newly discovered titan-shifting ability..
+        /// </summary>
+        public static string Lore_Wall2_Desc {
+            get {
+                return ResourceManager.GetString("Lore_Wall2_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~380 km diameter.
+        /// </summary>
+        public static string Lore_Wall2_Diameter {
+            get {
+                return ResourceManager.GetString("Lore_Wall2_Diameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trost, Krolva, Utopia.
+        /// </summary>
+        public static string Lore_Wall2_Districts {
+            get {
+                return ResourceManager.GetString("Lore_Wall2_Districts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Rose.
+        /// </summary>
+        public static string Lore_Wall2_Name {
+            get {
+                return ResourceManager.GetString("Lore_Wall2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here — and guards the Crown&apos;s darkest secrets..
+        /// </summary>
+        public static string Lore_Wall3_Desc {
+            get {
+                return ResourceManager.GetString("Lore_Wall3_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~250 km diameter.
+        /// </summary>
+        public static string Lore_Wall3_Diameter {
+            get {
+                return ResourceManager.GetString("Lore_Wall3_Diameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stohess, Yarckel, Mitras (Royal Capital).
+        /// </summary>
+        public static string Lore_Wall3_Districts {
+            get {
+                return ResourceManager.GetString("Lore_Wall3_Districts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Sina.
+        /// </summary>
+        public static string Lore_Wall3_Name {
+            get {
+                return ResourceManager.GetString("Lore_Wall3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One hundred years before the fall of Wall Maria, King Karl Fritz erected three concentric walls of Colossal Titans to shield the remnants of Eldia on Paradis Island..
+        /// </summary>
+        public static string Lore_WallsIntro {
+            get {
+                return ResourceManager.GetString("Lore_WallsIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Manga Volumes.
         /// </summary>
         public static string MangaAllVolumesTitle {
@@ -3256,7 +3931,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps ventured beyond the Walls in their largest operation. A Female Titan hunted Eren relentlessly — and was ultimately unmasked as Annie Leonhart..
+        ///   Looks up a localized string similar to The Survey Corps ventured beyond the Walls in their largest operation. A Female Titan hunted Eren relentlessly, and was ultimately unmasked as Annie Leonhart..
         /// </summary>
         public static string Time4Desc {
             get {
@@ -3310,7 +3985,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa — ending the Rumbling and the cycle of hatred at the cost of the world they knew..
+        ///   Looks up a localized string similar to The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa, ending the Rumbling and the cycle of hatred at the cost of the world they knew..
         /// </summary>
         public static string Time7Desc {
             get {
@@ -3598,7 +4273,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa — ending the Rumbling and the cycle of hatred at the cost of the world they knew..
+        ///   Looks up a localized string similar to The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa,ending the Rumbling and the cycle of hatred at the cost of the world they knew..
         /// </summary>
         public static string Timeline_Event19_Desc {
             get {

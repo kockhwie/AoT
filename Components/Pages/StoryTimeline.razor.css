@@ -39,7 +39,7 @@
 .aot-page-subtitle {
     font-size: 0.9rem;
     color: #d1d5db;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 0 auto 1.5rem auto;
     line-height: 1.6;
 }
