@@ -20,21 +20,9 @@
                     <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 w-56 rounded-box nav-menu p-2 shadow-2xl">
                         <li>
                             <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a>
-                        </li> 
-                        <li>
-                            <details name="nav-menu-mobile">
-                                <summary>@LocalizationService.NavExplore</summary>                     
-                            <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
-                                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
-                                    <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
-                                    <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
-                                    <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
-                                </ul>
-                            </details>
                         </li>
-
-                        <li><a>@LocalizationService.NavLoreMaps</a></li>
-
+                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
+                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavLoreMaps</a></li>
                         <li>
                             <details name="nav-menu-mobile">
                                 <summary>@LocalizationService.NavMedia</summary>
@@ -48,6 +36,9 @@
                                     <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Movies")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Fanarts")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
+                                    <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
                                     <li><a>@LocalizationService.GetString("Nav_Other")</a></li>
                                 </ul>
                             </details>
@@ -65,18 +56,8 @@
                     <li> 
                         <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a> 
                     </li>
-                    <li>
-                        <details name="nav-menu-desktop">
-                            <summary tabindex="0">@LocalizationService.NavExplore</summary>
-                            <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2  nav-menu p-2 shadow-2xl">
-                                <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
-                                <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
-                                <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
-                                <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>@LocalizationService.NavLoreMaps</a></li>
+                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
+                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavLoreMaps</a></li>
 
                     <li>
                         <details name="nav-menu-desktop">
@@ -91,6 +72,9 @@
                                 <li><a>@LocalizationService.GetString("Nav_Comics")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Movies")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Fanarts")</a></li> 
+                                <li><a>@LocalizationService.GetString("Nav_Gallery")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Quotes")</a></li>
+                                <li><a>@LocalizationService.GetString("Nav_Statistics")</a></li>
                                 <li><a>@LocalizationService.GetString("Nav_Other")</a></li>
                             </ul>
                         </details>

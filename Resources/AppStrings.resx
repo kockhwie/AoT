@@ -150,9 +150,6 @@
   <data name="NavCharacters" xml:space="preserve">
     <value>Characters</value>
   </data>
-  <data name="NavExplore" xml:space="preserve">
-    <value>Explore</value>
-  </data>
   <data name="NavFanZone" xml:space="preserve">
     <value>Fan Zone</value>
   </data>
@@ -1430,5 +1427,233 @@
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
     <value>The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa — ending the Rumbling and the cycle of hatred at the cost of the world they knew.</value>
+  </data>
+  <!-- ========== LORE & MAPS PAGE ========== -->
+  <data name="Lore_PageTitle" xml:space="preserve">
+    <value>Lore &amp; Maps</value>
+  </data>
+  <data name="Lore_MetaDesc" xml:space="preserve">
+    <value>Explore the world of Attack on Titan — the Nine Titans, the Three Walls, factions, nations, and the mysterious Paths realm.</value>
+  </data>
+  <data name="Lore_PageHeader" xml:space="preserve">
+    <value>Lore &amp; Maps</value>
+  </data>
+  <data name="Lore_PageSub" xml:space="preserve">
+    <value>Dive deep into the world-building of Attack on Titan — from the power of the Nine Titans to the geopolitics of Paradis and Marley.</value>
+  </data>
+  <data name="Lore_TabTitans" xml:space="preserve">
+    <value>Nine Titans</value>
+  </data>
+  <data name="Lore_TabWalls" xml:space="preserve">
+    <value>Three Walls</value>
+  </data>
+  <data name="Lore_TabFactions" xml:space="preserve">
+    <value>Factions</value>
+  </data>
+  <data name="Lore_TabPaths" xml:space="preserve">
+    <value>The Paths</value>
+  </data>
+  <data name="Lore_TitansIntro" xml:space="preserve">
+    <value>Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine — each carrying a unique ability passed down through the ages.</value>
+  </data>
+  <data name="Lore_WallsIntro" xml:space="preserve">
+    <value>One hundred years before the fall of Wall Maria, King Karl Fritz erected three concentric walls of Colossal Titans to shield the remnants of Eldia on Paradis Island.</value>
+  </data>
+  <data name="Lore_FactionsIntro" xml:space="preserve">
+    <value>The world of Attack on Titan is shaped by the bitter conflict between nations and military organizations, each with their own ideologies and agendas.</value>
+  </data>
+  <data name="Lore_LabelInheritors" xml:space="preserve">
+    <value>Known Inheritors</value>
+  </data>
+  <data name="Lore_LabelAbility" xml:space="preserve">
+    <value>Special Ability</value>
+  </data>
+  <data name="Lore_LabelDistricts" xml:space="preserve">
+    <value>Key Districts</value>
+  </data>
+  <data name="Lore_LabelMembers" xml:space="preserve">
+    <value>Key Members</value>
+  </data>
+  <!-- Nine Titans — Inheritors -->
+  <data name="Lore_T1_Inheritors" xml:space="preserve">
+    <value>Ymir Fritz → Karl Fritz → Frieda Reiss → Grisha Yeager → Eren Yeager</value>
+  </data>
+  <data name="Lore_T2_Inheritors" xml:space="preserve">
+    <value>Annie Leonhart</value>
+  </data>
+  <data name="Lore_T3_Inheritors" xml:space="preserve">
+    <value>Tom Ksaver → Zeke Yeager</value>
+  </data>
+  <data name="Lore_T4_Inheritors" xml:space="preserve">
+    <value>Bertolt Hoover → Armin Arlert</value>
+  </data>
+  <data name="Lore_T5_Inheritors" xml:space="preserve">
+    <value>Reiner Braun</value>
+  </data>
+  <data name="Lore_T6_Inheritors" xml:space="preserve">
+    <value>Marcel Galliard → Ymir → Porco Galliard → Falco Grice</value>
+  </data>
+  <data name="Lore_T7_Inheritors" xml:space="preserve">
+    <value>Pieck Finger</value>
+  </data>
+  <data name="Lore_T8_Inheritors" xml:space="preserve">
+    <value>Lara Tybur → Eren Yeager</value>
+  </data>
+  <data name="Lore_T9_Inheritors" xml:space="preserve">
+    <value>Eren Kruger → Grisha Yeager → Eren Yeager</value>
+  </data>
+  <!-- Nine Titans — Abilities -->
+  <data name="Lore_T1_Ability" xml:space="preserve">
+    <value>Commands all titans, alters Eldian memories, controls the Paths — the ultimate power of the Founding bloodline.</value>
+  </data>
+  <data name="Lore_T2_Ability" xml:space="preserve">
+    <value>Mimicry of other titan abilities through training, selective body hardening, and a scream that attracts nearby Pure Titans.</value>
+  </data>
+  <data name="Lore_T3_Ability" xml:space="preserve">
+    <value>Devastating long-range projectile attacks and the ability to transform and command Subjects of Ymir via spinal fluid.</value>
+  </data>
+  <data name="Lore_T4_Ability" xml:space="preserve">
+    <value>Explosive nuclear-like transformation, superheated steam emission, and overwhelming destructive power at 60 meters tall.</value>
+  </data>
+  <data name="Lore_T5_Ability" xml:space="preserve">
+    <value>Full-body hardened armor plating impervious to most conventional weaponry, with the ability to selectively harden or shed plates.</value>
+  </data>
+  <data name="Lore_T6_Ability" xml:space="preserve">
+    <value>Crystalline jaw and claws capable of crushing nearly anything — including titan hardening — combined with exceptional speed and agility.</value>
+  </data>
+  <data name="Lore_T7_Ability" xml:space="preserve">
+    <value>Extreme endurance for prolonged operations. Its quadrupedal form can carry heavy cargo, mounted artillery, and serve as a mobile platform.</value>
+  </data>
+  <data name="Lore_T8_Ability" xml:space="preserve">
+    <value>Creates weapons and structures from hardened titan flesh at will. Can operate remotely via a crystal tether, keeping the user hidden underground.</value>
+  </data>
+  <data name="Lore_T9_Ability" xml:space="preserve">
+    <value>Inherits memories from future holders, granting prophetic foresight. Driven by an unwavering, unbreakable will to fight for freedom.</value>
+  </data>
+  <!-- Three Walls -->
+  <data name="Lore_Wall1_Name" xml:space="preserve">
+    <value>Wall Maria</value>
+  </data>
+  <data name="Lore_Wall1_Diameter" xml:space="preserve">
+    <value>~480 km diameter</value>
+  </data>
+  <data name="Lore_Wall1_Desc" xml:space="preserve">
+    <value>The outermost wall and the first line of defense for humanity within the walls. Wall Maria was breached by the Colossal and Armored Titans in Year 845, forcing hundreds of thousands of refugees inward and triggering the central conflict of the story.</value>
+  </data>
+  <data name="Lore_Wall1_Districts" xml:space="preserve">
+    <value>Shiganshina (Eren's hometown), Quinta</value>
+  </data>
+  <data name="Lore_Wall2_Name" xml:space="preserve">
+    <value>Wall Rose</value>
+  </data>
+  <data name="Lore_Wall2_Diameter" xml:space="preserve">
+    <value>~380 km diameter</value>
+  </data>
+  <data name="Lore_Wall2_Desc" xml:space="preserve">
+    <value>The middle wall that became humanity's front line after the fall of Wall Maria. Trost District saw the first successful defense against a titan breach, thanks to Eren's newly discovered titan-shifting ability.</value>
+  </data>
+  <data name="Lore_Wall2_Districts" xml:space="preserve">
+    <value>Trost, Krolva, Utopia</value>
+  </data>
+  <data name="Lore_Wall3_Name" xml:space="preserve">
+    <value>Wall Sina</value>
+  </data>
+  <data name="Lore_Wall3_Diameter" xml:space="preserve">
+    <value>~250 km diameter</value>
+  </data>
+  <data name="Lore_Wall3_Desc" xml:space="preserve">
+    <value>The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here — and guards the Crown's darkest secrets.</value>
+  </data>
+  <data name="Lore_Wall3_Districts" xml:space="preserve">
+    <value>Stohess, Yarckel, Mitras (Royal Capital)</value>
+  </data>
+  <!-- Factions -->
+  <data name="Lore_F1_Name" xml:space="preserve">
+    <value>Survey Corps</value>
+  </data>
+  <data name="Lore_F1_Desc" xml:space="preserve">
+    <value>The expeditionary branch of the military that ventures beyond the walls to combat titans and explore the outside world. Despite suffering the highest casualty rate of any branch, the Survey Corps embodies humanity's hope and defiance.</value>
+  </data>
+  <data name="Lore_F1_Members" xml:space="preserve">
+    <value>Erwin Smith, Levi Ackerman, Hange Zoë, Eren Yeager, Mikasa Ackerman, Armin Arlert</value>
+  </data>
+  <data name="Lore_F2_Name" xml:space="preserve">
+    <value>Garrison Regiment</value>
+  </data>
+  <data name="Lore_F2_Desc" xml:space="preserve">
+    <value>The largest military branch, responsible for patrolling and maintaining the walls. Garrison soldiers man the fixed artillery atop the walls and serve as the primary defense during titan breaches.</value>
+  </data>
+  <data name="Lore_F2_Members" xml:space="preserve">
+    <value>Dot Pixis, Hannes, Ian Dietrich, Rico Brzenska</value>
+  </data>
+  <data name="Lore_F3_Name" xml:space="preserve">
+    <value>Military Police Brigade</value>
+  </data>
+  <data name="Lore_F3_Desc" xml:space="preserve">
+    <value>The elite force operating within Wall Sina, tasked with maintaining order and protecting the royal government. Acceptance requires graduating in the top 10 of a training class. Despite its prestige, the Brigade is rife with corruption.</value>
+  </data>
+  <data name="Lore_F3_Members" xml:space="preserve">
+    <value>Nile Dok, Kenny Ackerman, Marlo Freudenberg</value>
+  </data>
+  <data name="Lore_F4_Name" xml:space="preserve">
+    <value>Eldia (Paradis Island)</value>
+  </data>
+  <data name="Lore_F4_Desc" xml:space="preserve">
+    <value>The island nation where the remnants of the Eldian Empire live behind the three walls. Ruled by the Fritz / Reiss royal family, Paradis was kept in ignorance of the outside world for over a century by the Founding Titan's memory wipe.</value>
+  </data>
+  <data name="Lore_F4_Members" xml:space="preserve">
+    <value>Historia Reiss (Queen), Rod Reiss, Darius Zackly</value>
+  </data>
+  <data name="Lore_F5_Name" xml:space="preserve">
+    <value>Marley</value>
+  </data>
+  <data name="Lore_F5_Desc" xml:space="preserve">
+    <value>A vast continental power that subjugates Eldians in internment zones and weaponizes titan powers for military expansion. Marley controls seven of the Nine Titans and uses Eldian "Warriors" as frontline soldiers in foreign wars.</value>
+  </data>
+  <data name="Lore_F5_Members" xml:space="preserve">
+    <value>Willy Tybur, Theo Magath, Calvi</value>
+  </data>
+  <data name="Lore_F6_Name" xml:space="preserve">
+    <value>Warrior Unit</value>
+  </data>
+  <data name="Lore_F6_Desc" xml:space="preserve">
+    <value>Marley's elite Eldian soldiers who inherit titan powers and fight on behalf of the nation that oppresses their people. Selected as children, Warriors are promised "honorary Marleyan" status for their families in return for service.</value>
+  </data>
+  <data name="Lore_F6_Members" xml:space="preserve">
+    <value>Reiner Braun, Bertolt Hoover, Annie Leonhart, Zeke Yeager, Pieck Finger, Porco Galliard, Falco Grice, Gabi Braun</value>
+  </data>
+  <data name="Lore_F7_Name" xml:space="preserve">
+    <value>Hizuru</value>
+  </data>
+  <data name="Lore_F7_Desc" xml:space="preserve">
+    <value>An eastern nation with historical ties to the Eldian Empire through the Azumabito clan. Hizuru is one of the few foreign powers willing to negotiate with Paradis, driven by both diplomatic pragmatism and ancestral obligation.</value>
+  </data>
+  <data name="Lore_F7_Members" xml:space="preserve">
+    <value>Kiyomi Azumabito</value>
+  </data>
+  <!-- The Paths -->
+  <data name="Lore_Paths_Title" xml:space="preserve">
+    <value>The Paths</value>
+  </data>
+  <data name="Lore_Paths_Subtitle" xml:space="preserve">
+    <value>The invisible threads connecting all Subjects of Ymir</value>
+  </data>
+  <data name="Lore_Paths_Desc1" xml:space="preserve">
+    <value>The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate — the source of the Founding Titan's absolute power.</value>
+  </data>
+  <data name="Lore_Paths_Desc2" xml:space="preserve">
+    <value>Within this timeless dimension, Ymir Fritz — the original Founder — has existed for two thousand years, ceaselessly building every titan from sand at the command of the royal bloodline. It was only when Eren Yeager reached the Coordinate that the cycle was finally broken.</value>
+  </data>
+  <data name="Lore_Paths_YmirTitle" xml:space="preserve">
+    <value>Ymir Fritz — The Founder</value>
+  </data>
+  <data name="Lore_Paths_YmirDesc" xml:space="preserve">
+    <value>A young slave girl who, over 2,000 years ago, made contact with the "source of all living matter" and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline — until she was finally freed.</value>
+  </data>
+  <data name="Lore_Paths_CoordinateTitle" xml:space="preserve">
+    <value>The Coordinate</value>
+  </data>
+  <data name="Lore_Paths_CoordinateDesc" xml:space="preserve">
+    <value>The nexus where all Paths converge. Whoever controls the Coordinate can command all Subjects of Ymir — altering their memories, bodies, and even their reproductive capabilities. Accessing its full power requires both the Founding Titan and royal blood.</value>
   </data>
 </root>

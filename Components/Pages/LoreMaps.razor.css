@@ -1,0 +1,642 @@
+/* ==========================================
+   LORE & MAPS PAGE — Scoped Styles
+   Premium dark obsidian design language.
+   NO :root variables per AGENTS.md rules.
+   ========================================== */
+
+.aot-page-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+/* ── Header ── */
+
+.lore-header {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.lore-page-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.75rem;
+}
+
+.lore-page-subtitle {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    max-width: 640px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+}
+
+/* ── Tab Switcher ── */
+
+.lore-tab-switcher {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lore-tab-btn {
+    background: transparent;
+    border: none;
+    color: #d1d5db;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.lore-tab-btn i {
+    font-size: 0.95rem;
+}
+
+.lore-tab-btn.active {
+    background: #dfbb6b;
+    color: #0c0d10;
+    box-shadow: 0 4px 12px rgba(223, 187, 107, 0.35);
+}
+
+.lore-tab-btn:hover:not(.active) {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Section Intro ── */
+
+.lore-section-intro {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+/* ── Shared Detail Row ── */
+
+.lore-detail-row {
+    margin-bottom: 0.75rem;
+}
+
+.lore-detail-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #dfbb6b;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.lore-detail-value {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ============================================
+   TAB 0 — NINE TITANS
+   ============================================ */
+
+.lore-titans-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .lore-titans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lore-titans-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Titan Card */
+.lore-titan-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.lore-titan-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.08);
+}
+
+.lore-titan-card.is-expanded {
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.1);
+}
+
+/* Badge overlay */
+.lore-titan-badge-wrap {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
+.lore-titan-badge-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Art frame */
+.lore-titan-art-frame {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.lore-titan-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.4s ease;
+}
+
+.lore-titan-card:hover .lore-titan-art {
+    transform: scale(1.03);
+}
+
+.lore-titan-art-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12, 13, 16, 0.95) 0%, transparent 60%);
+}
+
+/* Info strip */
+.lore-titan-info {
+    padding: 1rem 1.25rem 0.75rem;
+}
+
+.lore-titan-name {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.15rem 0;
+    line-height: 1.3;
+}
+
+.lore-titan-height {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #dfbb6b;
+}
+
+/* Expandable details */
+.lore-titan-details {
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.12);
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    animation: detailsSlideIn 0.25s ease;
+}
+
+@keyframes detailsSlideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.lore-titan-desc {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0.5rem 0 0 0;
+    opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+    .lore-titan-desc,
+    .lore-detail-value {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ============================================
+   TAB 1 — THREE WALLS
+   ============================================ */
+
+/* Concentric Ring Diagram */
+.wall-diagram-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2.5rem;
+}
+
+.wall-ring {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.wall-maria-ring {
+    width: 320px;
+    height: 320px;
+    border: 2px solid rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.04);
+}
+
+.wall-rose-ring {
+    width: 220px;
+    height: 220px;
+    border: 2px solid rgba(251, 146, 60, 0.4);
+    background: rgba(251, 146, 60, 0.04);
+}
+
+.wall-sina-ring {
+    width: 130px;
+    height: 130px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    background: rgba(212, 175, 55, 0.06);
+}
+
+.wall-ring-label {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.wall-maria-ring > .wall-ring-label { color: #f87171; }
+.wall-rose-ring > .wall-ring-label  { color: #fb923c; }
+.wall-sina-ring > .wall-ring-label  { color: #dfbb6b; }
+
+.wall-center {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wall-center-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #dfbb6b;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive diagram */
+@media (max-width: 400px) {
+    .wall-maria-ring { width: 260px; height: 260px; }
+    .wall-rose-ring  { width: 180px; height: 180px; }
+    .wall-sina-ring  { width: 110px; height: 110px; }
+    .wall-center     { width: 40px;  height: 40px; }
+    .wall-ring-label { font-size: 0.6rem; }
+}
+
+/* Wall Info Cards */
+.lore-walls-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.lore-wall-card {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lore-wall-card:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.06);
+}
+
+.lore-wall-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.lore-wall-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+}
+
+.lore-wall-diameter {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #dfbb6b;
+}
+
+.lore-wall-desc {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.lore-wall-districts {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 0.75rem;
+}
+
+@media (max-width: 640px) {
+    .lore-wall-desc {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ============================================
+   TAB 2 — FACTIONS
+   ============================================ */
+
+.lore-factions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .lore-factions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lore-factions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.lore-faction-card {
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.lore-faction-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.08);
+}
+
+.lore-faction-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(223, 187, 107, 0.1);
+    border: 1px solid rgba(223, 187, 107, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.lore-faction-icon {
+    font-size: 1.35rem;
+    color: #dfbb6b;
+}
+
+.lore-faction-name {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.lore-faction-desc {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.lore-faction-members {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 0.75rem;
+}
+
+@media (max-width: 640px) {
+    .lore-faction-desc {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ============================================
+   TAB 3 — THE PATHS
+   ============================================ */
+
+.lore-paths-section {
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* CSS-only Glowing Tree */
+.paths-glow-tree {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    pointer-events: none;
+    opacity: 0.18;
+}
+
+.paths-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 55%;
+    background: linear-gradient(to top, rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0.1));
+    border-radius: 2px;
+}
+
+.paths-canopy {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+}
+
+.paths-glow-ring {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    animation: pathsPulse 4s ease-in-out infinite;
+}
+
+@keyframes pathsPulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+    50%      { opacity: 0.6; transform: translateX(-50%) scale(1.06); }
+}
+
+/* Content overlay */
+.paths-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.paths-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.5rem 0;
+}
+
+.paths-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #dfbb6b;
+    margin: 0 0 1.5rem 0;
+}
+
+.paths-body {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+}
+
+.paths-details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .paths-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.paths-detail-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+.paths-detail-card:hover {
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.paths-detail-icon {
+    font-size: 1.5rem;
+    color: #dfbb6b;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.paths-detail-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.paths-detail-desc {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .lore-paths-section {
+        padding: 2rem 1.25rem;
+    }
+    .paths-body,
+    .paths-detail-desc {
+        font-size: 0.9rem;
+    }
+}

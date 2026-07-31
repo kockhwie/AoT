@@ -7,13 +7,25 @@
 /* Header style */
 .aot-story-header {
     text-align: center;
-    padding: 2.5rem 1.5rem;
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
+    padding: 2.05rem 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
 }
+    .aot-story-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+    }
+
+    .aot-story-header > * {
+        position: relative;
+        z-index: 1;
+    }
 
 .aot-page-title {
     font-size: 1.75rem;
@@ -21,6 +33,7 @@
     color: #ffffff;
     letter-spacing: 0.18em;
     margin-bottom: 0.75rem;
+    text-shadow: 3px 3px 0px var(--aot-black);
 }
 
 .aot-page-subtitle {
@@ -31,43 +44,45 @@
     line-height: 1.6;
 }
 
-/* Tab Switcher Styles */
+/* Tab switcher — was a soft pill; now plain black-bordered comic buttons,
+   riding on the existing .aot-btn hard-shadow system already in app.css */
 .aot-tab-switcher {
     display: inline-flex;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 4px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 0.5rem;
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
 }
 
 .aot-tab-btn {
-    background: transparent;
-    color: #d1d5db;
+    background-color: var(--aot-white);
+    color: var(--aot-black);
     padding: 0.6rem 1.5rem;
     font-size: 0.875rem;
-    font-weight: 700;
-    border-radius: 25px;
-    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--aot-btn-radius);
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    /* border/box-shadow/hover already come from .aot-btn — don't fight it here */
 }
 
 .aot-tab-btn i {
     font-size: 1rem;
 }
 
-.aot-tab-btn.active {
-    background: #dfbb6b;
-    color: #0c0d10;
-    box-shadow: 0 4px 12px rgba(223, 187, 107, 0.35);
-}
+    .aot-tab-btn:not(.active) {
+        background-color: transparent;
+        color: var(--aot-text-secondary);
+    }
 
-.aot-tab-btn:hover:not(.active) {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
-}
+    .aot-tab-btn.active {
+        background-color: var(--aot-gold) !important;
+        color: var(--aot-black) !important;
+    }
 
 /* Story Grid */
 .aot-story-grid {
@@ -90,20 +105,8 @@
 
 /* Premium Story Card */
 .aot-arc-card {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 14px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-}
-
-.aot-arc-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 215, 0, 0.35);
-    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.08);
+    padding: 0.15rem;
+    position: relative;
 }
 
 /* Card Visual Hierarchy (3-Tier) */
@@ -138,29 +141,33 @@
 }
 
 /* Timeline specific styles (mirrored from Home.razor.css details) */
-.aot-timeline-container {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+.aot-timeline-container { 
+    /*padding: 0.25rem 0.25rem;*/
+    position: relative; 
 }
 
+/* Per-event boxes — flatter inset sub-panel, not a second thick comic-card
+   (nesting two hard-bordered cards looks heavy) */
 .aot-timeline-box {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.7) 0%, rgba(12, 13, 16, 0.9) 100%) !important;
-    padding: 1.25rem !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: rgba(0, 0, 0, 0.35) !important;
+    padding: 1.20rem !important;
+    border-radius: 8px !important;
+    border: 2px solid var(--aot-black) !important;
+    box-shadow: 3px 3px 0px var(--aot-black) !important;
     margin-bottom: 1rem !important;
     width: 100% !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: all 0.25s ease;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
-.aot-timeline-box:hover {
-    border-color: rgba(255, 215, 0, 0.25) !important;
-}
+    .aot-timeline-box:hover {
+        box-shadow: 3px 3px 0px var(--aot-red) !important;
+        transform: translateY(-2px);
+    }
 
+.timeline-icon {
+    border: 2px solid var(--aot-black) !important;
+    box-shadow: 2px 2px 0px var(--aot-black);
+}
 .aot-timeline-time {
     font-weight: 900;
     color: #dfbb6b; /* Warm gold */
@@ -184,7 +191,7 @@
 }
 
 .timeline-connector {
-    background-color: rgba(255, 215, 0, 0.18) !important;
+    background-color: rgba(123, 123, 123, 0.28) !important;
 }
 
 /* Base icon node */
@@ -192,10 +199,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     border: 2px solid rgba(255, 255, 255, 0.08);
     flex-shrink: 0;
 }
@@ -242,4 +249,60 @@
     color: #dfbb6b;
     border-color: rgba(212, 175, 55, 0.5);
     box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+/* Fan-out only on devices that actually hover — avoids a stuck effect on tap */
+@media (hover: hover) {
+    .aot-arc-card:hover {
+        z-index: 1; /* sit above neighboring grid cards while fanned out */
+    }
+
+        .aot-arc-card:hover::before {
+            opacity: 1;
+            transform: translate(-14px, 10px) rotate(-6deg);
+        }
+
+        .aot-arc-card:hover::after {
+            opacity: 1;
+            transform: translate(14px, 12px) rotate(7deg);
+        }
+}
+
+/* The actual visible card — comic-card gives it border/shadow/hover-red */
+.aot-arc-card-face {
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* clips the halftone texture below to the rounded corners */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .aot-arc-card-face::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
+
+    .aot-arc-card-face > * {
+        position: relative;
+        z-index: 1;
+    }
+
+@media (hover: hover) {
+    .aot-arc-card:hover .aot-arc-card-face {
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aot-arc-card::before,
+    .aot-arc-card::after {
+        transition: none;
+    }
 }

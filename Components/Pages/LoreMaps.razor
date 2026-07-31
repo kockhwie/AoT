@@ -1,0 +1,293 @@
+@page "/lore"
+@page "/{Lang}/lore"
+@using AOT.Services
+@implements IDisposable
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+@inject NavigationManager Nav
+
+<PageTitle>@LocalizationService.GetString("Lore_PageTitle") - @LocalizationService.GetString("PageTitle")</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="@LocalizationService.GetString("Lore_MetaDesc")" />
+</HeadContent>
+
+<div class="aot-page-container">
+    <!-- Premium Obsidian Header Panel -->
+    <div class="lore-header">
+        <h1 class="lore-page-title uppercase">@LocalizationService.GetString("Lore_PageHeader")</h1>
+        <p class="lore-page-subtitle font-sans">@LocalizationService.GetString("Lore_PageSub")</p>
+
+        <!-- Tab Switcher -->
+        <div class="lore-tab-switcher">
+            @for (int i = 0; i < _tabIcons.Length; i++)
+            {
+                var idx = i;
+                <button class="lore-tab-btn @(idx == _activeTab ? "active" : "") font-sans" @onclick="() => SetTab(idx)">
+                    <i class="ti @_tabIcons[idx]"></i> @LocalizationService.GetString(_tabKeys[idx])
+                </button>
+            }
+        </div>
+    </div>
+
+    <!-- Active View Area -->
+    <div class="lore-view-content mt-6">
+
+        @* ───────────────────── TAB 0 ▸ NINE TITANS ───────────────────── *@
+        @if (_activeTab == 0)
+        {
+            <p class="lore-section-intro font-sans">@LocalizationService.GetString("Lore_TitansIntro")</p>
+
+            <div class="lore-titans-grid">
+                @foreach (var titan in _loreTitans)
+                {
+                    <div class="lore-titan-card @(titan.Id == _expandedTitanId ? "is-expanded" : "")"
+                         @onclick="() => ToggleTitan(titan.Id)">
+                        <!-- Badge -->
+                        <div class="lore-titan-badge-wrap">
+                            <img src="/img/titans/badges/@titan.BadgeImg" class="lore-titan-badge-img" alt="" />
+                        </div>
+                        <!-- Card Art -->
+                        <div class="lore-titan-art-frame">
+                            <img src="/img/titans/cards/@titan.CardImg" class="lore-titan-art"
+                                 alt="@LocalizationService.GetString(titan.NameKey)" />
+                            <div class="lore-titan-art-overlay"></div>
+                        </div>
+                        <!-- Name / Height -->
+                        <div class="lore-titan-info">
+                            <h2 class="lore-titan-name font-sans">@LocalizationService.GetString(titan.NameKey)</h2>
+                            <span class="lore-titan-height font-sans">@LocalizationService.GetString(titan.HeightKey)</span>
+                        </div>
+                        <!-- Expandable Details Panel -->
+                        @if (titan.Id == _expandedTitanId)
+                        {
+                            <div class="lore-titan-details">
+                                <div class="lore-detail-row">
+                                    <span class="lore-detail-label font-sans">@LocalizationService.GetString("Lore_LabelInheritors")</span>
+                                    <p class="lore-detail-value font-sans">@LocalizationService.GetString(titan.InheritorsKey)</p>
+                                </div>
+                                <div class="lore-detail-row">
+                                    <span class="lore-detail-label font-sans">@LocalizationService.GetString("Lore_LabelAbility")</span>
+                                    <p class="lore-detail-value font-sans">@LocalizationService.GetString(titan.AbilityKey)</p>
+                                </div>
+                                <p class="lore-titan-desc font-sans">@LocalizationService.GetString(titan.DescKey)</p>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+
+        @* ───────────────────── TAB 1 ▸ THREE WALLS ───────────────────── *@
+        else if (_activeTab == 1)
+        {
+            <p class="lore-section-intro font-sans">@LocalizationService.GetString("Lore_WallsIntro")</p>
+
+            <!-- Concentric Wall Diagram -->
+            <div class="wall-diagram-container">
+                <div class="wall-ring wall-maria-ring">
+                    <span class="wall-ring-label font-sans">@LocalizationService.GetString("Lore_Wall1_Name")</span>
+                    <div class="wall-ring wall-rose-ring">
+                        <span class="wall-ring-label font-sans">@LocalizationService.GetString("Lore_Wall2_Name")</span>
+                        <div class="wall-ring wall-sina-ring">
+                            <span class="wall-ring-label font-sans">@LocalizationService.GetString("Lore_Wall3_Name")</span>
+                            <div class="wall-center">
+                                <span class="wall-center-label font-sans">Mitras</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wall Info Cards -->
+            <div class="lore-walls-stack">
+                @foreach (var wall in _walls)
+                {
+                    <div class="lore-wall-card">
+                        <div class="lore-wall-header">
+                            <h2 class="lore-wall-name font-sans">@LocalizationService.GetString(wall.NameKey)</h2>
+                            <span class="lore-wall-diameter font-sans">@LocalizationService.GetString(wall.DiameterKey)</span>
+                        </div>
+                        <p class="lore-wall-desc font-sans">@LocalizationService.GetString(wall.DescKey)</p>
+                        <div class="lore-wall-districts">
+                            <span class="lore-detail-label font-sans">@LocalizationService.GetString("Lore_LabelDistricts")</span>
+                            <p class="lore-detail-value font-sans">@LocalizationService.GetString(wall.DistrictsKey)</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+        @* ───────────────────── TAB 2 ▸ FACTIONS ───────────────────── *@
+        else if (_activeTab == 2)
+        {
+            <p class="lore-section-intro font-sans">@LocalizationService.GetString("Lore_FactionsIntro")</p>
+
+            <div class="lore-factions-grid">
+                @foreach (var faction in _factions)
+                {
+                    <div class="lore-faction-card">
+                        <div class="lore-faction-icon-wrap">
+                            <i class="ti @faction.IconClass lore-faction-icon"></i>
+                        </div>
+                        <h2 class="lore-faction-name font-sans">@LocalizationService.GetString(faction.NameKey)</h2>
+                        <p class="lore-faction-desc font-sans">@LocalizationService.GetString(faction.DescKey)</p>
+                        <div class="lore-faction-members">
+                            <span class="lore-detail-label font-sans">@LocalizationService.GetString("Lore_LabelMembers")</span>
+                            <p class="lore-detail-value font-sans">@LocalizationService.GetString(faction.MembersKey)</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+        @* ───────────────────── TAB 3 ▸ THE PATHS ───────────────────── *@
+        else
+        {
+            <div class="lore-paths-section">
+                <!-- CSS-only Luminous Tree Decoration -->
+                <div class="paths-glow-tree" aria-hidden="true">
+                    <div class="paths-trunk"></div>
+                    <div class="paths-canopy"></div>
+                    <div class="paths-glow-ring"></div>
+                </div>
+
+                <div class="paths-content">
+                    <h2 class="paths-title font-sans">@LocalizationService.GetString("Lore_Paths_Title")</h2>
+                    <p class="paths-subtitle font-sans">@LocalizationService.GetString("Lore_Paths_Subtitle")</p>
+                    <p class="paths-body font-sans">@LocalizationService.GetString("Lore_Paths_Desc1")</p>
+                    <p class="paths-body font-sans">@LocalizationService.GetString("Lore_Paths_Desc2")</p>
+
+                    <div class="paths-details-grid">
+                        <div class="paths-detail-card">
+                            <i class="ti ti-crown paths-detail-icon"></i>
+                            <h3 class="paths-detail-title font-sans">@LocalizationService.GetString("Lore_Paths_YmirTitle")</h3>
+                            <p class="paths-detail-desc font-sans">@LocalizationService.GetString("Lore_Paths_YmirDesc")</p>
+                        </div>
+                        <div class="paths-detail-card">
+                            <i class="ti ti-axis-x paths-detail-icon"></i>
+                            <h3 class="paths-detail-title font-sans">@LocalizationService.GetString("Lore_Paths_CoordinateTitle")</h3>
+                            <p class="paths-detail-desc font-sans">@LocalizationService.GetString("Lore_Paths_CoordinateDesc")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Lang { get; set; }
+
+    private int _activeTab;
+    private int _expandedTitanId = -1;
+
+    private readonly string[] _tabIcons = { "ti-flame", "ti-wall", "ti-flag-2", "ti-stars" };
+    private readonly string[] _tabKeys = { "Lore_TabTitans", "Lore_TabWalls", "Lore_TabFactions", "Lore_TabPaths" };
+
+    private void SetTab(int tab)
+    {
+        _activeTab = tab;
+        _expandedTitanId = -1;
+    }
+
+    private void ToggleTitan(int id)
+    {
+        _expandedTitanId = _expandedTitanId == id ? -1 : id;
+    }
+
+    // ── Data Models ──
+
+    private sealed class LoreTitanModel
+    {
+        public int Id { get; init; }
+        public string NameKey { get; init; } = "";
+        public string HeightKey { get; init; } = "";
+        public string DescKey { get; init; } = "";
+        public string InheritorsKey => $"Lore_T{Id}_Inheritors";
+        public string AbilityKey => $"Lore_T{Id}_Ability";
+        public string BadgeImg { get; init; } = "";
+        public string CardImg { get; init; } = "";
+    }
+
+    private sealed class WallModel
+    {
+        public int Id { get; init; }
+        public string NameKey => $"Lore_Wall{Id}_Name";
+        public string DiameterKey => $"Lore_Wall{Id}_Diameter";
+        public string DescKey => $"Lore_Wall{Id}_Desc";
+        public string DistrictsKey => $"Lore_Wall{Id}_Districts";
+    }
+
+    private sealed class FactionModel
+    {
+        public int Id { get; init; }
+        public string NameKey => $"Lore_F{Id}_Name";
+        public string DescKey => $"Lore_F{Id}_Desc";
+        public string MembersKey => $"Lore_F{Id}_Members";
+        public string IconClass { get; init; } = "";
+    }
+
+    // ── Data: Nine Titans (reuses existing T*Name / T*H / T*Desc keys) ──
+
+    private readonly List<LoreTitanModel> _loreTitans = new()
+    {
+        new() { Id = 1, NameKey = "T1Name", HeightKey = "T1H", DescKey = "T1Desc", BadgeImg = "founding-titan-badge.png", CardImg = "founding-titan-card.webp" },
+        new() { Id = 2, NameKey = "T2Name", HeightKey = "T2H", DescKey = "T2Desc", BadgeImg = "female-titan-badge.png",   CardImg = "female-titan-card.webp" },
+        new() { Id = 3, NameKey = "T3Name", HeightKey = "T3H", DescKey = "T3Desc", BadgeImg = "beast-titan-badge.png",    CardImg = "beast-titan-card.webp" },
+        new() { Id = 4, NameKey = "T4Name", HeightKey = "T4H", DescKey = "T4Desc", BadgeImg = "colossal-titan-badge.png", CardImg = "colossal-titan-card.webp" },
+        new() { Id = 5, NameKey = "T5Name", HeightKey = "T5H", DescKey = "T5Desc", BadgeImg = "armored-titan-badge.png",  CardImg = "armored-titan-card.webp" },
+        new() { Id = 6, NameKey = "T6Name", HeightKey = "T6H", DescKey = "T6Desc", BadgeImg = "jaw-titan-badge.png",      CardImg = "jaw-titan-card.webp" },
+        new() { Id = 7, NameKey = "T7Name", HeightKey = "T7H", DescKey = "T7Desc", BadgeImg = "cart-titan-badge.png",     CardImg = "cart-titan-card.webp" },
+        new() { Id = 8, NameKey = "T8Name", HeightKey = "T8H", DescKey = "T8Desc", BadgeImg = "warhammer-titan-badge.png", CardImg = "warhammer-titan-card.webp" },
+        new() { Id = 9, NameKey = "T9Name", HeightKey = "T9H", DescKey = "T9Desc", BadgeImg = "attack-titan-badge.png",   CardImg = "attack-titan-card.webp" },
+    };
+
+    // ── Data: Three Walls ──
+
+    private readonly List<WallModel> _walls = new()
+    {
+        new() { Id = 1 },  // Wall Maria (outermost)
+        new() { Id = 2 },  // Wall Rose
+        new() { Id = 3 },  // Wall Sina (innermost)
+    };
+
+    // ── Data: Factions ──
+
+    private readonly List<FactionModel> _factions = new()
+    {
+        new() { Id = 1, IconClass = "ti-feather" },      // Survey Corps
+        new() { Id = 2, IconClass = "ti-rosette" },      // Garrison
+        new() { Id = 3, IconClass = "ti-shield-lock" },  // Military Police
+        new() { Id = 4, IconClass = "ti-trees" },        // Eldia / Paradis
+        new() { Id = 5, IconClass = "ti-flag-2" },       // Marley
+        new() { Id = 6, IconClass = "ti-swords" },       // Warrior Unit
+        new() { Id = 7, IconClass = "ti-sun" },          // Hizuru
+    };
+
+    // ── Lifecycle ──
+
+    protected override void OnInitialized()
+    {
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+        {
+            LanguageSwitcher.Initialize(Lang);
+            LocalizationService.ActiveLang = LanguageSwitcher.ActiveLang;
+        }
+    }
+
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
+}

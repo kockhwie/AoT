@@ -150,9 +150,6 @@
   <data name="NavCharacters" xml:space="preserve">
     <value>キャラクター</value>
   </data>
-  <data name="NavExplore" xml:space="preserve">
-    <value>探索</value>
-  </data>
   <data name="NavFanZone" xml:space="preserve">
     <value>ファンゾーン</value>
   </data>
@@ -1430,5 +1427,233 @@
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
     <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った——彼らが知る世界の終焉と引き換えに。</value>
+  </data>
+  <!-- ========== 世界観と地図ページ ========== -->
+  <data name="Lore_PageTitle" xml:space="preserve">
+    <value>世界観と地図</value>
+  </data>
+  <data name="Lore_MetaDesc" xml:space="preserve">
+    <value>進撃の巨人の世界を探求する——九つの巨人、三重の壁、各勢力、そして神秘的な「道」の世界。</value>
+  </data>
+  <data name="Lore_PageHeader" xml:space="preserve">
+    <value>世界観と地図</value>
+  </data>
+  <data name="Lore_PageSub" xml:space="preserve">
+    <value>進撃の巨人の世界観を深く知る——九つの巨人の力からパラディ島とマーレの地政学まで。</value>
+  </data>
+  <data name="Lore_TabTitans" xml:space="preserve">
+    <value>九つの巨人</value>
+  </data>
+  <data name="Lore_TabWalls" xml:space="preserve">
+    <value>三重の壁</value>
+  </data>
+  <data name="Lore_TabFactions" xml:space="preserve">
+    <value>勢力</value>
+  </data>
+  <data name="Lore_TabPaths" xml:space="preserve">
+    <value>「道」</value>
+  </data>
+  <data name="Lore_TitansIntro" xml:space="preserve">
+    <value>二千年前、ユミール・フリッツは巨人の力を手に入れた。彼女の死後、その力は九つに分けられ、それぞれ固有の能力として代々受け継がれてきた。</value>
+  </data>
+  <data name="Lore_WallsIntro" xml:space="preserve">
+    <value>ウォール・マリア陥落の百年前、カール・フリッツ王は幾重もの超大型巨人によって三重の城壁を築き、パラディ島にエルディアの残光を護った。</value>
+  </data>
+  <data name="Lore_FactionsIntro" xml:space="preserve">
+    <value>進撃の巨人の世界は、それぞれの思想や目的を持つ国家や軍事組織間の過酷な葛藤によって形成されている。</value>
+  </data>
+  <data name="Lore_LabelInheritors" xml:space="preserve">
+    <value>主な継承者</value>
+  </data>
+  <data name="Lore_LabelAbility" xml:space="preserve">
+    <value>特殊能力</value>
+  </data>
+  <data name="Lore_LabelDistricts" xml:space="preserve">
+    <value>主な区</value>
+  </data>
+  <data name="Lore_LabelMembers" xml:space="preserve">
+    <value>主な構成員</value>
+  </data>
+  <!-- 九つの巨人 — 継承者 -->
+  <data name="Lore_T1_Inheritors" xml:space="preserve">
+    <value>ユミール・フリッツ → カール・フリッツ → フリーダ・レイス → グリシャ・イェーガー → エレン・イェーガー</value>
+  </data>
+  <data name="Lore_T2_Inheritors" xml:space="preserve">
+    <value>アニ・レオンハート</value>
+  </data>
+  <data name="Lore_T3_Inheritors" xml:space="preserve">
+    <value>トム・クサヴァー → ジーク・イェーガー</value>
+  </data>
+  <data name="Lore_T4_Inheritors" xml:space="preserve">
+    <value>ベルトルト・フーバー → アルミン・アルレルト</value>
+  </data>
+  <data name="Lore_T5_Inheritors" xml:space="preserve">
+    <value>ライナー・ブラウン</value>
+  </data>
+  <data name="Lore_T6_Inheritors" xml:space="preserve">
+    <value>マルセル・ガリアード → ユミール → ポルコ・ガリアード → ファルコ・グライス</value>
+  </data>
+  <data name="Lore_T7_Inheritors" xml:space="preserve">
+    <value>ピーク・フィンガー</value>
+  </data>
+  <data name="Lore_T8_Inheritors" xml:space="preserve">
+    <value>ラーラ・タイバー → エレン・イェーガー</value>
+  </data>
+  <data name="Lore_T9_Inheritors" xml:space="preserve">
+    <value>エレン・クルーガー → グリシャ・イェーガー → エレン・イェーガー</value>
+  </data>
+  <!-- 九つの巨人 — 能力 -->
+  <data name="Lore_T1_Ability" xml:space="preserve">
+    <value>すべての巨人を統括し、ユミールの民の記憶を改変し、「道」を操る——王家の血筋が持つ絶対の力。</value>
+  </data>
+  <data name="Lore_T2_Ability" xml:space="preserve">
+    <value>汎用性が高く、皮膚の一部を硬質化させる能力や、叫びによって無知性の巨人を引き寄せる力を持つ。</value>
+  </data>
+  <data name="Lore_T3_Ability" xml:space="preserve">
+    <value>長距離からの恐るべき投擲攻撃と、自らの脊髄液を投与された「ユミールの民」を巨人に変え操作する能力。</value>
+  </data>
+  <data name="Lore_T4_Ability" xml:space="preserve">
+    <value>大爆発を伴う出現、高熱の蒸気放出、60メートルにおよぶ圧倒的な巨体と破壊力を誇る。</value>
+  </data>
+  <data name="Lore_T5_Ability" xml:space="preserve">
+    <value>全身を覆う頑丈な皮膚（鎧）により、通常の攻撃をほとんど寄せ付けない圧倒的な防衛力を備える。</value>
+  </data>
+  <data name="Lore_T6_Ability" xml:space="preserve">
+    <value>強力な顎と爪を持ち、巨人の硬質化をも噛み砕く。小回りが利き、非常に高い機敏性を誇る。</value>
+  </data>
+  <data name="Lore_T7_Ability" xml:space="preserve">
+    <value>圧倒的な持久力を持ち、長期間の任務に適する。四足歩行で重装備の搬送や砲台の搭載が可能。</value>
+  </data>
+  <data name="Lore_T8_Ability" xml:space="preserve">
+    <value>硬質化された肉体によって武器や様々な構造物を生成できる。遠隔操作も可能。</value>
+  </data>
+  <data name="Lore_T9_Ability" xml:space="preserve">
+    <value>未来の継承者の記憶を覗き見ることができ、常に「自由」を求めて進み続ける力を持つ。</value>
+  </data>
+  <!-- 三重の壁 -->
+  <data name="Lore_Wall1_Name" xml:space="preserve">
+    <value>ウォール・マリア</value>
+  </data>
+  <data name="Lore_Wall1_Diameter" xml:space="preserve">
+    <value>直径 約480km</value>
+  </data>
+  <data name="Lore_Wall1_Desc" xml:space="preserve">
+    <value>一番外側に位置する壁。845年に超大型巨人と鎧の巨人によって破られ、人類は領土の3割と多くの命を失った。</value>
+  </data>
+  <data name="Lore_Wall1_Districts" xml:space="preserve">
+    <value>シガンシナ区（エレンの故郷）、クィンタ区</value>
+  </data>
+  <data name="Lore_Wall2_Name" xml:space="preserve">
+    <value>ウォール・ローゼ</value>
+  </data>
+  <data name="Lore_Wall2_Diameter" xml:space="preserve">
+    <value>直径 約380km</value>
+  </data>
+  <data name="Lore_Wall2_Desc" xml:space="preserve">
+    <value>二番目の壁。ウォール・マリア奪還作戦の拠点となった。トロスト区攻防戦ではエレンの巨人化能力によって死守された。</value>
+  </data>
+  <data name="Lore_Wall2_Districts" xml:space="preserve">
+    <value>トロスト区、クロルバ区、ユートピア区</value>
+  </data>
+  <data name="Lore_Wall3_Name" xml:space="preserve">
+    <value>ウォール・シーナ</value>
+  </data>
+  <data name="Lore_Wall3_Diameter" xml:space="preserve">
+    <value>直径 約250km</value>
+  </data>
+  <data name="Lore_Wall3_Desc" xml:space="preserve">
+    <value>最も内側に位置する壁。王都や貴族、富裕層が暮らし、憲兵団が守護している。</value>
+  </data>
+  <data name="Lore_Wall3_Districts" xml:space="preserve">
+    <value>ストヘス区、ヤッケル区、ミトラス（王都）</value>
+  </data>
+  <!-- 勢力 -->
+  <data name="Lore_F1_Name" xml:space="preserve">
+    <value>調査兵団</value>
+  </data>
+  <data name="Lore_F1_Desc" xml:space="preserve">
+    <value>壁外への遠征と巨人の調査、世界の謎の解明を主目的とする兵団。生存率は極めて低いが、人類の希望の象徴。</value>
+  </data>
+  <data name="Lore_F1_Members" xml:space="preserve">
+    <value>エルヴィン・スミス、リヴァイ・アッカーマン、ハンジ・ゾエ、エレン・イェーガー、ミカサ・アッカーマン、アルミン・アルレルト</value>
+  </data>
+  <data name="Lore_F2_Name" xml:space="preserve">
+    <value>駐屯兵団</value>
+  </data>
+  <data name="Lore_F2_Desc" xml:space="preserve">
+    <value>壁の補修や強化、街の治安維持を担当する兵団。兵員数が最も多く、壁の防衛の要。</value>
+  </data>
+  <data name="Lore_F2_Members" xml:space="preserve">
+    <value>ドット・ピクシス、ハンネス、イアン・ディートリヒ、リコ・ブレツェンスカ</value>
+  </data>
+  <data name="Lore_F3_Name" xml:space="preserve">
+    <value>憲兵团</value>
+  </data>
+  <data name="Lore_F3_Desc" xml:space="preserve">
+    <value>王の近衛や警察業務を行う兵団。ウォール・シーナ内に配置され、訓練兵団の成績上位10名のみが志願できる。</value>
+  </data>
+  <data name="Lore_F3_Members" xml:space="preserve">
+    <value>ナイル・ドーク、ケニー・アッカーマン、マルロ・フロイデンベルク</value>
+  </data>
+  <data name="Lore_F4_Name" xml:space="preserve">
+    <value>エルディア（パラディ島）</value>
+  </data>
+  <data name="Lore_F4_Desc" xml:space="preserve">
+    <value>三重の壁の中に生きるエルディア人の残英。100年以上、記憶を消され世界から隔離されていた。</value>
+  </data>
+  <data name="Lore_F4_Members" xml:space="preserve">
+    <value>ヒストリア・レイス（女王）、ロド・レイス、ダリス・ザックレー</value>
+  </data>
+  <data name="Lore_F5_Name" xml:space="preserve">
+    <value>マーレ</value>
+  </data>
+  <data name="Lore_F5_Desc" xml:space="preserve">
+    <value>大陸の軍事大国。エルディア人を収容区に抑圧し、巨人の力を軍事利用して他国を侵略している。</value>
+  </data>
+  <data name="Lore_F5_Members" xml:space="preserve">
+    <value>ヴィリー・タイバー、テオ・マガト、カルヴィ元帥</value>
+  </data>
+  <data name="Lore_F6_Name" xml:space="preserve">
+    <value>戦士隊</value>
+  </data>
+  <data name="Lore_F6_Desc" xml:space="preserve">
+    <value>マーレ軍の傘下で、九つの巨人の力を継承し戦うエルディア人の戦士たち。「名誉マーレ人」の称号を目指す。</value>
+  </data>
+  <data name="Lore_F6_Members" xml:space="preserve">
+    <value>ライナー・ブラウン、ベルトルト・フーバー、アニ・レオンハート、ジーク・イェーガー、ピーク・フィンガー、ポルコ・ガリアード、ファルコ・グライス、ガビ・ブラウン</value>
+  </data>
+  <data name="Lore_F7_Name" xml:space="preserve">
+    <value>ヒィズル国</value>
+  </data>
+  <data name="Lore_F7_Desc" xml:space="preserve">
+    <value>アズマビト家を通じてかつてエルディア帝国と同盟を結んでいた東洋の国。地下資源を狙いパラディ島と交渉する。</value>
+  </data>
+  <data name="Lore_F7_Members" xml:space="preserve">
+    <value>キヨミ・アズマビト</value>
+  </data>
+  <!-- 「道」 -->
+  <data name="Lore_Paths_Title" xml:space="preserve">
+    <value>「道」</value>
+  </data>
+  <data name="Lore_Paths_Subtitle" xml:space="preserve">
+    <value>すべての「ユミールの民」をつなぐ目に見えない線</value>
+  </data>
+  <data name="Lore_Paths_Desc1" xml:space="preserve">
+    <value>「道」とは、時間と空間を超えてすべての「ユミールの民」を結びつける精神的な領域である。肉体や骨、記憶、巨人の力はこの道を通じて送られる。すべての道が交わる場所が「座標」である。</value>
+  </data>
+  <data name="Lore_Paths_Desc2" xml:space="preserve">
+    <value>この果てしない世界で、始祖ユミールは二千年にわたり、王家の命に従って砂から巨人を作り続けていた。</value>
+  </data>
+  <data name="Lore_Paths_YmirTitle" xml:space="preserve">
+    <value>始祖ユミール</value>
+  </data>
+  <data name="Lore_Paths_YmirDesc" xml:space="preserve">
+    <value>二千年前、最初に巨人の力を得た少女。死後もその魂は「道」に囚われ、王家に仕え続けていた。</value>
+  </data>
+  <data name="Lore_Paths_CoordinateTitle" xml:space="preserve">
+    <value>座標</value>
+  </data>
+  <data name="Lore_Paths_CoordinateDesc" xml:space="preserve">
+    <value>すべての「道」が交わる中心。始祖の巨人の力を行使することで、すべてのユミールの民を支配・変化させることができる。</value>
   </data>
 </root>

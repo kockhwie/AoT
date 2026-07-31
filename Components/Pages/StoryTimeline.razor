@@ -35,12 +35,14 @@
             <div class="aot-story-grid">
                 @foreach (var arc in _storyArcs)
                 {
-                    <div class="aot-arc-card">
-                        <div class="aot-arc-header">
-                            <span class="aot-arc-vol font-sans">@LocalizationService.GetString(arc.ChaptersKey)</span>
-                            <h2 class="aot-arc-title font-sans">@LocalizationService.GetString(arc.TitleKey)</h2>
+                    <div class="aot-arc-card comic-card">
+                        <div class="aot-arc-card-face">
+                            <div class="aot-arc-header">
+                                <span class="aot-arc-vol font-sans">@LocalizationService.GetString(arc.ChaptersKey)</span>
+                                <h2 class="aot-arc-title font-sans">@LocalizationService.GetString(arc.TitleKey)</h2>
+                            </div>
+                            <p class="aot-arc-desc font-sans">@LocalizationService.GetString(arc.DescKey)</p>
                         </div>
-                        <p class="aot-arc-desc font-sans">@LocalizationService.GetString(arc.DescKey)</p>
                     </div>
                 }
             </div>
@@ -123,7 +125,7 @@
         new TimelineEventModel { Id = 5, IconClass = "ti-key", IconColorClass = "timeline-icon--betrayal" },
         new TimelineEventModel { Id = 6, IconClass = "ti-skull", IconColorClass = "timeline-icon--catastrophe" },
         new TimelineEventModel { Id = 7, IconClass = "ti-flame", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 8, IconClass = "ti-syringe", IconColorClass = "timeline-icon--recon" },
+        new TimelineEventModel { Id = 8, IconClass = "ti-vaccine", IconColorClass = "timeline-icon--recon" },
         new TimelineEventModel { Id = 9, IconClass = "ti-alert-triangle", IconColorClass = "timeline-icon--catastrophe" },
         new TimelineEventModel { Id = 10, IconClass = "ti-shield-check", IconColorClass = "timeline-icon--battle" },
         new TimelineEventModel { Id = 11, IconClass = "ti-horse", IconColorClass = "timeline-icon--recon" },
