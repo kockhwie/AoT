@@ -1,7 +1,9 @@
 /* ==========================================
    LORE & MAPS PAGE — Scoped Styles
-   Premium dark obsidian design language.
-   NO :root variables per AGENTS.md rules.
+   Rides on the global comic-panel system (comic-card / comic-frame /
+   comic-badge / aot-btn, all defined in app.css) so this page matches
+   Story & Timeline, Characters, and Manga 1:1 instead of its own
+   soft-glass look. NO :root variables per AGENTS.md rules.
    ========================================== */
 
 .aot-page-container {
@@ -10,17 +12,30 @@
     padding-bottom: 2rem;
 }
 
-/* ── Header ── */
-
+/* ── Header — mirrors StoryTimeline's .aot-story-header exactly (borderless
+   halftone panel) so the two hub pages read as one system ── */
 .lore-header {
     text-align: center;
-    padding: 2.5rem 1.5rem;
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
+    padding: 2.05rem 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
 }
+
+    .lore-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+    }
+
+    .lore-header > * {
+        position: relative;
+        z-index: 1;
+    }
 
 .lore-page-title {
     font-size: 1.75rem;
@@ -28,6 +43,7 @@
     color: #ffffff;
     letter-spacing: 0.18em;
     margin-bottom: 0.75rem;
+    text-shadow: 3px 3px 0px var(--aot-black);
 }
 
 .lore-page-subtitle {
@@ -38,49 +54,45 @@
     line-height: 1.6;
 }
 
-/* ── Tab Switcher ── */
-
+/* ── Tab Switcher — identical structure/behavior to StoryTimeline's
+   .aot-tab-switcher / .aot-tab-btn, riding on the global .aot-btn
+   hard-shadow button system instead of a bespoke soft pill ── */
 .lore-tab-switcher {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 4px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 0.5rem;
 }
 
 .lore-tab-btn {
-    background: transparent;
-    border: none;
-    color: #d1d5db;
-    padding: 0.5rem 1.1rem;
+    background-color: var(--aot-white);
+    color: var(--aot-black);
+    padding: 0.6rem 1.25rem;
     font-size: 0.8rem;
-    font-weight: 700;
-    border-radius: 25px;
-    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--aot-btn-radius);
     display: flex;
     align-items: center;
-    gap: 6px;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    white-space: nowrap;
+    gap: 8px;
+    /* border / box-shadow / hover / active all come from the global .aot-btn
+       class this element also carries in markup — don't redeclare them here */
 }
 
-.lore-tab-btn i {
-    font-size: 0.95rem;
-}
+    .lore-tab-btn i {
+        font-size: 1rem;
+    }
 
-.lore-tab-btn.active {
-    background: #dfbb6b;
-    color: #0c0d10;
-    box-shadow: 0 4px 12px rgba(223, 187, 107, 0.35);
-}
+    .lore-tab-btn:not(.active) {
+        background-color: transparent;
+        color: var(--aot-text-secondary);
+    }
 
-.lore-tab-btn:hover:not(.active) {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
-}
+    .lore-tab-btn.active {
+        background-color: var(--aot-gold) !important;
+        color: var(--aot-black) !important;
+    }
 
 /* ── Section Intro ── */
 
@@ -102,8 +114,8 @@
 .lore-detail-label {
     display: block;
     font-size: 0.75rem;
-    font-weight: 700;
-    color: #dfbb6b;
+    font-weight: 900;
+    color: var(--aot-brass);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 0.2rem;
@@ -139,45 +151,53 @@
     }
 }
 
-/* Titan Card */
+/* Titan Card — carries global "comic-card" in markup for border/shadow/hover;
+   this file only adds the halftone overlay + layout, same pattern used by
+   manga-chapter-card and author-panel. */
 .lore-titan-card {
     position: relative;
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 14px;
-    overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
 }
 
-.lore-titan-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 215, 0, 0.35);
-    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.08);
-}
+    .lore-titan-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
 
-.lore-titan-card.is-expanded {
-    border-color: rgba(255, 215, 0, 0.4);
-    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.1);
-}
+    .lore-titan-card > * {
+        position: relative;
+        z-index: 1;
+    }
 
-/* Badge overlay */
+    /* Expanded state overrides comic-card's default border/shadow to stay
+       permanently "hot" (red) instead of only on hover */
+    .lore-titan-card.is-expanded {
+        border-color: var(--aot-red) !important;
+        box-shadow: 6px 6px 0px var(--aot-red), 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+    }
+
+/* Badge overlay — same hard-border black-circle language as the
+   Characters page's multiform indicator, not a blurred glass chip */
 .lore-titan-badge-wrap {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 10px;
+    right: 10px;
     z-index: 2;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.55);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: var(--aot-black);
+    border: 2px solid var(--aot-black);
+    box-shadow: 2px 2px 0px var(--aot-red);
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(6px);
 }
 
 .lore-titan-badge-img {
@@ -192,6 +212,7 @@
     width: 100%;
     height: 220px;
     overflow: hidden;
+    border-bottom: 3px solid var(--aot-black);
 }
 
 .lore-titan-art {
@@ -203,13 +224,13 @@
 }
 
 .lore-titan-card:hover .lore-titan-art {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .lore-titan-art-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(12, 13, 16, 0.95) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, transparent 60%);
 }
 
 /* Info strip */
@@ -219,30 +240,40 @@
 
 .lore-titan-name {
     font-size: 1.125rem;
-    font-weight: 800;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
     color: #ffffff;
     margin: 0 0 0.15rem 0;
     line-height: 1.3;
+    text-shadow: 2px 2px 0px var(--aot-black);
 }
 
 .lore-titan-height {
     font-size: 0.8rem;
-    font-weight: 600;
-    color: #dfbb6b;
+    font-weight: 700;
+    color: var(--aot-brass);
 }
 
-/* Expandable details */
+/* Expandable details — hard divider instead of a soft gold hairline */
 .lore-titan-details {
     padding: 0 1.25rem 1.25rem;
-    border-top: 1px solid rgba(255, 215, 0, 0.12);
+    border-top: 2px solid var(--aot-black);
     margin-top: 0.5rem;
     padding-top: 0.75rem;
     animation: detailsSlideIn 0.25s ease;
 }
 
 @keyframes detailsSlideIn {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .lore-titan-desc {
@@ -250,7 +281,6 @@
     color: #d1d5db;
     line-height: 1.6;
     margin: 0.5rem 0 0 0;
-    opacity: 0.85;
 }
 
 @media (max-width: 640px) {
@@ -265,7 +295,6 @@
    TAB 1 — THREE WALLS
    ============================================ */
 
-/* Concentric Ring Diagram */
 .wall-diagram-container {
     display: flex;
     justify-content: center;
@@ -284,22 +313,22 @@
 .wall-maria-ring {
     width: 320px;
     height: 320px;
-    border: 2px solid rgba(239, 68, 68, 0.4);
-    background: rgba(239, 68, 68, 0.04);
+    border: 3px solid var(--aot-red);
+    background: rgba(239, 68, 68, 0.06);
 }
 
 .wall-rose-ring {
     width: 220px;
     height: 220px;
-    border: 2px solid rgba(251, 146, 60, 0.4);
-    background: rgba(251, 146, 60, 0.04);
+    border: 3px solid #fb923c;
+    background: rgba(251, 146, 60, 0.06);
 }
 
 .wall-sina-ring {
     width: 130px;
     height: 130px;
-    border: 2px solid rgba(212, 175, 55, 0.5);
-    background: rgba(212, 175, 55, 0.06);
+    border: 3px solid var(--aot-gold);
+    background: rgba(250, 204, 21, 0.08);
 }
 
 .wall-ring-label {
@@ -308,22 +337,31 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     white-space: nowrap;
+    text-shadow: 1px 1px 0px var(--aot-black);
 }
 
-.wall-maria-ring > .wall-ring-label { color: #f87171; }
-.wall-rose-ring > .wall-ring-label  { color: #fb923c; }
-.wall-sina-ring > .wall-ring-label  { color: #dfbb6b; }
+.wall-maria-ring > .wall-ring-label {
+    color: #fca5a5;
+}
+
+.wall-rose-ring > .wall-ring-label {
+    color: #fdba74;
+}
+
+.wall-sina-ring > .wall-ring-label {
+    color: var(--aot-gold);
+}
 
 .wall-center {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgba(212, 175, 55, 0.15);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: var(--aot-black);
+    border: 2px solid var(--aot-gold);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -331,21 +369,38 @@
 
 .wall-center-label {
     font-size: 0.6rem;
-    font-weight: 700;
-    color: #dfbb6b;
+    font-weight: 900;
+    color: var(--aot-gold);
     letter-spacing: 0.05em;
 }
 
-/* Responsive diagram */
 @media (max-width: 400px) {
-    .wall-maria-ring { width: 260px; height: 260px; }
-    .wall-rose-ring  { width: 180px; height: 180px; }
-    .wall-sina-ring  { width: 110px; height: 110px; }
-    .wall-center     { width: 40px;  height: 40px; }
-    .wall-ring-label { font-size: 0.6rem; }
+    .wall-maria-ring {
+        width: 260px;
+        height: 260px;
+    }
+
+    .wall-rose-ring {
+        width: 180px;
+        height: 180px;
+    }
+
+    .wall-sina-ring {
+        width: 110px;
+        height: 110px;
+    }
+
+    .wall-center {
+        width: 40px;
+        height: 40px;
+    }
+
+    .wall-ring-label {
+        font-size: 0.6rem;
+    }
 }
 
-/* Wall Info Cards */
+/* Wall Info Cards — carry global "comic-card" in markup */
 .lore-walls-stack {
     display: flex;
     flex-direction: column;
@@ -353,17 +408,26 @@
 }
 
 .lore-wall-card {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 14px;
     padding: 1.5rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.lore-wall-card:hover {
-    border-color: rgba(255, 215, 0, 0.3);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.06);
-}
+    .lore-wall-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
+
+    .lore-wall-card > * {
+        position: relative;
+        z-index: 1;
+    }
 
 .lore-wall-header {
     display: flex;
@@ -374,15 +438,16 @@
 
 .lore-wall-name {
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
     margin: 0;
+    text-shadow: 2px 2px 0px var(--aot-black);
 }
 
 .lore-wall-diameter {
     font-size: 0.8rem;
-    font-weight: 600;
-    color: #dfbb6b;
+    font-weight: 700;
+    color: var(--aot-brass);
 }
 
 .lore-wall-desc {
@@ -393,7 +458,7 @@
 }
 
 .lore-wall-districts {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 2px solid var(--aot-black);
     padding-top: 0.75rem;
 }
 
@@ -427,29 +492,37 @@
 }
 
 .lore-faction-card {
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 14px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.lore-faction-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 215, 0, 0.35);
-    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.08);
-}
+    .lore-faction-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
 
+    .lore-faction-card > * {
+        position: relative;
+        z-index: 1;
+    }
+
+/* Icon chip — hard border/shadow gold tile, matches comic-badge language */
 .lore-faction-icon-wrap {
     width: 48px;
     height: 48px;
-    border-radius: 12px;
-    background: rgba(223, 187, 107, 0.1);
-    border: 1px solid rgba(223, 187, 107, 0.2);
+    border-radius: 10px;
+    background: var(--aot-gold);
+    border: 2px solid var(--aot-black);
+    box-shadow: 2px 2px 0px var(--aot-black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,14 +531,15 @@
 
 .lore-faction-icon {
     font-size: 1.35rem;
-    color: #dfbb6b;
+    color: var(--aot-black);
 }
 
 .lore-faction-name {
     font-size: 1.125rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
     margin: 0 0 0.5rem 0;
+    text-shadow: 2px 2px 0px var(--aot-black);
 }
 
 .lore-faction-desc {
@@ -477,7 +551,7 @@
 }
 
 .lore-faction-members {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 2px solid var(--aot-black);
     padding-top: 0.75rem;
 }
 
@@ -492,17 +566,28 @@
    TAB 3 — THE PATHS
    ============================================ */
 
+/* Carries global "comic-card" in markup — this file adds the halftone
+   overlay + the decorative tree, same nesting pattern as author-panel */
 .lore-paths-section {
     position: relative;
-    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    border-radius: 16px;
     padding: 3rem 2rem;
     overflow: hidden;
     min-height: 500px;
 }
 
-/* CSS-only Glowing Tree */
+    .lore-paths-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
+
+/* CSS-only Glowing Tree — re-tinted to brass/gold to match the comic
+   palette instead of a soft unrelated gold glow */
 .paths-glow-tree {
     position: absolute;
     top: 50%;
@@ -511,7 +596,8 @@
     width: 300px;
     height: 400px;
     pointer-events: none;
-    opacity: 0.18;
+    opacity: 0.22;
+    z-index: 0;
 }
 
 .paths-trunk {
@@ -521,7 +607,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: 55%;
-    background: linear-gradient(to top, rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0.1));
+    background: linear-gradient(to top, var(--aot-gold), rgba(250, 204, 21, 0.1));
     border-radius: 2px;
 }
 
@@ -533,7 +619,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(250, 204, 21, 0.25) 0%, transparent 70%);
 }
 
 .paths-glow-ring {
@@ -544,16 +630,22 @@
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(250, 204, 21, 0.15);
     animation: pathsPulse 4s ease-in-out infinite;
 }
 
 @keyframes pathsPulse {
-    0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
-    50%      { opacity: 0.6; transform: translateX(-50%) scale(1.06); }
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translateX(-50%) scale(1.06);
+    }
 }
 
-/* Content overlay */
 .paths-content {
     position: relative;
     z-index: 1;
@@ -568,12 +660,13 @@
     color: #ffffff;
     letter-spacing: 0.12em;
     margin: 0 0 0.5rem 0;
+    text-shadow: 3px 3px 0px var(--aot-black);
 }
 
 .paths-subtitle {
     font-size: 0.875rem;
-    font-weight: 600;
-    color: #dfbb6b;
+    font-weight: 700;
+    color: var(--aot-brass);
     margin: 0 0 1.5rem 0;
 }
 
@@ -597,29 +690,34 @@
     }
 }
 
+/* Nested sub-panels — hard-border comic-frame look, not comic-card
+   themselves (same nesting rule .aot-timeline-box uses inside
+   .aot-timeline-card: sub-panels get a flatter inset treatment) */
 .paths-detail-card {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid rgba(255, 215, 0, 0.12);
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--aot-black);
+    border-radius: 6px;
     padding: 1.25rem;
     text-align: left;
-    transition: border-color 0.3s ease;
+    box-shadow: 3px 3px 0px var(--aot-black);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.paths-detail-card:hover {
-    border-color: rgba(255, 215, 0, 0.3);
-}
+    .paths-detail-card:hover {
+        box-shadow: 3px 3px 0px var(--aot-red);
+        transform: translateY(-2px);
+    }
 
 .paths-detail-icon {
     font-size: 1.5rem;
-    color: #dfbb6b;
+    color: var(--aot-gold);
     margin-bottom: 0.75rem;
     display: block;
 }
 
 .paths-detail-title {
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
     margin: 0 0 0.5rem 0;
 }
@@ -635,6 +733,7 @@
     .lore-paths-section {
         padding: 2rem 1.25rem;
     }
+
     .paths-body,
     .paths-detail-desc {
         font-size: 0.9rem;

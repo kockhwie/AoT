@@ -23,7 +23,7 @@
             @for (int i = 0; i < _tabIcons.Length; i++)
             {
                 var idx = i;
-                <button class="lore-tab-btn @(idx == _activeTab ? "active" : "") font-sans" @onclick="() => SetTab(idx)">
+                <button class="lore-tab-btn aot-btn @(idx == _activeTab ? "active" : "") font-sans" @onclick="() => SetTab(idx)">
                     <i class="ti @_tabIcons[idx]"></i> @LocalizationService.GetString(_tabKeys[idx])
                 </button>
             }
@@ -41,7 +41,7 @@
             <div class="lore-titans-grid">
                 @foreach (var titan in _loreTitans)
                 {
-                    <div class="lore-titan-card @(titan.Id == _expandedTitanId ? "is-expanded" : "")"
+                    <div class="lore-titan-card comic-card @(titan.Id == _expandedTitanId ? "is-expanded" : "")"
                          @onclick="() => ToggleTitan(titan.Id)">
                         <!-- Badge -->
                         <div class="lore-titan-badge-wrap">
@@ -103,7 +103,7 @@
             <div class="lore-walls-stack">
                 @foreach (var wall in _walls)
                 {
-                    <div class="lore-wall-card">
+                    <div class="lore-wall-card comic-card">
                         <div class="lore-wall-header">
                             <h2 class="lore-wall-name font-sans">@LocalizationService.GetString(wall.NameKey)</h2>
                             <span class="lore-wall-diameter font-sans">@LocalizationService.GetString(wall.DiameterKey)</span>
@@ -126,7 +126,7 @@
             <div class="lore-factions-grid">
                 @foreach (var faction in _factions)
                 {
-                    <div class="lore-faction-card">
+                    <div class="lore-faction-card comic-card">
                         <div class="lore-faction-icon-wrap">
                             <i class="ti @faction.IconClass lore-faction-icon"></i>
                         </div>
