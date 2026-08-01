@@ -388,3 +388,4 @@ bin/
 obj/
 .vs/
 DataProtectionKeys/
+*.py
