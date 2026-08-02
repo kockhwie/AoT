@@ -127,7 +127,7 @@ public static class MangaData
                 new ChapterModel { ChapterLabel = "#20 史密斯分隊長", Arc = MangaArc.FemaleTitan, AnimeEpisodes = new[] { 20 },
                     KeyMoments = new() { "埃爾文設下陷阱用束縛彈成功捕獲女巨人" }, Rating = 5, Tags = new() { "埃爾文", "捕獲作戰" } },
                 new ChapterModel { ChapterLabel = "#21 第 57 次牆外調查 1", Arc = MangaArc.FemaleTitan, AnimeEpisodes = new[] { 21 },
-                    KeyMoments = new() { "女巨人尖叫引來無腦巨吃掉肉身脫逃", "神祕黑衣人突襲斬殺君達" }, Rating = 5, Tags = new() { "女巨人", "里維班" } },
+                    KeyMoments = new() { "女巨人尖叫引來無腦巨人吃掉肉身脫逃", "神祕黑衣人突襲斬殺君達" }, Rating = 5, Tags = new() { "女巨人", "里維班" } },
                 new ChapterModel { ChapterLabel = "#22 第 57 次牆外調查 2", Arc = MangaArc.FemaleTitan, AnimeEpisodes = new[] { 21, 22 },
                     KeyMoments = new() { "里維班（佩托拉、歐魯、艾魯多）慘遭女巨人全滅", "憤怒的艾連巨人化大戰女巨人" }, Rating = 5, Tags = new() { "里維班", "艾連", "女巨人" } },
             }
@@ -280,7 +280,7 @@ public static class MangaData
                 new ChapterModel { ChapterLabel = "#73 始發之街", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 50, 51 },
                     KeyMoments = new() { "調查兵團重返希干希娜區", "艾連用硬化能力成功封鎖外側城牆破洞" }, Rating = 4, Tags = new() { "希干希娜區", "硬化能力" } },
                 new ChapterModel { ChapterLabel = "#74 作戰計畫", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 51, 52 },
-                    KeyMoments = new() { "阿爾敏發現城牆內的隱藏空腔", "萊納突襲刺殺兵團士兵後巨人化", "獸之巨人帶領無腦巨軍團包圍後路" }, Rating = 5, Tags = new() { "萊納", "獸之巨人", "包圍網" } },
+                    KeyMoments = new() { "阿爾敏發現城牆內的隱藏空腔", "萊納突襲刺殺兵團士兵後巨人化", "獸之巨人帶領無腦巨人包圍後路" }, Rating = 5, Tags = new() { "萊納", "獸之巨人", "包圍網" } },
             }
         },
         new MangaVolumeModel
@@ -334,11 +334,11 @@ public static class MangaData
             Chapters = new()
             {
                 new ChapterModel { ChapterLabel = "#87 邊境", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 59 },
-                    KeyMoments = new() { "古利夏復權派失利被送往樂園化為無腦巨", "戴娜化為吃掉艾連母親的巨人", "梟現身秒殺馬雷軍艦" }, Rating = 5, Tags = new() { "樂園", "戴娜", "梟" } },
+                    KeyMoments = new() { "古利夏復權派失利被送往樂園化為無腦巨人", "戴娜化為吃掉艾連母親的巨人", "梟現身秒殺馬雷軍艦" }, Rating = 5, Tags = new() { "樂園", "戴娜", "梟" } },
                 new ChapterModel { ChapterLabel = "#88 進擊的巨人", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 59 },
                     KeyMoments = new() { "艾連·克魯格向古利夏揭曉這份巨人的名字", "名場面：無論在任何時代，這隻巨人為了追求自由不斷前進，其名為——進擊的巨人" }, Rating = 5, Tags = new() { "進擊的巨人", "自由" } },
                 new ChapterModel { ChapterLabel = "#89 會議", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 60 },
-                    KeyMoments = new() { "艾連在會議中隱瞞了『觸碰王血無腦巨能發動始祖能力』的推論以保護希絲特莉亞" }, Rating = 4, Tags = new() { "王血", "始祖謎團" } },
+                    KeyMoments = new() { "艾連在會議中隱瞞了『觸碰王血無腦巨人能發動始祖能力』的推論以保護希絲特莉亞" }, Rating = 4, Tags = new() { "王血", "始祖謎團" } },
                 new ChapterModel { ChapterLabel = "#90 迎向牆壁的彼端", Arc = MangaArc.ReturnToShiganshina, AnimeEpisodes = new[] { 60 },
                     KeyMoments = new() { "牆內巨人被清除乾淨，調查兵團走出牆外來到海邊", "名場面：艾連指著大海彼端問：『把海那邊的敵人全殺光，我們就能獲得自由了嗎？』" }, Rating = 5, Tags = new() { "看海", "終局預告" } },
             }
@@ -428,7 +428,7 @@ public static class MangaData
                 new ChapterModel { ChapterLabel = "#112 無知", Arc = MangaArc.WarForParadis, AnimeEpisodes = new[] { 75, 76 },
                     KeyMoments = new() { "艾連對三笠與阿爾敏說出極其傷人的狠話：『我最討厭你了』", "阿爾敏憤怒對艾連動手" }, Rating = 5, Tags = new() { "三人決裂", "痛徹心扉" } },
                 new ChapterModel { ChapterLabel = "#113 殘酷", Arc = MangaArc.WarForParadis, AnimeEpisodes = new[] { 76 },
-                    KeyMoments = new() { "吉克發動咆哮，里維班全體部下化為無腦巨", "名場面：里維兵長再次重創並活捉獸之巨人" }, Rating = 5, Tags = new() { "里維班巨化", "兵長三砍猴" } },
+                    KeyMoments = new() { "吉克發動咆哮，里維班全體部下化為無腦巨人", "名場面：里維兵長再次重創並活捉獸之巨人" }, Rating = 5, Tags = new() { "里維班巨化", "兵長三砍猴" } },
                 new ChapterModel { ChapterLabel = "#114 唯一的救贖", Arc = MangaArc.WarForParadis, AnimeEpisodes = new[] { 77 },
                     KeyMoments = new() { "詳細揭曉吉克的童年回憶與庫薩瓦先生的父子情", "吉克堅信安樂死是艾爾迪亞人唯一的救贖" }, Rating = 5, Tags = new() { "吉克回憶", "庫薩瓦" } },
             }
@@ -454,7 +454,7 @@ public static class MangaData
             Chapters = new()
             {
                 new ChapterModel { ChapterLabel = "#119 哥哥與弟弟", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 81 },
-                    KeyMoments = new() { "吉克咆哮，法爾可與多名高層化為無腦巨", "名場面：艾連奔向吉克時，被賈碧用反巨人步槍當場狙擊斷頭" }, Rating = 5, Tags = new() { "吉克咆哮", "艾連斷頭", "神級反轉" } },
+                    KeyMoments = new() { "吉克咆哮，法爾可與多名高層化為無腦巨人", "名場面：艾連奔向吉克時，被賈碧用反巨人步槍當場狙擊斷頭" }, Rating = 5, Tags = new() { "吉克咆哮", "艾連斷頭", "神級反轉" } },
                 new ChapterModel { ChapterLabel = "#120 道路", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 82 },
                     KeyMoments = new() { "吉克在『道路』中成功接住艾連的頭部", "兩人在道路中相見，吉克發現艾連並未被洗腦" }, Rating = 5, Tags = new() { "座標道路", "兄弟會面" } },
                 new ChapterModel { ChapterLabel = "#121 來自未來的你", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 82, 83 },
@@ -471,7 +471,7 @@ public static class MangaData
                 new ChapterModel { ChapterLabel = "#123 島上的惡魔", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 84, 87 },
                     KeyMoments = new() { "回憶104期首次前往牆外世界的快樂時光", "艾連透過座標向全體艾爾迪亞人宣告：『我要驅逐這世界上所有的生命』" }, Rating = 5, Tags = new() { "滅世宣言", "回憶篇" } },
                 new ChapterModel { ChapterLabel = "#124 冰釋", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 84 },
-                    KeyMoments = new() { "城牆內的無腦巨失去控制四處襲擊", "亞妮的結晶化隨之解除，從沉睡中甦醒" }, Rating = 4, Tags = new() { "亞妮解封", "牆內混亂" } },
+                    KeyMoments = new() { "城牆內的無腦巨人失去控制四處襲擊", "亞妮的結晶化隨之解除，從沉睡中甦醒" }, Rating = 4, Tags = new() { "亞妮解封", "牆內混亂" } },
                 new ChapterModel { ChapterLabel = "#125 黃昏", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 85 },
                     KeyMoments = new() { "阿爾敏精神瀕臨崩潰", "亞妮與 hitch 重逢並決定尋找父親" }, Rating = 4, Tags = new() { "亞妮", "阿爾敏" } },
                 new ChapterModel { ChapterLabel = "#126 驕傲", Arc = MangaArc.Rumbling, AnimeEpisodes = new[] { 86 },
@@ -520,7 +520,7 @@ public static class MangaData
                 new ChapterModel { ChapterLabel = "#137 巨人", Arc = MangaArc.BattleOfHeavenAndEarth, AnimeEpisodes = new[] { 92 },
                     KeyMoments = new() { "阿爾敏與吉克在道路中藉由一片樹葉/棒球領悟生命的意義", "歷代英靈（埃爾文、波爾可等）現身倒戈相助，吉克主動現身被里維斬殺，地鳴停止" }, Rating = 5, Tags = new() { "生命的意義", "吉克之死", "地鳴終結" } },
                 new ChapterModel { ChapterLabel = "#138 長夢", Arc = MangaArc.BattleOfHeavenAndEarth, AnimeEpisodes = new[] { 92 },
-                    KeyMoments = new() { "怪誕蟲發動最後掙扎，將現場所有艾爾迪亞人化為無腦巨", "名場面：三笠在木屋長夢幻想中醒來，親手斬下艾連的頭部並與他深情一吻" }, Rating = 5, Tags = new() { "怪誕蟲", "三笠斬首", "最後一吻" } },
+                    KeyMoments = new() { "怪誕蟲發動最後掙扎，將現場所有艾爾迪亞人化為無腦巨人", "名場面：三笠在木屋長夢幻想中醒來，親手斬下艾連的頭部並與他深情一吻" }, Rating = 5, Tags = new() { "怪誕蟲", "三笠斬首", "最後一吻" } },
                 new ChapterModel { ChapterLabel = "#139 走向大樹的丘陵", Arc = MangaArc.BattleOfHeavenAndEarth, AnimeEpisodes = new[] { 92 },
                     KeyMoments = new() { "揭曉艾連私下與同伴在道路告別的全部記憶，巨人力量徹底消失", "三年後世界局勢，三笠將艾連葬在山丘樹下（含漫畫34卷加頁最終結局）" }, Rating = 5, Tags = new() { "悲劇英雄", "大結局", "加頁真相" } },
             }
