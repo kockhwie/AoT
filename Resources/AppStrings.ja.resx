@@ -1,110 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -1375,58 +1317,58 @@
     <value>850</value>
   </data>
   <data name="Timeline_Event14_Title" xml:space="preserve">
-    <value>エレン奪還作戦</value>
+    <value>エレン拉致</value>
   </data>
   <data name="Timeline_Event14_Desc" xml:space="preserve">
-    <value>調査兵団・駐屯兵団・憲兵団が拉致犯を追跡。エレンは「座標」の力を覚醒させ巨人を操る。ハンネス戦死、ユミルはマーレに捕獲される。</value>
+    <value>ライナーは鎧の巨人に変身しウォール・ローゼでエレンを拉致、ベルトルトは自ら同行を選んだユミルを連れ去る。戦士たちは始祖の巨人を携えマーレへの帰還を開始した。</value>
   </data>
   <data name="Timeline_Event14_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event15_Title" xml:space="preserve">
-    <value>王政転覆クーデター</value>
+    <value>エレン奪還作戦</value>
   </data>
   <data name="Timeline_Event15_Desc" xml:space="preserve">
-    <value>調査兵団が腐敗した王政府を転覆。真の王家（レイス家）が判明。ヒストリアは巨人化した父ロッドを倒し女王に即位する。</value>
+    <value>負傷から回復しきらぬエルヴィンは、自ら騎兵隊を率いて巨人の跋扈する地帯を進み、エレンが島外へ連れ去られる前に奪還を試みる。</value>
   </data>
   <data name="Timeline_Event15_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event16_Title" xml:space="preserve">
-    <value>シガンシナ奪還作戦</value>
+    <value>ハンネス最後の戦い</value>
   </data>
   <data name="Timeline_Event16_Desc" xml:space="preserve">
-    <value>調査兵団はシガンシナを奪還しマリアを封鎖。エルヴィンは囮となり戦死、アルミンは超大型巨人を継承。リヴァイが獣の巨人を倒す。</value>
+    <value>追撃の最中、エレンの母を捕食した「笑う巨人」が再び現れる。ハンネスはシガンシナでの後悔を晴らすため一人で立ち向かい、エレンの目の前で命を落とす。</value>
   </data>
   <data name="Timeline_Event16_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event17_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event18_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event19_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event17_Title" xml:space="preserve">
-    <value>マーレ強襲と宣戦布告</value>
+    <value>座標発動</value>
   </data>
   <data name="Timeline_Event17_Desc" xml:space="preserve">
-    <value>エレン・イェーガーがレベリオ収容区を急襲。世界を巻き込む最終決戦の火蓋が切られた。</value>
+    <value>絶望したエレンは「笑う巨人」――王家の血を引くダイナ・フリッツ――を殴打し、無自覚のうちに始祖の巨人の「座標」を発動、周囲の無垢の巨人を戦士たちへ向かわせる。</value>
   </data>
   <data name="Timeline_Event18_Title" xml:space="preserve">
-    <value>地鳴らし発動</value>
+    <value>戦士撤退</value>
   </data>
   <data name="Timeline_Event18_Desc" xml:space="preserve">
-    <value>エレン・イェーガーが始祖の巨人の力を発動し、壁内に眠る数百万の超大型巨人を解放。パラディ島の外に存在するすべての命を滅ぼすべく、地鳴らしが始まった。</value>
+    <value>座標の力に操られた巨人の群れに阻まれ、ライナーとベルトルトはエレン奪還を断念して撤退、ユミルは自ら同行を選ぶ。両陣営はシガンシナ区を巡る決戦へと備え始める。</value>
   </data>
   <data name="Timeline_Event19_Title" xml:space="preserve">
-    <value>天地の戦い（最終決戦）</value>
+    <value>王政転覆クーデター</value>
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
-    <value>パラディとマーレの連合軍がハクバイ要塞で最後の戦いに挑む。ミカサがエレンの命を奪い、地鳴らしを止め、憎しみの連鎖を断ち切った。彼らが知る世界の終焉と引き換えに。</value>
+    <value>調査兵団は腐敗した王政府に対しクーデターを決行し、歴史から隠されていた真の王家・レイス家の存在を暴く。</value>
   </data>
   <data name="Lore_PageTitle" xml:space="preserve">
     <value>世界観と地図</value>
@@ -1653,4 +1595,4 @@
   <data name="Lore_Wall_Centre_Name" xml:space="preserve">
     <value>王都</value>
   </data>
-</root>
+<data name="Timeline_Event20_Title" xml:space="preserve"><value>ヒストリア女王戴冠</value></data><data name="Timeline_Event20_Desc" xml:space="preserve"><value>ヒストリア・レイスは巨人化した父ロッドを討ち、王冠を受け継ぐ。始祖の巨人の真実を知る百年ぶりの君主となった。</value></data><data name="Timeline_Event20_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event21_Title" xml:space="preserve"><value>シガンシナ奪還作戦決定</value></data><data name="Timeline_Event21_Desc" xml:space="preserve"><value>エルヴィン団長のシガンシナ区奪還計画が承認される。エレンの硬質化能力に賭け、ついにグリシャの地下室へ到達することを目指す。</value></data><data name="Timeline_Event21_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event22_Title" xml:space="preserve"><value>シガンシナ帰還</value></data><data name="Timeline_Event22_Desc" xml:space="preserve"><value>調査兵団は不気味なほど静まり返ったシガンシナ区へ進軍する。アルミンはこの静けさが罠――戦士たちの待ち伏せだと見抜く。</value></data><data name="Timeline_Event22_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event23_Title" xml:space="preserve"><value>シガンシナ区決戦</value></data><data name="Timeline_Event23_Desc" xml:space="preserve"><value>ライナー、ベルトルト、獣の巨人が連携した奇襲を仕掛け、無垢の巨人で調査兵団を包囲する。これまでで最大規模の知性巨人同士の戦いとなった。</value></data><data name="Timeline_Event23_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event24_Title" xml:space="preserve"><value>獣の巨人包囲戦</value></data><data name="Timeline_Event24_Desc" xml:space="preserve"><value>獣の巨人はウォール・マリア上から包囲を指揮し、巨石の投擲で調査兵団を追い詰め、あらゆる退路を断つ。</value></data><data name="Timeline_Event24_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event25_Title" xml:space="preserve"><value>エルヴィン最後の突撃</value></data><data name="Timeline_Event25_Desc" xml:space="preserve"><value>エルヴィンは決死の騎兵突撃で獣の巨人の注意を引きつける。出撃前、犠牲についての感動的な演説を残し、部隊はほぼ壊滅する。</value></data><data name="Timeline_Event25_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event26_Title" xml:space="preserve"><value>リヴァイ対獣の巨人</value></data><data name="Timeline_Event26_Desc" xml:space="preserve"><value>エルヴィンの突撃が生んだ混乱を利用し、リヴァイは獣の巨人に肉薄。四肢を斬り落とし後頸からジークを引きずり出すが、車力の巨人に奪還される。</value></data><data name="Timeline_Event26_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event27_Title" xml:space="preserve"><value>アルミンの自己犠牲</value></data><data name="Timeline_Event27_Desc" xml:space="preserve"><value>アルミンは超大型巨人の歯にしがみつき、自ら焼かれることでベルトルトの蒸気を消耗させ、エレンが背後から仕留める隙を作る。</value></data><data name="Timeline_Event27_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event28_Title" xml:space="preserve"><value>巨人化注射の決断</value></data><data name="Timeline_Event28_Desc" xml:space="preserve"><value>巨人化注射はただ一本、瀕死の二人を前にリヴァイはアルミンを選ぶ。アルミンは超大型巨人を継承し、パラディ島の未来の指導者が入れ替わることとなった。</value></data><data name="Timeline_Event28_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event29_Title" xml:space="preserve"><value>地下室の真実</value></data><data name="Timeline_Event29_Desc" xml:space="preserve"><value>グリシャが隠していた日記と写真が、壁外世界が滅んでいなかった事実を証明する。人類は意図的に隔離されていたのであり、百年続いた王政の欺瞞が崩壊する。</value></data><data name="Timeline_Event29_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event30_Title" xml:space="preserve"><value>海の向こうの真実</value></data><data name="Timeline_Event30_Desc" xml:space="preserve"><value>調査兵団はパラディ島史上初めて海に到達する。エレンは「自由になるには海の向こうの敵を全て滅ぼすべきか」と問いかけ、戦争は新たな局面へ進む。</value></data><data name="Timeline_Event30_Year" xml:space="preserve"><value>851</value></data><data name="Timeline_Event31_Title" xml:space="preserve"><value>パラディ島の近代化</value></data><data name="Timeline_Event31_Desc" xml:space="preserve"><value>壁外世界の存在が確定したことで、パラディ島は軍備と技術の近代化を急ぎ、雷槍などの新兵器を開発してマーレとの来る戦いに備える。</value></data><data name="Timeline_Event31_Year" xml:space="preserve"><value>851–854</value></data><data name="Timeline_Event32_Title" xml:space="preserve"><value>レベリオ強襲</value></data><data name="Timeline_Event32_Desc" xml:space="preserve"><value>エレンはマーレへ潜入し、ヴィリー・タイバーの演説中にレベリオへ壊滅的な奇襲を仕掛け、全世界が見守る中で戦鎚の巨人を捕食する。</value></data><data name="Timeline_Event32_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event33_Title" xml:space="preserve"><value>宣戦布告</value></data><data name="Timeline_Event33_Desc" xml:space="preserve"><value>レベリオ襲撃により静かな外交交渉の望みは断たれ、パラディ島とマーレは公然たる全面戦争に突入する。</value></data><data name="Timeline_Event33_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event34_Title" xml:space="preserve"><value>サシャ・ブラウスの死</value></data><data name="Timeline_Event34_Desc" xml:space="preserve"><value>調査兵団が奪取した飛行船で撤退する最中、追い詰められたガビ・ブラウンがサシャ・ブラウスを銃撃し死亡させ、仲間たちに深い悲しみをもたらす。</value></data><data name="Timeline_Event34_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event35_Title" xml:space="preserve"><value>イェーガー派クーデター</value></data><data name="Timeline_Event35_Desc" xml:space="preserve"><value>フロック・フォルスターを筆頭とするエレン派がパラディ島でクーデターを起こし、政府を拘束してエレンの名の下に軍事支配を確立する。</value></data><data name="Timeline_Event35_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event36_Title" xml:space="preserve"><value>ジークの脊髄液計画</value></data><data name="Timeline_Event36_Desc" xml:space="preserve"><value>ジークは調査兵団に振る舞われたワインへ密かに自らの脊髄液を混入させ、咆哮と同時に大量巨人化を引き起こす計画を進めるが、間一髪で露見する。</value></data><data name="Timeline_Event36_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event37_Title" xml:space="preserve"><value>道と始祖の真実</value></data><data name="Timeline_Event37_Desc" xml:space="preserve"><value>「道」の中でエレンとジークはグリシャの記憶を辿り、始祖ユミル本人と対面する。二千年に及ぶ隷属の歴史が、すべての巨人の呪いの根源として明かされる。</value></data><data name="Timeline_Event37_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event38_Title" xml:space="preserve"><value>地鳴らし発動</value></data><data name="Timeline_Event38_Desc" xml:space="preserve"><value>エレン・イェーガーが始祖の巨人の力を発動し、壁内に眠る数百万の超大型巨人を解放。パラディ島の外に存在するすべての命を滅ぼすべく、地鳴らしが始まった。</value></data><data name="Timeline_Event38_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event39_Title" xml:space="preserve"><value>世界規模の地鳴らし</value></data><data name="Timeline_Event39_Desc" xml:space="preserve"><value>超大型巨人の群れが海を渡りマーレ本土に到達し、進路上のすべてを踏み潰す。人類最古の悪夢が世界規模で現実のものとなる。</value></data><data name="Timeline_Event39_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event40_Title" xml:space="preserve"><value>連合軍結成</value></data><data name="Timeline_Event40_Desc" xml:space="preserve"><value>パラディ島の生存者と元マーレ戦士たちは数十年の憎しみを脇に置き、エレンを止めるという一つの目的のために意外な同盟を結ぶ。</value></data><data name="Timeline_Event40_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event41_Title" xml:space="preserve"><value>フォート・サルタの戦い</value></data><data name="Timeline_Event41_Desc" xml:space="preserve"><value>連合軍は暴走するエレンの始祖の巨人に対し最後の防衛線を張り、始祖本体への最終突撃の時間を稼ぐ。</value></data><data name="Timeline_Event41_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event42_Title" xml:space="preserve"><value>ジークの死</value></data><data name="Timeline_Event42_Desc" xml:space="preserve"><value>「道」の中でジークはアルミンの記憶を通じて生きる意味をついに理解し、リヴァイに斬られることを受け入れ、エレンの支配から解き放たれる。</value></data><data name="Timeline_Event42_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event43_Title" xml:space="preserve"><value>ミカサ、エレンを討つ</value></data><data name="Timeline_Event43_Desc" xml:space="preserve"><value>世界各地の軍勢が始祖本体へ迫る中、ミカサ・アッカーマンはエレンの首を斬り落とし地鳴らしを終結させ、かつて彼と交わした約束を果たす。</value></data><data name="Timeline_Event43_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event44_Title" xml:space="preserve"><value>巨人の呪いの終焉</value></data><data name="Timeline_Event44_Desc" xml:space="preserve"><value>エレンの死とともに、ユミルは二千年にわたる隷属からついに解放され、巨人の力を手放す。呪いは終わり、巨人化の力は世界から永遠に姿を消した。</value></data><data name="Timeline_Event44_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event45_Title" xml:space="preserve"><value>和平交渉開始</value></data><data name="Timeline_Event45_Desc" xml:space="preserve"><value>地鳴らしから三年、連合軍の生存者たちは、パラディ島とほぼ滅ぼしかけた世界諸国との間に脆い和平を築こうと奔走する。</value></data><data name="Timeline_Event45_Year" xml:space="preserve"><value>857</value></data><data name="Timeline_Event46_Title" xml:space="preserve"><value>パラディ島の再軍備</value></data><data name="Timeline_Event46_Desc" xml:space="preserve"><value>始祖の巨人という抑止力を失ったパラディ島は軍備をゼロから再建し始めるが、エルディア人を警戒し続ける世界に対しこの脆い和平が保たれるかは定かでない。</value></data><data name="Timeline_Event46_Year" xml:space="preserve"><value>857年以降</value></data><data name="Timeline_Event47_Title" xml:space="preserve"><value>パラディ島の滅亡</value></data><data name="Timeline_Event47_Desc" xml:space="preserve"><value>最終ページの不穏な一場面は、平和が長く続かなかったことを示唆する。数世代後、パラディ島は廃墟と化しており、この結末の意味は読者の解釈に委ねられている。</value></data><data name="Timeline_Event47_Year" xml:space="preserve"><value>遥かな未来</value></data><data name="Timeline_Event48_Title" xml:space="preserve"><value>少年が大樹を見つける</value></data><data name="Timeline_Event48_Desc" xml:space="preserve"><value>平和な未来、一人の少年がミカサがエレンを埋葬した大樹を偶然見つける。物語は記憶と希望に満ちた静かな余韻をもって幕を閉じる。</value></data><data name="Timeline_Event48_Year" xml:space="preserve"><value>遥かな未来</value></data><data name="EvtType_WallBreach" xml:space="preserve"><value>壁の崩壊</value></data><data name="EvtType_Battle" xml:space="preserve"><value>戦闘</value></data><data name="EvtType_Political" xml:space="preserve"><value>政治</value></data><data name="EvtType_Revelation" xml:space="preserve"><value>真相</value></data><data name="EvtType_Massacre" xml:space="preserve"><value>虐殺</value></data><data name="EvtType_CovertOp" xml:space="preserve"><value>秘密作戦</value></data><data name="EvtType_Endgame" xml:space="preserve"><value>終局</value></data><data name="Era_Ancient" xml:space="preserve"><value>古代史</value></data><data name="Era_Prelude" xml:space="preserve"><value>戦争前夜</value></data><data name="Era_TrostFemale" xml:space="preserve"><value>トロストと女型の巨人編</value></data><data name="Era_Uprising" xml:space="preserve"><value>王政奪還編</value></data><data name="Era_ReturnShiganshina" xml:space="preserve"><value>シガンシナ奪還編</value></data><data name="Era_Marley" xml:space="preserve"><value>マーレ戦争編</value></data><data name="Era_Rumbling" xml:space="preserve"><value>地鳴らし編</value></data><data name="Era_Epilogue" xml:space="preserve"><value>エピローグ</value></data><data name="CurseTitle" xml:space="preserve"><value>ユミルの13年の呪い</value></data><data name="CurseIntro" xml:space="preserve"><value>巨人の力を継承した者は、その瞬間から十三年以上生き延びることができない――この法則は始祖ユミル自身に由来し、物語に登場するすべての継承者の重大な決断を左右する。</value></data><data name="Curse_CountdownLabel" xml:space="preserve"><value>カウントダウン開始</value></data><data name="Curse_CountdownValue" xml:space="preserve"><value>十三年の期限は、その者が最初に巨人の力を得た瞬間から始まる。</value></data><data name="Curse_NoResetLabel" xml:space="preserve"><value>リセットなし</value></data><data name="Curse_NoResetValue" xml:space="preserve"><value>エレンのように複数の巨人（進撃・始祖・戦槌）を継承しても、期限がリセットされることはない。</value></data><data name="Curse_UniversalLabel" xml:space="preserve"><value>普遍的適用</value></data><data name="Curse_UniversalValue" xml:space="preserve"><value>九つの巨人すべてに等しく適用される――王家の血を引く者であっても例外ではない。</value></data><data name="Curse_DeteriorationLabel" xml:space="preserve"><value>身体の衰弱</value></data><data name="Curse_DeteriorationValue" xml:space="preserve"><value>期限が近づくにつれ、継承者には目に見える形での進行的な身体の衰えが現れる。</value></data><data name="Curse_NoExceptionsLabel" xml:space="preserve"><value>例外なし</value></data><data name="Curse_NoExceptionsValue" xml:space="preserve"><value>記録に残る限り、十三年の期限を超えて生き延びた継承者は一人もいない。</value></data><data name="CurseExamplesTitle" xml:space="preserve"><value>代表的な例</value></data><data name="CurseColShifter" xml:space="preserve"><value>継承者</value></data><data name="CurseColInherited" xml:space="preserve"><value>継承年</value></data><data name="CurseColDied" xml:space="preserve"><value>死亡年</value></data><data name="CurseColLifespan" xml:space="preserve"><value>生存期間</value></data><data name="Curse_Ex1_Name" xml:space="preserve"><value>ユミル・フリッツ</value></data><data name="Curse_Ex1_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex2_Name" xml:space="preserve"><value>グリシャ・イェーガー</value></data><data name="Curse_Ex2_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex3_Name" xml:space="preserve"><value>エレン・クルーガー（梟）</value></data><data name="Curse_Ex3_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex4_Name" xml:space="preserve"><value>ウーリ・レイス</value></data><data name="Curse_Ex4_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex5_Name" xml:space="preserve"><value>フリーダ・レイス</value></data><data name="Curse_Ex5_Note" xml:space="preserve"><value>3年（早世）</value></data><data name="Curse_Ex6_Name" xml:space="preserve"><value>エレン・イェーガー</value></data><data name="Curse_Ex6_Note" xml:space="preserve"><value>9年（地鳴らしが呪いを終わらせる）</value></data></root>

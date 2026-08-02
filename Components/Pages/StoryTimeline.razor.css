@@ -12,6 +12,7 @@
     position: relative;
     overflow: hidden;
 }
+
     .aot-story-header::before {
         content: "";
         position: absolute;
@@ -70,9 +71,9 @@
     /* border/box-shadow/hover already come from .aot-btn — don't fight it here */
 }
 
-.aot-tab-btn i {
-    font-size: 1rem;
-}
+    .aot-tab-btn i {
+        font-size: 1rem;
+    }
 
     .aot-tab-btn:not(.active) {
         background-color: transparent;
@@ -141,9 +142,9 @@
 }
 
 /* Timeline specific styles (mirrored from Home.razor.css details) */
-.aot-timeline-container { 
+.aot-timeline-container {
     /*padding: 0.25rem 0.25rem;*/
-    position: relative; 
+    position: relative;
 }
 
 /* Per-event boxes — flatter inset sub-panel, not a second thick comic-card
@@ -168,6 +169,7 @@
     border: 2px solid var(--aot-black) !important;
     box-shadow: 2px 2px 0px var(--aot-black);
 }
+
 .aot-timeline-time {
     font-weight: 900;
     color: #dfbb6b; /* Warm gold */
@@ -241,7 +243,6 @@
     background: rgba(239, 68, 68, 0.25);
     color: #fca5a5;
     border-color: rgba(239, 68, 68, 0.5);
-
 }
 
 .timeline-icon--final {
@@ -304,5 +305,170 @@
     .aot-arc-card::before,
     .aot-arc-card::after {
         transition: none;
+    }
+}
+
+/* ==========================================================================
+   TIMELINE CARD ENRICHMENT — significance badge, type tag, manga ref link
+   ========================================================================== */
+.aot-timeline-box-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.aot-timeline-sig {
+    font-size: 0.65rem !important;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+    .aot-timeline-sig i {
+        font-size: 0.6rem;
+    }
+
+.aot-timeline-type {
+    display: inline-block;
+    margin: 0.4rem 0 0.65rem;
+    font-size: 0.62rem !important;
+    padding: 2px 7px !important;
+}
+
+.aot-timeline-mangaref {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    margin-top: 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #878170;
+    letter-spacing: 0.04em;
+}
+
+.aot-timeline-mangalink {
+    margin-top: 0.65rem;
+}
+
+/* Era section headers reuse the global .manga-arc-title class (defined in app.css) —
+   no new CSS needed, keeps this in visual lockstep with Manga.razor's arc shelves. */
+.aot-timeline-era-list {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   CURSE OF YMIR — deep-dive lore panel
+   ========================================================================== */
+.curse-panel-inner {
+    padding: 1.75rem 2rem;
+    position: relative;
+}
+
+.curse-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 0px var(--aot-black);
+}
+
+    .curse-panel-title i {
+        color: var(--aot-gold);
+    }
+
+.curse-intro {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    margin: 0.75rem 0 1.5rem;
+}
+
+.curse-facts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .curse-facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.curse-fact-row {
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.curse-fact-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 900;
+    color: #dfbb6b;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.curse-fact-value {
+    font-size: 0.85rem;
+    color: #d1d5db;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.curse-table-title {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem;
+}
+
+.curse-table-wrap {
+    overflow-x: auto;
+}
+
+.curse-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+    .curse-table th,
+    .curse-table td {
+        padding: 0.55rem 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        white-space: nowrap;
+    }
+
+    .curse-table th {
+        color: #dfbb6b;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.7rem;
+    }
+
+    .curse-table td {
+        color: #d1d5db;
+    }
+
+@media (max-width: 640px) {
+    .curse-panel-inner {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .curse-table {
+        font-size: 0.78rem;
     }
 }

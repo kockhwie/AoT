@@ -15,7 +15,7 @@
     <div class="aot-story-header">
         <h1 class="aot-page-title uppercase">@LocalizationService.GetString("StoryPageHeader")</h1>
         <p class="aot-page-subtitle font-sans">@LocalizationService.GetString("StoryPageSub")</p>
-        
+
         <!-- Toggle Switch Tab Container -->
         <div class="aot-tab-switcher">
             <button class="aot-tab-btn aot-btn @(IsStoryTab ? "active" : "") font-sans" @onclick='() => SwitchTab("story")'>
@@ -49,32 +49,98 @@
         }
         else
         {
-            <!-- Chronological Timeline View -->
+            <!-- Chronological Timeline View, grouped into eras -->
             <div class="aot-timeline-container">
-                <ul class="timeline timeline-vertical timeline-compact">
-                    @for (int i = 0; i < _timelineEvents.Count; i++)
-                    {
-                        var evt = _timelineEvents[i];
-                        <li>
-                            @if (i > 0)
-                            {
-                                <hr class="timeline-connector" />
-                            }
-                            <div class="timeline-middle timeline-icon @evt.IconColorClass">
-                                <i class="ti @evt.IconClass"></i>
+                @foreach (var era in EraGroups)
+                {
+                    <h4 class="manga-arc-title font-sans">@LocalizationService.GetString(era.TitleKey)</h4>
+                    <ul class="timeline timeline-vertical timeline-compact aot-timeline-era-list">
+                        @for (int i = 0; i < era.Events.Count; i++)
+                        {
+                            var evt = era.Events[i];
+                            <li>
+                                @if (i > 0)
+                                {
+                                    <hr class="timeline-connector" />
+                                }
+                                <div class="timeline-middle timeline-icon @IconColorClass(evt.Type)">
+                                    <i class="ti @IconClass(evt.Type)"></i>
+                                </div>
+                                <div class="timeline-end aot-timeline-box">
+                                    <div class="aot-timeline-box-top">
+                                        <time class="aot-timeline-time font-sans">@YearDisplay(evt)</time>
+                                        <span class="comic-badge @SigBadgeClass(evt.Significance) aot-timeline-sig">
+                                            <i class="ti ti-star-filled"></i>@evt.Significance
+                                        </span>
+                                    </div>
+                                    <div class="aot-timeline-title font-sans">@LocalizationService.GetString(evt.TitleKey)</div>
+                                    <span class="comic-tag aot-timeline-type font-sans">@LocalizationService.GetString(TypeLabelKey(evt.Type))</span>
+                                    <p class="aot-timeline-desc font-sans">@LocalizationService.GetString(evt.DescKey)</p>
+                                    @{
+                                        var vol = ParseVolume(evt.MangaRef);
+                                    }
+                                    @if (vol is not null && MangaData.FindVolume(vol.Value) is not null)
+                                    {
+                                        <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga/@vol" class="aot-btn aot-btn--xsm aot-btn--white aot-timeline-mangalink">
+                                            <i class="ti ti-book"></i> @evt.MangaRef
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <span class="aot-timeline-mangaref font-sans"><i class="ti ti-book"></i> @evt.MangaRef</span>
+                                    }
+                                </div>
+                                @if (i < era.Events.Count - 1)
+                                {
+                                    <hr class="timeline-connector" />
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+
+            <!-- Curse of Ymir deep-dive panel -->
+            <div class="curse-panel comic-card mt-8">
+                <div class="curse-panel-inner">
+                    <h3 class="curse-panel-title font-sans"><i class="ti ti-hourglass-low"></i> @LocalizationService.GetString("CurseTitle")</h3>
+                    <p class="curse-intro font-sans">@LocalizationService.GetString("CurseIntro")</p>
+
+                    <div class="curse-facts-grid">
+                        @foreach (var fact in _curseFacts)
+                        {
+                            <div class="curse-fact-row">
+                                <span class="curse-fact-label font-sans">@LocalizationService.GetString(fact.LabelKey)</span>
+                                <p class="curse-fact-value font-sans">@LocalizationService.GetString(fact.ValueKey)</p>
                             </div>
-                            <div class="timeline-end aot-timeline-box">
-                                <time class="aot-timeline-time font-sans">@LocalizationService.GetString(evt.YearKey) @(LocalizationService.ActiveLang == "en" ? "" : "年")</time>
-                                <div class="aot-timeline-title font-sans">@LocalizationService.GetString(evt.TitleKey)</div>
-                                <p class="aot-timeline-desc font-sans">@LocalizationService.GetString(evt.DescKey)</p>
-                            </div>
-                            @if (i < _timelineEvents.Count - 1)
-                            {
-                                <hr class="timeline-connector" />
-                            }
-                        </li>
-                    }
-                </ul>
+                        }
+                    </div>
+
+                    <h4 class="curse-table-title font-sans">@LocalizationService.GetString("CurseExamplesTitle")</h4>
+                    <div class="curse-table-wrap">
+                        <table class="curse-table font-sans">
+                            <thead>
+                                <tr>
+                                    <th>@LocalizationService.GetString("CurseColShifter")</th>
+                                    <th>@LocalizationService.GetString("CurseColInherited")</th>
+                                    <th>@LocalizationService.GetString("CurseColDied")</th>
+                                    <th>@LocalizationService.GetString("CurseColLifespan")</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var ex in _curseExamples)
+                                {
+                                    <tr>
+                                        <td>@LocalizationService.GetString(ex.NameKey)</td>
+                                        <td>@ex.Inherited</td>
+                                        <td>@ex.Died</td>
+                                        <td>@LocalizationService.GetString(ex.NoteKey)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         }
     </div>
@@ -106,37 +172,181 @@
         new StoryArcModel { TitleKey = "Arc10Title", ChaptersKey = "Arc10Chapters", DescKey = "Arc10Desc" }
     };
 
+    // ── Timeline event type — drives icon glyph, icon color, and the type badge label ──
+    private enum EvtType { WallBreach, Battle, Political, Revelation, Massacre, CovertOp, Endgame }
+
     private sealed class TimelineEventModel
     {
         public int Id { get; init; }
         public string TitleKey => $"Timeline_Event{Id}_Title";
         public string DescKey => $"Timeline_Event{Id}_Desc";
         public string YearKey => $"Timeline_Event{Id}_Year";
-        public string IconClass { get; init; } = "ti-clock";
-        public string IconColorClass { get; init; } = "timeline-icon--battle";
+        public EvtType Type { get; init; }
+        public int Significance { get; init; } // 1-10, from the research doc
+        public string MangaRef { get; init; } = ""; // plain text, e.g. "Vol. 22, Ch. 89" — language neutral
     }
 
+    // Full chronology, ancient history through the epilogue. Type/Significance/MangaRef are
+    // language-neutral so they live here as plain data rather than resx keys — only
+    // Title/Desc/Year need translation (see Timeline_Event{Id}_* resx keys).
     private readonly List<TimelineEventModel> _timelineEvents = new()
     {
-        new TimelineEventModel { Id = 1, IconClass = "ti-sparkles", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 2, IconClass = "ti-skull", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 3, IconClass = "ti-swords", IconColorClass = "timeline-icon--battle" },
-        new TimelineEventModel { Id = 4, IconClass = "ti-wall", IconColorClass = "timeline-icon--recon" },
-        new TimelineEventModel { Id = 5, IconClass = "ti-key", IconColorClass = "timeline-icon--betrayal" },
-        new TimelineEventModel { Id = 6, IconClass = "ti-skull", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 7, IconClass = "ti-flame", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 8, IconClass = "ti-vaccine", IconColorClass = "timeline-icon--recon" },
-        new TimelineEventModel { Id = 9, IconClass = "ti-alert-triangle", IconColorClass = "timeline-icon--catastrophe" },
-        new TimelineEventModel { Id = 10, IconClass = "ti-shield-check", IconColorClass = "timeline-icon--battle" },
-        new TimelineEventModel { Id = 11, IconClass = "ti-horse", IconColorClass = "timeline-icon--recon" },
-        new TimelineEventModel { Id = 12, IconClass = "ti-diamond", IconColorClass = "timeline-icon--battle" },
-        new TimelineEventModel { Id = 13, IconClass = "ti-users", IconColorClass = "timeline-icon--betrayal" },
-        new TimelineEventModel { Id = 14, IconClass = "ti-sword", IconColorClass = "timeline-icon--battle" },
-        new TimelineEventModel { Id = 15, IconClass = "ti-building-monument", IconColorClass = "timeline-icon--betrayal" },
-        new TimelineEventModel { Id = 16, IconClass = "ti-crosshair", IconColorClass = "timeline-icon--battle" },
-        new TimelineEventModel { Id = 17, IconClass = "ti-flag", IconColorClass = "timeline-icon--war" },
-        new TimelineEventModel { Id = 18, IconClass = "ti-cloud-computing", IconColorClass = "timeline-icon--rumbling" },
-        new TimelineEventModel { Id = 19, IconClass = "ti-crown", IconColorClass = "timeline-icon--final" }
+        new() { Id = 1,  Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 30, Ch. 122" },
+        new() { Id = 2,  Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 30, Ch. 122" },
+        new() { Id = 3,  Type = EvtType.Political,  Significance = 9,  MangaRef = "Vol. 22, Ch. 89" },
+        new() { Id = 4,  Type = EvtType.Political,  Significance = 10, MangaRef = "Vol. 22, Ch. 89" },
+        new() { Id = 5,  Type = EvtType.CovertOp,   Significance = 9,  MangaRef = "Vol. 22, Ch. 87\u201388" },
+        new() { Id = 6,  Type = EvtType.Massacre,   Significance = 7,  MangaRef = "Vol. 2, Ch. 6" },
+        new() { Id = 7,  Type = EvtType.WallBreach, Significance = 10, MangaRef = "Vol. 1, Ch. 1\u20132" },
+        new() { Id = 8,  Type = EvtType.CovertOp,   Significance = 10, MangaRef = "Vol. 15, Ch. 62\u201363" },
+        new() { Id = 9,  Type = EvtType.Battle,     Significance = 8,  MangaRef = "Vol. 1, Ch. 3" },
+        new() { Id = 10, Type = EvtType.Battle,     Significance = 9,  MangaRef = "Vol. 3\u20134" },
+        new() { Id = 11, Type = EvtType.Battle,     Significance = 8,  MangaRef = "Vol. 5\u20137" },
+        new() { Id = 12, Type = EvtType.Battle,     Significance = 9,  MangaRef = "Vol. 8, Ch. 31\u201334" },
+        new() { Id = 13, Type = EvtType.Revelation, Significance = 9,  MangaRef = "Vol. 9\u201310" },
+        new() { Id = 14, Type = EvtType.CovertOp,   Significance = 9,  MangaRef = "Vol. 11, Ch. 42\u201344" },
+        new() { Id = 15, Type = EvtType.Battle,     Significance = 8,  MangaRef = "Vol. 11\u201312, Ch. 44\u201349" },
+        new() { Id = 16, Type = EvtType.Massacre,   Significance = 8,  MangaRef = "Vol. 12, Ch. 49\u201350" },
+        new() { Id = 17, Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 12, Ch. 50" },
+        new() { Id = 18, Type = EvtType.Political,  Significance = 9,  MangaRef = "Vol. 12, Ch. 50" },
+        new() { Id = 19, Type = EvtType.Political,  Significance = 9,  MangaRef = "Vol. 13\u201317" },
+        new() { Id = 20, Type = EvtType.Political,  Significance = 8,  MangaRef = "Vol. 17" },
+        new() { Id = 21, Type = EvtType.Political,  Significance = 8,  MangaRef = "Vol. 18, Ch. 70\u201372" },
+        new() { Id = 22, Type = EvtType.CovertOp,   Significance = 8,  MangaRef = "Vol. 18, Ch. 73\u201374" },
+        new() { Id = 23, Type = EvtType.Battle,     Significance = 10, MangaRef = "Vol. 18\u201319, Ch. 74\u201377" },
+        new() { Id = 24, Type = EvtType.Battle,     Significance = 9,  MangaRef = "Vol. 19, Ch. 77\u201379" },
+        new() { Id = 25, Type = EvtType.Battle,     Significance = 10, MangaRef = "Vol. 20, Ch. 80" },
+        new() { Id = 26, Type = EvtType.Battle,     Significance = 10, MangaRef = "Vol. 20, Ch. 81" },
+        new() { Id = 27, Type = EvtType.Battle,     Significance = 10, MangaRef = "Vol. 20\u201321, Ch. 82\u201384" },
+        new() { Id = 28, Type = EvtType.Political,  Significance = 10, MangaRef = "Vol. 21, Ch. 84" },
+        new() { Id = 29, Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 21\u201322, Ch. 85\u201386" },
+        new() { Id = 30, Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 22, Ch. 86\u201390" },
+        new() { Id = 31, Type = EvtType.Political,  Significance = 6,  MangaRef = "Vol. 23\u201325" },
+        new() { Id = 32, Type = EvtType.CovertOp,   Significance = 10, MangaRef = "Vol. 25\u201326" },
+        new() { Id = 33, Type = EvtType.Political,  Significance = 9,  MangaRef = "Vol. 25" },
+        new() { Id = 34, Type = EvtType.Massacre,   Significance = 8,  MangaRef = "Vol. 26" },
+        new() { Id = 35, Type = EvtType.Political,  Significance = 8,  MangaRef = "Vol. 27\u201328" },
+        new() { Id = 36, Type = EvtType.CovertOp,   Significance = 8,  MangaRef = "Vol. 27\u201328" },
+        new() { Id = 37, Type = EvtType.Revelation, Significance = 10, MangaRef = "Vol. 30" },
+        new() { Id = 38, Type = EvtType.Endgame,    Significance = 10, MangaRef = "Vol. 31" },
+        new() { Id = 39, Type = EvtType.Massacre,   Significance = 10, MangaRef = "Vol. 32\u201333" },
+        new() { Id = 40, Type = EvtType.Political,  Significance = 8,  MangaRef = "Vol. 32" },
+        new() { Id = 41, Type = EvtType.Battle,     Significance = 9,  MangaRef = "Vol. 33\u201334" },
+        new() { Id = 42, Type = EvtType.Endgame,    Significance = 9,  MangaRef = "Vol. 34" },
+        new() { Id = 43, Type = EvtType.Endgame,    Significance = 10, MangaRef = "Vol. 34" },
+        new() { Id = 44, Type = EvtType.Endgame,    Significance = 10, MangaRef = "Vol. 34" },
+        new() { Id = 45, Type = EvtType.Political,  Significance = 6,  MangaRef = "Vol. 34" },
+        new() { Id = 46, Type = EvtType.Political,  Significance = 5,  MangaRef = "Vol. 34, extra pages" },
+        new() { Id = 47, Type = EvtType.Endgame,    Significance = 7,  MangaRef = "Vol. 34, extra pages" },
+        new() { Id = 48, Type = EvtType.Revelation, Significance = 6,  MangaRef = "Vol. 34, extra pages" },
+    };
+
+    // ── Era grouping — a header renders above the first event whose Id matches a boundary ──
+    private sealed record EraGroup(string TitleKey, List<TimelineEventModel> Events);
+
+    private static readonly (int StartId, string TitleKey)[] _eraBoundaries =
+    {
+        (1, "Era_Ancient"),
+        (5, "Era_Prelude"),
+        (10, "Era_TrostFemale"),
+        (19, "Era_Uprising"),
+        (21, "Era_ReturnShiganshina"),
+        (31, "Era_Marley"),
+        (38, "Era_Rumbling"),
+        (45, "Era_Epilogue"),
+    };
+
+    private List<EraGroup> EraGroups
+    {
+        get
+        {
+            var groups = new List<EraGroup>();
+            for (int i = 0; i < _eraBoundaries.Length; i++)
+            {
+                var (startId, titleKey) = _eraBoundaries[i];
+                var endId = i + 1 < _eraBoundaries.Length ? _eraBoundaries[i + 1].StartId - 1 : int.MaxValue;
+                var events = _timelineEvents.Where(e => e.Id >= startId && e.Id <= endId).ToList();
+                groups.Add(new EraGroup(titleKey, events));
+            }
+            return groups;
+        }
+    }
+
+    private static string IconClass(EvtType t) => t switch
+    {
+        EvtType.WallBreach => "ti-wall",
+        EvtType.Battle => "ti-sword",
+        EvtType.Political => "ti-flag",
+        EvtType.Revelation => "ti-eye",
+        EvtType.Massacre => "ti-skull",
+        EvtType.CovertOp => "ti-spy",
+        EvtType.Endgame => "ti-crown",
+        _ => "ti-clock"
+    };
+
+    private static string IconColorClass(EvtType t) => t switch
+    {
+        EvtType.WallBreach => "timeline-icon--catastrophe",
+        EvtType.Massacre => "timeline-icon--catastrophe",
+        EvtType.Battle => "timeline-icon--battle",
+        EvtType.Political => "timeline-icon--betrayal",
+        EvtType.Revelation => "timeline-icon--recon",
+        EvtType.CovertOp => "timeline-icon--war",
+        EvtType.Endgame => "timeline-icon--final",
+        _ => "timeline-icon--battle"
+    };
+
+    private static string TypeLabelKey(EvtType t) => $"EvtType_{t}";
+
+    private static string SigBadgeClass(int significance) => significance switch
+    {
+        10 => "comic-badge--gold",
+        >= 8 => "comic-badge--accent",
+        _ => "comic-badge--silver"
+    };
+
+    // manga refs look like "Vol. 22, Ch. 89" or "Vol. 22" — pull the first volume number so we
+    // can deep-link into the Manga section; falls back to plain text if it doesn't resolve.
+    private static int? ParseVolume(string mangaRef)
+    {
+        var m = System.Text.RegularExpressions.Regex.Match(mangaRef, @"Vol\.\s*(\d+)");
+        return m.Success && int.TryParse(m.Groups[1].Value, out var v) ? v : null;
+    }
+
+    // Only append the localized "年" suffix to genuinely numeric years — "Far Future" /
+    // "Post-857" etc. are already fully localized text and shouldn't get it glued on.
+    private static bool IsNumericYear(string year) =>
+        System.Text.RegularExpressions.Regex.IsMatch(year, @"^[~0-9\sB\-\u2013]+$");
+
+    private string YearDisplay(TimelineEventModel evt)
+    {
+        var y = LocalizationService.GetString(evt.YearKey);
+        var suffix = LocalizationService.ActiveLang != "en" && IsNumericYear(y) ? "\u5e74" : "";
+        return y + suffix;
+    }
+
+    // ── Curse of Ymir panel data ──
+    private sealed record CurseFact(string LabelKey, string ValueKey);
+
+    private readonly List<CurseFact> _curseFacts = new()
+    {
+        new("Curse_CountdownLabel", "Curse_CountdownValue"),
+        new("Curse_NoResetLabel", "Curse_NoResetValue"),
+        new("Curse_UniversalLabel", "Curse_UniversalValue"),
+        new("Curse_DeteriorationLabel", "Curse_DeteriorationValue"),
+        new("Curse_NoExceptionsLabel", "Curse_NoExceptionsValue"),
+    };
+
+    private sealed record CurseExample(string NameKey, string Inherited, string Died, string NoteKey);
+
+    private readonly List<CurseExample> _curseExamples = new()
+    {
+        new("Curse_Ex1_Name", "~1003 B1", "~990 B1", "Curse_Ex1_Note"),
+        new("Curse_Ex2_Name", "832", "845", "Curse_Ex2_Note"),
+        new("Curse_Ex3_Name", "~819", "832", "Curse_Ex3_Note"),
+        new("Curse_Ex4_Name", "~829", "842", "Curse_Ex4_Note"),
+        new("Curse_Ex5_Name", "842", "845", "Curse_Ex5_Note"),
+        new("Curse_Ex6_Name", "845", "854", "Curse_Ex6_Note"),
     };
 
     protected override void OnInitialized()

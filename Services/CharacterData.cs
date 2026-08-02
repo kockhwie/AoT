@@ -148,7 +148,7 @@ public static class CharacterData
 
         // --- Civilians - Nav_Civilians ---
         new CharacterProfile { Slug = "grisha-yeager", NameKey = "Nav_GrishaYeager", TitleKey = "CharCivilian_Title", BioKey = "CharCivilian_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
-        new CharacterProfile { Slug = "Carla-Yeager", NameKey = "Nav_CarlaYeager", TitleKey = "CharCivilian_Title", BioKey = "CharCivilian_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
+        new CharacterProfile { Slug = "Carla-Yeager", NameKey = "Nav_CarlaYeager", TitleKey = "CarlaYeager_Title", BioKey = "CarlaYeager_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
         new CharacterProfile { Slug = "Minister-Nick", NameKey = "Nav_MinisterNick", TitleKey = "CharCivilian_Title", BioKey = "CharCivilian_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
         new CharacterProfile { Slug = "Dimo-Reeves", NameKey = "Nav_DimoReeves", TitleKey = "CharCivilian_Title", BioKey = "CharCivilian_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
         new CharacterProfile { Slug = "Kaya", NameKey = "Nav_Kaya", TitleKey = "CharCivilian_Title", BioKey = "CharCivilian_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Civilians], Badge = "" },
@@ -182,9 +182,9 @@ public static class CharacterData
 
 
         // --- Yeagerists ---
-        new CharacterProfile { Slug = "floch-forster", NameKey = "Nav_FlochForster", TitleKey = "CharYeagerist_Title", BioKey = "CharYeagerist_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Yeagerists], Badge = "B RANK" },
-        new CharacterProfile { Slug = "eren-yeager", NameKey = "Nav_Eren", TitleKey = "CharYeagerist_Title", BioKey = "CharYeagerist_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Yeagerists], Badge = "B RANK" },
-    
+        new CharacterProfile { Slug = "floch-forster", NameKey = "Nav_FlochForster", TitleKey = "CharFloch_Title", BioKey = "CharFloch_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Yeagerists], Badge = "B RANK" },
+        new CharacterProfile { Slug = "Holger", NameKey = "Nav_Holger", TitleKey = "CharHolger_Title", BioKey = "CharHolger_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Yeagerists], Badge = "B RANK" },
+        new CharacterProfile { Slug = "Wim", NameKey = "CharWim_Name", TitleKey = "CharWim_Title", BioKey = "CharWim_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Yeagerists], Badge = "B RANK" },
     
         // --- Nav_Other ---
         new CharacterProfile { Slug = "TheAntiMarleyanVolunteers", NameKey = "Nav_TheAntiMarleyanVolunteers", TitleKey = "CharYeagerist_Title", BioKey = "CharYeagerist_Bio", Portrait = "placeholder-portrait.webp", Factions = [CharacterFaction.Other], Badge = "B RANK" },

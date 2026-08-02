@@ -1,110 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -1153,7 +1095,7 @@
     <value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value>
   </data>
   <data name="CharCivilian_Title" xml:space="preserve">
-    <value>帕拉迪島醫師</value>
+    <value>帕拉迪島醫師 / 艾連·葉卡父親</value>
   </data>
   <data name="CharCivilian_Bio" xml:space="preserve">
     <value>曾是馬雷戰士候補生，偽裝成醫生潛入瑪利亞之牆，身懷進擊與始祖巨人的祕密。</value>
@@ -1375,58 +1317,58 @@
     <value>850</value>
   </data>
   <data name="Timeline_Event14_Title" xml:space="preserve">
-    <value>艾倫奪還作戰</value>
+    <value>艾連遭擄走</value>
   </data>
   <data name="Timeline_Event14_Desc" xml:space="preserve">
-    <value>調查兵團、駐紮兵團與憲兵團追擊擄走者。艾倫覺醒「座標」之力操控巨人。漢尼斯戰死，尤米爾被瑪雷捕獲。</value>
+    <value>萊納化身鎧之巨人在羅塞之牆上擄走艾連，貝爾托特則帶走自願同行的尤彌爾。戰士隊攜始祖巨人啟程返回馬雷。</value>
   </data>
   <data name="Timeline_Event14_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event15_Title" xml:space="preserve">
-    <value>王政顛覆政變</value>
+    <value>艾連奪還作戰</value>
   </data>
   <data name="Timeline_Event15_Desc" xml:space="preserve">
-    <value>調查兵團顛覆腐敗的王政府。真正的王室（雷斯家）被揭露。希絲特莉亞擊殺巨人化的父親羅德後即位為女王。</value>
+    <value>身負重傷的艾爾文親自率領騎兵部隊，穿越巨人肆虐的地帶追擊戰士隊，趕在艾連被帶離帕拉迪島前展開奪還行動。</value>
   </data>
   <data name="Timeline_Event15_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event16_Title" xml:space="preserve">
-    <value>希干希納奪還戰</value>
+    <value>漢尼斯最後一戰</value>
   </data>
   <data name="Timeline_Event16_Desc" xml:space="preserve">
-    <value>調查兵團奪回希干希納並封閉瑪利亞之牆。艾爾文作為誘餌戰死，阿爾敏繼承超大型巨人。里維擊敗獸巨人。</value>
+    <value>追擊途中，殺害艾連母親的微笑巨人再度現身。漢尼斯獨自迎戰以彌補希干希納區的遺憾，最終在艾連眼前遭到吞食。</value>
   </data>
   <data name="Timeline_Event16_Year" xml:space="preserve">
     <value>850</value>
   </data>
   <data name="Timeline_Event17_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event18_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event19_Year" xml:space="preserve">
-    <value>854</value>
+    <value>850</value>
   </data>
   <data name="Timeline_Event17_Title" xml:space="preserve">
-    <value>突襲馬雷與雷貝里欧宣戰布告</value>
+    <value>座標覺醒</value>
   </data>
   <data name="Timeline_Event17_Desc" xml:space="preserve">
-    <value>艾連·葉卡密謀突襲馬雷首都雷貝里歐收容區，強行吞噬戰槌巨人，彻底打破國際地緣政治僵局，將全球戰爭拖入地鳴終局階段。</value>
+    <value>絕望的艾連揮拳擊中微笑巨人——實為王族戴娜·弗里茲——無意間啟動始祖巨人的「座標」之力，令周圍無垢巨人轉而攻擊戰士隊。</value>
   </data>
   <data name="Timeline_Event18_Title" xml:space="preserve">
-    <value>地鳴啟動</value>
+    <value>戰士撤退</value>
   </data>
   <data name="Timeline_Event18_Desc" xml:space="preserve">
-    <value>艾連·葉卡啟動始祖巨人之力，驅動壁中數以百萬計的超大型巨人踏上徵途，以滅世地鳴之名向帕拉迪島以外的所有生命宣告終滅。</value>
+    <value>面對座標之力操控的巨人群，萊納與貝爾托特被迫放棄擄走艾連的計畫撤退，尤彌爾選擇同行。雙方自此為爭奪希干希納區展開全面備戰。</value>
   </data>
   <data name="Timeline_Event19_Title" xml:space="preserve">
-    <value>天地之戰（最終決戰）</value>
+    <value>王政顛覆政變</value>
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
-    <value>帕拉迪與馬雷聯合軍在哈庫拜堡壘展開最後決戰。米卡莎親手終結了艾連的生命，以此停止地鳴，斬斷仇恨的鎖鏈，代價是他們所熟知的整個世界。</value>
+    <value>調查兵團發動政變推翻腐敗的王政府，揭露真正的王室血脈——隱藏於歷史之外的雷斯家族。</value>
   </data>
   <data name="Lore_PageTitle" xml:space="preserve">
     <value>世界觀與地圖</value>
@@ -1653,4 +1595,34 @@
   <data name="Lore_Wall_Centre_Name" xml:space="preserve">
     <value>王都</value>
   </data>
-</root>
+  <data name="CarlaYeager_Title" xml:space="preserve">
+    <value>艾連·葉卡母親</value>
+  </data>
+  <data name="CarlaYeager_Bio" xml:space="preserve">
+    <value>她</value>
+  </data>
+  <data name="Nav_Holger" xml:space="preserve">
+    <value>霍爾格</value>
+  </data>
+  <data name="CharHolger_Title" xml:space="preserve">
+    <value>核心成員</value>
+  </data>
+  <data name="CharHolger_Bio" xml:space="preserve">
+    <value>參與政變與港口衝突的葉卡派核心士兵。</value>
+  </data>
+  <data name="CharFloch_Title" xml:space="preserve">
+    <value>葉卡派的代理領袖與發起人</value>
+  </data>
+  <data name="CharFloch_Bio" xml:space="preserve">
+    <value>葉卡派的代理領袖與發起人，忠於艾連的極端愛國主義者。</value>
+  </data>
+  <data name="CharWim_Title" xml:space="preserve">
+    <value>核心士兵</value>
+  </data>
+  <data name="CharWim_Bio" xml:space="preserve">
+    <value>參與政變與港口衝突的葉卡派核心士兵。</value>
+  </data>
+  <data name="CharWim_Name" xml:space="preserve">
+    <value>威姆</value>
+  </data>
+<data name="Timeline_Event20_Title" xml:space="preserve"><value>希絲特莉亞加冕為后</value></data><data name="Timeline_Event20_Desc" xml:space="preserve"><value>希絲特莉亞親手斬殺巨人化的父親羅德，接下王冠，成為百年來首位知曉始祖巨人真相的君主。</value></data><data name="Timeline_Event20_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event21_Title" xml:space="preserve"><value>希干希納奪還作戰決定</value></data><data name="Timeline_Event21_Desc" xml:space="preserve"><value>艾爾文團長奪回希干希納區的計畫獲得批准，賭上艾連的硬質化能力，期望終於能抵達古利夏隱藏的地下室。</value></data><data name="Timeline_Event21_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event22_Title" xml:space="preserve"><value>重返希干希納</value></data><data name="Timeline_Event22_Desc" xml:space="preserve"><value>調查兵團挺進異常寂靜的希干希納區。阿爾敏察覺這份寂靜並非安全，而是戰士隊早已埋伏其中。</value></data><data name="Timeline_Event22_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event23_Title" xml:space="preserve"><value>希干希納決戰</value></data><data name="Timeline_Event23_Desc" xml:space="preserve"><value>萊納、貝爾托特與獸之巨人發動聯合伏擊，以無垢巨人包圍調查兵團，掀起有史以來規模最大的智慧巨人之戰。</value></data><data name="Timeline_Event23_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event24_Title" xml:space="preserve"><value>獸之巨人包圍戰</value></data><data name="Timeline_Event24_Desc" xml:space="preserve"><value>獸之巨人在瑪利亞之牆上指揮包圍網，以投擲巨石轟炸受困的調查兵團，切斷所有退路。</value></data><data name="Timeline_Event24_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event25_Title" xml:space="preserve"><value>艾爾文最後的衝鋒</value></data><data name="Timeline_Event25_Desc" xml:space="preserve"><value>艾爾文率領敢死騎兵隊衝鋒吸引獸之巨人火力，出征前發表關於犧牲的動人演說，隨後幾乎全軍覆沒。</value></data><data name="Timeline_Event25_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event26_Title" xml:space="preserve"><value>里維擊敗獸之巨人</value></data><data name="Timeline_Event26_Desc" xml:space="preserve"><value>藉艾爾文衝鋒製造的混亂，里維逼近獸之巨人，斬斷其四肢並將吉克拖出後頸，卻在此時被車力巨人救走。</value></data><data name="Timeline_Event26_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event27_Title" xml:space="preserve"><value>阿爾敏的犧牲</value></data><data name="Timeline_Event27_Desc" xml:space="preserve"><value>阿爾敏緊咬超大型巨人的牙齒，甘願被灼燒以耗盡貝爾托特的蒸氣，為艾連創造從背後突襲的機會。</value></data><data name="Timeline_Event27_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event28_Title" xml:space="preserve"><value>巨人藥劑抉擇</value></data><data name="Timeline_Event28_Desc" xml:space="preserve"><value>手中僅剩一劑巨人針劑，面對兩位瀕死的領袖，里維選擇救活阿爾敏，讓他繼承超大型巨人，也改寫了帕拉迪島未來的領導格局。</value></data><data name="Timeline_Event28_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event29_Title" xml:space="preserve"><value>地下室真相</value></data><data name="Timeline_Event29_Desc" xml:space="preserve"><value>古利夏隱藏的日記與照片證明外面的世界從未毀滅——人類是被刻意隔離在帕拉迪島上，百年來的王室謊言就此崩潰。</value></data><data name="Timeline_Event29_Year" xml:space="preserve"><value>850</value></data><data name="Timeline_Event30_Title" xml:space="preserve"><value>海的另一端真相</value></data><data name="Timeline_Event30_Desc" xml:space="preserve"><value>調查兵團首次抵達帕拉迪島歷史上的大海。艾連追問，若要獲得自由，是否得殲滅海的另一端所有敵人——戰爭的下一章就此展開。</value></data><data name="Timeline_Event30_Year" xml:space="preserve"><value>851</value></data><data name="Timeline_Event31_Title" xml:space="preserve"><value>帕拉迪島現代化</value></data><data name="Timeline_Event31_Desc" xml:space="preserve"><value>確認牆外世界存在後，帕拉迪島加速軍事與科技現代化，研發雷槍等新式武器，為即將到來的與馬雷之戰做準備。</value></data><data name="Timeline_Event31_Year" xml:space="preserve"><value>851–854</value></data><data name="Timeline_Event32_Title" xml:space="preserve"><value>突襲雷貝里歐</value></data><data name="Timeline_Event32_Desc" xml:space="preserve"><value>艾連潛入馬雷，在威利·泰柏公開演說時對雷貝里歐發動毀滅性突襲，並在全世界面前吞噬戰槌巨人。</value></data><data name="Timeline_Event32_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event33_Title" xml:space="preserve"><value>宣戰佈告</value></data><data name="Timeline_Event33_Desc" xml:space="preserve"><value>雷貝里歐襲擊事件終結了任何靜默外交的可能——帕拉迪島與馬雷自此陷入公開的全面戰爭。</value></data><data name="Timeline_Event33_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event34_Title" xml:space="preserve"><value>莎夏·布勞斯之死</value></data><data name="Timeline_Event34_Desc" xml:space="preserve"><value>調查兵團搭乘奪取的飛船撤退時，走投無路的賈碧·布朗開槍擊殺莎夏·布勞斯，讓倖存的同伴陷入巨大悲痛。</value></data><data name="Timeline_Event34_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event35_Title" xml:space="preserve"><value>葉卡派政變</value></data><data name="Timeline_Event35_Desc" xml:space="preserve"><value>以弗洛克·福斯特為首的艾連派效忠者在帕拉迪島發動政變，囚禁政府並以艾連之名奪取軍事控制權。</value></data><data name="Timeline_Event35_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event36_Title" xml:space="preserve"><value>吉克的脊髓液計畫</value></data><data name="Timeline_Event36_Desc" xml:space="preserve"><value>吉克暗中在送給調查兵團的酒中混入自己的脊髓液，計劃在咆哮的瞬間引發大規模巨人化——這場陰謀在千鈞一髮之際被識破。</value></data><data name="Timeline_Event36_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event37_Title" xml:space="preserve"><value>道與始祖真相</value></data><data name="Timeline_Event37_Desc" xml:space="preserve"><value>在「道」之中，艾連與吉克一同重歷古利夏的記憶，並見到始祖尤彌爾本人，揭露了長達兩千年的奴役——所有巨人詛咒的根源。</value></data><data name="Timeline_Event37_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event38_Title" xml:space="preserve"><value>地鳴啟動</value></data><data name="Timeline_Event38_Desc" xml:space="preserve"><value>艾連·葉卡啟動始祖巨人之力，驅動壁中數以百萬計的超大型巨人踏上徵途，以滅世地鳴之名向帕拉迪島以外的所有生命宣告終滅。</value></data><data name="Timeline_Event38_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event39_Title" xml:space="preserve"><value>地鳴席捲全球</value></data><data name="Timeline_Event39_Desc" xml:space="preserve"><value>超大型巨人群渡海抵達馬雷大陸，將沿途一切踐踏殆盡，世人親眼目睹人類最古老的噩夢以全球規模成真。</value></data><data name="Timeline_Event39_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event40_Title" xml:space="preserve"><value>聯軍成立</value></data><data name="Timeline_Event40_Desc" xml:space="preserve"><value>帕拉迪島倖存者與昔日的馬雷戰士拋開數十年的仇恨，因阻止艾連這唯一目標而結成意想不到的聯盟。</value></data><data name="Timeline_Event40_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event41_Title" xml:space="preserve"><value>薩爾塔要塞之戰</value></data><data name="Timeline_Event41_Desc" xml:space="preserve"><value>聯軍在艾連失控的始祖巨人前展開最後防線，全力爭取時間，準備對始祖本體發動最終突擊。</value></data><data name="Timeline_Event41_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event42_Title" xml:space="preserve"><value>吉克之死</value></data><data name="Timeline_Event42_Desc" xml:space="preserve"><value>在「道」中，吉克透過阿爾敏的記憶終於理解生命的意義，甘願讓里維結束自己的生命，脫離艾連的操控。</value></data><data name="Timeline_Event42_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event43_Title" xml:space="preserve"><value>米卡莎斬殺艾連</value></data><data name="Timeline_Event43_Desc" xml:space="preserve"><value>各方勢力齊聚始祖本體之際，米卡莎·阿卡曼親手斬下艾連的頭顱，終結地鳴，也實現了多年前對他許下的承諾。</value></data><data name="Timeline_Event43_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event44_Title" xml:space="preserve"><value>巨人詛咒終結</value></data><data name="Timeline_Event44_Desc" xml:space="preserve"><value>隨著艾連死去，尤彌爾終於脫離兩千年的奴役並放棄巨人之力——詛咒就此終結，巨人化能力自此在世上永遠消失。</value></data><data name="Timeline_Event44_Year" xml:space="preserve"><value>854</value></data><data name="Timeline_Event45_Title" xml:space="preserve"><value>和平談判展開</value></data><data name="Timeline_Event45_Desc" xml:space="preserve"><value>地鳴事件三年後，聯軍倖存者努力斡旋，為帕拉迪島與那個幾乎被其摧毀的世界建立一份脆弱的和平。</value></data><data name="Timeline_Event45_Year" xml:space="preserve"><value>857</value></data><data name="Timeline_Event46_Title" xml:space="preserve"><value>帕拉迪島重整軍備</value></data><data name="Timeline_Event46_Desc" xml:space="preserve"><value>失去始祖巨人的嚇阻力後，帕拉迪島從零開始重建軍力，不確定這份脆弱和平能否抵擋一個仍對艾爾迪亞人心存戒備的世界。</value></data><data name="Timeline_Event46_Year" xml:space="preserve"><value>857年後</value></data><data name="Timeline_Event47_Title" xml:space="preserve"><value>帕拉迪島的毀滅</value></data><data name="Timeline_Event47_Desc" xml:space="preserve"><value>最終加頁的一幕令人不安地暗示和平並未長久——數個世代後帕拉迪島已成廢墟，這段結局刻意留給讀者自行解讀。</value></data><data name="Timeline_Event47_Year" xml:space="preserve"><value>遙遠的未來</value></data><data name="Timeline_Event48_Title" xml:space="preserve"><value>少年發現大樹</value></data><data name="Timeline_Event48_Desc" xml:space="preserve"><value>在和平的未來，一名男孩偶然發現米卡莎安葬艾連的那棵大樹，故事在追憶與希望的靜謐氛圍中畫下句點。</value></data><data name="Timeline_Event48_Year" xml:space="preserve"><value>遙遠的未來</value></data><data name="EvtType_WallBreach" xml:space="preserve"><value>破牆</value></data><data name="EvtType_Battle" xml:space="preserve"><value>戰役</value></data><data name="EvtType_Political" xml:space="preserve"><value>政治</value></data><data name="EvtType_Revelation" xml:space="preserve"><value>真相揭露</value></data><data name="EvtType_Massacre" xml:space="preserve"><value>屠殺</value></data><data name="EvtType_CovertOp" xml:space="preserve"><value>秘密行動</value></data><data name="EvtType_Endgame" xml:space="preserve"><value>終局</value></data><data name="Era_Ancient" xml:space="preserve"><value>古代歷史</value></data><data name="Era_Prelude" xml:space="preserve"><value>戰爭前奏</value></data><data name="Era_TrostFemale" xml:space="preserve"><value>托洛斯特與女巨人篇</value></data><data name="Era_Uprising" xml:space="preserve"><value>王政奪還篇</value></data><data name="Era_ReturnShiganshina" xml:space="preserve"><value>希干希納奪還篇</value></data><data name="Era_Marley" xml:space="preserve"><value>馬雷戰爭篇</value></data><data name="Era_Rumbling" xml:space="preserve"><value>地鳴篇</value></data><data name="Era_Epilogue" xml:space="preserve"><value>尾聲</value></data><data name="CurseTitle" xml:space="preserve"><value>尤彌爾的十三年詛咒</value></data><data name="CurseIntro" xml:space="preserve"><value>沒有任何巨人繼承者能在獲得力量後存活超過十三年——這項法則源自始祖尤彌爾本人，也支配著劇中每一位巨人繼承者所做的重大抉擇。</value></data><data name="Curse_CountdownLabel" xml:space="preserve"><value>倒數起點</value></data><data name="Curse_CountdownValue" xml:space="preserve"><value>十三年的倒數計時，從一個人首次獲得任何巨人之力的瞬間開始。</value></data><data name="Curse_NoResetLabel" xml:space="preserve"><value>無法重置</value></data><data name="Curse_NoResetValue" xml:space="preserve"><value>如艾連般繼承多個巨人（進擊、始祖、戰槌），倒數計時也絕不會重新開始。</value></data><data name="Curse_UniversalLabel" xml:space="preserve"><value>普遍適用</value></data><data name="Curse_UniversalValue" xml:space="preserve"><value>九大巨人一律受此限制——無論是否擁有王族血統，任何繼承者皆無法倖免。</value></data><data name="Curse_DeteriorationLabel" xml:space="preserve"><value>身體衰竭</value></data><data name="Curse_DeteriorationValue" xml:space="preserve"><value>隨著期限逼近，繼承者會出現逐漸加劇、肉眼可見的身體衰弱。</value></data><data name="Curse_NoExceptionsLabel" xml:space="preserve"><value>無一例外</value></data><data name="Curse_NoExceptionsValue" xml:space="preserve"><value>有史以來，從未有任何一位巨人繼承者活過十三年的期限。</value></data><data name="CurseExamplesTitle" xml:space="preserve"><value>著名案例</value></data><data name="CurseColShifter" xml:space="preserve"><value>繼承者</value></data><data name="CurseColInherited" xml:space="preserve"><value>繼承年</value></data><data name="CurseColDied" xml:space="preserve"><value>死亡年</value></data><data name="CurseColLifespan" xml:space="preserve"><value>存活時間</value></data><data name="Curse_Ex1_Name" xml:space="preserve"><value>尤彌爾·弗里茲</value></data><data name="Curse_Ex1_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex2_Name" xml:space="preserve"><value>古利夏·葉卡</value></data><data name="Curse_Ex2_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex3_Name" xml:space="preserve"><value>艾連·克魯格（梟）</value></data><data name="Curse_Ex3_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex4_Name" xml:space="preserve"><value>烏利·雷斯</value></data><data name="Curse_Ex4_Note" xml:space="preserve"><value>13年</value></data><data name="Curse_Ex5_Name" xml:space="preserve"><value>芙莉妲·雷斯</value></data><data name="Curse_Ex5_Note" xml:space="preserve"><value>3年（提早身亡）</value></data><data name="Curse_Ex6_Name" xml:space="preserve"><value>艾連·葉卡</value></data><data name="Curse_Ex6_Note" xml:space="preserve"><value>9年（地鳴終結詛咒）</value></data></root>

@@ -1069,6 +1069,24 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CarlaYeager_Bio {
+            get {
+                return ResourceManager.GetString("CarlaYeager_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CarlaYeager_Title {
+            get {
+                return ResourceManager.GetString("CarlaYeager_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ymir.
         /// </summary>
         public static string Character_Ymir {
@@ -1164,6 +1182,24 @@ namespace AOT.Resources {
         public static string CharHistoria_Title {
             get {
                 return ResourceManager.GetString("CharHistoria_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CharHolger_Bio {
+            get {
+                return ResourceManager.GetString("CharHolger_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CharHolger_Title {
+            get {
+                return ResourceManager.GetString("CharHolger_Title", resourceCulture);
             }
         }
         
@@ -1272,6 +1308,33 @@ namespace AOT.Resources {
         public static string CharTybur_Title {
             get {
                 return ResourceManager.GetString("CharTybur_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string CharWim_Bio {
+            get {
+                return ResourceManager.GetString("CharWim_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string CharWim_Name {
+            get {
+                return ResourceManager.GetString("CharWim_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string CharWim_Title {
+            get {
+                return ResourceManager.GetString("CharWim_Title", resourceCulture);
             }
         }
         
@@ -2865,6 +2928,15 @@ namespace AOT.Resources {
         public static string Nav_HitchDreyse {
             get {
                 return ResourceManager.GetString("Nav_HitchDreyse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holger.
+        /// </summary>
+        public static string Nav_Holger {
+            get {
+                return ResourceManager.GetString("Nav_Holger", resourceCulture);
             }
         }
         
