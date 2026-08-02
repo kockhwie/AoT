@@ -1375,6 +1375,402 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Countdown Start.
+        /// </summary>
+        public static string Curse_CountdownLabel {
+            get {
+                return ResourceManager.GetString("Curse_CountdownLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The 13-year clock begins the instant a person first acquires any Titan power..
+        /// </summary>
+        public static string Curse_CountdownValue {
+            get {
+                return ResourceManager.GetString("Curse_CountdownValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Deterioration.
+        /// </summary>
+        public static string Curse_DeteriorationLabel {
+            get {
+                return ResourceManager.GetString("Curse_DeteriorationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As the limit nears, Shifters experience visible, progressive physical decline..
+        /// </summary>
+        public static string Curse_DeteriorationValue {
+            get {
+                return ResourceManager.GetString("Curse_DeteriorationValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ymir Fritz.
+        /// </summary>
+        public static string Curse_Ex1_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13 years.
+        /// </summary>
+        public static string Curse_Ex1_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex1_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grisha Yeager.
+        /// </summary>
+        public static string Curse_Ex2_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13 years.
+        /// </summary>
+        public static string Curse_Ex2_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex2_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Kruger (The Owl).
+        /// </summary>
+        public static string Curse_Ex3_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13 years.
+        /// </summary>
+        public static string Curse_Ex3_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex3_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uri Reiss.
+        /// </summary>
+        public static string Curse_Ex4_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13 years.
+        /// </summary>
+        public static string Curse_Ex4_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex4_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frieda Reiss.
+        /// </summary>
+        public static string Curse_Ex5_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex5_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 years (killed early).
+        /// </summary>
+        public static string Curse_Ex5_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex5_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Yeager.
+        /// </summary>
+        public static string Curse_Ex6_Name {
+            get {
+                return ResourceManager.GetString("Curse_Ex6_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 9 years (Rumbling ends the curse).
+        /// </summary>
+        public static string Curse_Ex6_Note {
+            get {
+                return ResourceManager.GetString("Curse_Ex6_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Exceptions.
+        /// </summary>
+        public static string Curse_NoExceptionsLabel {
+            get {
+                return ResourceManager.GetString("Curse_NoExceptionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In recorded history, not a single Shifter has ever survived past the 13-year mark..
+        /// </summary>
+        public static string Curse_NoExceptionsValue {
+            get {
+                return ResourceManager.GetString("Curse_NoExceptionsValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Reset.
+        /// </summary>
+        public static string Curse_NoResetLabel {
+            get {
+                return ResourceManager.GetString("Curse_NoResetLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inheriting additional Titans — as Eren did with Attack, Founding, and War Hammer — never resets the clock..
+        /// </summary>
+        public static string Curse_NoResetValue {
+            get {
+                return ResourceManager.GetString("Curse_NoResetValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Universal Application.
+        /// </summary>
+        public static string Curse_UniversalLabel {
+            get {
+                return ResourceManager.GetString("Curse_UniversalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Nine Titans are equally bound — royal bloodline or not, no Shifter is exempt..
+        /// </summary>
+        public static string Curse_UniversalValue {
+            get {
+                return ResourceManager.GetString("Curse_UniversalValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Died.
+        /// </summary>
+        public static string CurseColDied {
+            get {
+                return ResourceManager.GetString("CurseColDied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inherited.
+        /// </summary>
+        public static string CurseColInherited {
+            get {
+                return ResourceManager.GetString("CurseColInherited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lifespan.
+        /// </summary>
+        public static string CurseColLifespan {
+            get {
+                return ResourceManager.GetString("CurseColLifespan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shifter.
+        /// </summary>
+        public static string CurseColShifter {
+            get {
+                return ResourceManager.GetString("CurseColShifter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notable Examples.
+        /// </summary>
+        public static string CurseExamplesTitle {
+            get {
+                return ResourceManager.GetString("CurseExamplesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Titan Shifter can survive more than 13 years after first inheriting their power — a rule that traces back to Ymir Fritz herself, and one that governs every major decision made by every Shifter in the series..
+        /// </summary>
+        public static string CurseIntro {
+            get {
+                return ResourceManager.GetString("CurseIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The 13-Year Curse of Ymir.
+        /// </summary>
+        public static string CurseTitle {
+            get {
+                return ResourceManager.GetString("CurseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ancient History.
+        /// </summary>
+        public static string Era_Ancient {
+            get {
+                return ResourceManager.GetString("Era_Ancient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Epilogue.
+        /// </summary>
+        public static string Era_Epilogue {
+            get {
+                return ResourceManager.GetString("Era_Epilogue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Marley War.
+        /// </summary>
+        public static string Era_Marley {
+            get {
+                return ResourceManager.GetString("Era_Marley", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prelude to War.
+        /// </summary>
+        public static string Era_Prelude {
+            get {
+                return ResourceManager.GetString("Era_Prelude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return to Shiganshina.
+        /// </summary>
+        public static string Era_ReturnShiganshina {
+            get {
+                return ResourceManager.GetString("Era_ReturnShiganshina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Rumbling.
+        /// </summary>
+        public static string Era_Rumbling {
+            get {
+                return ResourceManager.GetString("Era_Rumbling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trost &amp; the Female Titan.
+        /// </summary>
+        public static string Era_TrostFemale {
+            get {
+                return ResourceManager.GetString("Era_TrostFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Uprising.
+        /// </summary>
+        public static string Era_Uprising {
+            get {
+                return ResourceManager.GetString("Era_Uprising", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle.
+        /// </summary>
+        public static string EvtType_Battle {
+            get {
+                return ResourceManager.GetString("EvtType_Battle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Covert Operation.
+        /// </summary>
+        public static string EvtType_CovertOp {
+            get {
+                return ResourceManager.GetString("EvtType_CovertOp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endgame.
+        /// </summary>
+        public static string EvtType_Endgame {
+            get {
+                return ResourceManager.GetString("EvtType_Endgame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Massacre.
+        /// </summary>
+        public static string EvtType_Massacre {
+            get {
+                return ResourceManager.GetString("EvtType_Massacre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Political.
+        /// </summary>
+        public static string EvtType_Political {
+            get {
+                return ResourceManager.GetString("EvtType_Political", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revelation.
+        /// </summary>
+        public static string EvtType_Revelation {
+            get {
+                return ResourceManager.GetString("EvtType_Revelation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Breach.
+        /// </summary>
+        public static string EvtType_WallBreach {
+            get {
+                return ResourceManager.GetString("EvtType_WallBreach", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Marleyan Reform Faction.
         /// </summary>
         public static string FactionBtn1 {
@@ -3562,6 +3958,33 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        public static string Sig_Major {
+            get {
+                return ResourceManager.GetString("Sig_Major", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notable.
+        /// </summary>
+        public static string Sig_Notable {
+            get {
+                return ResourceManager.GetString("Sig_Notable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pivotal.
+        /// </summary>
+        public static string Sig_Pivotal {
+            get {
+                return ResourceManager.GetString("Sig_Pivotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to On that day, mankind received a grim reminder of the terror of being ruled by them....
         /// </summary>
         public static string Slide1_Quote {
@@ -4210,7 +4633,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps, Garrison, and Military Police pursue the kidnappers. Eren awakens the Coordinate power, controlling Titans. Hannes dies; Ymir is captured by Marley..
+        ///   Looks up a localized string similar to Reiner transforms into the Armored Titan and seizes Eren atop Wall Rose, while Bertholdt takes Ymir, who chooses to go with them. The Warriors begin their return march toward Marley with the Founding Titan in hand..
         /// </summary>
         public static string Timeline_Event14_Desc {
             get {
@@ -4219,7 +4642,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Eren Rescue Operation.
+        ///   Looks up a localized string similar to Eren Kidnapped.
         /// </summary>
         public static string Timeline_Event14_Title {
             get {
@@ -4237,7 +4660,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps overthrows the corrupt government. The true royal family (Reiss) is revealed. Historia becomes queen after killing her titanized father Rod..
+        ///   Looks up a localized string similar to Still recovering from injury, Commander Erwin personally leads a cavalry pursuit through Titan-infested territory to recover Eren before the Warriors escape beyond humanity&apos;s reach..
         /// </summary>
         public static string Timeline_Event15_Desc {
             get {
@@ -4246,7 +4669,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uprising and Coup.
+        ///   Looks up a localized string similar to Titan Pursuit Operation.
         /// </summary>
         public static string Timeline_Event15_Title {
             get {
@@ -4264,7 +4687,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps retakes Wall Maria. Erwin dies leading a charge; Armin inherits the Colossus Titan. Levi defeats the Beast Titan. Nine of the original 100 soldiers survive..
+        ///   Looks up a localized string similar to The Smiling Titan that killed Eren&apos;s mother reappears during the pursuit. Hannes engages it alone to atone for his failure at Shiganshina, and is devoured before Eren&apos;s eyes..
         /// </summary>
         public static string Timeline_Event16_Desc {
             get {
@@ -4273,7 +4696,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shiganshina Battle.
+        ///   Looks up a localized string similar to Hannes&apos; Final Stand.
         /// </summary>
         public static string Timeline_Event16_Title {
             get {
@@ -4291,7 +4714,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Eren Yeager launched a surprise raid on Liberio, shifting the global war into its endgame..
+        ///   Looks up a localized string similar to In despair, Eren strikes the Smiling Titan — secretly Dina Fritz of the royal bloodline — and unknowingly activates the Founding Titan&apos;s Coordinate power, turning nearby Pure Titans against the Warriors..
         /// </summary>
         public static string Timeline_Event17_Desc {
             get {
@@ -4300,7 +4723,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Declaration of War.
+        ///   Looks up a localized string similar to Coordinate Awakens.
         /// </summary>
         public static string Timeline_Event17_Title {
             get {
@@ -4309,7 +4732,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 854.
+        ///   Looks up a localized string similar to 850.
         /// </summary>
         public static string Timeline_Event17_Year {
             get {
@@ -4318,7 +4741,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Eren Yeager activated the Power of the Founding Titan, unleashing millions of Wall Titans in a cataclysmic march to annihilate all life beyond Paradis..
+        ///   Looks up a localized string similar to Overwhelmed by the Coordinate&apos;s power, Reiner and Bertholdt abandon their attempt to capture Eren and withdraw. Ymir chooses to go with them, and both sides now brace for a decisive clash over Shiganshina..
         /// </summary>
         public static string Timeline_Event18_Desc {
             get {
@@ -4327,7 +4750,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Rumbling Begins.
+        ///   Looks up a localized string similar to Warriors Retreat.
         /// </summary>
         public static string Timeline_Event18_Title {
             get {
@@ -4336,7 +4759,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 854.
+        ///   Looks up a localized string similar to 850.
         /// </summary>
         public static string Timeline_Event18_Year {
             get {
@@ -4345,7 +4768,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Alliance of Paradis and Marley made their final stand at Fort Hakuai. Eren was slain by Mikasa,ending the Rumbling and the cycle of hatred at the cost of the world they knew..
+        ///   Looks up a localized string similar to The Survey Corps stages a coup against the corrupt royal government, exposing the Reiss family as the true bloodline hidden from history..
         /// </summary>
         public static string Timeline_Event19_Desc {
             get {
@@ -4354,7 +4777,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Battle of Heaven and Earth.
+        ///   Looks up a localized string similar to Uprising and Coup.
         /// </summary>
         public static string Timeline_Event19_Title {
             get {
@@ -4363,7 +4786,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 854.
+        ///   Looks up a localized string similar to 850.
         /// </summary>
         public static string Timeline_Event19_Year {
             get {
@@ -4399,6 +4822,276 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Historia Reiss kills her titanized father Rod and accepts the crown, becoming the first monarch in a century to know the truth behind the Founding Titan..
+        /// </summary>
+        public static string Timeline_Event20_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event20_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Historia Crowned Queen.
+        /// </summary>
+        public static string Timeline_Event20_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event20_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event20_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event20_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander Erwin&apos;s plan to retake Shiganshina is approved, betting Eren&apos;s hardening ability against the promise of finally reaching Grisha&apos;s hidden basement..
+        /// </summary>
+        public static string Timeline_Event21_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event21_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shiganshina Offensive Approved.
+        /// </summary>
+        public static string Timeline_Event21_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event21_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event21_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event21_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Survey Corps advances into an eerily empty Shiganshina. Armin realizes the silence isn&apos;t safety — the Warriors have been hiding in wait all along..
+        /// </summary>
+        public static string Timeline_Event22_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event22_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return to Shiganshina.
+        /// </summary>
+        public static string Timeline_Event22_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event22_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event22_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event22_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiner, Bertholdt, and the Beast Titan spring a coordinated ambush, encircling the Survey Corps with Pure Titans in the largest Titan Shifter battle yet fought..
+        /// </summary>
+        public static string Timeline_Event23_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event23_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle of Shiganshina.
+        /// </summary>
+        public static string Timeline_Event23_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event23_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event23_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event23_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Beast Titan commands the encirclement from atop Wall Maria, bombarding the trapped Survey Corps with hurled rock and cutting off every route of retreat..
+        /// </summary>
+        public static string Timeline_Event24_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event24_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beast Titan Siege.
+        /// </summary>
+        public static string Timeline_Event24_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event24_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event24_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event24_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erwin leads a suicidal cavalry charge to draw the Beast Titan&apos;s fire, giving a moving speech on sacrifice before nearly the entire formation is wiped out..
+        /// </summary>
+        public static string Timeline_Event25_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event25_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erwin&apos;s Final Charge.
+        /// </summary>
+        public static string Timeline_Event25_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event25_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event25_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event25_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using the chaos of Erwin&apos;s charge, Levi closes in on the Beast Titan, severing its limbs and pulling Zeke from the nape before the Cart Titan snatches him away..
+        /// </summary>
+        public static string Timeline_Event26_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event26_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Levi Defeats Beast Titan.
+        /// </summary>
+        public static string Timeline_Event26_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event26_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event26_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event26_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armin clings to the Colossal Titan&apos;s teeth, letting himself burn to exhaust Bertholdt&apos;s steam, buying Eren the opening he needs to strike from behind..
+        /// </summary>
+        public static string Timeline_Event27_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event27_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armin&apos;s Heroic Sacrifice.
+        /// </summary>
+        public static string Timeline_Event27_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event27_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event27_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event27_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With only one Titan serum and two dying leaders, Levi chooses to save Armin over Erwin, letting Armin inherit the Colossal Titan and reshaping who leads Paradis next..
+        /// </summary>
+        public static string Timeline_Event28_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event28_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serum Decision.
+        /// </summary>
+        public static string Timeline_Event28_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event28_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event28_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event28_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grisha&apos;s hidden journals and photographs prove the outside world was never destroyed — humanity was deliberately isolated on Paradis, and the century-long royal deception collapses..
+        /// </summary>
+        public static string Timeline_Event29_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event29_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basement Truth Revealed.
+        /// </summary>
+        public static string Timeline_Event29_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event29_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 850.
+        /// </summary>
+        public static string Timeline_Event29_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event29_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The 145th King Karl Fritz, ashamed of Eldia&apos;s history, conspires with the Tybur family to end the civil war. Marley gains seven Titans; only the Attack Titan remains in hiding..
         /// </summary>
         public static string Timeline_Event3_Desc {
@@ -4426,6 +5119,276 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Survey Corps reaches the ocean for the first time in Paradis history. Eren asks whether freedom requires destroying every enemy beyond it — the war&apos;s next chapter begins..
+        /// </summary>
+        public static string Timeline_Event30_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event30_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Truth Beyond the Sea.
+        /// </summary>
+        public static string Timeline_Event30_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event30_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 851.
+        /// </summary>
+        public static string Timeline_Event30_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event30_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With the outside world confirmed, Paradis races to modernize its military and technology, developing new weapons like the Thunder Spear in preparation for the coming conflict with Marley..
+        /// </summary>
+        public static string Timeline_Event31_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event31_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paradis Modernization.
+        /// </summary>
+        public static string Timeline_Event31_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event31_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 851–854.
+        /// </summary>
+        public static string Timeline_Event31_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event31_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren infiltrates Marley and launches a devastating surprise attack on Liberio during Willy Tybur&apos;s public address, consuming the War Hammer Titan in front of the world..
+        /// </summary>
+        public static string Timeline_Event32_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event32_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raid on Liberio.
+        /// </summary>
+        public static string Timeline_Event32_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event32_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event32_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event32_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Liberio raid ends any hope of quiet diplomacy — Paradis and Marley are now locked in open, total war..
+        /// </summary>
+        public static string Timeline_Event33_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event33_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Declaration of War.
+        /// </summary>
+        public static string Timeline_Event33_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event33_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event33_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event33_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As the Survey Corps escapes aboard a captured airship, a cornered Gabi Braun shoots and kills Sasha Blouse, leaving her surviving comrades devastated..
+        /// </summary>
+        public static string Timeline_Event34_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event34_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sasha Blouse Killed.
+        /// </summary>
+        public static string Timeline_Event34_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event34_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event34_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event34_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loyalists to Eren, led by Floch Forster, stage a coup on Paradis, imprisoning the government and seizing military control in Eren&apos;s name..
+        /// </summary>
+        public static string Timeline_Event35_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event35_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yeagerist Coup.
+        /// </summary>
+        public static string Timeline_Event35_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event35_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event35_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event35_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zeke secretly laces wine served to the Survey Corps with his spinal fluid, planning to trigger a mass Titanization the moment he roars — a plot narrowly discovered in time..
+        /// </summary>
+        public static string Timeline_Event36_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event36_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zeke&apos;s Spinal Fluid Plot.
+        /// </summary>
+        public static string Timeline_Event36_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event36_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event36_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event36_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In the Paths, Eren and Zeke walk through Grisha&apos;s memories and meet Ymir Fritz herself, revealing 2,000 years of servitude at the root of every Titan&apos;s curse..
+        /// </summary>
+        public static string Timeline_Event37_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event37_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paths and Founder Revelation.
+        /// </summary>
+        public static string Timeline_Event37_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event37_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event37_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event37_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Yeager activated the Power of the Founding Titan, unleashing millions of Wall Titans in a cataclysmic march to annihilate all life beyond Paradis..
+        /// </summary>
+        public static string Timeline_Event38_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event38_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Rumbling Begins.
+        /// </summary>
+        public static string Timeline_Event38_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event38_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event38_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event38_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Wall Titans cross the sea and reach Marley&apos;s mainland, crushing everything in their path as the world watches humanity&apos;s oldest nightmare made real on a global scale..
+        /// </summary>
+        public static string Timeline_Event39_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event39_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global Rumbling.
+        /// </summary>
+        public static string Timeline_Event39_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event39_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event39_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event39_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to King Fritz uses the Founding Titan to create the three Walls (Maria, Rose, Sina) from countless Colossus Titans. He erases the memories of Subjects of Ymir inside Paradis Island..
         /// </summary>
         public static string Timeline_Event4_Desc {
@@ -4449,6 +5412,249 @@ namespace AOT.Resources {
         public static string Timeline_Event4_Year {
             get {
                 return ResourceManager.GetString("Timeline_Event4_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survivors from Paradis and former Marleyan Warriors set aside decades of hatred to form an unlikely alliance, united by the single goal of stopping Eren..
+        /// </summary>
+        public static string Timeline_Event40_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event40_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alliance Formed.
+        /// </summary>
+        public static string Timeline_Event40_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event40_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event40_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event40_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The allied forces make their last stand against Eren&apos;s rampaging Founding Titan, fighting to buy time for a final, desperate assault on the Founder itself..
+        /// </summary>
+        public static string Timeline_Event41_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event41_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle of Fort Salta.
+        /// </summary>
+        public static string Timeline_Event41_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event41_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event41_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event41_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In the Paths, Zeke finally understands the meaning of life through Armin&apos;s memories and willingly lets Levi end his life, freeing him from Eren&apos;s control..
+        /// </summary>
+        public static string Timeline_Event42_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event42_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Death of Zeke.
+        /// </summary>
+        public static string Timeline_Event42_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event42_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event42_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event42_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With the world&apos;s forces converging on the Founder, Mikasa Ackerman severs Eren&apos;s head, ending the Rumbling and fulfilling the promise she made him years before..
+        /// </summary>
+        public static string Timeline_Event43_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event43_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mikasa Kills Eren.
+        /// </summary>
+        public static string Timeline_Event43_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event43_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event43_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event43_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With Eren&apos;s death, Ymir Fritz is finally freed from 2,000 years of servitude and relinquishes the Power of the Titans — the curse ends, and Titan shifting vanishes from the world forever..
+        /// </summary>
+        public static string Timeline_Event44_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event44_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Titan Curse Ends.
+        /// </summary>
+        public static string Timeline_Event44_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event44_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 854.
+        /// </summary>
+        public static string Timeline_Event44_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event44_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Three years after the Rumbling, the alliance&apos;s survivors work to broker a fragile peace between Paradis and the nations of the world it nearly destroyed..
+        /// </summary>
+        public static string Timeline_Event45_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event45_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Peace Negotiations Begin.
+        /// </summary>
+        public static string Timeline_Event45_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event45_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 857.
+        /// </summary>
+        public static string Timeline_Event45_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event45_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Without the Founding Titan&apos;s deterrent, Paradis begins rebuilding its military from scratch, uncertain whether the fragile peace will hold against a world still wary of Eldians..
+        /// </summary>
+        public static string Timeline_Event46_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event46_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paradis Militarizes.
+        /// </summary>
+        public static string Timeline_Event46_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event46_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post-857.
+        /// </summary>
+        public static string Timeline_Event46_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event46_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A haunting final-page glimpse suggests peace did not last — Paradis lies in ruins generations later, leaving the epilogue&apos;s meaning deliberately open to interpretation..
+        /// </summary>
+        public static string Timeline_Event47_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event47_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destruction of Paradis.
+        /// </summary>
+        public static string Timeline_Event47_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event47_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Far Future.
+        /// </summary>
+        public static string Timeline_Event47_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event47_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In a peaceful future, a boy stumbles upon the great tree where Mikasa laid Eren to rest, closing the story on a quiet note of memory and hope..
+        /// </summary>
+        public static string Timeline_Event48_Desc {
+            get {
+                return ResourceManager.GetString("Timeline_Event48_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boy Finds the Giant Tree.
+        /// </summary>
+        public static string Timeline_Event48_Title {
+            get {
+                return ResourceManager.GetString("Timeline_Event48_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Far Future.
+        /// </summary>
+        public static string Timeline_Event48_Year {
+            get {
+                return ResourceManager.GetString("Timeline_Event48_Year", resourceCulture);
             }
         }
         

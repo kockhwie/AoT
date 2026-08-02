@@ -70,7 +70,7 @@
                                     <div class="aot-timeline-box-top">
                                         <time class="aot-timeline-time font-sans">@YearDisplay(evt)</time>
                                         <span class="comic-badge @SigBadgeClass(evt.Significance) aot-timeline-sig">
-                                            <i class="ti ti-star-filled"></i>@evt.Significance
+                                            <i class="ti ti-star-filled"></i>@LocalizationService.GetString(SigLabelKey(evt.Significance))
                                         </span>
                                     </div>
                                     <div class="aot-timeline-title font-sans">@LocalizationService.GetString(evt.TitleKey)</div>
@@ -298,6 +298,12 @@
 
     private static string TypeLabelKey(EvtType t) => $"EvtType_{t}";
 
+    private static string SigLabelKey(int significance) => significance switch
+    {
+        10 => "Sig_Pivotal",
+        >= 8 => "Sig_Major",
+        _ => "Sig_Notable"
+    };
     private static string SigBadgeClass(int significance) => significance switch
     {
         10 => "comic-badge--gold",
