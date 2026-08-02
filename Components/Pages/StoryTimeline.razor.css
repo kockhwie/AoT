@@ -170,13 +170,7 @@
     box-shadow: 2px 2px 0px var(--aot-black);
 }
 
-.aot-timeline-time {
-    font-weight: 900;
-    color: #dfbb6b; /* Warm gold */
-    font-size: 0.875rem;
-    display: block;
-    letter-spacing: 0.05em;
-}
+
 
 .aot-timeline-title {
     font-weight: 700;
@@ -196,58 +190,61 @@
     background-color: rgba(123, 123, 123, 0.28) !important;
 }
 
-/* Base icon node */
+/* Base icon node — now shows the event's Year as text, so it's a pill (auto width)
+   rather than a fixed circle, and pinned to the top of the row so it lines up with
+   the box's first line instead of floating at the box's vertical center. */
 .timeline-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    font-size: 1.0rem;
+    align-self: start;
+    min-width: 5.0rem;
+    width: auto;
+    height: 2.00rem;
+    padding: 0 0.6rem;
+    border-radius: 5px;
+    font-size: 0.60rem;
+    font-weight: 800;
+    color:#000;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
     border: 2px solid rgba(255, 255, 255, 0.08);
     flex-shrink: 0;
 }
 
+
 .timeline-icon--catastrophe {
-    background: rgba(239, 68, 68, 0.18);
-    color: #f87171;
+    background: #ffffff;
     border-color: rgba(239, 68, 68, 0.35);
 }
 
 .timeline-icon--battle {
-    background: rgba(251, 146, 60, 0.18);
-    color: #fb923c;
+    background: #ffffff;
     border-color: rgba(251, 146, 60, 0.35);
 }
 
 .timeline-icon--recon {
-    background: rgba(45, 212, 191, 0.18);
-    color: #2dd4bf;
+    background: #ffffff;
     border-color: rgba(45, 212, 191, 0.35);
 }
 
 .timeline-icon--betrayal {
-    background: rgba(234, 179, 8, 0.18);
-    color: #eab308;
+    background: #ffffff;
     border-color: rgba(234, 179, 8, 0.35);
 }
 
 .timeline-icon--war {
-    background: rgba(220, 38, 38, 0.2);
-    color: #f87171;
+    background: #ffffff;
     border-color: rgba(220, 38, 38, 0.4);
 }
 
 .timeline-icon--rumbling {
-    background: rgba(239, 68, 68, 0.25);
-    color: #fca5a5;
+    background: #ffffff;
     border-color: rgba(239, 68, 68, 0.5);
 }
 
 .timeline-icon--final {
-    background: rgba(212, 175, 55, 0.2);
-    color: #dfbb6b;
+    background: #ffffff;
     border-color: rgba(212, 175, 55, 0.5);
 }
 

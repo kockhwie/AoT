@@ -64,19 +64,15 @@
                                     <hr class="timeline-connector" />
                                 }
                                 <div class="timeline-middle timeline-icon @IconColorClass(evt.Type)">
-                                    <i class="ti @IconClass(evt.Type)"></i>
+                                    @YearDisplay(evt)
                                 </div>
-                                <div class="timeline-end aot-timeline-box">
-                                    <div class="aot-timeline-box-top">
-                                        <time class="aot-timeline-time font-sans">@YearDisplay(evt)</time>
-                                        <span class="comic-badge @SigBadgeClass(evt.Significance) aot-timeline-sig">
-                                            <i class="ti ti-star-filled"></i>@LocalizationService.GetString(SigLabelKey(evt.Significance))
-                                        </span>
-                                    </div>
+                                <div class="timeline-end aot-timeline-box">                                                                         
                                     <div class="aot-timeline-title font-sans">@LocalizationService.GetString(evt.TitleKey)</div>
-                                    <span class="comic-tag aot-timeline-type font-sans">@LocalizationService.GetString(TypeLabelKey(evt.Type))</span>
-                                    <p class="aot-timeline-desc font-sans">@LocalizationService.GetString(evt.DescKey)</p>
-                                    @{
+                                    <span class="comic-badge comic-badge--gold aot-timeline-sig">
+                                        @LocalizationService.GetString(SigLabelKey(evt.Significance))
+                                    </span>
+                                    <span class="comic-badge comic-badge--accent aot-timeline-sig">@LocalizationService.GetString(TypeLabelKey(evt.Type))</span>
+                                    <p class="aot-timeline-desc font-sans">@LocalizationService.GetString(evt.DescKey)</p>                                    @{
                                         var vol = ParseVolume(evt.MangaRef);
                                     }
                                     @if (vol is not null && MangaData.FindVolume(vol.Value) is not null)
@@ -303,12 +299,6 @@
         10 => "Sig_Pivotal",
         >= 8 => "Sig_Major",
         _ => "Sig_Notable"
-    };
-    private static string SigBadgeClass(int significance) => significance switch
-    {
-        10 => "comic-badge--gold",
-        >= 8 => "comic-badge--accent",
-        _ => "comic-badge--silver"
     };
 
     // manga refs look like "Vol. 22, Ch. 89" or "Vol. 22" — pull the first volume number so we
