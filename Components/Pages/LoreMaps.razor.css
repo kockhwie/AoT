@@ -568,6 +568,42 @@
     border-top: 2px solid var(--aot-black);
     padding-top: 0.75rem;
 }
+.lore-faction-members-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.lore-member-tag {
+    
+    border: 2px solid var(--aot-black);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+@media (hover: hover) {
+    a.lore-member-tag:hover {
+        background: var(--aot-red);
+        color: var(--aot-white);
+        border-color: var(--aot-black);
+        transform: translateY(-2px);
+        box-shadow: 3px 3px 0px var(--aot-black);
+    }
+
+    button.lore-member-tag:hover {
+        background: var(--aot-red);
+        color: var(--aot-white);
+        border-color: var(--aot-black);
+        transform: translateY(-2px);
+        box-shadow: 3px 3px 0px var(--aot-black);
+    }
+}
+
+.lore-member-tag.is-plain {
+    opacity: 0.55;
+    cursor: default;
+}
 
 @media (max-width: 640px) {
     .lore-faction-desc {

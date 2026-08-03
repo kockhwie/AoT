@@ -389,3 +389,4 @@ obj/
 .vs/
 DataProtectionKeys/
 *.py
+/py/add_quickview_resx.py

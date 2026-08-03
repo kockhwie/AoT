@@ -1,0 +1,51 @@
+﻿@using AOT.Services
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+
+@if (Character is not null)
+{
+    <div class="qv-backdrop" @onclick="Close">
+        <div class="qv-card comic-card" @onclick:stopPropagation="true">
+            <button type="button" class="qv-close-btn" @onclick="Close" aria-label="Close">
+                <i class="ti ti-x"></i>
+            </button>
+
+            <div class="qv-body">
+                <div class="qv-portrait comic-frame">
+                    <img src="/img/characters/@Character.Portrait" class="qv-portrait-img"
+                         style="@Character.FocalStyle" alt="@LocalizationService.GetString(Character.NameKey)" />
+                </div>
+
+                <div class="qv-info">
+                    @if (!string.IsNullOrEmpty(Character.Badge))
+                    {
+                        <span class="comic-badge comic-badge--gold qv-badge">@Character.Badge</span>
+                    }
+                    <h3 class="qv-name">@TextFormatHelper.FormatNameWithAka(LocalizationService.GetString(Character.NameKey))</h3>
+                    <p class="qv-title">@LocalizationService.GetString(Character.TitleKey)</p>
+
+                    <div class="qv-factions">
+                        @foreach (var faction in Character.Factions)
+                        {
+                            <span class="comic-tag qv-faction-tag">@LocalizationService.GetString(CharacterData.FactionNameKeys[faction])</span>
+                        }
+                    </div>
+
+                    <p class="qv-bio">@LocalizationService.GetString(Character.BioKey)</p>
+
+                    <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters/@Character.Slug"
+                       class="aot-btn aot-btn--white aot-btn--sm qv-full-link">
+                        @LocalizationService.GetString("QuickView_FullProfile") <i class="ti ti-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public CharacterProfile? Character { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private Task Close() => OnClose.InvokeAsync();
+}

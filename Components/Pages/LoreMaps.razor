@@ -134,7 +134,24 @@
                         <p class="lore-faction-desc font-sans">@LocalizationService.GetString(faction.DescKey)</p>
                         <div class="lore-faction-members">
                             <span class="lore-detail-label font-sans">@LocalizationService.GetString("Lore_LabelMembers")</span>
-                            <p class="lore-detail-value font-sans">@LocalizationService.GetString(faction.MembersKey)</p>
+                            <div class="lore-faction-members-list">
+                                @foreach (var member in faction.Members)
+                                {
+                                    var profile = ResolveMember(member);
+                                    @if (profile is not null)
+                                    {
+                                        <button type="button" class="comic-tag lore-member-tag" @onclick="() => OpenCharacter(profile)">
+                                            @LocalizationService.GetString(profile.NameKey)
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <span class="comic-tag lore-member-tag is-plain">
+                                            @LocalizationService.GetString(member.FallbackNameKey!)
+                                        </span>
+                                    }
+                                }
+                            </div>
                         </div>
                     </div>
                 }
@@ -176,8 +193,15 @@
     </div>
 </div>
 
+<CharacterQuickView Character="_selectedCharacter" OnClose="CloseCharacter" />
+
 @code {
     [Parameter] public string? Lang { get; set; }
+
+    private CharacterProfile? _selectedCharacter;
+
+    private void OpenCharacter(CharacterProfile profile) => _selectedCharacter = profile;
+    private void CloseCharacter() => _selectedCharacter = null;
 
     private int _activeTab;
     private int _expandedTitanId = -1;
@@ -219,13 +243,23 @@
         public string DistrictsKey => $"Lore_Wall{Id}_Districts";
     }
 
+    // A faction member either links to an existing CharacterData entry (Slug set)
+    // or, for characters not yet added to the roster, shows plain localized text
+    // (FallbackNameKey set). Flipping a FallbackNameKey to a Slug later is the
+    // only change needed once that character gets added — nothing else to touch.
+    private sealed class LoreMemberRef
+    {
+        public string? Slug { get; init; }
+        public string? FallbackNameKey { get; init; }
+    }
+
     private sealed class FactionModel
     {
         public int Id { get; init; }
         public string NameKey => $"Lore_F{Id}_Name";
         public string DescKey => $"Lore_F{Id}_Desc";
-        public string MembersKey => $"Lore_F{Id}_Members";
         public string IconClass { get; init; } = "";
+        public List<LoreMemberRef> Members { get; init; } = new();
     }
 
     // ── Data: Nine Titans (reuses existing T*Name / T*H / T*Desc keys) ──
@@ -256,13 +290,33 @@
 
     private readonly List<FactionModel> _factions = new()
     {
-        new() { Id = 1, IconClass = "ti-feather" },      // Survey Corps
-        new() { Id = 2, IconClass = "ti-rosette" },      // Garrison
-        new() { Id = 3, IconClass = "ti-shield-lock" },  // Military Police
-        new() { Id = 4, IconClass = "ti-trees" },        // Eldia / Paradis
-        new() { Id = 5, IconClass = "ti-flag" },       // Marley
-        new() { Id = 6, IconClass = "ti-swords" },       // Warrior Unit
-        new() { Id = 7, IconClass = "ti-sun" },          // Hizuru
+        new() { Id = 1, IconClass = "ti-feather", Members = new() {
+            new() { Slug = "erwin-smith" }, new() { Slug = "levi-ackerman" }, new() { Slug = "hange-zoe" },
+            new() { Slug = "eren-yeager" }, new() { Slug = "mikasa-ackerman" }, new() { Slug = "armin-arlert" },
+        }},
+        new() { Id = 2, IconClass = "ti-rosette", Members = new() {
+            new() { Slug = "Dot-Pixis" }, new() { Slug = "hannes" },
+            new() { FallbackNameKey = "Lore_MemberIanDietrich" }, // not yet in the character roster
+            new() { Slug = "Rico-Brzenska" },
+        }},
+        new() { Id = 3, IconClass = "ti-shield-lock", Members = new() {
+            new() { Slug = "nile-dok" }, new() { Slug = "kenny-ackerman" }, new() { Slug = "Marlowe-Freudenberg" },
+        }},
+        new() { Id = 4, IconClass = "ti-trees", Members = new() {
+            new() { Slug = "historia-reiss" }, new() { Slug = "Rod-Reiss" },
+            new() { FallbackNameKey = "Lore_MemberDariusZackly" }, // not yet in the character roster
+        }},
+        new() { Id = 5, IconClass = "ti-flag", Members = new() {
+            new() { Slug = "willy-tybur" }, new() { Slug = "Theo-Magath-Acommander" }, new() { Slug = "Calvi-The-Marshal" },
+        }},
+        new() { Id = 6, IconClass = "ti-swords", Members = new() {
+            new() { Slug = "Reiner-Braun" }, new() { Slug = "Bertolt-Hoover" }, new() { Slug = "Annie-Leonhart" },
+            new() { Slug = "Zeke-Yeager" }, new() { Slug = "Pieck-Finger" }, new() { Slug = "Porco-Galliard" },
+            new() { Slug = "Falco-Grice" }, new() { Slug = "Gabi-Braun" },
+        }},
+        new() { Id = 7, IconClass = "ti-sun", Members = new() {
+            new() { FallbackNameKey = "Lore_MemberKiyomiAzumabito" }, // not yet in the character roster
+        }},
     };
 
     // ── Lifecycle ──
@@ -290,4 +344,7 @@
     {
         LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
     }
+
+    private CharacterProfile? ResolveMember(LoreMemberRef member) =>
+        member.Slug is not null ? CharacterData.FindBySlug(member.Slug) : null;
 }

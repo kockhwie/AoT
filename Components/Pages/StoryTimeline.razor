@@ -42,6 +42,11 @@
                                 <h2 class="aot-arc-title font-sans">@LocalizationService.GetString(arc.TitleKey)</h2>
                             </div>
                             <p class="aot-arc-desc font-sans">@LocalizationService.GetString(arc.DescKey)</p>
+
+                            <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/manga#section_@MangaData.ArcNameKeys[arc.LinkedArc]"
+                               class="aot-btn aot-btn--xsm aot-btn--white aot-timeline-mangalink">
+                                <i class="ti ti-book"></i> @LocalizationService.GetString("Btn_ViewManga")
+                            </a>
                         </div>
                     </div>
                 }
@@ -152,20 +157,23 @@
         public string TitleKey { get; init; } = "";
         public string ChaptersKey { get; init; } = "";
         public string DescKey { get; init; } = "";
+        public MangaArc LinkedArc { get; init; } // NEW — which manga shelf this arc jumps to
+
     }
 
     private readonly List<StoryArcModel> _storyArcs = new()
     {
-        new StoryArcModel { TitleKey = "Arc1Title", ChaptersKey = "Arc1Chapters", DescKey = "Arc1Desc" },
-        new StoryArcModel { TitleKey = "Arc2Title", ChaptersKey = "Arc2Chapters", DescKey = "Arc2Desc" },
-        new StoryArcModel { TitleKey = "Arc3Title", ChaptersKey = "Arc3Chapters", DescKey = "Arc3Desc" },
-        new StoryArcModel { TitleKey = "Arc4Title", ChaptersKey = "Arc4Chapters", DescKey = "Arc4Desc" },
-        new StoryArcModel { TitleKey = "Arc5Title", ChaptersKey = "Arc5Chapters", DescKey = "Arc5Desc" },
-        new StoryArcModel { TitleKey = "Arc6Title", ChaptersKey = "Arc6Chapters", DescKey = "Arc6Desc" },
-        new StoryArcModel { TitleKey = "Arc7Title", ChaptersKey = "Arc7Chapters", DescKey = "Arc7Desc" },
-        new StoryArcModel { TitleKey = "Arc8Title", ChaptersKey = "Arc8Chapters", DescKey = "Arc8Desc" },
-        new StoryArcModel { TitleKey = "Arc9Title", ChaptersKey = "Arc9Chapters", DescKey = "Arc9Desc" },
-        new StoryArcModel { TitleKey = "Arc10Title", ChaptersKey = "Arc10Chapters", DescKey = "Arc10Desc" }
+        new StoryArcModel { TitleKey = "Arc1Title",  ChaptersKey = "Arc1Chapters",  DescKey = "Arc1Desc",  LinkedArc = MangaArc.FallOfShiganshina },
+        new StoryArcModel { TitleKey = "Arc2Title",  ChaptersKey = "Arc2Chapters",  DescKey = "Arc2Desc",  LinkedArc = MangaArc.TrainingCorps104 },
+        new StoryArcModel { TitleKey = "Arc3Title",  ChaptersKey = "Arc3Chapters",  DescKey = "Arc3Desc",  LinkedArc = MangaArc.BattleOfTrost },
+        new StoryArcModel { TitleKey = "Arc4Title",  ChaptersKey = "Arc4Chapters",  DescKey = "Arc4Desc",  LinkedArc = MangaArc.FemaleTitan },
+        new StoryArcModel { TitleKey = "Arc5Title",  ChaptersKey = "Arc5Chapters",  DescKey = "Arc5Desc",  LinkedArc = MangaArc.ClashOfTitans },
+        new StoryArcModel { TitleKey = "Arc6Title",  ChaptersKey = "Arc6Chapters",  DescKey = "Arc6Desc",  LinkedArc = MangaArc.RoyalGovernment },
+        new StoryArcModel { TitleKey = "Arc7Title",  ChaptersKey = "Arc7Chapters",  DescKey = "Arc7Desc",  LinkedArc = MangaArc.ReturnToShiganshina },
+        new StoryArcModel { TitleKey = "Arc8Title",  ChaptersKey = "Arc8Chapters",  DescKey = "Arc8Desc",  LinkedArc = MangaArc.Marley },
+        new StoryArcModel { TitleKey = "Arc9Title",  ChaptersKey = "Arc9Chapters",  DescKey = "Arc9Desc",  LinkedArc = MangaArc.WarForParadis },
+        new StoryArcModel { TitleKey = "Arc10Title", ChaptersKey = "Arc10Chapters", DescKey = "Arc10Desc", LinkedArc = MangaArc.Rumbling },
+
     };
 
     // ── Timeline event type — drives icon glyph, icon color, and the type badge label ──
