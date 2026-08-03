@@ -97,8 +97,7 @@
                 <div class="wall-feed-node">
                     <span class="wall-feed-node-label">@LocalizationService.GetString("WallOuterRim")</span>
                     <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall1_Name")</h3>
-                    <div id="m-badge" class="comic-badge wall-feed-badge @currentData.M.Cls">
-                        <span class="wall-feed-badge-dot"></span>
+                    <div id="m-badge" class="comic-badge  @currentData.M.Cls">
                         @LocalizationService.GetString(currentData.M.LblKey)
                     </div>
                     <p id="m-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.M.TextKey)</p>
@@ -108,7 +107,7 @@
                 <div class="wall-feed-node">
                     <span class="wall-feed-node-label">@LocalizationService.GetString("WallMidBuffer")</span>
                     <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall2_Name")</h3>
-                    <div id="r-badge" class="comic-badge wall-feed-badge @currentData.R.Cls">
+                    <div id="r-badge" class="comic-badge  @currentData.R.Cls">
                         <span class="wall-feed-badge-dot"></span>
                         @LocalizationService.GetString(currentData.R.LblKey)
                     </div>
@@ -119,7 +118,7 @@
                 <div class="wall-feed-node">
                     <span class="wall-feed-node-label">@LocalizationService.GetString("WallInnerSanctuary")</span>
                     <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall3_Name")</h3>
-                    <div id="s-badge" class="comic-badge wall-feed-badge @currentData.S.Cls">
+                    <div id="s-badge" class="comic-badge  @currentData.S.Cls">
                         <span class="wall-feed-badge-dot"></span>
                         @LocalizationService.GetString(currentData.S.LblKey)
                     </div>
@@ -175,7 +174,7 @@
 <!-- SECTION HP-04: ICONIC QUOTE OF THE DAY GENERATOR BOX       -->
 <!-- ======================================================== -->
 <div class="wall-quote comic-card">
-    <span class="wall-quote-syslog">@LocalizationService.GetString("QuoteSysLog")</span>
+    <span class="wall-cta-tag">@LocalizationService.GetString("QuoteSysLog")</span>
 
     <!-- The text and author now bind directly to C# variables and react to state changes -->
     <p class="wall-quote-text @_fadeClass">@_currentQuoteText</p>
