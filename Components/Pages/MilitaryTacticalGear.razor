@@ -1,0 +1,123 @@
+@page "/world-lore/military-tactical-gear"
+@page "/{Lang}/world-lore/military-tactical-gear"
+@using AOT.Services
+@implements IDisposable
+@inject AppLocalizationService LocalizationService
+@inject LanguageSwitchService LanguageSwitcher
+@inject NavigationManager Nav
+
+<PageTitle>@LocalizationService.GetString("GearSectionTitle") - @LocalizationService.GetString("PageTitle")</PageTitle>
+
+<div class="aot-page-container">
+    <!-- Premium Obsidian Header Panel -->
+    <div class="gear-page-header">
+        <h1 class="gear-page-title uppercase">@LocalizationService.GetString("GearSectionTitle")</h1>
+        <p class="gear-page-subtitle font-sans">@LocalizationService.GetString("HeroDesc")</p>
+    </div>
+
+    <!-- Main Gear Grid -->
+    <div class="gear-grid-container mt-6">
+        @foreach (var gear in _gearDatabase)
+        {
+            <div class="gear-item-card theme-@gear.ClassBadge.ToLower().Replace("_", "-")">
+                <div class="gear-card-header">
+                    <h2 class="gear-item-title font-sans">@LocalizationService.GetString(gear.NameKey)</h2>
+                    <div class="gear-badge-accent font-sans">@LocalizationService.GetString(gear.ClassBadge)</div>
+                </div>
+
+                <div class="gear-item-tech font-sans">
+                    @LocalizationService.GetString(gear.TechKey)
+                </div>
+
+                <!-- Gear Graphic/Blueprint Placeholder -->
+                <div class="gear-image-container">
+                    <i class="ti ti-settings gear-placeholder-icon"></i>
+                    <span class="gear-placeholder-text">CLASSIFIED BLUEPRINT</span>
+                </div>
+
+                <p class="gear-item-desc font-sans">
+                    @LocalizationService.GetString(gear.DescKey)
+                </p>
+
+                <div class="gear-divider"></div>
+
+                <div class="gear-specs-row font-sans">
+                    <div>
+                        <span class="spec-label">@LocalizationService.GetString("SpecWeight"):</span>
+                        <span class="spec-value">@gear.WeightSpec</span>
+                    </div>
+                    <div>
+                        <span class="spec-label">@LocalizationService.GetString("SpecRisk"):</span>
+                        <span class="spec-value-risk @(gear.RiskLevel == "CRITICAL" ? "risk-critical" : "risk-high")">@gear.RiskLevel</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Lang { get; set; }
+
+    private sealed class GearModel
+    {
+        public string NameKey { get; init; } = "";
+        public string TechKey { get; init; } = "";
+        public string DescKey { get; init; } = "";
+        public string ClassBadge { get; init; } = "";
+        public string WeightSpec { get; init; } = "";
+        public string RiskLevel { get; init; } = "";
+    }
+
+    private readonly List<GearModel> _gearDatabase = new()
+    {
+        new GearModel {
+            NameKey = "G1Name", TechKey = "G1Tech", DescKey = "G1Desc", ClassBadge = "MOBILITY",
+            WeightSpec = "12.5 kg", RiskLevel = "HIGH"
+        },
+        new GearModel {
+            NameKey = "G2Name", TechKey = "G2Tech", DescKey = "G2Desc", ClassBadge = "WEAPON",
+            WeightSpec = "1.8 kg (單刃)", RiskLevel = "LOW"
+        },
+        new GearModel {
+            NameKey = "G3Name", TechKey = "G3Tech", DescKey = "G3Desc", ClassBadge = "HEAVY_WEAPON",
+            WeightSpec = "4.5 kg (單發)", RiskLevel = "CRITICAL"
+        },
+        new GearModel {
+            NameKey = "G4Name", TechKey = "G4Tech", DescKey = "G4Desc", ClassBadge = "FIREARM",
+            WeightSpec = "8.2 kg", RiskLevel = "HIGH"
+        },
+        new GearModel {
+            NameKey = "G5Name", TechKey = "G5Tech", DescKey = "G5Desc", ClassBadge = "ARTILLERY",
+            WeightSpec = "350 kg+", RiskLevel = "MEDIUM"
+        },
+        new GearModel {
+            NameKey = "G6Name", TechKey = "G6Tech", DescKey = "G6Desc", ClassBadge = "TACTICAL",
+            WeightSpec = "0.9 kg", RiskLevel = "MINIMAL"
+        }
+    };
+
+    protected override void OnInitialized()
+    {
+        LanguageSwitcher.OnLanguageChanged += HandleLanguageChanged;
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+        {
+            LanguageSwitcher.Initialize(Lang);
+            LocalizationService.ActiveLang = LanguageSwitcher.ActiveLang;
+        }
+    }
+
+    private void HandleLanguageChanged(string newLanguage)
+    {
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        LanguageSwitcher.OnLanguageChanged -= HandleLanguageChanged;
+    }
+}

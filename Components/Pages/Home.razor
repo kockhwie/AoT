@@ -313,31 +313,14 @@
         <i class="ti ti-settings"></i>@LocalizationService.GetString("GearSectionTitle")
     </h3>
 
-    <div class="aot-gear-grid">
-        @foreach (var gear in _gearDatabase)
-        {
-            <div class="aot-gear-card gear-theme-@gear.ClassBadge.ToLower().Replace("_", "-")">
-                <div class="aot-gear-header">
-                    <h4 class="aot-gear-title">@LocalizationService.GetString(gear.NameKey)</h4>
-                    <div class="badge badge-outline badge-accent aot-gear-badge">@LocalizationService.GetString(gear.ClassBadge)</div>
-                </div>
-
-                <div class="aot-gear-tech">
-                    @LocalizationService.GetString(gear.TechKey)
-                </div>
-
-                <p class="aot-gear-desc">
-                    @LocalizationService.GetString(gear.DescKey)
-                </p>
-
-                <div class="divider aot-card-divider"></div>
-
-                <div class="aot-gear-specs">
-                    <div><span>@LocalizationService.GetString("SpecWeight"):</span> <span class="text-white">@gear.WeightSpec</span></div>
-                    <div><span>@LocalizationService.GetString("SpecRisk"):</span> <span class="text-error font-bold">@gear.RiskLevel</span></div>
-                </div>
-            </div>
-        }
+    <div class="aot-timeline-card p-6 flex flex-col md:flex-row justify-between items-center gap-4" style="background: linear-gradient(135deg, rgba(20,22,26,0.85), rgba(12,13,16,0.95)); border: 1px solid rgba(255,215,0,0.15); border-radius: 12px;">
+        <div class="flex flex-col gap-1">
+            <h4 class="text-white text-lg font-bold">@LocalizationService.GetString("GearSectionTitle")</h4>
+            <p class="text-neutral-content text-sm max-w-xl">@LocalizationService.GetString("HeroDesc")</p>
+        </div>
+        <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/world-lore/military-tactical-gear" class="aot-btn aot-btn--yellow whitespace-nowrap">
+            <i class="ti ti-shield-half mr-1"></i> @LocalizationService.GetString("Nav_MilitaryTacticalGear")
+        </a>
     </div>
 </div>
 

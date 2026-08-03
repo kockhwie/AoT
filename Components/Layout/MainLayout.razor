@@ -21,12 +21,21 @@
                         <li>
                             <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a>
                         </li>
-                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
-                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavLoreMaps</a></li>
+                        <li>
+                            <details name="nav-menu-worldview-mobile">
+                                <summary>@LocalizationService.NavWorldviewHistory</summary>
+                                <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
+                                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavWorldMaps</a></li>
+                                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/timeline">@LocalizationService.NavHistoryTimeline</a></li>
+                                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/world-lore/military-tactical-gear">@LocalizationService.NavMilitaryTacticalGear</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.NavStoryArcs</a></li>
                         <li>
                             <details name="nav-menu-mobile">
                                 <summary>@LocalizationService.NavMedia</summary>
-                            <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
+                                <ul class="menu menu-sm dropdown-content z-50 mt-2 rounded-box nav-menu p-2 shadow-2xl">
                                     <li>
                                         <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/about-author">@LocalizationService.GetString("Nav_AboutAuthorHajimeIsayama")</a>
                                     </li>
@@ -46,7 +55,7 @@
 
                         <li><a>@LocalizationService.NavNews</a></li>
 
-                        <li><a>@LocalizationService.NavFanZone</a></li>
+                        <li><a>@LocalizationService.NavCommunity</a></li>
                     </ul>
                 </div>
                 <a class="text-sm" href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
@@ -56,8 +65,17 @@
                     <li> 
                         <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/characters">@LocalizationService.NavCharacters</a> 
                     </li>
-                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.GetString("Nav_StoryTimeline")</a></li>
-                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavLoreMaps</a></li>
+                    <li>
+                        <details name="nav-menu-worldview-desktop">
+                            <summary tabindex="0">@LocalizationService.NavWorldviewHistory</summary>
+                            <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 nav-menu p-2 shadow-2xl">
+                                <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/lore">@LocalizationService.NavWorldMaps</a></li>
+                                <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/timeline">@LocalizationService.NavHistoryTimeline</a></li>
+                                <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/world-lore/military-tactical-gear">@LocalizationService.NavMilitaryTacticalGear</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/story">@LocalizationService.NavStoryArcs</a></li>
 
                     <li>
                         <details name="nav-menu-desktop">
@@ -82,7 +100,7 @@
 
                     <li><a>@LocalizationService.NavNews</a></li>
 
-                    <li><a>@LocalizationService.NavFanZone</a></li>
+                    <li><a>@LocalizationService.NavCommunity</a></li>
                 </ul>
             </div>
             <div class="navbar-end">

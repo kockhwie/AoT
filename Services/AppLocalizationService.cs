@@ -50,6 +50,12 @@ public class AppLocalizationService
     public string NavMedia => GetText("NavMedia");
     public string NavNews => GetText("NavNews");
     public string NavFanZone => GetText("NavFanZone");
+    public string NavWorldviewHistory => GetText("NavLoreMaps");
+    public string NavWorldMaps => GetText("Nav_WorldMaps");
+    public string NavHistoryTimeline => GetText("Nav_HistoryTimeline");
+    public string NavMilitaryTacticalGear => GetText("Nav_MilitaryTacticalGear");
+    public string NavStoryArcs => GetText("Nav_StoryArcs");
+    public string NavCommunity => GetText("NavFanZone");
 
     // Sidebar
     public string SidebarTitle => GetText("SidebarTitle");

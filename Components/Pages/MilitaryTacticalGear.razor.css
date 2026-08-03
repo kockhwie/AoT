@@ -1,0 +1,179 @@
+.aot-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Premium Obsidian Header Panel */
+.gear-page-header {
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gear-page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.18em;
+    margin: 0 0 0.5rem 0;
+}
+
+.gear-page-subtitle {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Main Gear Grid */
+.gear-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Gear Card Styling */
+.gear-item-card {
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.85), rgba(12, 13, 16, 0.95));
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gear-item-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Gear Image Placeholder Container */
+.gear-image-container {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px dashed rgba(255, 215, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gear-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.gear-placeholder-icon {
+    font-size: 2rem;
+    color: rgba(255, 215, 0, 0.45);
+    margin-bottom: 0.5rem;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.gear-placeholder-text {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.85; }
+}
+
+.gear-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+/* Tier 1 - Title */
+.gear-item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Neon/Badge Accent */
+.gear-badge-accent {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #dfbb6b;
+    border: 1px solid rgba(223, 187, 107, 0.3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+}
+
+/* Tier 2 - Subtitle / Tech */
+.gear-item-tech {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #dfbb6b;
+    margin-bottom: 0.75rem;
+}
+
+/* Tier 3 - Body Description */
+.gear-item-desc {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.gear-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+}
+
+/* Specs Details */
+.gear-specs-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.spec-label {
+    color: #9ca3af;
+    margin-right: 0.25rem;
+}
+
+.spec-value {
+    color: #ffffff;
+}
+
+.spec-value-risk {
+    font-weight: 700;
+}
+
+.risk-critical {
+    color: #ef4444;
+}
+
+.risk-high {
+    color: #f97316;
+}

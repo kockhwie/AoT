@@ -620,7 +620,6 @@
    overlay + the decorative tree, same nesting pattern as author-panel */
 .lore-paths-section {
     position: relative;
-    padding: 3rem 2rem;
     overflow: hidden;
     min-height: 500px;
 }
@@ -781,7 +780,7 @@
 
 @media (max-width: 640px) {
     .lore-paths-section {
-        padding: 2rem 1.25rem;
+        padding: 1rem 1.25rem;
     }
 
     .paths-body,

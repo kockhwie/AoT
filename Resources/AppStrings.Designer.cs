@@ -2365,6 +2365,33 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Darius Zackly.
+        /// </summary>
+        public static string Lore_MemberDariusZackly {
+            get {
+                return ResourceManager.GetString("Lore_MemberDariusZackly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ian Dietrich.
+        /// </summary>
+        public static string Lore_MemberIanDietrich {
+            get {
+                return ResourceManager.GetString("Lore_MemberIanDietrich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kiyomi Azumabito.
+        /// </summary>
+        public static string Lore_MemberKiyomiAzumabito {
+            get {
+                return ResourceManager.GetString("Lore_MemberKiyomiAzumabito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Explore the world of Attack on Titan, the Nine Titans, the Three Walls, factions, nations, and the mysterious Paths realm..
         /// </summary>
         public static string Lore_MetaDesc {
@@ -2442,15 +2469,6 @@ namespace AOT.Resources {
         public static string Lore_Paths_Subtitle {
             get {
                 return ResourceManager.GetString("Lore_Paths_Subtitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Paths.
-        /// </summary>
-        public static string Lore_Paths_Title {
-            get {
-                return ResourceManager.GetString("Lore_Paths_Title", resourceCulture);
             }
         }
         
@@ -3918,6 +3936,15 @@ namespace AOT.Resources {
         public static string PollVotedBadge {
             get {
                 return ResourceManager.GetString("PollVotedBadge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Full Profile.
+        /// </summary>
+        public static string QuickView_FullProfile {
+            get {
+                return ResourceManager.GetString("QuickView_FullProfile", resourceCulture);
             }
         }
         
