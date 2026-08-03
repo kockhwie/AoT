@@ -67,6 +67,283 @@
     </div>
 </div>
 
+
+<!-- TASK HP-01: Interactive Tactical Wall Monitor -->
+<div style="width: 100%; max-width: 1100px; margin: 3rem auto; padding: 0 1rem; font-family: monospace; box-sizing: border-box;">
+  
+  <div style="background-color: #0c0a09; border: 1px solid #292524; border-radius: 12px; overflow: hidden; margin-bottom: 4rem;">
+    
+    <div style="background-color: #1c1917; border-bottom: 1px solid #292524; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 8px; height: 8px; background-color: #ef4444; border-radius: 50%;"></span>
+        <span style="font-size: 11px; font-weight: bold; color: #a8a29e; letter-spacing: 1px;">WALL GARRISON TACTICAL FEED</span>
+      </div>
+      
+      <div style="display: flex; background-color: #0c0a09; padding: 4px; border-radius: 8px; border: 1px solid #292524; gap: 4px;">
+        <button onclick="changeAotEra('e845')" id="t-e845" style="background-color: #450a0a; color: #f87171; border: 1px solid #7f1d1d; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer;">845: FALL OF MARIA</button>
+        <button onclick="changeAotEra('e850')" id="t-e850" style="background-color: transparent; color: #78716c; border: 1px solid transparent; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer;">850: STOHESS RAID</button>
+        <button onclick="changeAotEra('e854')" id="t-e854" style="background-color: transparent; color: #78716c; border: 1px solid transparent; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; cursor: pointer;">854: THE RUMBLING</button>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 32px; gap: 32px; color: #e7e5e4;">
+      
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <span style="font-size: 10px; color: #57534e; text-transform: uppercase;">Outer Rim</span>
+        <h3 style="font-size: 20px; font-weight: bold; margin: 4px 0 0 0;">Wall Maria</h3>
+        <div id="m-badge" style="margin: 20px 0; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px; background-color: rgba(69,10,10,0.4); border: 1px solid rgba(127,29,29,0.5); color: #f87171;">
+          <span style="width: 6px; height: 6px; background-color: #ef4444; border-radius: 50%;"></span>BREACHED
+        </div>
+        <p id="m-desc" style="font-size: 12px; color: #a8a29e; line-height: 1.6; max-width: 260px; margin: 0;">Colossal Titan destroyed Shiganshina gate. Titans have flooded the interior. Humanity has abandoned the region.</p>
+      </div>
+
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <span style="font-size: 10px; color: #57534e; text-transform: uppercase;">Mid Buffer</span>
+        <h3 style="font-size: 20px; font-weight: bold; margin: 4px 0 0 0;">Wall Rose</h3>
+        <div id="r-badge" style="margin: 20px 0; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px; background-color: rgba(6,78,59,0.3); border: 1px solid rgba(16,185,129,0.3); color: #34d399;">
+          <span style="width: 6px; height: 6px; background-color: #10b981; border-radius: 50%;"></span>SECURED
+        </div>
+        <p id="r-desc" style="font-size: 12px; color: #a8a29e; line-height: 1.6; max-width: 260px; margin: 0;">Currently safe. Armed Garrison forces are actively reinforcing the barricades along the southern frontline districts.</p>
+      </div>
+
+      <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <span style="font-size: 10px; color: #57534e; text-transform: uppercase;">Inner Sanctuary</span>
+        <h3 style="font-size: 20px; font-weight: bold; margin: 4px 0 0 0;">Wall Sina</h3>
+        <div id="s-badge" style="margin: 20px 0; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px; background-color: rgba(6,78,59,0.3); border: 1px solid rgba(16,185,129,0.3); color: #34d399;">
+          <span style="width: 6px; height: 6px; background-color: #10b981; border-radius: 50%;"></span>SECURED
+        </div>
+        <p id="s-desc" style="font-size: 12px; color: #a8a29e; line-height: 1.6; max-width: 260px; margin: 0;">The royal district remains untouched. Protected strictly by the Military Police Brigade to shield the true crown.</p>
+      </div>
+
+    </div>
+    </div><div style="text-align: center; margin-bottom: 40px;">
+    <span style="font-size: 11px; color: #ef4444; tracking: 2px; font-weight: bold;">MILITARY ENLISTMENT CENTER</span>
+    <h2 style="font-size: 28px; font-weight: 800; color: #f5f5f4; margin: 8px 0 0 0;">Choose Your Destiny</h2>
+    <p style="color: #a8a29e; font-size: 13px; margin: 8px auto 0 auto; max-width: 450px; line-height: 1.5;">
+        The Training Corps has concluded. Select your military branch to explore their specialized weaponry, armor, and combat strategies.
+    </p>
+</div>
+military-tactical-gear
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+    <a href="/world-lore/military-tactical-gear#survey-corps" style="display: flex; flex-direction: column; align-items: center; background-color: #141210; border: 1px solid #292524; border-radius: 12px; padding: 32px; text-align: center; text-decoration: none; box-sizing: border-box;">
+        <div style="width: 56px; height: 56px; background-color: #1c1917; border: 1px solid #292524; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #38bdf8;">
+            <i class="ti ti-windmill" style="font-size: 28px;"></i>
+        </div>
+        <h3 style="font-size: 20px; font-weight: bold; color: #e7e5e4; margin: 20px 0 0 0;">Survey Corps</h3>
+        <span style="font-size: 10px; color: #0284c7; font-weight: bold; text-transform: uppercase; margin-top: 4px;">Wings of Freedom</span>
+        <p style="font-size: 12px; color: #a8a29e; line-height: 1.6; margin: 16px 0 0 0; max-width: 280px;">Tasked with exploration beyond the walls and reclaiming lost territory. High fatality rates, but the only hope for true liberation.</p>
+        <div style="margin-top: 24px; font-size: 11px; font-weight: bold; color: #a8a29e;">Read Dossier &rarr;</div>
+    </a>
+
+    <a href="/world-lore/military-tactical-gear#garrison" style="display: flex; flex-direction: column; align-items: center; background-color: #141210; border: 1px solid #292524; border-radius: 12px; padding: 32px; text-align: center; text-decoration: none; box-sizing: border-box;">
+        <div style="width: 56px; height: 56px; background-color: #1c1917; border: 1px solid #292524; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #f43f5e;">
+            <i class="ti ti-shield-half" style="font-size: 28px;"></i>
+        </div>
+        <h3 style="font-size: 20px; font-weight: bold; color: #e7e5e4; margin: 20px 0 0 0;">Garrison Regiment</h3>
+        <span style="font-size: 10px; color: #e11d48; font-weight: bold; text-transform: uppercase; margin-top: 4px;">The Order of Roses</span>
+        <p style="font-size: 12px; color: #a8a29e; line-height: 1.6; margin: 16px 0 0 0; max-width: 280px;">The massive shield of humanity. Responsible for wall upkeep, immediate crowd evacuation, and local stationary cannon defense networks.</p>
+        <div style="margin-top: 24px; font-size: 11px; font-weight: bold; color: #a8a29e;">Read Dossier &rarr;</div>
+    </a>
+
+    <a href="/world-lore/military-tactical-gear#military-police" style="display: flex; flex-direction: column; align-items: center; background-color: #141210; border: 1px solid #292524; border-radius: 12px; padding: 32px; text-align: center; text-decoration: none; box-sizing: border-box;">
+        <div style="width: 56px; height: 56px; background-color: #1c1917; border: 1px solid #292524; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981;">
+            <i class="ti ti-crown" style="font-size: 28px;"></i>
+        </div>
+        <h3 style="font-size: 20px; font-weight: bold; color: #e7e5e4; margin: 20px 0 0 0;">Military Police</h3>
+        <span style="font-size: 10px; color: #059669; font-weight: bold; text-transform: uppercase; margin-top: 4px;">The Royal Unicorn</span>
+        <p style="font-size: 12px; color: #a8a29e; line-height: 1.6; margin: 16px 0 0 0; max-width: 280px;">Reserved for the top 10 graduates. Operates entirely inside the inner wall to maintain royal laws, taxes, and domestic security.</p>
+        <div style="margin-top: 24px; font-size: 11px; font-weight: bold; color: #a8a29e;">Read Dossier &rarr;</div>
+    </a>
+
+</div>
+</div>
+
+<script>
+    var timelineDatabase = {
+        e845: {
+            m: { lbl: 'BREACHED', css: 'background-color: rgba(69,10,10,0.4); border: 1px solid rgba(127,29,29,0.5); color: #f87171;', text: 'Colossal Titan destroyed Shiganshina gate. Titans have flooded the interior. Humanity has abandoned the region.' },
+            r: { lbl: 'SECURED', css: 'background-color: rgba(6,78,59,0.3); border: 1px solid rgba(16,185,129,0.3); color: #34d399;', text: 'Currently safe. Armed Garrison forces are actively reinforcing the barricades along the southern frontline districts.' },
+            s: { lbl: 'SECURED', css: 'background-color: rgba(6,78,59,0.3); border: 1px solid rgba(16,185,129,0.3); color: #34d399;', text: 'The royal district remains untouched. Protected strictly by the Military Police Brigade to shield the true crown.' }
+        },
+        e850: {
+            m: { lbl: 'FORFEIT', css: 'background-color: #1c1917; border: 1px solid #292524; color: #78716c;', text: 'Territory completely given up. Retaken attempts are strictly banned pending the Scout Survey expeditions.' },
+            r: { lbl: 'CRITICAL', css: 'background-color: rgba(120,53,4,0.3); border: 1px solid rgba(217,119,6,0.3); color: #fbbf24;', text: 'Trost gate breached but plugged via Eren Yeager’s Titan form. Armor Titan threat detected nearby.' },
+            s: { lbl: 'INFILTRATED', css: 'background-color: rgba(69,10,10,0.4); border: 1px solid rgba(127,29,29,0.5); color: #f87171;', text: 'Stohess District structurally damaged. Female Titan captured inside the walls after devastating urban combat.' }
+        },
+        e854: {
+            m: { lbl: 'CRUMBLED', css: 'background-color: rgba(124,45,18,0.4); border: 1px solid rgba(194,65,12,0.4); color: #fb923c;', text: 'The hardening has completely dissolved. The ancient Wall Titans have woken up to begin their global march.' },
+            r: { lbl: 'CRUMBLED', css: 'background-color: rgba(124,45,18,0.4); border: 1px solid rgba(194,65,12,0.4); color: #fb923c;', text: 'Wall shattered into debris as millions of massive Colossal giants walked straight out of the structures.' },
+            s: { lbl: 'CRUMBLED', css: 'background-color: rgba(124,45,18,0.4); border: 1px solid rgba(194,65,12,0.4); color: #fb923c;', text: 'The absolute protective layout of the kingdom has dissolved. Complete chaos erupts across the royal capital.' }
+        }
+    };
+
+    function changeAotEra(eraKey) {
+        document.querySelectorAll('[id^="t-e"]').forEach(function(btn) {
+            btn.style.backgroundColor = "transparent";
+            btn.style.borderColor = "transparent";
+            btn.style.color = "#78716c";
+        });
+
+        var active = document.getElementById('t-' + eraKey);
+        active.style.backgroundColor = eraKey === 'e854' ? '#7c2d12' : '#450a0a';
+        active.style.borderColor = eraKey === 'e854' ? '#ea580c' : '#7f1d1d';
+        active.style.color = eraKey === 'e854' ? '#ffedd5' : '#f87171';
+
+        var data = timelineDatabase[eraKey];
+        setWallLayout('m', data.m);
+        setWallLayout('r', data.r);
+        setWallLayout('s', data.s);
+    }
+
+    function setWallLayout(id, target) {
+        var b = document.getElementById(id + '-badge');
+        b.style.cssText = 'margin: 20px 0; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px; ' + target.css;
+        b.innerHTML = '<span style="width: 6px; height: 6px; background-color: currentColor; border-radius: 50%;"></span>' + target.lbl;
+        document.getElementById(id + '-desc').innerText = target.text;
+    }
+</script>
+
+
+<!-- ======================================================== -->
+<!-- SECTION HP-03: CINEMATIC HISTORY CALL TO ACTION CARD     -->
+<!-- ======================================================== -->
+<div style="width: 100%; max-width: 1100px; margin: 5rem auto 3rem auto; padding: 0 1rem; font-family: monospace; box-sizing: border-box;">
+
+    <div style="position: relative; width: 100%; overflow: hidden; border-radius: 12px; border: 1px solid #292524; background: linear-gradient(135deg, #090504 0%, #1c1917 100%); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); padding: 40px; box-sizing: border-box;">
+
+        <!-- Subtle Background Accent Line -->
+        <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 4px; background-color: #7f1d1d;"></div>
+
+        <div style="max-width: 700px; position: relative; z-index: 10;">
+            <!-- Category Tag -->
+            <span style="font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #ef4444; display: block; margin-bottom: 8px;">
+                Historical Archive
+            </span>
+
+            <!-- Main Hook Header -->
+            <h3 style="font-size: 24px; font-weight: 800; color: #f5f5f4; margin: 0 0 16px 0; letter-spacing: -0.025em;">
+                The 2,000-Year Chronicle
+            </h3>
+
+            <!-- Narrative Description -->
+            <p style="font-size: 13px; color: #a8a29e; line-height: 1.6; margin: 0 0 24px 0;">
+                From the tragic awakening of Ymir Fritz to the eventual undoing of the wall crystallization, the history of Eldia is written in blood. Step inside the absolute timeline tracking the secret operations of the Great Titan War and the full tactical records of the Paradis defense campaigns.
+            </p>
+
+            <!-- Interactive Navigation Link Button -->
+            <div>
+                <a href="/world-lore/timeline" class="aot-history-btn" style="display: inline-flex; align-items: center; gap: 8px; background-color: #7f1d1d; color: #ffffff; border: 1px solid #991b1b; padding: 12px 20px; border-radius: 8px; font-size: 12px; font-weight: bold; text-decoration: none; transition: all 0.2s ease-in-out;">
+                    Explore the History of the Eldian Empire
+                    <i class="ti ti-arrow-right" style="font-size: 14px;"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Global Button Micro-Interaction Animation Styling -->
+<style>
+    .aot-history-btn:hover {
+        background-color: #b91c1c !important;
+        border-color: #dc2626 !important;
+        transform: scale(1.03);
+        box-shadow: 0 10px 15px -3px rgba(185, 28, 28, 0.3);
+    }
+
+    .aot-history-btn:active {
+        transform: scale(0.98);
+    }
+</style>
+
+
+<!-- ======================================================== -->
+<!-- SECTION HP-04: ICONIC QUOTE OF THE DAY GENERATOR BOX       -->
+<!-- ======================================================== -->
+<div style="width: 100%; max-width: 1100px; margin: 4rem auto 4rem auto; padding: 0 1rem; font-family: monospace; box-sizing: border-box;">
+  
+  <div style="background-color: #0c0a09; border: 1px dashed #44403c; border-radius: 12px; padding: 32px; position: relative; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); text-align: center; box-sizing: border-box;">
+    
+    <!-- Aesthetic Visual Corner Marks -->
+    <div style="position: absolute; top: 12px; left: 16px; font-size: 10px; color: #57534e; font-weight: bold; letter-spacing: 1px;">SYS_LOG // INTEL RECOVERED</div>
+    
+    <!-- Large Stylized Background Quote Graphic -->
+    <div style="position: absolute; top: -10px; right: 20px; font-size: 120px; font-family: serif; color: #1c1917; font-weight: bold; line-height: 1; user-select: none; z-index: 1;">“</div>
+    
+    <div style="position: relative; z-index: 10; max-width: 750px; margin: 12px auto 0 auto;">
+      <!-- Main Quote Body Container -->
+      <p id="aot-quote-text" style="font-size: 18px; font-weight: 700; color: #f5f5f4; line-height: 1.5; font-style: italic; margin: 0 0 12px 0; transition: opacity 0.2s ease;">
+        "If you win, you live. If you lose, you die. If you don't fight, you can't win!"
+      </p>
+      
+      <!-- Character Author Attribution -->
+      <span id="aot-quote-author" style="font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #ef4444; display: block; margin-bottom: 24px;">
+        — Eren Yeager // Vol. 3 / CH. 10
+      </span>
+      
+      <!-- Refresh Controller Trigger -->
+      <div>
+        <button onclick="generateRandomAotQuote()" class="aot-quote-btn" style="background-color: transparent; border: 1px solid #44403c; color: #a8a29e; padding: 8px 16px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ti ti-refresh" style="font-size: 12px;"></i> Next Transmission
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Scoped CSS Button Interaction Logic -->
+<style>
+  .aot-quote-btn:hover {
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.05) !important;
+  }
+  .aot-quote-btn:active {
+    transform: scale(0.96);
+  }
+</style>
+
+<!-- Randomized Quote Script Engine -->
+<script>
+  var aotQuotePool = [
+    { text: '"If you win, you live. If you lose, you die. If you don\'t fight, you can\'t win!"', auth: '— Eren Yeager // Vol. 3 / CH. 10' },
+    { text: '"Someone who cannot sacrifice anything, can never change anything."', auth: '— Armin Arlert // Vol. 20 / CH. 81' },
+    { text: '"Give up on your dreams and die. Lead the recruits straight into hell."', auth: '— Levi Ackerman // Vol. 20 / CH. 80' },
+    { text: '"My soldiers, rage! My soldiers, scream! My soldiers, fight!"', auth: '— Erwin Smith // Vol. 20 / CH. 80' },
+    { text: '"This world is cruel, and it\'s also very beautiful."', auth: '— Mikasa Ackerman // Vol. 2 / CH. 7' },
+    { text: '"If you don\'t want to die... think. Even if it\'s just a tiny spark, find a way out."', auth: '— Hange Zoe // Vol. 14 / CH. 57' },
+    { text: '"The only thing we\'re allowed to do... is to believe that we won\'t regret the choice we made."', auth: '— Levi Ackerman // Vol. 6 / CH. 25' }
+  ];
+
+  function generateRandomAotQuote() {
+    var textEl = document.getElementById('aot-quote-text');
+    var authEl = document.getElementById('aot-quote-author');
+    
+    // Quick fade out effect wrapper
+    textEl.style.opacity = '0';
+    authEl.style.opacity = '0';
+    
+    setTimeout(function() {
+      var randIndex = Math.floor(Math.random() * aotQuotePool.length);
+      var currentQuote = aotQuotePool[randIndex];
+      
+      textEl.innerText = currentQuote.text;
+      authEl.innerText = currentQuote.auth;
+      
+      textEl.style.opacity = '1';
+      authEl.style.opacity = '1';
+    }, 150);
+  }
+
+  // Self-execute on load to randomize on first screen hit
+  window.addEventListener('DOMContentLoaded', function() {
+    generateRandomAotQuote();
+  });
+</script>
+
+
 <!-- 新增区域 3：九大巨人能力图谱面板   -->
 <div id="character-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
@@ -187,6 +464,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 <div id="titan-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
