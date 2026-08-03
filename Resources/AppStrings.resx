@@ -1666,16 +1666,16 @@
     <value />
   </data>
   <data name="CarlaYeager_Bio" xml:space="preserve">
-    <value />
+    <value>She</value>
   </data>
   <data name="Nav_Holger" xml:space="preserve">
     <value>Holger</value>
   </data>
   <data name="CharHolger_Title" xml:space="preserve">
-    <value />
+    <value>Holger</value>
   </data>
   <data name="CharHolger_Bio" xml:space="preserve">
-    <value />
+    <value>Wim</value>
   </data>
   <data name="CharWim_Title" xml:space="preserve">
     <value>Wim</value>
@@ -2099,5 +2099,128 @@
   </data>
   <data name="QuickView_FullProfile" xml:space="preserve">
     <value>View Full Profile</value>
+  </data>
+  <data name="WallFeedLive" xml:space="preserve">
+    <value>Wall Garrison Tactical Feed</value>
+  </data>
+  <data name="WallEra845" xml:space="preserve">
+    <value>Fall of Maria</value>
+  </data>
+  <data name="WallEra850" xml:space="preserve">
+    <value>Stohess Raid</value>
+  </data>
+  <data name="WallEra854" xml:space="preserve">
+    <value>The Rumbling</value>
+  </data>
+  <data name="WallOuterRim" xml:space="preserve">
+    <value>Outer Rim</value>
+  </data>
+  <data name="WallMidBuffer" xml:space="preserve">
+    <value>Mid Buffer</value>
+  </data>
+  <data name="WallInnerSanctuary" xml:space="preserve">
+    <value>Inner Sanctuary</value>
+  </data>
+  <data name="WallStatusBreached" xml:space="preserve">
+    <value>Breached</value>
+  </data>
+  <data name="WallStatusSecured" xml:space="preserve">
+    <value>Secured</value>
+  </data>
+  <data name="WallStatusCritical" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="WallStatusInfiltrated" xml:space="preserve">
+    <value>Infiltrated</value>
+  </data>
+  <data name="WallStatusForfeit" xml:space="preserve">
+    <value>Forfeit</value>
+  </data>
+  <data name="WallStatusCrumbled" xml:space="preserve">
+    <value>Crumbled</value>
+  </data>
+  <data name="EnlistTag" xml:space="preserve">
+    <value>Military Enlistment Center</value>
+  </data>
+  <data name="EnlistDesc" xml:space="preserve">
+    <value>The Training Corps has concluded. Select your military branch to explore their specialized weaponry, armor, and combat strategies.</value>
+  </data>
+  <data name="EnlistSurveyTagline" xml:space="preserve">
+    <value>Wings of Freedom</value>
+  </data>
+  <data name="EnlistGarrisonTagline" xml:space="preserve">
+    <value>The Order of Roses</value>
+  </data>
+  <data name="EnlistMPTagline" xml:space="preserve">
+    <value>The Royal Unicorn</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="ChronicleTag" xml:space="preserve">
+    <value>Historical Archive</value>
+  </data>
+  <data name="ChronicleTitle" xml:space="preserve">
+    <value>The 2,000-Year Chronicle</value>
+  </data>
+  <data name="ChronicleDesc" xml:space="preserve">
+    <value>From the tragic awakening of Ymir Fritz to the eventual undoing of the wall crystallization, the history of Eldia is written in blood. Step inside the absolute timeline tracking the secret operations of the Great Titan War and the full tactical records of the Paradis defense campaigns.</value>
+  </data>
+  <data name="ChronicleBtn" xml:space="preserve">
+    <value>Explore the History of the Eldian Empire</value>
+  </data>
+  <data name="QuoteSysLog" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="QuoteNextBtn" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Quote1_Text" xml:space="preserve">
+    <value>If you win, you live. If you lose, you die. If you don't fight, you can't win!</value>
+  </data>
+  <data name="Quote1_Author" xml:space="preserve">
+    <value>~ Eren Yeager // Vol. 3 / CH. 10</value>
+  </data>
+  <data name="Quote2_Text" xml:space="preserve">
+    <value>Someone who cannot sacrifice anything, can never change anything.</value>
+  </data>
+  <data name="Quote2_Author" xml:space="preserve">
+    <value>~ Armin Arlert // Vol. 20 / CH. 81</value>
+  </data>
+  <data name="Quote3_Text" xml:space="preserve">
+    <value>Give up on your dreams and die. Lead the recruits straight into hell.</value>
+  </data>
+  <data name="Quote3_Author" xml:space="preserve">
+    <value>~ Levi Ackerman // Vol. 20 / CH. 80</value>
+  </data>
+  <data name="Quote4_Text" xml:space="preserve">
+    <value>My soldiers, rage! My soldiers, scream! My soldiers, fight!</value>
+  </data>
+  <data name="Quote4_Author" xml:space="preserve">
+    <value>~ Erwin Smith // Vol. 20 / CH. 80</value>
+  </data>
+  <data name="Quote5_Text" xml:space="preserve">
+    <value>This world is cruel, and it's also very beautiful.</value>
+  </data>
+  <data name="Quote5_Author" xml:space="preserve">
+    <value>~ Mikasa Ackerman // Vol. 2 / CH. 7</value>
+  </data>
+  <data name="Quote6_Text" xml:space="preserve">
+    <value>If you don't want to die... think. Even if it's just a tiny spark, find a way out.</value>
+  </data>
+  <data name="Quote6_Author" xml:space="preserve">
+    <value>~ Hange Zoe // Vol. 14 / CH. 57</value>
+  </data>
+  <data name="Quote7_Text" xml:space="preserve">
+    <value>The only thing we're allowed to do... is to believe that we won't regret the choice we made.</value>
+  </data>
+  <data name="Quote7_Author" xml:space="preserve">
+    <value>~ Levi Ackerman // Vol. 6 / CH. 25</value>
+  </data>
+  <data name="CharFloch_Title" xml:space="preserve">
+    <value>Floch</value>
+  </data>
+  <data name="CharFloch_Bio" xml:space="preserve">
+    <value>Floch</value>
   </data>
 </root>

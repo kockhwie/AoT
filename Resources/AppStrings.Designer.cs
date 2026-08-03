@@ -1069,7 +1069,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to She.
         /// </summary>
         public static string CarlaYeager_Bio {
             get {
@@ -1132,6 +1132,24 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Floch.
+        /// </summary>
+        public static string CharFloch_Bio {
+            get {
+                return ResourceManager.GetString("CharFloch_Bio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Floch.
+        /// </summary>
+        public static string CharFloch_Title {
+            get {
+                return ResourceManager.GetString("CharFloch_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stationed on the walls to defend the interior districts from breaches. Known for a fierce, unwavering loyalty to the people of Shiganshina..
         /// </summary>
         public static string CharGarrison_Bio {
@@ -1186,7 +1204,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Wim.
         /// </summary>
         public static string CharHolger_Bio {
             get {
@@ -1195,7 +1213,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Holger.
         /// </summary>
         public static string CharHolger_Title {
             get {
@@ -1371,6 +1389,42 @@ namespace AOT.Resources {
         public static string CharYmir_Title {
             get {
                 return ResourceManager.GetString("CharYmir_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore the History of the Eldian Empire.
+        /// </summary>
+        public static string ChronicleBtn {
+            get {
+                return ResourceManager.GetString("ChronicleBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From the tragic awakening of Ymir Fritz to the eventual undoing of the wall crystallization, the history of Eldia is written in blood. Step inside the absolute timeline tracking the secret operations of the Great Titan War and the full tactical records of the Paradis defense campaigns..
+        /// </summary>
+        public static string ChronicleDesc {
+            get {
+                return ResourceManager.GetString("ChronicleDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Historical Archive.
+        /// </summary>
+        public static string ChronicleTag {
+            get {
+                return ResourceManager.GetString("ChronicleTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The 2,000-Year Chronicle.
+        /// </summary>
+        public static string ChronicleTitle {
+            get {
+                return ResourceManager.GetString("ChronicleTitle", resourceCulture);
             }
         }
         
@@ -1632,6 +1686,51 @@ namespace AOT.Resources {
         public static string CurseTitle {
             get {
                 return ResourceManager.GetString("CurseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Training Corps has concluded. Select your military branch to explore their specialized weaponry, armor, and combat strategies..
+        /// </summary>
+        public static string EnlistDesc {
+            get {
+                return ResourceManager.GetString("EnlistDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Order of Roses.
+        /// </summary>
+        public static string EnlistGarrisonTagline {
+            get {
+                return ResourceManager.GetString("EnlistGarrisonTagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Royal Unicorn.
+        /// </summary>
+        public static string EnlistMPTagline {
+            get {
+                return ResourceManager.GetString("EnlistMPTagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wings of Freedom.
+        /// </summary>
+        public static string EnlistSurveyTagline {
+            get {
+                return ResourceManager.GetString("EnlistSurveyTagline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Enlistment Center.
+        /// </summary>
+        public static string EnlistTag {
+            get {
+                return ResourceManager.GetString("EnlistTag", resourceCulture);
             }
         }
         
@@ -3337,6 +3436,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to History &amp; Timeline.
+        /// </summary>
+        public static string Nav_HistoryTimeline {
+            get {
+                return ResourceManager.GetString("Nav_HistoryTimeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hitch Dreyse.
         /// </summary>
         public static string Nav_HitchDreyse {
@@ -3468,6 +3576,15 @@ namespace AOT.Resources {
         public static string Nav_MilitaryPoliceBrigade {
             get {
                 return ResourceManager.GetString("Nav_MilitaryPoliceBrigade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military &amp; Tactical Gear.
+        /// </summary>
+        public static string Nav_MilitaryTacticalGear {
+            get {
+                return ResourceManager.GetString("Nav_MilitaryTacticalGear", resourceCulture);
             }
         }
         
@@ -3634,6 +3751,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Story Arcs.
+        /// </summary>
+        public static string Nav_StoryArcs {
+            get {
+                return ResourceManager.GetString("Nav_StoryArcs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Story &amp; Timeline.
         /// </summary>
         public static string Nav_StoryTimeline {
@@ -3769,6 +3895,15 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to World Maps.
+        /// </summary>
+        public static string Nav_WorldMaps {
+            get {
+                return ResourceManager.GetString("Nav_WorldMaps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yeagerists.
         /// </summary>
         public static string Nav_Yeagerists {
@@ -3796,7 +3931,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fan Zone.
+        ///   Looks up a localized string similar to Community.
         /// </summary>
         public static string NavFanZone {
             get {
@@ -3805,7 +3940,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lore &amp; Maps.
+        ///   Looks up a localized string similar to Worldview &amp; History.
         /// </summary>
         public static string NavLoreMaps {
             get {
@@ -3945,6 +4080,159 @@ namespace AOT.Resources {
         public static string QuickView_FullProfile {
             get {
                 return ResourceManager.GetString("QuickView_FullProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Eren Yeager // Vol. 3 / CH. 10.
+        /// </summary>
+        public static string Quote1_Author {
+            get {
+                return ResourceManager.GetString("Quote1_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you win, you live. If you lose, you die. If you don&apos;t fight, you can&apos;t win!.
+        /// </summary>
+        public static string Quote1_Text {
+            get {
+                return ResourceManager.GetString("Quote1_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Armin Arlert // Vol. 20 / CH. 81.
+        /// </summary>
+        public static string Quote2_Author {
+            get {
+                return ResourceManager.GetString("Quote2_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Someone who cannot sacrifice anything, can never change anything..
+        /// </summary>
+        public static string Quote2_Text {
+            get {
+                return ResourceManager.GetString("Quote2_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Levi Ackerman // Vol. 20 / CH. 80.
+        /// </summary>
+        public static string Quote3_Author {
+            get {
+                return ResourceManager.GetString("Quote3_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Give up on your dreams and die. Lead the recruits straight into hell..
+        /// </summary>
+        public static string Quote3_Text {
+            get {
+                return ResourceManager.GetString("Quote3_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Erwin Smith // Vol. 20 / CH. 80.
+        /// </summary>
+        public static string Quote4_Author {
+            get {
+                return ResourceManager.GetString("Quote4_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My soldiers, rage! My soldiers, scream! My soldiers, fight!.
+        /// </summary>
+        public static string Quote4_Text {
+            get {
+                return ResourceManager.GetString("Quote4_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Mikasa Ackerman // Vol. 2 / CH. 7.
+        /// </summary>
+        public static string Quote5_Author {
+            get {
+                return ResourceManager.GetString("Quote5_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This world is cruel, and it&apos;s also very beautiful..
+        /// </summary>
+        public static string Quote5_Text {
+            get {
+                return ResourceManager.GetString("Quote5_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Hange Zoe // Vol. 14 / CH. 57.
+        /// </summary>
+        public static string Quote6_Author {
+            get {
+                return ResourceManager.GetString("Quote6_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you don&apos;t want to die... think. Even if it&apos;s just a tiny spark, find a way out..
+        /// </summary>
+        public static string Quote6_Text {
+            get {
+                return ResourceManager.GetString("Quote6_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~ Levi Ackerman // Vol. 6 / CH. 25.
+        /// </summary>
+        public static string Quote7_Author {
+            get {
+                return ResourceManager.GetString("Quote7_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The only thing we&apos;re allowed to do... is to believe that we won&apos;t regret the choice we made..
+        /// </summary>
+        public static string Quote7_Text {
+            get {
+                return ResourceManager.GetString("Quote7_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        public static string QuoteNextBtn {
+            get {
+                return ResourceManager.GetString("QuoteNextBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quotes.
+        /// </summary>
+        public static string QuoteSysLog {
+            get {
+                return ResourceManager.GetString("QuoteSysLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read More.
+        /// </summary>
+        public static string ReadMore {
+            get {
+                return ResourceManager.GetString("ReadMore", resourceCulture);
             }
         }
         
@@ -5961,6 +6249,123 @@ namespace AOT.Resources {
         public static string Version_Human {
             get {
                 return ResourceManager.GetString("Version_Human", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fall of Maria.
+        /// </summary>
+        public static string WallEra845 {
+            get {
+                return ResourceManager.GetString("WallEra845", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stohess Raid.
+        /// </summary>
+        public static string WallEra850 {
+            get {
+                return ResourceManager.GetString("WallEra850", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Rumbling.
+        /// </summary>
+        public static string WallEra854 {
+            get {
+                return ResourceManager.GetString("WallEra854", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Garrison Tactical Feed.
+        /// </summary>
+        public static string WallFeedLive {
+            get {
+                return ResourceManager.GetString("WallFeedLive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inner Sanctuary.
+        /// </summary>
+        public static string WallInnerSanctuary {
+            get {
+                return ResourceManager.GetString("WallInnerSanctuary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mid Buffer.
+        /// </summary>
+        public static string WallMidBuffer {
+            get {
+                return ResourceManager.GetString("WallMidBuffer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outer Rim.
+        /// </summary>
+        public static string WallOuterRim {
+            get {
+                return ResourceManager.GetString("WallOuterRim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breached.
+        /// </summary>
+        public static string WallStatusBreached {
+            get {
+                return ResourceManager.GetString("WallStatusBreached", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Critical.
+        /// </summary>
+        public static string WallStatusCritical {
+            get {
+                return ResourceManager.GetString("WallStatusCritical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crumbled.
+        /// </summary>
+        public static string WallStatusCrumbled {
+            get {
+                return ResourceManager.GetString("WallStatusCrumbled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forfeit.
+        /// </summary>
+        public static string WallStatusForfeit {
+            get {
+                return ResourceManager.GetString("WallStatusForfeit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infiltrated.
+        /// </summary>
+        public static string WallStatusInfiltrated {
+            get {
+                return ResourceManager.GetString("WallStatusInfiltrated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Secured.
+        /// </summary>
+        public static string WallStatusSecured {
+            get {
+                return ResourceManager.GetString("WallStatusSecured", resourceCulture);
             }
         }
         
