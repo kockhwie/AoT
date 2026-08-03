@@ -816,30 +816,42 @@ on desktop). Change it here once, both update. */
 }
 
 
-
-
-
 /* ==========================================
    GLOBAL COMIC CARD SYSTEM (DRY)
    ========================================== */
 .comic-card {
-    background: radial-gradient(ellipse at 60% 10%, rgba(30, 34, 42, 0.95) 0%, rgba(10, 11, 14, 0.98) 100%) !important;
+    /* 1. Define a default background variable here */
+    --card-bg: radial-gradient(ellipse at 60% 10%, rgba(30, 34, 42, 0.95) 0%, rgba(10, 11, 14, 0.98) 100%);
+    /* 2. Use the variable in the background property */
+    background: var(--card-bg) !important;
     border: 3px solid var(--aot-black) !important;
-    border-radius: 5px !important;
+    border-radius: 3px !important;
     box-shadow: 6px 6px 0px var(--aot-black), 0 8px 32px rgba(0, 0, 0, 0.5) !important;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease-out !important;
     position: relative;
     overflow: hidden;
 }
 
-.comic-card:hover {
+    .comic-card.gold {
+        /*--card-bg: radial-gradient(ellipse at 60% 10%, #dfbb6b 0%, #facc15 100%);*/
+        --card-bg:   #ffcc00f7;
+    }
 
+    .comic-card.ruby {
+        --card-bg: radial-gradient(ellipse at 50% 20%, rgb(185 85 105 / 95%) 0%, rgb(81 1 9 / 98%) 100%);
+    }
+    .comic-card.dark {
+        --card-bg: radial-gradient(ellipse at 50% 30%, rgb(163 159 160 / 95%) 0%, rgb(1 1 1 / 68%) 100%);
+    }
+
+
+.comic-card:hover {
     box-shadow: 6px 6px 0px var(--aot-red), 0 16px 48px rgba(0, 0, 0, 0.7) !important;
 }
 
 .comic-frame {
     border: 2px solid var(--aot-black);
-    border-radius: 6px;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
     box-shadow: 4px 4px 0px var(--aot-black);

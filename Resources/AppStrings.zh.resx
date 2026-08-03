@@ -2223,4 +2223,58 @@
   <data name="CharFloch_Bio" xml:space="preserve">
     <value>葉卡派的代理領袖與發起人，忠於艾連的極端愛國主義者。</value>
   </data>
+  <data name="Timeline_E845_M_Lbl" xml:space="preserve">
+    <value>已破壞</value>
+  </data>
+  <data name="Timeline_E845_M_Text" xml:space="preserve">
+    <value>超大型巨人摧毀了希干希納區大門。巨人湧入內部。人類已放棄該地區。</value>
+  </data>
+  <data name="Timeline_E845_R_Lbl" xml:space="preserve">
+    <value>已保護</value>
+  </data>
+  <data name="Timeline_E845_R_Text" xml:space="preserve">
+    <value>目前安全。駐防軍正積極加固南部前線各區的防護柵欄。</value>
+  </data>
+  <data name="Timeline_E845_S_Lbl" xml:space="preserve">
+    <value>已保護</value>
+  </data>
+  <data name="Timeline_E845_S_Text" xml:space="preserve">
+    <value>王都保持完整無損。由軍事警察團嚴格保護以隱藏真正的王座。</value>
+  </data>
+  <data name="Timeline_E850_M_Lbl" xml:space="preserve">
+    <value>已放棄</value>
+  </data>
+  <data name="Timeline_E850_M_Text" xml:space="preserve">
+    <value>領土完全被放棄。在進行調查兵團遠征之前，嚴禁嘗試奪回。</value>
+  </data>
+  <data name="Timeline_E850_R_Lbl" xml:space="preserve">
+    <value>危急</value>
+  </data>
+  <data name="Timeline_E850_R_Text" xml:space="preserve">
+    <value>托洛斯特門被攻破但已由艾連的巨人形態堵住。檢測到鎧甲巨人威脅。</value>
+  </data>
+  <data name="Timeline_E850_S_Lbl" xml:space="preserve">
+    <value>已入侵</value>
+  </data>
+  <data name="Timeline_E850_S_Text" xml:space="preserve">
+    <value>斯托赫斯區結構受損。女性巨人在牆內激烈的城市戰鬥中被捕獲。</value>
+  </data>
+  <data name="Timeline_E854_M_Lbl" xml:space="preserve">
+    <value>已崩毀</value>
+  </data>
+  <data name="Timeline_E854_M_Text" xml:space="preserve">
+    <value>防護已完全溶解。古代的牆巨人已甦醒，開始進行全球行進。</value>
+  </data>
+  <data name="Timeline_E854_R_Lbl" xml:space="preserve">
+    <value>已崩毀</value>
+  </data>
+  <data name="Timeline_E854_R_Text" xml:space="preserve">
+    <value>牆壁已碎裂成碎片，數百萬巨大的超級巨人直接走出結構。</value>
+  </data>
+  <data name="Timeline_E854_S_Lbl" xml:space="preserve">
+    <value>已崩毀</value>
+  </data>
+  <data name="Timeline_E854_S_Text" xml:space="preserve">
+    <value>王國的絕對防護佈局已瓦解。王都陷入完全混亂。</value>
+  </data>
 </root>

@@ -72,34 +72,60 @@
     <h3 class="aot-section-title">
         <i class="ti ti-swords"></i> @LocalizationService.GetString("WallFeedLive")
     </h3>
-    <div class="wall-feed comic-card">
-        <div class="wall-feed-header">
-            <div class="wall-feed-tabs">
-                <button onclick="changeAotEra('e845')" id="t-e845" class="aot-btn aot-btn--sm wall-feed-tab is-active"><span class="wall-feed-dot"></span>@LocalizationService.GetString("WallEra845") (845)</button>
-                <button onclick="changeAotEra('e850')" id="t-e850" class="aot-btn aot-btn--sm wall-feed-tab">@LocalizationService.GetString("WallEra850") (850)</button>
-                <button onclick="changeAotEra('e854')" id="t-e854" class="aot-btn aot-btn--sm wall-feed-tab">@LocalizationService.GetString("WallEra854") (854)</button>
-            </div>
+    <div class="wall-feed-header">
+        <div class="wall-feed-tabs">
+            <button class="aot-btn aot-tab-btn wall-feed-tab @(activeEraKey == "e845" ? "is-active" : "")"
+                    @onclick='() => ChangeAotEra("e845")'>
+                @LocalizationService.GetString("WallEra845") (845)
+            </button>
+            <button class="aot-btn wall-feed-tab @(activeEraKey == "e850" ? "is-active" : "")"
+                    @onclick='() => ChangeAotEra("e850")'>
+                @LocalizationService.GetString("WallEra850") (850)
+            </button>
+            <button class="aot-btn wall-feed-tab @(activeEraKey == "e854" ? "is-active" : "")"
+                    @onclick='() => ChangeAotEra("e854")'>
+                @LocalizationService.GetString("WallEra845") (854)
+            </button>
         </div>
+    </div>
 
+    <div class="wall-feed comic-card">
         <div class="wall-feed-grid">
-            <div class="wall-feed-node">
-                <span class="wall-feed-node-label">@LocalizationService.GetString("WallOuterRim")</span>
-                <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall1_Name")</h3>
-                <div id="m-badge" class="comic-badge comic-badge--accent wall-feed-badge"><span class="wall-feed-badge-dot"></span>@LocalizationService.GetString("WallStatusBreached")</div>
-                <p id="m-desc" class="wall-feed-node-desc"></p>
-            </div>
-            <div class="wall-feed-node">
-                <span class="wall-feed-node-label">@LocalizationService.GetString("WallMidBuffer")</span>
-                <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall2_Name")</h3>
-                <div id="r-badge" class="comic-badge comic-badge--success wall-feed-badge"><span class="wall-feed-badge-dot"></span>@LocalizationService.GetString("WallStatusSecured")</div>
-                <p id="r-desc" class="wall-feed-node-desc"></p>
-            </div>
-            <div class="wall-feed-node">
-                <span class="wall-feed-node-label">@LocalizationService.GetString("WallInnerSanctuary")</span>
-                <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall3_Name")</h3>
-                <div id="s-badge" class="comic-badge comic-badge--success wall-feed-badge"><span class="wall-feed-badge-dot"></span>@LocalizationService.GetString("WallStatusSecured")</div>
-                <p id="s-desc" class="wall-feed-node-desc"></p>
-            </div>
+            @if (timelineDatabase.TryGetValue(activeEraKey, out var currentData))
+            {
+                <!-- Wall Outer Rim (Wall Maria) -->
+                <div class="wall-feed-node">
+                    <span class="wall-feed-node-label">@LocalizationService.GetString("WallOuterRim")</span>
+                    <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall1_Name")</h3>
+                    <div id="m-badge" class="comic-badge wall-feed-badge @currentData.M.Cls">
+                        <span class="wall-feed-badge-dot"></span>
+                        @LocalizationService.GetString(currentData.M.LblKey)
+                    </div>
+                    <p id="m-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.M.TextKey)</p>
+                </div>
+
+                <!-- Wall Mid Buffer (Wall Rose) -->
+                <div class="wall-feed-node">
+                    <span class="wall-feed-node-label">@LocalizationService.GetString("WallMidBuffer")</span>
+                    <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall2_Name")</h3>
+                    <div id="r-badge" class="comic-badge wall-feed-badge @currentData.R.Cls">
+                        <span class="wall-feed-badge-dot"></span>
+                        @LocalizationService.GetString(currentData.R.LblKey)
+                    </div>
+                    <p id="r-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.R.TextKey)</p>
+                </div>
+
+                <!-- Wall Inner Sanctuary (Wall Sina) -->
+                <div class="wall-feed-node">
+                    <span class="wall-feed-node-label">@LocalizationService.GetString("WallInnerSanctuary")</span>
+                    <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall3_Name")</h3>
+                    <div id="s-badge" class="comic-badge wall-feed-badge @currentData.S.Cls">
+                        <span class="wall-feed-badge-dot"></span>
+                        @LocalizationService.GetString(currentData.S.LblKey)
+                    </div>
+                    <p id="s-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.S.TextKey)</p>
+                </div>
+            }
         </div>
     </div>
 </div>
@@ -131,69 +157,14 @@
         <span class="aot-btn  aot-btn--red aot-btn--sm  wall-enlist-cta">@LocalizationService.GetString("ReadMore") <i class="ti ti-arrow-right"></i></span>
     </a>
 </div>
-
  
- 
-<script>
-    var timelineDatabase = {
-        e845: {
-            m: { lbl: 'BREACHED', cls: 'comic-badge--accent', text: 'Colossal Titan destroyed Shiganshina gate. Titans have flooded the interior. Humanity has abandoned the region.' },
-            r: { lbl: 'SECURED', cls: 'comic-badge--success', text: 'Currently safe. Armed Garrison forces are actively reinforcing the barricades along the southern frontline districts.' },
-            s: { lbl: 'SECURED', cls: 'comic-badge--success', text: 'The royal district remains untouched. Protected strictly by the Military Police Brigade to shield the true crown.' }
-        },
-        e850: {
-            m: { lbl: 'FORFEIT', cls: 'comic-badge--bronze', text: 'Territory completely given up. Retaken attempts are strictly banned pending the Scout Survey expeditions.' },
-            r: { lbl: 'CRITICAL', cls: 'comic-badge--warning', text: 'Trost gate breached but plugged via Eren Yeager’s Titan form. Armor Titan threat detected nearby.' },
-            s: { lbl: 'INFILTRATED', cls: 'comic-badge--accent', text: 'Stohess District structurally damaged. Female Titan captured inside the walls after devastating urban combat.' }
-        },
-        e854: {
-            m: { lbl: 'CRUMBLED', cls: 'comic-badge--warning', text: 'The hardening has completely dissolved. The ancient Wall Titans have woken up to begin their global march.' },
-            r: { lbl: 'CRUMBLED', cls: 'comic-badge--warning', text: 'Wall shattered into debris as millions of massive Colossal giants walked straight out of the structures.' },
-            s: { lbl: 'CRUMBLED', cls: 'comic-badge--warning', text: 'The absolute protective layout of the kingdom has dissolved. Complete chaos erupts across the royal capital.' }
-        }
-    };
-
-    function changeAotEra(eraKey) {
-        document.querySelectorAll('.wall-feed-tab').forEach(function(btn) {
-            btn.classList.remove('is-active');
-            btn.removeAttribute('style'); // Clear any legacy inline styles
-        });
-
-        var active = document.getElementById('t-' + eraKey);
-        if (active) {
-            active.classList.add('is-active');
-        }
-
-        var data = timelineDatabase[eraKey];
-        if (data) {
-            setWallLayout('m', data.m);
-            setWallLayout('r', data.r);
-            setWallLayout('s', data.s);
-        }
-    }
-
-    function setWallLayout(id, target) {
-        var b = document.getElementById(id + '-badge');
-        if (b) {
-            b.removeAttribute('style'); // Clear any legacy inline styles
-            b.className = 'comic-badge wall-feed-badge ' + target.cls;
-            b.innerHTML = '<span class="wall-feed-badge-dot"></span>' + target.lbl;
-        }
-        var desc = document.getElementById(id + '-desc');
-        if (desc) {
-            desc.innerText = target.text;
-        }
-    }
-</script>
-
-
 <!-- ======================================================== -->
 <!-- SECTION HP-03: CINEMATIC HISTORY CALL TO ACTION CARD     -->
 <!-- ======================================================== -->
 <div class="wall-cta comic-card">
     <span class="wall-cta-tag">@LocalizationService.GetString("ChronicleTag")</span>
     <h3 class="wall-cta-title">@LocalizationService.GetString("ChronicleTitle")</h3>
-    <p class="wall-cta-desc   aot-page-subtitle font-sans">@LocalizationService.GetString("ChronicleDesc")</p>
+    <p class="wall-cta-desc aot-page-subtitle font-sans">@LocalizationService.GetString("ChronicleDesc")</p>
     <a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/timeline" class="aot-btn aot-btn--red aot-btn--sm">
         @LocalizationService.GetString("ChronicleBtn") <i class="ti ti-arrow-right"></i>
     </a>
@@ -205,78 +176,42 @@
 <!-- ======================================================== -->
 <div class="wall-quote comic-card">
     <span class="wall-quote-syslog">@LocalizationService.GetString("QuoteSysLog")</span>
-    <p id="aot-quote-text" class="wall-quote-text"></p>
-    <span id="aot-quote-author" class="wall-quote-author"></span>
-    <button onclick="generateRandomAotQuote()" class="aot-btn aot-btn--white aot-btn--sm">
+
+    <!-- The text and author now bind directly to C# variables and react to state changes -->
+    <p class="wall-quote-text @_fadeClass">@_currentQuoteText</p>
+    <span class="wall-quote-author @_fadeClass">@_currentQuoteAuthor</span>
+
+    <button @onclick="GenerateRandomAotQuote" class="aot-btn aot-btn--white aot-btn--sm">
         <i class="ti ti-refresh"></i> @LocalizationService.GetString("QuoteNextBtn")
     </button>
 </div>
 
-<script>
-    var aotQuotePool = JSON.parse('@((MarkupString)GenerateQuotePoolJson())');
-
-    function generateRandomAotQuote() {
-        var textEl = document.getElementById('aot-quote-text');
-        var authEl = document.getElementById('aot-quote-author');
-        textEl.style.opacity = '0'; authEl.style.opacity = '0';
-        setTimeout(function () {
-            var q = aotQuotePool[Math.floor(Math.random() * aotQuotePool.length)];
-            textEl.innerText = q.text; authEl.innerText = q.auth;
-            textEl.style.opacity = '1'; authEl.style.opacity = '1';
-        }, 150);
-    }
-    window.addEventListener('DOMContentLoaded', generateRandomAotQuote);
-</script>
-
+ 
 <!-- Scoped CSS Button Interaction Logic -->
 <style>
-  .aot-quote-btn:hover {
-    border-color: #ef4444 !important;
-    color: #ef4444 !important;
-    background-color: rgba(239, 68, 68, 0.05) !important;
-  }
-  .aot-quote-btn:active {
-    transform: scale(0.96);
-  }
+    /* Keeps the smooth opacity fading that we used to do via JS timers */
+    .wall-quote-text, .wall-quote-author {
+        transition: opacity 0.15s ease-in-out;
+    }
+
+    .quote-fade-out {
+        opacity: 0;
+    }
+
+    .quote-fade-in {
+        opacity: 1;
+    }
+
+    .aot-quote-btn:hover {
+        border-color: #ef4444 !important;
+        color: #ef4444 !important;
+        background-color: rgba(239, 68, 68, 0.05) !important;
+    }
+
+    .aot-quote-btn:active {
+        transform: scale(0.96);
+    }
 </style>
-
-<!-- Randomized Quote Script Engine -->
-<script>
-  var aotQuotePool = [
-    { text: '"If you win, you live. If you lose, you die. If you don\'t fight, you can\'t win!"', auth: '* Eren Yeager // Vol. 3 / CH. 10' },
-    { text: '"Someone who cannot sacrifice anything, can never change anything."', auth: '* Armin Arlert // Vol. 20 / CH. 81' },
-    { text: '"Give up on your dreams and die. Lead the recruits straight into hell."', auth: '* Levi Ackerman // Vol. 20 / CH. 80' },
-    { text: '"My soldiers, rage! My soldiers, scream! My soldiers, fight!"', auth: '* Erwin Smith // Vol. 20 / CH. 80' },
-    { text: '"This world is cruel, and it\'s also very beautiful."', auth: '* Mikasa Ackerman // Vol. 2 / CH. 7' },
-    { text: '"If you don\'t want to die... think. Even if it\'s just a tiny spark, find a way out."', auth: '* Hange Zoe // Vol. 14 / CH. 57' },
-    { text: '"The only thing we\'re allowed to do... is to believe that we won\'t regret the choice we made."', auth: '* Levi Ackerman // Vol. 6 / CH. 25' }
-  ];
-
-  function generateRandomAotQuote() {
-    var textEl = document.getElementById('aot-quote-text');
-    var authEl = document.getElementById('aot-quote-author');
-    
-    // Quick fade out effect wrapper
-    textEl.style.opacity = '0';
-    authEl.style.opacity = '0';
-    
-    setTimeout(function() {
-      var randIndex = Math.floor(Math.random() * aotQuotePool.length);
-      var currentQuote = aotQuotePool[randIndex];
-      
-      textEl.innerText = currentQuote.text;
-      authEl.innerText = currentQuote.auth;
-      
-      textEl.style.opacity = '1';
-      authEl.style.opacity = '1';
-    }, 150);
-  }
-
-  // Self-execute on load to randomize on first screen hit
-  window.addEventListener('DOMContentLoaded', function() {
-    generateRandomAotQuote();
-  });
-</script>
 
 
 <!-- 新增区域 3：九大巨人能力图谱面板   -->
@@ -798,23 +733,13 @@
         }
     }
 
-
     protected override void OnParametersSet()
     {
         // Seed language from the URL segment (e.g. /en/ → "en")
         if (!string.IsNullOrEmpty(Lang))
             LanguageSwitcher.Initialize(Lang);
     }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JS.InvokeVoidAsync("changeAotEra", "e845");
-            await JS.InvokeVoidAsync("generateRandomAotQuote");
-        }
-    }
-
+ 
     protected override void OnInitialized()
     {
 
@@ -833,7 +758,12 @@
         //_teaserVolumes = MangaData.Volumes.OrderBy(_ => Random.Shared.Next()).Take(34).ToList();
         // i dun want to use random, i want it sort the book by volume number, so the first 34 volumes are shown in order
         _teaserVolumes = MangaData.Volumes.OrderBy(v => v.VolumeNumber).Take(34).ToList();
-
+        
+        
+        // Run the initial assignment natively during Blazor lifecycle initialization
+        int initialIndex = Random.Shared.Next(1, 8);
+        _currentQuoteText = LocalizationService.GetString($"Quote{initialIndex}_Text");
+        _currentQuoteAuthor = LocalizationService.GetString($"Quote{initialIndex}_Author");
     }
 
     private void AutoPlayTick(object? state)
@@ -1214,6 +1144,76 @@
             WeightSpec = "0.9 kg", RiskLevel = "MINIMAL"
         }
     };
+
+    public class WallLayoutData
+    {
+        public string LblKey { get; set; } = string.Empty;
+        public string Cls { get; set; } = string.Empty;
+        public string TextKey { get; set; } = string.Empty;
+    }
+
+    public class EraTimelineData
+    {
+        public WallLayoutData M { get; set; } = new();
+        public WallLayoutData R { get; set; } = new();
+        public WallLayoutData S { get; set; } = new();
+    }
+    // Tracks the currently selected era. Defaults to e845.
+    private string activeEraKey = "e845";
+
+    private readonly Dictionary<string, EraTimelineData> timelineDatabase = new()
+    {
+        { "e845", new EraTimelineData {
+            M = new() { LblKey = "Timeline_E845_M_Lbl", Cls = "comic-badge--accent", TextKey = "Timeline_E845_M_Text" },
+            R = new() { LblKey = "Timeline_E845_R_Lbl", Cls = "comic-badge--success", TextKey = "Timeline_E845_R_Text" },
+            S = new() { LblKey = "Timeline_E845_S_Lbl", Cls = "comic-badge--success", TextKey = "Timeline_E845_S_Text" }
+        }},
+        { "e850", new EraTimelineData {
+            M = new() { LblKey = "Timeline_E850_M_Lbl", Cls = "comic-badge--bronze", TextKey = "Timeline_E850_M_Text" },
+            R = new() { LblKey = "Timeline_E850_R_Lbl", Cls = "comic-badge--warning", TextKey = "Timeline_E850_R_Text" },
+            S = new() { LblKey = "Timeline_E850_S_Lbl", Cls = "comic-badge--accent", TextKey = "Timeline_E850_S_Text" }
+        }},
+        { "e854", new EraTimelineData {
+            M = new() { LblKey = "Timeline_E854_M_Lbl", Cls = "comic-badge--warning", TextKey = "Timeline_E854_M_Text" },
+            R = new() { LblKey = "Timeline_E854_R_Lbl", Cls = "comic-badge--warning", TextKey = "Timeline_E854_R_Text" },
+            S = new() { LblKey = "Timeline_E854_S_Lbl", Cls = "comic-badge--warning", TextKey = "Timeline_E854_S_Text" }
+        }}
+    };
+
+    // Replaces the old 'changeAotEra' JS function
+    private void ChangeAotEra(string eraKey)
+    {
+        if (timelineDatabase.ContainsKey(eraKey))
+        {
+            activeEraKey = eraKey;
+        }
+    }
+
+
+    // This is for the Quote section
+    private string _currentQuoteText = string.Empty;
+    private string _currentQuoteAuthor = string.Empty;
+    private string _fadeClass = "quote-fade-in";
+    //Replaces t h e o l d J S pool completely using pure localizers
+    private async Task GenerateRandomAotQuote()
+    {
+        //1.Trigger t h e fade o u t
+        _fadeClass = "quote-fade-out";
+        StateHasChanged();
+        //2.Wait briefly f o r t h e fade transition t o finish(150ms)
+        await Task.Delay(150);
+        //3.Select a random quote index between 1 a n d 7
+        int randIndex = Random.Shared.Next(1, 8); //Generates 1 t o 7
+
+        //4.Fetch t h e translated strings directly from your serviceQuote1_AuthorQuote3_Text
+        _currentQuoteText = LocalizationService.GetString($"Quote{randIndex}_Text");
+        _currentQuoteAuthor = LocalizationService.GetString($"Quote{randIndex}_Author");
+        //5.Fade back i n with t h e n e w state parameters loaded
+        _fadeClass = "quote-fade-in";
+        StateHasChanged();
+    }
+
+
 
 }
 

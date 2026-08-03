@@ -2192,5 +2192,59 @@
 </data>
   <data name="Quote7_Author" xml:space="preserve">
   <value>～ リヴァイ・アッカーマン // 第6巻 / 第25話</value>
-</data>
+  </data>
+  <data name="Timeline_E845_M_Lbl" xml:space="preserve">
+    <value>破壊</value>
+  </data>
+  <data name="Timeline_E845_M_Text" xml:space="preserve">
+    <value>超大型巨人がシガンシナ地区の門を破壊した。巨人が内部に流入した。人類は その地域を放棄した。</value>
+  </data>
+  <data name="Timeline_E845_R_Lbl" xml:space="preserve">
+    <value>防御</value>
+  </data>
+  <data name="Timeline_E845_R_Text" xml:space="preserve">
+    <value>現在は安全。憲兵が南部前線地域の土塁を積極的に強化している。</value>
+  </data>
+  <data name="Timeline_E845_S_Lbl" xml:space="preserve">
+    <value>防御</value>
+  </data>
+  <data name="Timeline_E845_S_Text" xml:space="preserve">
+    <value>王都は無傷で保たれている。真の王冠を保護するために軍事警察団によって厳密に守られている。</value>
+  </data>
+  <data name="Timeline_E850_M_Lbl" xml:space="preserve">
+    <value>放棄</value>
+  </data>
+  <data name="Timeline_E850_M_Text" xml:space="preserve">
+    <value>領土は完全に放棄された。調査兵団の遠征が完了するまで、奪還の試みは厳禁。</value>
+  </data>
+  <data name="Timeline_E850_R_Lbl" xml:space="preserve">
+    <value>危機</value>
+  </data>
+  <data name="Timeline_E850_R_Text" xml:space="preserve">
+    <value>トロスト門が破壊されたが、エレン・イェーガーの巨人形態で塞がった。鎧の巨人の脅威が検出された。</value>
+  </data>
+  <data name="Timeline_E850_S_Lbl" xml:space="preserve">
+    <value>侵潤</value>
+  </data>
+  <data name="Timeline_E850_S_Text" xml:space="preserve">
+    <value>ストヘス地区が構造的に損傷した。女型の巨人が激しい都市戦の後に壁の内部で捕獲された。</value>
+  </data>
+  <data name="Timeline_E854_M_Lbl" xml:space="preserve">
+    <value>崩壊</value>
+  </data>
+  <data name="Timeline_E854_M_Text" xml:space="preserve">
+    <value>硬化が完全に溶解した。古い壁の巨人が目覚め、世界的な行進を開始した。</value>
+  </data>
+  <data name="Timeline_E854_R_Lbl" xml:space="preserve">
+    <value>崩壊</value>
+  </data>
+  <data name="Timeline_E854_R_Text" xml:space="preserve">
+    <value>壁は瓦礫に粉砕された。数百万の巨大な超大型巨人が構造物から直接歩み出た。</value>
+  </data>
+  <data name="Timeline_E854_S_Lbl" xml:space="preserve">
+    <value>崩壊</value>
+  </data>
+  <data name="Timeline_E854_S_Text" xml:space="preserve">
+    <value>王国の絶対的な保護レイアウトが溶解した。王都全体が完全な混乱に陥った。</value>
+  </data>
 </root>
