@@ -1976,15 +1976,15 @@ cheaper to repaint than a shadow). */
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgb(255 255 255 / 20%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgb(0 0 0 / 70%);
     padding: 1rem;
     border-radius: 12px;
 }
 
 .wall-feed-node-label {
     font-size: 0.65rem;
-    color: var(--aot-black);
+    color: #DEDBDB;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -2010,7 +2010,7 @@ cheaper to repaint than a shadow). */
 
 .wall-feed-node-desc {
     font-size: 0.8rem;
-    color: #313437;
+    color: #FCFCFC;
     line-height: 1.6; 
     margin: 0;
 }
