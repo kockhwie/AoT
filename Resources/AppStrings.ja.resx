@@ -2076,76 +2076,121 @@
   <data name="QuickView_FullProfile" xml:space="preserve">
     <value>全プロフィールを見る</value>
   </data>
+  <data name="WallFeedLive" xml:space="preserve">
+  <value>駐屯兵団戦術フィード</value>
+</data>
   <data name="WallEra845" xml:space="preserve">
-    <value>Fall of Maria</value>
-  </data>
+  <value>マリア陥落</value>
+</data>
   <data name="WallEra850" xml:space="preserve">
-    <value>Stohess Raid</value>
-  </data>
+  <value>ストヘス強襲戦</value>
+</data>
   <data name="WallEra854" xml:space="preserve">
-    <value>The Rumbling</value>
-  </data>
+  <value>地鳴らし</value>
+</data>
   <data name="WallOuterRim" xml:space="preserve">
-    <value>Outer Rim</value>
-  </data>
+  <value>外周</value>
+</data>
   <data name="WallMidBuffer" xml:space="preserve">
-    <value>Mid Buffer</value>
-  </data>
+  <value>中間緩衝地帯</value>
+</data>
   <data name="WallInnerSanctuary" xml:space="preserve">
-    <value>Inner Sanctuary</value>
-  </data>
+  <value>内奥聖域</value>
+</data>
   <data name="WallStatusBreached" xml:space="preserve">
-    <value>Breached</value>
-  </data>
+  <value>突破済み</value>
+</data>
   <data name="WallStatusSecured" xml:space="preserve">
-    <value>Secured</value>
-  </data>
+  <value>安全確保</value>
+</data>
   <data name="WallStatusCritical" xml:space="preserve">
-    <value>Critical</value>
-  </data>
+  <value>危機的状況</value>
+</data>
   <data name="WallStatusInfiltrated" xml:space="preserve">
-    <value>Infiltrated</value>
-  </data>
+  <value>侵入済み</value>
+</data>
   <data name="WallStatusForfeit" xml:space="preserve">
-    <value>Forfeit</value>
-  </data>
+  <value>放棄</value>
+</data>
   <data name="WallStatusCrumbled" xml:space="preserve">
-    <value>Crumbled</value>
-  </data>
+  <value>崩壊</value>
+</data>
   <data name="EnlistTag" xml:space="preserve">
-    <value>Military Enlistment Center</value>
-  </data>
+  <value>軍隊入隊センター</value>
+</data>
+  <data name="EnlistDesc" xml:space="preserve">
+  <value>訓練兵団の課程は終了した。各兵団を選択し、それぞれの専用装備、防具、戦術を確認せよ。</value>
+</data>
+  <data name="EnlistSurveyTagline" xml:space="preserve">
+  <value>自由の翼</value>
+</data>
+  <data name="EnlistGarrisonTagline" xml:space="preserve">
+  <value>薔薇の紋章隊</value>
+</data>
+  <data name="EnlistMPTagline" xml:space="preserve">
+  <value>王家の一角獣</value>
+</data>
   <data name="ReadMore" xml:space="preserve">
-    <value>Read More</value>
-  </data>
-  <data name="ChronicleTag" xml:space="preserve">
-    <value>Historical Archive</value>
-  </data>
+  <value>詳細を見る</value>
+</data>
+<data name="ChronicleTag" xml:space="preserve">
+  <value>歷史檔案</value>
+</data>
+  <data name="ChronicleTitle" xml:space="preserve">
+  <value>兩千年編年史</value>
+</data>
   <data name="ChronicleDesc" xml:space="preserve">
-    <value>From the tragic awakening of Ymir Fritz to the eventual undoing of the wall crystallization, the history of Eldia is written in blood. Step inside the absolute timeline tracking the secret operations of the Great Titan War and the full tactical records of the Paradis defense campaigns.</value>
-  </data>
+  <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻——艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
+</data>
   <data name="ChronicleBtn" xml:space="preserve">
-    <value>Explore the History</value>
-  </data>
+  <value>探索艾爾迪亞帝國的歷史</value>
+</data>
   <data name="QuoteSysLog" xml:space="preserve">
-    <value>Quotes</value>
-  </data>
+  <value>名言</value>
+</data>
   <data name="QuoteNextBtn" xml:space="preserve">
-    <value>Next</value>
-  </data>
+  <value>次へ</value>
+</data>
   <data name="Quote1_Text" xml:space="preserve">
-    <value>If you win, you live. If you lose, you die. If you don't fight, you can't win!</value>
-  </data>
+  <value>勝てば生き、負ければ死ぬ。戦わなければ勝てぬ！</value>
+</data>
+  <data name="Quote1_Author" xml:space="preserve">
+  <value>～ エレン・イェーガー // 第3巻 / 第10話</value>
+</data>
   <data name="Quote2_Text" xml:space="preserve">
-    <value>Someone who cannot sacrifice anything, can never change anything.</value>
-  </data>
+  <value>何も犠牲にできない人間に、何も変えることはできない。</value>
+</data>
+  <data name="Quote2_Author" xml:space="preserve">
+  <value>～ アルミン・アルレルト // 第20巻 / 第81話</value>
+</data>
   <data name="Quote3_Text" xml:space="preserve">
-    <value>Give up on your dreams and die. Lead the recruits straight into hell.</value>
-  </data>
+  <value>夢を諦めて死ね。新兵たちを地獄へ導け。</value>
+</data>
+  <data name="Quote3_Author" xml:space="preserve">
+  <value>～ リヴァイ・アッカーマン // 第20巻 / 第80話</value>
+</data>
   <data name="Quote4_Text" xml:space="preserve">
-    <value>My soldiers, rage! My soldiers, scream! My soldiers, fight!</value>
-  </data>
+  <value>我が兵よ、怒れ！我が兵よ、叫べ！我が兵よ、戦え！</value>
+</data>
+  <data name="Quote4_Author" xml:space="preserve">
+  <value>～ エルヴィン・スミス // 第20巻 / 第80話</value>
+</data>
+  <data name="Quote5_Text" xml:space="preserve">
+  <value>この世界は残酷で、そしてとても美しい。</value>
+</data>
+  <data name="Quote5_Author" xml:space="preserve">
+  <value>～ ミカサ・アッカーマン // 第2巻 / 第7話</value>
+</data>
   <data name="Quote6_Text" xml:space="preserve">
-    <value>If you don't want to die... think. Even if it's just a tiny spark, find a way out.</value>
-  </data>
+  <value>死にたくなければ……考えろ。たとえわずかな光でも、活路を見出せ。</value>
+</data>
+  <data name="Quote6_Author" xml:space="preserve">
+  <value>～ ハンジ・ゾエ // 第14巻 / 第57話</value>
+</data>
+  <data name="Quote7_Text" xml:space="preserve">
+  <value>私たちに許されているのはただ一つ……自分が下した選択を悔いないと、信じ続けることだけだ。</value>
+</data>
+  <data name="Quote7_Author" xml:space="preserve">
+  <value>～ リヴァイ・アッカーマン // 第6巻 / 第25話</value>
+</data>
 </root>

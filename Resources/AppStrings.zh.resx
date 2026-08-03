@@ -2101,122 +2101,122 @@
     <value>查看完整檔案</value>
   </data>
   <data name="WallFeedLive" xml:space="preserve">
-    <value>Wall Garrison Tactical Feed</value>
-  </data>
+  <value>駐紮兵團戰術情報</value>
+</data>
   <data name="WallEra845" xml:space="preserve">
-    <value>Fall of Maria</value>
-  </data>
+  <value>瑪利亞陷落</value>
+</data>
   <data name="WallEra850" xml:space="preserve">
-    <value>Stohess Raid</value>
-  </data>
+  <value>史托黑斯突襲</value>
+</data>
   <data name="WallEra854" xml:space="preserve">
-    <value>The Rumbling</value>
-  </data>
+  <value>地鳴</value>
+</data>
   <data name="WallOuterRim" xml:space="preserve">
-    <value>Outer Rim</value>
-  </data>
+  <value>外環</value>
+</data>
   <data name="WallMidBuffer" xml:space="preserve">
-    <value>Mid Buffer</value>
-  </data>
+  <value>中層緩衝</value>
+</data>
   <data name="WallInnerSanctuary" xml:space="preserve">
-    <value>Inner Sanctuary</value>
-  </data>
+  <value>內層聖域</value>
+</data>
   <data name="WallStatusBreached" xml:space="preserve">
-    <value>Breached</value>
-  </data>
+  <value>已突破</value>
+</data>
   <data name="WallStatusSecured" xml:space="preserve">
-    <value>Secured</value>
-  </data>
+  <value>已確保</value>
+</data>
   <data name="WallStatusCritical" xml:space="preserve">
-    <value>Critical</value>
-  </data>
+  <value>危急</value>
+</data>
   <data name="WallStatusInfiltrated" xml:space="preserve">
-    <value>Infiltrated</value>
-  </data>
+  <value>已滲透</value>
+</data>
   <data name="WallStatusForfeit" xml:space="preserve">
-    <value>Forfeit</value>
-  </data>
+  <value>已棄守</value>
+</data>
   <data name="WallStatusCrumbled" xml:space="preserve">
-    <value>Crumbled</value>
-  </data>
+  <value>已崩塌</value>
+</data>
   <data name="EnlistTag" xml:space="preserve">
-    <value>Military Enlistment Center</value>
-  </data>
+  <value>軍事徵兵中心</value>
+</data>
   <data name="EnlistDesc" xml:space="preserve">
-    <value>The Training Corps has concluded. Select your military branch to explore their specialized weaponry, armor, and combat strategies.</value>
-  </data>
+  <value>訓練兵團課程已經結束。選擇你的軍團，探索專屬武裝、防具與作戰戰術。</value>
+</data>
   <data name="EnlistSurveyTagline" xml:space="preserve">
-    <value>Wings of Freedom</value>
-  </data>
+  <value>自由之翼</value>
+</data>
   <data name="EnlistGarrisonTagline" xml:space="preserve">
-    <value>The Order of Roses</value>
-  </data>
+  <value>薔薇騎士團</value>
+</data>
   <data name="EnlistMPTagline" xml:space="preserve">
-    <value>The Royal Unicorn</value>
-  </data>
+  <value>王家獨角獸</value>
+</data>
   <data name="ReadMore" xml:space="preserve">
-    <value>Read More</value>
-  </data>
+  <value>閱讀更多</value>
+</data>
   <data name="ChronicleTag" xml:space="preserve">
-    <value>Historical Archive</value>
-  </data>
+  <value>歷史檔案</value>
+</data>
   <data name="ChronicleTitle" xml:space="preserve">
-    <value>The 2,000-Year Chronicle</value>
-  </data>
+  <value>兩千年編年史</value>
+</data>
   <data name="ChronicleDesc" xml:space="preserve">
-    <value>From the tragic awakening of Ymir Fritz to the eventual undoing of the wall crystallization, the history of Eldia is written in blood. Step inside the absolute timeline tracking the secret operations of the Great Titan War and the full tactical records of the Paradis defense campaigns.</value>
-  </data>
+  <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻——艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
+</data>
   <data name="ChronicleBtn" xml:space="preserve">
-    <value>Explore the History</value>
-  </data>
+  <value>探索艾爾迪亞帝國的歷史</value>
+</data>
   <data name="QuoteSysLog" xml:space="preserve">
-    <value>Quotes</value>
-  </data>
+  <value>語錄</value>
+</data>
   <data name="QuoteNextBtn" xml:space="preserve">
-    <value>Next</value>
-  </data>
+  <value>下一則</value>
+</data>
   <data name="Quote1_Text" xml:space="preserve">
-    <value>If you win, you live. If you lose, you die. If you don't fight, you can't win!</value>
-  </data>
+  <value>戰勝就能活下去，戰敗就會死。不戰鬥就不能取勝！</value>
+</data>
   <data name="Quote1_Author" xml:space="preserve">
-    <value>~ Eren Yeager // Vol. 3 / CH. 10</value>
-  </data>
+  <value>～ 艾連·葉卡 // 第3卷 / 第10話</value>
+</data>
   <data name="Quote2_Text" xml:space="preserve">
-    <value>Someone who cannot sacrifice anything, can never change anything.</value>
-  </data>
+  <value>什麼都無法犧牲的人，什麼都無法改變。</value>
+</data>
   <data name="Quote2_Author" xml:space="preserve">
-    <value>~ Armin Arlert // Vol. 20 / CH. 81</value>
-  </data>
+  <value>～ 阿爾敏·亞魯雷特 // 第20卷 / 第81話</value>
+</data>
   <data name="Quote3_Text" xml:space="preserve">
-    <value>Give up on your dreams and die. Lead the recruits straight into hell.</value>
-  </data>
+  <value>放棄夢想去死吧。帶領新兵們直闖地獄。</value>
+</data>
   <data name="Quote3_Author" xml:space="preserve">
-    <value>~ Levi Ackerman // Vol. 20 / CH. 80</value>
-  </data>
+  <value>～ 里維·阿卡曼 // 第20卷 / 第80話</value>
+</data>
   <data name="Quote4_Text" xml:space="preserve">
-    <value>My soldiers, rage! My soldiers, scream! My soldiers, fight!</value>
-  </data>
+  <value>我的士兵們，憤怒吧！我的士兵們，吶喊吧！我的士兵們，戰鬥吧！</value>
+</data>
   <data name="Quote4_Author" xml:space="preserve">
-    <value>~ Erwin Smith // Vol. 20 / CH. 80</value>
-  </data>
+  <value>～ 艾爾文·史密斯 // 第20卷 / 第80話</value>
+</data>
   <data name="Quote5_Text" xml:space="preserve">
-    <value>This world is cruel, and it's also very beautiful.</value>
-  </data>
+  <value>這個世界很殘酷，但也非常美麗。</value>
+</data>
   <data name="Quote5_Author" xml:space="preserve">
-    <value>~ Mikasa Ackerman // Vol. 2 / CH. 7</value>
-  </data>
+  <value>～ 米卡莎·阿卡曼 // 第2卷 / 第7話</value>
+</data>
   <data name="Quote6_Text" xml:space="preserve">
-    <value>If you don't want to die... think. Even if it's just a tiny spark, find a way out.</value>
-  </data>
+  <value>如果不想死……就思考。哪怕只是一絲火花，也要找出一條活路。</value>
+</data>
   <data name="Quote6_Author" xml:space="preserve">
-    <value>~ Hange Zoe // Vol. 14 / CH. 57</value>
-  </data>
+  <value>～ 韓吉·佐耶 // 第14卷 / 第57話</value>
+</data>
   <data name="Quote7_Text" xml:space="preserve">
-    <value>The only thing we're allowed to do... is to believe that we won't regret the choice we made.</value>
-  </data>
+  <value>我們唯一被允許做的……就是相信自己不會後悔所做的選擇。</value>
+</data>
   <data name="Quote7_Author" xml:space="preserve">
-    <value>~ Levi Ackerman // Vol. 6 / CH. 25</value>
-  </data>
+  <value>～ 里維·阿卡曼 // 第6卷 / 第25話</value>
+</data>
   <data name="CharFloch_Title" xml:space="preserve">
     <value>葉卡派的代理領袖與發起人</value>
   </data>
