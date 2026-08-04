@@ -583,7 +583,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 諫山 創 (Hajime Isayama) — Attack on Titan Creator.
+        ///   Looks up a localized string similar to 諫山 創 (Hajime Isayama) - Attack on Titan Creator.
         /// </summary>
         public static string Author_PageTitle {
             get {
@@ -1384,7 +1384,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 104th Training Corps / Former Jaw Titan Holder.
+        ///   Looks up a localized string similar to 104th Training Corps / Jaw Titan.
         /// </summary>
         public static string CharYmir_Title {
             get {
@@ -1600,7 +1600,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inheriting additional Titans — as Eren did with Attack, Founding, and War Hammer — never resets the clock..
+        ///   Looks up a localized string similar to Inheriting additional Titans - as Eren did with Attack, Founding, and War Hammer - never resets the clock..
         /// </summary>
         public static string Curse_NoResetValue {
             get {
@@ -1618,7 +1618,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All Nine Titans are equally bound — royal bloodline or not, no Shifter is exempt..
+        ///   Looks up a localized string similar to All Nine Titans are equally bound - royal bloodline or not, no Shifter is exempt..
         /// </summary>
         public static string Curse_UniversalValue {
             get {
@@ -1672,7 +1672,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Titan Shifter can survive more than 13 years after first inheriting their power — a rule that traces back to Ymir Fritz herself, and one that governs every major decision made by every Shifter in the series..
+        ///   Looks up a localized string similar to No Titan Shifter can survive more than 13 years after first inheriting their power - a rule that traces back to Ymir Fritz herself, and one that governs every major decision made by every Shifter in the series..
         /// </summary>
         public static string CurseIntro {
             get {
@@ -2545,7 +2545,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate — the source of the Founding Titan&apos;s absolute power..
+        ///   Looks up a localized string similar to The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate - the source of the Founding Titan&apos;s absolute power..
         /// </summary>
         public static string Lore_Paths_Desc1 {
             get {
@@ -2572,7 +2572,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A young slave girl who, over 2,000 years ago, made contact with the &quot;source of all living matter&quot; and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline — until she was finally freed..
+        ///   Looks up a localized string similar to A young slave girl who, over 2,000 years ago, made contact with the &quot;source of all living matter&quot; and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline, until she was finally freed..
         /// </summary>
         public static string Lore_Paths_YmirDesc {
             get {
@@ -2788,7 +2788,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine — each carrying a unique ability passed down through the ages..
+        ///   Looks up a localized string similar to Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine, each carrying a unique ability passed down through the ages..
         /// </summary>
         public static string Lore_TitansIntro {
             get {
@@ -2878,7 +2878,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here — and guards the Crown&apos;s darkest secrets..
+        ///   Looks up a localized string similar to The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here and guards the Crown&apos;s darkest secrets..
         /// </summary>
         public static string Lore_Wall3_Desc {
             get {
@@ -4813,6 +4813,168 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BREACHED.
+        /// </summary>
+        public static string Timeline_E845_M_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E845_M_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colossal Titan destroyed Shiganshina gate. Titans have flooded the interior. Humanity has abandoned the region..
+        /// </summary>
+        public static string Timeline_E845_M_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E845_M_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SECURED.
+        /// </summary>
+        public static string Timeline_E845_R_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E845_R_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currently safe. Armed Garrison forces are actively reinforcing the barricades along the southern frontline districts..
+        /// </summary>
+        public static string Timeline_E845_R_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E845_R_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SECURED.
+        /// </summary>
+        public static string Timeline_E845_S_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E845_S_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The royal district remains untouched. Protected strictly by the Military Police Brigade to shield the true crown..
+        /// </summary>
+        public static string Timeline_E845_S_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E845_S_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FORFEIT.
+        /// </summary>
+        public static string Timeline_E850_M_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E850_M_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Territory completely given up. Retaken attempts are strictly banned pending the Scout Survey expeditions..
+        /// </summary>
+        public static string Timeline_E850_M_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E850_M_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRITICAL.
+        /// </summary>
+        public static string Timeline_E850_R_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E850_R_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trost gate breached but plugged via Eren Yeager&apos;s Titan form. Armor Titan threat detected nearby..
+        /// </summary>
+        public static string Timeline_E850_R_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E850_R_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INFILTRATED.
+        /// </summary>
+        public static string Timeline_E850_S_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E850_S_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stohess District structurally damaged. Female Titan captured inside the walls after devastating urban combat..
+        /// </summary>
+        public static string Timeline_E850_S_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E850_S_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRUMBLED.
+        /// </summary>
+        public static string Timeline_E854_M_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E854_M_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The hardening has completely dissolved. The ancient Wall Titans have woken up to begin their global march..
+        /// </summary>
+        public static string Timeline_E854_M_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E854_M_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRUMBLED.
+        /// </summary>
+        public static string Timeline_E854_R_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E854_R_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall shattered into debris as millions of massive Colossal giants walked straight out of the structures..
+        /// </summary>
+        public static string Timeline_E854_R_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E854_R_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRUMBLED.
+        /// </summary>
+        public static string Timeline_E854_S_Lbl {
+            get {
+                return ResourceManager.GetString("Timeline_E854_S_Lbl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The absolute protective layout of the kingdom has dissolved. Complete chaos erupts across the royal capital..
+        /// </summary>
+        public static string Timeline_E854_S_Text {
+            get {
+                return ResourceManager.GetString("Timeline_E854_S_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ymir Fritz makes contact with the &quot;Source of All Living Matter&quot; (Devil of All Earth) and becomes the first Titan, the Founding Titan. She uses her power to build the Eldian Empire over 13 years..
         /// </summary>
         public static string Timeline_Event1_Desc {
@@ -5029,7 +5191,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In despair, Eren strikes the Smiling Titan — secretly Dina Fritz of the royal bloodline — and unknowingly activates the Founding Titan&apos;s Coordinate power, turning nearby Pure Titans against the Warriors..
+        ///   Looks up a localized string similar to In despair, Eren strikes the Smiling Titan secretly Dina Fritz of the royal bloodline and unknowingly activates the Founding Titan&apos;s Coordinate power, turning nearby Pure Titans against the Warriors..
         /// </summary>
         public static string Timeline_Event17_Desc {
             get {
@@ -5191,7 +5353,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps advances into an eerily empty Shiganshina. Armin realizes the silence isn&apos;t safety — the Warriors have been hiding in wait all along..
+        ///   Looks up a localized string similar to The Survey Corps advances into an eerily empty Shiganshina. Armin realizes the silence isn&apos;t safety, the Warriors have been hiding in wait all along..
         /// </summary>
         public static string Timeline_Event22_Desc {
             get {
@@ -5380,7 +5542,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grisha&apos;s hidden journals and photographs prove the outside world was never destroyed — humanity was deliberately isolated on Paradis, and the century-long royal deception collapses..
+        ///   Looks up a localized string similar to Grisha&apos;s hidden journals and photographs prove the outside world was never destroyed, humanity was deliberately isolated on Paradis, and the century-long royal deception collapses..
         /// </summary>
         public static string Timeline_Event29_Desc {
             get {
@@ -5434,7 +5596,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Survey Corps reaches the ocean for the first time in Paradis history. Eren asks whether freedom requires destroying every enemy beyond it — the war&apos;s next chapter begins..
+        ///   Looks up a localized string similar to The Survey Corps reaches the ocean for the first time in Paradis history. Eren asks whether freedom requires destroying every enemy beyond it, the war&apos;s next chapter begins..
         /// </summary>
         public static string Timeline_Event30_Desc {
             get {
@@ -5515,7 +5677,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Liberio raid ends any hope of quiet diplomacy — Paradis and Marley are now locked in open, total war..
+        ///   Looks up a localized string similar to The Liberio raid ends any hope of quiet diplomacy, Paradis and Marley are now locked in open, total war..
         /// </summary>
         public static string Timeline_Event33_Desc {
             get {
@@ -5596,7 +5758,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Zeke secretly laces wine served to the Survey Corps with his spinal fluid, planning to trigger a mass Titanization the moment he roars — a plot narrowly discovered in time..
+        ///   Looks up a localized string similar to Zeke secretly laces wine served to the Survey Corps with his spinal fluid, planning to trigger a mass Titanization the moment he roars, a plot narrowly discovered in time..
         /// </summary>
         public static string Timeline_Event36_Desc {
             get {
@@ -5839,7 +6001,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to With Eren&apos;s death, Ymir Fritz is finally freed from 2,000 years of servitude and relinquishes the Power of the Titans — the curse ends, and Titan shifting vanishes from the world forever..
+        ///   Looks up a localized string similar to With Eren&apos;s death, Ymir Fritz is finally freed from 2,000 years of servitude and relinquishes the Power of the Titans, the curse ends, and Titan shifting vanishes from the world forever..
         /// </summary>
         public static string Timeline_Event44_Desc {
             get {
@@ -5920,7 +6082,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A haunting final-page glimpse suggests peace did not last — Paradis lies in ruins generations later, leaving the epilogue&apos;s meaning deliberately open to interpretation..
+        ///   Looks up a localized string similar to A haunting final-page glimpse suggests peace did not last,  Paradis lies in ruins generations later, leaving the epilogue&apos;s meaning deliberately open to interpretation..
         /// </summary>
         public static string Timeline_Event47_Desc {
             get {

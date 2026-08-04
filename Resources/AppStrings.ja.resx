@@ -1045,7 +1045,7 @@
     <value>進撃の巨人 Attack on Titan</value>
   </data>
   <data name="Author_PageTitle" xml:space="preserve">
-    <value>諫山 創 (Hajime Isayama) — 進撃の巨人 作者</value>
+    <value>諫山 創 (Hajime Isayama) - 進撃の巨人 作者</value>
   </data>
   <data name="Author_MetaDesc" xml:space="preserve">
     <value>『進撃の巨人』の作者である漫画家・諫山創の経歴と詳細について。</value>
@@ -1240,7 +1240,7 @@
     <value>レイス王家の私生児。始祖の巨人の継承を拒み、やがて玉座に就いてパラディ島を最も暗い時代へと導いた。</value>
   </data>
   <data name="CharYmir_Title" xml:space="preserve">
-    <value>104期訓練兵団 / 元顎の巨人保有者</value>
+    <value>104期訓練兵団 / 顎の巨人</value>
   </data>
   <data name="CharYmir_Bio" xml:space="preserve">
     <value>104期訓練兵団に所属する謎めいた訓練生で、かつて顎の巨人を宿していた。ヒストリアへの深い想いを胸に、愛する者を守るため自らを犠牲にした。</value>
@@ -1426,7 +1426,7 @@
     <value>座標発動</value>
   </data>
   <data name="Timeline_Event17_Desc" xml:space="preserve">
-    <value>絶望したエレンは「笑う巨人」――王家の血を引くダイナ・フリッツ――を殴打し、無自覚のうちに始祖の巨人の「座標」を発動、周囲の無垢の巨人を戦士たちへ向かわせる。</value>
+    <value>絶望したエレンは「笑う巨人」。王家の血を引くダイナ・フリッツ。を殴打し、無自覚のうちに始祖の巨人の「座標」を発動、周囲の無垢の巨人を戦士たちへ向かわせる。</value>
   </data>
   <data name="Timeline_Event18_Title" xml:space="preserve">
     <value>戦士撤退</value>
@@ -1684,7 +1684,7 @@
     <value>シガンシナ帰還</value>
   </data>
   <data name="Timeline_Event22_Desc" xml:space="preserve">
-    <value>調査兵団は不気味なほど静まり返ったシガンシナ区へ進軍する。アルミンはこの静けさが罠――戦士たちの待ち伏せだと見抜く。</value>
+    <value>調査兵団は不気味なほど静まり返ったシガンシナ区へ進軍する。アルミンはこの静けさが罠。戦士たちの待ち伏せだと見抜く。</value>
   </data>
   <data name="Timeline_Event22_Year" xml:space="preserve">
     <value>850</value>
@@ -1972,7 +1972,7 @@
     <value>ユミルの13年の呪い</value>
   </data>
   <data name="CurseIntro" xml:space="preserve">
-    <value>巨人の力を継承した者は、その瞬間から十三年以上生き延びることができない――この法則は始祖ユミル自身に由来し、物語に登場するすべての継承者の重大な決断を左右する。</value>
+    <value>巨人の力を継承した者は、その瞬間から十三年以上生き延びることができない。この法則は始祖ユミル自身に由来し、物語に登場するすべての継承者の重大な決断を左右する。</value>
   </data>
   <data name="Curse_CountdownLabel" xml:space="preserve">
     <value>カウントダウン開始</value>
@@ -1990,7 +1990,7 @@
     <value>普遍的適用</value>
   </data>
   <data name="Curse_UniversalValue" xml:space="preserve">
-    <value>九つの巨人すべてに等しく適用される――王家の血を引く者であっても例外ではない。</value>
+    <value>九つの巨人すべてに等しく適用される。王家の血を引く者であっても例外ではない。</value>
   </data>
   <data name="Curse_DeteriorationLabel" xml:space="preserve">
     <value>身体の衰弱</value>
@@ -2077,121 +2077,121 @@
     <value>全プロフィールを見る</value>
   </data>
   <data name="WallFeedLive" xml:space="preserve">
-  <value>駐屯兵団戦術フィード</value>
-</data>
+    <value>駐屯兵団戦術フィード</value>
+  </data>
   <data name="WallEra845" xml:space="preserve">
-  <value>マリア陥落</value>
-</data>
+    <value>マリア陥落</value>
+  </data>
   <data name="WallEra850" xml:space="preserve">
-  <value>ストヘス強襲戦</value>
-</data>
+    <value>ストヘス強襲戦</value>
+  </data>
   <data name="WallEra854" xml:space="preserve">
-  <value>地鳴らし</value>
-</data>
+    <value>地鳴らし</value>
+  </data>
   <data name="WallOuterRim" xml:space="preserve">
-  <value>外周</value>
-</data>
+    <value>外周</value>
+  </data>
   <data name="WallMidBuffer" xml:space="preserve">
-  <value>中間緩衝地帯</value>
-</data>
+    <value>中間緩衝地帯</value>
+  </data>
   <data name="WallInnerSanctuary" xml:space="preserve">
-  <value>内奥聖域</value>
-</data>
+    <value>内奥聖域</value>
+  </data>
   <data name="WallStatusBreached" xml:space="preserve">
-  <value>突破済み</value>
-</data>
+    <value>突破済み</value>
+  </data>
   <data name="WallStatusSecured" xml:space="preserve">
-  <value>安全確保</value>
-</data>
+    <value>安全確保</value>
+  </data>
   <data name="WallStatusCritical" xml:space="preserve">
-  <value>危機的状況</value>
-</data>
+    <value>危機的状況</value>
+  </data>
   <data name="WallStatusInfiltrated" xml:space="preserve">
-  <value>侵入済み</value>
-</data>
+    <value>侵入済み</value>
+  </data>
   <data name="WallStatusForfeit" xml:space="preserve">
-  <value>放棄</value>
-</data>
+    <value>放棄</value>
+  </data>
   <data name="WallStatusCrumbled" xml:space="preserve">
-  <value>崩壊</value>
-</data>
+    <value>崩壊</value>
+  </data>
   <data name="EnlistTag" xml:space="preserve">
-  <value>軍隊入隊センター</value>
-</data>
+    <value>軍隊入隊センター</value>
+  </data>
   <data name="EnlistDesc" xml:space="preserve">
-  <value>訓練兵団の課程は終了した。各兵団を選択し、それぞれの専用装備、防具、戦術を確認せよ。</value>
-</data>
+    <value>訓練兵団の課程は終了した。各兵団を選択し、それぞれの専用装備、防具、戦術を確認せよ。</value>
+  </data>
   <data name="EnlistSurveyTagline" xml:space="preserve">
-  <value>自由の翼</value>
-</data>
+    <value>自由の翼</value>
+  </data>
   <data name="EnlistGarrisonTagline" xml:space="preserve">
-  <value>薔薇の紋章隊</value>
-</data>
+    <value>薔薇の紋章隊</value>
+  </data>
   <data name="EnlistMPTagline" xml:space="preserve">
-  <value>王家の一角獣</value>
-</data>
+    <value>王家の一角獣</value>
+  </data>
   <data name="ReadMore" xml:space="preserve">
-  <value>詳細を見る</value>
-</data>
-<data name="ChronicleTag" xml:space="preserve">
-  <value>歷史檔案</value>
-</data>
+    <value>詳細を見る</value>
+  </data>
+  <data name="ChronicleTag" xml:space="preserve">
+    <value>歷史檔案</value>
+  </data>
   <data name="ChronicleTitle" xml:space="preserve">
-  <value>兩千年編年史</value>
-</data>
+    <value>兩千年編年史</value>
+  </data>
   <data name="ChronicleDesc" xml:space="preserve">
-  <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻——艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
-</data>
+    <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻, 艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
+  </data>
   <data name="ChronicleBtn" xml:space="preserve">
-  <value>探索艾爾迪亞帝國的歷史</value>
-</data>
+    <value>探索艾爾迪亞帝國的歷史</value>
+  </data>
   <data name="QuoteSysLog" xml:space="preserve">
-  <value>名言</value>
-</data>
+    <value>名言</value>
+  </data>
   <data name="QuoteNextBtn" xml:space="preserve">
-  <value>次へ</value>
-</data>
+    <value>次へ</value>
+  </data>
   <data name="Quote1_Text" xml:space="preserve">
-  <value>勝てば生き、負ければ死ぬ。戦わなければ勝てぬ！</value>
-</data>
+    <value>勝てば生き、負ければ死ぬ。戦わなければ勝てぬ！</value>
+  </data>
   <data name="Quote1_Author" xml:space="preserve">
-  <value>～ エレン・イェーガー // 第3巻 / 第10話</value>
-</data>
+    <value>～ エレン・イェーガー // 第3巻 / 第10話</value>
+  </data>
   <data name="Quote2_Text" xml:space="preserve">
-  <value>何も犠牲にできない人間に、何も変えることはできない。</value>
-</data>
+    <value>何も犠牲にできない人間に、何も変えることはできない。</value>
+  </data>
   <data name="Quote2_Author" xml:space="preserve">
-  <value>～ アルミン・アルレルト // 第20巻 / 第81話</value>
-</data>
+    <value>～ アルミン・アルレルト // 第20巻 / 第81話</value>
+  </data>
   <data name="Quote3_Text" xml:space="preserve">
-  <value>夢を諦めて死ね。新兵たちを地獄へ導け。</value>
-</data>
+    <value>夢を諦めて死ね。新兵たちを地獄へ導け。</value>
+  </data>
   <data name="Quote3_Author" xml:space="preserve">
-  <value>～ リヴァイ・アッカーマン // 第20巻 / 第80話</value>
-</data>
+    <value>～ リヴァイ・アッカーマン // 第20巻 / 第80話</value>
+  </data>
   <data name="Quote4_Text" xml:space="preserve">
-  <value>我が兵よ、怒れ！我が兵よ、叫べ！我が兵よ、戦え！</value>
-</data>
+    <value>我が兵よ、怒れ！我が兵よ、叫べ！我が兵よ、戦え！</value>
+  </data>
   <data name="Quote4_Author" xml:space="preserve">
-  <value>～ エルヴィン・スミス // 第20巻 / 第80話</value>
-</data>
+    <value>～ エルヴィン・スミス // 第20巻 / 第80話</value>
+  </data>
   <data name="Quote5_Text" xml:space="preserve">
-  <value>この世界は残酷で、そしてとても美しい。</value>
-</data>
+    <value>この世界は残酷で、そしてとても美しい。</value>
+  </data>
   <data name="Quote5_Author" xml:space="preserve">
-  <value>～ ミカサ・アッカーマン // 第2巻 / 第7話</value>
-</data>
+    <value>～ ミカサ・アッカーマン // 第2巻 / 第7話</value>
+  </data>
   <data name="Quote6_Text" xml:space="preserve">
-  <value>死にたくなければ……考えろ。たとえわずかな光でも、活路を見出せ。</value>
-</data>
+    <value>死にたくなければ……考えろ。たとえわずかな光でも、活路を見出せ。</value>
+  </data>
   <data name="Quote6_Author" xml:space="preserve">
-  <value>～ ハンジ・ゾエ // 第14巻 / 第57話</value>
-</data>
+    <value>～ ハンジ・ゾエ // 第14巻 / 第57話</value>
+  </data>
   <data name="Quote7_Text" xml:space="preserve">
-  <value>私たちに許されているのはただ一つ……自分が下した選択を悔いないと、信じ続けることだけだ。</value>
-</data>
+    <value>私たちに許されているのはただ一つ……自分が下した選択を悔いないと、信じ続けることだけだ。</value>
+  </data>
   <data name="Quote7_Author" xml:space="preserve">
-  <value>～ リヴァイ・アッカーマン // 第6巻 / 第25話</value>
+    <value>～ リヴァイ・アッカーマン // 第6巻 / 第25話</value>
   </data>
   <data name="Timeline_E845_M_Lbl" xml:space="preserve">
     <value>破壊</value>

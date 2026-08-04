@@ -629,9 +629,9 @@ on desktop). Change it here once, both update. */
     font-size: 0.65em;
     font-weight: 600;
     opacity: 0.75;
-    text-transform: lowercase;
+    text-transform: none;
     letter-spacing: normal;
-    margin-left: 0.3em;
+    margin-left: 0.05rem;
 }
 
 @media (min-width: 768px) {
@@ -1385,15 +1385,26 @@ on desktop). Change it here once, both update. */
 .character-game-card:hover .character-game-card__portrait { transform: scale(1.06); filter: saturate(1.08) contrast(1.1); }
 .character-game-card__scanlines { position: absolute; inset: 0; opacity: .24; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.13) 4px); mix-blend-mode: overlay; }
 .character-game-card__portrait-vignette { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,8,8,.1) 18%, transparent 42%, rgba(5,8,8,.94) 88%, #080b0b 100%); }
-.character-game-card__copy { position: absolute; z-index: 2; right: 0; bottom: 0; left: 0; min-width: 0; padding: 2.2rem .95rem 2.85rem; background: linear-gradient(180deg, transparent, rgba(5,8,8,.78) 27%, #080b0b 66%); }
+.character-game-card__copy { position: absolute; z-index: 2; right: 0; bottom: 0; left: 0; min-width: 0; padding: 1.2rem .95rem 2.25rem; background: linear-gradient(180deg, transparent, rgba(5,8,8,.78) 27%, #080b0b 66%); }
 .character-game-card__name {
     display: block;
     text-shadow: 0 2px 8px rgba(0,0,0,.7);
-    font: 900 clamp(1.08rem, 1.60.aot-btn--smvw, 1.55rem)/1.05 sans-serif;
+    font: 800 clamp(1.08rem, 1.60vw, 1.55rem)/0.95 sans-serif;
     letter-spacing: .045em;
     text-transform: uppercase;
 }
-.character-game-card__title { display: -webkit-box; margin-top: .35rem; overflow: hidden; color: var(--card-accent); font: 600 clamp(.58rem, .9vw, .72rem)/1.25 system-ui, sans-serif; letter-spacing: .07em; text-overflow: ellipsis; text-transform: uppercase; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.character-game-card__title {
+    display: -webkit-box;
+    margin-top: .35rem;
+    overflow: hidden;
+    color: var(--card-accent);
+    font: 600 clamp(.58rem, .9vw, .72rem)/1.25 system-ui, sans-serif;
+    letter-spacing: .07em;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
 .character-game-card__glow { position: absolute; z-index: -1; inset: 10% -30%; pointer-events: none; background: var(--card-glow); filter: blur(2rem); opacity: .8; }
 .faction-Titans { --card-accent: #e1725e; --card-glow: rgba(225,114,94,.3); }
 .faction-Marley, .faction-MilitaryPolice { --card-accent: #80a8bc; --card-glow: rgba(128,168,188,.28); }
@@ -1408,7 +1419,7 @@ on desktop). Change it here once, both update. */
     .character-game-card__frame { inset: .28rem; border-radius: .48rem; }
     .character-game-card::before { border-radius: .48rem; }
     .character-game-card__topline { padding: .45rem .45rem 0; }
-    .character-game-card__logo-wrap { bottom: 0.12rem; }
+    .character-game-card__logo-wrap { bottom: 0.05rem; }
     .character-game-card__logo { width: 3.25rem; }
     .character-game-card__badge { padding: 2px 5px; font-size: .48rem; line-height: 1; }
     .character-game-card__copy { padding: .58rem .55rem 1.45rem; }

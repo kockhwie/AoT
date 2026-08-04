@@ -1045,7 +1045,7 @@
     <value>進撃の巨人 Attack on Titan</value>
   </data>
   <data name="Author_PageTitle" xml:space="preserve">
-    <value>諫山 創 (Hajime Isayama) — Attack on Titan Creator</value>
+    <value>諫山 創 (Hajime Isayama) - Attack on Titan Creator</value>
   </data>
   <data name="Author_MetaDesc" xml:space="preserve">
     <value>Biography and details about Hajime Isayama, the creator and mangaka of Attack on Titan (Shingeki no Kyojin).</value>
@@ -1240,7 +1240,7 @@
     <value>The illegitimate daughter of the Reiss royal bloodline, thrust into the crown after refusing to inherit the Founding Titan. Later ascended the throne to guide Paradis through its darkest hour.</value>
   </data>
   <data name="CharYmir_Title" xml:space="preserve">
-    <value>104th Training Corps / Former Jaw Titan Holder</value>
+    <value>104th Training Corps / Jaw Titan</value>
   </data>
   <data name="CharYmir_Bio" xml:space="preserve">
     <value>A mysterious cadet of the 104th Training Corps who once held the Jaw Titan. Fiercely devoted to Historia, she sacrificed herself to protect the ones she loved.</value>
@@ -1426,7 +1426,7 @@
     <value>Coordinate Awakens</value>
   </data>
   <data name="Timeline_Event17_Desc" xml:space="preserve">
-    <value>In despair, Eren strikes the Smiling Titan — secretly Dina Fritz of the royal bloodline — and unknowingly activates the Founding Titan's Coordinate power, turning nearby Pure Titans against the Warriors.</value>
+    <value>In despair, Eren strikes the Smiling Titan secretly Dina Fritz of the royal bloodline and unknowingly activates the Founding Titan's Coordinate power, turning nearby Pure Titans against the Warriors.</value>
   </data>
   <data name="Timeline_Event18_Title" xml:space="preserve">
     <value>Warriors Retreat</value>
@@ -1465,7 +1465,7 @@
     <value>The Paths</value>
   </data>
   <data name="Lore_TitansIntro" xml:space="preserve">
-    <value>Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine — each carrying a unique ability passed down through the ages.</value>
+    <value>Two thousand years ago, Ymir Fritz obtained the Power of the Titans. Upon her death, that power was split into Nine, each carrying a unique ability passed down through the ages.</value>
   </data>
   <data name="Lore_WallsIntro" xml:space="preserve">
     <value>One hundred years before the fall of Wall Maria, King Karl Fritz erected three concentric walls of Colossal Titans to shield the remnants of Eldia on Paradis Island.</value>
@@ -1570,7 +1570,7 @@
     <value>~250 km diameter</value>
   </data>
   <data name="Lore_Wall3_Desc" xml:space="preserve">
-    <value>The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here — and guards the Crown's darkest secrets.</value>
+    <value>The innermost wall, home to the royal capital and the ruling elite. Behind Wall Sina, the nobility live in relative luxury while the outer districts struggle. The Military Police Brigade maintains order here and guards the Crown's darkest secrets.</value>
   </data>
   <data name="Lore_Wall3_Districts" xml:space="preserve">
     <value>Stohess, Yarckel, Mitras (Royal Capital)</value>
@@ -1642,7 +1642,7 @@
     <value>The invisible threads connecting all Subjects of Ymir</value>
   </data>
   <data name="Lore_Paths_Desc1" xml:space="preserve">
-    <value>The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate — the source of the Founding Titan's absolute power.</value>
+    <value>The Paths are an invisible metaphysical realm that connects every Subject of Ymir across time and space. Through these paths, the flesh, bones, and memories of titans are transmitted when a new inheritor devours the previous holder. At the nexus of all paths lies the Coordinate - the source of the Founding Titan's absolute power.</value>
   </data>
   <data name="Lore_Paths_Desc2" xml:space="preserve">
     <value>Within this timeless dimension, Ymir Fritz - the original Founder, has existed for two thousand years, ceaselessly building every titan from sand at the command of the royal bloodline. It was only when Eren Yeager reached the Coordinate that the cycle was finally broken.</value>
@@ -1651,7 +1651,7 @@
     <value>Ymir Fritz, The Founder</value>
   </data>
   <data name="Lore_Paths_YmirDesc" xml:space="preserve">
-    <value>A young slave girl who, over 2,000 years ago, made contact with the "source of all living matter" and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline — until she was finally freed.</value>
+    <value>A young slave girl who, over 2,000 years ago, made contact with the "source of all living matter" and became the first titan. After her death, her soul was trapped in the Paths, endlessly building titans in servitude to the royal bloodline, until she was finally freed.</value>
   </data>
   <data name="Lore_Paths_CoordinateTitle" xml:space="preserve">
     <value>The Coordinate</value>
@@ -1708,7 +1708,7 @@
     <value>Return to Shiganshina</value>
   </data>
   <data name="Timeline_Event22_Desc" xml:space="preserve">
-    <value>The Survey Corps advances into an eerily empty Shiganshina. Armin realizes the silence isn't safety — the Warriors have been hiding in wait all along.</value>
+    <value>The Survey Corps advances into an eerily empty Shiganshina. Armin realizes the silence isn't safety, the Warriors have been hiding in wait all along.</value>
   </data>
   <data name="Timeline_Event22_Year" xml:space="preserve">
     <value>850</value>
@@ -1771,7 +1771,7 @@
     <value>Basement Truth Revealed</value>
   </data>
   <data name="Timeline_Event29_Desc" xml:space="preserve">
-    <value>Grisha's hidden journals and photographs prove the outside world was never destroyed — humanity was deliberately isolated on Paradis, and the century-long royal deception collapses.</value>
+    <value>Grisha's hidden journals and photographs prove the outside world was never destroyed, humanity was deliberately isolated on Paradis, and the century-long royal deception collapses.</value>
   </data>
   <data name="Timeline_Event29_Year" xml:space="preserve">
     <value>850</value>
@@ -1780,7 +1780,7 @@
     <value>Truth Beyond the Sea</value>
   </data>
   <data name="Timeline_Event30_Desc" xml:space="preserve">
-    <value>The Survey Corps reaches the ocean for the first time in Paradis history. Eren asks whether freedom requires destroying every enemy beyond it — the war's next chapter begins.</value>
+    <value>The Survey Corps reaches the ocean for the first time in Paradis history. Eren asks whether freedom requires destroying every enemy beyond it, the war's next chapter begins.</value>
   </data>
   <data name="Timeline_Event30_Year" xml:space="preserve">
     <value>851</value>
@@ -1807,7 +1807,7 @@
     <value>Declaration of War</value>
   </data>
   <data name="Timeline_Event33_Desc" xml:space="preserve">
-    <value>The Liberio raid ends any hope of quiet diplomacy — Paradis and Marley are now locked in open, total war.</value>
+    <value>The Liberio raid ends any hope of quiet diplomacy, Paradis and Marley are now locked in open, total war.</value>
   </data>
   <data name="Timeline_Event33_Year" xml:space="preserve">
     <value>854</value>
@@ -1834,7 +1834,7 @@
     <value>Zeke's Spinal Fluid Plot</value>
   </data>
   <data name="Timeline_Event36_Desc" xml:space="preserve">
-    <value>Zeke secretly laces wine served to the Survey Corps with his spinal fluid, planning to trigger a mass Titanization the moment he roars — a plot narrowly discovered in time.</value>
+    <value>Zeke secretly laces wine served to the Survey Corps with his spinal fluid, planning to trigger a mass Titanization the moment he roars, a plot narrowly discovered in time.</value>
   </data>
   <data name="Timeline_Event36_Year" xml:space="preserve">
     <value>854</value>
@@ -1906,7 +1906,7 @@
     <value>Titan Curse Ends</value>
   </data>
   <data name="Timeline_Event44_Desc" xml:space="preserve">
-    <value>With Eren's death, Ymir Fritz is finally freed from 2,000 years of servitude and relinquishes the Power of the Titans — the curse ends, and Titan shifting vanishes from the world forever.</value>
+    <value>With Eren's death, Ymir Fritz is finally freed from 2,000 years of servitude and relinquishes the Power of the Titans, the curse ends, and Titan shifting vanishes from the world forever.</value>
   </data>
   <data name="Timeline_Event44_Year" xml:space="preserve">
     <value>854</value>
@@ -1933,7 +1933,7 @@
     <value>Destruction of Paradis</value>
   </data>
   <data name="Timeline_Event47_Desc" xml:space="preserve">
-    <value>A haunting final-page glimpse suggests peace did not last — Paradis lies in ruins generations later, leaving the epilogue's meaning deliberately open to interpretation.</value>
+    <value>A haunting final-page glimpse suggests peace did not last,  Paradis lies in ruins generations later, leaving the epilogue's meaning deliberately open to interpretation.</value>
   </data>
   <data name="Timeline_Event47_Year" xml:space="preserve">
     <value>Far Future</value>
@@ -1996,7 +1996,7 @@
     <value>The 13-Year Curse of Ymir</value>
   </data>
   <data name="CurseIntro" xml:space="preserve">
-    <value>No Titan Shifter can survive more than 13 years after first inheriting their power — a rule that traces back to Ymir Fritz herself, and one that governs every major decision made by every Shifter in the series.</value>
+    <value>No Titan Shifter can survive more than 13 years after first inheriting their power - a rule that traces back to Ymir Fritz herself, and one that governs every major decision made by every Shifter in the series.</value>
   </data>
   <data name="Curse_CountdownLabel" xml:space="preserve">
     <value>Countdown Start</value>
@@ -2008,13 +2008,13 @@
     <value>No Reset</value>
   </data>
   <data name="Curse_NoResetValue" xml:space="preserve">
-    <value>Inheriting additional Titans — as Eren did with Attack, Founding, and War Hammer — never resets the clock.</value>
+    <value>Inheriting additional Titans - as Eren did with Attack, Founding, and War Hammer - never resets the clock.</value>
   </data>
   <data name="Curse_UniversalLabel" xml:space="preserve">
     <value>Universal Application</value>
   </data>
   <data name="Curse_UniversalValue" xml:space="preserve">
-    <value>All Nine Titans are equally bound — royal bloodline or not, no Shifter is exempt.</value>
+    <value>All Nine Titans are equally bound - royal bloodline or not, no Shifter is exempt.</value>
   </data>
   <data name="Curse_DeteriorationLabel" xml:space="preserve">
     <value>Physical Deterioration</value>

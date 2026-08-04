@@ -274,7 +274,7 @@
     <value>- 其他 -</value>
   </data>
   <data name="Nav_SonnyandBean" xml:space="preserve">
-    <value>Sonny and Bean (ソニーとビーン)</value>
+    <value>Sonny and Bean</value>
   </data>
   <data name="Nav_WallTitans" xml:space="preserve">
     <value>城牆中的巨人</value>
@@ -1045,7 +1045,7 @@
     <value>進撃の巨人 Attack on Titan</value>
   </data>
   <data name="Author_PageTitle" xml:space="preserve">
-    <value>諫山 創 (Hajime Isayama) — 進擊的巨人作者</value>
+    <value>諫山 創 (Hajime Isayama) - 進擊的巨人作者</value>
   </data>
   <data name="Author_MetaDesc" xml:space="preserve">
     <value>關於《進擊的巨人》創作者與漫畫家諫山創的生平與詳細介紹。</value>
@@ -1240,7 +1240,7 @@
     <value>雷斯王室的私生女，拒絕繼承始祖巨人之力後被迫登上王座，肩負起帶領帕拉迪島度過最黑暗時刻的重任。</value>
   </data>
   <data name="CharYmir_Title" xml:space="preserve">
-    <value>104期訓練兵團 / 前顎之巨人持有者</value>
+    <value>104期訓練兵團 / 顎之巨人</value>
   </data>
   <data name="CharYmir_Bio" xml:space="preserve">
     <value>104期訓練兵團中身世成謎的學員，曾是顎之巨人的持有者。對希絲特莉亞抱持著深厚的情誼，最終為守護所愛之人犧牲自己。</value>
@@ -1426,7 +1426,7 @@
     <value>座標覺醒</value>
   </data>
   <data name="Timeline_Event17_Desc" xml:space="preserve">
-    <value>絕望的艾連揮拳擊中微笑巨人——實為王族戴娜·弗里茲——無意間啟動始祖巨人的「座標」之力，令周圍無垢巨人轉而攻擊戰士隊。</value>
+    <value>絕望的艾連揮拳擊中微笑巨人，實為王族戴娜·弗里茲，無意間啟動始祖巨人的「座標」之力，令周圍無垢巨人轉而攻擊戰士隊。</value>
   </data>
   <data name="Timeline_Event18_Title" xml:space="preserve">
     <value>戰士撤退</value>
@@ -1438,7 +1438,7 @@
     <value>王政顛覆政變</value>
   </data>
   <data name="Timeline_Event19_Desc" xml:space="preserve">
-    <value>調查兵團發動政變推翻腐敗的王政府，揭露真正的王室血脈——隱藏於歷史之外的雷斯家族。</value>
+    <value>調查兵團發動政變推翻腐敗的王政府，揭露真正的王室血脈，隱藏於歷史之外的雷斯家族。</value>
   </data>
   <data name="Lore_PageTitle" xml:space="preserve">
     <value>世界觀與地圖</value>
@@ -1648,7 +1648,7 @@
     <value>在這個永恆的次元中，尤彌爾·弗里茲，最初的始祖，已存在了兩千年，在王族血脈的命令下不停地用砂土構築每一個巨人。直到艾連·耶格爾抵達座標，這個循環才終於被打破。</value>
   </data>
   <data name="Lore_Paths_YmirTitle" xml:space="preserve">
-    <value>尤彌爾·弗里茲 — 始祖</value>
+    <value>尤彌爾·弗里茲 - 始祖</value>
   </data>
   <data name="Lore_Paths_YmirDesc" xml:space="preserve">
     <value>一名年幼的奴隸少女，在兩千多年前接觸到「一切生命物質的起源」而成為第一個巨人。死後，她的靈魂被困在「道」之中，無盡地為王族血脈服役構築巨人，直到最終被解放。</value>
@@ -1771,7 +1771,7 @@
     <value>地下室真相</value>
   </data>
   <data name="Timeline_Event29_Desc" xml:space="preserve">
-    <value>古利夏隱藏的日記與照片證明外面的世界從未毀滅——人類是被刻意隔離在帕拉迪島上，百年來的王室謊言就此崩潰。</value>
+    <value>古利夏隱藏的日記與照片證明外面的世界從未毀滅，人類是被刻意隔離在帕拉迪島上，百年來的王室謊言就此崩潰。</value>
   </data>
   <data name="Timeline_Event29_Year" xml:space="preserve">
     <value>850</value>
@@ -1780,7 +1780,7 @@
     <value>海的另一端真相</value>
   </data>
   <data name="Timeline_Event30_Desc" xml:space="preserve">
-    <value>調查兵團首次抵達帕拉迪島歷史上的大海。艾連追問，若要獲得自由，是否得殲滅海的另一端所有敵人——戰爭的下一章就此展開。</value>
+    <value>調查兵團首次抵達帕拉迪島歷史上的大海。艾連追問，若要獲得自由，是否得殲滅海的另一端所有敵人，戰爭的下一章就此展開。</value>
   </data>
   <data name="Timeline_Event30_Year" xml:space="preserve">
     <value>851</value>
@@ -1807,7 +1807,7 @@
     <value>宣戰佈告</value>
   </data>
   <data name="Timeline_Event33_Desc" xml:space="preserve">
-    <value>雷貝里歐襲擊事件終結了任何靜默外交的可能——帕拉迪島與馬雷自此陷入公開的全面戰爭。</value>
+    <value>雷貝里歐襲擊事件終結了任何靜默外交的可能，帕拉迪島與馬雷自此陷入公開的全面戰爭。</value>
   </data>
   <data name="Timeline_Event33_Year" xml:space="preserve">
     <value>854</value>
@@ -1834,7 +1834,7 @@
     <value>吉克的脊髓液計畫</value>
   </data>
   <data name="Timeline_Event36_Desc" xml:space="preserve">
-    <value>吉克暗中在送給調查兵團的酒中混入自己的脊髓液，計劃在咆哮的瞬間引發大規模巨人化——這場陰謀在千鈞一髮之際被識破。</value>
+    <value>吉克暗中在送給調查兵團的酒中混入自己的脊髓液，計劃在咆哮的瞬間引發大規模巨人化，這場陰謀在千鈞一髮之際被識破。</value>
   </data>
   <data name="Timeline_Event36_Year" xml:space="preserve">
     <value>854</value>
@@ -1843,7 +1843,7 @@
     <value>道與始祖真相</value>
   </data>
   <data name="Timeline_Event37_Desc" xml:space="preserve">
-    <value>在「道」之中，艾連與吉克一同重歷古利夏的記憶，並見到始祖尤彌爾本人，揭露了長達兩千年的奴役——所有巨人詛咒的根源。</value>
+    <value>在「道」之中，艾連與吉克一同重歷古利夏的記憶，並見到始祖尤彌爾本人，揭露了長達兩千年的奴役，所有巨人詛咒的根源。</value>
   </data>
   <data name="Timeline_Event37_Year" xml:space="preserve">
     <value>854</value>
@@ -1906,7 +1906,7 @@
     <value>巨人詛咒終結</value>
   </data>
   <data name="Timeline_Event44_Desc" xml:space="preserve">
-    <value>隨著艾連死去，尤彌爾終於脫離兩千年的奴役並放棄巨人之力——詛咒就此終結，巨人化能力自此在世上永遠消失。</value>
+    <value>隨著艾連死去，尤彌爾終於脫離兩千年的奴役並放棄巨人之力，詛咒就此終結，巨人化能力自此在世上永遠消失。</value>
   </data>
   <data name="Timeline_Event44_Year" xml:space="preserve">
     <value>854</value>
@@ -1933,7 +1933,7 @@
     <value>帕拉迪島的毀滅</value>
   </data>
   <data name="Timeline_Event47_Desc" xml:space="preserve">
-    <value>最終加頁的一幕令人不安地暗示和平並未長久——數個世代後帕拉迪島已成廢墟，這段結局刻意留給讀者自行解讀。</value>
+    <value>最終加頁的一幕令人不安地暗示和平並未長久，數個世代後帕拉迪島已成廢墟，這段結局刻意留給讀者自行解讀。</value>
   </data>
   <data name="Timeline_Event47_Year" xml:space="preserve">
     <value>遙遠的未來</value>
@@ -1996,7 +1996,7 @@
     <value>尤彌爾的十三年詛咒</value>
   </data>
   <data name="CurseIntro" xml:space="preserve">
-    <value>沒有任何巨人繼承者能在獲得力量後存活超過十三年——這項法則源自始祖尤彌爾本人，也支配著劇中每一位巨人繼承者所做的重大抉擇。</value>
+    <value>沒有任何巨人繼承者能在獲得力量後存活超過十三年，這項法則源自始祖尤彌爾本人，也支配著劇中每一位巨人繼承者所做的重大抉擇。</value>
   </data>
   <data name="Curse_CountdownLabel" xml:space="preserve">
     <value>倒數起點</value>
@@ -2014,7 +2014,7 @@
     <value>普遍適用</value>
   </data>
   <data name="Curse_UniversalValue" xml:space="preserve">
-    <value>九大巨人一律受此限制——無論是否擁有王族血統，任何繼承者皆無法倖免。</value>
+    <value>九大巨人一律受此限制，無論是否擁有王族血統，任何繼承者皆無法倖免。</value>
   </data>
   <data name="Curse_DeteriorationLabel" xml:space="preserve">
     <value>身體衰竭</value>
@@ -2101,122 +2101,122 @@
     <value>查看完整檔案</value>
   </data>
   <data name="WallFeedLive" xml:space="preserve">
-  <value>駐紮兵團戰術情報</value>
-</data>
+    <value>駐紮兵團戰術情報</value>
+  </data>
   <data name="WallEra845" xml:space="preserve">
-  <value>瑪利亞陷落</value>
-</data>
+    <value>瑪利亞陷落</value>
+  </data>
   <data name="WallEra850" xml:space="preserve">
-  <value>史托黑斯突襲</value>
-</data>
+    <value>史托黑斯突襲</value>
+  </data>
   <data name="WallEra854" xml:space="preserve">
-  <value>地鳴</value>
-</data>
+    <value>地鳴</value>
+  </data>
   <data name="WallOuterRim" xml:space="preserve">
-  <value>外環</value>
-</data>
+    <value>外環</value>
+  </data>
   <data name="WallMidBuffer" xml:space="preserve">
-  <value>中層緩衝</value>
-</data>
+    <value>中層緩衝</value>
+  </data>
   <data name="WallInnerSanctuary" xml:space="preserve">
-  <value>內層聖域</value>
-</data>
+    <value>內層聖域</value>
+  </data>
   <data name="WallStatusBreached" xml:space="preserve">
-  <value>已突破</value>
-</data>
+    <value>已突破</value>
+  </data>
   <data name="WallStatusSecured" xml:space="preserve">
-  <value>已確保</value>
-</data>
+    <value>已確保</value>
+  </data>
   <data name="WallStatusCritical" xml:space="preserve">
-  <value>危急</value>
-</data>
+    <value>危急</value>
+  </data>
   <data name="WallStatusInfiltrated" xml:space="preserve">
-  <value>已滲透</value>
-</data>
+    <value>已滲透</value>
+  </data>
   <data name="WallStatusForfeit" xml:space="preserve">
-  <value>已棄守</value>
-</data>
+    <value>已棄守</value>
+  </data>
   <data name="WallStatusCrumbled" xml:space="preserve">
-  <value>已崩塌</value>
-</data>
+    <value>已崩塌</value>
+  </data>
   <data name="EnlistTag" xml:space="preserve">
-  <value>軍事徵兵中心</value>
-</data>
+    <value>軍事徵兵中心</value>
+  </data>
   <data name="EnlistDesc" xml:space="preserve">
-  <value>訓練兵團課程已經結束。選擇你的軍團，探索專屬武裝、防具與作戰戰術。</value>
-</data>
+    <value>訓練兵團課程已經結束。選擇你的軍團，探索專屬武裝、防具與作戰戰術。</value>
+  </data>
   <data name="EnlistSurveyTagline" xml:space="preserve">
-  <value>自由之翼</value>
-</data>
+    <value>自由之翼</value>
+  </data>
   <data name="EnlistGarrisonTagline" xml:space="preserve">
-  <value>薔薇騎士團</value>
-</data>
+    <value>薔薇騎士團</value>
+  </data>
   <data name="EnlistMPTagline" xml:space="preserve">
-  <value>王家獨角獸</value>
-</data>
+    <value>王家獨角獸</value>
+  </data>
   <data name="ReadMore" xml:space="preserve">
-  <value>閱讀更多</value>
-</data>
+    <value>閱讀更多</value>
+  </data>
   <data name="ChronicleTag" xml:space="preserve">
-  <value>歷史檔案</value>
-</data>
+    <value>歷史檔案</value>
+  </data>
   <data name="ChronicleTitle" xml:space="preserve">
-  <value>兩千年編年史</value>
-</data>
+    <value>兩千年編年史</value>
+  </data>
   <data name="ChronicleDesc" xml:space="preserve">
-  <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻——艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
-</data>
+    <value>從尤彌爾·弗里茲悲劇性的覺醒，到城牆結晶化最終解除的那一刻，艾爾迪亞的歷史，是用鮮血寫成的。踏入這份絕對時間軸，追溯巨人大戰的秘密行動，以及帕拉迪島防衛戰的完整戰術紀錄。</value>
+  </data>
   <data name="ChronicleBtn" xml:space="preserve">
-  <value>探索艾爾迪亞帝國的歷史</value>
-</data>
+    <value>探索艾爾迪亞帝國的歷史</value>
+  </data>
   <data name="QuoteSysLog" xml:space="preserve">
-  <value>語錄</value>
-</data>
+    <value>語錄</value>
+  </data>
   <data name="QuoteNextBtn" xml:space="preserve">
-  <value>下一則</value>
-</data>
+    <value>下一則</value>
+  </data>
   <data name="Quote1_Text" xml:space="preserve">
-  <value>戰勝就能活下去，戰敗就會死。不戰鬥就不能取勝！</value>
-</data>
+    <value>戰勝就能活下去，戰敗就會死。不戰鬥就不能取勝！</value>
+  </data>
   <data name="Quote1_Author" xml:space="preserve">
-  <value>～ 艾連·葉卡 // 第3卷 / 第10話</value>
-</data>
+    <value>～ 艾連·葉卡 // 第3卷 / 第10話</value>
+  </data>
   <data name="Quote2_Text" xml:space="preserve">
-  <value>什麼都無法犧牲的人，什麼都無法改變。</value>
-</data>
+    <value>什麼都無法犧牲的人，什麼都無法改變。</value>
+  </data>
   <data name="Quote2_Author" xml:space="preserve">
-  <value>～ 阿爾敏·亞魯雷特 // 第20卷 / 第81話</value>
-</data>
+    <value>～ 阿爾敏·亞魯雷特 // 第20卷 / 第81話</value>
+  </data>
   <data name="Quote3_Text" xml:space="preserve">
-  <value>放棄夢想去死吧。帶領新兵們直闖地獄。</value>
-</data>
+    <value>放棄夢想去死吧。帶領新兵們直闖地獄。</value>
+  </data>
   <data name="Quote3_Author" xml:space="preserve">
-  <value>～ 里維·阿卡曼 // 第20卷 / 第80話</value>
-</data>
+    <value>～ 里維·阿卡曼 // 第20卷 / 第80話</value>
+  </data>
   <data name="Quote4_Text" xml:space="preserve">
-  <value>我的士兵們，憤怒吧！我的士兵們，吶喊吧！我的士兵們，戰鬥吧！</value>
-</data>
+    <value>我的士兵們，憤怒吧！我的士兵們，吶喊吧！我的士兵們，戰鬥吧！</value>
+  </data>
   <data name="Quote4_Author" xml:space="preserve">
-  <value>～ 艾爾文·史密斯 // 第20卷 / 第80話</value>
-</data>
+    <value>～ 艾爾文·史密斯 // 第20卷 / 第80話</value>
+  </data>
   <data name="Quote5_Text" xml:space="preserve">
-  <value>這個世界很殘酷，但也非常美麗。</value>
-</data>
+    <value>這個世界很殘酷，但也非常美麗。</value>
+  </data>
   <data name="Quote5_Author" xml:space="preserve">
-  <value>～ 米卡莎·阿卡曼 // 第2卷 / 第7話</value>
-</data>
+    <value>～ 米卡莎·阿卡曼 // 第2卷 / 第7話</value>
+  </data>
   <data name="Quote6_Text" xml:space="preserve">
-  <value>如果不想死……就思考。哪怕只是一絲火花，也要找出一條活路。</value>
-</data>
+    <value>如果不想死……就思考。哪怕只是一絲火花，也要找出一條活路。</value>
+  </data>
   <data name="Quote6_Author" xml:space="preserve">
-  <value>～ 韓吉·佐耶 // 第14卷 / 第57話</value>
-</data>
+    <value>～ 韓吉·佐耶 // 第14卷 / 第57話</value>
+  </data>
   <data name="Quote7_Text" xml:space="preserve">
-  <value>我們唯一被允許做的……就是相信自己不會後悔所做的選擇。</value>
-</data>
+    <value>我們唯一被允許做的……就是相信自己不會後悔所做的選擇。</value>
+  </data>
   <data name="Quote7_Author" xml:space="preserve">
-  <value>～ 里維·阿卡曼 // 第6卷 / 第25話</value>
-</data>
+    <value>～ 里維·阿卡曼 // 第6卷 / 第25話</value>
+  </data>
   <data name="CharFloch_Title" xml:space="preserve">
     <value>葉卡派的代理領袖與發起人</value>
   </data>
