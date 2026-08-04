@@ -933,6 +933,26 @@ cheaper to repaint than a shadow). */
     .character-carousel-item.is-pinned {
         transform: translateX(-50%) translateY(2px) rotateY(0deg) scale(1.02);
     }
+    
+    .wall-feed-tab {
+        clip-path: none;
+        border-bottom: 3px solid #000000;
+        margin-left: 0;
+        margin-right: 0.4rem;
+        margin-bottom: 0.4rem;
+        border-radius: var(--aot-btn-radius);
+        box-shadow: 2px 2px 0px #000000;
+    }
+
+        .wall-feed-tab.is-active {
+            box-shadow: 2px 2px 0px #000000;
+            padding-bottom: 0.7rem;
+            margin-bottom: 0.4rem;
+        }
+
+    .wall-feed-header {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1738,6 +1758,33 @@ cheaper to repaint than a shadow). */
         align-items: flex-start;
     }
 }
+
+/* ==========================================================================
+   GEAR + QUOTE — two columns on desktop, stacked on mobile
+   ========================================================================== */
+.gear-quote-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.gear-quote-cell {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .gear-quote-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ==========================================================================
    7. TIMELINE COMPONENT
    ========================================================================== */
@@ -1910,62 +1957,81 @@ cheaper to repaint than a shadow). */
 /* ==========================================================================
    WALL GARRISON TACTICAL FEED
    ========================================================================== */
+.wall-feed-header {
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -3px; /* pulls the tab strip down to overlap the card's top border */
+}
+
 .wall-feed {
-    padding: 1.75rem;
-    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
-..wall-feed-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 1.75rem;
+.wall-feed-container {
+    padding: 28px;
 }
 
-.wall-feed-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--aot-red);
-    box-shadow: 0 0 8px var(--aot-red);
-}
-
-/* ==== Tab switcher — same pill language as .lore-tab-switcher / .aot-tab-switcher ==== */
+/* ==== Shingled comic-tab strip ==== */
 .wall-feed-tabs {
-    display: inline-flex;
-    gap: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .wall-feed-tab {
-    background-color: transparent;
+    position: relative;
+    background: linear-gradient(160deg, rgba(40, 18, 18, 0.92) 0%, rgba(14, 8, 8, 0.97) 100%);
     color: var(--aot-text-secondary);
-    border: 2px solid #000000;
-    border-radius: var(--aot-btn-radius);
-    padding: 0.55rem 1.1rem;
+    border: 3px solid #000000;
+    border-bottom: none;
+    padding: 0.7rem 2rem 0.7rem 1.15rem;
     font-size: 0.72rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     cursor: pointer;
-    box-shadow: 2px 2px 0px #000000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+    box-shadow: 3px -3px 0px #000000;
+    transition: transform 0.15s ease, filter 0.15s ease, background 0.15s ease, color 0.15s ease;
+    margin-left: -18px; /* creates the shingle overlap; matches the slant width above */
+    z-index: 1;
 }
+    .wall-feed-tab:first-child {
+        margin-left: 0;
+    }
+
+    /* earlier tabs sit in front by default, like the reference image */
+    .wall-feed-tabs .wall-feed-tab:nth-child(1) {
+        z-index: 5;
+    }
+
+    .wall-feed-tabs .wall-feed-tab:nth-child(2) {
+        z-index: 4;
+    }
+
+    .wall-feed-tabs .wall-feed-tab:nth-child(3) {
+        z-index: 3;
+    }
 
 @media (hover: hover) {
     .wall-feed-tab:not(.is-active):hover {
         color: #ffffff;
-        transform: translateY(-2px);
-        box-shadow: 2px 2px 0px var(--aot-red);
+        filter: brightness(1.25);
+        transform: translateY(-3px);
     }
 }
 
 .wall-feed-tab.is-active {
-    background-color: var(--aot-gold);
-    color: #000000;
+    /* same gradient as .comic-card so the tab visually fuses into the panel below */
+    background: radial-gradient(ellipse at 50% 10%, rgba(30, 34, 42, 0.95) 0%, rgba(10, 11, 14, 0.98) 80%);
+    color: #ffffff;
+    z-index: 10 !important; /* always frontmost, regardless of position */
+    box-shadow: 3px -3px 0px #000000, inset 0 3px 0 var(--aot-gold);
+    padding-bottom: calc(0.7rem + 3px); /* absorbs the overlap into the card seam */
+    margin-bottom: -3px;
 }
 
 /* ==== Wall status grid ==== */

@@ -841,6 +841,11 @@ on desktop). Change it here once, both update. */
         --card-bg: radial-gradient(ellipse at 50% 20%, rgb(185 85 105 / 95%) 0%, rgb(81 1 9 / 98%) 100%);
     }
 
+    /* mainly for home page tabs 駐紮兵團戰術情報 section*/
+    .comic-card.black {
+        --card-bg: radial-gradient(ellipse at 20% 20%, rgba(10, 11, 14, 0.95) 10%, rgba(30, 34, 42, 0.98) 80%);
+    }
+
 .comic-card:hover {
     box-shadow: 6px 6px 0px var(--aot-red), 0 16px 48px rgba(0, 0, 0, 0.7) !important;
 }
