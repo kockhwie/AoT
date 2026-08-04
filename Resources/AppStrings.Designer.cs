@@ -3049,7 +3049,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Armin.
+        ///   Looks up a localized string similar to Armin Arlert.
         /// </summary>
         public static string Nav_Armin {
             get {
