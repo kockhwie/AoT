@@ -74,22 +74,22 @@
     </h3>
     <div class="wall-feed-header">
         <div class="wall-feed-tabs">
-            <button class="aot-btn aot-tab-btn wall-feed-tab @(activeEraKey == "e845" ? "is-active" : "")"
+            <button class="wall-feed-tab @(activeEraKey == "e845" ? "is-active" : "")"
                     @onclick='() => ChangeAotEra("e845")'>
                 @LocalizationService.GetString("WallEra845") (845)
             </button>
-            <button class="aot-btn wall-feed-tab @(activeEraKey == "e850" ? "is-active" : "")"
+            <button class="wall-feed-tab @(activeEraKey == "e850" ? "is-active" : "")"
                     @onclick='() => ChangeAotEra("e850")'>
                 @LocalizationService.GetString("WallEra850") (850)
             </button>
-            <button class="aot-btn wall-feed-tab @(activeEraKey == "e854" ? "is-active" : "")"
+            <button class="wall-feed-tab @(activeEraKey == "e854" ? "is-active" : "")"
                     @onclick='() => ChangeAotEra("e854")'>
-                @LocalizationService.GetString("WallEra845") (854)
+                @LocalizationService.GetString("WallEra854") (854)
             </button>
         </div>
     </div>
 
-    <div class="wall-feed comic-card">
+    <div class="wall-feed comic-card black">
         <div class="wall-feed-grid">
             @if (timelineDatabase.TryGetValue(activeEraKey, out var currentData))
             {
@@ -108,7 +108,7 @@
                     <span class="wall-feed-node-label">@LocalizationService.GetString("WallMidBuffer")</span>
                     <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall2_Name")</h3>
                     <div id="r-badge" class="comic-badge  @currentData.R.Cls">
-                        <span class="wall-feed-badge-dot"></span>
+                        
                         @LocalizationService.GetString(currentData.R.LblKey)
                     </div>
                     <p id="r-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.R.TextKey)</p>
@@ -119,7 +119,7 @@
                     <span class="wall-feed-node-label">@LocalizationService.GetString("WallInnerSanctuary")</span>
                     <h3 class="wall-feed-node-name">@LocalizationService.GetString("Lore_Wall3_Name")</h3>
                     <div id="s-badge" class="comic-badge  @currentData.S.Cls">
-                        <span class="wall-feed-badge-dot"></span>
+                        
                         @LocalizationService.GetString(currentData.S.LblKey)
                     </div>
                     <p id="s-desc" class="wall-feed-node-desc">@LocalizationService.GetString(currentData.S.TextKey)</p>

@@ -1911,18 +1911,17 @@ cheaper to repaint than a shadow). */
    WALL GARRISON TACTICAL FEED
    ========================================================================== */
 .wall-feed {
-    padding: 1.5rem;
+    padding: 1.75rem;
     width: 100%;
 }
 
-.wall-feed-header {
+..wall-feed-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 0.5rem;
- 
+    margin-bottom: 1.75rem;
 }
 
 .wall-feed-dot {
@@ -1933,31 +1932,43 @@ cheaper to repaint than a shadow). */
     box-shadow: 0 0 8px var(--aot-red);
 }
 
+/* ==== Tab switcher — same pill language as .lore-tab-switcher / .aot-tab-switcher ==== */
 .wall-feed-tabs {
-    display: flex;
-    gap: 6px;
+    display: inline-flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .wall-feed-tab {
-    background: #0000004B;
-    color: var(--aot-white);
-    border: 2px solid var(--aot-black);
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-size: 0.7rem;
-    font-weight: 800;
+    background-color: transparent;
+    color: var(--aot-text-secondary);
+    border: 2px solid #000000;
+    border-radius: var(--aot-btn-radius);
+    padding: 0.55rem 1.1rem;
+    font-size: 0.72rem;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     cursor: pointer;
-    transition: all 0.15s ease;
+    box-shadow: 2px 2px 0px #000000;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
-    .wall-feed-tab.is-active {
-        background: var(--aot-gold);
-        color: #000;
-        box-shadow: 2px 2px 0px var(--aot-black);
+@media (hover: hover) {
+    .wall-feed-tab:not(.is-active):hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 0px var(--aot-red);
     }
+}
 
+.wall-feed-tab.is-active {
+    background-color: var(--aot-gold);
+    color: #000000;
+}
+
+/* ==== Wall status grid ==== */
 .wall-feed-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1970,42 +1981,71 @@ cheaper to repaint than a shadow). */
     }
 }
 
+/* Comic-card language — same hard border/shadow/halftone recipe as gear-item-card
+   and lore-wall-card, so this section reads as part of the same system. */
 .wall-feed-node {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background-color: rgb(0 0 0 / 70%);
-    padding: 1rem;
-    border-radius: 12px;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, rgba(20, 22, 26, 0.9) 0%, rgba(8, 9, 11, 0.98) 100%);
+    border: 3px solid #000000;
+    border-radius: 4px;
+    box-shadow: 6px 6px 0px #000000;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+    .wall-feed-node::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+        background-size: 8px 8px;
+        opacity: 0.85;
+        z-index: 0;
+    }
+
+    .wall-feed-node > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .wall-feed-node:hover {
+        transform: translateY(-2px);
+        box-shadow: 6px 6px 0px var(--aot-red);
+    }
 
 .wall-feed-node-label {
     font-size: 0.65rem;
-    color: #DEDBDB;
+    font-weight: 900;
+    color: var(--aot-brass);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgb(255 255 255 / 0.53);
-    border-radius: 6px;
-    padding:2px 8px;
+    letter-spacing: 0.14em;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .wall-feed-node-name {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 900;
     color: #ffffff;
-    margin: 0;
-    text-shadow: 2px 2px 0px var(--aot-black);
+    margin: 0.25rem 0 0;
+    text-shadow: 2px 2px 0px #000000;
 }
 
+
 .wall-feed-node-desc {
-    font-size: 0.8rem;
-    color: #FCFCFC;
-    line-height: 1.6; 
-    margin: 0;
+    font-size: 0.82rem;
+    color: var(--aot-text-secondary);
+    line-height: 1.65;
+    margin: 0.25rem 0 0;
 }
 
 /* ==========================================================================

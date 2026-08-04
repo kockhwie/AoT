@@ -840,13 +840,13 @@ on desktop). Change it here once, both update. */
     .comic-card.ruby {
         --card-bg: radial-gradient(ellipse at 50% 20%, rgb(185 85 105 / 95%) 0%, rgb(81 1 9 / 98%) 100%);
     }
-    .comic-card.dark {
-        --card-bg: radial-gradient(ellipse at 50% 30%, rgb(163 159 160 / 95%) 0%, rgb(1 1 1 / 68%) 100%);
-    }
-
 
 .comic-card:hover {
     box-shadow: 6px 6px 0px var(--aot-red), 0 16px 48px rgba(0, 0, 0, 0.7) !important;
+}
+
+.comic-card.black:hover {
+    box-shadow: 6px 6px 0px var(--aot-black), 0 16px 48px rgba(0, 0, 0, 0.7) !important;
 }
 
 .comic-frame {
