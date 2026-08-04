@@ -66,11 +66,11 @@
     </div>
 </div>
 
-
+<!-- 区域 2：駐紮兵團戰術情報 -->
 <!-- TASK HP-01: Interactive Tactical Wall Monitor -->
 <div id="wall-monitor-section" class="flex flex-col">
     <h3 class="aot-section-title">
-        <i class="ti ti-swords"></i> @LocalizationService.GetString("WallFeedLive")
+        <i class="ti ti-wall"></i> @LocalizationService.GetString("WallFeedLive")
     </h3>
     <div class="wall-feed-header gap-2">
         <div class="wall-feed-tabs">
@@ -131,9 +131,10 @@
     </div>
 </div>
 
+<!-- 区域 3：軍事徵兵中心 -->
 <div id="military-center-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
-        <i class="ti ti-swords"></i> @LocalizationService.GetString("EnlistTag")
+        <i class="ti ti-horse"></i> @LocalizationService.GetString("EnlistTag")
     </h3>
     <p>@LocalizationService.GetString("EnlistDesc")</p>
 </div>
@@ -158,7 +159,8 @@
         <span class="aot-btn  aot-btn--red aot-btn--sm  wall-enlist-cta">@LocalizationService.GetString("ReadMore") <i class="ti ti-arrow-right"></i></span>
     </a>
 </div>
- 
+
+<!-- 新增区域 3.5：歷史檔案 - 兩千年編年史  -->
 <!-- ======================================================== -->
 <!-- SECTION HP-03: CINEMATIC HISTORY CALL TO ACTION CARD     -->
 <!-- ======================================================== -->
@@ -172,11 +174,8 @@
 </div>
  
 
- 
- 
 
-
-<!-- 新增区域 3：九大巨人能力图谱面板   -->
+<!-- 新增区域 4：調查兵團核心角色  -->
 <div id="character-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-swords"></i> @LocalizationService.GetString("SectionTitle")
@@ -299,8 +298,7 @@
 
 
 
-
-
+<!-- 新增区域 5：九大巨人能力图谱面板 -->
 <div id="titan-cards-section" class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-dna-2"></i> @LocalizationService.GetString("TitanSectionTitle")
@@ -382,7 +380,7 @@
     </div>
 </div>
 
-<!-- 區域 3.5：漫畫分卷展示區 -->
+<!-- 區域 6：漫畫展示區 -->
 <div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-books"></i> @LocalizationService.GetString("MangaSectionTitle")
@@ -420,7 +418,7 @@
     </div>
 </div>
 
-<!-- 區域 4：兵團戰術裝備 + 語錄，並排雙欄 (desktop) / 堆疊 (mobile) -->
+<!-- 區域 7：兵團戰術裝備 + 語錄，並排雙欄 (desktop) / 堆疊 (mobile) -->
 <div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-settings"></i>@LocalizationService.GetString("GearSectionTitle")
@@ -438,22 +436,24 @@
         </div>
 
         <div class="wall-quote comic-card gear-quote-cell">
-            <span class="wall-cta-tag">@LocalizationService.GetString("QuoteSysLog")</span>
-            <p class="wall-quote-text @_fadeClass">@_currentQuoteText</p>
+            <div class="flex flex-col gap-4 mb-1">
+                <h4 class="text-white text-lg font-bold">@LocalizationService.GetString("QuoteSysLog")</h4>
+                <p class="wall-quote-text @_fadeClass">@_currentQuoteText</p>
+            </div>
             <span class="wall-quote-author @_fadeClass">@_currentQuoteAuthor</span>
-            <button @onclick="GenerateRandomAotQuote" class="aot-btn aot-btn--white aot-btn--sm">
+            <button @onclick="GenerateRandomAotQuote" class="aot-btn aot-btn--white">
                 <i class="ti ti-refresh"></i> @LocalizationService.GetString("QuoteNextBtn")
             </button>
         </div>
     </div>
 </div>
 
-<!-- 区域 5：编年史时间轴区 -->
+<!-- 区域 8：编年史时间轴区 -->
 <div class="flex flex-col gap-2">
     <h3 class="aot-section-title">
         <i class="ti ti-clock"></i> @LocalizationService.GetString("TimelineHeader")
     </h3>
-    <div class="aot-timeline-card  comic-card">
+    <div class="aot-timeline-card comic-card">
         <ul class="timeline timeline-vertical timeline-compact">
 
             <!-- Event 1 · 845 — Fall of Shiganshina -->
