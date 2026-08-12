@@ -2218,4 +2218,598 @@
   <data name="Nav_Holger" xml:space="preserve">
     <value>ホルガー</value>
   </data>
+  <data name="Name_LeviAckerman" xml:space="preserve">
+    <value>リヴァイ･アッカーマン</value>
+  </data>
+  <data name="Title_LeviAckerman" xml:space="preserve">
+    <value>調査兵団 特別作戦班士長</value>
+  </data>
+  <data name="Bio_LeviAckerman" xml:space="preserve">
+    <value>覚醒したアッカーマンの血統により、人類最強の身体能力を持つ。立体機動装置の扱いは一線を画し、「人類最強の兵士」と目される。</value>
+  </data>
+  <data name="Name_MikasaAckerman" xml:space="preserve">
+    <value>ミカサ・アッカーマン</value>
+  </data>
+  <data name="Title_MikasaAckerman" xml:space="preserve">
+    <value>調査兵団 精鋭兵士</value>
+  </data>
+  <data name="Bio_MikasaAckerman" xml:space="preserve">
+    <value>一人の戦闘力は通常の兵士100人分に匹敵する首席卒業生。何があってもエレン・イェーガーを守るという絶対的な 一 念で動く。</value>
+  </data>
+  <data name="Name_HangeZoe" xml:space="preserve">
+    <value>ハンジ・ゾエ</value>
+  </data>
+  <data name="Title_HangeZoe" xml:space="preserve">
+    <value>調査兵団 第14代団長</value>
+  </data>
+  <data name="Bio_HangeZoe" xml:space="preserve">
+    <value>巨人の生体研究に異様な情熱を注ぐ科学者。新兵器「雷槍」などの開発を主導し、エルヴィン亡き後は第14代団長として兵団を率いた。</value>
+  </data>
+  <data name="Name_ErwinSmith" xml:space="preserve">
+    <value>エルヴィン·スミス</value>
+  </data>
+  <data name="Title_ErwinSmith" xml:space="preserve">
+    <value>調査兵団 元第13代団長</value>
+  </data>
+  <data name="Bio_ErwinSmith" xml:space="preserve">
+    <value>卓越したリーダーシップと冷徹な決断力を併せ持つ第13代団長。「長距離索敵陣形」を考案。地下室の真実を追い求め、兵士を率いて散った。</value>
+  </data>
+  <data name="Name_JeanKirstein" xml:space="preserve">
+    <value>ジャン・キルシュタイン</value>
+  </data>
+  <data name="Title_JeanKirstein" xml:space="preserve">
+    <value>調査兵団 前線指揮官</value>
+  </data>
+  <data name="Bio_JeanKirstein" xml:space="preserve">
+    <value>現状を正しく認識できる現実主義者。それゆえに兵士の視点から冷静に戦局を判断でき、仲間から強い信頼を寄せられる指揮官へと成長した。</value>
+  </data>
+  <data name="Name_ArminArlert" xml:space="preserve">
+    <value>アルミン・アルレルト</value>
+  </data>
+  <data name="Title_ArminArlert" xml:space="preserve">
+    <value>調査兵団 第15代団長 / 超大型の巨人</value>
+  </data>
+  <data name="Bio_ArminArlert" xml:space="preserve">
+    <value>エレンとミカサの幼馴染。非凡な発想力と優れた知略を持ち、数々の窮地を救う作戦を立案。マリアの壁奪還戦後に超大型の巨人を引き継いだ。</value>
+  </data>
+  <data name="Name_ErenYeager" xml:space="preserve">
+    <value>エレン・イェーガー</value>
+  </data>
+  <data name="Title_ErenYeager" xml:space="preserve">
+    <value>進撃の巨人 / 始祖の巨人 / 戦槌の巨人</value>
+  </data>
+  <data name="Bio_ErenYeager" xml:space="preserve">
+    <value>巨人の力を宿す元調査兵団員。自由への飽くなき渇望に突き動かされ、最終的にはパラディ島を守るために「地鳴らし」を発動させた。</value>
+  </data>
+  <data name="Name_Ymir" xml:space="preserve">
+    <value>ユミル</value>
+  </data>
+  <data name="Title_Ymir" xml:space="preserve">
+    <value>104期訓練兵団 / 顎の巨人</value>
+  </data>
+  <data name="Bio_Ymir" xml:space="preserve">
+    <value>104期訓練兵団に所属する謎めいた訓練生で、かつて顎の巨人を宿していた。ヒストリアへの深い想いを胸に、愛する者を守るため自らを犠牲にした。</value>
+  </data>
+  <data name="Name_HistoriaReiss" xml:space="preserve">
+    <value>ヒストリア・レイス aka クリスタ・レンズ</value>
+  </data>
+  <data name="Title_HistoriaReiss" xml:space="preserve">
+    <value>壁の女王</value>
+  </data>
+  <data name="Bio_HistoriaReiss" xml:space="preserve">
+    <value>レイス王家の私生児。始祖の巨人の継承を拒み、やがて玉座に就いてパラディ島を最も暗い時代へと導いた。</value>
+  </data>
+  <data name="Name_FoundingTitan" xml:space="preserve">
+    <value>始祖の巨人</value>
+  </data>
+  <data name="Title_FoundingTitan" xml:space="preserve">
+    <value>全長: 204m (通常時)</value>
+  </data>
+  <data name="Bio_FoundingTitan" xml:space="preserve">
+    <value>すべての巨人の頂点。「座標」を通じてユミルの民の記憶を改変し、無数の超大型巨人を操り世界を崩壊させる「地鳴らし」を発動できる。</value>
+  </data>
+  <data name="Name_FinalFoundingTitan" xml:space="preserve">
+    <value>終尾の巨人</value>
+  </data>
+  <data name="Title_FinalFoundingTitan" xml:space="preserve">
+    <value>身長：不定</value>
+  </data>
+  <data name="Bio_FinalFoundingTitan" xml:space="preserve">
+    <value>地鳴らしの後に変化した始祖の巨人の最終形態。九つの巨人の継承者を操る力を失ったが、ユミルの呪縛には依然として縛られている。</value>
+  </data>
+  <data name="Name_AttackTitan" xml:space="preserve">
+    <value>進撃の巨人</value>
+  </data>
+  <data name="Title_AttackTitan" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="Bio_AttackTitan" xml:space="preserve">
+    <value>エレン・イェーガーが運用する戦闘主体。優れた格闘術とバランスの取れた身体能力、そして時間をも超越して「未来の継承者の記憶」を覗き見る固有の能力を持つ。</value>
+  </data>
+  <data name="Name_ArmoredTitan" xml:space="preserve">
+    <value>鎧の巨人</value>
+  </data>
+  <data name="Title_ArmoredTitan" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="Bio_ArmoredTitan" xml:space="preserve">
+    <value>ライナー・ブラウンが保持。全身を強固な硬質化の皮膚で覆われた、まさに生きる戦車。その驚異的な防御力と体重を活かした突撃で、外門を一撃で破壊する。</value>
+  </data>
+  <data name="Name_BeastTitan" xml:space="preserve">
+    <value>獣の巨人</value>
+  </data>
+  <data name="Title_BeastTitan" xml:space="preserve">
+    <value>全長: 17m</value>
+  </data>
+  <data name="Bio_BeastTitan" xml:space="preserve">
+    <value>ジーク・イェーガーが保持。獣のような姿を持ち、恐るべき遠距離投擲による破壊力を誇る。王血の力で、自身の脊髄液を介し民を巨人化できる。</value>
+  </data>
+  <data name="Name_CartTitan" xml:space="preserve">
+    <value>車力の巨人</value>
+  </data>
+  <data name="Title_CartTitan" xml:space="preserve">
+    <value>全長: 4m (四足歩行)</value>
+  </data>
+  <data name="Bio_CartTitan" xml:space="preserve">
+    <value>ピーク・フィンガーが保持。四足歩行型で、数ヶ月間も巨人化を維持できる驚異的な持続力を誇る。背中にガトリング砲や対巨人砲などの近代兵器を搭載し運用される。</value>
+  </data>
+  <data name="Name_ColossalTitan" xml:space="preserve">
+    <value>超大型巨人</value>
+  </data>
+  <data name="Title_ColossalTitan" xml:space="preserve">
+    <value>全長: 60m</value>
+  </data>
+  <data name="Bio_ColossalTitan" xml:space="preserve">
+    <value>ベルトルト、後にアルミンが保持。圧倒的な巨大さを誇り、出現時には戦術核に匹敵する熱風爆発を巻き起こす。肉体から超高温の蒸気を放出し、敵を寄せ付けない。</value>
+  </data>
+  <data name="Name_FemaleTitan" xml:space="preserve">
+    <value>女型の巨人</value>
+  </data>
+  <data name="Title_FemaleTitan" xml:space="preserve">
+    <value>全長: 14m</value>
+  </data>
+  <data name="Bio_FemaleTitan" xml:space="preserve">
+    <value>アニ・レオンハートが保持。高い汎用性と機動力を持ち、体の一部を局所的に硬質化結晶できるほか、叫び声で無垢の巨人を呼び集める。</value>
+  </data>
+  <data name="Name_JawTitan" xml:space="preserve">
+    <value>顎の巨人</value>
+  </data>
+  <data name="Title_JawTitan" xml:space="preserve">
+    <value>全長: 5m</value>
+  </data>
+  <data name="Bio_JawTitan" xml:space="preserve">
+    <value>ユミル、ファルコらが保持。小柄ながら全巨人一の俊敏性を誇る。その強靭な顎と爪の破壊力は、女型の超硬質化結晶さえも容易に噛み砕き、引き裂くことができる。</value>
+  </data>
+  <data name="Name_WarhammerTitan" xml:space="preserve">
+    <value>戦槌の巨人</value>
+  </data>
+  <data name="Title_WarhammerTitan" xml:space="preserve">
+    <value>全長: 15m</value>
+  </data>
+  <data name="Bio_WarhammerTitan" xml:space="preserve">
+    <value>タイバー家、後にエレンが保持。硬質化能力を極限まで高め、戦鎚や地刺、ボウガンなどあらゆる武器を自在に生成する。本体は地中に隠れ、コードを介して巨人を遠隔操作する。</value>
+  </data>
+  <data name="Name_SonnyAndBean" xml:space="preserve">
+    <value>ソニーとビーン</value>
+  </data>
+  <data name="Title_SonnyAndBean" xml:space="preserve">
+    <value>身長：4m～7m</value>
+  </data>
+  <data name="Bio_SonnyAndBean" xml:space="preserve">
+    <value>調査兵団によって生け捕られ、実験に用いられた無垢の巨人の一対。その行動様式は、巨人の生理機能と再生能力に関する初の科学的知見をもたらした。</value>
+  </data>
+  <data name="Name_WallTitans" xml:space="preserve">
+    <value>壁の巨人</value>
+  </data>
+  <data name="Title_WallTitans" xml:space="preserve">
+    <value>身長：約50m（休眠状態）</value>
+  </data>
+  <data name="Bio_WallTitans" xml:space="preserve">
+    <value>城壁が築かれた当初から三重の壁の中に埋め込まれ、覚醒の時を待つ無数の巨人たち。その存在は真実が明かされるまで一世紀にわたり隠され続けた。</value>
+  </data>
+  <data name="Name_EldJinn" xml:space="preserve">
+    <value>エルド・ジン</value>
+  </data>
+  <data name="Title_EldJinn" xml:space="preserve">
+    <value>調査兵団特別作戦班</value>
+  </data>
+  <data name="Bio_EldJinn" xml:space="preserve">
+    <value>: リヴァイが直々に選んだ特別作戦班のベテラン。冷静で経験豊富なエルドは、若いメンバーたちの中で理性的な声を担った。</value>
+  </data>
+  <data name="Name_OluoBozado" xml:space="preserve">
+    <value>オルオ・ボザド</value>
+  </data>
+  <data name="Title_OluoBozado" xml:space="preserve">
+    <value>調査兵団特別作戦班</value>
+  </data>
+  <data name="Bio_OluoBozado" xml:space="preserve">
+    <value>特別作戦班の自慢屋だが実力派のベテランで、リヴァイを崇拝しその癖を真似る。虚勢の裏には数多の戦場で磨かれた本物の勇気が宿る。</value>
+  </data>
+  <data name="Name_PetraRal" xml:space="preserve">
+    <value>ペトラ・ラル</value>
+  </data>
+  <data name="Title_PetraRal" xml:space="preserve">
+    <value>調査兵団特別作戦班</value>
+  </data>
+  <data name="Bio_PetraRal" xml:space="preserve">
+    <value>巨人48体討伐という目覚ましい記録を持つ、リヴァイ班の優しく献身的なメンバー。女型の巨人による死は調査兵団に深い悲しみをもたらした。</value>
+  </data>
+  <data name="Name_GntherSchultz" xml:space="preserve">
+    <value>グンタ・シュルツ</value>
+  </data>
+  <data name="Title_GntherSchultz" xml:space="preserve">
+    <value>調査兵団特別作戦班</value>
+  </data>
+  <data name="Bio_GntherSchultz" xml:space="preserve">
+    <value>戦闘の真っ只中でも冷静な判断力で知られるリヴァイ班の実直なベテラン。変装した女型の巨人に裏切られ、班の中で最初に命を落とした。</value>
+  </data>
+  <data name="Name_Hannes" xml:space="preserve">
+    <value>ハンネス</value>
+  </data>
+  <data name="Title_Hannes" xml:space="preserve">
+    <value>トロスト駐屯兵団隊長</value>
+  </data>
+  <data name="Bio_Hannes" xml:space="preserve">
+    <value>恐怖から笑いの巨人よりカルラ・イェーガーを守れなかった忠実な駐屯兵団の隊長。何年も後、エレンとミカサを守るために命を捧げて贖罪を果たす。</value>
+  </data>
+  <data name="Name_DotPixis" xml:space="preserve">
+    <value>ドット・ピクシス</value>
+  </data>
+  <data name="Title_DotPixis" xml:space="preserve">
+    <value>南方地区最高司令官</value>
+  </data>
+  <data name="Bio_DotPixis" xml:space="preserve">
+    <value>奇抜ながらも卓越した駐屯兵団司令官で、トロスト区の奪還を指揮した。酒好きで知られ、絶望的な状況でも兵士を鼓舞する類いまれな才能を持つ。</value>
+  </data>
+  <data name="Name_RicoBrzenska" xml:space="preserve">
+    <value>リコ·プレツェンスカ</value>
+  </data>
+  <data name="Title_RicoBrzenska" xml:space="preserve">
+    <value>駐屯兵団精鋭班班長</value>
+  </data>
+  <data name="Bio_RicoBrzenska" xml:space="preserve">
+    <value>毒舌ながらも頼れる班長で、トロスト防衛戦で戦った。高い立体機動能力と実用的な戦場判断で知られる。</value>
+  </data>
+  <data name="Name_NileDok" xml:space="preserve">
+    <value>ナイル・ドーク</value>
+  </data>
+  <data name="Title_NileDok" xml:space="preserve">
+    <value>憲兵団総帥</value>
+  </data>
+  <data name="Bio_NileDok" xml:space="preserve">
+    <value>エルヴィン・スミスと戦略をめぐって対立することの多い憲兵団司令官。規律に縛られながらも、地鳴らしの危機の最終局面で人間性を示す。</value>
+  </data>
+  <data name="Name_MarloweFreudenberg" xml:space="preserve">
+    <value>マルロ・フロイデンベルク</value>
+  </data>
+  <data name="Title_MarloweFreudenberg" xml:space="preserve">
+    <value>憲兵団 – 第104期訓練兵団</value>
+  </data>
+  <data name="Bio_MarloweFreudenberg" xml:space="preserve">
+    <value>憲兵団を内部から改革しようと入団した理想主義的な新兵。その道徳心が最終的に彼を王政打倒の調査兵団へと導く。</value>
+  </data>
+  <data name="Name_HitchDreyse" xml:space="preserve">
+    <value>ヒッチ·ドリス</value>
+  </data>
+  <data name="Title_HitchDreyse" xml:space="preserve">
+    <value>憲兵団 – 第104期訓練兵団</value>
+  </data>
+  <data name="Bio_HitchDreyse" xml:space="preserve">
+    <value>表面上は気楽に見えるが、思いのほか鋭い洞察力を持つ。アニとの意外な友情が、軽薄な外見の奥にある共感力を引き出す。</value>
+  </data>
+  <data name="Name_BorisFeulner" xml:space="preserve">
+    <value>ボリス・フォイルナー</value>
+  </data>
+  <data name="Title_BorisFeulner" xml:space="preserve">
+    <value>憲兵団班長</value>
+  </data>
+  <data name="Bio_BorisFeulner" xml:space="preserve">
+    <value>内地の任務を担う憲兵団の士官。道徳的な一線を越える命令でも、上からの命に迷わず従う。</value>
+  </data>
+  <data name="Name_KennyAckerman" xml:space="preserve">
+    <value>ケニー・アッカーマン</value>
+  </data>
+  <data name="Title_KennyAckerman" xml:space="preserve">
+    <value>対人制御班長</value>
+  </data>
+  <data name="Bio_KennyAckerman" xml:space="preserve">
+    <value>伝説の殺し屋でリヴァイの元師匠。致死的な精度で王室の対人制御班を率い、自身の野望である巨人の力の獲得に突き動かされる。</value>
+  </data>
+  <data name="Name_TrauteCarven" xml:space="preserve">
+    <value>トラウテ・カーフェン</value>
+  </data>
+  <data name="Title_TrauteCarven" xml:space="preserve">
+    <value>対人制御班メンバー</value>
+  </data>
+  <data name="Bio_TrauteCarven" xml:space="preserve">
+    <value>ケニーの精鋭対人制御班のメンバー。巨人ではなく人間と戦うために訓練された彼女は、対人用武器を装備した特製の立体機動装置を使用する。</value>
+  </data>
+  <data name="Name_DjelSanes" xml:space="preserve">
+    <value>ジェル・サネス</value>
+  </data>
+  <data name="Title_DjelSanes" xml:space="preserve">
+    <value>第一憲兵団 – 憲兵団</value>
+  </data>
+  <data name="Bio_DjelSanes" xml:space="preserve">
+    <value>王政府への反抗を抑えるためなら何でもする、残虐な拷問者で忠実な執行者。蜂起編では彼の残忍な手法が逆に自分へと向けられる。</value>
+  </data>
+  <data name="Name_Fritz" xml:space="preserve">
+    <value>フリッツ</value>
+  </data>
+  <data name="Title_Fritz" xml:space="preserve">
+    <value>レイス王族の一員</value>
+  </data>
+  <data name="Bio_Fritz" xml:space="preserve">
+    <value>レイス王族の血を引くフリーダの兄弟。グリシャ・イェーガーがレイス家の礼拝堂を襲撃した夜の悲劇を目撃し、その記憶を抱えて生きる。</value>
+  </data>
+  <data name="Name_RodReiss" xml:space="preserve">
+    <value>ロッド・レイス</value>
+  </data>
+  <data name="Title_RodReiss" xml:space="preserve">
+    <value>レイス王族当主</value>
+  </data>
+  <data name="Bio_RodReiss" xml:space="preserve">
+    <value>政治的利益のために子供たちを利用する真の王族の家長。エレンと対峙する代わりに怪物への変身を選び、その臆病さが白日の下にさらされる。</value>
+  </data>
+  <data name="Name_FriedaReiss" xml:space="preserve">
+    <value>フリーダ・レイス</value>
+  </data>
+  <data name="Title_FriedaReiss" xml:space="preserve">
+    <value>真の壁の女王</value>
+  </data>
+  <data name="Bio_FriedaReiss" xml:space="preserve">
+    <value>エレンの前に始祖の巨人を受け継いだ正統な王位継承者。戦争拒否の誓約に縛られ、グリシャ・イェーガーに記憶と力を奪われた。</value>
+  </data>
+  <data name="Name_Aurille" xml:space="preserve">
+    <value>アウリール</value>
+  </data>
+  <data name="Title_Aurille" xml:space="preserve">
+    <value>王政府職員</value>
+  </data>
+  <data name="Bio_Aurille" xml:space="preserve">
+    <value>パラディ島を百年支配してきた政治機構の中で、壁内の統治機関に従事する。</value>
+  </data>
+  <data name="Name_Deltoff" xml:space="preserve">
+    <value>デレトフ</value>
+  </data>
+  <data name="Title_Deltoff" xml:space="preserve">
+    <value>王政府職員</value>
+  </data>
+  <data name="Bio_Deltoff" xml:space="preserve">
+    <value>パラディ島を百年支配してきた政治機構の中で、壁内の統治機関に従事する。</value>
+  </data>
+  <data name="Name_Gerald" xml:space="preserve">
+    <value>ゲラルド</value>
+  </data>
+  <data name="Title_Gerald" xml:space="preserve">
+    <value>王政府職員</value>
+  </data>
+  <data name="Bio_Gerald" xml:space="preserve">
+    <value>パラディ島を百年支配してきた政治機構の中で、壁内の統治機関に従事する。</value>
+  </data>
+  <data name="Name_Roderich" xml:space="preserve">
+    <value>ローデリヒ</value>
+  </data>
+  <data name="Title_Roderich" xml:space="preserve">
+    <value>王政府職員</value>
+  </data>
+  <data name="Bio_Roderich" xml:space="preserve">
+    <value>パラディ島を百年支配してきた政治機構の中で、壁内の統治機関に従事する。</value>
+  </data>
+  <data name="Name_GrishaYeager" xml:space="preserve">
+    <value>グリシャ・イェーガー</value>
+  </data>
+  <data name="Title_GrishaYeager" xml:space="preserve">
+    <value>パラディ島の医師</value>
+  </data>
+  <data name="Bio_GrishaYeager" xml:space="preserve">
+    <value>かつてのマーレ戦士候補生。医師を装ってウォール・マリアに潜入し、進撃と始祖の巨人の秘密を持つ。</value>
+  </data>
+  <data name="Name_CarlaYeager" xml:space="preserve">
+    <value>カルラ・イェーガー</value>
+  </data>
+  <data name="Title_CarlaYeager" xml:space="preserve">
+    <value>エレンの母親</value>
+  </data>
+  <data name="Bio_CarlaYeager" xml:space="preserve">
+    <value>エレン・イェーガーの母。シガンシナ区崩壊時に巨人に捕食され命を落とした。</value>
+  </data>
+  <data name="Name_MinisterNick" xml:space="preserve">
+    <value>ニック司祭</value>
+  </data>
+  <data name="Title_MinisterNick" xml:space="preserve">
+    <value>壁教会の聖職者</value>
+  </data>
+  <data name="Bio_MinisterNick" xml:space="preserve">
+    <value>壁の中に巨人が封印されているという秘密を知る壁教会の熱心な聖職者。拷問を受けても秘密を守り、命をかけてそれを口にしなかった。</value>
+  </data>
+  <data name="Name_DimoReeves" xml:space="preserve">
+    <value>ディモ・リーブス</value>
+  </data>
+  <data name="Title_DimoReeves" xml:space="preserve">
+    <value>レーヴス商会頭</value>
+  </data>
+  <data name="Bio_DimoReeves" xml:space="preserve">
+    <value>当初は王政府と手を組んでいた私利私欲の商人ギルド頭。調査兵団との出会いがトロストへの責任感を徐々に芽生えさせる。</value>
+  </data>
+  <data name="Name_Kaya" xml:space="preserve">
+    <value>カヤ</value>
+  </data>
+  <data name="Title_Kaya" xml:space="preserve">
+    <value>市民 – パラディ島</value>
+  </data>
+  <data name="Bio_Kaya" xml:space="preserve">
+    <value>母を巨人に食われたところをサシャに救われたリベリオ収容区の少女。ガビとの友情が双方の深い憎しみに問いを投げかける。</value>
+  </data>
+  <data name="Name_CalviTheMarshal" xml:space="preserve">
+    <value>Calvi - 元帥</value>
+  </data>
+  <data name="Title_CalviTheMarshal" xml:space="preserve">
+    <value>マーレ軍元帥</value>
+  </data>
+  <data name="Bio_CalviTheMarshal" xml:space="preserve">
+    <value>パラディ島との戦争におけるマーレ軍最高司令官。政治的外交よりも軍事的成果を優先する実用主義の戦略家。</value>
+  </data>
+  <data name="Name_TheoMagathAcommander" xml:space="preserve">
+    <value>テオ・マガト - 隊長</value>
+  </data>
+  <data name="Title_TheoMagathAcommander" xml:space="preserve">
+    <value>戦士部隊隊長</value>
+  </data>
+  <data name="Bio_TheoMagathAcommander" xml:space="preserve">
+    <value>マーレ戦士部隊の厳格で冷静な隊長。最終的には巨人戦争の連鎖に疑問を抱き、自らの命と引き換えにその終焉を誓う。</value>
+  </data>
+  <data name="Name_ReinerBraun" xml:space="preserve">
+    <value>ライナー・ブラウン</value>
+  </data>
+  <data name="Title_ReinerBraun" xml:space="preserve">
+    <value>マーレ戦士部隊／鎧の巨人</value>
+  </data>
+  <data name="Bio_ReinerBraun" xml:space="preserve">
+    <value>鎧の巨人の保持者。マーレへの使命とパラディ島で築いた絆の間で葛藤し、精神的な亀裂から二重人格を発症した。</value>
+  </data>
+  <data name="Name_ZekeYeager" xml:space="preserve">
+    <value>ジーク·イェーガー</value>
+  </data>
+  <data name="Title_ZekeYeager" xml:space="preserve">
+    <value>マーレ戦士部隊／獣の巨人</value>
+  </data>
+  <data name="Bio_ZekeYeager" xml:space="preserve">
+    <value>エレンの異母兄弟で獣の巨人の保持者。エルディア人の苦しみを終わらせるため子孫を断絶する『安楽死計画』の黒幕。</value>
+  </data>
+  <data name="Name_BertoltHoover" xml:space="preserve">
+    <value>ベルトルト・フーバー</value>
+  </data>
+  <data name="Title_BertoltHoover" xml:space="preserve">
+    <value>マーレ戦士部隊／超大型巨人</value>
+  </data>
+  <data name="Bio_BertoltHoover" xml:space="preserve">
+    <value>超大型巨人の保持者でレイナーの幼馴染。穏やかな外見の裏に壁・マリアを崩壊させた凄まじい力が宿る。</value>
+  </data>
+  <data name="Name_AnnieLeonhart" xml:space="preserve">
+    <value>アニ・レオンハート</value>
+  </data>
+  <data name="Title_AnnieLeonhart" xml:space="preserve">
+    <value>マーレ戦士部隊</value>
+  </data>
+  <data name="Bio_AnnieLeonhart" xml:space="preserve">
+    <value>女型の巨人として潜入したマーレ戦士候補生。水晶化の技術と謎めいた忠誠心で知られる。</value>
+  </data>
+  <data name="Name_MarcelGalliard" xml:space="preserve">
+    <value>マルセル・ガリアード</value>
+  </data>
+  <data name="Title_MarcelGalliard" xml:space="preserve">
+    <value>マーレ戦士部隊／顎の巨人</value>
+  </data>
+  <data name="Bio_MarcelGalliard" xml:space="preserve">
+    <value>かつての顎の巨人の保持者でポルコの兄。レイナーをかばって命を落とし、それがパラディ島潜入の全ての始まりとなった。</value>
+  </data>
+  <data name="Name_PorcoGalliard" xml:space="preserve">
+    <value>ポルコ・ガリアード</value>
+  </data>
+  <data name="Title_PorcoGalliard" xml:space="preserve">
+    <value>マーレ戦士部隊／顎の巨人</value>
+  </data>
+  <data name="Bio_PorcoGalliard" xml:space="preserve">
+    <value>攻撃的で誇り高い顎の巨人の保持者。鎧の巨人は兄マルセルのものだったはずだと、レイナーに複雑な感情を抱く。</value>
+  </data>
+  <data name="Name_PieckFinger" xml:space="preserve">
+    <value>ピーク・フィンガー</value>
+  </data>
+  <data name="Title_PieckFinger" xml:space="preserve">
+    <value>マーレ戦士部隊／車力の巨人</value>
+  </data>
+  <data name="Bio_PieckFinger" xml:space="preserve">
+    <value>狡猾で分析力に優れた車力の巨人の保持者。誰よりも長く四足の巨人形態を維持し、戦場で重要な戦術支援を担う。</value>
+  </data>
+  <data name="Name_GabiBraun" xml:space="preserve">
+    <value>ガビ・ブラウン</value>
+  </data>
+  <data name="Title_GabiBraun" xml:space="preserve">
+    <value>マーレ戦士部隊／戦士候補生</value>
+  </data>
+  <data name="Bio_GabiBraun" xml:space="preserve">
+    <value>マーレを崇拝し島のエルディア人を嫌う情熱的な戦士候補生。パラディ島での体験が彼女の世界観を次第に揺るがす。</value>
+  </data>
+  <data name="Name_FalcoGrice" xml:space="preserve">
+    <value>ファルコ・グライス</value>
+  </data>
+  <data name="Title_FalcoGrice" xml:space="preserve">
+    <value>マーレ戦士部隊／顎の巨人</value>
+  </data>
+  <data name="Bio_FalcoGrice" xml:space="preserve">
+    <value>顎の巨人を受け継いだ心優しい戦士候補生。ガビと愛する人々を守るためにすべてを賭ける。</value>
+  </data>
+  <data name="Name_ColtGrice" xml:space="preserve">
+    <value>コルト・グライス</value>
+  </data>
+  <data name="Title_ColtGrice" xml:space="preserve">
+    <value>マーレ戦士部隊／戦士候補生</value>
+  </data>
+  <data name="Bio_ColtGrice" xml:space="preserve">
+    <value>ファルコの兄で、獣の巨人の継承候補。何よりも家族への愛に生きる。</value>
+  </data>
+  <data name="Name_WillyTybur" xml:space="preserve">
+    <value>ヴィリー・タイバー</value>
+  </data>
+  <data name="Title_WillyTybur" xml:space="preserve">
+    <value>タイバー家領主 – 外交官</value>
+  </data>
+  <data name="Bio_WillyTybur" xml:space="preserve">
+    <value>高貴なタイバー家のカリスマ的な公の顔。リベリオで大演劇を演じてパラディ島への宣戦布告を行い、それが自身の命を奪い新たな世界大戦の火種になると知りながらも。</value>
+  </data>
+  <data name="Name_LaraTybur" xml:space="preserve">
+    <value>ラーラ・タイバー</value>
+  </data>
+  <data name="Title_LaraTybur" xml:space="preserve">
+    <value>タイバー家当主 / 戦槌の巨人</value>
+  </data>
+  <data name="Bio_LaraTybur" xml:space="preserve">
+    <value>戦槌の巨人の真の保持者であり、タイバー家の実質的な当主。兄ウィリーが外交を担う間、ラーラは一族最後の切り札だったが、エレンに食われた。</value>
+  </data>
+  <data name="Name_FlochForster" xml:space="preserve">
+    <value>フロック・フォルスタ</value>
+  </data>
+  <data name="Title_FlochForster" xml:space="preserve">
+    <value>イェーガー派指導者</value>
+  </data>
+  <data name="Bio_FlochForster" xml:space="preserve">
+    <value>イェーガー派の指導者。エレン・イェーガーに心酔し、エルディア帝国の復興を掲げる熱狂的愛国者。</value>
+  </data>
+  <data name="Name_Holger" xml:space="preserve">
+    <value>ホルガー</value>
+  </data>
+  <data name="Title_Holger" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="Bio_Holger" xml:space="preserve">
+    <value>調査兵団の兵士でイェーガー派に参加。フロックに従い港での戦闘に参加した兵士。</value>
+  </data>
+  <data name="Name_Wim" xml:space="preserve">
+    <value>ヴィム</value>
+  </data>
+  <data name="Title_Wim" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="Bio_Wim" xml:space="preserve">
+    <value>イェーガー派の兵士。港での対連合戦において戦闘に参加した。</value>
+  </data>
+  <data name="Name_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>反マーレ義勇兵</value>
+  </data>
+  <data name="Title_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>反マーレ義勇兵</value>
+  </data>
+  <data name="Bio_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>マーレの圧政を憎む壁外のエルディア人グループ。イェレーナに率いられ、ジーク・イェーガーと同盟を組んでパラディ島に重要な情報と軍事支援を提供する。</value>
+  </data>
+  <data name="Name_Underground" xml:space="preserve">
+    <value>地下街</value>
+  </data>
+  <data name="Title_Underground" xml:space="preserve">
+    <value>地下街 – 壁の内側の奈落</value>
+  </data>
+  <data name="Bio_Underground" xml:space="preserve">
+    <value>シガンシナ区の地下に広がる社会的底辺者たちのスラム街。ケニー・アッカーマンと幼いリヴァイの生誕地であり、弱者が搾取される犯罪と生存の地。</value>
+  </data>
 </root>

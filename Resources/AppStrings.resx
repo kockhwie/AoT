@@ -2218,4 +2218,598 @@
   <data name="Timeline_E854_S_Text" xml:space="preserve">
     <value>The absolute protective layout of the kingdom has dissolved. Complete chaos erupts across the royal capital.</value>
   </data>
+  <data name="Name_LeviAckerman" xml:space="preserve">
+    <value>Levi Ackerman</value>
+  </data>
+  <data name="Title_LeviAckerman" xml:space="preserve">
+    <value>Special Operations Captain</value>
+  </data>
+  <data name="Bio_LeviAckerman" xml:space="preserve">
+    <value>Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Unmatched with vertical maneuvering equipment, universally hailed as Humanity's Strongest.</value>
+  </data>
+  <data name="Name_MikasaAckerman" xml:space="preserve">
+    <value>Mikasa Ackerman</value>
+  </data>
+  <data name="Title_MikasaAckerman" xml:space="preserve">
+    <value>Elite Scout Officer</value>
+  </data>
+  <data name="Bio_MikasaAckerman" xml:space="preserve">
+    <value>Equal to a hundred ordinary soldiers in combat. Graduated from the 104th Training Corps alongside Eren, driven by an absolute, singular drive to protect him at all costs.</value>
+  </data>
+  <data name="Name_HangeZoe" xml:space="preserve">
+    <value>Hange Zoë</value>
+  </data>
+  <data name="Title_HangeZoe" xml:space="preserve">
+    <value>14th Scout Commander</value>
+  </data>
+  <data name="Bio_HangeZoe" xml:space="preserve">
+    <value>Led the Scout Corps' scientific research and weapon development, notably creating the Thunder Spears. Succeeded Erwin as the 14th Commander with high integrity.</value>
+  </data>
+  <data name="Name_ErwinSmith" xml:space="preserve">
+    <value>Erwin Smith</value>
+  </data>
+  <data name="Title_ErwinSmith" xml:space="preserve">
+    <value>Former 13th Scout Commander</value>
+  </data>
+  <data name="Bio_ErwinSmith" xml:space="preserve">
+    <value>A legendary leader with frozen resolve and hypnotic charisma. Developed the Long-Distance Scouting Formation. Sacrificed himself to historical truth.</value>
+  </data>
+  <data name="Name_JeanKirstein" xml:space="preserve">
+    <value>Jean Kirstein</value>
+  </data>
+  <data name="Title_JeanKirstein" xml:space="preserve">
+    <value>Frontline Field Commander</value>
+  </data>
+  <data name="Bio_JeanKirstein" xml:space="preserve">
+    <value>A grounded realist who understands weakness, enabling him to assess battlefields accurately from a soldier's view. Became a highly trusted field commander.</value>
+  </data>
+  <data name="Name_ArminArlert" xml:space="preserve">
+    <value>Armin Arlert</value>
+  </data>
+  <data name="Title_ArminArlert" xml:space="preserve">
+    <value>15th Scout Commander / Colossal Titan</value>
+  </data>
+  <data name="Bio_ArminArlert" xml:space="preserve">
+    <value>Eren and Mikasa's childhood friend. Possesses an extraordinary tactical mind, devising brilliant counter-strategies in dire situations. Inherited the Colossal Titan.</value>
+  </data>
+  <data name="Name_ErenYeager" xml:space="preserve">
+    <value>Eren Yeager</value>
+  </data>
+  <data name="Title_ErenYeager" xml:space="preserve">
+    <value>Attack Titan / Founding Titan / War Hammer Titan</value>
+  </data>
+  <data name="Bio_ErenYeager" xml:space="preserve">
+    <value>A former Scout who discovered he possessed the power of the Titans. Driven by an unwavering desire for freedom, he eventually initiated the Rumbling to protect Paradis.</value>
+  </data>
+  <data name="Name_Ymir" xml:space="preserve">
+    <value>Ymir</value>
+  </data>
+  <data name="Title_Ymir" xml:space="preserve">
+    <value>104th Training Corps / Jaw Titan</value>
+  </data>
+  <data name="Bio_Ymir" xml:space="preserve">
+    <value>A mysterious cadet of the 104th Training Corps who once held the Jaw Titan. Fiercely devoted to Historia, she sacrificed herself to protect the ones she loved.</value>
+  </data>
+  <data name="Name_HistoriaReiss" xml:space="preserve">
+    <value>Historia Reiss aka Christa Lenz</value>
+  </data>
+  <data name="Title_HistoriaReiss" xml:space="preserve">
+    <value>Queen of the Walls</value>
+  </data>
+  <data name="Bio_HistoriaReiss" xml:space="preserve">
+    <value>The illegitimate daughter of the Reiss royal bloodline, thrust into the crown after refusing to inherit the Founding Titan. Later ascended the throne to guide Paradis through its darkest hour.</value>
+  </data>
+  <data name="Name_FoundingTitan" xml:space="preserve">
+    <value>Founding Titan</value>
+  </data>
+  <data name="Title_FoundingTitan" xml:space="preserve">
+    <value>Height: 204m (Base Form)</value>
+  </data>
+  <data name="Bio_FoundingTitan" xml:space="preserve">
+    <value>The nexus of all titans. Wields the ultimate 'Coordinate' ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic 'Rumbling'.</value>
+  </data>
+  <data name="Name_FinalFoundingTitan" xml:space="preserve">
+    <value>Final Founding Titan</value>
+  </data>
+  <data name="Title_FinalFoundingTitan" xml:space="preserve">
+    <value>Height: Variable</value>
+  </data>
+  <data name="Bio_FinalFoundingTitan" xml:space="preserve">
+    <value>The evolved form of the Founding Titan after the Rumbling, stripped of its ability to control the Nine Titans’ successors but still bound to Ymir’s curse.</value>
+  </data>
+  <data name="Name_AttackTitan" xml:space="preserve">
+    <value>Attack Titan</value>
+  </data>
+  <data name="Title_AttackTitan" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="Bio_AttackTitan" xml:space="preserve">
+    <value>The core combat avatar managed by Eren Yeager. Features balanced combat stats, flawless tactical grit, and the unique cross-temporal memory foresight capability.</value>
+  </data>
+  <data name="Name_ArmoredTitan" xml:space="preserve">
+    <value>Armored Titan</value>
+  </data>
+  <data name="Title_ArmoredTitan" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="Bio_ArmoredTitan" xml:space="preserve">
+    <value>Held by Reiner Braun. Encased in a heavy hardened skeletal armor plating that provides fortress-grade defensive metrics. Functions as an organic battering ram against fortified structures.</value>
+  </data>
+  <data name="Name_BeastTitan" xml:space="preserve">
+    <value>Beast Titan</value>
+  </data>
+  <data name="Title_BeastTitan" xml:space="preserve">
+    <value>Height: 17m</value>
+  </data>
+  <data name="Bio_BeastTitan" xml:space="preserve">
+    <value>Held by Zeke Yeager. Resembles an ape-like beast capable of devastating long-range bombardment. Due to royal blood, his spinal fluid instantly transforms targets.</value>
+  </data>
+  <data name="Name_CartTitan" xml:space="preserve">
+    <value>Cart Titan</value>
+  </data>
+  <data name="Title_CartTitan" xml:space="preserve">
+    <value>Height: 4m (Quadrupedal)</value>
+  </data>
+  <data name="Bio_CartTitan" xml:space="preserve">
+    <value>Held by Pieck Finger. Utilizes a quadrupedal stance with unparalleled physiological endurance, allowing months of sustained transformation. Can be equipped with customized heavy military artillery.</value>
+  </data>
+  <data name="Name_ColossalTitan" xml:space="preserve">
+    <value>Colossal Titan</value>
+  </data>
+  <data name="Title_ColossalTitan" xml:space="preserve">
+    <value>Height: 60m</value>
+  </data>
+  <data name="Bio_ColossalTitan" xml:space="preserve">
+    <value>Held by Bertholdt, then Armin. Possesses a mountainous structure. Transformation triggers a pseudo-nuclear thermal blast, alongside a tactical high-pressure burning steam defensive barrier.</value>
+  </data>
+  <data name="Name_FemaleTitan" xml:space="preserve">
+    <value>Female Titan</value>
+  </data>
+  <data name="Title_FemaleTitan" xml:space="preserve">
+    <value>Height: 14m</value>
+  </data>
+  <data name="Bio_FemaleTitan" xml:space="preserve">
+    <value>Possessed by Annie Leonhart. Exhibits high all-around agility, specialized localized crystalline hardening defenses, and a vocal call that summons pure titans.</value>
+  </data>
+  <data name="Name_JawTitan" xml:space="preserve">
+    <value>Jaw Titan</value>
+  </data>
+  <data name="Title_JawTitan" xml:space="preserve">
+    <value>Height: 5m</value>
+  </data>
+  <data name="Bio_JawTitan" xml:space="preserve">
+    <value>Held by Ymir, Falco, and others. The smallest form but unmatched in top-tier agility. Features powerful claws and jaws that can crush even the densest crystalline hardening.</value>
+  </data>
+  <data name="Name_WarhammerTitan" xml:space="preserve">
+    <value>War Hammer Titan</value>
+  </data>
+  <data name="Title_WarhammerTitan" xml:space="preserve">
+    <value>Height: 15m</value>
+  </data>
+  <data name="Bio_WarhammerTitan" xml:space="preserve">
+    <value>Originally held by the Tybur family. Features absolute weapon materialization via dense structural hardening. The host can safely remain underground while managing the titan puppet remotely via a cable connection.</value>
+  </data>
+  <data name="Name_SonnyAndBean" xml:space="preserve">
+    <value>Sonny and Bean</value>
+  </data>
+  <data name="Title_SonnyAndBean" xml:space="preserve">
+    <value>Height: 4m ~ 7m</value>
+  </data>
+  <data name="Bio_SonnyAndBean" xml:space="preserve">
+    <value>A pair of pure titans captured alive by the Scout Corps for experimentation. Their behavior offered the first scientific insights into titan physiology and regeneration.</value>
+  </data>
+  <data name="Name_WallTitans" xml:space="preserve">
+    <value>Wall Titans</value>
+  </data>
+  <data name="Title_WallTitans" xml:space="preserve">
+    <value>Height: ~50m (Dormant)</value>
+  </data>
+  <data name="Bio_WallTitans" xml:space="preserve">
+    <value>Countless titans embedded within the three walls since their construction, waiting to be awakened. Their existence remained hidden for a century until the truth was revealed.</value>
+  </data>
+  <data name="Name_EldJinn" xml:space="preserve">
+    <value>Eld Jinn</value>
+  </data>
+  <data name="Title_EldJinn" xml:space="preserve">
+    <value>Special Operations Squad – Survey Corps</value>
+  </data>
+  <data name="Bio_EldJinn" xml:space="preserve">
+    <value>Senior member of Levi's hand-picked Special Operations Squad. Calm and experienced, Eld served as the steadying voice of reason among the squad's younger members.</value>
+  </data>
+  <data name="Name_OluoBozado" xml:space="preserve">
+    <value>Oluo Bozado</value>
+  </data>
+  <data name="Title_OluoBozado" xml:space="preserve">
+    <value>Special Operations Squad – Survey Corps</value>
+  </data>
+  <data name="Bio_OluoBozado" xml:space="preserve">
+    <value>Boastful but skilled veteran of the Special Operations Squad who idolises Levi and copies his mannerisms. His bravado barely hides genuine bravery earned through countless battles.</value>
+  </data>
+  <data name="Name_PetraRal" xml:space="preserve">
+    <value>Petra Ral</value>
+  </data>
+  <data name="Title_PetraRal" xml:space="preserve">
+    <value>Special Operations Squad – Survey Corps</value>
+  </data>
+  <data name="Bio_PetraRal" xml:space="preserve">
+    <value>Compassionate and dedicated member of Levi's Squad with an impressive 48-titan kill record. Her death at the hands of the Female Titan marked a devastating loss for the Survey Corps.</value>
+  </data>
+  <data name="Name_GntherSchultz" xml:space="preserve">
+    <value>Günther Schultz</value>
+  </data>
+  <data name="Title_GntherSchultz" xml:space="preserve">
+    <value>Special Operations Squad – Survey Corps</value>
+  </data>
+  <data name="Bio_GntherSchultz" xml:space="preserve">
+    <value>Methodical veteran of Levi's Squad known for his calm assessment in the heat of battle. He was the first of the squad to fall, betrayed by the disguised Female Titan.</value>
+  </data>
+  <data name="Name_Hannes" xml:space="preserve">
+    <value>Hannes</value>
+  </data>
+  <data name="Title_Hannes" xml:space="preserve">
+    <value>Captain of the Garrison – Trost District</value>
+  </data>
+  <data name="Bio_Hannes" xml:space="preserve">
+    <value>Loyal captain of the Garrison who failed to protect Carla Yeager from the Smiling Titan out of fear. He redeems himself years later by sacrificing his life to protect Eren and Mikasa.</value>
+  </data>
+  <data name="Name_DotPixis" xml:space="preserve">
+    <value>Dot Pixis</value>
+  </data>
+  <data name="Title_DotPixis" xml:space="preserve">
+    <value>High Commander of the Southern Territory</value>
+  </data>
+  <data name="Bio_DotPixis" xml:space="preserve">
+    <value>Eccentric yet brilliant Garrison commander who orchestrates the recapture of Trost District. Known for his love of spirits and his unerring ability to inspire troops in hopeless situations.</value>
+  </data>
+  <data name="Name_RicoBrzenska" xml:space="preserve">
+    <value>Rico Brzenska</value>
+  </data>
+  <data name="Title_RicoBrzenska" xml:space="preserve">
+    <value>Leader of the Garrison's Elite Squad</value>
+  </data>
+  <data name="Bio_RicoBrzenska" xml:space="preserve">
+    <value>Sharp-tongued but dependable Squad Leader who fought to defend Trost. Known for her exceptional ODM gear skill and her pragmatic battlefield decision-making.</value>
+  </data>
+  <data name="Name_NileDok" xml:space="preserve">
+    <value>Nile Dok</value>
+  </data>
+  <data name="Title_NileDok" xml:space="preserve">
+    <value>Commander of the Military Police Brigade</value>
+  </data>
+  <data name="Bio_NileDok" xml:space="preserve">
+    <value>Commander of the Military Police who often clashes with Erwin Smith over strategy. Though bound by protocol, he proves his humanity in the final moments of the Rumbling crisis.</value>
+  </data>
+  <data name="Name_MarloweFreudenberg" xml:space="preserve">
+    <value>Marlowe Freudenberg</value>
+  </data>
+  <data name="Title_MarloweFreudenberg" xml:space="preserve">
+    <value>Military Police Brigade – 104th Cadet Corps</value>
+  </data>
+  <data name="Bio_MarloweFreudenberg" xml:space="preserve">
+    <value>Idealistic recruit who joins the Military Police determined to reform it from within. His moral compass ultimately leads him to join the Survey Corps in their uprising against the crown.</value>
+  </data>
+  <data name="Name_HitchDreyse" xml:space="preserve">
+    <value>Hitch Dreyse</value>
+  </data>
+  <data name="Title_HitchDreyse" xml:space="preserve">
+    <value>Military Police Brigade – 104th Cadet Corps</value>
+  </data>
+  <data name="Bio_HitchDreyse" xml:space="preserve">
+    <value>Carefree on the surface, Hitch is sharper than she lets on. Her unlikely friendship with Annie Leonhart reveals a more empathetic side beneath her flippant exterior.</value>
+  </data>
+  <data name="Name_BorisFeulner" xml:space="preserve">
+    <value>Boris Feulner</value>
+  </data>
+  <data name="Title_BorisFeulner" xml:space="preserve">
+    <value>Squad Leader – Military Police</value>
+  </data>
+  <data name="Bio_BorisFeulner" xml:space="preserve">
+    <value>A Military Police officer assigned to oversee operations in the interior. He carries out orders from above with unwavering obedience, even when those orders cross moral lines.</value>
+  </data>
+  <data name="Name_KennyAckerman" xml:space="preserve">
+    <value>Kenny Ackerman</value>
+  </data>
+  <data name="Title_KennyAckerman" xml:space="preserve">
+    <value>Captain of the Anti-Personnel Control Squad</value>
+  </data>
+  <data name="Bio_KennyAckerman" xml:space="preserve">
+    <value>Legendary killer and former mentor to Levi. He leads the crown's Anti-Personnel Control Squad with lethal precision, driven by his own ambition to obtain the power of the Titans.</value>
+  </data>
+  <data name="Name_TrauteCarven" xml:space="preserve">
+    <value>Traute Carven</value>
+  </data>
+  <data name="Title_TrauteCarven" xml:space="preserve">
+    <value>Anti-Personnel Control Squad Member</value>
+  </data>
+  <data name="Bio_TrauteCarven" xml:space="preserve">
+    <value>A member of Kenny's elite Anti-Personnel Control Squad. Trained to fight humans rather than Titans, she uses specially crafted ODM gear loaded with anti-human weapons.</value>
+  </data>
+  <data name="Name_DjelSanes" xml:space="preserve">
+    <value>Djel Sannes</value>
+  </data>
+  <data name="Title_DjelSanes" xml:space="preserve">
+    <value>First Interior Squad – Military Police</value>
+  </data>
+  <data name="Bio_DjelSanes" xml:space="preserve">
+    <value>Sadistic torturer and loyal enforcer of the Royal Government who will do anything to suppress dissent. His brutal methods are eventually turned against him during the Uprising arc.</value>
+  </data>
+  <data name="Name_Fritz" xml:space="preserve">
+    <value>Fritz</value>
+  </data>
+  <data name="Title_Fritz" xml:space="preserve">
+    <value>Member of the Reiss Royal Family</value>
+  </data>
+  <data name="Bio_Fritz" xml:space="preserve">
+    <value>A member of the Reiss bloodline and sibling of Frieda Reiss. He witnessed Grisha Yeager's attack on the Reiss family chapel and carries the trauma of that night.</value>
+  </data>
+  <data name="Name_RodReiss" xml:space="preserve">
+    <value>Rod Reiss</value>
+  </data>
+  <data name="Title_RodReiss" xml:space="preserve">
+    <value>Head of the Reiss Royal Family</value>
+  </data>
+  <data name="Bio_RodReiss" xml:space="preserve">
+    <value>Patriarch of the true royal bloodline who manipulates his children for political gain. His cowardice is laid bare when he chooses monstrous transformation over facing Eren himself.</value>
+  </data>
+  <data name="Name_FriedaReiss" xml:space="preserve">
+    <value>Frieda Reiss</value>
+  </data>
+  <data name="Title_FriedaReiss" xml:space="preserve">
+    <value>True Queen of the Walls</value>
+  </data>
+  <data name="Bio_FriedaReiss" xml:space="preserve">
+    <value>Legitimate heir to the throne and holder of the Founding Titan before Eren. Constrained by the Vow Renouncing War, her memories and power were devoured by Grisha Yeager.</value>
+  </data>
+  <data name="Name_Aurille" xml:space="preserve">
+    <value>Aurille</value>
+  </data>
+  <data name="Title_Aurille" xml:space="preserve">
+    <value>Royal Government Official</value>
+  </data>
+  <data name="Bio_Aurille" xml:space="preserve">
+    <value>Serves within the walls' ruling administration, navigating the political machinery that has controlled Paradis for a century.</value>
+  </data>
+  <data name="Name_Deltoff" xml:space="preserve">
+    <value>Deltoff</value>
+  </data>
+  <data name="Title_Deltoff" xml:space="preserve">
+    <value>Royal Government Official</value>
+  </data>
+  <data name="Bio_Deltoff" xml:space="preserve">
+    <value>Serves within the walls' ruling administration, navigating the political machinery that has controlled Paradis for a century.</value>
+  </data>
+  <data name="Name_Gerald" xml:space="preserve">
+    <value>Gerald</value>
+  </data>
+  <data name="Title_Gerald" xml:space="preserve">
+    <value>Royal Government Official</value>
+  </data>
+  <data name="Bio_Gerald" xml:space="preserve">
+    <value>Serves within the walls' ruling administration, navigating the political machinery that has controlled Paradis for a century.</value>
+  </data>
+  <data name="Name_Roderich" xml:space="preserve">
+    <value>Roderich</value>
+  </data>
+  <data name="Title_Roderich" xml:space="preserve">
+    <value>Royal Government Official</value>
+  </data>
+  <data name="Bio_Roderich" xml:space="preserve">
+    <value>Serves within the walls' ruling administration, navigating the political machinery that has controlled Paradis for a century.</value>
+  </data>
+  <data name="Name_GrishaYeager" xml:space="preserve">
+    <value>Grisha Yeager</value>
+  </data>
+  <data name="Title_GrishaYeager" xml:space="preserve">
+    <value>Paradis Island Physician</value>
+  </data>
+  <data name="Bio_GrishaYeager" xml:space="preserve">
+    <value>A former Marleyan Warrior candidate who infiltrated Wall Maria disguised as a doctor, carrying the secret of the Attack and Founding Titans.</value>
+  </data>
+  <data name="Name_CarlaYeager" xml:space="preserve">
+    <value>Carla Yeager</value>
+  </data>
+  <data name="Title_CarlaYeager" xml:space="preserve">
+    <value>Mother of Eren Yeager</value>
+  </data>
+  <data name="Bio_CarlaYeager" xml:space="preserve">
+    <value>She</value>
+  </data>
+  <data name="Name_MinisterNick" xml:space="preserve">
+    <value>Minister Nick</value>
+  </data>
+  <data name="Title_MinisterNick" xml:space="preserve">
+    <value>Minister of the Church of the Walls</value>
+  </data>
+  <data name="Bio_MinisterNick" xml:space="preserve">
+    <value>Zealous minister of the Wall Cult who knows the secret truth of the Walls — that Titans are sealed inside them. He refuses to reveal this truth even under torture, dying to protect the secret.</value>
+  </data>
+  <data name="Name_DimoReeves" xml:space="preserve">
+    <value>Dimo Reeves</value>
+  </data>
+  <data name="Title_DimoReeves" xml:space="preserve">
+    <value>President of the Reeves Company</value>
+  </data>
+  <data name="Bio_DimoReeves" xml:space="preserve">
+    <value>Self-serving merchant guild president who initially cooperates with the Royal Government. His encounter with the Survey Corps gradually awakens his sense of responsibility to Trost.</value>
+  </data>
+  <data name="Name_Kaya" xml:space="preserve">
+    <value>Kaya</value>
+  </data>
+  <data name="Title_Kaya" xml:space="preserve">
+    <value>Civilian – Paradis Island</value>
+  </data>
+  <data name="Bio_Kaya" xml:space="preserve">
+    <value>A girl from the Liberio internment zone who was saved by Sasha Braus after her mother was devoured by a Titan. Her friendship with Gabi challenges deep-seated hatred on both sides.</value>
+  </data>
+  <data name="Name_CalviTheMarshal" xml:space="preserve">
+    <value>Calvi - The Marshal</value>
+  </data>
+  <data name="Title_CalviTheMarshal" xml:space="preserve">
+    <value>Marshal of the Marleyan Military</value>
+  </data>
+  <data name="Bio_CalviTheMarshal" xml:space="preserve">
+    <value>The supreme commander of Marley's armed forces during the war against Paradis. A pragmatic strategist who prioritises military outcomes over political diplomacy.</value>
+  </data>
+  <data name="Name_TheoMagathAcommander" xml:space="preserve">
+    <value>Theo Magath - A commander</value>
+  </data>
+  <data name="Title_TheoMagathAcommander" xml:space="preserve">
+    <value>Commander of the Warrior Unit</value>
+  </data>
+  <data name="Bio_TheoMagathAcommander" xml:space="preserve">
+    <value>Strict and calculating Commander of Marley's Warrior Unit. He eventually questions the cycle of Titan warfare and resolves to end it — even at the cost of his own life.</value>
+  </data>
+  <data name="Name_ReinerBraun" xml:space="preserve">
+    <value>Reiner Braun</value>
+  </data>
+  <data name="Title_ReinerBraun" xml:space="preserve">
+    <value>Warrior Unit – Marley / Armored Titan</value>
+  </data>
+  <data name="Bio_ReinerBraun" xml:space="preserve">
+    <value>Holder of the Armored Titan, torn between his Marleyan warrior identity and the bonds he formed on Paradis. His fractured psyche developed a split personality to cope.</value>
+  </data>
+  <data name="Name_ZekeYeager" xml:space="preserve">
+    <value>Zeke Yeager</value>
+  </data>
+  <data name="Title_ZekeYeager" xml:space="preserve">
+    <value>Warrior Unit – Marley / Beast Titan</value>
+  </data>
+  <data name="Bio_ZekeYeager" xml:space="preserve">
+    <value>Half-brother of Eren and holder of the Beast Titan. The mastermind behind the 'euthanasia plan' — a scheme to end Eldian suffering by preventing future births.</value>
+  </data>
+  <data name="Name_BertoltHoover" xml:space="preserve">
+    <value>Bertolt Hoover</value>
+  </data>
+  <data name="Title_BertoltHoover" xml:space="preserve">
+    <value>Warrior Unit – Marley / Colossal Titan</value>
+  </data>
+  <data name="Bio_BertoltHoover" xml:space="preserve">
+    <value>Holder of the Colossal Titan and childhood friend of Reiner. His gentle exterior conceals a catastrophic power that toppled Wall Maria.</value>
+  </data>
+  <data name="Name_AnnieLeonhart" xml:space="preserve">
+    <value>Annie Leonhart</value>
+  </data>
+  <data name="Title_AnnieLeonhart" xml:space="preserve">
+    <value>Warrior Unit – Marley</value>
+  </data>
+  <data name="Bio_AnnieLeonhart" xml:space="preserve">
+    <value>Former Marley Warrior candidate who infiltrated Paradis as the Female Titan shifter. Renowned for her crystal-hardening technique and enigmatic loyalty.</value>
+  </data>
+  <data name="Name_MarcelGalliard" xml:space="preserve">
+    <value>Marcel Galliard</value>
+  </data>
+  <data name="Title_MarcelGalliard" xml:space="preserve">
+    <value>Warrior Unit – Marley / Jaw Titan</value>
+  </data>
+  <data name="Bio_MarcelGalliard" xml:space="preserve">
+    <value>Former holder of the Jaw Titan and older brother of Porco. His death protecting Reiner set the entire Paradis infiltration in motion.</value>
+  </data>
+  <data name="Name_PorcoGalliard" xml:space="preserve">
+    <value>Porco Galliard</value>
+  </data>
+  <data name="Title_PorcoGalliard" xml:space="preserve">
+    <value>Warrior Unit – Marley / Jaw Titan</value>
+  </data>
+  <data name="Bio_PorcoGalliard" xml:space="preserve">
+    <value>Abrasive and proud holder of the Jaw Titan. He carries resentment toward Reiner, believing the Armored Titan should have been his brother Marcel's.</value>
+  </data>
+  <data name="Name_PieckFinger" xml:space="preserve">
+    <value>Pieck Finger</value>
+  </data>
+  <data name="Title_PieckFinger" xml:space="preserve">
+    <value>Warrior Unit – Marley / Cart Titan</value>
+  </data>
+  <data name="Bio_PieckFinger" xml:space="preserve">
+    <value>Cunning and analytical holder of the Cart Titan. She endures a quadrupedal Titan form longer than any other, providing critical tactical support on the battlefield.</value>
+  </data>
+  <data name="Name_GabiBraun" xml:space="preserve">
+    <value>Gabi Braun</value>
+  </data>
+  <data name="Title_GabiBraun" xml:space="preserve">
+    <value>Warrior Unit – Marley / Warrior Candidate</value>
+  </data>
+  <data name="Bio_GabiBraun" xml:space="preserve">
+    <value>Fiercely patriotic Warrior candidate who idolises Marley and despises the island's Eldians. Her worldview is gradually shattered through her experiences on Paradis.</value>
+  </data>
+  <data name="Name_FalcoGrice" xml:space="preserve">
+    <value>Falco Grice</value>
+  </data>
+  <data name="Title_FalcoGrice" xml:space="preserve">
+    <value>Warrior Unit – Marley / Jaw Titan</value>
+  </data>
+  <data name="Bio_FalcoGrice" xml:space="preserve">
+    <value>Kind-hearted Warrior candidate who inherits the Jaw Titan. He risks everything to protect Gabi and the people he loves.</value>
+  </data>
+  <data name="Name_ColtGrice" xml:space="preserve">
+    <value>Colt Grice</value>
+  </data>
+  <data name="Title_ColtGrice" xml:space="preserve">
+    <value>Warrior Unit – Marley / Warrior Candidate</value>
+  </data>
+  <data name="Bio_ColtGrice" xml:space="preserve">
+    <value>Elder brother of Falco and the candidate designated to inherit the Beast Titan. Deeply devoted to his family above all else.</value>
+  </data>
+  <data name="Name_WillyTybur" xml:space="preserve">
+    <value>Willy Tybur</value>
+  </data>
+  <data name="Title_WillyTybur" xml:space="preserve">
+    <value>Lord of the Tybur Family – Diplomat</value>
+  </data>
+  <data name="Bio_WillyTybur" xml:space="preserve">
+    <value>Charismatic public face of the noble Tybur family. He staged a grand theatrical production in Liberio to declare war on Paradis — fully aware it would end his life and spark a new world war.</value>
+  </data>
+  <data name="Name_LaraTybur" xml:space="preserve">
+    <value>Lara Tybur</value>
+  </data>
+  <data name="Title_LaraTybur" xml:space="preserve">
+    <value>Head of the Tybur Family / War Hammer Titan</value>
+  </data>
+  <data name="Bio_LaraTybur" xml:space="preserve">
+    <value>True holder of the War Hammer Titan and actual head of the Tybur family. While her brother Willy conducted diplomacy, Lara was the family's ultimate weapon — until Eren devoured her.</value>
+  </data>
+  <data name="Name_FlochForster" xml:space="preserve">
+    <value>Floch Forster</value>
+  </data>
+  <data name="Title_FlochForster" xml:space="preserve">
+    <value>Floch</value>
+  </data>
+  <data name="Bio_FlochForster" xml:space="preserve">
+    <value>Floch</value>
+  </data>
+  <data name="Name_Holger" xml:space="preserve">
+    <value>Holger</value>
+  </data>
+  <data name="Title_Holger" xml:space="preserve">
+    <value>Holger</value>
+  </data>
+  <data name="Bio_Holger" xml:space="preserve">
+    <value>A Survey Corps soldier who joined the Yeagerists, supporting Floch Forster during the coup.</value>
+  </data>
+  <data name="Name_Wim" xml:space="preserve">
+    <value>Wim</value>
+  </data>
+  <data name="Title_Wim" xml:space="preserve">
+    <value>Wim</value>
+  </data>
+  <data name="Bio_Wim" xml:space="preserve">
+    <value>Wim</value>
+  </data>
+  <data name="Name_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>The Anti-Marleyan Volunteers</value>
+  </data>
+  <data name="Title_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>Anti-Marleyan Volunteers</value>
+  </data>
+  <data name="Bio_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>A group of Eldians from outside the Walls who despise Marley's oppression. Led by Yelena, they ally with Zeke Yeager and supply Paradis with crucial intelligence and military aid.</value>
+  </data>
+  <data name="Name_Underground" xml:space="preserve">
+    <value>Underground</value>
+  </data>
+  <data name="Title_Underground" xml:space="preserve">
+    <value>The Underground – Beneath the Walls</value>
+  </data>
+  <data name="Bio_Underground" xml:space="preserve">
+    <value>The subterranean slum beneath Stohess District where society's outcasts live. It is the birthplace of Kenny Ackerman and the young Levi, a place of crime and survival where the weak are exploited.</value>
+  </data>
 </root>

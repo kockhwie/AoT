@@ -2218,4 +2218,598 @@
   <data name="Timeline_E854_S_Text" xml:space="preserve">
     <value>王國的絕對防護佈局已瓦解。王都陷入完全混亂。</value>
   </data>
+  <data name="Name_LeviAckerman" xml:space="preserve">
+    <value>里維·阿卡曼</value>
+  </data>
+  <data name="Title_LeviAckerman" xml:space="preserve">
+    <value>調查兵團 特別作戰班兵長</value>
+  </data>
+  <data name="Bio_LeviAckerman" xml:space="preserve">
+    <value>因覺醒了阿卡曼一族的血統而擁有近乎超人類的身體反射神經。戰鬥力極強，操縱立體機動裝置的技術堪稱全人類最高壁壘，被公認為「人類最強士兵」。</value>
+  </data>
+  <data name="Name_MikasaAckerman" xml:space="preserve">
+    <value>米卡莎·阿卡曼</value>
+  </data>
+  <data name="Title_MikasaAckerman" xml:space="preserve">
+    <value>調查兵團 精銳核心士官</value>
+  </data>
+  <data name="Bio_MikasaAckerman" xml:space="preserve">
+    <value>在戰鬥中一人實力可匹敵一百名精銳普通士兵。與艾連同樣隸屬第104期訓練兵團畢業，內心被唯一的至高信念所驅使，不惜一切代價守護艾連·葉卡。</value>
+  </data>
+  <data name="Name_HangeZoe" xml:space="preserve">
+    <value>漢吉·佐耶</value>
+  </data>
+  <data name="Title_HangeZoe" xml:space="preserve">
+    <value>調查兵團 第14代團長</value>
+  </data>
+  <data name="Bio_HangeZoe" xml:space="preserve">
+    <value>對巨人有著近乎狂熱的探求心，主持了兵團內所有關巨人的科學實驗與武器開發（如雷槍）。在艾爾文犧牲後接任第14代團長，展現出極高的責任感與智慧。</value>
+  </data>
+  <data name="Name_ErwinSmith" xml:space="preserve">
+    <value>艾爾文·史密斯</value>
+  </data>
+  <data name="Title_ErwinSmith" xml:space="preserve">
+    <value>調查兵團 前任第13代團長</value>
+  </data>
+  <data name="Bio_ErwinSmith" xml:space="preserve">
+    <value>擁有卓越的領導力、冷酷的決斷力與無與倫比的煽動力。開創「長距離索敵陣形」大幅降低兵團死亡率。為了探尋地下室的歷史真相，甘願化身帶領士兵赴死的惡魔。</value>
+  </data>
+  <data name="Name_JeanKirstein" xml:space="preserve">
+    <value>約翰·基爾斯坦</value>
+  </data>
+  <data name="Title_JeanKirstein" xml:space="preserve">
+    <value>調查兵團 現場前線指揮官</value>
+  </data>
+  <data name="Bio_JeanKirstein" xml:space="preserve">
+    <value>性格現實且認清自身軟弱，但也正因如此，他能站在普通士兵的角度冷靜看清現狀。具備極佳的現場局勢判斷力，深得同伴信賴，逐漸成長為優秀的指揮官。</value>
+  </data>
+  <data name="Name_ArminArlert" xml:space="preserve">
+    <value>阿爾敏·亞魯雷特</value>
+  </data>
+  <data name="Title_ArminArlert" xml:space="preserve">
+    <value>調查兵團 第15代團長 / 超大型巨人</value>
+  </data>
+  <data name="Bio_ArminArlert" xml:space="preserve">
+    <value>艾連與米卡莎的童年玩伴。具備無可匹敵的戰略頭腦與大局觀，多次在絕境中制定關鍵戰術逆轉戰局，並在瑪利亞之牆奪還戰後繼承了超大型巨人的能力。</value>
+  </data>
+  <data name="Name_ErenYeager" xml:space="preserve">
+    <value>艾連·葉卡</value>
+  </data>
+  <data name="Title_ErenYeager" xml:space="preserve">
+    <value>進擊的巨人 / 始祖的巨人 / 戰槌巨人</value>
+  </data>
+  <data name="Bio_ErenYeager" xml:space="preserve">
+    <value>前調查兵團成員，發現自己擁有巨人之力。在對自由的堅定追求驅使下，他最終發動了地鳴以保護帕拉迪島。</value>
+  </data>
+  <data name="Name_Ymir" xml:space="preserve">
+    <value>尤米爾</value>
+  </data>
+  <data name="Title_Ymir" xml:space="preserve">
+    <value>104期訓練兵團 / 顎之巨人</value>
+  </data>
+  <data name="Bio_Ymir" xml:space="preserve">
+    <value>104期訓練兵團中身世成謎的學員，曾是顎之巨人的持有者。對希絲特莉亞抱持著深厚的情誼，最終為守護所愛之人犧牲自己。</value>
+  </data>
+  <data name="Name_HistoriaReiss" xml:space="preserve">
+    <value>希絲特莉亞·雷斯 aka 克里斯塔·連茲</value>
+  </data>
+  <data name="Title_HistoriaReiss" xml:space="preserve">
+    <value>牆內女王</value>
+  </data>
+  <data name="Bio_HistoriaReiss" xml:space="preserve">
+    <value>雷斯王室的私生女，拒絕繼承始祖巨人之力後被迫登上王座，肩負起帶領帕拉迪島度過最黑暗時刻的重任。</value>
+  </data>
+  <data name="Name_FoundingTitan" xml:space="preserve">
+    <value>始祖巨人</value>
+  </data>
+  <data name="Title_FoundingTitan" xml:space="preserve">
+    <value>身高: 204米 (初始型態)</value>
+  </data>
+  <data name="Bio_FoundingTitan" xml:space="preserve">
+    <value>所有巨人之源。擁有至高無上的「座標」秘術，能隔空篡改尤米爾子民的集體記憶，並能操控城牆內千萬名超大型巨人發動「地鳴」摧毀世界。</value>
+  </data>
+  <data name="Name_FinalFoundingTitan" xml:space="preserve">
+    <value>末日巨人</value>
+  </data>
+  <data name="Title_FinalFoundingTitan" xml:space="preserve">
+    <value>身高：不定</value>
+  </data>
+  <data name="Bio_FinalFoundingTitan" xml:space="preserve">
+    <value>地鳴事件後始祖巨人的最終型態，喪失了操控九大巨人繼承者的能力，卻依然受尤彌爾詛咒的束縛。</value>
+  </data>
+  <data name="Name_AttackTitan" xml:space="preserve">
+    <value>進擊的巨人</value>
+  </data>
+  <data name="Title_AttackTitan" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="Bio_AttackTitan" xml:space="preserve">
+    <value>艾連·葉卡当前持有的作戰主體。具備卓越的近身格鬥術、平衡的三維作戰指標、不屈的戰鬥意志，以及能越過時間長河窺探「未來繼承者記憶」的至高宿命異能。</value>
+  </data>
+  <data name="Name_ArmoredTitan" xml:space="preserve">
+    <value>盔甲巨人</value>
+  </data>
+  <data name="Title_ArmoredTitan" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="Bio_ArmoredTitan" xml:space="preserve">
+    <value>萊納·布朗持有。全身覆蓋硬質化極高的重型骨骼外殼，猶如一台鋼鐵戰車，防禦力驚人。常利用驚人的體重配合衝刺，直接撞碎城牆甕城的大門。</value>
+  </data>
+  <data name="Name_BeastTitan" xml:space="preserve">
+    <value>野獸巨人</value>
+  </data>
+  <data name="Title_BeastTitan" xml:space="preserve">
+    <value>身高: 17米</value>
+  </data>
+  <data name="Bio_BeastTitan" xml:space="preserve">
+    <value>吉克·葉卡持有。外表呈現猿猴般的野獸形態，具備極其恐怖的遠程碎石投擲殺傷力。因具備王血，其脊髓液能強制將人類巨人化。</value>
+  </data>
+  <data name="Name_CartTitan" xml:space="preserve">
+    <value>車力巨人</value>
+  </data>
+  <data name="Title_CartTitan" xml:space="preserve">
+    <value>身高: 4米 (四足步行)</value>
+  </data>
+  <data name="Bio_CartTitan" xml:space="preserve">
+    <value>皮克·芬格爾持有。採用獨特的四足步行模式，擁有九大巨人中最強的恐怖續航耐力，能連續數月保持巨人化型態。背部能搭載重型機槍塔或重砲要塞等現代化軍事裝備。</value>
+  </data>
+  <data name="Name_ColossalTitan" xml:space="preserve">
+    <value>超大型巨人</value>
+  </data>
+  <data name="Title_ColossalTitan" xml:space="preserve">
+    <value>身高: 60米</value>
+  </data>
+  <data name="Bio_ColossalTitan" xml:space="preserve">
+    <value>先後由貝爾托特、阿爾敏持有。體型如移動的高山，變身時能引發如同戰術核武器般的毀滅性熱能爆炸，可蒸發大範圍內的一切生命，並能隨意釋放高壓高溫蒸气障壁。</value>
+  </data>
+  <data name="Name_FemaleTitan" xml:space="preserve">
+    <value>女巨人</value>
+  </data>
+  <data name="Title_FemaleTitan" xml:space="preserve">
+    <value>身高: 14米</value>
+  </data>
+  <data name="Bio_FemaleTitan" xml:space="preserve">
+    <value>亞妮·雷恩哈特持有。具備極高的全能機动適應力，能局部實行高強度硬質化結晶防禦，並能發出尖叫大範圍吸引並引導無垢巨人。</value>
+  </data>
+  <data name="Name_JawTitan" xml:space="preserve">
+    <value>顎巨人</value>
+  </data>
+  <data name="Title_JawTitan" xml:space="preserve">
+    <value>身高: 5米</value>
+  </data>
+  <data name="Bio_JawTitan" xml:space="preserve">
+    <value>先後由尤米爾、法爾可等人持有。體型最小但速度位居九大巨人首位。其爪與顎部具備九大巨人中最強的撕裂與破壞力，甚至能輕易咬碎女型巨人的超硬質化結晶。</value>
+  </data>
+  <data name="Name_WarhammerTitan" xml:space="preserve">
+    <value>戰槌巨人</value>
+  </data>
+  <data name="Title_WarhammerTitan" xml:space="preserve">
+    <value>身高: 15米</value>
+  </data>
+  <data name="Bio_WarhammerTitan" xml:space="preserve">
+    <value>曾由戴巴家族持有，後被艾連吞噬。能將硬質化能力運用到極致，隨心所欲地製造出巨槌、地刺、甚至弓弩等各類致命兵器。本體可隱藏在地下並通過線纜遠程操控巨人。</value>
+  </data>
+  <data name="Name_SonnyAndBean" xml:space="preserve">
+    <value>索尼與比恩</value>
+  </data>
+  <data name="Title_SonnyAndBean" xml:space="preserve">
+    <value>身高：4米～7米</value>
+  </data>
+  <data name="Bio_SonnyAndBean" xml:space="preserve">
+    <value>被調查兵團活捉用於實驗的一對無垢巨人。牠們的行為模式為人類首次提供了關於巨人生理機能與再生能力的科學觀察數據。</value>
+  </data>
+  <data name="Name_WallTitans" xml:space="preserve">
+    <value>城牆中的巨人</value>
+  </data>
+  <data name="Title_WallTitans" xml:space="preserve">
+    <value>身高：約50米（沉睡狀態）</value>
+  </data>
+  <data name="Bio_WallTitans" xml:space="preserve">
+    <value>自城牆建造以來便被埋藏於三道城牆之中、等待甦醒的無數巨人。牠們的存在被隱藏了整整一個世紀，直到真相揭曉的那天。</value>
+  </data>
+  <data name="Name_EldJinn" xml:space="preserve">
+    <value>艾爾德·金</value>
+  </data>
+  <data name="Title_EldJinn" xml:space="preserve">
+    <value>調查兵團特別作戰班</value>
+  </data>
+  <data name="Bio_EldJinn" xml:space="preserve">
+    <value>李維親自挑選的特別作戰班資深成員，冷靜而老練，在班內年輕成員中扮演理性的聲音。</value>
+  </data>
+  <data name="Name_OluoBozado" xml:space="preserve">
+    <value>歐魯·波札德</value>
+  </data>
+  <data name="Title_OluoBozado" xml:space="preserve">
+    <value>調查兵團特別作戰班</value>
+  </data>
+  <data name="Bio_OluoBozado" xml:space="preserve">
+    <value>特別作戰班愛吹噓卻技術高超的老兵，崇拜李維並模仿其舉止，虛張聲勢背後是無數戰役磨練出的真正勇氣。</value>
+  </data>
+  <data name="Name_PetraRal" xml:space="preserve">
+    <value>佩托拉·拉爾</value>
+  </data>
+  <data name="Title_PetraRal" xml:space="preserve">
+    <value>調查兵團特別作戰班</value>
+  </data>
+  <data name="Bio_PetraRal" xml:space="preserve">
+    <value>李維班富有同情心且盡職的成員，擁有擊殺48隻巨人的卓越記錄。在女型巨人手中的犧牲對調查兵團造成了毀滅性的損失。</value>
+  </data>
+  <data name="Name_GntherSchultz" xml:space="preserve">
+    <value>君特·舒爾茨</value>
+  </data>
+  <data name="Title_GntherSchultz" xml:space="preserve">
+    <value>調查兵團特別作戰班</value>
+  </data>
+  <data name="Bio_GntherSchultz" xml:space="preserve">
+    <value>以戰鬥熱潮中冷靜評估著稱的李維班嚴謹老兵，是班中第一個倒下的人，被偽裝成人類的女型巨人所殺。</value>
+  </data>
+  <data name="Name_Hannes" xml:space="preserve">
+    <value>漢尼斯</value>
+  </data>
+  <data name="Title_Hannes" xml:space="preserve">
+    <value>特洛斯特駐屯兵團隊長</value>
+  </data>
+  <data name="Bio_Hannes" xml:space="preserve">
+    <value>因恐懼而未能保護卡拉·伊耶格免受微笑巨人之害的忠誠駐屯兵團隊長，多年後以犧牲生命保護艾連與三笠來贖罪。</value>
+  </data>
+  <data name="Name_DotPixis" xml:space="preserve">
+    <value>達特·皮克希斯</value>
+  </data>
+  <data name="Title_DotPixis" xml:space="preserve">
+    <value>南方領地最高司令官</value>
+  </data>
+  <data name="Bio_DotPixis" xml:space="preserve">
+    <value>古怪卻才華橫溢的駐屯兵團指揮官，策劃奪回特洛斯特區。以喜好烈酒聞名，在絕望境況中依然能激勵士兵。</value>
+  </data>
+  <data name="Name_RicoBrzenska" xml:space="preserve">
+    <value>里柯·布雷騫絲卡</value>
+  </data>
+  <data name="Title_RicoBrzenska" xml:space="preserve">
+    <value>駐屯兵團精英班班長</value>
+  </data>
+  <data name="Bio_RicoBrzenska" xml:space="preserve">
+    <value>說話尖銳卻可靠的班長，在特洛斯特保衛戰中英勇作戰，以出色的立體機動技術和務實的戰場決策著稱。</value>
+  </data>
+  <data name="Name_NileDok" xml:space="preserve">
+    <value>奈爾·德克</value>
+  </data>
+  <data name="Title_NileDok" xml:space="preserve">
+    <value>憲兵旅司令官</value>
+  </data>
+  <data name="Bio_NileDok" xml:space="preserve">
+    <value>常與艾爾文·史密斯在策略上衝突的憲兵旅司令，雖受規定束縛，但在地鳴危機的最後時刻展現了人性。</value>
+  </data>
+  <data name="Name_MarloweFreudenberg" xml:space="preserve">
+    <value>馬洛·弗洛登貝克</value>
+  </data>
+  <data name="Title_MarloweFreudenberg" xml:space="preserve">
+    <value>憲兵旅 – 第104屆訓練兵團</value>
+  </data>
+  <data name="Bio_MarloweFreudenberg" xml:space="preserve">
+    <value>決心從內部改革憲兵團的理想主義新兵，其道德信念最終引導他加入調查兵團，對抗王室政權。</value>
+  </data>
+  <data name="Name_HitchDreyse" xml:space="preserve">
+    <value>希琪·朵麗絲</value>
+  </data>
+  <data name="Title_HitchDreyse" xml:space="preserve">
+    <value>憲兵旅 – 第104屆訓練兵團</value>
+  </data>
+  <data name="Bio_HitchDreyse" xml:space="preserve">
+    <value>外表輕鬆隨性，實則比看起來更為敏銳。她與安妮·利奧哈特出乎意料的友誼，展現了她輕浮外表下更具同理心的一面。</value>
+  </data>
+  <data name="Name_BorisFeulner" xml:space="preserve">
+    <value>波利斯·福伊魯拿</value>
+  </data>
+  <data name="Title_BorisFeulner" xml:space="preserve">
+    <value>憲兵團班長</value>
+  </data>
+  <data name="Bio_BorisFeulner" xml:space="preserve">
+    <value>負責內地行動的憲兵團軍官，即使命令越過道德底線，也無條件服從上級指示。</value>
+  </data>
+  <data name="Name_KennyAckerman" xml:space="preserve">
+    <value>肯尼·阿卡曼</value>
+  </data>
+  <data name="Title_KennyAckerman" xml:space="preserve">
+    <value>反人員控制小隊隊長</value>
+  </data>
+  <data name="Bio_KennyAckerman" xml:space="preserve">
+    <value>傳奇殺手，李維的前任師父，以致命的精準度率領王室反人員控制小隊，被自身獲得巨人之力的野心所驅使。</value>
+  </data>
+  <data name="Name_TrauteCarven" xml:space="preserve">
+    <value>特勞特·卡芬</value>
+  </data>
+  <data name="Title_TrauteCarven" xml:space="preserve">
+    <value>反人員控制小隊成員</value>
+  </data>
+  <data name="Bio_TrauteCarven" xml:space="preserve">
+    <value>肯尼精英反人員控制小隊的成員，被訓練與人類而非巨人作戰，使用配備反人員武器的特製立體機動裝置。</value>
+  </data>
+  <data name="Name_DjelSanes" xml:space="preserve">
+    <value>傑爾·薩尼斯</value>
+  </data>
+  <data name="Title_DjelSanes" xml:space="preserve">
+    <value>第一內務小隊 – 憲兵旅</value>
+  </data>
+  <data name="Bio_DjelSanes" xml:space="preserve">
+    <value>殘忍的拷問者，王政府的忠誠執行者，不惜一切鎮壓異見。在起義篇中，他殘忍的手段被反施於己身。</value>
+  </data>
+  <data name="Name_Fritz" xml:space="preserve">
+    <value>弗利茲</value>
+  </data>
+  <data name="Title_Fritz" xml:space="preserve">
+    <value>雷斯王族成員</value>
+  </data>
+  <data name="Bio_Fritz" xml:space="preserve">
+    <value>雷斯王族血脈成員，弗莉達·雷斯的兄弟，目睹了格里沙·伊耶格襲擊雷斯家族禮拜堂那一夜的悲劇。</value>
+  </data>
+  <data name="Name_RodReiss" xml:space="preserve">
+    <value>羅德·雷斯</value>
+  </data>
+  <data name="Title_RodReiss" xml:space="preserve">
+    <value>雷斯王族族長</value>
+  </data>
+  <data name="Bio_RodReiss" xml:space="preserve">
+    <value>為政治利益操縱子女的真正王族族長，選擇化身怪物而非親自面對艾連，懦弱的本性由此暴露。</value>
+  </data>
+  <data name="Name_FriedaReiss" xml:space="preserve">
+    <value>芙莉妲·雷斯</value>
+  </data>
+  <data name="Title_FriedaReiss" xml:space="preserve">
+    <value>城牆的真女王</value>
+  </data>
+  <data name="Bio_FriedaReiss" xml:space="preserve">
+    <value>在艾連之前持有始祖巨人的合法王位繼承人，受到拒絕戰爭誓約的束縛，記憶與力量被格里沙·伊耶格所奪。</value>
+  </data>
+  <data name="Name_Aurille" xml:space="preserve">
+    <value>奧里耶</value>
+  </data>
+  <data name="Title_Aurille" xml:space="preserve">
+    <value>王政府官員</value>
+  </data>
+  <data name="Bio_Aurille" xml:space="preserve">
+    <value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value>
+  </data>
+  <data name="Name_Deltoff" xml:space="preserve">
+    <value>德雷托夫</value>
+  </data>
+  <data name="Title_Deltoff" xml:space="preserve">
+    <value>王政府官員</value>
+  </data>
+  <data name="Bio_Deltoff" xml:space="preserve">
+    <value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value>
+  </data>
+  <data name="Name_Gerald" xml:space="preserve">
+    <value>傑拉德</value>
+  </data>
+  <data name="Title_Gerald" xml:space="preserve">
+    <value>王政府官員</value>
+  </data>
+  <data name="Bio_Gerald" xml:space="preserve">
+    <value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value>
+  </data>
+  <data name="Name_Roderich" xml:space="preserve">
+    <value>羅德瑞奇</value>
+  </data>
+  <data name="Title_Roderich" xml:space="preserve">
+    <value>王政府官員</value>
+  </data>
+  <data name="Bio_Roderich" xml:space="preserve">
+    <value>任職於牆內統治機構，周旋在控制帕拉迪島百年的政治機器之中。</value>
+  </data>
+  <data name="Name_GrishaYeager" xml:space="preserve">
+    <value>古利夏·葉卡</value>
+  </data>
+  <data name="Title_GrishaYeager" xml:space="preserve">
+    <value>帕拉迪島醫師 / 艾連·葉卡父親</value>
+  </data>
+  <data name="Bio_GrishaYeager" xml:space="preserve">
+    <value>曾是馬雷戰士候補生，偽裝成醫生潛入瑪利亞之牆，身懷進擊與始祖巨人的祕密。</value>
+  </data>
+  <data name="Name_CarlaYeager" xml:space="preserve">
+    <value>卡露拉·葉卡</value>
+  </data>
+  <data name="Title_CarlaYeager" xml:space="preserve">
+    <value>艾連·葉卡母親</value>
+  </data>
+  <data name="Bio_CarlaYeager" xml:space="preserve">
+    <value>她</value>
+  </data>
+  <data name="Name_MinisterNick" xml:space="preserve">
+    <value>尼克司祭</value>
+  </data>
+  <data name="Title_MinisterNick" xml:space="preserve">
+    <value>牆教會牧師</value>
+  </data>
+  <data name="Bio_MinisterNick" xml:space="preserve">
+    <value>知曉城牆中封印著巨人這一秘密的狂熱牆教會牧師，即使遭受酷刑也拒絕透露，以死守護秘密。</value>
+  </data>
+  <data name="Name_DimoReeves" xml:space="preserve">
+    <value>迪墨·利布斯</value>
+  </data>
+  <data name="Title_DimoReeves" xml:space="preserve">
+    <value>里維斯商會會長</value>
+  </data>
+  <data name="Bio_DimoReeves" xml:space="preserve">
+    <value>最初與王政府合作的自私商業公會頭目，與調查兵團的接觸逐漸喚醒他對特洛斯特的責任感。</value>
+  </data>
+  <data name="Name_Kaya" xml:space="preserve">
+    <value>卡亞</value>
+  </data>
+  <data name="Title_Kaya" xml:space="preserve">
+    <value>平民 – 帕拉迪島</value>
+  </data>
+  <data name="Bio_Kaya" xml:space="preserve">
+    <value>來自利貝里歐集中區的少女，母親被巨人吞噬後被莎夏所救。她與嘉碧的友誼挑戰著雙方根深蒂固的仇恨。</value>
+  </data>
+  <data name="Name_CalviTheMarshal" xml:space="preserve">
+    <value>卡爾畢 - 元帥</value>
+  </data>
+  <data name="Title_CalviTheMarshal" xml:space="preserve">
+    <value>馬雷軍元帥</value>
+  </data>
+  <data name="Bio_CalviTheMarshal" xml:space="preserve">
+    <value>在對帕拉迪島的戰爭中擔任馬雷軍最高指揮官，以軍事結果優先於政治外交的務實戰略家。</value>
+  </data>
+  <data name="Name_TheoMagathAcommander" xml:space="preserve">
+    <value>提歐·馬迦特 - 艾爾迪亞戰士隊隊長</value>
+  </data>
+  <data name="Title_TheoMagathAcommander" xml:space="preserve">
+    <value>戰士部隊指揮官</value>
+  </data>
+  <data name="Bio_TheoMagathAcommander" xml:space="preserve">
+    <value>馬雷戰士部隊嚴謹冷靜的指揮官，最終對巨人戰爭的循環產生質疑，並決心以自己的生命終結它。</value>
+  </data>
+  <data name="Name_ReinerBraun" xml:space="preserve">
+    <value>萊納·布朗</value>
+  </data>
+  <data name="Title_ReinerBraun" xml:space="preserve">
+    <value>馬雷戰士部隊／鎧之巨人</value>
+  </data>
+  <data name="Bio_ReinerBraun" xml:space="preserve">
+    <value>鎧之巨人的持有者，在馬雷戰士身份與帕拉迪島情誼之間掙扎。破碎的內心形成雙重人格以應對衝突。</value>
+  </data>
+  <data name="Name_ZekeYeager" xml:space="preserve">
+    <value>吉克·葉卡</value>
+  </data>
+  <data name="Title_ZekeYeager" xml:space="preserve">
+    <value>馬雷戰士部隊／野獸巨人</value>
+  </data>
+  <data name="Bio_ZekeYeager" xml:space="preserve">
+    <value>艾連的異母兄弟，野獸巨人的持有者，透過阻止艾爾迪亞人繁衍後代來終結其苦難的「安樂死計畫」主謀。</value>
+  </data>
+  <data name="Name_BertoltHoover" xml:space="preserve">
+    <value>貝爾托特·胡佛</value>
+  </data>
+  <data name="Title_BertoltHoover" xml:space="preserve">
+    <value>馬雷戰士部隊／超大型巨人</value>
+  </data>
+  <data name="Bio_BertoltHoover" xml:space="preserve">
+    <value>超大型巨人的持有者，雷納的童年摯友。溫和外表下蘊藏著摧毀瑪利亞之牆的毀滅性力量。</value>
+  </data>
+  <data name="Name_AnnieLeonhart" xml:space="preserve">
+    <value>亞妮·雷恩哈特</value>
+  </data>
+  <data name="Title_AnnieLeonhart" xml:space="preserve">
+    <value>馬雷戰士部隊</value>
+  </data>
+  <data name="Bio_AnnieLeonhart" xml:space="preserve">
+    <value>以女型巨人身份潛入帕拉迪島的馬雷戰士候選者，以水晶硬化術與神秘的忠誠著稱。</value>
+  </data>
+  <data name="Name_MarcelGalliard" xml:space="preserve">
+    <value>馬賽·賈利亞德</value>
+  </data>
+  <data name="Title_MarcelGalliard" xml:space="preserve">
+    <value>馬雷戰士部隊／顎巨人</value>
+  </data>
+  <data name="Bio_MarcelGalliard" xml:space="preserve">
+    <value>前顎巨人持有者，波爾科的兄長。為保護雷納而犧牲，此舉引發了整個帕拉迪島的滲透任務。</value>
+  </data>
+  <data name="Name_PorcoGalliard" xml:space="preserve">
+    <value>波爾柯·賈利亞德</value>
+  </data>
+  <data name="Title_PorcoGalliard" xml:space="preserve">
+    <value>馬雷戰士部隊／顎巨人</value>
+  </data>
+  <data name="Bio_PorcoGalliard" xml:space="preserve">
+    <value>粗魯而驕傲的顎巨人持有者，對雷納懷有怨恨，認為鎧之巨人本應屬於兄長馬塞爾。</value>
+  </data>
+  <data name="Name_PieckFinger" xml:space="preserve">
+    <value>皮克·芬格爾</value>
+  </data>
+  <data name="Title_PieckFinger" xml:space="preserve">
+    <value>馬雷戰士部隊／車力巨人</value>
+  </data>
+  <data name="Bio_PieckFinger" xml:space="preserve">
+    <value>狡猾且善於分析的車力巨人持有者，比任何人更長時間維持四足巨人形態，為戰場提供關鍵的戰術支援。</value>
+  </data>
+  <data name="Name_GabiBraun" xml:space="preserve">
+    <value>賈碧·布朗</value>
+  </data>
+  <data name="Title_GabiBraun" xml:space="preserve">
+    <value>馬雷戰士部隊／戰士候補</value>
+  </data>
+  <data name="Bio_GabiBraun" xml:space="preserve">
+    <value>狂熱的愛國戰士候選者，崇拜馬雷、鄙視帕拉迪島的艾爾迪亞人。在島上的經歷逐漸打碎她的世界觀。</value>
+  </data>
+  <data name="Name_FalcoGrice" xml:space="preserve">
+    <value>法爾可·葛萊斯</value>
+  </data>
+  <data name="Title_FalcoGrice" xml:space="preserve">
+    <value>馬雷戰士部隊／顎巨人</value>
+  </data>
+  <data name="Bio_FalcoGrice" xml:space="preserve">
+    <value>繼承顎巨人的善良戰士候選者，為保護嘉碧和所愛之人而不惜一切。</value>
+  </data>
+  <data name="Name_ColtGrice" xml:space="preserve">
+    <value>柯特·葛萊斯</value>
+  </data>
+  <data name="Title_ColtGrice" xml:space="preserve">
+    <value>馬雷戰士部隊／戰士候補</value>
+  </data>
+  <data name="Bio_ColtGrice" xml:space="preserve">
+    <value>法爾科的兄長，被選定繼承野獸巨人的候補人。對家人的愛勝過一切。</value>
+  </data>
+  <data name="Name_WillyTybur" xml:space="preserve">
+    <value>威利·戴巴</value>
+  </data>
+  <data name="Title_WillyTybur" xml:space="preserve">
+    <value>泰伯家族領主 – 外交官</value>
+  </data>
+  <data name="Bio_WillyTybur" xml:space="preserve">
+    <value>高貴泰伯家族魅力十足的公眾門面，在利貝里歐上演宏大戲劇，宣佈對帕拉迪島開戰——明知此舉將終結自己的生命並點燃新世界大戰。</value>
+  </data>
+  <data name="Name_LaraTybur" xml:space="preserve">
+    <value>菈菈·戴巴</value>
+  </data>
+  <data name="Title_LaraTybur" xml:space="preserve">
+    <value>泰伯家族族長 / 戰槌巨人</value>
+  </data>
+  <data name="Bio_LaraTybur" xml:space="preserve">
+    <value>戰槌巨人的真正持有者，泰伯家族的實際族長。兄長威利進行外交活動時，拉拉是家族的終極武器——直到被艾連所吞噬。</value>
+  </data>
+  <data name="Name_FlochForster" xml:space="preserve">
+    <value>弗洛克·福斯特</value>
+  </data>
+  <data name="Title_FlochForster" xml:space="preserve">
+    <value>葉卡派的代理領袖與發起人</value>
+  </data>
+  <data name="Bio_FlochForster" xml:space="preserve">
+    <value>葉卡派的代理領袖與發起人，忠於艾連的極端愛國主義者。</value>
+  </data>
+  <data name="Name_Holger" xml:space="preserve">
+    <value>霍爾格</value>
+  </data>
+  <data name="Title_Holger" xml:space="preserve">
+    <value>核心成員</value>
+  </data>
+  <data name="Bio_Holger" xml:space="preserve">
+    <value>參與政變與港口衝突的葉卡派核心士兵。</value>
+  </data>
+  <data name="Name_Wim" xml:space="preserve">
+    <value>威姆</value>
+  </data>
+  <data name="Title_Wim" xml:space="preserve">
+    <value>核心士兵</value>
+  </data>
+  <data name="Bio_Wim" xml:space="preserve">
+    <value>參與政變與港口衝突的葉卡派核心士兵。</value>
+  </data>
+  <data name="Name_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>反瑪雷派義勇兵</value>
+  </data>
+  <data name="Title_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>反馬雷志願軍</value>
+  </data>
+  <data name="Bio_Theantimarleyanvolunteers" xml:space="preserve">
+    <value>一群憎恨馬雷壓迫的牆外艾爾迪亞人，在葉蓮娜領導下，與季克·伊耶格結盟，為帕拉迪島提供關鍵情報與軍事援助。</value>
+  </data>
+  <data name="Name_Underground" xml:space="preserve">
+    <value>地下城</value>
+  </data>
+  <data name="Title_Underground" xml:space="preserve">
+    <value>地下街 – 城牆之下</value>
+  </data>
+  <data name="Bio_Underground" xml:space="preserve">
+    <value>斯托赫斯區地下的貧民窟，是社會棄兒的居住地，也是肯尼·阿卡曼和年幼李維的出身地，一個弱者遭剝削的犯罪與求生之地。</value>
+  </data>
 </root>
