@@ -949,6 +949,9 @@
   <data name="Btn_ViewAllManga" xml:space="preserve">
     <value>查看全部 {0} 本 →</value>
   </data>
+  <data name="Btn_ViewFullTimeline" xml:space="preserve">
+    <value>查看完整年表</value>
+  </data>
   <data name="MangaSectionTitle" xml:space="preserve">
     <value>漫畫單行本</value>
   </data>

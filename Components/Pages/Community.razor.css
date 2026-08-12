@@ -1,40 +1,71 @@
-/* Community Page Styling */
+/* ============================================================
+   Community.razor.css
+   Rides the global comic-panel system (comic-card / comic-badge /
+   aot-btn, all defined in app.css) — same language as
+   LoreMaps, StoryTimeline, MilitaryTacticalGear, etc.
+   NOTE: No :root variables — Blazor CSS isolation breaks them.
+   All font sizes, colours, and spacing are explicit values.
+   ============================================================ */
 
+/* ── HERO ─────────────────────────────────────────────────── */
 .comm-hero {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 2.25rem 1.25rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, rgba(20,22,26,0.85), rgba(12,13,16,0.95));
-    border: 1px solid rgba(255,215,0,0.15);
-    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Screentone dot overlay — matches gear/timeline/lore headers */
+.comm-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+    background-size: 8px 8px;
+    opacity: 0.85;
+}
+
+.comm-hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .comm-hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background-color: rgba(255,215,0,0.15);
-    color: #dfbb6b;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
+    gap: 0.4rem;
+    /* comic-badge style — hard border + offset shadow */
+    background-color: #facc15;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #000000;
+    padding: 2px 10px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
+/* Tier 1 — page title */
 .comm-hero-title {
-    font-size: 2.25rem;
-    font-weight: 700;
+    font-size: 1.75rem;
+    font-weight: 900;
     color: #ffffff;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.75rem;
+    text-shadow: 3px 3px 0px #000000;
 }
 
+/* Tier 3 — subtitle body */
 .comm-hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #d1d5db;
-    max-w: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .comm-polls-grid {
@@ -50,20 +81,30 @@
     }
 }
 
+/* comm-poll-card rides the global comic-card class for border/shadow/hover.
+   We only add layout — do NOT re-declare background, border, or border-radius
+   here because comic-card uses !important. */
 .comm-poll-card {
-    background: linear-gradient(135deg, rgba(20,22,26,0.85), rgba(12,13,16,0.95));
-    border: 1px solid rgba(255,215,0,0.15);
-    border-radius: 0.75rem;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
-.comm-poll-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255,215,0,0.35);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+/* Screentone overlay inside each poll card */
+.comm-poll-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 15%, transparent 16%);
+    background-size: 8px 8px;
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.comm-poll-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .comm-poll-header {
@@ -73,44 +114,60 @@
 }
 
 .comm-poll-icon {
-    font-size: 1.75rem;
-    color: #dfbb6b;
+    font-size: 1.5rem;
+    color: #facc15;
+    text-shadow: 2px 2px 0 #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,215,0,0.1);
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.5rem;
+    /* Small comic-frame tile */
+    background-color: #0a0a0a;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-shadow: 3px 3px 0px #000000;
+    width: 3.25rem;
+    height: 3.25rem;
     flex-shrink: 0;
 }
 
+/* Tier 2 — section type label, matches comic-tag language */
 .comm-poll-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #dfbb6b;
-    letter-spacing: 0.18em;
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 900;
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #000000;
+    padding: 2px 8px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    margin-bottom: 0.35rem;
 }
 
+/* Tier 1 — poll card title */
 .comm-poll-title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #ffffff;
     margin-top: 0.125rem;
     margin-bottom: 0.25rem;
 }
 
+/* Tier 3 — poll card description */
 .comm-poll-desc {
     font-size: 0.875rem;
     color: #d1d5db;
+    line-height: 1.5;
 }
 
 .comm-poll-instruction {
     font-size: 0.875rem;
     color: #dfbb6b;
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
 .comm-poll-thanks {
@@ -120,6 +177,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
 }
 
 /* Faction VS Options */
@@ -131,41 +189,61 @@
     margin-top: auto;
 }
 
+/* VS badge — hard red comic accent */
 .comm-vs-badge {
     background-color: #ef4444;
     color: #ffffff;
-    font-weight: 700;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    font-weight: 900;
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
 }
 
+/* Vote buttons — aot-btn system foundation */
 .comm-vote-btn {
     flex: 1;
-    padding: 0.75rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 700;
-    font-size: 0.875rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    transition: opacity 0.2s, transform 0.1s;
-    border: none;
+    gap: 0.4rem;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
     cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    min-height: 48px;
 }
 
 .comm-vote-btn:active {
-    transform: scale(0.98);
+    box-shadow: 1px 1px 0px #ef4444 !important;
+    transform: translate(1px, 1px);
+}
+
+@media (hover: hover) {
+    .comm-vote-btn:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border-color: #000000 !important;
+        box-shadow: 3px 3px 0px 1px #ef4444 !important;
+    }
 }
 
 .comm-vote-btn--marley {
-    background-color: #3b82f6;
+    background-color: #2563eb;
     color: #ffffff;
 }
 
 .comm-vote-btn--paradis {
-    background-color: #10b981;
+    background-color: #16a34a;
     color: #ffffff;
 }
 
@@ -180,19 +258,32 @@
 .comm-option-btn {
     width: 100%;
     padding: 0.75rem 1rem;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,215,0,0.15);
-    color: #ffffff;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
+    background-color: #0a0a0a;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #000000;
+    color: #f8fafc;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-align: left;
-    transition: background-color 0.2s, border-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
     cursor: pointer;
+    min-height: 44px;
 }
 
-.comm-option-btn:hover {
-    background-color: rgba(255,215,0,0.1);
-    border-color: #dfbb6b;
+@media (hover: hover) {
+    .comm-option-btn:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: 3px 3px 0px 1px #ef4444 !important;
+    }
+}
+
+.comm-option-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #ef4444 !important;
 }
 
 /* Titan Option Grid */
@@ -211,32 +302,37 @@
 
 .comm-titan-btn {
     padding: 0.75rem 0.5rem;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,215,0,0.15);
-    color: #ffffff;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
+    background-color: #0a0a0a;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #000000;
+    color: #f8fafc;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-align: center;
-    transition: background-color 0.2s, border-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
     cursor: pointer;
+    min-height: 44px;
 }
 
-.comm-titan-btn:hover {
-    background-color: rgba(255,255,255,0.1);
+@media (hover: hover) {
+    .comm-titan-btn:hover {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: 3px 3px 0px 1px #ef4444 !important;
+    }
 }
 
-.comm-titan-btn.theme-founding:hover { border-color: #a855f7; }
-.comm-titan-btn.theme-female:hover { border-color: #ec4899; }
-.comm-titan-btn.theme-beast:hover { border-color: #854d0e; }
-.comm-titan-btn.theme-colossal:hover { border-color: #ef4444; }
-.comm-titan-btn.theme-armored:hover { border-color: #eab308; }
-.comm-titan-btn.theme-jaw:hover { border-color: #f97316; }
-.comm-titan-btn.theme-cart:hover { border-color: #6b7280; }
-.comm-titan-btn.theme-warhammer:hover { border-color: #e2e8f0; }
-.comm-titan-btn.theme-attack:hover { border-color: #ef4444; }
+.comm-titan-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #ef4444 !important;
+}
 
 .comm-titan-name {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 /* Results Display */
@@ -253,11 +349,13 @@
     gap: 0.25rem;
 }
 
+/* Tier 1 highlight for user's own vote */
 .comm-result-row.is-my-vote .comm-result-label span:first-child {
-    font-weight: 700;
-    color: #dfbb6b;
+    font-weight: 800;
+    color: #facc15;
 }
 
+/* Tier 3 — result labels */
 .comm-result-label {
     display: flex;
     justify-content: space-between;
@@ -268,28 +366,45 @@
 .comm-result-track {
     width: 100%;
     height: 0.5rem;
-    background-color: rgba(255,255,255,0.05);
-    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid #000000;
+    border-radius: 2px;
     overflow: hidden;
 }
 
 .comm-result-fill {
     height: 100%;
-    border-radius: 9999px;
+    border-radius: 2px;
+    transition: width 0.4s ease;
 }
 
-.comm-fill--marley { background-color: #3b82f6; }
-.comm-fill--paradis { background-color: #10b981; }
-.comm-fill--gold { background-color: #dfbb6b; }
-.comm-fill--red { background-color: #ef4444; }
+.comm-fill--marley  { background-color: #2563eb; }
+.comm-fill--paradis { background-color: #16a34a; }
+.comm-fill--gold    { background-color: #dfbb6b; }
+.comm-fill--red     { background-color: #ef4444; }
 
-/* Trivia Section */
+/* ── TRIVIA SECTION ───────────────────────────────────────── */
+/* Rides comic-card for border/shadow. Only layout added here. */
 .comm-trivia-section {
-    background: linear-gradient(135deg, rgba(20,22,26,0.85), rgba(12,13,16,0.95));
-    border: 1px solid rgba(255,215,0,0.15);
-    border-radius: 0.75rem;
     padding: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Screentone overlay — same as poll cards */
+.comm-trivia-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 15%, transparent 16%);
+    background-size: 8px 8px;
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.comm-trivia-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .comm-trivia-start {
@@ -305,10 +420,13 @@
     margin-bottom: 1.5rem;
 }
 
+/* Tier 2 — gold counter label */
 .comm-trivia-counter {
     font-size: 0.875rem;
     color: #dfbb6b;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .comm-trivia-dots {
@@ -319,16 +437,21 @@
 .comm-trivia-dot {
     width: 0.5rem;
     height: 0.5rem;
-    border-radius: 9999px;
-    background-color: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .comm-trivia-dot.active {
-    background-color: #dfbb6b;
+    background-color: #facc15;
+    border-color: #000000;
+    box-shadow: 1px 1px 0px #000000;
 }
 
 .comm-trivia-dot.done {
-    background-color: #10b981;
+    background-color: #22c55e;
+    border-color: #000000;
+    box-shadow: 1px 1px 0px #000000;
 }
 
 .comm-trivia-question-box {
@@ -337,10 +460,12 @@
     gap: 1.5rem;
 }
 
+/* Tier 1 — question text */
 .comm-trivia-question {
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #ffffff;
+    line-height: 1.5;
 }
 
 .comm-trivia-options {
@@ -358,31 +483,46 @@
 .comm-trivia-opt {
     width: 100%;
     padding: 1rem;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,215,0,0.15);
-    color: #ffffff;
-    border-radius: 0.375rem;
+    background-color: #0a0a0a;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #000000;
+    color: #f8fafc;
     font-size: 0.875rem;
+    font-weight: 700;
     text-align: left;
-    transition: background-color 0.2s, border-color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
     cursor: pointer;
+    min-height: 48px;
 }
 
-.comm-trivia-opt:hover:not(:disabled) {
-    background-color: rgba(255,215,0,0.1);
-    border-color: #dfbb6b;
+@media (hover: hover) {
+    .comm-trivia-opt:hover:not(:disabled) {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: 3px 3px 0px 1px #ef4444 !important;
+    }
+}
+
+.comm-trivia-opt:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
 }
 
 .comm-trivia-opt.is-correct {
-    background-color: rgba(16,185,129,0.15);
-    border-color: #10b981;
-    color: #10b981;
+    background-color: #14532d;
+    border-color: #22c55e;
+    box-shadow: 3px 3px 0px #22c55e;
+    color: #86efac;
 }
 
 .comm-trivia-opt.is-wrong {
-    background-color: rgba(239,68,68,0.15);
+    background-color: #450a0a;
     border-color: #ef4444;
-    color: #ef4444;
+    box-shadow: 3px 3px 0px #ef4444;
+    color: #fca5a5;
 }
 
 .comm-trivia-feedback {
@@ -390,37 +530,42 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
-.comm-trivia-feedback.is-correct { color: #10b981; }
-.comm-trivia-feedback.is-wrong { color: #ef4444; }
+.comm-trivia-feedback.is-correct { color: #22c55e; }
+.comm-trivia-feedback.is-wrong   { color: #ef4444; }
 
 .comm-trivia-result {
     text-align: center;
     padding: 2rem 0;
 }
 
+/* Score tile — comic-frame hard-border square */
 .comm-trivia-score-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #ffffff;
-    background-color: rgba(255,215,0,0.1);
-    border: 2px solid #dfbb6b;
+    background-color: #0a0a0a;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    box-shadow: 6px 6px 0px #000000;
     width: 7rem;
     height: 7rem;
-    border-radius: 9999px;
     margin-bottom: 1rem;
 }
 
+/* Tier 2 — score label */
 .comm-trivia-score-label {
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #dfbb6b;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
@@ -428,23 +573,26 @@
 .comm-trivia-rank-stars {
     display: flex;
     justify-content: center;
-    gap: 0.25rem;
+    gap: 0.375rem;
     margin-bottom: 1rem;
 }
 
 .comm-star-lit {
-    color: #eab308;
+    color: #facc15;
+    text-shadow: 2px 2px 0px #000000;
     font-size: 1.5rem;
 }
 
 .comm-star-dim {
-    color: rgba(255,255,255,0.1);
+    color: rgba(255, 255, 255, 0.15);
     font-size: 1.5rem;
 }
 
+/* Tier 1 — rank message */
 .comm-trivia-rank-msg {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
