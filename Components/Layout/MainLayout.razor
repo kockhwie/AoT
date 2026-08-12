@@ -55,7 +55,7 @@
 
                         <li><a>@LocalizationService.NavNews</a></li>
 
-                        <li><a>@LocalizationService.NavCommunity</a></li>
+                        <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/community">@LocalizationService.NavCommunity</a></li>
                     </ul>
                 </div>
                 <a class="text-sm" href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a>
@@ -100,7 +100,7 @@
 
                     <li><a>@LocalizationService.NavNews</a></li>
 
-                    <li><a>@LocalizationService.NavCommunity</a></li>
+                    <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/community">@LocalizationService.NavCommunity</a></li>
                 </ul>
             </div>
             <div class="navbar-end">

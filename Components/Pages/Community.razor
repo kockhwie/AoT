@@ -1,0 +1,533 @@
+@page "/{Lang}/community"
+@inject AppLocalizationService LocalizationService
+@using AOT.Services
+@inject LanguageSwitchService LanguageSwitcher
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+@inject FactionPollService PollService
+
+<div class="comm-hero">
+    <div class="comm-hero-badge">
+        <i class="ti ti-users"></i> COMMUNITY
+    </div>
+    <h1 class="comm-hero-title">@LocalizationService.GetString("Comm_PageTitle")</h1>
+    <p class="comm-hero-subtitle">@LocalizationService.GetString("Comm_PageSubtitle")</p>
+</div>
+
+<div class="comm-polls-grid">
+
+    <!-- POLL 1 · FACTION LOYALTY -->
+    <div class="comm-poll-card comic-card">
+        <div class="comm-poll-header">
+            <span class="comm-poll-icon"><i class="ti ti-flag"></i></span>
+            <div>
+                <div class="comm-poll-tag">FACTION POLL</div>
+                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_FactionSectionTitle")</h2>
+                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_FactionSectionDesc")</p>
+            </div>
+        </div>
+
+        @if (!_factionVoted)
+        {
+            <p class="comm-poll-instruction">@LocalizationService.GetString("PollInstruction")</p>
+            <div class="comm-faction-vs">
+                <button class="comm-vote-btn comm-vote-btn--marley" @onclick='() => VoteFaction("marley")'>
+                    <i class="ti ti-flag"></i> @LocalizationService.GetString("PollMarleyOpt")
+                </button>
+                <div class="comm-vs-badge">VS</div>
+                <button class="comm-vote-btn comm-vote-btn--paradis" @onclick='() => VoteFaction("paradis")'>
+                    <i class="ti ti-shield"></i> @LocalizationService.GetString("PollParadisOpt")
+                </button>
+            </div>
+        }
+        else
+        {
+            <p class="comm-poll-thanks">
+                @LocalizationService.GetString("PollThanks")
+                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+            </p>
+            <div class="comm-result-bars">
+                <div class="comm-result-row">
+                    <div class="comm-result-label">
+                        <span>@LocalizationService.GetString("PollMarleyOpt")</span>
+                        <span>@_factionMarleyPct% (@_factionVotes.GetValueOrDefault("marley", 0))</span>
+                    </div>
+                    <div class="comm-result-track">
+                        <div class="comm-result-fill comm-fill--marley" style="width: @(_factionMarleyPct)%;"></div>
+                    </div>
+                </div>
+                <div class="comm-result-row">
+                    <div class="comm-result-label">
+                        <span>@LocalizationService.GetString("PollParadisOpt")</span>
+                        <span>@_factionParadisPct% (@_factionVotes.GetValueOrDefault("paradis", 0))</span>
+                    </div>
+                    <div class="comm-result-track">
+                        <div class="comm-result-fill comm-fill--paradis" style="width: @(_factionParadisPct)%;"></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- POLL 2 · FAN FAVOURITE CHARACTER -->
+    <div class="comm-poll-card comic-card">
+        <div class="comm-poll-header">
+            <span class="comm-poll-icon"><i class="ti ti-heart"></i></span>
+            <div>
+                <div class="comm-poll-tag">CHARACTER VOTE</div>
+                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_CharPollTitle")</h2>
+                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_CharPollDesc")</p>
+            </div>
+        </div>
+
+        @if (!_charVoted)
+        {
+            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_CharPollInstruction")</p>
+            <div class="comm-option-grid">
+                @foreach (var opt in _charOptions)
+                {
+                    <button class="comm-option-btn" @onclick="() => VoteChar(opt.Key)">
+                        @opt.Label
+                    </button>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="comm-poll-thanks">
+                @LocalizationService.GetString("Comm_CharPollThanks")
+                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+            </p>
+            <div class="comm-result-bars">
+                @foreach (var opt in _charOptions)
+                {
+                    var votes = _charVotes.GetValueOrDefault(opt.Key, 0);
+                    var total = _charVotes.Values.Sum();
+                    var pct = total == 0 ? 0 : (int)Math.Round(votes * 100.0 / total);
+                    <div class="comm-result-row @(_charVotedKey == opt.Key ? "is-my-vote" : "")">
+                        <div class="comm-result-label">
+                            <span>@opt.Label</span>
+                            <span>@pct% (@votes)</span>
+                        </div>
+                        <div class="comm-result-track">
+                            <div class="comm-result-fill comm-fill--gold" style="width: @pct%;"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- POLL 3 · BEST STORY ARC -->
+    <div class="comm-poll-card comic-card">
+        <div class="comm-poll-header">
+            <span class="comm-poll-icon"><i class="ti ti-book"></i></span>
+            <div>
+                <div class="comm-poll-tag">STORY ARC VOTE</div>
+                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_ArcPollTitle")</h2>
+                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_ArcPollDesc")</p>
+            </div>
+        </div>
+
+        @if (!_arcVoted)
+        {
+            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_ArcPollInstruction")</p>
+            <div class="comm-option-grid">
+                @foreach (var opt in _arcOptions)
+                {
+                    <button class="comm-option-btn" @onclick="() => VoteArc(opt.Key)">
+                        @LocalizationService.GetString(opt.LabelKey)
+                    </button>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="comm-poll-thanks">
+                @LocalizationService.GetString("Comm_ArcPollThanks")
+                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+            </p>
+            <div class="comm-result-bars">
+                @foreach (var opt in _arcOptions)
+                {
+                    var votes = _arcVotes.GetValueOrDefault(opt.Key, 0);
+                    var total = _arcVotes.Values.Sum();
+                    var pct = total == 0 ? 0 : (int)Math.Round(votes * 100.0 / total);
+                    <div class="comm-result-row @(_arcVotedKey == opt.Key ? "is-my-vote" : "")">
+                        <div class="comm-result-label">
+                            <span>@LocalizationService.GetString(opt.LabelKey)</span>
+                            <span>@pct% (@votes)</span>
+                        </div>
+                        <div class="comm-result-track">
+                            <div class="comm-result-fill comm-fill--gold" style="width: @pct%;"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <!-- POLL 4 · STRONGEST TITAN TIER VOTE -->
+    <div class="comm-poll-card comic-card">
+        <div class="comm-poll-header">
+            <span class="comm-poll-icon"><i class="ti ti-dna-2"></i></span>
+            <div>
+                <div class="comm-poll-tag">TITAN TIER VOTE</div>
+                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TitanPollTitle")</h2>
+                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TitanPollDesc")</p>
+            </div>
+        </div>
+
+        @if (!_titanVoted)
+        {
+            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_TitanPollInstruction")</p>
+            <div class="comm-titan-grid">
+                @foreach (var opt in _titanOptions)
+                {
+                    <button class="comm-titan-btn theme-@opt.Theme" @onclick="() => VoteTitan(opt.Key)">
+                        <span class="comm-titan-name">@LocalizationService.GetString(opt.NameKey)</span>
+                    </button>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="comm-poll-thanks">
+                @LocalizationService.GetString("Comm_TitanPollThanks")
+                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+            </p>
+            <div class="comm-result-bars">
+                @foreach (var opt in _titanOptions)
+                {
+                    var votes = _titanVotes.GetValueOrDefault(opt.Key, 0);
+                    var total = _titanVotes.Values.Sum();
+                    var pct = total == 0 ? 0 : (int)Math.Round(votes * 100.0 / total);
+                    <div class="comm-result-row @(_titanVotedKey == opt.Key ? "is-my-vote" : "")">
+                        <div class="comm-result-label">
+                            <span>@LocalizationService.GetString(opt.NameKey)</span>
+                            <span>@pct% (@votes)</span>
+                        </div>
+                        <div class="comm-result-track">
+                            <div class="comm-result-fill comm-fill--red" style="width: @pct%;"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+</div>
+
+<!-- SECTION 5 · AOT TRIVIA QUIZ -->
+<div class="comm-trivia-section comic-card">
+    <div class="comm-poll-header">
+        <span class="comm-poll-icon"><i class="ti ti-help-circle"></i></span>
+        <div>
+            <div class="comm-poll-tag">TRIVIA QUIZ</div>
+            <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TriviaTitle")</h2>
+            <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TriviaDesc")</p>
+        </div>
+    </div>
+
+    @if (_triviaState == TriviaState.Idle)
+    {
+        <div class="comm-trivia-start">
+            <button class="aot-btn aot-btn--yellow" @onclick="StartTrivia">
+                <i class="ti ti-sword mr-1"></i>@LocalizationService.GetString("Comm_TriviaStart")
+            </button>
+        </div>
+    }
+    else if (_triviaState == TriviaState.Playing)
+    {
+        var q = _triviaQuestions[_triviaIndex];
+        <div class="comm-trivia-progress">
+            <span class="comm-trivia-counter">@LocalizationService.GetString("Comm_TriviaQuestion") @(_triviaIndex + 1) @LocalizationService.GetString("Comm_TriviaOf") @_triviaQuestions.Count</span>
+            <div class="comm-trivia-dots">
+                @for (int i = 0; i < _triviaQuestions.Count; i++)
+                {
+                    var di = i;
+                    <span class="comm-trivia-dot @(di < _triviaIndex ? "done" : di == _triviaIndex ? "active" : "")"></span>
+                }
+            </div>
+        </div>
+        <div class="comm-trivia-question-box">
+            <p class="comm-trivia-question">@LocalizationService.GetString(q.QuestionKey)</p>
+            <div class="comm-trivia-options">
+                @foreach (var opt in q.Options)
+                {
+                    var optCopy = opt;
+                    string btnClass = "comm-trivia-opt";
+                    if (_triviaAnswered)
+                    {
+                        if (optCopy == q.CorrectAnswer) btnClass += " is-correct";
+                        else if (optCopy == _triviaSelected) btnClass += " is-wrong";
+                    }
+                    <button class="@btnClass"
+                            disabled="@_triviaAnswered"
+                            @onclick="() => AnswerTrivia(optCopy)">
+                        @LocalizationService.GetString(optCopy)
+                    </button>
+                }
+            </div>
+
+            @if (_triviaAnswered)
+            {
+                <div class="comm-trivia-feedback @(_triviaLastCorrect ? "is-correct" : "is-wrong")">
+                    @if (_triviaLastCorrect)
+                    {
+                        <i class="ti ti-circle-check"></i> @LocalizationService.GetString("Comm_TriviaCorrect")
+                    }
+                    else
+                    {
+                        <span><i class="ti ti-circle-x"></i> @LocalizationService.GetString("Comm_TriviaWrong") <strong>@LocalizationService.GetString(q.CorrectAnswer)</strong></span>
+                    }
+                </div>
+                <button class="aot-btn aot-btn--yellow mt-4" @onclick="NextTrivia">
+                    @if (_triviaIndex < _triviaQuestions.Count - 1)
+                    {
+                        <span><i class="ti ti-arrow-right mr-1"></i>@LocalizationService.GetString("Comm_TriviaNext")</span>
+                    }
+                    else
+                    {
+                        <span><i class="ti ti-flag-check mr-1"></i>See Results</span>
+                    }
+                </button>
+            }
+        </div>
+    }
+    else if (_triviaState == TriviaState.Done)
+    {
+        int total = _triviaQuestions.Count;
+        string rankKey = _triviaScore switch
+        {
+            0 or 1 => "Comm_TriviaRank0",
+            2 or 3 => "Comm_TriviaRank1",
+            4 => "Comm_TriviaRank2",
+            _ => "Comm_TriviaRank3"
+        };
+        <div class="comm-trivia-result">
+            <div class="comm-trivia-score-badge">
+                @_triviaScore / @total
+            </div>
+            <p class="comm-trivia-score-label">@LocalizationService.GetString("Comm_TriviaScore")</p>
+            <div class="comm-trivia-rank-stars">
+                @for (int i = 0; i < total; i++)
+                {
+                    var si = i;
+                    <i class="ti @(si < _triviaScore ? "ti-star-filled comm-star-lit" : "ti-star comm-star-dim")"></i>
+                }
+            </div>
+            <p class="comm-trivia-rank-msg">@LocalizationService.GetString(rankKey)</p>
+            <button class="aot-btn aot-btn--white mt-4" @onclick="ResetTrivia">
+                <i class="ti ti-refresh mr-1"></i>@LocalizationService.GetString("Comm_TriviaRetry")
+            </button>
+        </div>
+    }
+</div>
+
+
+@code {
+    [Parameter] public string Lang { get; set; } = "zh";
+    [CascadingParameter] public string CurrentLang { get; set; } = "zh";
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(Lang))
+            LanguageSwitcher.Initialize(Lang);
+    }
+
+    // ─── FACTION POLL ──────────────────────────────────────────────
+    private bool _factionVoted;
+    private string? _factionVotedKey;
+    private Dictionary<string, long> _factionVotes = new(StringComparer.OrdinalIgnoreCase);
+
+    private long _factionMarleyCount => _factionVotes.GetValueOrDefault("marley", 0);
+    private long _factionParadisCount => _factionVotes.GetValueOrDefault("paradis", 0);
+    private long _factionTotal => _factionMarleyCount + _factionParadisCount;
+    private int _factionMarleyPct => _factionTotal == 0 ? 50 : (int)Math.Round(_factionMarleyCount * 100.0 / _factionTotal);
+    private int _factionParadisPct => _factionTotal == 0 ? 50 : 100 - _factionMarleyPct;
+
+    private async Task VoteFaction(string faction)
+    {
+        if (_factionVoted) return;
+        var newCount = await PollService.VoteAsync(faction);
+        _factionVotes[faction] = newCount;
+        _factionVotedKey = faction;
+        _factionVoted = true;
+        await JS.InvokeVoidAsync("localStorage.setItem", "aot_faction_vote", faction);
+        StateHasChanged();
+    }
+
+    // ─── CHARACTER FAVOURITE POLL ──────────────────────────────────
+    private sealed record PollOption(string Key, string Label);
+
+    private readonly List<PollOption> _charOptions = new()
+    {
+        new("levi",   "Levi Ackerman"),
+        new("mikasa", "Mikasa Ackerman"),
+        new("eren",   "Eren Yeager"),
+        new("armin",  "Armin Arlert"),
+        new("erwin",  "Erwin Smith"),
+    };
+
+    private bool _charVoted;
+    private string? _charVotedKey;
+    private Dictionary<string, int> _charVotes = new(StringComparer.OrdinalIgnoreCase);
+
+    private async Task VoteChar(string key)
+    {
+        if (_charVoted) return;
+        _charVotes[key] = _charVotes.GetValueOrDefault(key, 0) + 1;
+        _charVotedKey = key;
+        _charVoted = true;
+        await JS.InvokeVoidAsync("localStorage.setItem", "aot_char_vote", key);
+        StateHasChanged();
+    }
+
+    // ─── STORY ARC POLL ───────────────────────────────────────────
+    private sealed record ArcOption(string Key, string LabelKey);
+
+    private readonly List<ArcOption> _arcOptions = new()
+    {
+        new("arc1", "Comm_Arc1"),
+        new("arc2", "Comm_Arc2"),
+        new("arc3", "Comm_Arc3"),
+        new("arc4", "Comm_Arc4"),
+        new("arc5", "Comm_Arc5"),
+        new("arc6", "Comm_Arc6"),
+    };
+
+    private bool _arcVoted;
+    private string? _arcVotedKey;
+    private Dictionary<string, int> _arcVotes = new(StringComparer.OrdinalIgnoreCase);
+
+    private async Task VoteArc(string key)
+    {
+        if (_arcVoted) return;
+        _arcVotes[key] = _arcVotes.GetValueOrDefault(key, 0) + 1;
+        _arcVotedKey = key;
+        _arcVoted = true;
+        await JS.InvokeVoidAsync("localStorage.setItem", "aot_arc_vote", key);
+        StateHasChanged();
+    }
+
+    // ─── TITAN TIER POLL ──────────────────────────────────────────
+    private sealed record TitanOption(string Key, string NameKey, string Theme);
+
+    private readonly List<TitanOption> _titanOptions = new()
+    {
+        new("founding",  "T1Name", "founding"),
+        new("female",    "T2Name", "female"),
+        new("beast",     "T3Name", "beast"),
+        new("colossal",  "T4Name", "colossal"),
+        new("armored",   "T5Name", "armored"),
+        new("jaw",       "T6Name", "jaw"),
+        new("cart",      "T7Name", "cart"),
+        new("warhammer", "T8Name", "warhammer"),
+        new("attack",    "T9Name", "attack"),
+    };
+
+    private bool _titanVoted;
+    private string? _titanVotedKey;
+    private Dictionary<string, int> _titanVotes = new(StringComparer.OrdinalIgnoreCase);
+
+    private async Task VoteTitan(string key)
+    {
+        if (_titanVoted) return;
+        _titanVotes[key] = _titanVotes.GetValueOrDefault(key, 0) + 1;
+        _titanVotedKey = key;
+        _titanVoted = true;
+        await JS.InvokeVoidAsync("localStorage.setItem", "aot_titan_vote", key);
+        StateHasChanged();
+    }
+
+    // ─── TRIVIA QUIZ ──────────────────────────────────────────────
+    private enum TriviaState { Idle, Playing, Done }
+    private TriviaState _triviaState = TriviaState.Idle;
+    private int _triviaIndex;
+    private int _triviaScore;
+    private bool _triviaAnswered;
+    private bool _triviaLastCorrect;
+    private string? _triviaSelected;
+
+    private sealed record TriviaQuestion(string QuestionKey, List<string> Options, string CorrectAnswer);
+
+    // Using existing trivia question definitions from project or standard ones
+    private readonly List<TriviaQuestion> _triviaQuestions = new()
+    {
+        new("Trivia_Q1", new() { "Trivia_Q1_A", "Trivia_Q1_B", "Trivia_Q1_C", "Trivia_Q1_D" }, "Trivia_Q1_A"),
+        new("Trivia_Q2", new() { "Trivia_Q2_A", "Trivia_Q2_B", "Trivia_Q2_C", "Trivia_Q2_D" }, "Trivia_Q2_B"),
+        new("Trivia_Q3", new() { "Trivia_Q3_A", "Trivia_Q3_B", "Trivia_Q3_C", "Trivia_Q3_D" }, "Trivia_Q3_C"),
+        new("Trivia_Q4", new() { "Trivia_Q4_A", "Trivia_Q4_B", "Trivia_Q4_C", "Trivia_Q4_D" }, "Trivia_Q4_A"),
+        new("Trivia_Q5", new() { "Trivia_Q5_A", "Trivia_Q5_B", "Trivia_Q5_C", "Trivia_Q5_D" }, "Trivia_Q5_D"),
+    };
+
+    private void StartTrivia()
+    {
+        _triviaIndex = 0;
+        _triviaScore = 0;
+        _triviaAnswered = false;
+        _triviaSelected = null;
+        _triviaState = TriviaState.Playing;
+    }
+
+    private void AnswerTrivia(string selected)
+    {
+        if (_triviaAnswered) return;
+        _triviaSelected = selected;
+        _triviaAnswered = true;
+        _triviaLastCorrect = selected == _triviaQuestions[_triviaIndex].CorrectAnswer;
+        if (_triviaLastCorrect) _triviaScore++;
+    }
+
+    private void NextTrivia()
+    {
+        _triviaAnswered = false;
+        _triviaSelected = null;
+        if (_triviaIndex < _triviaQuestions.Count - 1)
+        {
+            _triviaIndex++;
+        }
+        else
+        {
+            _triviaState = TriviaState.Done;
+        }
+    }
+
+    private void ResetTrivia()
+    {
+        _triviaState = TriviaState.Idle;
+    }
+
+    // ─── LIFECYCLE ────────────────────────────────────────────────
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Restore faction vote
+            _factionVotedKey = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_faction_vote");
+            _factionVoted = !string.IsNullOrEmpty(_factionVotedKey);
+            _factionVotes = await PollService.GetAllVotesAsync();
+
+            // Restore char vote
+            _charVotedKey = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_char_vote");
+            _charVoted = !string.IsNullOrEmpty(_charVotedKey);
+            if (_charVoted && _charVotedKey != null)
+                _charVotes[_charVotedKey] = _charVotes.GetValueOrDefault(_charVotedKey, 0) + 1;
+
+            // Restore arc vote
+            _arcVotedKey = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_arc_vote");
+            _arcVoted = !string.IsNullOrEmpty(_arcVotedKey);
+            if (_arcVoted && _arcVotedKey != null)
+                _arcVotes[_arcVotedKey] = _arcVotes.GetValueOrDefault(_arcVotedKey, 0) + 1;
+
+            // Restore titan vote
+            _titanVotedKey = await JS.InvokeAsync<string?>("localStorage.getItem", "aot_titan_vote");
+            _titanVoted = !string.IsNullOrEmpty(_titanVotedKey);
+            if (_titanVoted && _titanVotedKey != null)
+                _titanVotes[_titanVotedKey] = _titanVotes.GetValueOrDefault(_titanVotedKey, 0) + 1;
+
+            StateHasChanged();
+        }
+    }
+}

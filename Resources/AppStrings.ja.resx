@@ -2812,4 +2812,132 @@
   <data name="Bio_Underground" xml:space="preserve">
     <value>シガンシナ区の地下に広がる社会的底辺者たちのスラム街。ケニー・アッカーマンと幼いリヴァイの生誕地であり、弱者が搾取される犯罪と生存の地。</value>
   </data>
+
+  <!-- ===================== COMMUNITY PAGE ===================== -->
+  <data name="Comm_PageTitle" xml:space="preserve">
+    <value>ファンゾーン — コミュニティ・ハブ</value>
+  </data>
+  <data name="Comm_PageSubtitle" xml:space="preserve">
+    <value>投票し、知識を証明し、ファンダムの意見を見てみよう。あなたの声が軍団を形成する。</value>
+  </data>
+
+  <!-- Faction Poll (reused inline) -->
+  <data name="Comm_FactionSectionTitle" xml:space="preserve">
+    <value>派閥忠誠投票</value>
+  </data>
+  <data name="Comm_FactionSectionDesc" xml:space="preserve">
+    <value>世界は分断されている。マーレかパラディか——最終決戦で、あなたの忠誠はどこにある？</value>
+  </data>
+
+  <!-- Character Favourite Vote -->
+  <data name="Comm_CharPollTitle" xml:space="preserve">
+    <value>お気に入りキャラクター投票</value>
+  </data>
+  <data name="Comm_CharPollDesc" xml:space="preserve">
+    <value>調査兵団の魂を担うのは誰か？あなたの旅を定義した兵士を選べ。</value>
+  </data>
+  <data name="Comm_CharPollInstruction" xml:space="preserve">
+    <value>お気に入りのキャラクターを選んでください</value>
+  </data>
+  <data name="Comm_CharPollThanks" xml:space="preserve">
+    <value>投票完了。ファンダムの結果：</value>
+  </data>
+
+  <!-- Best Story Arc Poll -->
+  <data name="Comm_ArcPollTitle" xml:space="preserve">
+    <value>最高のストーリーアーク投票</value>
+  </data>
+  <data name="Comm_ArcPollDesc" xml:space="preserve">
+    <value>シガンシナ陥落から地鳴らしまで——あなたに最も深い印象を残したアークは？</value>
+  </data>
+  <data name="Comm_ArcPollInstruction" xml:space="preserve">
+    <value>最も深い跡を残したアークに投票してください</value>
+  </data>
+  <data name="Comm_ArcPollThanks" xml:space="preserve">
+    <value>投票登録済み。ファンダムの選択：</value>
+  </data>
+  <data name="Comm_Arc1" xml:space="preserve">
+    <value>シガンシナ陥落編</value>
+  </data>
+  <data name="Comm_Arc2" xml:space="preserve">
+    <value>トロスト区奪還作戦編</value>
+  </data>
+  <data name="Comm_Arc3" xml:space="preserve">
+    <value>女型の巨人編</value>
+  </data>
+  <data name="Comm_Arc4" xml:space="preserve">
+    <value>王政奪還作戦編</value>
+  </data>
+  <data name="Comm_Arc5" xml:space="preserve">
+    <value>マーレ編</value>
+  </data>
+  <data name="Comm_Arc6" xml:space="preserve">
+    <value>地鳴らし編</value>
+  </data>
+
+  <!-- Titan Tier Poll -->
+  <data name="Comm_TitanPollTitle" xml:space="preserve">
+    <value>最強の巨人 — 能力ランク投票</value>
+  </data>
+  <data name="Comm_TitanPollDesc" xml:space="preserve">
+    <value>九つの巨人。一つの玉座。どの継承者が最も破壊的な力を持つと思うか？</value>
+  </data>
+  <data name="Comm_TitanPollInstruction" xml:space="preserve">
+    <value>最も強力だと思う巨人を選んでください</value>
+  </data>
+  <data name="Comm_TitanPollThanks" xml:space="preserve">
+    <value>力の評決を記録しました。ファンダムの決定：</value>
+  </data>
+
+  <!-- Shared Poll UI -->
+  <data name="Comm_PollVoted" xml:space="preserve">
+    <value>投票済み</value>
+  </data>
+  <data name="Comm_PollVotes" xml:space="preserve">
+    <value>票</value>
+  </data>
+
+  <!-- Trivia Quiz -->
+  <data name="Comm_TriviaTitle" xml:space="preserve">
+    <value>AOTトリビア — 知識を証明せよ</value>
+  </data>
+  <data name="Comm_TriviaDesc" xml:space="preserve">
+    <value>5問。やり直しなし。真の調査兵団の兵士のみ合格できる。</value>
+  </data>
+  <data name="Comm_TriviaStart" xml:space="preserve">
+    <value>クイズ開始</value>
+  </data>
+  <data name="Comm_TriviaNext" xml:space="preserve">
+    <value>次の問題</value>
+  </data>
+  <data name="Comm_TriviaRetry" xml:space="preserve">
+    <value>もう一度挑戦</value>
+  </data>
+  <data name="Comm_TriviaQuestion" xml:space="preserve">
+    <value>問題</value>
+  </data>
+  <data name="Comm_TriviaOf" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="Comm_TriviaScore" xml:space="preserve">
+    <value>あなたのスコア</value>
+  </data>
+  <data name="Comm_TriviaRank0" xml:space="preserve">
+    <value>巨人のエサ — まだまだ学ぶことがある、兵士よ。</value>
+  </data>
+  <data name="Comm_TriviaRank1" xml:space="preserve">
+    <value>駐屯兵団の新兵 — 知識はあるが、壁はまだ崩れる。</value>
+  </data>
+  <data name="Comm_TriviaRank2" xml:space="preserve">
+    <value>調査兵団の一員 — 自由の翼を誇りを持って背負うに値する！</value>
+  </data>
+  <data name="Comm_TriviaRank3" xml:space="preserve">
+    <value>隊長レベル — 調査兵団があなたに敬礼する。</value>
+  </data>
+  <data name="Comm_TriviaCorrect" xml:space="preserve">
+    <value>正解！</value>
+  </data>
+  <data name="Comm_TriviaWrong" xml:space="preserve">
+    <value>不正解！正しい答えは：</value>
+  </data>
 </root>

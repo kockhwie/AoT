@@ -2812,4 +2812,132 @@
   <data name="Bio_Underground" xml:space="preserve">
     <value>斯托赫斯區地下的貧民窟，是社會棄兒的居住地，也是肯尼·阿卡曼和年幼李維的出身地，一個弱者遭剝削的犯罪與求生之地。</value>
   </data>
+
+  <!-- ===================== COMMUNITY PAGE ===================== -->
+  <data name="Comm_PageTitle" xml:space="preserve">
+    <value>粉絲專區 — 社群中心</value>
+  </data>
+  <data name="Comm_PageSubtitle" xml:space="preserve">
+    <value>投下你的票、展現你的知識，看看粉絲圈的共識在哪裡。你的聲音成就這支軍團。</value>
+  </data>
+
+  <!-- Faction Poll (reused inline) -->
+  <data name="Comm_FactionSectionTitle" xml:space="preserve">
+    <value>陣營忠誠投票</value>
+  </data>
+  <data name="Comm_FactionSectionDesc" xml:space="preserve">
+    <value>世界陷入分裂。馬萊還是帕拉迪——在最終衝突中，你的忠誠在哪裡？</value>
+  </data>
+
+  <!-- Character Favourite Vote -->
+  <data name="Comm_CharPollTitle" xml:space="preserve">
+    <value>最受歡迎角色投票</value>
+  </data>
+  <data name="Comm_CharPollDesc" xml:space="preserve">
+    <value>誰承載著調查兵團的靈魂？選出那位定義了你旅程的士兵。</value>
+  </data>
+  <data name="Comm_CharPollInstruction" xml:space="preserve">
+    <value>選出你最喜愛的角色</value>
+  </data>
+  <data name="Comm_CharPollThanks" xml:space="preserve">
+    <value>投票已記錄。看看粉絲圈的選擇：</value>
+  </data>
+
+  <!-- Best Story Arc Poll -->
+  <data name="Comm_ArcPollTitle" xml:space="preserve">
+    <value>最佳故事篇章投票</value>
+  </data>
+  <data name="Comm_ArcPollDesc" xml:space="preserve">
+    <value>從希干希納的淪陷到地鳴——哪個篇章最震撼你的內心？</value>
+  </data>
+  <data name="Comm_ArcPollInstruction" xml:space="preserve">
+    <value>投票給留下最深印象的篇章</value>
+  </data>
+  <data name="Comm_ArcPollThanks" xml:space="preserve">
+    <value>投票已登記。看看粉絲圈的選擇：</value>
+  </data>
+  <data name="Comm_Arc1" xml:space="preserve">
+    <value>希干希納淪陷篇</value>
+  </data>
+  <data name="Comm_Arc2" xml:space="preserve">
+    <value>托洛斯特區之戰</value>
+  </data>
+  <data name="Comm_Arc3" xml:space="preserve">
+    <value>女型巨人篇</value>
+  </data>
+  <data name="Comm_Arc4" xml:space="preserve">
+    <value>王政革命篇</value>
+  </data>
+  <data name="Comm_Arc5" xml:space="preserve">
+    <value>馬萊篇</value>
+  </data>
+  <data name="Comm_Arc6" xml:space="preserve">
+    <value>地鳴篇</value>
+  </data>
+
+  <!-- Titan Tier Poll -->
+  <data name="Comm_TitanPollTitle" xml:space="preserve">
+    <value>最強巨人 — 能力等級投票</value>
+  </data>
+  <data name="Comm_TitanPollDesc" xml:space="preserve">
+    <value>九大巨人，一座王座。你認為哪位繼承者擁有最具毀滅性的力量？</value>
+  </data>
+  <data name="Comm_TitanPollInstruction" xml:space="preserve">
+    <value>選出你認為最強大的巨人</value>
+  </data>
+  <data name="Comm_TitanPollThanks" xml:space="preserve">
+    <value>力量裁決已記錄。看看粉絲圈的決定：</value>
+  </data>
+
+  <!-- Shared Poll UI -->
+  <data name="Comm_PollVoted" xml:space="preserve">
+    <value>已投票</value>
+  </data>
+  <data name="Comm_PollVotes" xml:space="preserve">
+    <value>票</value>
+  </data>
+
+  <!-- Trivia Quiz -->
+  <data name="Comm_TriviaTitle" xml:space="preserve">
+    <value>AOT 知識測驗 — 展示你的實力</value>
+  </data>
+  <data name="Comm_TriviaDesc" xml:space="preserve">
+    <value>5 道題目，沒有第二次機會。只有真正的調查兵團士兵才能通過。</value>
+  </data>
+  <data name="Comm_TriviaStart" xml:space="preserve">
+    <value>開始測驗</value>
+  </data>
+  <data name="Comm_TriviaNext" xml:space="preserve">
+    <value>下一題</value>
+  </data>
+  <data name="Comm_TriviaRetry" xml:space="preserve">
+    <value>再試一次</value>
+  </data>
+  <data name="Comm_TriviaQuestion" xml:space="preserve">
+    <value>題目</value>
+  </data>
+  <data name="Comm_TriviaOf" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="Comm_TriviaScore" xml:space="preserve">
+    <value>你的分數</value>
+  </data>
+  <data name="Comm_TriviaRank0" xml:space="preserve">
+    <value>巨人的糧食 — 你還有很多要學，士兵。</value>
+  </data>
+  <data name="Comm_TriviaRank1" xml:space="preserve">
+    <value>駐紮兵團新兵 — 有些知識，但城牆仍會淪陷。</value>
+  </data>
+  <data name="Comm_TriviaRank2" xml:space="preserve">
+    <value>調查兵團成員 — 你值得驕傲地佩戴自由之翼！</value>
+  </data>
+  <data name="Comm_TriviaRank3" xml:space="preserve">
+    <value>隊長級別 — 調查兵團向你致敬。</value>
+  </data>
+  <data name="Comm_TriviaCorrect" xml:space="preserve">
+    <value>正確！</value>
+  </data>
+  <data name="Comm_TriviaWrong" xml:space="preserve">
+    <value>錯誤！正確答案是：</value>
+  </data>
 </root>

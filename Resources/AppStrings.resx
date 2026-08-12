@@ -2812,4 +2812,132 @@
   <data name="Bio_Underground" xml:space="preserve">
     <value>The subterranean slum beneath Stohess District where society's outcasts live. It is the birthplace of Kenny Ackerman and the young Levi, a place of crime and survival where the weak are exploited.</value>
   </data>
+
+  <!-- ===================== COMMUNITY PAGE ===================== -->
+  <data name="Comm_PageTitle" xml:space="preserve">
+    <value>Fan Zone — Community Hub</value>
+  </data>
+  <data name="Comm_PageSubtitle" xml:space="preserve">
+    <value>Cast your vote, prove your knowledge, and see where the fandom stands. Your voice shapes the legion.</value>
+  </data>
+
+  <!-- Faction Poll (reused inline) -->
+  <data name="Comm_FactionSectionTitle" xml:space="preserve">
+    <value>Faction Loyalty Poll</value>
+  </data>
+  <data name="Comm_FactionSectionDesc" xml:space="preserve">
+    <value>The world stands divided. Marley or Paradis — where does your loyalty lie in the final conflict?</value>
+  </data>
+
+  <!-- Character Favourite Vote -->
+  <data name="Comm_CharPollTitle" xml:space="preserve">
+    <value>Fan Favourite Character</value>
+  </data>
+  <data name="Comm_CharPollDesc" xml:space="preserve">
+    <value>Who carries the heart of the Survey Corps? Choose the soldier who defined your journey.</value>
+  </data>
+  <data name="Comm_CharPollInstruction" xml:space="preserve">
+    <value>Select your favourite character</value>
+  </data>
+  <data name="Comm_CharPollThanks" xml:space="preserve">
+    <value>Vote recorded. Here's how the fandom voted:</value>
+  </data>
+
+  <!-- Best Story Arc Poll -->
+  <data name="Comm_ArcPollTitle" xml:space="preserve">
+    <value>Best Story Arc</value>
+  </data>
+  <data name="Comm_ArcPollDesc" xml:space="preserve">
+    <value>From the Fall of Shiganshina to the Rumbling — which arc hit hardest for you?</value>
+  </data>
+  <data name="Comm_ArcPollInstruction" xml:space="preserve">
+    <value>Vote for the arc that left the deepest mark</value>
+  </data>
+  <data name="Comm_ArcPollThanks" xml:space="preserve">
+    <value>Vote registered. See what the fandom chose:</value>
+  </data>
+  <data name="Comm_Arc1" xml:space="preserve">
+    <value>Fall of Shiganshina</value>
+  </data>
+  <data name="Comm_Arc2" xml:space="preserve">
+    <value>Battle of Trost District</value>
+  </data>
+  <data name="Comm_Arc3" xml:space="preserve">
+    <value>Female Titan Arc</value>
+  </data>
+  <data name="Comm_Arc4" xml:space="preserve">
+    <value>Uprising Arc</value>
+  </data>
+  <data name="Comm_Arc5" xml:space="preserve">
+    <value>Marley Arc</value>
+  </data>
+  <data name="Comm_Arc6" xml:space="preserve">
+    <value>The Rumbling</value>
+  </data>
+
+  <!-- Titan Tier Poll -->
+  <data name="Comm_TitanPollTitle" xml:space="preserve">
+    <value>Strongest Titan — Power Tier Vote</value>
+  </data>
+  <data name="Comm_TitanPollDesc" xml:space="preserve">
+    <value>Nine titans. One throne. Which shifter do you believe holds the most devastating power?</value>
+  </data>
+  <data name="Comm_TitanPollInstruction" xml:space="preserve">
+    <value>Select the titan you think is most powerful</value>
+  </data>
+  <data name="Comm_TitanPollThanks" xml:space="preserve">
+    <value>Power verdict recorded. See what the fandom decided:</value>
+  </data>
+
+  <!-- Shared Poll UI -->
+  <data name="Comm_PollVoted" xml:space="preserve">
+    <value>VOTED</value>
+  </data>
+  <data name="Comm_PollVotes" xml:space="preserve">
+    <value>votes</value>
+  </data>
+
+  <!-- Trivia Quiz -->
+  <data name="Comm_TriviaTitle" xml:space="preserve">
+    <value>AOT Trivia — Prove Your Knowledge</value>
+  </data>
+  <data name="Comm_TriviaDesc" xml:space="preserve">
+    <value>5 questions. No second chances. Only a true soldier of the Survey Corps passes.</value>
+  </data>
+  <data name="Comm_TriviaStart" xml:space="preserve">
+    <value>Start Quiz</value>
+  </data>
+  <data name="Comm_TriviaNext" xml:space="preserve">
+    <value>Next Question</value>
+  </data>
+  <data name="Comm_TriviaRetry" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="Comm_TriviaQuestion" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Comm_TriviaOf" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Comm_TriviaScore" xml:space="preserve">
+    <value>Your Score</value>
+  </data>
+  <data name="Comm_TriviaRank0" xml:space="preserve">
+    <value>Titan Fodder — You have much to learn, soldier.</value>
+  </data>
+  <data name="Comm_TriviaRank1" xml:space="preserve">
+    <value>Garrison Recruit — Some knowledge, but the walls still fall.</value>
+  </data>
+  <data name="Comm_TriviaRank2" xml:space="preserve">
+    <value>Survey Corps Member — Worthy of the wings of freedom!</value>
+  </data>
+  <data name="Comm_TriviaRank3" xml:space="preserve">
+    <value>Captain-Level — The Survey Corps salutes you.</value>
+  </data>
+  <data name="Comm_TriviaCorrect" xml:space="preserve">
+    <value>Correct!</value>
+  </data>
+  <data name="Comm_TriviaWrong" xml:space="preserve">
+    <value>Wrong! The answer was:</value>
+  </data>
 </root>
