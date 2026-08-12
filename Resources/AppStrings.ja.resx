@@ -1,110 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -187,7 +128,7 @@
     <value>作戦本部軍事終端</value>
   </data>
   <data name="Nav_Main" xml:space="preserve">
-    <value>Main</value>
+    <value>メイン</value>
   </data>
   <data name="Nav_Titans" xml:space="preserve">
     <value>巨人</value>
@@ -223,7 +164,7 @@
     <value>タイバー家族</value>
   </data>
   <data name="Nav_Other" xml:space="preserve">
-    <value>Other</value>
+    <value>その他</value>
   </data>
   <data name="Nav_Eren" xml:space="preserve">
     <value>エレン・イェーガー</value>
@@ -271,7 +212,7 @@
     <value>戦槌の巨人</value>
   </data>
   <data name="Nav_Others" xml:space="preserve">
-    <value>- Others -</value>
+    <value>- その他 -</value>
   </data>
   <data name="Nav_SonnyandBean" xml:space="preserve">
     <value>ソニーとビーン</value>
@@ -295,10 +236,10 @@
     <value>リヴァイ･アッカーマン</value>
   </data>
   <data name="Nav_EldJinn" xml:space="preserve">
-    <value>Eld Jinn</value>
+    <value>エルド・ジン</value>
   </data>
   <data name="Nav_OluoBozado" xml:space="preserve">
-    <value>Oluo Bozado</value>
+    <value>オルオ・ボザド</value>
   </data>
   <data name="Nav_PetraRal" xml:space="preserve">
     <value>ペトラ・ラル</value>
@@ -364,7 +305,7 @@
     <value>カルラ・イェーガー</value>
   </data>
   <data name="Nav_MinisterNick" xml:space="preserve">
-    <value>Minister Nick</value>
+    <value>ニック司祭</value>
   </data>
   <data name="Nav_DimoReeves" xml:space="preserve">
     <value>ディモ・リーブス</value>
@@ -430,13 +371,13 @@
     <value>ストーリー &amp; 年表</value>
   </data>
   <data name="Nav_Gallery" xml:space="preserve">
-    <value>Gallery</value>
+    <value>ギャラリー</value>
   </data>
   <data name="Nav_Quotes" xml:space="preserve">
-    <value>Quotes</value>
+    <value>名言集</value>
   </data>
   <data name="Nav_Statistics" xml:space="preserve">
-    <value>Statistics</value>
+    <value>統計情報</value>
   </data>
   <data name="Nav_AboutAuthorHajimeIsayama" xml:space="preserve">
     <value>About Author Hajime Isayama 諫山 創</value>
@@ -445,25 +386,25 @@
     <value>コミックス単行本</value>
   </data>
   <data name="Nav_Anime" xml:space="preserve">
-    <value>Anime</value>
+    <value>アニメ</value>
   </data>
   <data name="Nav_Games" xml:space="preserve">
-    <value>Games</value>
+    <value>ゲーム</value>
   </data>
   <data name="Nav_Comics" xml:space="preserve">
-    <value>Comics</value>
+    <value>コミックス</value>
   </data>
   <data name="Nav_Movies" xml:space="preserve">
-    <value>Movies</value>
+    <value>劇場版</value>
   </data>
   <data name="Nav_Fanarts" xml:space="preserve">
-    <value>Fan arts</value>
+    <value>ファンアート</value>
   </data>
   <data name="Nav_Books" xml:space="preserve">
-    <value>Books</value>
+    <value>書籍</value>
   </data>
   <data name="Nav_Magazines" xml:space="preserve">
-    <value>Magazines</value>
+    <value>雑誌</value>
   </data>
   <data name="Nav_HangeZoe" xml:space="preserve">
     <value>ハンジ・ゾエ</value>
@@ -2246,5 +2187,35 @@
   </data>
   <data name="Timeline_E854_S_Text" xml:space="preserve">
     <value>王国の絶対的な保護レイアウトが溶解した。王都全体が完全な混乱に陥った。</value>
+  </data>
+  <data name="CarlaYeager_Bio" xml:space="preserve">
+    <value>エレン・イェーガーの母。シガンシナ区崩壊時に巨人に捕食され命を落とした。</value>
+  </data>
+  <data name="CarlaYeager_Title" xml:space="preserve">
+    <value>エレンの母親</value>
+  </data>
+  <data name="CharFloch_Bio" xml:space="preserve">
+    <value>イェーガー派の指導者。エレン・イェーガーに心酔し、エルディア帝国の復興を掲げる熱狂的愛国者。</value>
+  </data>
+  <data name="CharFloch_Title" xml:space="preserve">
+    <value>イェーガー派指導者</value>
+  </data>
+  <data name="CharHolger_Bio" xml:space="preserve">
+    <value>調査兵団の兵士でイェーガー派に参加。フロックに従い港での戦闘に参加した兵士。</value>
+  </data>
+  <data name="CharHolger_Title" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="CharWim_Bio" xml:space="preserve">
+    <value>イェーガー派の兵士。港での対連合戦において戦闘に参加した。</value>
+  </data>
+  <data name="CharWim_Name" xml:space="preserve">
+    <value>ヴィム</value>
+  </data>
+  <data name="CharWim_Title" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="Nav_Holger" xml:space="preserve">
+    <value>ホルガー</value>
   </data>
 </root>

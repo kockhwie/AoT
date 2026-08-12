@@ -933,21 +933,40 @@ cheaper to repaint than a shadow). */
     .character-carousel-item.is-pinned {
         transform: translateX(-50%) translateY(2px) rotateY(0deg) scale(1.02);
     }
-    
-    .wall-feed-tab {
-        clip-path: none;
-        border-bottom: 3px solid #000000;
-        margin-left: 0;
-        margin-right: 0.4rem;
-        margin-bottom: 0.4rem;
-        border-radius: var(--aot-btn-radius);
-        box-shadow: 2px 2px 0px #000000;
+
+    .wall-feed-tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+        gap: 0.4rem;
+        margin-bottom: -3px; /* seams into the card's top border, same trick as desktop */
+        scrollbar-width: none;
     }
 
+        .wall-feed-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+    .wall-feed-tab {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+        clip-path: none;
+        margin: 0;
+        border-radius: var(--aot-btn-radius) var(--aot-btn-radius) 0 0;
+        box-shadow: 2px -2px 0px #000000;
+    }
+
+        /* active tab fuses into the card: same bg gradient as .comic-card.black,
+       gold top accent instead of relying on color alone (colorblind-safe cue) */
         .wall-feed-tab.is-active {
-            box-shadow: 2px 2px 0px #000000;
-            padding-bottom: 0.7rem;
-            margin-bottom: 0.4rem;
+            background: radial-gradient(ellipse at 20% 20%, rgba(10, 11, 14, 0.95) 10%, rgba(30, 34, 42, 0.98) 80%);
+            color: #ffffff;
+            border-bottom: none;
+            box-shadow: 2px -2px 0px #000000, inset 0 3px 0 var(--aot-gold);
+            padding-bottom: calc(0.7rem + 3px);
         }
 
     .wall-feed-header {
