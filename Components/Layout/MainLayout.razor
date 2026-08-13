@@ -14,7 +14,7 @@
     <div class="navbar bg-base-100 shadow-sm">
             <div class="navbar-start">
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Open menu">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden mobile-menu-btn" aria-label="Open menu">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
                     <ul tabindex="-1" class="menu menu-sm dropdown-content z-50 mt-2 w-56 rounded-box nav-menu p-2 shadow-2xl">
@@ -58,7 +58,7 @@
                         <li><a href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/community">@LocalizationService.NavCommunity</a></li>
                     </ul>
                 </div>
-            <a class="text-sm" href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a> <div class="badge badge-dash badge-success text-xs">Preview</div>
+            <a class="text-sm" href="@(LanguageSwitchService.GetLangPrefix(LanguageSwitcher.ActiveLang))/"><img alt="進撃の巨人 Attack on Titan" src="/img/aot-logo-m.png" class="brand-mark" /></a> <div class="badge badge-dash badge-success text-xxs">Beta</div>
             </div>
         <div class="navbar-center hidden lg:flex gap-8">
             <ul class="menu menu-horizontal gap-2 px-1 nav-links">
