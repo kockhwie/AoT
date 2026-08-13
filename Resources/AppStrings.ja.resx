@@ -1,51 +1,110 @@
-<?xml version='1.0' encoding='utf-8'?>
-<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xs:schema id="root">
-    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xs:element name="root" ns1:IsDataSet="true">
-      <xs:complexType>
-        <xs:choice maxOccurs="unbounded">
-          <xs:element name="metadata">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="value" type="xsd:string" minOccurs="0" />
-              </xs:sequence>
-              <xs:attribute name="name" use="required" type="xsd:string" />
-              <xs:attribute name="type" type="xsd:string" />
-              <xs:attribute name="mimetype" type="xsd:string" />
-              <xs:attribute ref="xml:space" />
-            </xs:complexType>
-          </xs:element>
-          <xs:element name="assembly">
-            <xs:complexType>
-              <xs:attribute name="alias" type="xsd:string" />
-              <xs:attribute name="name" type="xsd:string" />
-            </xs:complexType>
-          </xs:element>
-          <xs:element name="data">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
-                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
-              </xs:sequence>
-              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
-              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
-              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
-              <xs:attribute ref="xml:space" />
-            </xs:complexType>
-          </xs:element>
-          <xs:element name="resheader">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
-              </xs:sequence>
-              <xs:attribute name="name" type="xsd:string" use="required" />
-            </xs:complexType>
-          </xs:element>
-        </xs:choice>
-      </xs:complexType>
-    </xs:element>
-  </xs:schema>
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -1606,6 +1665,30 @@
   <data name="Lore_Wall_Centre_Name" xml:space="preserve">
     <value>王都</value>
   </data>
+  <data name="CarlaYeager_Title" xml:space="preserve">
+    <value>エレンの母親</value>
+  </data>
+  <data name="CarlaYeager_Bio" xml:space="preserve">
+    <value>エレン・イェーガーの母。シガンシナ区崩壊時に巨人に捕食され命を落とした。</value>
+  </data>
+  <data name="Nav_Holger" xml:space="preserve">
+    <value>ホルガー</value>
+  </data>
+  <data name="CharHolger_Title" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="CharHolger_Bio" xml:space="preserve">
+    <value>調査兵団の兵士でイェーガー派に参加。フロックに従い港での戦闘に参加した兵士。</value>
+  </data>
+  <data name="CharWim_Title" xml:space="preserve">
+    <value>イェーガー派兵士</value>
+  </data>
+  <data name="CharWim_Bio" xml:space="preserve">
+    <value>イェーガー派の兵士。港での対連合戦において戦闘に参加した。</value>
+  </data>
+  <data name="CharWim_Name" xml:space="preserve">
+    <value>ヴィム</value>
+  </data>
   <data name="Timeline_Event20_Title" xml:space="preserve">
     <value>ヒストリア女王戴冠</value>
   </data>
@@ -2137,6 +2220,12 @@
   <data name="Quote7_Author" xml:space="preserve">
     <value>～ リヴァイ・アッカーマン // 第6巻 / 第25話</value>
   </data>
+  <data name="CharFloch_Title" xml:space="preserve">
+    <value>イェーガー派指導者</value>
+  </data>
+  <data name="CharFloch_Bio" xml:space="preserve">
+    <value>イェーガー派の指導者。エレン・イェーガーに心酔し、エルディア帝国の復興を掲げる熱狂的愛国者。</value>
+  </data>
   <data name="Timeline_E845_M_Lbl" xml:space="preserve">
     <value>破壊</value>
   </data>
@@ -2190,36 +2279,6 @@
   </data>
   <data name="Timeline_E854_S_Text" xml:space="preserve">
     <value>王国の絶対的な保護レイアウトが溶解した。王都全体が完全な混乱に陥った。</value>
-  </data>
-  <data name="CarlaYeager_Bio" xml:space="preserve">
-    <value>エレン・イェーガーの母。シガンシナ区崩壊時に巨人に捕食され命を落とした。</value>
-  </data>
-  <data name="CarlaYeager_Title" xml:space="preserve">
-    <value>エレンの母親</value>
-  </data>
-  <data name="CharFloch_Bio" xml:space="preserve">
-    <value>イェーガー派の指導者。エレン・イェーガーに心酔し、エルディア帝国の復興を掲げる熱狂的愛国者。</value>
-  </data>
-  <data name="CharFloch_Title" xml:space="preserve">
-    <value>イェーガー派指導者</value>
-  </data>
-  <data name="CharHolger_Bio" xml:space="preserve">
-    <value>調査兵団の兵士でイェーガー派に参加。フロックに従い港での戦闘に参加した兵士。</value>
-  </data>
-  <data name="CharHolger_Title" xml:space="preserve">
-    <value>イェーガー派兵士</value>
-  </data>
-  <data name="CharWim_Bio" xml:space="preserve">
-    <value>イェーガー派の兵士。港での対連合戦において戦闘に参加した。</value>
-  </data>
-  <data name="CharWim_Name" xml:space="preserve">
-    <value>ヴィム</value>
-  </data>
-  <data name="CharWim_Title" xml:space="preserve">
-    <value>イェーガー派兵士</value>
-  </data>
-  <data name="Nav_Holger" xml:space="preserve">
-    <value>ホルガー</value>
   </data>
   <data name="Name_LeviAckerman" xml:space="preserve">
     <value>リヴァイ･アッカーマン</value>
@@ -2815,24 +2874,18 @@
   <data name="Bio_Underground" xml:space="preserve">
     <value>シガンシナ区の地下に広がる社会的底辺者たちのスラム街。ケニー・アッカーマンと幼いリヴァイの生誕地であり、弱者が搾取される犯罪と生存の地。</value>
   </data>
-
-  <!-- ===================== COMMUNITY PAGE ===================== -->
   <data name="Comm_PageTitle" xml:space="preserve">
-    <value>ファンゾーン — コミュニティ・ハブ</value>
+    <value>ファンゾーン</value>
   </data>
   <data name="Comm_PageSubtitle" xml:space="preserve">
     <value>投票し、知識を証明し、ファンダムの意見を見てみよう。あなたの声が軍団を形成する。</value>
   </data>
-
-  <!-- Faction Poll (reused inline) -->
   <data name="Comm_FactionSectionTitle" xml:space="preserve">
     <value>派閥忠誠投票</value>
   </data>
   <data name="Comm_FactionSectionDesc" xml:space="preserve">
-    <value>世界は分断されている。マーレかパラディか——最終決戦で、あなたの忠誠はどこにある？</value>
+    <value>世界は分断されている。マーレかパラディか—最終決戦で、あなたの忠誠はどこにある？</value>
   </data>
-
-  <!-- Character Favourite Vote -->
   <data name="Comm_CharPollTitle" xml:space="preserve">
     <value>お気に入りキャラクター投票</value>
   </data>
@@ -2845,13 +2898,11 @@
   <data name="Comm_CharPollThanks" xml:space="preserve">
     <value>投票完了。ファンダムの結果：</value>
   </data>
-
-  <!-- Best Story Arc Poll -->
   <data name="Comm_ArcPollTitle" xml:space="preserve">
     <value>最高のストーリーアーク投票</value>
   </data>
   <data name="Comm_ArcPollDesc" xml:space="preserve">
-    <value>シガンシナ陥落から地鳴らしまで——あなたに最も深い印象を残したアークは？</value>
+    <value>シガンシナ陥落から地鳴らしまで—あなたに最も深い印象を残したアークは？</value>
   </data>
   <data name="Comm_ArcPollInstruction" xml:space="preserve">
     <value>最も深い跡を残したアークに投票してください</value>
@@ -2877,13 +2928,11 @@
   <data name="Comm_Arc6" xml:space="preserve">
     <value>地鳴らし編</value>
   </data>
-
-  <!-- Titan Tier Poll -->
   <data name="Comm_TitanPollTitle" xml:space="preserve">
-    <value>最強の巨人 — 能力ランク投票</value>
+    <value>最強の巨人</value>
   </data>
   <data name="Comm_TitanPollDesc" xml:space="preserve">
-    <value>九つの巨人。一つの玉座。どの継承者が最も破壊的な力を持つと思うか？</value>
+    <value>どの継承者が最も破壊的な力を持つと思うか？</value>
   </data>
   <data name="Comm_TitanPollInstruction" xml:space="preserve">
     <value>最も強力だと思う巨人を選んでください</value>
@@ -2891,18 +2940,14 @@
   <data name="Comm_TitanPollThanks" xml:space="preserve">
     <value>力の評決を記録しました。ファンダムの決定：</value>
   </data>
-
-  <!-- Shared Poll UI -->
   <data name="Comm_PollVoted" xml:space="preserve">
     <value>投票済み</value>
   </data>
   <data name="Comm_PollVotes" xml:space="preserve">
     <value>票</value>
   </data>
-
-  <!-- Trivia Quiz -->
   <data name="Comm_TriviaTitle" xml:space="preserve">
-    <value>AOTトリビア — 知識を証明せよ</value>
+    <value>AOTトリビア</value>
   </data>
   <data name="Comm_TriviaDesc" xml:space="preserve">
     <value>5問。やり直しなし。真の調査兵団の兵士のみ合格できる。</value>
@@ -2942,5 +2987,29 @@
   </data>
   <data name="Comm_TriviaWrong" xml:space="preserve">
     <value>不正解！正しい答えは：</value>
+  </data>
+  <data name="Comm_TagCommunity" xml:space="preserve">
+    <value>コミュニティ</value>
+  </data>
+  <data name="Comm_TagFactionPoll" xml:space="preserve">
+    <value>派閥投票</value>
+  </data>
+  <data name="Comm_TagCharacterVote" xml:space="preserve">
+    <value>キャラクター投票</value>
+  </data>
+  <data name="Comm_TagStoryArcVote" xml:space="preserve">
+    <value>ストーリーアーク投票</value>
+  </data>
+  <data name="Comm_TagTitanTierVote" xml:space="preserve">
+    <value>巨人ランク投票</value>
+  </data>
+  <data name="Comm_TagTriviaQuiz" xml:space="preserve">
+    <value>トリビアクイズ</value>
+  </data>
+  <data name="Comm_TriviaSeeResults" xml:space="preserve">
+    <value>結果を見る</value>
+  </data>
+  <data name="Comm_TotalVotes" xml:space="preserve">
+    <value>総投票数: {0}</value>
   </data>
 </root>

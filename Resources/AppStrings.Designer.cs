@@ -709,11 +709,614 @@ namespace AOT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Former Marley Warrior candidate who infiltrated Paradis as the Female Titan shifter. Renowned for her crystal-hardening technique and enigmatic loyalty..
+        /// </summary>
+        public static string Bio_AnnieLeonhart {
+            get {
+                return ResourceManager.GetString("Bio_AnnieLeonhart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren and Mikasa&apos;s childhood friend. Possesses an extraordinary tactical mind, devising brilliant counter-strategies in dire situations. Inherited the Colossal Titan..
+        /// </summary>
+        public static string Bio_ArminArlert {
+            get {
+                return ResourceManager.GetString("Bio_ArminArlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Held by Reiner Braun. Encased in a heavy hardened skeletal armor plating that provides fortress-grade defensive metrics. Functions as an organic battering ram against fortified structures..
+        /// </summary>
+        public static string Bio_ArmoredTitan {
+            get {
+                return ResourceManager.GetString("Bio_ArmoredTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The core combat avatar managed by Eren Yeager. Features balanced combat stats, flawless tactical grit, and the unique cross-temporal memory foresight capability..
+        /// </summary>
+        public static string Bio_AttackTitan {
+            get {
+                return ResourceManager.GetString("Bio_AttackTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serves within the walls&apos; ruling administration, navigating the political machinery that has controlled Paradis for a century..
+        /// </summary>
+        public static string Bio_Aurille {
+            get {
+                return ResourceManager.GetString("Bio_Aurille", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Held by Zeke Yeager. Resembles an ape-like beast capable of devastating long-range bombardment. Due to royal blood, his spinal fluid instantly transforms targets..
+        /// </summary>
+        public static string Bio_BeastTitan {
+            get {
+                return ResourceManager.GetString("Bio_BeastTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holder of the Colossal Titan and childhood friend of Reiner. His gentle exterior conceals a catastrophic power that toppled Wall Maria..
+        /// </summary>
+        public static string Bio_BertoltHoover {
+            get {
+                return ResourceManager.GetString("Bio_BertoltHoover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Military Police officer assigned to oversee operations in the interior. He carries out orders from above with unwavering obedience, even when those orders cross moral lines..
+        /// </summary>
+        public static string Bio_BorisFeulner {
+            get {
+                return ResourceManager.GetString("Bio_BorisFeulner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The supreme commander of Marley&apos;s armed forces during the war against Paradis. A pragmatic strategist who prioritises military outcomes over political diplomacy..
+        /// </summary>
+        public static string Bio_CalviTheMarshal {
+            get {
+                return ResourceManager.GetString("Bio_CalviTheMarshal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to She.
+        /// </summary>
+        public static string Bio_CarlaYeager {
+            get {
+                return ResourceManager.GetString("Bio_CarlaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Held by Pieck Finger. Utilizes a quadrupedal stance with unparalleled physiological endurance, allowing months of sustained transformation. Can be equipped with customized heavy military artillery..
+        /// </summary>
+        public static string Bio_CartTitan {
+            get {
+                return ResourceManager.GetString("Bio_CartTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Held by Bertholdt, then Armin. Possesses a mountainous structure. Transformation triggers a pseudo-nuclear thermal blast, alongside a tactical high-pressure burning steam defensive barrier..
+        /// </summary>
+        public static string Bio_ColossalTitan {
+            get {
+                return ResourceManager.GetString("Bio_ColossalTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elder brother of Falco and the candidate designated to inherit the Beast Titan. Deeply devoted to his family above all else..
+        /// </summary>
+        public static string Bio_ColtGrice {
+            get {
+                return ResourceManager.GetString("Bio_ColtGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serves within the walls&apos; ruling administration, navigating the political machinery that has controlled Paradis for a century..
+        /// </summary>
+        public static string Bio_Deltoff {
+            get {
+                return ResourceManager.GetString("Bio_Deltoff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Self-serving merchant guild president who initially cooperates with the Royal Government. His encounter with the Survey Corps gradually awakens his sense of responsibility to Trost..
+        /// </summary>
+        public static string Bio_DimoReeves {
+            get {
+                return ResourceManager.GetString("Bio_DimoReeves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sadistic torturer and loyal enforcer of the Royal Government who will do anything to suppress dissent. His brutal methods are eventually turned against him during the Uprising arc..
+        /// </summary>
+        public static string Bio_DjelSanes {
+            get {
+                return ResourceManager.GetString("Bio_DjelSanes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eccentric yet brilliant Garrison commander who orchestrates the recapture of Trost District. Known for his love of spirits and his unerring ability to inspire troops in hopeless situations..
+        /// </summary>
+        public static string Bio_DotPixis {
+            get {
+                return ResourceManager.GetString("Bio_DotPixis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior member of Levi&apos;s hand-picked Special Operations Squad. Calm and experienced, Eld served as the steadying voice of reason among the squad&apos;s younger members..
+        /// </summary>
+        public static string Bio_EldJinn {
+            get {
+                return ResourceManager.GetString("Bio_EldJinn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A former Scout who discovered he possessed the power of the Titans. Driven by an unwavering desire for freedom, he eventually initiated the Rumbling to protect Paradis..
+        /// </summary>
+        public static string Bio_ErenYeager {
+            get {
+                return ResourceManager.GetString("Bio_ErenYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A legendary leader with frozen resolve and hypnotic charisma. Developed the Long-Distance Scouting Formation. Sacrificed himself to historical truth..
+        /// </summary>
+        public static string Bio_ErwinSmith {
+            get {
+                return ResourceManager.GetString("Bio_ErwinSmith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kind-hearted Warrior candidate who inherits the Jaw Titan. He risks everything to protect Gabi and the people he loves..
+        /// </summary>
+        public static string Bio_FalcoGrice {
+            get {
+                return ResourceManager.GetString("Bio_FalcoGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Possessed by Annie Leonhart. Exhibits high all-around agility, specialized localized crystalline hardening defenses, and a vocal call that summons pure titans..
+        /// </summary>
+        public static string Bio_FemaleTitan {
+            get {
+                return ResourceManager.GetString("Bio_FemaleTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The evolved form of the Founding Titan after the Rumbling, stripped of its ability to control the Nine Titans’ successors but still bound to Ymir’s curse..
+        /// </summary>
+        public static string Bio_FinalFoundingTitan {
+            get {
+                return ResourceManager.GetString("Bio_FinalFoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Floch.
+        /// </summary>
+        public static string Bio_FlochForster {
+            get {
+                return ResourceManager.GetString("Bio_FlochForster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The nexus of all titans. Wields the ultimate &apos;Coordinate&apos; ability to alter memories and command millions of Wall Titans to initiate the Cataclysmic &apos;Rumbling&apos;..
+        /// </summary>
+        public static string Bio_FoundingTitan {
+            get {
+                return ResourceManager.GetString("Bio_FoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legitimate heir to the throne and holder of the Founding Titan before Eren. Constrained by the Vow Renouncing War, her memories and power were devoured by Grisha Yeager..
+        /// </summary>
+        public static string Bio_FriedaReiss {
+            get {
+                return ResourceManager.GetString("Bio_FriedaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A member of the Reiss bloodline and sibling of Frieda Reiss. He witnessed Grisha Yeager&apos;s attack on the Reiss family chapel and carries the trauma of that night..
+        /// </summary>
+        public static string Bio_Fritz {
+            get {
+                return ResourceManager.GetString("Bio_Fritz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiercely patriotic Warrior candidate who idolises Marley and despises the island&apos;s Eldians. Her worldview is gradually shattered through her experiences on Paradis..
+        /// </summary>
+        public static string Bio_GabiBraun {
+            get {
+                return ResourceManager.GetString("Bio_GabiBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serves within the walls&apos; ruling administration, navigating the political machinery that has controlled Paradis for a century..
+        /// </summary>
+        public static string Bio_Gerald {
+            get {
+                return ResourceManager.GetString("Bio_Gerald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Methodical veteran of Levi&apos;s Squad known for his calm assessment in the heat of battle. He was the first of the squad to fall, betrayed by the disguised Female Titan..
+        /// </summary>
+        public static string Bio_GntherSchultz {
+            get {
+                return ResourceManager.GetString("Bio_GntherSchultz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A former Marleyan Warrior candidate who infiltrated Wall Maria disguised as a doctor, carrying the secret of the Attack and Founding Titans..
+        /// </summary>
+        public static string Bio_GrishaYeager {
+            get {
+                return ResourceManager.GetString("Bio_GrishaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Led the Scout Corps&apos; scientific research and weapon development, notably creating the Thunder Spears. Succeeded Erwin as the 14th Commander with high integrity..
+        /// </summary>
+        public static string Bio_HangeZoe {
+            get {
+                return ResourceManager.GetString("Bio_HangeZoe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loyal captain of the Garrison who failed to protect Carla Yeager from the Smiling Titan out of fear. He redeems himself years later by sacrificing his life to protect Eren and Mikasa..
+        /// </summary>
+        public static string Bio_Hannes {
+            get {
+                return ResourceManager.GetString("Bio_Hannes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The illegitimate daughter of the Reiss royal bloodline, thrust into the crown after refusing to inherit the Founding Titan. Later ascended the throne to guide Paradis through its darkest hour..
+        /// </summary>
+        public static string Bio_HistoriaReiss {
+            get {
+                return ResourceManager.GetString("Bio_HistoriaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carefree on the surface, Hitch is sharper than she lets on. Her unlikely friendship with Annie Leonhart reveals a more empathetic side beneath her flippant exterior..
+        /// </summary>
+        public static string Bio_HitchDreyse {
+            get {
+                return ResourceManager.GetString("Bio_HitchDreyse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Survey Corps soldier who joined the Yeagerists, supporting Floch Forster during the coup..
+        /// </summary>
+        public static string Bio_Holger {
+            get {
+                return ResourceManager.GetString("Bio_Holger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Held by Ymir, Falco, and others. The smallest form but unmatched in top-tier agility. Features powerful claws and jaws that can crush even the densest crystalline hardening..
+        /// </summary>
+        public static string Bio_JawTitan {
+            get {
+                return ResourceManager.GetString("Bio_JawTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A grounded realist who understands weakness, enabling him to assess battlefields accurately from a soldier&apos;s view. Became a highly trusted field commander..
+        /// </summary>
+        public static string Bio_JeanKirstein {
+            get {
+                return ResourceManager.GetString("Bio_JeanKirstein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A girl from the Liberio internment zone who was saved by Sasha Braus after her mother was devoured by a Titan. Her friendship with Gabi challenges deep-seated hatred on both sides..
+        /// </summary>
+        public static string Bio_Kaya {
+            get {
+                return ResourceManager.GetString("Bio_Kaya", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legendary killer and former mentor to Levi. He leads the crown&apos;s Anti-Personnel Control Squad with lethal precision, driven by his own ambition to obtain the power of the Titans..
+        /// </summary>
+        public static string Bio_KennyAckerman {
+            get {
+                return ResourceManager.GetString("Bio_KennyAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True holder of the War Hammer Titan and actual head of the Tybur family. While her brother Willy conducted diplomacy, Lara was the family&apos;s ultimate weapon — until Eren devoured her..
+        /// </summary>
+        public static string Bio_LaraTybur {
+            get {
+                return ResourceManager.GetString("Bio_LaraTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Possesses near-superhuman reflexes due to awakened Ackerman bloodlines. Unmatched with vertical maneuvering equipment, universally hailed as Humanity&apos;s Strongest..
+        /// </summary>
+        public static string Bio_LeviAckerman {
+            get {
+                return ResourceManager.GetString("Bio_LeviAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Former holder of the Jaw Titan and older brother of Porco. His death protecting Reiner set the entire Paradis infiltration in motion..
+        /// </summary>
+        public static string Bio_MarcelGalliard {
+            get {
+                return ResourceManager.GetString("Bio_MarcelGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idealistic recruit who joins the Military Police determined to reform it from within. His moral compass ultimately leads him to join the Survey Corps in their uprising against the crown..
+        /// </summary>
+        public static string Bio_MarloweFreudenberg {
+            get {
+                return ResourceManager.GetString("Bio_MarloweFreudenberg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equal to a hundred ordinary soldiers in combat. Graduated from the 104th Training Corps alongside Eren, driven by an absolute, singular drive to protect him at all costs..
+        /// </summary>
+        public static string Bio_MikasaAckerman {
+            get {
+                return ResourceManager.GetString("Bio_MikasaAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zealous minister of the Wall Cult who knows the secret truth of the Walls — that Titans are sealed inside them. He refuses to reveal this truth even under torture, dying to protect the secret..
+        /// </summary>
+        public static string Bio_MinisterNick {
+            get {
+                return ResourceManager.GetString("Bio_MinisterNick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander of the Military Police who often clashes with Erwin Smith over strategy. Though bound by protocol, he proves his humanity in the final moments of the Rumbling crisis..
+        /// </summary>
+        public static string Bio_NileDok {
+            get {
+                return ResourceManager.GetString("Bio_NileDok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boastful but skilled veteran of the Special Operations Squad who idolises Levi and copies his mannerisms. His bravado barely hides genuine bravery earned through countless battles..
+        /// </summary>
+        public static string Bio_OluoBozado {
+            get {
+                return ResourceManager.GetString("Bio_OluoBozado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compassionate and dedicated member of Levi&apos;s Squad with an impressive 48-titan kill record. Her death at the hands of the Female Titan marked a devastating loss for the Survey Corps..
+        /// </summary>
+        public static string Bio_PetraRal {
+            get {
+                return ResourceManager.GetString("Bio_PetraRal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cunning and analytical holder of the Cart Titan. She endures a quadrupedal Titan form longer than any other, providing critical tactical support on the battlefield..
+        /// </summary>
+        public static string Bio_PieckFinger {
+            get {
+                return ResourceManager.GetString("Bio_PieckFinger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abrasive and proud holder of the Jaw Titan. He carries resentment toward Reiner, believing the Armored Titan should have been his brother Marcel&apos;s..
+        /// </summary>
+        public static string Bio_PorcoGalliard {
+            get {
+                return ResourceManager.GetString("Bio_PorcoGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holder of the Armored Titan, torn between his Marleyan warrior identity and the bonds he formed on Paradis. His fractured psyche developed a split personality to cope..
+        /// </summary>
+        public static string Bio_ReinerBraun {
+            get {
+                return ResourceManager.GetString("Bio_ReinerBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sharp-tongued but dependable Squad Leader who fought to defend Trost. Known for her exceptional ODM gear skill and her pragmatic battlefield decision-making..
+        /// </summary>
+        public static string Bio_RicoBrzenska {
+            get {
+                return ResourceManager.GetString("Bio_RicoBrzenska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serves within the walls&apos; ruling administration, navigating the political machinery that has controlled Paradis for a century..
+        /// </summary>
+        public static string Bio_Roderich {
+            get {
+                return ResourceManager.GetString("Bio_Roderich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patriarch of the true royal bloodline who manipulates his children for political gain. His cowardice is laid bare when he chooses monstrous transformation over facing Eren himself..
+        /// </summary>
+        public static string Bio_RodReiss {
+            get {
+                return ResourceManager.GetString("Bio_RodReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A pair of pure titans captured alive by the Scout Corps for experimentation. Their behavior offered the first scientific insights into titan physiology and regeneration..
+        /// </summary>
+        public static string Bio_SonnyAndBean {
+            get {
+                return ResourceManager.GetString("Bio_SonnyAndBean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A group of Eldians from outside the Walls who despise Marley&apos;s oppression. Led by Yelena, they ally with Zeke Yeager and supply Paradis with crucial intelligence and military aid..
+        /// </summary>
+        public static string Bio_Theantimarleyanvolunteers {
+            get {
+                return ResourceManager.GetString("Bio_Theantimarleyanvolunteers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strict and calculating Commander of Marley&apos;s Warrior Unit. He eventually questions the cycle of Titan warfare and resolves to end it — even at the cost of his own life..
+        /// </summary>
+        public static string Bio_TheoMagathAcommander {
+            get {
+                return ResourceManager.GetString("Bio_TheoMagathAcommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A member of Kenny&apos;s elite Anti-Personnel Control Squad. Trained to fight humans rather than Titans, she uses specially crafted ODM gear loaded with anti-human weapons..
+        /// </summary>
+        public static string Bio_TrauteCarven {
+            get {
+                return ResourceManager.GetString("Bio_TrauteCarven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The subterranean slum beneath Stohess District where society&apos;s outcasts live. It is the birthplace of Kenny Ackerman and the young Levi, a place of crime and survival where the weak are exploited..
+        /// </summary>
+        public static string Bio_Underground {
+            get {
+                return ResourceManager.GetString("Bio_Underground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Countless titans embedded within the three walls since their construction, waiting to be awakened. Their existence remained hidden for a century until the truth was revealed..
+        /// </summary>
+        public static string Bio_WallTitans {
+            get {
+                return ResourceManager.GetString("Bio_WallTitans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Originally held by the Tybur family. Features absolute weapon materialization via dense structural hardening. The host can safely remain underground while managing the titan puppet remotely via a cable connection..
+        /// </summary>
+        public static string Bio_WarhammerTitan {
+            get {
+                return ResourceManager.GetString("Bio_WarhammerTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charismatic public face of the noble Tybur family. He staged a grand theatrical production in Liberio to declare war on Paradis, fully aware it would end his life and spark a new world war..
+        /// </summary>
+        public static string Bio_WillyTybur {
+            get {
+                return ResourceManager.GetString("Bio_WillyTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string Bio_Wim {
+            get {
+                return ResourceManager.GetString("Bio_Wim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A mysterious cadet of the 104th Training Corps who once held the Jaw Titan. Fiercely devoted to Historia, she sacrificed herself to protect the ones she loved..
+        /// </summary>
+        public static string Bio_Ymir {
+            get {
+                return ResourceManager.GetString("Bio_Ymir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Half-brother of Eren and holder of the Beast Titan. The mastermind behind the &apos;euthanasia plan&apos; — a scheme to end Eldian suffering by preventing future births..
+        /// </summary>
+        public static string Bio_ZekeYeager {
+            get {
+                return ResourceManager.GetString("Bio_ZekeYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View all {0} →.
         /// </summary>
         public static string Btn_ViewAllManga {
             get {
                 return ResourceManager.GetString("Btn_ViewAllManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Full Timeline.
+        /// </summary>
+        public static string Btn_ViewFullTimeline {
+            get {
+                return ResourceManager.GetString("Btn_ViewFullTimeline", resourceCulture);
             }
         }
         
@@ -1078,7 +1681,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Mother of Eren Yeager.
         /// </summary>
         public static string CarlaYeager_Title {
             get {
@@ -1204,7 +1807,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wim.
+        ///   Looks up a localized string similar to A Survey Corps soldier who joined the Yeagerists, supporting Floch Forster during the coup..
         /// </summary>
         public static string CharHolger_Bio {
             get {
@@ -1425,6 +2028,420 @@ namespace AOT.Resources {
         public static string ChronicleTitle {
             get {
                 return ResourceManager.GetString("ChronicleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fall of Shiganshina.
+        /// </summary>
+        public static string Comm_Arc1 {
+            get {
+                return ResourceManager.GetString("Comm_Arc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle of Trost District.
+        /// </summary>
+        public static string Comm_Arc2 {
+            get {
+                return ResourceManager.GetString("Comm_Arc2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female Titan Arc.
+        /// </summary>
+        public static string Comm_Arc3 {
+            get {
+                return ResourceManager.GetString("Comm_Arc3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uprising Arc.
+        /// </summary>
+        public static string Comm_Arc4 {
+            get {
+                return ResourceManager.GetString("Comm_Arc4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marley Arc.
+        /// </summary>
+        public static string Comm_Arc5 {
+            get {
+                return ResourceManager.GetString("Comm_Arc5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Rumbling.
+        /// </summary>
+        public static string Comm_Arc6 {
+            get {
+                return ResourceManager.GetString("Comm_Arc6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From the Fall of Shiganshina to the Rumbling, which arc hit hardest for you?.
+        /// </summary>
+        public static string Comm_ArcPollDesc {
+            get {
+                return ResourceManager.GetString("Comm_ArcPollDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vote for the arc that left the deepest mark.
+        /// </summary>
+        public static string Comm_ArcPollInstruction {
+            get {
+                return ResourceManager.GetString("Comm_ArcPollInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vote registered. See what the fandom chose:.
+        /// </summary>
+        public static string Comm_ArcPollThanks {
+            get {
+                return ResourceManager.GetString("Comm_ArcPollThanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Best Story Arc.
+        /// </summary>
+        public static string Comm_ArcPollTitle {
+            get {
+                return ResourceManager.GetString("Comm_ArcPollTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Who carries the heart of the Survey Corps? Choose the soldier who defined your journey..
+        /// </summary>
+        public static string Comm_CharPollDesc {
+            get {
+                return ResourceManager.GetString("Comm_CharPollDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select your favourite character.
+        /// </summary>
+        public static string Comm_CharPollInstruction {
+            get {
+                return ResourceManager.GetString("Comm_CharPollInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vote recorded. Here&apos;s how the fandom voted:.
+        /// </summary>
+        public static string Comm_CharPollThanks {
+            get {
+                return ResourceManager.GetString("Comm_CharPollThanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fan Favourite Character.
+        /// </summary>
+        public static string Comm_CharPollTitle {
+            get {
+                return ResourceManager.GetString("Comm_CharPollTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The world stands divided. Marley or Paradis, where does your loyalty lie in the final conflict?.
+        /// </summary>
+        public static string Comm_FactionSectionDesc {
+            get {
+                return ResourceManager.GetString("Comm_FactionSectionDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faction Loyalty Poll.
+        /// </summary>
+        public static string Comm_FactionSectionTitle {
+            get {
+                return ResourceManager.GetString("Comm_FactionSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cast your vote, prove your knowledge, and see where the fandom stands. Your voice shapes the legion..
+        /// </summary>
+        public static string Comm_PageSubtitle {
+            get {
+                return ResourceManager.GetString("Comm_PageSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fan Zone.
+        /// </summary>
+        public static string Comm_PageTitle {
+            get {
+                return ResourceManager.GetString("Comm_PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VOTED.
+        /// </summary>
+        public static string Comm_PollVoted {
+            get {
+                return ResourceManager.GetString("Comm_PollVoted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to votes.
+        /// </summary>
+        public static string Comm_PollVotes {
+            get {
+                return ResourceManager.GetString("Comm_PollVotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CHARACTER VOTE.
+        /// </summary>
+        public static string Comm_TagCharacterVote {
+            get {
+                return ResourceManager.GetString("Comm_TagCharacterVote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COMMUNITY.
+        /// </summary>
+        public static string Comm_TagCommunity {
+            get {
+                return ResourceManager.GetString("Comm_TagCommunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FACTION POLL.
+        /// </summary>
+        public static string Comm_TagFactionPoll {
+            get {
+                return ResourceManager.GetString("Comm_TagFactionPoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to STORY ARC VOTE.
+        /// </summary>
+        public static string Comm_TagStoryArcVote {
+            get {
+                return ResourceManager.GetString("Comm_TagStoryArcVote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TITAN TIER VOTE.
+        /// </summary>
+        public static string Comm_TagTitanTierVote {
+            get {
+                return ResourceManager.GetString("Comm_TagTitanTierVote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRIVIA QUIZ.
+        /// </summary>
+        public static string Comm_TagTriviaQuiz {
+            get {
+                return ResourceManager.GetString("Comm_TagTriviaQuiz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Which shifter do you believe holds the most devastating power?.
+        /// </summary>
+        public static string Comm_TitanPollDesc {
+            get {
+                return ResourceManager.GetString("Comm_TitanPollDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the titan you think is most powerful.
+        /// </summary>
+        public static string Comm_TitanPollInstruction {
+            get {
+                return ResourceManager.GetString("Comm_TitanPollInstruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Power verdict recorded. See what the fandom decided:.
+        /// </summary>
+        public static string Comm_TitanPollThanks {
+            get {
+                return ResourceManager.GetString("Comm_TitanPollThanks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strongest Titan.
+        /// </summary>
+        public static string Comm_TitanPollTitle {
+            get {
+                return ResourceManager.GetString("Comm_TitanPollTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Votes: {0}.
+        /// </summary>
+        public static string Comm_TotalVotes {
+            get {
+                return ResourceManager.GetString("Comm_TotalVotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct!.
+        /// </summary>
+        public static string Comm_TriviaCorrect {
+            get {
+                return ResourceManager.GetString("Comm_TriviaCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 questions. No second chances. Only a true soldier of the Survey Corps passes..
+        /// </summary>
+        public static string Comm_TriviaDesc {
+            get {
+                return ResourceManager.GetString("Comm_TriviaDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next Question.
+        /// </summary>
+        public static string Comm_TriviaNext {
+            get {
+                return ResourceManager.GetString("Comm_TriviaNext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of.
+        /// </summary>
+        public static string Comm_TriviaOf {
+            get {
+                return ResourceManager.GetString("Comm_TriviaOf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        public static string Comm_TriviaQuestion {
+            get {
+                return ResourceManager.GetString("Comm_TriviaQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Titan Fodder — You have much to learn, soldier..
+        /// </summary>
+        public static string Comm_TriviaRank0 {
+            get {
+                return ResourceManager.GetString("Comm_TriviaRank0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Garrison Recruit — Some knowledge, but the walls still fall..
+        /// </summary>
+        public static string Comm_TriviaRank1 {
+            get {
+                return ResourceManager.GetString("Comm_TriviaRank1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survey Corps Member — Worthy of the wings of freedom!.
+        /// </summary>
+        public static string Comm_TriviaRank2 {
+            get {
+                return ResourceManager.GetString("Comm_TriviaRank2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Captain-Level — The Survey Corps salutes you..
+        /// </summary>
+        public static string Comm_TriviaRank3 {
+            get {
+                return ResourceManager.GetString("Comm_TriviaRank3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Try Again.
+        /// </summary>
+        public static string Comm_TriviaRetry {
+            get {
+                return ResourceManager.GetString("Comm_TriviaRetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Score.
+        /// </summary>
+        public static string Comm_TriviaScore {
+            get {
+                return ResourceManager.GetString("Comm_TriviaScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See Results.
+        /// </summary>
+        public static string Comm_TriviaSeeResults {
+            get {
+                return ResourceManager.GetString("Comm_TriviaSeeResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Quiz.
+        /// </summary>
+        public static string Comm_TriviaStart {
+            get {
+                return ResourceManager.GetString("Comm_TriviaStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AOT Trivia.
+        /// </summary>
+        public static string Comm_TriviaTitle {
+            get {
+                return ResourceManager.GetString("Comm_TriviaTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong! The answer was:.
+        /// </summary>
+        public static string Comm_TriviaWrong {
+            get {
+                return ResourceManager.GetString("Comm_TriviaWrong", resourceCulture);
             }
         }
         
@@ -3000,6 +4017,600 @@ namespace AOT.Resources {
         public static string MOBILITY {
             get {
                 return ResourceManager.GetString("MOBILITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Annie Leonhart.
+        /// </summary>
+        public static string Name_AnnieLeonhart {
+            get {
+                return ResourceManager.GetString("Name_AnnieLeonhart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armin Arlert.
+        /// </summary>
+        public static string Name_ArminArlert {
+            get {
+                return ResourceManager.GetString("Name_ArminArlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armored Titan.
+        /// </summary>
+        public static string Name_ArmoredTitan {
+            get {
+                return ResourceManager.GetString("Name_ArmoredTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attack Titan.
+        /// </summary>
+        public static string Name_AttackTitan {
+            get {
+                return ResourceManager.GetString("Name_AttackTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aurille.
+        /// </summary>
+        public static string Name_Aurille {
+            get {
+                return ResourceManager.GetString("Name_Aurille", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beast Titan.
+        /// </summary>
+        public static string Name_BeastTitan {
+            get {
+                return ResourceManager.GetString("Name_BeastTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bertolt Hoover.
+        /// </summary>
+        public static string Name_BertoltHoover {
+            get {
+                return ResourceManager.GetString("Name_BertoltHoover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boris Feulner.
+        /// </summary>
+        public static string Name_BorisFeulner {
+            get {
+                return ResourceManager.GetString("Name_BorisFeulner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calvi - The Marshal.
+        /// </summary>
+        public static string Name_CalviTheMarshal {
+            get {
+                return ResourceManager.GetString("Name_CalviTheMarshal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carla Yeager.
+        /// </summary>
+        public static string Name_CarlaYeager {
+            get {
+                return ResourceManager.GetString("Name_CarlaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cart Titan.
+        /// </summary>
+        public static string Name_CartTitan {
+            get {
+                return ResourceManager.GetString("Name_CartTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colossal Titan.
+        /// </summary>
+        public static string Name_ColossalTitan {
+            get {
+                return ResourceManager.GetString("Name_ColossalTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colt Grice.
+        /// </summary>
+        public static string Name_ColtGrice {
+            get {
+                return ResourceManager.GetString("Name_ColtGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deltoff.
+        /// </summary>
+        public static string Name_Deltoff {
+            get {
+                return ResourceManager.GetString("Name_Deltoff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dimo Reeves.
+        /// </summary>
+        public static string Name_DimoReeves {
+            get {
+                return ResourceManager.GetString("Name_DimoReeves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Djel Sannes.
+        /// </summary>
+        public static string Name_DjelSanes {
+            get {
+                return ResourceManager.GetString("Name_DjelSanes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dot Pixis.
+        /// </summary>
+        public static string Name_DotPixis {
+            get {
+                return ResourceManager.GetString("Name_DotPixis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eld Jinn.
+        /// </summary>
+        public static string Name_EldJinn {
+            get {
+                return ResourceManager.GetString("Name_EldJinn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eren Yeager.
+        /// </summary>
+        public static string Name_ErenYeager {
+            get {
+                return ResourceManager.GetString("Name_ErenYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erwin Smith.
+        /// </summary>
+        public static string Name_ErwinSmith {
+            get {
+                return ResourceManager.GetString("Name_ErwinSmith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Falco Grice.
+        /// </summary>
+        public static string Name_FalcoGrice {
+            get {
+                return ResourceManager.GetString("Name_FalcoGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female Titan.
+        /// </summary>
+        public static string Name_FemaleTitan {
+            get {
+                return ResourceManager.GetString("Name_FemaleTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Final Founding Titan.
+        /// </summary>
+        public static string Name_FinalFoundingTitan {
+            get {
+                return ResourceManager.GetString("Name_FinalFoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Floch Forster.
+        /// </summary>
+        public static string Name_FlochForster {
+            get {
+                return ResourceManager.GetString("Name_FlochForster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Founding Titan.
+        /// </summary>
+        public static string Name_FoundingTitan {
+            get {
+                return ResourceManager.GetString("Name_FoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frieda Reiss.
+        /// </summary>
+        public static string Name_FriedaReiss {
+            get {
+                return ResourceManager.GetString("Name_FriedaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fritz.
+        /// </summary>
+        public static string Name_Fritz {
+            get {
+                return ResourceManager.GetString("Name_Fritz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gabi Braun.
+        /// </summary>
+        public static string Name_GabiBraun {
+            get {
+                return ResourceManager.GetString("Name_GabiBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gerald.
+        /// </summary>
+        public static string Name_Gerald {
+            get {
+                return ResourceManager.GetString("Name_Gerald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Günther Schultz.
+        /// </summary>
+        public static string Name_GntherSchultz {
+            get {
+                return ResourceManager.GetString("Name_GntherSchultz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grisha Yeager.
+        /// </summary>
+        public static string Name_GrishaYeager {
+            get {
+                return ResourceManager.GetString("Name_GrishaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hange Zoë.
+        /// </summary>
+        public static string Name_HangeZoe {
+            get {
+                return ResourceManager.GetString("Name_HangeZoe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hannes.
+        /// </summary>
+        public static string Name_Hannes {
+            get {
+                return ResourceManager.GetString("Name_Hannes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Historia Reiss aka Christa Lenz.
+        /// </summary>
+        public static string Name_HistoriaReiss {
+            get {
+                return ResourceManager.GetString("Name_HistoriaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hitch Dreyse.
+        /// </summary>
+        public static string Name_HitchDreyse {
+            get {
+                return ResourceManager.GetString("Name_HitchDreyse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holger.
+        /// </summary>
+        public static string Name_Holger {
+            get {
+                return ResourceManager.GetString("Name_Holger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jaw Titan.
+        /// </summary>
+        public static string Name_JawTitan {
+            get {
+                return ResourceManager.GetString("Name_JawTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jean Kirstein.
+        /// </summary>
+        public static string Name_JeanKirstein {
+            get {
+                return ResourceManager.GetString("Name_JeanKirstein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kaya.
+        /// </summary>
+        public static string Name_Kaya {
+            get {
+                return ResourceManager.GetString("Name_Kaya", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kenny Ackerman.
+        /// </summary>
+        public static string Name_KennyAckerman {
+            get {
+                return ResourceManager.GetString("Name_KennyAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lara Tybur.
+        /// </summary>
+        public static string Name_LaraTybur {
+            get {
+                return ResourceManager.GetString("Name_LaraTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Levi Ackerman.
+        /// </summary>
+        public static string Name_LeviAckerman {
+            get {
+                return ResourceManager.GetString("Name_LeviAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marcel Galliard.
+        /// </summary>
+        public static string Name_MarcelGalliard {
+            get {
+                return ResourceManager.GetString("Name_MarcelGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marlowe Freudenberg.
+        /// </summary>
+        public static string Name_MarloweFreudenberg {
+            get {
+                return ResourceManager.GetString("Name_MarloweFreudenberg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mikasa Ackerman.
+        /// </summary>
+        public static string Name_MikasaAckerman {
+            get {
+                return ResourceManager.GetString("Name_MikasaAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minister Nick.
+        /// </summary>
+        public static string Name_MinisterNick {
+            get {
+                return ResourceManager.GetString("Name_MinisterNick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nile Dok.
+        /// </summary>
+        public static string Name_NileDok {
+            get {
+                return ResourceManager.GetString("Name_NileDok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oluo Bozado.
+        /// </summary>
+        public static string Name_OluoBozado {
+            get {
+                return ResourceManager.GetString("Name_OluoBozado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Petra Ral.
+        /// </summary>
+        public static string Name_PetraRal {
+            get {
+                return ResourceManager.GetString("Name_PetraRal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pieck Finger.
+        /// </summary>
+        public static string Name_PieckFinger {
+            get {
+                return ResourceManager.GetString("Name_PieckFinger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porco Galliard.
+        /// </summary>
+        public static string Name_PorcoGalliard {
+            get {
+                return ResourceManager.GetString("Name_PorcoGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reiner Braun.
+        /// </summary>
+        public static string Name_ReinerBraun {
+            get {
+                return ResourceManager.GetString("Name_ReinerBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rico Brzenska.
+        /// </summary>
+        public static string Name_RicoBrzenska {
+            get {
+                return ResourceManager.GetString("Name_RicoBrzenska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roderich.
+        /// </summary>
+        public static string Name_Roderich {
+            get {
+                return ResourceManager.GetString("Name_Roderich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rod Reiss.
+        /// </summary>
+        public static string Name_RodReiss {
+            get {
+                return ResourceManager.GetString("Name_RodReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sonny and Bean.
+        /// </summary>
+        public static string Name_SonnyAndBean {
+            get {
+                return ResourceManager.GetString("Name_SonnyAndBean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Anti-Marleyan Volunteers.
+        /// </summary>
+        public static string Name_Theantimarleyanvolunteers {
+            get {
+                return ResourceManager.GetString("Name_Theantimarleyanvolunteers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theo Magath - A commander.
+        /// </summary>
+        public static string Name_TheoMagathAcommander {
+            get {
+                return ResourceManager.GetString("Name_TheoMagathAcommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traute Carven.
+        /// </summary>
+        public static string Name_TrauteCarven {
+            get {
+                return ResourceManager.GetString("Name_TrauteCarven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Underground.
+        /// </summary>
+        public static string Name_Underground {
+            get {
+                return ResourceManager.GetString("Name_Underground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wall Titans.
+        /// </summary>
+        public static string Name_WallTitans {
+            get {
+                return ResourceManager.GetString("Name_WallTitans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to War Hammer Titan.
+        /// </summary>
+        public static string Name_WarhammerTitan {
+            get {
+                return ResourceManager.GetString("Name_WarhammerTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Willy Tybur.
+        /// </summary>
+        public static string Name_WillyTybur {
+            get {
+                return ResourceManager.GetString("Name_WillyTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string Name_Wim {
+            get {
+                return ResourceManager.GetString("Name_Wim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ymir.
+        /// </summary>
+        public static string Name_Ymir {
+            get {
+                return ResourceManager.GetString("Name_Ymir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zeke Yeager.
+        /// </summary>
+        public static string Name_ZekeYeager {
+            get {
+                return ResourceManager.GetString("Name_ZekeYeager", resourceCulture);
             }
         }
         
@@ -6348,6 +7959,600 @@ namespace AOT.Resources {
         public static string TitanWall_H {
             get {
                 return ResourceManager.GetString("TitanWall_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley.
+        /// </summary>
+        public static string Title_AnnieLeonhart {
+            get {
+                return ResourceManager.GetString("Title_AnnieLeonhart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15th Scout Commander / Colossal Titan.
+        /// </summary>
+        public static string Title_ArminArlert {
+            get {
+                return ResourceManager.GetString("Title_ArminArlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 15m.
+        /// </summary>
+        public static string Title_ArmoredTitan {
+            get {
+                return ResourceManager.GetString("Title_ArmoredTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 15m.
+        /// </summary>
+        public static string Title_AttackTitan {
+            get {
+                return ResourceManager.GetString("Title_AttackTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royal Government Official.
+        /// </summary>
+        public static string Title_Aurille {
+            get {
+                return ResourceManager.GetString("Title_Aurille", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 17m.
+        /// </summary>
+        public static string Title_BeastTitan {
+            get {
+                return ResourceManager.GetString("Title_BeastTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Colossal Titan.
+        /// </summary>
+        public static string Title_BertoltHoover {
+            get {
+                return ResourceManager.GetString("Title_BertoltHoover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Squad Leader – Military Police.
+        /// </summary>
+        public static string Title_BorisFeulner {
+            get {
+                return ResourceManager.GetString("Title_BorisFeulner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marshal of the Marleyan Military.
+        /// </summary>
+        public static string Title_CalviTheMarshal {
+            get {
+                return ResourceManager.GetString("Title_CalviTheMarshal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mother of Eren Yeager.
+        /// </summary>
+        public static string Title_CarlaYeager {
+            get {
+                return ResourceManager.GetString("Title_CarlaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 4m (Quadrupedal).
+        /// </summary>
+        public static string Title_CartTitan {
+            get {
+                return ResourceManager.GetString("Title_CartTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 60m.
+        /// </summary>
+        public static string Title_ColossalTitan {
+            get {
+                return ResourceManager.GetString("Title_ColossalTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Warrior Candidate.
+        /// </summary>
+        public static string Title_ColtGrice {
+            get {
+                return ResourceManager.GetString("Title_ColtGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royal Government Official.
+        /// </summary>
+        public static string Title_Deltoff {
+            get {
+                return ResourceManager.GetString("Title_Deltoff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to President of the Reeves Company.
+        /// </summary>
+        public static string Title_DimoReeves {
+            get {
+                return ResourceManager.GetString("Title_DimoReeves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Interior Squad – Military Police.
+        /// </summary>
+        public static string Title_DjelSanes {
+            get {
+                return ResourceManager.GetString("Title_DjelSanes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High Commander of the Southern Territory.
+        /// </summary>
+        public static string Title_DotPixis {
+            get {
+                return ResourceManager.GetString("Title_DotPixis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Squad – Survey Corps.
+        /// </summary>
+        public static string Title_EldJinn {
+            get {
+                return ResourceManager.GetString("Title_EldJinn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attack Titan / Founding Titan / War Hammer Titan.
+        /// </summary>
+        public static string Title_ErenYeager {
+            get {
+                return ResourceManager.GetString("Title_ErenYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Former 13th Scout Commander.
+        /// </summary>
+        public static string Title_ErwinSmith {
+            get {
+                return ResourceManager.GetString("Title_ErwinSmith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Jaw Titan.
+        /// </summary>
+        public static string Title_FalcoGrice {
+            get {
+                return ResourceManager.GetString("Title_FalcoGrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 14m.
+        /// </summary>
+        public static string Title_FemaleTitan {
+            get {
+                return ResourceManager.GetString("Title_FemaleTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: Variable.
+        /// </summary>
+        public static string Title_FinalFoundingTitan {
+            get {
+                return ResourceManager.GetString("Title_FinalFoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Floch.
+        /// </summary>
+        public static string Title_FlochForster {
+            get {
+                return ResourceManager.GetString("Title_FlochForster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 204m (Base Form).
+        /// </summary>
+        public static string Title_FoundingTitan {
+            get {
+                return ResourceManager.GetString("Title_FoundingTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True Queen of the Walls.
+        /// </summary>
+        public static string Title_FriedaReiss {
+            get {
+                return ResourceManager.GetString("Title_FriedaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Member of the Reiss Royal Family.
+        /// </summary>
+        public static string Title_Fritz {
+            get {
+                return ResourceManager.GetString("Title_Fritz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Warrior Candidate.
+        /// </summary>
+        public static string Title_GabiBraun {
+            get {
+                return ResourceManager.GetString("Title_GabiBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royal Government Official.
+        /// </summary>
+        public static string Title_Gerald {
+            get {
+                return ResourceManager.GetString("Title_Gerald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Squad – Survey Corps.
+        /// </summary>
+        public static string Title_GntherSchultz {
+            get {
+                return ResourceManager.GetString("Title_GntherSchultz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paradis Island Physician.
+        /// </summary>
+        public static string Title_GrishaYeager {
+            get {
+                return ResourceManager.GetString("Title_GrishaYeager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 14th Scout Commander.
+        /// </summary>
+        public static string Title_HangeZoe {
+            get {
+                return ResourceManager.GetString("Title_HangeZoe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Captain of the Garrison – Trost District.
+        /// </summary>
+        public static string Title_Hannes {
+            get {
+                return ResourceManager.GetString("Title_Hannes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queen of the Walls.
+        /// </summary>
+        public static string Title_HistoriaReiss {
+            get {
+                return ResourceManager.GetString("Title_HistoriaReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Police Brigade – 104th Cadet Corps.
+        /// </summary>
+        public static string Title_HitchDreyse {
+            get {
+                return ResourceManager.GetString("Title_HitchDreyse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holger.
+        /// </summary>
+        public static string Title_Holger {
+            get {
+                return ResourceManager.GetString("Title_Holger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 5m.
+        /// </summary>
+        public static string Title_JawTitan {
+            get {
+                return ResourceManager.GetString("Title_JawTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frontline Field Commander.
+        /// </summary>
+        public static string Title_JeanKirstein {
+            get {
+                return ResourceManager.GetString("Title_JeanKirstein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Civilian – Paradis Island.
+        /// </summary>
+        public static string Title_Kaya {
+            get {
+                return ResourceManager.GetString("Title_Kaya", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Captain of the Anti-Personnel Control Squad.
+        /// </summary>
+        public static string Title_KennyAckerman {
+            get {
+                return ResourceManager.GetString("Title_KennyAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Head of the Tybur Family / War Hammer Titan.
+        /// </summary>
+        public static string Title_LaraTybur {
+            get {
+                return ResourceManager.GetString("Title_LaraTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Captain.
+        /// </summary>
+        public static string Title_LeviAckerman {
+            get {
+                return ResourceManager.GetString("Title_LeviAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Jaw Titan.
+        /// </summary>
+        public static string Title_MarcelGalliard {
+            get {
+                return ResourceManager.GetString("Title_MarcelGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Military Police Brigade – 104th Cadet Corps.
+        /// </summary>
+        public static string Title_MarloweFreudenberg {
+            get {
+                return ResourceManager.GetString("Title_MarloweFreudenberg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elite Scout Officer.
+        /// </summary>
+        public static string Title_MikasaAckerman {
+            get {
+                return ResourceManager.GetString("Title_MikasaAckerman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minister of the Church of the Walls.
+        /// </summary>
+        public static string Title_MinisterNick {
+            get {
+                return ResourceManager.GetString("Title_MinisterNick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander of the Military Police Brigade.
+        /// </summary>
+        public static string Title_NileDok {
+            get {
+                return ResourceManager.GetString("Title_NileDok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Squad – Survey Corps.
+        /// </summary>
+        public static string Title_OluoBozado {
+            get {
+                return ResourceManager.GetString("Title_OluoBozado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Operations Squad – Survey Corps.
+        /// </summary>
+        public static string Title_PetraRal {
+            get {
+                return ResourceManager.GetString("Title_PetraRal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Cart Titan.
+        /// </summary>
+        public static string Title_PieckFinger {
+            get {
+                return ResourceManager.GetString("Title_PieckFinger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Jaw Titan.
+        /// </summary>
+        public static string Title_PorcoGalliard {
+            get {
+                return ResourceManager.GetString("Title_PorcoGalliard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Armored Titan.
+        /// </summary>
+        public static string Title_ReinerBraun {
+            get {
+                return ResourceManager.GetString("Title_ReinerBraun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leader of the Garrison&apos;s Elite Squad.
+        /// </summary>
+        public static string Title_RicoBrzenska {
+            get {
+                return ResourceManager.GetString("Title_RicoBrzenska", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royal Government Official.
+        /// </summary>
+        public static string Title_Roderich {
+            get {
+                return ResourceManager.GetString("Title_Roderich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Head of the Reiss Royal Family.
+        /// </summary>
+        public static string Title_RodReiss {
+            get {
+                return ResourceManager.GetString("Title_RodReiss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 4m ~ 7m.
+        /// </summary>
+        public static string Title_SonnyAndBean {
+            get {
+                return ResourceManager.GetString("Title_SonnyAndBean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anti-Marleyan Volunteers.
+        /// </summary>
+        public static string Title_Theantimarleyanvolunteers {
+            get {
+                return ResourceManager.GetString("Title_Theantimarleyanvolunteers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander of the Warrior Unit.
+        /// </summary>
+        public static string Title_TheoMagathAcommander {
+            get {
+                return ResourceManager.GetString("Title_TheoMagathAcommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anti-Personnel Control Squad Member.
+        /// </summary>
+        public static string Title_TrauteCarven {
+            get {
+                return ResourceManager.GetString("Title_TrauteCarven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Underground – Beneath the Walls.
+        /// </summary>
+        public static string Title_Underground {
+            get {
+                return ResourceManager.GetString("Title_Underground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: ~50m (Dormant).
+        /// </summary>
+        public static string Title_WallTitans {
+            get {
+                return ResourceManager.GetString("Title_WallTitans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: 15m.
+        /// </summary>
+        public static string Title_WarhammerTitan {
+            get {
+                return ResourceManager.GetString("Title_WarhammerTitan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lord of the Tybur Family – Diplomat.
+        /// </summary>
+        public static string Title_WillyTybur {
+            get {
+                return ResourceManager.GetString("Title_WillyTybur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wim.
+        /// </summary>
+        public static string Title_Wim {
+            get {
+                return ResourceManager.GetString("Title_Wim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 104th Training Corps / Jaw Titan.
+        /// </summary>
+        public static string Title_Ymir {
+            get {
+                return ResourceManager.GetString("Title_Ymir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior Unit – Marley / Beast Titan.
+        /// </summary>
+        public static string Title_ZekeYeager {
+            get {
+                return ResourceManager.GetString("Title_ZekeYeager", resourceCulture);
             }
         }
         

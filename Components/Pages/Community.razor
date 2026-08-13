@@ -8,7 +8,7 @@
 
 <div class="comm-hero">
     <div class="comm-hero-badge">
-        <i class="ti ti-users"></i> COMMUNITY
+        <i class="ti ti-users"></i> @LocalizationService.GetString("Comm_TagCommunity")
     </div>
     <h1 class="comm-hero-title">@LocalizationService.GetString("Comm_PageTitle")</h1>
     <p class="comm-hero-subtitle">@LocalizationService.GetString("Comm_PageSubtitle")</p>
@@ -19,17 +19,17 @@
     <!-- POLL 1 · FACTION LOYALTY -->
     <div class="comm-poll-card comic-card">
         <div class="comm-poll-header">
-            <span class="comm-poll-icon"><i class="ti ti-flag"></i></span>
+            <span class="comm-poll-icon">1</span>
             <div>
-                <div class="comm-poll-tag">FACTION POLL</div>
-                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_FactionSectionTitle")</h2>
-                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_FactionSectionDesc")</p>
+                <div class="comm-poll-tag">@LocalizationService.GetString("Comm_TagFactionPoll")</div>
             </div>
         </div>
+        <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_FactionSectionTitle")</h2>
+        <p class="comm-poll-desc">@LocalizationService.GetString("Comm_FactionSectionDesc")</p>
 
         @if (!_factionVoted)
         {
-            <p class="comm-poll-instruction">@LocalizationService.GetString("PollInstruction")</p>
+ 
             <div class="comm-faction-vs">
                 <button class="comm-vote-btn comm-vote-btn--marley" @onclick='() => VoteFaction("marley")'>
                     <i class="ti ti-flag"></i> @LocalizationService.GetString("PollMarleyOpt")
@@ -42,10 +42,15 @@
         }
         else
         {
-            <p class="comm-poll-thanks">
-                @LocalizationService.GetString("PollThanks")
-                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
-            </p>
+            <div class="comm-poll-results-summary">
+                <div class="comm-poll-total-row">
+                    <span class="comm-poll-total">@string.Format(LocalizationService.GetString("Comm_TotalVotes"), _factionTotal)</span>
+                </div>
+                <div class="comm-poll-thanks-centered">
+                    @LocalizationService.GetString("PollThanks")
+                    <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+                </div>
+            </div>
             <div class="comm-result-bars">
                 <div class="comm-result-row">
                     <div class="comm-result-label">
@@ -72,32 +77,37 @@
     <!-- POLL 2 · FAN FAVOURITE CHARACTER -->
     <div class="comm-poll-card comic-card">
         <div class="comm-poll-header">
-            <span class="comm-poll-icon"><i class="ti ti-heart"></i></span>
+            <span class="comm-poll-icon">2</span>
             <div>
-                <div class="comm-poll-tag">CHARACTER VOTE</div>
-                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_CharPollTitle")</h2>
-                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_CharPollDesc")</p>
+                <div class="comm-poll-tag">@LocalizationService.GetString("Comm_TagCharacterVote")</div>
             </div>
         </div>
+        <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_CharPollTitle")</h2>
+        <p class="comm-poll-desc">@LocalizationService.GetString("Comm_CharPollDesc")</p>
 
         @if (!_charVoted)
         {
-            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_CharPollInstruction")</p>
+ 
             <div class="comm-option-grid">
                 @foreach (var opt in _charOptions)
                 {
                     <button class="comm-option-btn" @onclick="() => VoteChar(opt.Key)">
-                        @opt.Label
+                        @LocalizationService.GetString(opt.LabelKey)
                     </button>
                 }
             </div>
         }
         else
         {
-            <p class="comm-poll-thanks">
-                @LocalizationService.GetString("Comm_CharPollThanks")
-                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
-            </p>
+            <div class="comm-poll-results-summary">
+                <div class="comm-poll-total-row">
+                    <span class="comm-poll-total">@string.Format(LocalizationService.GetString("Comm_TotalVotes"), _charVotes.Values.Sum())</span>
+                </div>
+                <div class="comm-poll-thanks-centered">
+                    @LocalizationService.GetString("PollThanks")
+                    <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+                </div>
+            </div>
             <div class="comm-result-bars">
                 @foreach (var opt in _charOptions)
                 {
@@ -106,7 +116,7 @@
                     var pct = total == 0 ? 0 : (int)Math.Round(votes * 100.0 / total);
                     <div class="comm-result-row @(_charVotedKey == opt.Key ? "is-my-vote" : "")">
                         <div class="comm-result-label">
-                            <span>@opt.Label</span>
+                            <span>@LocalizationService.GetString(opt.LabelKey)</span>
                             <span>@pct% (@votes)</span>
                         </div>
                         <div class="comm-result-track">
@@ -121,17 +131,17 @@
     <!-- POLL 3 · BEST STORY ARC -->
     <div class="comm-poll-card comic-card">
         <div class="comm-poll-header">
-            <span class="comm-poll-icon"><i class="ti ti-book"></i></span>
+            <span class="comm-poll-icon">3</span>
             <div>
-                <div class="comm-poll-tag">STORY ARC VOTE</div>
-                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_ArcPollTitle")</h2>
-                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_ArcPollDesc")</p>
+                <div class="comm-poll-tag">@LocalizationService.GetString("Comm_TagStoryArcVote")</div>
             </div>
         </div>
+        <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_ArcPollTitle")</h2>
+        <p class="comm-poll-desc">@LocalizationService.GetString("Comm_ArcPollDesc")</p>
 
         @if (!_arcVoted)
         {
-            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_ArcPollInstruction")</p>
+ 
             <div class="comm-option-grid">
                 @foreach (var opt in _arcOptions)
                 {
@@ -143,10 +153,15 @@
         }
         else
         {
-            <p class="comm-poll-thanks">
-                @LocalizationService.GetString("Comm_ArcPollThanks")
-                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
-            </p>
+            <div class="comm-poll-results-summary">
+                <div class="comm-poll-total-row">
+                    <span class="comm-poll-total">@string.Format(LocalizationService.GetString("Comm_TotalVotes"), _arcVotes.Values.Sum())</span>
+                </div>
+                <div class="comm-poll-thanks-centered">
+                    @LocalizationService.GetString("PollThanks")
+                    <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+                </div>
+            </div>
             <div class="comm-result-bars">
                 @foreach (var opt in _arcOptions)
                 {
@@ -170,17 +185,17 @@
     <!-- POLL 4 · STRONGEST TITAN TIER VOTE -->
     <div class="comm-poll-card comic-card">
         <div class="comm-poll-header">
-            <span class="comm-poll-icon"><i class="ti ti-dna-2"></i></span>
+            <span class="comm-poll-icon">4</span>
             <div>
-                <div class="comm-poll-tag">TITAN TIER VOTE</div>
-                <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TitanPollTitle")</h2>
-                <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TitanPollDesc")</p>
+                <div class="comm-poll-tag">@LocalizationService.GetString("Comm_TagTitanTierVote")</div>
             </div>
         </div>
+        <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TitanPollTitle")</h2>
+        <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TitanPollDesc")</p>
 
         @if (!_titanVoted)
         {
-            <p class="comm-poll-instruction">@LocalizationService.GetString("Comm_TitanPollInstruction")</p>
+ 
             <div class="comm-titan-grid">
                 @foreach (var opt in _titanOptions)
                 {
@@ -192,10 +207,15 @@
         }
         else
         {
-            <p class="comm-poll-thanks">
-                @LocalizationService.GetString("Comm_TitanPollThanks")
-                <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
-            </p>
+            <div class="comm-poll-results-summary">
+                <div class="comm-poll-total-row">
+                    <span class="comm-poll-total">@string.Format(LocalizationService.GetString("Comm_TotalVotes"), _titanVotes.Values.Sum())</span>
+                </div>
+                <div class="comm-poll-thanks-centered">
+                    @LocalizationService.GetString("PollThanks")
+                    <span class="comic-badge comic-badge--gold">@LocalizationService.GetString("Comm_PollVoted")</span>
+                </div>
+            </div>
             <div class="comm-result-bars">
                 @foreach (var opt in _titanOptions)
                 {
@@ -221,13 +241,13 @@
 <!-- SECTION 5 · AOT TRIVIA QUIZ -->
 <div class="comm-trivia-section comic-card">
     <div class="comm-poll-header">
-        <span class="comm-poll-icon"><i class="ti ti-help-circle"></i></span>
+        <span class="comm-poll-icon">5</span>
         <div>
-            <div class="comm-poll-tag">TRIVIA QUIZ</div>
-            <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TriviaTitle")</h2>
-            <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TriviaDesc")</p>
+            <div class="comm-poll-tag">@LocalizationService.GetString("Comm_TagTriviaQuiz")</div>
         </div>
     </div>
+    <h2 class="comm-poll-title">@LocalizationService.GetString("Comm_TriviaTitle")</h2>
+    <p class="comm-poll-desc">@LocalizationService.GetString("Comm_TriviaDesc")</p>
 
     @if (_triviaState == TriviaState.Idle)
     {
@@ -289,7 +309,7 @@
                     }
                     else
                     {
-                        <span><i class="ti ti-flag-check mr-1"></i>See Results</span>
+                        <span><i class="ti ti-flag-check mr-1"></i>@LocalizationService.GetString("Comm_TriviaSeeResults")</span>
                     }
                 </button>
             }
@@ -359,15 +379,15 @@
     }
 
     // ─── CHARACTER FAVOURITE POLL ──────────────────────────────────
-    private sealed record PollOption(string Key, string Label);
+    private sealed record PollOption(string Key, string LabelKey);
 
     private readonly List<PollOption> _charOptions = new()
     {
-        new("levi",   "Levi Ackerman"),
-        new("mikasa", "Mikasa Ackerman"),
-        new("eren",   "Eren Yeager"),
-        new("armin",  "Armin Arlert"),
-        new("erwin",  "Erwin Smith"),
+        new("levi",   "Nav_LeviAckerman"),
+        new("mikasa", "Nav_Mikasa"),
+        new("eren",   "Nav_Eren"),
+        new("armin",  "Nav_Armin"),
+        new("erwin",  "Nav_ErwinSmith"),
     };
 
     private bool _charVoted;

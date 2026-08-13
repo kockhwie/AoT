@@ -110,11 +110,12 @@
 .comm-poll-header {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .comm-poll-icon {
-    font-size: 1.5rem;
+    font-size: 1.00rem;
+    font-weight: bold;
     color: #facc15;
     text-shadow: 2px 2px 0 #000000;
     display: flex;
@@ -125,8 +126,8 @@
     border: 2px solid #000000;
     border-radius: 4px;
     box-shadow: 3px 3px 0px #000000;
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 1.55rem;
+    height: 1.55rem;
     flex-shrink: 0;
 }
 
@@ -150,8 +151,8 @@
 .comm-poll-title {
     font-size: 1.25rem;
     font-weight: 800;
-    color: #ffffff;
-    margin-top: 0.125rem;
+    color: #dfbb6b;
+    margin-top: 0.5rem;
     margin-bottom: 0.25rem;
 }
 
@@ -160,6 +161,7 @@
     font-size: 0.875rem;
     color: #d1d5db;
     line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
 .comm-poll-instruction {
@@ -170,14 +172,33 @@
     letter-spacing: 0.04em;
 }
 
-.comm-poll-thanks {
+.comm-poll-results-summary {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.comm-poll-total-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comm-poll-total {
+    font-size: 0.8rem;
+    color: #dfbb6b;
+    font-weight: 700;
+}
+
+.comm-poll-thanks-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     font-size: 0.875rem;
     color: #d1d5db;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
 }
 
 /* Faction VS Options */
@@ -186,7 +207,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: auto;
 }
 
 /* VS badge — hard red comic accent */
@@ -252,7 +272,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
-    margin-top: auto;
+ 
 }
 
 .comm-option-btn {
@@ -291,7 +311,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    margin-top: auto;
 }
 
 @media (min-width: 640px) {
@@ -340,7 +359,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: auto;
+    margin-top: 2rem;
 }
 
 .comm-result-row {
