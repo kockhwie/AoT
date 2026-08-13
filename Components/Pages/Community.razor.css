@@ -10,8 +10,8 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 .comm-hero {
     text-align: center;
-    padding: 2.25rem 1.25rem;
-    margin-bottom: 2rem;
+    padding: 1.25rem 1.25rem;
+    margin-bottom: 0.25rem;
     position: relative;
     overflow: hidden;
 }

@@ -307,7 +307,7 @@ html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 {
     align-items: center;
     gap: 0.5rem;
     margin-top: 0.6rem;
-    /*margin-bottom: 1.0rem;*/
+    margin-bottom: 0.75rem;
     background: linear-gradient(135deg, rgba(10, 10, 10, 0.98), rgba(30, 15, 15, 0.98));
     border: 3px solid var(--aot-black);
     box-shadow: var(--shadow-lg);
