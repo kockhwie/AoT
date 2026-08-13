@@ -212,7 +212,7 @@
                             <div class="hologram-scanlines"></div>
                             <div class="tcg-topbar">
                                 <div class="meta-registry-row">
-                                    <div class="member-rank-badge comic-badge @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
+                                    <div class="class-node @(member.RankClass == "rank-s" ? "comic-badge--gold" : member.RankClass == "rank-a-plus" ? "comic-badge--silver" : "comic-badge--bronze")">@member.Rank</div>
                                     @if (member.IsTitanShifter)
                                     {
                                         <div class="titan-shifter-badge comic-badge comic-badge--accent">TITAN SHIFTER</div>
