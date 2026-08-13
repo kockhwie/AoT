@@ -306,8 +306,8 @@ html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.9rem;
-    margin-bottom: 0.9rem;
+    margin-top: 0.6rem;
+    /*margin-bottom: 1.0rem;*/
     background: linear-gradient(135deg, rgba(10, 10, 10, 0.98), rgba(30, 15, 15, 0.98));
     border: 3px solid var(--aot-black);
     box-shadow: var(--shadow-lg);
@@ -397,6 +397,24 @@ html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 {
     transition: all var(--transition-fast) !important;
 }
 
+/* Base colour for the top-level nav list itself */
+.nav-links {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Kill the default disclosure triangle on all nav summary elements */
+.nav-links li > details > summary::-webkit-details-marker,
+.nav-menu details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Sub-menu link sizing — nested items one level deeper than the top summaries */
+.nav-menu details ul a {
+    padding-inline: 0.7rem;
+    padding-block: 0.10rem;
+    font-size: 0.90rem;
+}
+
 /* Force visible overflow so shadows aren't clipped by daisyUI's menu li/details styling */
 .nav-links>li,
 .nav-links>li>details {
@@ -404,16 +422,28 @@ html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 {
 }
 
 
-/* Dropdown menus — comic panel frames */
+/* Dropdown menus — manga comic panel frames.
+   Mirrors .comic-card: obsidian gradient + hard black border + hard offset shadow.
+   The backdrop-filter is intentionally removed: a blur glow has no place in the
+   print-style aesthetic this project uses. */
 .nav-menu {
-    background-color: var(--aot-dark) !important;
+    background: radial-gradient(ellipse at 60% 10%, rgba(30, 22, 22, 0.97) 0%, rgba(10, 8, 8, 0.99) 100%) !important;
     border: 3px solid var(--aot-black) !important;
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: 6px 6px 0px var(--aot-black) !important;
     border-radius: 0.55rem !important;
     min-width: 14rem;
     overflow: visible !important;
-    /* undo daisyUI's dropdown-content overflow:auto clipping the red shadow */
+    padding: 0.35rem;
 }
+
+/* Nested sub-menu panel: red-tinted obsidian + red border signals "deeper level".
+   Same vocabulary as .comic-card.ruby — a crimson cave inside the black panel. */
+    .nav-menu .nav-menu {
+        background: radial-gradient(ellipse at 50% 10%, rgba(40, 14, 14, 0.98) 0%, rgba(15, 6, 6, 0.99) 100%) !important;
+        border: 3px solid var(--aot-black) !important;
+        box-shadow: 4px 4px 0px var(--aot-dark) !important;
+        margin-top: 0.2rem;
+    }
 
 .nav-menu li,
 .nav-menu li>details {
@@ -426,11 +456,10 @@ html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 {
     font-size: 0.75rem !important;
     font-weight: 700 !important;
     letter-spacing: 0.05em !important;
-    color: var(--aot-text-secondary) !important;
+    color: var(--aot-text-secondary) !important;  /* #d1d5db neutral grey — tier-3 in the hierarchy */
     text-transform: uppercase !important;
     border-radius: 0.5rem !important;
     border: 2px solid transparent !important;
-    /* so hover border-color has something to show */
 }
 
 /* Hover/active/focus — ONE "comic punch" effect, shared by desktop top-level
@@ -462,11 +491,18 @@ on desktop). Change it here once, both update. */
     background-color: var(--aot-white) !important;
     color: var(--aot-black) !important;
     border-color: var(--aot-black) !important;
-    box-shadow: var(--shadow-md) !important;
+    box-shadow: var(--shadow-red) !important;
     z-index: 10;
     position: relative;
 }
 
+
+/* On very small phones (≤480px) pull the nav flyout slightly away from the edge */
+@media (max-width: 480px) {
+    .nav-menu {
+        margin-inline: 0.15rem;
+    }
+}
 
 /* Language switcher pills — manga button style */
 .btn-xs.btn-outline,
@@ -764,11 +800,7 @@ on desktop). Change it here once, both update. */
 }
 
 
-@media (max-width: 480px) {
-    .nav-menu {
-        margin-inline: 0.5rem;
-    }
-}
+
 
 @media (min-width: 1280px) {
     .aot-titan-grid {
@@ -870,11 +902,24 @@ on desktop). Change it here once, both update. */
     padding: clamp(2px, 0.4vw, 2px) clamp(3px, 1.2vw, 4px);
     font-weight: 900;
     text-transform: uppercase;
-    box-shadow: 2px 2px 0px var(--aot-black);
+    /*box-shadow: 2px 2px 0px var(--aot-black);*/
     display: inline-flex;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.05em;
+}
+
+.aot-badge-beta {
+    border: 2px solid var(--aot-gold);
+    border-radius: 10px;
+    font-size: clamp(0.50rem, 0.4vw + 0.5rem, 0.40rem);
+    color: var(--aot-black);
+    background-color: var(--aot-gold);
+    padding: 0px 8px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
 }
 
 .comic-badge--accent {

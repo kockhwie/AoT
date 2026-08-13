@@ -1546,7 +1546,7 @@
     <value>Wall Maria</value>
   </data>
   <data name="Lore_Wall1_Diameter" xml:space="preserve">
-    <value>~480 km diameter</value>
+    <value>~480 KM diameter</value>
   </data>
   <data name="Lore_Wall1_Desc" xml:space="preserve">
     <value>The outermost wall and the first line of defense for humanity within the walls. Wall Maria was breached by the Colossal and Armored Titans in Year 845, forcing hundreds of thousands of refugees inward and triggering the central conflict of the story.</value>

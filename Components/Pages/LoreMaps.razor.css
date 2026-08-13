@@ -16,7 +16,7 @@
    halftone panel) so the two hub pages read as one system ── */
 .lore-header {
     text-align: center;
-    padding: 2.05rem 1.25rem;
+    padding: 1.25rem 1.25rem;
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
@@ -49,7 +49,7 @@
 .lore-page-subtitle {
     font-size: 0.9rem;
     color: #d1d5db;
-    max-width: 640px;
+    /*max-width: 640px;*/
     margin: 0 auto 1.5rem auto;
     line-height: 1.6;
 }
@@ -100,7 +100,7 @@
     font-size: 0.9rem;
     color: #d1d5db;
     line-height: 1.7;
-    max-width: 720px;
+    /*max-width: 720px;*/
     margin: 0 auto 2rem auto;
     text-align: center;
 }
@@ -635,53 +635,8 @@
         z-index: 0;
     }
 
-/* CSS-only Glowing Tree — re-tinted to brass/gold to match the comic
-   palette instead of a soft unrelated gold glow */
-.paths-glow-tree {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 400px;
-    pointer-events: none;
-    opacity: 0.22;
-    z-index: 0;
-}
-
-.paths-trunk {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 55%;
-    background: linear-gradient(to top, var(--aot-gold), rgba(250, 204, 21, 0.1));
-    border-radius: 2px;
-}
-
-.paths-canopy {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(250, 204, 21, 0.25) 0%, transparent 70%);
-}
-
-.paths-glow-ring {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    border: 1px solid rgba(250, 204, 21, 0.15);
-    animation: pathsPulse 4s ease-in-out infinite;
-}
+ 
+ 
 
 @keyframes pathsPulse {
     0%, 100% {
@@ -698,7 +653,7 @@
 .paths-content {
     position: relative;
     z-index: 1;
-    max-width: 680px;
+    /*max-width: 680px;*/
     margin: 0 auto;
     text-align: center;
 }

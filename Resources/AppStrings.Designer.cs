@@ -3832,7 +3832,7 @@ namespace AOT.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ~480 km diameter.
+        ///   Looks up a localized string similar to ~480 KM diameter.
         /// </summary>
         public static string Lore_Wall1_Diameter {
             get {
